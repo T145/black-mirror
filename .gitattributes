@@ -1,0 +1,8 @@
+# Set default behaviour, in case users don't have core.autocrlf set.
+* text=auto
+
+# Preserve script line endings for linux-based systems.
+*.sh eol=lf
+
+# Ensure LFS is enabled for text files.
+*.txt filter=lfs diff=lfs merge=lfs -text
