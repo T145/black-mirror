@@ -40,4 +40,4 @@ Dependencies:
 1. No comments
 2. No excess whitespace (trailing, blank lines)
 3. Ending with `lf`
-4. Prended with `0.0.0.0 `
+4. Prepended with `0.0.0.0 `
