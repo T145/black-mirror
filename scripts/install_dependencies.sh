@@ -2,15 +2,14 @@
 
 set -e
 
-# function to check dependencies
 install_if_not_exist() {
   if dpkg -s $1 &>/dev/null; then
     PKG_EXIST=$(dpkg -s $1 | grep "install ok installed")
     if [ -z "$PKG_EXIST" ]; then
-      sudo apt-get install $1 --assume-yes
+      sudo apt install $1 -y
     fi
   else
-    sudo apt-get install $1 --assume-yes
+    sudo apt install $1 -y
   fi
 }
 
