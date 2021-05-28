@@ -1,9 +1,7 @@
 # The Blacklist
-Automatically compiled and maintained malicious domain blacklist
+> Automatically compiled and maintained malicious domain blacklist.
 
-```
-https://media.githubusercontent.com/media/T145/the-blacklist/main/the_blacklist.txt
-```
+Use [this script](https://github.com/T145/the-blacklist/tree/master/scripts/compile_the_blacklist.sh) to compile the Blacklist into one text file.
 
 This list has the following format:
 
