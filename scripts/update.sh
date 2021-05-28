@@ -27,6 +27,6 @@ jq -n -f "$sources" | jq -r 'keys[] as $k | [$k, .[$k].url, .[$k].rule] | @tsv' 
                 esac | gawk --sandbox -- "$rule"
             ;;
         esac
-    done | sed 's/^/0.0.0.0 /' | sort -u -k1 -S 50% --parallel=2 >|"$the_blacklist"
+    done | sort -u -S 50% --parallel=2 | sed 's/^/0.0.0.0 /' >|"$the_blacklist"
 
 split -C 100MB -d -a 1 --additional-suffix .txt "$the_blacklist" the_blacklist
