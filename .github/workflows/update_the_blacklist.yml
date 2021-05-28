@@ -16,11 +16,15 @@ jobs:
           ref: ${{ github.head_ref }}
 
       - name: Install Dependencies
-        run: ./scripts/install_dependencies.sh
+        run: |
+          chmod 777 ./scripts/install_dependencies.sh
+          ./scripts/install_dependencies.sh
         shell: bash
 
       - name: Perform Blacklist Update
-        run: ./scripts/update_the_blacklist.sh
+        run: |
+          chmod 777 ./scripts/update_the_blacklist.sh
+          ./scripts/update_the_blacklist.sh
         shell: bash
 
       - name: Git Auto Commit
