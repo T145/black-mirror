@@ -3,7 +3,8 @@
 set -eu
 
 sources=$(mktemp)
-trap 'rm "$sources"' EXIT || exit 1
+the_blacklist=$(mktemp)
+trap 'rm "$sources" && rm "$the_blacklist"' EXIT || exit 1
 
 rm -rf hosts
 mkdir hosts -p -m 777 && cd hosts
@@ -26,8 +27,6 @@ jq -n -f "$sources" | jq -r 'keys[] as $k | [$k, .[$k].url, .[$k].rule] | @tsv' 
                 esac | gawk --sandbox -- "$rule"
             ;;
         esac
-    done | sed 's/^/0.0.0.0 /' | sort -u -k1 -S 50% --parallel=2 >|the_blacklist.txt
-# https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners
+    done | sed 's/^/0.0.0.0 /' | sort -u -k1 -S 50% --parallel=2 >|"$the_blacklist"
 
-split -C 100MB -x -a 1 --additional-suffix .txt the_blacklist.txt the_blacklist
-rm the_blacklist.txt
+split -C 100MB -d -a 1 --additional-suffix .txt "$the_blacklist" the_blacklist
