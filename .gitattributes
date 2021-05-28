@@ -3,6 +3,3 @@
 
 # Preserve script line endings for linux-based systems.
 *.sh eol=lf
-
-# Ensure LFS is enabled for text files.
-*.txt filter=lfs diff=lfs merge=lfs -text
