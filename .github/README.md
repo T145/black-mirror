@@ -1,11 +1,43 @@
-# The Blacklist
-> Automatically compiled and maintained malicious domain blacklist.
+## Building the List
 
-Use [this script](https://github.com/T145/the-blacklist/tree/master/scripts/compile_the_blacklist.sh) to compile the Blacklist into one text file.
+Use the following scripts to update The Blacklist:
 
-This list has the following format:
+---
+
+### Linux/OSX
+
+Dependencies:
+- curl (included in coreutils on Linux)
+- jq
+
+#### **compile.sh**
+```sh
+#!/bin/sh
+
+set -e
+
+curl -s -H 'Accept: application/vnd.github.v3+json' \
+    https://api.github.com/repos/T145/the_blacklist/contents/hosts |
+    jq -r '.[] | [.download_url] | @tsv' |
+    while IFS=$'\t' read -r url; do
+        curl -s $url
+    done >|the_blacklist.txt
+```
+
+---
+
+### Windows
+
+Dependencies:
+- TODO
+
+#### TODO
+
+---
+
+## List Format
 
 1. No comments
 2. No excess whitespace (trailing, blank lines)
-3. `lf` line endings
-4. `0.0.0.0 ` prepended to each host
+3. Ending with `lf`
+4. Prended with `0.0.0.0 `
