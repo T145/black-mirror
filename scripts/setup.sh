@@ -14,6 +14,7 @@ install_if_not_exist() {
 }
 
 # https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-README.md
+install_if_not_exist aria2c
 install_if_not_exist coreutils
 install_if_not_exist gawk
 install_if_not_exist jq
