@@ -27,9 +27,6 @@ curl -s -o "$sources" https://raw.githubusercontent.com/openwrt/packages/master/
 # Includes adguard, bitcoin, disconnect, reg_cn, reg_cz, reg_de, reg_es, reg_fr,
 # reg_it, reg_nl, reg_ro, reg_ru, reg_vn, stopforumspam, spam404, and winspy.
 # All Anudeep lists are included except the Facebook list, so that's being added in.
-#
-# TODO: Add in the extension packs, if they aren't included somewhere already.
-# TODO: Inlcude other winspy packs?
 # #
 cat <<EOF >"$sources"
 $(jq -n -f "$sources" |
