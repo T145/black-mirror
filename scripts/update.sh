@@ -48,7 +48,7 @@ cat "$sources" | jq -r 'to_entries[] | [.key, .value.url, .value.rule] | @tsv' |
         case $url in
         *.tar.gz) tar -xOzf "$downloads/$key.tar.gz" ;;
         *) cat "$downloads/$key.txt" ;;
-        esac | gawk --sandbox -- "$rule"
-    done | sort -u -S 75% --parallel=2 | sed 's/^/0.0.0.0 /' >|"$the_blacklist"
+        esac | gawk --sandbox -- "$rule" | sed 's/^/0.0.0.0 /'
+    done | sort -u -k1 -S 75% --parallel=2 >|"$the_blacklist"
 
 split -C 100MB -d -a 1 --additional-suffix .txt "$the_blacklist" the_blacklist
