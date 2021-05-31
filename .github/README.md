@@ -1,3 +1,12 @@
+
+## List Format
+
+1. No comments
+2. No excess whitespace (trailing, blank lines)
+3. Ending with `lf`
+4. Prepended with `0.0.0.0 `
+5. In multiple parts capped at 100MB (GitHub's max file size)
+
 ## Building the List
 
 Use the following scripts to update The Blacklist:
@@ -7,8 +16,7 @@ Use the following scripts to update The Blacklist:
 ### Linux/OSX
 
 Dependencies:
-- curl (included in coreutils on Linux)
-- jq
+- jq ([Linux](https://stedolan.github.io/jq/download/) / [OSX](https://formulae.brew.sh/formula/jq))
 
 #### **compile.sh**
 ```sh
@@ -34,10 +42,3 @@ Dependencies:
 #### TODO
 
 ---
-
-## List Format
-
-1. No comments
-2. No excess whitespace (trailing, blank lines)
-3. Ending with `lf`
-4. Prepended with `0.0.0.0 `
