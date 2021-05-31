@@ -44,7 +44,7 @@ cat "$sources" | jq -r 'to_entries[] | [.key, .value.url, .value.rule] | @tsv' |
     while IFS=$'\t' read key url rule; do
         case $url in
         *.tar.gz) tar -xOzf "$downloads/$key.tar.gz" ;;
-        *.txt) cat "$downloads/$key.txt" ;;
+        *) cat "$downloads/$key.txt" ;;
         esac | gawk --sandbox -- "$rule" | sed 's/^/0.0.0.0 /'
     done | sort -u -k 2 -S 75% --parallel=4 -T "$downloads" >|"$the_blacklist"
 
