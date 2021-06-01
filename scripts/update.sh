@@ -15,14 +15,18 @@ cat sources.json | jq -r 'to_entries[] | [.key, .value.url] | @tsv' |
 
 cat sources.json | jq -r 'to_entries[] | [.key, .value.url, .value.rule] | @tsv' |
     while IFS=$'\t' read key url rule; do
-        case $url in
-        *.tar.gz) tar -xOzf "$downloads/$key.tar.gz" ;;
-        *) cat "$downloads/$key.txt" ;;
+        fpath=$(find -P -O3 "$downloads" -type f -name "$key*")
+
+        if test -f "whitelists/$key.txt"; then
+            while read host; do
+                gawk -i inplace "!/$host/" $fpath
+            done <"whitelists/$key.txt"
+        fi
+
+        case $fpath in
+        *.tar.gz) tar -xOzf "$fpath" ;;
+        *) cat "$fpath" ;;
         esac | gawk --sandbox -- "$rule" | sed 's/^/0.0.0.0 /'
     done | sort -u -k 2 -S 75% --parallel=4 -T "$downloads" >|"$the_blacklist"
-
-#while read host; do
-#    gawk -i inplace "!/$host/" "$the_blacklist"
-#done <the_whitelist.txt
 
 split -C 100MB -d -a 1 --additional-suffix .txt "$the_blacklist" "hosts/the_blacklist"
