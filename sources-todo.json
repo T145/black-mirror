@@ -20,7 +20,7 @@
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
   },
   "gaming": {
-    "url": "https://raw.githubusercontent.com/stopgaming/pihole-blocklist/master/game.txt",
+    "url": "https://raw.githubusercontent.com/dupontjean/pihole-blocklist/master/game.txt",
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
   },
   "winspy_update": {
