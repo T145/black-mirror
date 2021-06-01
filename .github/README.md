@@ -1,4 +1,18 @@
 
+# Philosophy
+
+- Keep it 100% open-source.
+> The "how it's made" is just as important as the final product. Many open-source blocklist projects I've seen don't have "how" made public.
+> This project is open and flexible, so you can fork it and whitelist what you need for personalized application.
+- Make it secure.
+> This project takes on a firewall security mindset, which is basically block everything and whitelist what's needed.
+> Obviously this list isn't a firewall, so it just blocks as much as possible.
+> Please report any "false positives" in an issue.
+> Be sure to set up client and network firewalls, as this is no substitute.
+- Let it grow!
+> Contribute any useful sources you can think of manually by editting the `sources.json` file directly on a fork and making a pull request,
+> or by creating an issue and placing your recommendations there. Help The Blacklist reach `node_modules`-level heights!
+
 ## List Format
 
 1. No comments
