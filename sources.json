@@ -1,0 +1,170 @@
+{
+  "android_tracking": {
+    "url": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "andryou": {
+    "url": "https://gitlab.com/andryou/block/raw/master/kouhai-compressed-domains",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "anti_ad": {
+    "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "anudeep_facebook": {
+    "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt",
+    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+  },
+  "blackbird": {
+    "url": "https://getblackbird.net/blacklist/hosts.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "blp_abuse": {
+    "url": "https://blocklistproject.github.io/Lists/alt-version/abuse-nl.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "blp_ads": {
+    "url": "https://blocklistproject.github.io/Lists/alt-version/ads-nl.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "blp_drugs": {
+    "url": "https://blocklistproject.github.io/Lists/alt-version/drugs-nl.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "blp_fraud": {
+    "url": "https://blocklistproject.github.io/Lists/alt-version/fraud-nl.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "blp_gambling": {
+    "url": "https://blocklistproject.github.io/Lists/alt-version/gambling-nl.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "blp_malware": {
+    "url": "https://blocklistproject.github.io/Lists/alt-version/malware-nl.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "blp_phishing": {
+    "url": "https://blocklistproject.github.io/Lists/alt-version/phishing-nl.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "blp_piracy": {
+    "url": "https://blocklistproject.github.io/Lists/alt-version/piracy-nl.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "blp_porn": {
+    "url": "https://blocklistproject.github.io/Lists/alt-version/porn-nl.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "blp_ransomware": {
+    "url": "https://blocklistproject.github.io/Lists/alt-version/ransomware-nl.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "blp_redirect": {
+    "url": "https://blocklistproject.github.io/Lists/alt-version/redirect-nl.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "blp_scam": {
+    "url": "https://blocklistproject.github.io/Lists/alt-version/scam-nl.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "blp_smart_tv": {
+    "url": "https://blocklistproject.github.io/Lists/alt-version/smart-tv-nl.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "blp_tiktok": {
+    "url": "https://blocklistproject.github.io/Lists/alt-version/tiktok-nl.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "blp_tracking": {
+    "url": "https://blocklistproject.github.io/Lists/alt-version/tracking-nl.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "blp_whatsapp": {
+    "url": "https://blocklistproject.github.io/Lists/alt-version/whatsapp-nl.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "energized": {
+    "url": "https://block.energized.pro/unified/formats/domains.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "energized_ips": {
+    "url": "https://block.energized.pro/extensions/ips/formats/list.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "energized_regional": {
+    "url": "https://block.energized.pro/extensions/regional/formats/domains.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "firetv_tracking": {
+    "url": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/AmazonFireTV.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "games_tracking": {
+    "url": "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Main-Template/hosts",
+    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+  },
+  "notracking": {
+    "url": "https://raw.githubusercontent.com/notracking/hosts-blocklists/master/dnscrypt-proxy/dnscrypt-proxy.blacklist.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "oisd": {
+    "url": "https://dbl.oisd.nl",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "openphish_feed": {
+    "url": "https://openphish.com/feed.txt",
+    "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print tolower($3)}"
+  },
+  "phishing_army": {
+    "url": "https://phishing.army/download/phishing_army_blocklist_extended.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "reg_fi": {
+    "url": "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt",
+    "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+  },
+  "reg_id": {
+    "url": "https://easylist-downloads.adblockplus.org/abpindo+easylist.txt",
+    "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+  },
+  "reg_kr": {
+    "url": "https://raw.githubusercontent.com/List-KR/List-KR/master/filter.txt",
+    "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+  },
+  "reg_pl1": {
+    "url": "https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt",
+    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+  },
+  "reg_pl2": {
+    "url": "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hostfile.txt",
+    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+  },
+  "reg_se": {
+    "url": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt",
+    "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+  },
+  "shallalist": {
+    "url": "https://www.shallalist.de/Downloads/shallalist.tar.gz",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "smarttv_tracking": {
+    "url": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "stevenblack": {
+    "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts",
+    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+  },
+  "utcapitole": {
+    "url": "https://dsi.ut-capitole.fr/blacklists/download/blacklists.tar.gz",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "wally3k": {
+    "url": "https://v.firebog.net/hosts/static/w3kbl.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "winspy_extra": {
+    "url": "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/extra.txt",
+    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+  }
+}
