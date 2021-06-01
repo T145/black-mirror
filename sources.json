@@ -95,6 +95,10 @@
     "url": "https://block.energized.pro/extensions/regional/formats/domains.txt",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
   },
+  "energized_xtreme": {
+    "url": "https://block.energized.pro/extensions/xtreme/formats/domains.txt",
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
   "firetv_tracking": {
     "url": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/AmazonFireTV.txt",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"

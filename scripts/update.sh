@@ -21,8 +21,8 @@ cat sources.json | jq -r 'to_entries[] | [.key, .value.url, .value.rule] | @tsv'
         esac | gawk --sandbox -- "$rule" | sed 's/^/0.0.0.0 /'
     done | sort -u -k 2 -S 75% --parallel=4 -T "$downloads" >|"$the_blacklist"
 
-while read host; do
-    gawk -i inplace "!/0.0.0.0 $host/" "$the_blacklist"
-done <the_whitelist.txt
+#while read host; do
+#    gawk -i inplace "!/$host/" "$the_blacklist"
+#done <the_whitelist.txt
 
 split -C 100MB -d -a 1 --additional-suffix .txt "$the_blacklist" "hosts/the_blacklist"
