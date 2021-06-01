@@ -25,7 +25,9 @@ jobs:
         shell: bash
 
       - name: Sort Sources Alphabetically By Key
-        run: jq 'to_entries | sort_by(.key) | from_entries' sources.json >|sources.json
+        run: |
+          jq -S -M '.' sources.json > temp.json
+          mv temp.json sources.json
         shell: bash
 
       - name: Perform Blacklist Update
