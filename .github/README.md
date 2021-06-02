@@ -21,6 +21,7 @@
 4. Ending with `lf`
 5. `0.0.0.0 <domain/host>`
 6. In multiple parts capped at 100MB (GitHub's max file size)
+7. Updates at [0:00 UTC](https://www.timeanddate.com/time/zone/timezone/utc).
 
 ## 📚 List Sources
 
@@ -34,7 +35,9 @@ Any redundant sources shared between them and the original list have been remove
 
 **Energized + Extensions**
 - adguard, bitcoin, disconnect, reg_cn, reg_cz, reg_de, reg_es, reg_fr, reg_it, reg_nl, reg_ro, reg_ru, reg_vn, stopforumspam, spam404
-> All Anudeep lists are included except the Facebook list, so that has been added in.
+> The "Xtreme" extension isn't very descriptive, but has been included anyway.\
+> There is some overlap on the StevenBlack sources Adaway, Badd Boyz Hosts, MVPS, someonewhocares, and yoyo (URLHaus/abuse.ch/Zeus is deprecated).\
+> All Anudeep lists are included except the Facebook list, so that has been added in.\
 > Only the WinSpy Spy list is included, so the Extra and Update lists have been added in.
 
 _Feel free to cross-reference these and double-check that unique lists were not dropped!_
