@@ -1,5 +1,5 @@
 
-# 🧠 Philosophy
+## 🧠 Philosophy
 
 - Keep it 100% open-source.
 > The "how it's made" is just as important as the final product. Many open-source blocklist projects I've seen don't have "how" made public.
@@ -13,7 +13,7 @@
 > Contribute any useful sources you can think of manually by editting the `sources.json` file directly on a fork and making a pull request,
 > or by creating an issue and placing your recommendations there. Help The Blacklist reach `node_modules`-level heights!
 
-## 📋 List Format
+## 📋 List Attributes
 
 1. No comments
 2. No excess whitespace (trailing, blank lines)
