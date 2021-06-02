@@ -99,6 +99,11 @@
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/whatsapp-nl.txt"
   },
+  "clefspeare13_porn": {
+    "mirror": "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/clefspeare13/hosts",
+    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
+    "url": "https://raw.githubusercontent.com/Clefspeare13/pornhosts/master/0.0.0.0/hosts"
+  },
   "energized": {
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://block.energized.pro/unified/formats/domains.txt"
@@ -130,6 +135,11 @@
   "gaming": {
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
     "url": "https://raw.githubusercontent.com/dupontjean/pihole-blocklist/master/game.txt"
+  },
+  "marktron_fakenews": {
+    "mirror": "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/fakenews/hosts",
+    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
+    "url": "https://raw.githubusercontent.com/marktron/fakenews/master/fakenews"
   },
   "notracking": {
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
@@ -175,9 +185,24 @@
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://www.shallalist.de/Downloads/shallalist.tar.gz"
   },
+  "sinfonietta_gambling": {
+    "mirror": "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/gambling/hosts",
+    "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
+    "url": "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/gambling-hosts"
+  },
+  "sinfonietta_social": {
+    "mirror": "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/social/sinfonietta/hosts",
+    "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
+    "url": "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/social-hosts"
+  },
   "smarttv_tracking": {
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt"
+  },
+  "tiuxo_porn": {
+    "mirror": "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/tiuxo/hosts",
+    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
+    "url": "https://raw.githubusercontent.com/tiuxo/hosts/master/porn"
   },
   "utcapitole": {
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
@@ -194,30 +219,5 @@
   "winspy_update": {
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
     "url": "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update.txt"
-  },
-  "marktron_fakenews": {
-    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-    "url": "https://raw.githubusercontent.com/marktron/fakenews/master/fakenews",
-    "mirror": "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/fakenews/hosts"
-  },
-  "sinfonietta_gambling": {
-    "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-    "url": "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/gambling-hosts",
-    "mirror": "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/gambling/hosts"
-  },
-  "clefspeare13_porn": {
-    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-    "url": "https://raw.githubusercontent.com/Clefspeare13/pornhosts/master/0.0.0.0/hosts",
-    "mirror": "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/clefspeare13/hosts"
-  },
-  "tiuxo_porn": {
-    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-    "url": "https://raw.githubusercontent.com/tiuxo/hosts/master/porn",
-    "mirror": "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/tiuxo/hosts"
-  },
-  "sinfonietta_social": {
-    "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-    "url": "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/social-hosts",
-    "mirror": "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/social/sinfonietta/hosts"
   }
 }
