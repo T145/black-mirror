@@ -31,7 +31,7 @@ and [Energized](https://github.com/EnergizedProtection/block#package-sources) li
 Any redundant sources shared between them and the original list have been removed. They are as follows in the original list:
 
 **Energized + Extensions**
-- adaway, adguard, adguard_tracking, bitcoin, disconnect, reg_cn, reg_cz, reg_de, reg_es, reg_fr, reg_it, reg_nl, reg_ro, reg_ru, reg_vn, someonewhocares, stevenblack, spam404, stopforumspam, winhelp, yoyo
+- adaway, adguard, adguard_tracking, bitcoin, disconnect, reg_cn, reg_cz, reg_de, reg_es, reg_fr, reg_it, reg_nl, reg_ro, reg_ru, reg_vn, stevenblack, spam404, stopforumspam, whocares, winhelp, yoyo
 > The "Xtreme" extension isn't very descriptive, but has been included anyway.\
 > All Anudeep lists are included except the Facebook list, so that has been added in.\
 > Only the WinSpy Spy list is included, so the Extra and Update lists have been added in.
