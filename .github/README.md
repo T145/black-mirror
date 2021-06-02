@@ -17,9 +17,10 @@
 
 1. No comments
 2. No excess whitespace (trailing, blank lines)
-3. Ending with `lf`
-4. `0.0.0.0 <domain/host>`
-5. In multiple parts capped at 100MB (GitHub's max file size)
+3. No lingering webscraper garbage
+4. Ending with `lf`
+5. `0.0.0.0 <domain/host>`
+6. In multiple parts capped at 100MB (GitHub's max file size)
 
 ## 📚 List Sources
 
