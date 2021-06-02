@@ -124,7 +124,7 @@
     "url": "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Main-Template/hosts"
   },
   "gaming": {
-    "rule": "NR>1 && /^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
+    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
     "url": "https://raw.githubusercontent.com/dupontjean/pihole-blocklist/master/game.txt"
   },
   "notracking": {
