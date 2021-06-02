@@ -1,5 +1,5 @@
 
-# Philosophy
+# 🧠 Philosophy
 
 - Keep it 100% open-source.
 > The "how it's made" is just as important as the final product. Many open-source blocklist projects I've seen don't have "how" made public.
@@ -13,7 +13,7 @@
 > Contribute any useful sources you can think of manually by editting the `sources.json` file directly on a fork and making a pull request,
 > or by creating an issue and placing your recommendations there. Help The Blacklist reach `node_modules`-level heights!
 
-## List Format
+## 📋 List Format
 
 1. No comments
 2. No excess whitespace (trailing, blank lines)
@@ -21,7 +21,7 @@
 4. `0.0.0.0 <domain/host>`
 5. In multiple parts capped at 100MB (GitHub's max file size)
 
-## List Sources
+## 📚 List Sources
 
 Initially used [sources provided by the OpenWRT plugin Adblock](https://github.com/openwrt/packages/blob/master/net/adblock/files/adblock.sources).
 After realizing that the [StevenBlack](https://github.com/StevenBlack/hosts#sources-of-hosts-data-unified-in-this-variant)
@@ -41,8 +41,9 @@ _Feel free to cross-reference these and double-check that unique lists were not 
 ### Other Integrated Sources
 
 - [The Block List Project](https://blocklistproject.github.io/Lists/)
+- [Blackbird](https://getblackbird.net/blacklist/hosts/)
 
-## Building the List
+## 🔧 Building the List
 
 Use the following scripts to update The Blacklist:
 
