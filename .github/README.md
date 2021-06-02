@@ -30,13 +30,9 @@ After realizing that the [StevenBlack](https://github.com/StevenBlack/hosts#sour
 and [Energized](https://github.com/EnergizedProtection/block#package-sources) listings were incorrect, the list grew after incorporating everything from them.
 Any redundant sources shared between them and the original list have been removed. They are as follows in the original list:
 
-**StevenBlack**
-- adaway, adguard_tracking, whocares, winhelp, yoyo
-
 **Energized + Extensions**
-- adguard, bitcoin, disconnect, reg_cn, reg_cz, reg_de, reg_es, reg_fr, reg_it, reg_nl, reg_ro, reg_ru, reg_vn, stopforumspam, spam404
+- adaway, adguard, adguard_tracking, bitcoin, disconnect, reg_cn, reg_cz, reg_de, reg_es, reg_fr, reg_it, reg_nl, reg_ro, reg_ru, reg_vn, someonewhocares, stevenblack, spam404, stopforumspam, winhelp, yoyo
 > The "Xtreme" extension isn't very descriptive, but has been included anyway.\
-> There is some overlap on the StevenBlack sources Adaway, Badd Boyz Hosts, MVPS, someonewhocares, and yoyo (URLHaus/abuse.ch/Zeus is deprecated).\
 > All Anudeep lists are included except the Facebook list, so that has been added in.\
 > Only the WinSpy Spy list is included, so the Extra and Update lists have been added in.
 
