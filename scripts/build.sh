@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -eu #x
+set -eu
 
 if ! test -d sources; then
     jq -r 'to_entries[] | [.key, .value.url] | @tsv' sources.json |
@@ -14,14 +14,22 @@ jq -r 'keys[] as $k | "\($k)#\(.[$k] | .rule)"' sources.json |
         target="sources/$key.txt"
 
         case $fpath in
-        *.tar.gz) tar -xOzf $fpath ;;
-        *.zip) zcat $fpath ;;
-        *) cat $fpath ;;
-        esac | LC_ALL=C gawk --sandbox -- "$rule" >$target
+        *.tar.gz)
+            if [[ $key == 'utcapitole' ]]; then
+                tar -xOzf $fpath --wildcards-match-slash --wildcards '*/domains'
+            else
+                tar -xOzf $fpath
+            fi >$target
+            ;;
+        *.zip) zcat $fpath >$target ;;
+        *) ;;
+        esac
+
+        gawk -i inplace "$rule" $target
 
         if test -f "whitelists/$key.txt"; then
             while read host; do
-                LC_ALL=C gawk -i inplace "!/$host/" $target
+                gawk -i inplace "!/$host/" $target
             done <"whitelists/$key.txt"
         fi
     done
