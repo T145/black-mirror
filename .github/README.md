@@ -20,8 +20,7 @@
 3. No lingering webscraper garbage
 4. Ending with `lf`
 5. `0.0.0.0 <domain/host>`
-6. In multiple parts capped at 100MB (GitHub's max file size)
-7. Updates at [0:00 UTC](https://www.timeanddate.com/time/zone/timezone/utc)
+6. Updates at [0:00 UTC](https://www.timeanddate.com/time/zone/timezone/utc)
 
 ## 📚 List Sources
 
@@ -43,9 +42,9 @@ _Feel free to cross-reference these and double-check that unique lists were not 
 - [The Block List Project](https://blocklistproject.github.io/Lists/)
 - [Blackbird](https://getblackbird.net/blacklist/hosts/)
 
-## 🔧 Building the List
+## ⚓ List Link
 
-Just grab it from the link below! It will be constant.
+Just grab it from the link below! This link will not change.
 
 ```
 https://github.com/T145/the-blacklist/releases/latest/download/the_blacklist.tar.gz
