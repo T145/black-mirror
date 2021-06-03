@@ -42,10 +42,21 @@ _Feel free to cross-reference these and double-check that unique lists were not 
 - [The Block List Project](https://blocklistproject.github.io/Lists/)
 - [Blackbird](https://getblackbird.net/blacklist/hosts/)
 
-## ⚓ List Link
+## ⚓ List Links
 
-Just grab it from the link below! This link will not change.
+Just grab an archive and extract it! These links will not change.
 
+##### black_domains.txt
 ```
-https://github.com/T145/the-blacklist/releases/latest/download/the_blacklist.tar.gz
+https://github.com/T145/the-blacklist/releases/latest/download/black_domains.tar.gz
+```
+
+##### black_ipv4.txt
+```
+https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz
+```
+
+##### black_ipv6.txt
+```
+https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz
 ```

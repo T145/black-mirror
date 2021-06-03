@@ -19,9 +19,9 @@ jobs:
         id: create_tag
         run: |
           if [[ "${{ github.event_name }}" == "schedule" ]]; then
-            tag=builds-$(date +%Y%m%d-%H%M%S)
+            tag=auto-build-$(date +%Y%m%d)
           else
-            tag=$(basename "${{ github.ref }}")
+            tag=manual-build-$(date +%Y%m%d-%H%M%S)
           fi
           echo "::set-output name=tag::$tag"
 
@@ -81,18 +81,38 @@ jobs:
           mv temp.json sources.json
         shell: bash
 
-      - name: Create Build
+      - name: Create Builds
         run: ./scripts/build.sh
         shell: bash
 
-      - name: Upload Build
+      - name: Upload Domains Build
         uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.upload_info.outputs.upload_url }}
-          asset_path: ./the_blacklist.tar.gz
-          asset_name: the_blacklist.tar.gz
+          asset_path: ./black_domains.tar.gz
+          asset_name: black_domains.tar.gz
+          asset_content_type: application/gzip
+
+      - name: Upload IPv4 Build
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.upload_info.outputs.upload_url }}
+          asset_path: ./black_ipv4.tar.gz
+          asset_name: black_ipv4.tar.gz
+          asset_content_type: application/gzip
+
+      - name: Upload IPv6 Build
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.upload_info.outputs.upload_url }}
+          asset_path: ./black_ipv6.tar.gz
+          asset_name: black_ipv6.tar.gz
           asset_content_type: application/gzip
 
   publish:
