@@ -75,12 +75,6 @@ jobs:
         run: ./scripts/setup.sh
         shell: bash
 
-      - name: Sort Sources Alphabetically By Key
-        run: |
-          jq -S -M '.' sources.json > temp.json
-          mv temp.json sources.json
-        shell: bash
-
       - name: Create Builds
         run: ./scripts/build.sh
         shell: bash
