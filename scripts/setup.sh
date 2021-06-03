@@ -13,6 +13,8 @@ install_if_not_exist() {
   fi
 }
 
+sudo apt update -y
+
 # https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-README.md
 install_if_not_exist aria2
 install_if_not_exist coreutils
