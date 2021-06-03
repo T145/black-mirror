@@ -51,14 +51,20 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v1
         with:
-          ref: ${{ github.head_ref }}
+          name: info
+
+      - name: Set upload_url
+        id: upload_info
+        run: |
+          upload_url=$(cat info/upload_url)
+          echo "::set-output name=upload_url::$upload_url"
 
       - name: Set Script Permissions
         run: |
           chmod 777 ./scripts/setup.sh
-          chmod 777 ./scripts/update.sh
+          chmod 777 ./scripts/build.sh
 
       - name: Install Dependencies
         run: ./scripts/setup.sh
@@ -71,11 +77,11 @@ jobs:
         shell: bash
 
       - name: Create Build
-        run: ./scripts/update.sh
+        run: ./scripts/build.sh
         shell: bash
 
       - name: Upload Build
-        uses: actions/upload-release-asset@v1
+        uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
