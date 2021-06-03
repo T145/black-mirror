@@ -108,10 +108,6 @@
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://block.energized.pro/unified/formats/domains.txt"
   },
-  "energized_ips": {
-    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-    "url": "https://block.energized.pro/extensions/ips/formats/list.txt"
-  },
   "energized_regional": {
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://block.energized.pro/extensions/regional/formats/domains.txt"
@@ -152,18 +148,6 @@
   "phishing_army": {
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://phishing.army/download/phishing_army_blocklist_extended.txt"
-  },
-  "reg_fi": {
-    "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}",
-    "url": "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt"
-  },
-  "reg_id": {
-    "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}",
-    "url": "https://easylist-downloads.adblockplus.org/abpindo+easylist.txt"
-  },
-  "reg_kr": {
-    "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}",
-    "url": "https://raw.githubusercontent.com/List-KR/List-KR/master/filter.txt"
   },
   "reg_pl1": {
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
