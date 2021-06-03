@@ -19,7 +19,7 @@
 2. No excess whitespace (trailing, blank lines)
 3. No lingering webscraper garbage
 4. Ending with `lf`
-5. `0.0.0.0 <domain/host>`
+5. Domain-only, IPv4, and IPv6 variants
 6. Updates at [0:00 UTC](https://www.timeanddate.com/time/zone/timezone/utc)
 
 ## 📚 List Sources
