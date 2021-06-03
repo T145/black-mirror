@@ -1,0 +1,112 @@
+name: Update the Blacklist
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+        if: github.event_name == 'schedule'
+
+      - name: Create Tag
+        id: create_tag
+        run: |
+          if [[ "${{ github.event_name }}" == "schedule" ]]; then
+            tag=builds-$(date +%Y%m%d-%H%M%S)
+          else
+            tag=$(basename "${{ github.ref }}")
+          fi
+          echo "::set-output name=tag::$tag"
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.create_tag.outputs.tag }}
+          release_name: ${{ steps.create_tag.outputs.tag }}
+          draft: true
+          prerelease: false
+
+      - name: Create artifact files
+        run: |
+          mkdir info
+          echo "${{ steps.create_release.outputs.id }}" > info/release_id
+          echo "${{ steps.create_release.outputs.upload_url }}" > info/upload_url
+      - uses: actions/upload-artifact@v1
+        with:
+          name: info
+          path: info
+
+  update:
+    needs: [release]
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Set Script Permissions
+        run: |
+          chmod 777 ./scripts/setup.sh
+          chmod 777 ./scripts/update.sh
+
+      - name: Install Dependencies
+        run: ./scripts/setup.sh
+        shell: bash
+
+      - name: Sort Sources Alphabetically By Key
+        run: |
+          jq -S -M '.' sources.json > temp.json
+          mv temp.json sources.json
+        shell: bash
+
+      - name: Create Build
+        run: ./scripts/update.sh
+        shell: bash
+
+      - name: Upload Build
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.upload_info.outputs.upload_url }}
+          asset_path: the_blacklist.tar.gz
+          asset_name: the_blacklist.tar.gz
+          asset_content_type: application/gzip
+
+  publish:
+    needs: [update]
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/download-artifact@v1
+        with:
+          name: info
+
+      - name: Set publish_info
+        id: publish_info
+        run: |
+          release_id=$(cat info/release_id)
+          echo "::set-output name=release_id::$release_id"
+
+      - uses: eregon/publish-release@v1.0.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          release_id: ${{ steps.publish_info.outputs.release_id }}
+
+      - uses: eregon/keep-last-n-releases@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          n: 3

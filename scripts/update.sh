@@ -6,8 +6,8 @@ the_blacklist=$(mktemp)
 downloads=$(mktemp -d)
 trap 'rm "$the_blacklist" && rm -rf "$downloads"' EXIT || exit 1
 
-rm -rf hosts
-mkdir hosts -p -m 777
+#rm -rf hosts
+#mkdir hosts -p -m 777
 
 cat sources.json | jq -r 'to_entries[] | [.key, .value.url] | @tsv' |
     gawk -F'\t' '{ if ($2 ~ /\.tar.gz$/ || /\.zip$/) { printf "%s\n out=%s.%s\n",$2,$1,gensub(/^(.*[/])?[^.]*[.]?/, "", 1, $2) } else { printf "%s\n out=%s.txt\n",$2,$1 } }' |
@@ -30,4 +30,5 @@ cat sources.json | jq -r 'to_entries[] | [.key, .value.rule] | @tsv' |
         esac | gawk --sandbox -- "$rule" | sed 's/^/0.0.0.0 /'
     done | sort -u -k 2 -S 75% --parallel=4 -T "$downloads" >|"$the_blacklist"
 
-split -C 100MB -d -a 1 --additional-suffix .txt "$the_blacklist" "hosts/the_blacklist"
+#split -C 100MB -d -a 1 --additional-suffix .txt "$the_blacklist" "hosts/the_blacklist"
+tar -czf the_blacklist.tar.gz "$the_blacklist"
