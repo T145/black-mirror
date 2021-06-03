@@ -61,6 +61,11 @@ jobs:
           upload_url=$(cat info/upload_url)
           echo "::set-output name=upload_url::$upload_url"
 
+      - name: Clone Repo
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+
       - name: Set Script Permissions
         run: |
           chmod 777 ./scripts/setup.sh
