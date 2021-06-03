@@ -1,6 +1,6 @@
 {
   "alexa_anti_porn": {
-    "rule": "{FS=\",\";if($2~/porn/||/fuck/||/sex/||/xxx/||/gay/||/hentai/||/incest/||/xvideos/||/pussy/||/dick/||/blowjob/){print tolower($2);}};",
+    "rule": "BEGIN{FS=\",\"};{if($2~/porn/||/fuck/||/sex/||/xxx/||/gay/||/hentai/||/incest/||/xvideos/||/pussy/||/dick/||/blowjob/){print tolower($2)}}",
     "url": "https://s3.amazonaws.com/alexa-static/top-1m.csv.zip"
   },
   "android_tracking": {
