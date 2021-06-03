@@ -23,7 +23,12 @@ cat sources.json | jq -r 'to_entries[] | [.key, .value.rule] | @tsv' |
         *.tar.gz) tar -xOzf "$fpath" ;;
         *.zip) zcat "$fpath" ;;
         *) cat "$fpath" ;;
-        esac | gawk --sandbox -- "$rule" | sed 's/^/0.0.0.0 /'
-    done | sort -u -k 2 -S 75% --parallel=4 -T "$downloads" >|the_blacklist.txt
+        esac | gawk --sandbox -- "$rule"
+    done | sort -u -k 2 -S 75% --parallel=4 -T "$downloads" >|black_domains.txt
 
-tar -czf the_blacklist.tar.gz the_blacklist.txt
+gawk '{ print "0.0.0.0 " $0; }' black_domains.txt > black_ipv4.txt
+gawk '{ print ":: " $0; }' black_domains.txt > black_ipv6.txt
+
+tar -czf black_domains.tar.gz black_domains.txt
+tar -czf black_ipv4.tar.gz black_ipv4.txt
+tar -czf black_ipv6.tar.gz black_ipv6.txt
