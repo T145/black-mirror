@@ -1,4 +1,4 @@
-name: Update the Blacklist
+name: Build Blacklist Release
 
 on:
   schedule:
@@ -6,11 +6,31 @@ on:
   workflow_dispatch:
 
 jobs:
-  release:
+  fix_sources:
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Sort Sources Alphabetically By Key
+        run: |
+          jq -S -M '.' sources.json > temp.json
+          mv temp.json sources.json
+        shell: bash
+
+      - name: Git Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@v4.11.0
+        with:
+          commit_message: Fixed sources
+
+  build_release_metadata:
+    needs: [fix_sources]
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2.3.4
         with:
           fetch-depth: 0
         if: github.event_name == 'schedule'
@@ -27,7 +47,7 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v1
+        uses: actions/create-release@v1 # DEPRECATED; NEEDS TO BE CHANGED
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -41,17 +61,17 @@ jobs:
           mkdir info
           echo "${{ steps.create_release.outputs.id }}" > info/release_id
           echo "${{ steps.create_release.outputs.upload_url }}" > info/upload_url
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2.2.3
         with:
           name: info
           path: info
 
-  update:
-    needs: [release]
+  build_release:
+    needs: [build_release_metadata]
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v2.0.9
         with:
           name: info
 
@@ -62,7 +82,7 @@ jobs:
           echo "::set-output name=upload_url::$upload_url"
 
       - name: Clone Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
         with:
           ref: ${{ github.head_ref }}
 
@@ -75,18 +95,12 @@ jobs:
         run: ./scripts/setup.sh
         shell: bash
 
-      - name: Sort Sources Alphabetically By Key
-        run: |
-          jq -S -M '.' sources.json > temp.json
-          mv temp.json sources.json
-        shell: bash
-
       - name: Create Builds
         run: ./scripts/build.sh
         shell: bash
 
       - name: Upload Domains Build
-        uses: actions/upload-release-asset@v1.0.1
+        uses: actions/upload-release-asset@v1.0.2  # DEPRECATED; NEEDS TO BE CHANGED
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -96,7 +110,7 @@ jobs:
           asset_content_type: application/gzip
 
       - name: Upload IPv4 Build
-        uses: actions/upload-release-asset@v1.0.1
+        uses: actions/upload-release-asset@v1.0.2  # DEPRECATED; NEEDS TO BE CHANGED
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -106,7 +120,7 @@ jobs:
           asset_content_type: application/gzip
 
       - name: Upload IPv6 Build
-        uses: actions/upload-release-asset@v1.0.1
+        uses: actions/upload-release-asset@v1.0.2  # DEPRECATED; NEEDS TO BE CHANGED
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -115,12 +129,12 @@ jobs:
           asset_name: black_ipv6.tar.gz
           asset_content_type: application/gzip
 
-  publish:
-    needs: [update]
+  publish_release:
+    needs: [build_release]
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v2.0.9
         with:
           name: info
 
