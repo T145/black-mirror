@@ -26,11 +26,11 @@ jobs:
           commit_message: Fixed sources
 
   build_release_metadata:
-    needs: [fix_sources]
     runs-on: ubuntu-20.04
+    needs: [fix_sources]
 
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0
         if: github.event_name == 'schedule'
@@ -47,7 +47,7 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v1 # DEPRECATED; NEEDS TO BE CHANGED
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -61,7 +61,7 @@ jobs:
           mkdir info
           echo "${{ steps.create_release.outputs.id }}" > info/release_id
           echo "${{ steps.create_release.outputs.upload_url }}" > info/upload_url
-      - uses: actions/upload-artifact@v2.2.3
+      - uses: actions/upload-artifact@v1
         with:
           name: info
           path: info
@@ -71,7 +71,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/download-artifact@v2.0.9
+      - uses: actions/download-artifact@v1
         with:
           name: info
 
@@ -82,7 +82,7 @@ jobs:
           echo "::set-output name=upload_url::$upload_url"
 
       - name: Clone Repo
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
 
@@ -100,7 +100,7 @@ jobs:
         shell: bash
 
       - name: Upload Domains Build
-        uses: actions/upload-release-asset@v1.0.2  # DEPRECATED; NEEDS TO BE CHANGED
+        uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -110,7 +110,7 @@ jobs:
           asset_content_type: application/gzip
 
       - name: Upload IPv4 Build
-        uses: actions/upload-release-asset@v1.0.2  # DEPRECATED; NEEDS TO BE CHANGED
+        uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -120,7 +120,7 @@ jobs:
           asset_content_type: application/gzip
 
       - name: Upload IPv6 Build
-        uses: actions/upload-release-asset@v1.0.2  # DEPRECATED; NEEDS TO BE CHANGED
+        uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -134,7 +134,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/download-artifact@v2.0.9
+      - uses: actions/download-artifact@v1
         with:
           name: info
 
