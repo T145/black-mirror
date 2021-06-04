@@ -9,7 +9,7 @@ if ! test -d sources; then
 fi
 
 jq -r 'keys[] as $k | "\($k)#\(.[$k] | .rule)"' sources.json |
-    while IFS=$'#' read key rule; do
+    while IFS=$'#' read -r key rule; do
         fpath=$(find -P -O3 sources -type f -name "$key*")
         target="sources/$key.txt"
 
