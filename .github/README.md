@@ -30,17 +30,21 @@ and [Energized](https://github.com/EnergizedProtection/block#package-sources) li
 Any redundant sources shared between them and the original list have been removed. They are as follows in the original list:
 
 **Energized + Extensions**
-- adaway, adguard, adguard_tracking, bitcoin, disconnect, reg_cn, reg_cz, reg_de, reg_es, reg_fr, reg_it, reg_nl, reg_ro, reg_ru, reg_vn, stevenblack, spam404, stopforumspam, whocares, winhelp, yoyo
-> The "Xtreme" extension isn't very descriptive, but has been included anyway.\
-> All Anudeep lists are included except the Facebook list, so that has been added in.\
-> Only the WinSpy Spy list is included, so the Extra and Update lists have been added in.
+- adaway, adguard, adguard_tracking, anudeep, bitcoin, disconnect, reg_cn, reg_cz, reg_de, reg_es, reg_fr, reg_it, reg_nl, reg_ro, reg_ru, reg_vn, stevenblack, spam404, stopforumspam, whocares, winhelp, yoyo
 
-_Feel free to cross-reference these and double-check that unique lists were not dropped!_
+> The "Xtreme" extension isn't very descriptive, but has been included anyway.
 
 ### Other Integrated Sources
 
+> Redundant sources have been removed. _Please report any oversights in an issue._
+
+- [Anudeep Facebook](https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt)
+- [WindowsSpyBlocker](https://github.com/crazy-max/WindowsSpyBlocker/tree/master/data/hosts)
 - [The Block List Project](https://blocklistproject.github.io/Lists/)
 - [Blackbird](https://getblackbird.net/blacklist/hosts/)
+- [Amazon Alexa Top 1 Million Sites](https://github.com/T145/the-blacklist/blob/master/sources.json#L5)
+- [StevenBlack Extensions](https://github.com/StevenBlack/hosts/tree/master/extensions)
+- [FireHOL](https://github.com/firehol/blocklist-ipsets)
 
 ## ⚓ List Links
 
