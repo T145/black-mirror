@@ -15,7 +15,7 @@ jobs:
           ref: ${{ github.head_ref }}
 
       - name: Fix Script Permissions
-        run: chmod 777 -r ./scripts
+        run: chmod 777 -R ./scripts
 
       - name: Fix Sources
         run: |
