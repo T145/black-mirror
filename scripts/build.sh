@@ -18,13 +18,7 @@ for format in 'domain' 'ipv4' 'ipv6'; do
             fpath=$(find -P -O3 "$downloads" -type f -name "$key*")
 
             case $fpath in
-            *.tar.gz)
-                if [[ $key == 'utcapitole' ]]; then
-                    tar -xOzf $fpath --wildcards-match-slash --wildcards '*/domains'
-                else
-                    tar -xOzf $fpath
-                fi
-                ;;
+            *.tar.gz) tar -xOzf $fpath --wildcards-match-slash --wildcards '*/domains' ;;
             *.zip) zcat $fpath ;;
             *) cat $fpath ;;
             esac |
