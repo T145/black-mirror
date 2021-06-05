@@ -99,14 +99,14 @@ jobs:
         run: ./scripts/build.sh
         shell: bash
 
-      - name: Upload Domains Build
+      - name: Upload Domain Build
         uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.upload_info.outputs.upload_url }}
-          asset_path: ./black_domains.tar.gz
-          asset_name: black_domains.tar.gz
+          asset_path: ./black_domain.tar.gz
+          asset_name: black_domain.tar.gz
           asset_content_type: application/gzip
 
       - name: Upload IPv4 Build
