@@ -9,8 +9,6 @@ jq -r 'to_entries[] | [.key, .value.url] | @tsv' sources.json |
     gawk -F'\t' '{ if ($2 ~ /\.tar.gz$/ || /\.zip$/) { printf "%s\n out=%s.%s\n",$2,$1,gensub(/^(.*[/])?[^.]*[.]?/, "", 1, $2) } else { printf "%s\n out=%s.txt\n",$2,$1 } }' |
     aria2c -i- -q -d "$downloads" --max-concurrent-downloads=10 --optimize-concurrent-downloads=true --auto-file-renaming=false --realtime-chunk-checksum=false --async-dns-server=[1.1.1.1:53,1.0.0.1:53,8.8.8.8:53,8.8.4.4:53,9.9.9.9:53,9.9.9.10:53,77.88.8.8:53,77.88.8.1:53,208.67.222.222:53,208.67.220.220:53]
 
-whitelisted=$(cat the_whitelist.txt | paste -sd'|')
-
 for format in 'domain' 'ipv4' 'ipv6'; do
     jq --arg format "$format" 'to_entries[] | select(.value.format == $format)' sources.json |
         jq -r -s 'from_entries | keys[] as $k | "\($k)#\(.[$k] | .rule)"' |
@@ -44,6 +42,11 @@ for format in 'domain' 'ipv4' 'ipv6'; do
         done
 
     sort -o "black_$format.txt" -u -S 90% --parallel=4 -T "$downloads" "black_$format.txt"
-    gawk -i inplace -v wlstd="$whitelisted" '!/wlstd$/' "black_$format.txt"
+
+    while read host; do
+        gawk -i inplace "!/^$host$/" "black_$format.txt"
+    done <"the_whitelist.txt"
+
     tar -czf "black_$format.tar.gz" "black_$format.txt"
+    rm "black_$format.txt"
 done
