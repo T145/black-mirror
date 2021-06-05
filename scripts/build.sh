@@ -33,12 +33,12 @@ for format in 'domain' 'ipv4' 'ipv6'; do
                 gawk -v fmt="$format" '{
                     switch (fmt) {
                     case "domain":
-                        print $0  >> "black_domain.txt"
-                        print "0.0.0.0 " $0  >> "black_ipv4.txt"
+                        print $0 >> "black_domain.txt"
+                        print "0.0.0.0 " $0 >> "black_ipv4.txt"
                         print ":: " $0 >> "black_ipv6.txt"
                         break
                     case "ipv4":
-                        print "0.0.0.0 " $0  >> "black_ipv4.txt"
+                        print "0.0.0.0 " $0 >> "black_ipv4.txt"
                         break
                     case "ipv6":
                         print ":: " $0 >> "black_ipv6.txt"
