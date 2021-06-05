@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  fix_sources:
+  apply_fixes:
     runs-on: ubuntu-20.04
 
     steps:
@@ -14,7 +14,10 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-      - name: Sort Sources Alphabetically By Key
+      - name: Fix Script Permissions
+        run: chmod 777 -r ./scripts
+
+      - name: Fix Sources
         run: |
           jq -S -M '.' sources.json > temp.json
           mv temp.json sources.json
@@ -23,7 +26,7 @@ jobs:
       - name: Git Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4.11.0
         with:
-          commit_message: Fixed sources
+          commit_message: Applied fixes
 
   build_release_metadata:
     runs-on: ubuntu-20.04
@@ -85,11 +88,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
-
-      - name: Set Script Permissions
-        run: |
-          chmod 777 ./scripts/setup.sh
-          chmod 777 ./scripts/build.sh
 
       - name: Install Dependencies
         run: ./scripts/setup.sh
