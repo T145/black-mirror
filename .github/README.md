@@ -44,11 +44,12 @@ _Feel free to cross-reference these and double-check that unique lists were not 
 
 ## ⚓ List Links
 
-Just grab an archive and extract it! These links will not change.
+Just grab an archive and extract it!
+These links should not change, but may do so.
 
-##### black_domains.txt
+##### black_domain.txt
 ```
-https://github.com/T145/the-blacklist/releases/latest/download/black_domains.tar.gz
+https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz
 ```
 
 ##### black_ipv4.txt

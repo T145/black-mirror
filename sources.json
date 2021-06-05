@@ -1,281 +1,281 @@
 {
   "alexa_anti_porn": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "BEGIN{FS=\",\"};{if($2~/porn/||/fuck/||/sex/||/xxx/||/gay/||/hentai/||/incest/||/xvideos/||/pussy/||/dick/||/blowjob/){print tolower($2)}}",
     "url": "https://s3.amazonaws.com/alexa-static/top-1m.csv.zip"
   },
   "android_tracking": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt"
   },
   "andryou": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://gitlab.com/andryou/block/raw/master/kouhai-compressed-domains"
   },
   "anti_ad": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt"
   },
   "anudeep_facebook": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
     "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt"
   },
   "blackbird": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://getblackbird.net/blacklist/hosts.txt"
   },
   "blp_abuse": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/abuse-nl.txt"
   },
   "blp_ads": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/ads-nl.txt"
   },
   "blp_crypto": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/crypto-nl.txt"
   },
   "blp_drugs": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/drugs-nl.txt"
   },
   "blp_facebook": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/facebook-nl.txt"
   },
   "blp_fraud": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/fraud-nl.txt"
   },
   "blp_gambling": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/gambling-nl.txt"
   },
   "blp_malware": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/malware-nl.txt"
   },
   "blp_phishing": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/phishing-nl.txt"
   },
   "blp_piracy": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/piracy-nl.txt"
   },
   "blp_porn": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/porn-nl.txt"
   },
   "blp_ransomware": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/ransomware-nl.txt"
   },
   "blp_redirect": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/redirect-nl.txt"
   },
   "blp_scam": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/scam-nl.txt"
   },
   "blp_smart_tv": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/smart-tv-nl.txt"
   },
   "blp_tiktok": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/tiktok-nl.txt"
   },
   "blp_torrent": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/torrent-nl.txt"
   },
   "blp_tracking": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/tracking-nl.txt"
   },
   "blp_whatsapp": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://blocklistproject.github.io/Lists/alt-version/whatsapp-nl.txt"
   },
   "clefspeare13_porn": {
-    "list_type": "domains",
+    "format": "domain",
     "mirror": "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/clefspeare13/hosts",
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
     "url": "https://raw.githubusercontent.com/Clefspeare13/pornhosts/master/0.0.0.0/hosts"
   },
   "energized_ips": {
-    "list_type": "ipv4",
+    "format": "ipv4",
     "rule": "/[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}/{print $0}",
     "url": "https://block.energized.pro/extensions/ips/formats/list.txt"
   },
   "energized_regional": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://block.energized.pro/extensions/regional/formats/domains.txt"
   },
   "energized_social": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://block.energized.pro/extensions/social/formats/domains.txt"
   },
   "energized_unified": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://block.energized.pro/unified/formats/domains.txt"
   },
   "energized_xtreme": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://block.energized.pro/extensions/xtreme/formats/domains.txt"
   },
   "firehol_level4": {
-    "list_type": "ipv4",
+    "format": "ipv4",
     "rule": "/[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}/{print $0}",
     "url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level4.netset"
   },
   "firetv_tracking": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/AmazonFireTV.txt"
   },
   "games_tracking": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
     "url": "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Main-Template/hosts"
   },
   "gaming": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
     "url": "https://raw.githubusercontent.com/dupontjean/pihole-blocklist/master/game.txt"
   },
   "marktron_fakenews": {
-    "list_type": "domains",
+    "format": "domain",
     "mirror": "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/fakenews/hosts",
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
     "url": "https://raw.githubusercontent.com/marktron/fakenews/master/fakenews"
   },
   "notracking": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://raw.githubusercontent.com/notracking/hosts-blocklists/master/dnscrypt-proxy/dnscrypt-proxy.blacklist.txt"
   },
   "oisd": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://dbl.oisd.nl"
   },
   "openphish_feed": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print tolower($3)}",
     "url": "https://openphish.com/feed.txt"
   },
   "phishing_army": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://phishing.army/download/phishing_army_blocklist_extended.txt"
   },
   "reg_fi": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}",
     "url": "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt"
   },
   "reg_id": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}",
     "url": "https://easylist-downloads.adblockplus.org/abpindo+easylist.txt"
   },
   "reg_kr": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}",
     "url": "https://raw.githubusercontent.com/List-KR/List-KR/master/filter.txt"
   },
   "reg_pl1": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
     "url": "https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt"
   },
   "reg_pl2": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
     "url": "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hostfile.txt"
   },
   "reg_se": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
     "url": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt"
   },
   "shallalist": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://www.shallalist.de/Downloads/shallalist.tar.gz"
   },
   "sinfonietta_gambling": {
-    "list_type": "domains",
+    "format": "domain",
     "mirror": "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/gambling/hosts",
     "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
     "url": "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/gambling-hosts"
   },
   "sinfonietta_social": {
-    "list_type": "domains",
+    "format": "domain",
     "mirror": "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/social/sinfonietta/hosts",
     "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
     "url": "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/social-hosts"
   },
   "smarttv_tracking": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt"
   },
   "tiuxo_porn": {
-    "list_type": "domains",
+    "format": "domain",
     "mirror": "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/tiuxo/hosts",
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
     "url": "https://raw.githubusercontent.com/tiuxo/hosts/master/porn"
   },
   "utcapitole": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://dsi.ut-capitole.fr/blacklists/download/blacklists.tar.gz"
   },
   "wally3k": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
     "url": "https://v.firebog.net/hosts/static/w3kbl.txt"
   },
   "winspy_extra": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
     "url": "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/extra.txt"
   },
   "winspy_update": {
-    "list_type": "domains",
+    "format": "domain",
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
     "url": "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update.txt"
   }
