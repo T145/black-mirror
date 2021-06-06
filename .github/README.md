@@ -45,6 +45,7 @@ Any redundant sources shared between them and the original list have been remove
 - [Amazon Alexa Top 1 Million Sites](https://github.com/T145/the-blacklist/blob/master/sources.json#L5)
 - [StevenBlack Extensions](https://github.com/StevenBlack/hosts/tree/master/extensions)
 - [FireHOL](https://github.com/firehol/blocklist-ipsets)
+- [IPverse](http://ipverse.net/)
 
 ## ⚓ List Links
 
