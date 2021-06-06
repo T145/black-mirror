@@ -24,26 +24,23 @@
 
 ## 📚 List Sources
 
-Initially used [sources provided by the OpenWRT plugin Adblock](https://github.com/openwrt/packages/blob/master/net/adblock/files/adblock.sources).
-After realizing that the [StevenBlack](https://github.com/StevenBlack/hosts#sources-of-hosts-data-unified-in-this-variant)
-and [Energized](https://github.com/EnergizedProtection/block#package-sources) listings were incorrect, the list grew after incorporating everything from them.
-Any redundant sources shared between them and the original list have been removed. They are as follows in the original list:
+> _Please report any redundant sources in an issue!_
 
-**Energized + Extensions**
-- adaway, adguard, adguard_tracking, anudeep, bitcoin, disconnect, reg_cn, reg_cz, reg_de, reg_es, reg_fr, reg_it, reg_nl, reg_ro, reg_ru, reg_vn, stevenblack, spam404, stopforumspam, whocares, winhelp, yoyo
-
-> The "Xtreme" extension isn't very descriptive, but has been included anyway.
-
-### Other Integrated Sources
-
-> Redundant sources have been removed. _Please report any oversights in an issue._
-
-- [Anudeep Facebook](https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt)
-- [WindowsSpyBlocker](https://github.com/crazy-max/WindowsSpyBlocker/tree/master/data/hosts)
-- [The Block List Project](https://blocklistproject.github.io/Lists/)
-- [Blackbird](https://getblackbird.net/blacklist/hosts/)
-- [Amazon Alexa Top 1 Million Sites](https://github.com/T145/the-blacklist/blob/master/sources.json#L5)
+- [OpenWRT Adblock Listings](https://github.com/openwrt/packages/blob/master/net/adblock/files/adblock.sources)
+  - Redundant sources removed include the following: `adaway`, `adguard`, `adguard_tracking`, `anudeep`, `bitcoin`, `disconnect`, `reg_cn`, `reg_cz`, `reg_de`, `reg_es`, `reg_fr`, `reg_it`, `reg_nl`, `reg_ro`, `reg_ru`, `reg_vn`, `stevenblack`, `spam404`, `stopforumspam`, `whocares`, `winhelp`, `yoyo`
+  - Most redundant sources are included in the Energized list and its extensions
+- [Energized + Extensions](https://github.com/EnergizedProtection/block#package-sources)
+  - The "Xtreme" extension isn't very descriptive, but has been included anyway
 - [StevenBlack Extensions](https://github.com/StevenBlack/hosts/tree/master/extensions)
+  - Unified hosts and some extensions contained in `Energized`
+- [Anudeep Facebook](https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt)
+  - [Other lists](https://github.com/anudeepND/blacklist) contained in `Energized`
+- [WindowsSpyBlocker Extra+Update](https://github.com/crazy-max/WindowsSpyBlocker/tree/master/data/hosts)
+  - Spy list contained in `Energized`
+- [The Block List Project](https://blocklistproject.github.io/Lists/)
+- [Blackbird for Windows](https://getblackbird.net/blacklist/hosts/)
+- [Amazon Alexa Top 1M Sites](https://github.com/T145/the-blacklist/blob/master/sources.json#L5)
+  - Being used to block popular porn sites
 - [FireHOL](https://github.com/firehol/blocklist-ipsets)
 - [IPverse](http://ipverse.net/)
 
