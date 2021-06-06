@@ -13,7 +13,7 @@
 > Contribute any useful sources you can think of manually by editting the `sources.json` file directly on a fork and making a pull request,
 > or by creating an issue and placing your recommendations there. Help The Blacklist reach `node_modules`-level heights!
 
-## 📋 List Attributes
+## 📋 Attributes
 
 1. No comments
 2. No excess whitespace (trailing, blank lines)
@@ -22,7 +22,7 @@
 5. Domain-only, IPv4, and IPv6 variants
 6. Updates at [0:00 UTC](https://www.timeanddate.com/time/zone/timezone/utc)
 
-## 📚 List Sources
+## 📚 Sources
 
 > _Please report any redundant sources in an issue!_
 
@@ -44,7 +44,7 @@
 - [FireHOL](https://github.com/firehol/blocklist-ipsets)
 - [IPverse](http://ipverse.net/)
 
-## ⚓ List Links
+## ⚓ Hyperlinks
 
 Just grab an archive and extract it!
 These links should not change, but may do so.
