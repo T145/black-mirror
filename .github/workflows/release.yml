@@ -23,7 +23,7 @@ jobs:
           mv temp.json sources.json
         shell: bash
 
-      - name: Git Auto Commit
+      - name: Auto Commit
         uses: "stefanzweifel/git-auto-commit-action@v4.11.0"
         with:
           commit_message: Applied fixes
@@ -54,3 +54,10 @@ jobs:
           title: "Production Builds"
           files: |
             *.tar.gz
+
+      - name: Remove Old Releases
+        uses: eregon/keep-last-n-releases@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          n: 3
