@@ -5,9 +5,16 @@ set -eu
 downloads=$(mktemp -d)
 trap 'rm -rf "$downloads"' EXIT || exit 1
 
-jq -r 'to_entries[] | [.key, .value.url] | @tsv' sources.json |
-    gawk -F'\t' '{ if ($2 ~ /\.tar.gz$/ || /\.zip$/) { printf "%s\n out=%s.%s\n",$2,$1,gensub(/^(.*[/])?[^.]*[.]?/, "", 1, $2) } else { printf "%s\n out=%s.txt\n",$2,$1 } }' |
-    aria2c -i- -q -d "$downloads" --max-concurrent-downloads=10 --optimize-concurrent-downloads=true --auto-file-renaming=false --realtime-chunk-checksum=false --async-dns-server=[1.1.1.1:53,1.0.0.1:53,8.8.8.8:53,8.8.4.4:53,9.9.9.9:53,9.9.9.10:53,77.88.8.8:53,77.88.8.1:53,208.67.222.222:53,208.67.220.220:53]
+jq -r 'keys[] as $k | "\($k)#\(.[$k] | .mirrors)"' sources.json |
+    while IFS=$'#' read -r key mirrors; do
+        echo $mirrors | tr -d '[]"' | tr -s ',' "\t" | gawk -v key="$key" '{
+            if ($0 ~ /\.tar.gz$/ || /\.zip$/) {
+                printf "%s\n out=%s.%s\n",$0,key,gensub(/^(.*[/])?[^.]*[.]?/, "", 1, $0)
+            } else {
+                printf "%s\n out=%s.txt\n",$0,key
+            }
+        }'
+    done | aria2c -i- -q -d "$downloads" --max-concurrent-downloads=10 --optimize-concurrent-downloads=true --auto-file-renaming=false --realtime-chunk-checksum=false --async-dns-server=[1.1.1.1:53,1.0.0.1:53,8.8.8.8:53,8.8.4.4:53,9.9.9.9:53,9.9.9.10:53,77.88.8.8:53,77.88.8.1:53,208.67.222.222:53,208.67.220.220:53]
 
 for format in 'domain' 'ipv4' 'ipv6'; do
     jq --arg format "$format" 'to_entries[] | select(.value.format == $format)' sources.json |
