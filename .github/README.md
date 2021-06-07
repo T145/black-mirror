@@ -44,6 +44,7 @@
 - [FireHOL Level 4](https://github.com/firehol/blocklist-ipsets)
   - Levels 1-3 are included in `Energized Extensions`
 - [IPverse](http://ipverse.net/)
+- [1Hosts](https://github.com/badmojr/1Hosts)
 
 ## ⚓ Hyperlinks
 
