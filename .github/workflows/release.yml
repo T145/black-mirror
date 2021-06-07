@@ -28,62 +28,11 @@ jobs:
         with:
           commit_message: Applied fixes
 
-  build_release_metadata:
-    runs-on: ubuntu-20.04
-    needs: [apply_fixes]
-
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-        if: github.event_name == 'schedule'
-
-      - name: Create Tag
-        id: create_tag
-        run: |
-          if [[ "${{ github.event_name }}" == "schedule" ]]; then
-            tag=auto-build-$(date +%Y%m%d)
-          else
-            tag=manual-build-$(date +%Y%m%d-%H%M%S)
-          fi
-          echo "::set-output name=tag::$tag"
-
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ steps.create_tag.outputs.tag }}
-          release_name: ${{ steps.create_tag.outputs.tag }}
-          draft: true
-          prerelease: false
-
-      - name: Create artifact files
-        run: |
-          mkdir info
-          echo "${{ steps.create_release.outputs.id }}" > info/release_id
-          echo "${{ steps.create_release.outputs.upload_url }}" > info/upload_url
-      - uses: actions/upload-artifact@v1
-        with:
-          name: info
-          path: info
-
   build_release:
-    needs: [build_release_metadata]
+    needs: [apply_fixes]
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/download-artifact@v1
-        with:
-          name: info
-
-      - name: Set upload_url
-        id: upload_info
-        run: |
-          upload_url=$(cat info/upload_url)
-          echo "::set-output name=upload_url::$upload_url"
-
       - name: Clone Repo
         uses: actions/checkout@v2
         with:
@@ -97,59 +46,16 @@ jobs:
         run: ./scripts/build.sh
         shell: bash
 
-      - name: Upload Domain Build
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.upload_info.outputs.upload_url }}
-          asset_path: ./black_domain.tar.gz
-          asset_name: black_domain.tar.gz
-          asset_content_type: application/gzip
-
-      - name: Upload IPv4 Build
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.upload_info.outputs.upload_url }}
-          asset_path: ./black_ipv4.tar.gz
-          asset_name: black_ipv4.tar.gz
-          asset_content_type: application/gzip
-
-      - name: Upload IPv6 Build
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.upload_info.outputs.upload_url }}
-          asset_path: ./black_ipv6.tar.gz
-          asset_name: black_ipv6.tar.gz
-          asset_content_type: application/gzip
-
   publish_release:
     needs: [build_release]
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/download-artifact@v1
+      - uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          name: info
-
-      - name: Set publish_info
-        id: publish_info
-        run: |
-          release_id=$(cat info/release_id)
-          echo "::set-output name=release_id::$release_id"
-
-      - uses: eregon/publish-release@v1.0.3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          release_id: ${{ steps.publish_info.outputs.release_id }}
-
-      - uses: eregon/keep-last-n-releases@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          n: 3
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: false
+          title: "Production Builds"
+          files: |
+            *.tar.gz
