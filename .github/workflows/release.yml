@@ -28,7 +28,7 @@ jobs:
         with:
           commit_message: Applied fixes
 
-  build_release:
+  create_release:
     needs: [apply_fixes]
     runs-on: ubuntu-20.04
 
@@ -45,12 +45,8 @@ jobs:
         run: ./scripts/build.sh
         shell: bash
 
-  publish_release:
-    needs: [build_release]
-    runs-on: ubuntu-20.04
-
-    steps:
-      - uses: "marvinpinto/action-automatic-releases@v1.2.1"
+      - name: Publish Release
+        uses: "marvinpinto/action-automatic-releases@v1.2.1"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
