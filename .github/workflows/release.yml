@@ -10,8 +10,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - name: Clone Repo
-        uses: actions/checkout@latest
+      - uses: "actions/checkout@latest"
         with:
           ref: ${{ github.head_ref }}
 
@@ -25,7 +24,7 @@ jobs:
         shell: bash
 
       - name: Git Auto Commit
-        uses: stefanzweifel/git-auto-commit-action@latest
+        uses: "stefanzweifel/git-auto-commit-action@latest"
         with:
           commit_message: Applied fixes
 
@@ -34,8 +33,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - name: Clone Repo
-        uses: actions/checkout@latest
+      - uses: "actions/checkout@latest"
         with:
           ref: ${{ github.head_ref }}
 
