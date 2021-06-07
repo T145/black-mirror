@@ -57,11 +57,13 @@ https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.
 ```
 
 ##### black_ipv4.txt
+_Prepended with [`0.0.0.0`](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist#recommendation-for-using-0000-instead-of-127001)_
 ```
 https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz
 ```
 
 ##### black_ipv6.txt
+_Prepended with [`::`](https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0)_
 ```
 https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz
 ```
@@ -80,8 +82,8 @@ I've tested this across all the mentioned platforms using `dig{6}` on a small sa
 
 Similar to dnsmasq, but requires more manual configuration.
 Use the `black_ipv{4-6}.txt` list(s), and rename the extracted file into a *.conf file.
-[Steffinstanley discusses how to apply blocklists](https://medium.com/@steffinstanly/unbound-dns-blocking-3567986a5735).
+[Steffinstanly discusses how to apply blocklists](https://medium.com/@steffinstanly/unbound-dns-blocking-3567986a5735).
 
-#### personaldnsfilter
+#### personalDNSfilter
 
 Use the domain list.
