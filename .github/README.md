@@ -40,8 +40,9 @@
 - [The Block List Project](https://blocklistproject.github.io/Lists/)
 - [Blackbird for Windows](https://getblackbird.net/blacklist/hosts/)
 - [Amazon Alexa Top 1M Sites](https://github.com/T145/the-blacklist/blob/master/sources.json#L5)
-  - Being used to block popular porn sites
-- [FireHOL](https://github.com/firehol/blocklist-ipsets)
+  - Used to block popular porn sites
+- [FireHOL Level 4](https://github.com/firehol/blocklist-ipsets)
+  - Levels 1-3 are included in `Energized Extensions`
 - [IPverse](http://ipverse.net/)
 
 ## ⚓ Hyperlinks
