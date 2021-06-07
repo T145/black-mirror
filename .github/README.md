@@ -68,7 +68,7 @@ https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz
 
 ## 🧰 Usage
 
-##### dnsmasq
+#### dnsmasq
 
 Many popular platforms such as OpenWRT, DDWRT, and Pihole use DNSmasq as their choice TCP powerhouse.
 After inspecting many domain blocklists you'll inevitably run across a list in the `dnsmasq.conf` format.
@@ -76,12 +76,12 @@ This list doesn't support it because you can just place `addn-hosts=black_ipv{4-
 I've tested this across all the mentioned platforms using `dig{6}` on a small sample size and had each host null-routed successfully.
 [DNSmasq's man page](https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html) discusses this further, and [DDWRT's ad blocking wiki page](https://wiki.dd-wrt.com/wiki/index.php/Ad_blocking) provides examples.
 
-##### ubound
+#### ubound
 
 Similar to dnsmasq, but requires more manual configuration.
 Use the `black_ipv{4-6}.txt` list(s), and rename the extracted file into a *.conf file.
-[steffinstanley discusses how to apply blocklists](https://medium.com/@steffinstanly/unbound-dns-blocking-3567986a5735).
+[Steffinstanley discusses how to apply blocklists](https://medium.com/@steffinstanly/unbound-dns-blocking-3567986a5735).
 
-##### personaldnsfilter
+#### personaldnsfilter
 
 Use the domain list.
