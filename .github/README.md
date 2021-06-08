@@ -47,8 +47,8 @@
 - [IPverse](http://ipverse.net/)
 - [1Hosts Xtra](https://github.com/badmojr/1Hosts)
   - Mini & Pro versions are now being included in `Energized`
-- [hl2guide's Filterlist Sources](https://github.com/hl2guide/Filterlist-for-AdGuard-or-PiHole)
-  - Unique sources include: [`blocklist_de`](https://www.blocklist.de/en/index.html), `geoffrey_frogeye` (Taken from "https://sebsauvage.net/hosts/hosts")
+- [Deans's Filterlist Sources](https://github.com/hl2guide/Filterlist-for-AdGuard-or-PiHole)
+  - Unique sources include: [`blocklist_de`](https://www.blocklist.de/en/index.html), [`geoffrey_frogeye`](https://hostfiles.frogeye.fr/) (Taken from "https://sebsauvage.net/hosts/hosts"), `threatcrowd`
 
 ## ⚓ Hyperlinks
 
