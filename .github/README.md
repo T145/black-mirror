@@ -46,8 +46,7 @@
   - Levels 1-3 are included in `Energized Extensions`
 - [IPverse](http://ipverse.net/)
 - [1Hosts Xtra](https://github.com/badmojr/1Hosts)
-- [Ultimate Hosts Blacklist](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist#information-data-sources-copyrights-and-credits)
-  - Unique sources include the following: `bad_jav`
+- [Blocklist.de](https://www.blocklist.de/en/index.html)
 
 ## ⚓ Hyperlinks
 
