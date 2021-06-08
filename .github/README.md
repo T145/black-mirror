@@ -46,7 +46,9 @@
   - Levels 1-3 are included in `Energized Extensions`
 - [IPverse](http://ipverse.net/)
 - [1Hosts Xtra](https://github.com/badmojr/1Hosts)
-- [Blocklist.de](https://www.blocklist.de/en/index.html)
+  - Mini & Pro versions are now being included in `Energized`
+- [hl2guide's Filterlist Sources](https://github.com/hl2guide/Filterlist-for-AdGuard-or-PiHole)
+  - Unique sources include: [`blocklist_de`](https://www.blocklist.de/en/index.html), `geoffrey_frogeye` (Taken from "https://sebsauvage.net/hosts/hosts")
 
 ## ⚓ Hyperlinks
 
