@@ -41,7 +41,8 @@
   "anudeep_facebook": {
     "format": "domain",
     "mirrors": [
-      "https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt"
+      "https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt",
+      "https://hosts.anudeep.me/mirror/facebook.txt"
     ],
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
   },
