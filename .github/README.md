@@ -26,16 +26,17 @@
 
 > _Please report any redundant sources in an issue!_
 
-- [OpenWRT Adblock Listings](https://github.com/openwrt/packages/blob/master/net/adblock/files/adblock.sources)
+- [OpenWRT Adblock Sources](https://github.com/openwrt/packages/blob/master/net/adblock/files/adblock.sources)
   - Redundant sources removed include the following: `adaway`, `adguard`, `adguard_tracking`, `anudeep`, `bitcoin`, `disconnect`, `reg_cn`, `reg_cz`, `reg_de`, `reg_es`, `reg_fr`, `reg_it`, `reg_nl`, `reg_ro`, `reg_ru`, `reg_vn`, `stevenblack`, `spam404`, `stopforumspam`, `whocares`, `winhelp`, `yoyo`
-  - Most redundant sources are included in the Energized list and its extensions
-- [Energized + Extensions](https://github.com/EnergizedProtection/block#package-sources)
-  - The "Xtreme" extension isn't very descriptive, but has been included anyway
+  - These redundant sources are included in the Energized list and its extensions
+- [Energized Unified](https://github.com/EnergizedProtection/block#packs-2)
+- [Energized Extensions](https://github.com/EnergizedProtection/block#extensions-2)
+  - The `Xtreme Extension` isn't very descriptive, but has been included anyway
 - [StevenBlack Extensions](https://github.com/StevenBlack/hosts/tree/master/extensions)
   - Unified hosts and some extensions contained in `Energized`
 - [Anudeep Facebook](https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt)
   - [Other lists](https://github.com/anudeepND/blacklist) contained in `Energized`
-- [WindowsSpyBlocker Extra+Update](https://github.com/crazy-max/WindowsSpyBlocker/tree/master/data/hosts)
+- [WindowsSpyBlocker Extra & Update](https://github.com/crazy-max/WindowsSpyBlocker/tree/master/data/hosts)
   - Spy list contained in `Energized`
 - [The Block List Project](https://blocklistproject.github.io/Lists/)
 - [Blackbird for Windows](https://getblackbird.net/blacklist/hosts/)
@@ -45,6 +46,8 @@
   - Levels 1-3 are included in `Energized Extensions`
 - [IPverse](http://ipverse.net/)
 - [1Hosts Xtra](https://github.com/badmojr/1Hosts)
+- [Ultimate Hosts Blacklist](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist#information-data-sources-copyrights-and-credits)
+  - Unique sources include the following: `bad_jav`
 
 ## ⚓ Hyperlinks
 
