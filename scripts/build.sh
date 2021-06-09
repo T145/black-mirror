@@ -57,6 +57,7 @@ for color in 'white' 'black'; do
 
             if [[ "$color" == "black" ]] && test -f "white_${format}.txt"; then
                 grep -Fxvf "white_${format}.txt" "black_${format}.txt" | sponge "black_${format}.txt"
+                tar -czf "black_$format.tar.gz" "black_$format.txt"
             fi
 
             if [[ "$format" == "domain" ]]; then
