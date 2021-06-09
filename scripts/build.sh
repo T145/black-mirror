@@ -55,11 +55,11 @@ for color in 'white' 'black'; do
         if test -f "${color}_${format}.txt"; then
             sort -o "${color}_${format}.txt" -u -S 90% --parallel=4 -T "${downloads}/${color}" "${color}_${format}.txt"
 
-            if ["$color" = "black"] && test -f "white_${format}.txt"; then
+            if [["$color" == "black"]] && test -f "white_${format}.txt"; then
                 grep -Fxvf "white_${format}.txt" "black_${format}.txt" >"black_${format}.txt"
             fi
 
-            if ["$format" = "domain"]; then
+            if [["$format" == "domain"]]; then
                 gawk '{ print "0.0.0.0 " $0 }' "${color}_domain.txt" >"${color}_ipv4.txt"
                 gawk '{ print ":: " $0 }' "${color}_domain.txt" >"${color}_ipv6.txt"
             fi
