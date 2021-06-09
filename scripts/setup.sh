@@ -20,4 +20,5 @@ install_if_not_exist aria2
 install_if_not_exist coreutils
 install_if_not_exist gawk
 install_if_not_exist jq
+install_if_not_exist moreutils
 install_if_not_exist sed
