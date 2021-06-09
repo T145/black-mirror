@@ -20,7 +20,7 @@ for color in 'black' 'white'; do
 done
 
 for format in 'domain' 'ipv4' 'ipv6'; do
-    for color in 'black' 'white'; do
+    for color in 'white' 'black'; do
         jq --arg format "$format" 'to_entries[] | select(.value.format == $format)' sources.json |
             jq -r -s 'from_entries | keys[] as $k | "\($k)#\(.[$k] | .rule)"' |
             while IFS=$'#' read -r key rule; do
@@ -54,10 +54,11 @@ for format in 'domain' 'ipv4' 'ipv6'; do
                     }'
             done
 
-        case $color in
-        'black') sort -o "black_${format}.txt" -u -S 90% --parallel=4 -T "${downloads}/${color}" "black_${format}.txt" ;;
-        'white') grep -Fxvf "white_${format}.txt" "black_${format}.txt" >"black_${format}.txt" ;;
-        esac
+        sort -o "${color}_${format}.txt" -u -S 90% --parallel=4 -T "${downloads}/${color}" "${color}_${format}.txt"
+
+        if ["$color" == "black"]; then
+            grep -Fxvf "white_${format}.txt" "black_${format}.txt" >"black_${format}.txt"
+        fi
 
         if ["$format" == "domain"]; then
             gawk '{ print "0.0.0.0 " $0 }' "${color}_domain.txt" >"${color}_ipv4.txt"
