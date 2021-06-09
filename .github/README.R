@@ -52,25 +52,11 @@
 
 ## ⚓ Hyperlinks
 
-Just grab an archive and extract it!
-These links should not change, but may do so.
-
-##### black_domain.txt
-```
-https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz
-```
-
-##### black_ipv4.txt
-_Prepended with [`0.0.0.0`](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist#recommendation-for-using-0000-instead-of-127001)_
-```
-https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz
-```
-
-##### black_ipv6.txt
-_Prepended with [`::`](https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0)_
-```
-https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz
-```
+|     List Name    |                                                                     Description                                                                    | Unique Entries | ~ File Size |                                                   Source                                                  |
+|:----------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------:|----------------|-------------|:---------------------------------------------------------------------------------------------------------:|
+| black_domain.txt |                                                            Contains regular host entries                                                           |        __DOMAIN_ENTRIES        |      __DOMAIN_SIZE       | [black_domain.tar.gz](https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz) |
+|  black_ipv4.txt  | Prepended with [`0.0.0.0`](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist#recommendation-for-using-0000-instead-of-127001) |        __IPV4_ENTRIES        |      __IPV4_SIZE       |   [black_ipv4.tar.gz](https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz)   |
+|  black_ipv6.txt  |                    Prepended with [`::`](https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0)                    |        __IPV6_ENTRIES        |      __IPV6_SIZE       |   [black_ipv6.tar.gz](https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz)   |
 
 ## 🧰 Usage
 
