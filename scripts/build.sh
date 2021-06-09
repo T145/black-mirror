@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -eu
+set -eux
 
 downloads=$(mktemp -d)
 trap 'rm -rf "$downloads"' EXIT || exit 1
@@ -37,16 +37,16 @@ for format in 'domain' 'ipv4' 'ipv6'; do
                 esac |
                     gawk --sandbox -O -- "$rule" | # apply the regex rule
                     gawk '!x[$0]++' |              # filter duplicates out
-                    gawk -v format="$format" color="$color" '{
+                    gawk -v format="$format" -v color="$color" '{
                         switch (format) {
                         case "domain":
-                            print $0 >> color_domain.txt
+                            print $0 >> color "_domain.txt"
                             break
                         case "ipv4":
-                            print "0.0.0.0 " $0 >> color_ipv4.txt
+                            print "0.0.0.0 " $0 >> color "_ipv4.txt"
                             break
                         case "ipv6":
-                            print ":: " $0 >> color_ipv6.txt
+                            print ":: " $0 >> color "_ipv6.txt"
                             break
                         default:
                             break
