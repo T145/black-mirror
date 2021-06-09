@@ -5,7 +5,7 @@ set -eux
 downloads=$(mktemp -d)
 trap 'rm -rf "$downloads"' EXIT || exit 1
 
-for color in 'black' 'white'; do
+for color in 'white' 'black'; do
     jq --arg color "$color" 'to_entries[] | select(.value.color == $color)' sources.json |
         jq -r -s 'from_entries | keys[] as $k | "\($k)#\(.[$k] | .mirrors)"' |
         while IFS=$'#' read -r key mirrors; do
@@ -17,11 +17,9 @@ for color in 'black' 'white'; do
                 }
             }'
         done | aria2c -i- -q -d "${downloads}/${color}" --max-concurrent-downloads=10 --optimize-concurrent-downloads=true --auto-file-renaming=false --realtime-chunk-checksum=false --async-dns-server=[1.1.1.1:53,1.0.0.1:53,8.8.8.8:53,8.8.4.4:53,9.9.9.9:53,9.9.9.10:53,77.88.8.8:53,77.88.8.1:53,208.67.222.222:53,208.67.220.220:53]
-done
 
-for format in 'domain' 'ipv4' 'ipv6'; do
-    for color in 'white' 'black'; do
-        jq --arg format "$format" 'to_entries[] | select(.value.format == $format)' sources.json |
+    for format in 'domain' 'ipv4' 'ipv6'; do
+        jq --arg format "$format" 'to_entries[] | select(.value.color == $color and .value.format == $format)' sources.json |
             jq -r -s 'from_entries | keys[] as $k | "\($k)#\(.[$k] | .rule)"' |
             while IFS=$'#' read -r key rule; do
                 fpath=$(find -P -O3 "${downloads}/${color}" -type f -name "$key*")
@@ -54,15 +52,17 @@ for format in 'domain' 'ipv4' 'ipv6'; do
                     }'
             done
 
-        sort -o "${color}_${format}.txt" -u -S 90% --parallel=4 -T "${downloads}/${color}" "${color}_${format}.txt"
+        if test -f "${color}_${format}.txt"; then
+            sort -o "${color}_${format}.txt" -u -S 90% --parallel=4 -T "${downloads}/${color}" "${color}_${format}.txt"
 
-        if ["$color" == "black"]; then
-            grep -Fxvf "white_${format}.txt" "black_${format}.txt" >"black_${format}.txt"
-        fi
+            if ["$color" = "black"] && test -f "white_${format}.txt"; then
+                grep -Fxvf "white_${format}.txt" "black_${format}.txt" >"black_${format}.txt"
+            fi
 
-        if ["$format" == "domain"]; then
-            gawk '{ print "0.0.0.0 " $0 }' "${color}_domain.txt" >"${color}_ipv4.txt"
-            gawk '{ print ":: " $0 }' "${color}_domain.txt" >"${color}_ipv6.txt"
+            if ["$format" = "domain"]; then
+                gawk '{ print "0.0.0.0 " $0 }' "${color}_domain.txt" >"${color}_ipv4.txt"
+                gawk '{ print ":: " $0 }' "${color}_domain.txt" >"${color}_ipv6.txt"
+            fi
         fi
     done
 done
