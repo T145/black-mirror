@@ -13,4 +13,4 @@ ipv6_size=$(du -h black_ipv6.txt | gawk -F'\t' '{ print $1 }')
 
 sed -e "s/__DOMAIN_ENTRIES/$domain_entries/g" -e "s/__DOMAIN_SIZE/$domain_size/g" \
     -e "s/__IPV4_ENTRIES/$ipv4_entries/g" -e "s/__IPV4_SIZE/$ipv4_size/g" \
-    -e "s/__IPV6_ENTRIES/$ipv6_entries/g" -e "s/__IPV6_SIZE/$ipv6_size/g" ./.github/README.R > ./.github/README.md
+    -e "s/__IPV6_ENTRIES/$ipv6_entries/g" -e "s/__IPV6_SIZE/$ipv6_size/g" ./.github/readme-template.md > ./.github/README.md
