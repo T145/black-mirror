@@ -55,8 +55,11 @@ for color in 'white' 'black'; do
         if test -f "${color}_${format}.txt"; then
             sort -o "${color}_${format}.txt" -u -S 90% --parallel=4 -T "${downloads}/${color}" "${color}_${format}.txt"
 
-            if [[ "$color" == "black" ]] && test -f "white_${format}.txt"; then
-                grep -Fxvf "white_${format}.txt" "black_${format}.txt" | sponge "black_${format}.txt"
+            if [[ "$color" == "black" ]]; then
+                if test -f "white_${format}.txt"; then
+                    grep -Fxvf "white_${format}.txt" "black_${format}.txt" | sponge "black_${format}.txt"
+                fi
+
                 tar -czf "black_$format.tar.gz" "black_$format.txt"
             fi
 
