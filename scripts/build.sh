@@ -56,7 +56,7 @@ for color in 'white' 'black'; do
             sort -o "${color}_${format}.txt" -u -S 90% --parallel=4 -T "${downloads}/${color}" "${color}_${format}.txt"
 
             if [[ "$color" == "black" ]] && test -f "white_${format}.txt"; then
-                grep -Fxvf "white_${format}.txt" "black_${format}.txt" >"black_${format}.txt"
+                grep -Fxvf "white_${format}.txt" "black_${format}.txt" | sponge "black_${format}.txt"
             fi
 
             if [[ "$format" == "domain" ]]; then
