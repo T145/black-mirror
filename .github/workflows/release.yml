@@ -1,4 +1,4 @@
-name: Build Blacklist Release
+name: Create Release
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  apply_fixes:
+  create_release:
     runs-on: ubuntu-20.04
 
     steps:
@@ -23,26 +23,16 @@ jobs:
           mv temp.json sources.json
         shell: bash
 
-      - name: Auto Commit
-        uses: "stefanzweifel/git-auto-commit-action@v4.11.0"
-        with:
-          commit_message: Applied fixes
-
-  create_release:
-    needs: [apply_fixes]
-    runs-on: ubuntu-20.04
-
-    steps:
-      - uses: "actions/checkout@v2.3.4"
-        with:
-          ref: ${{ github.head_ref }}
-
       - name: Install Dependencies
         run: ./scripts/setup.sh
         shell: bash
 
       - name: Create Builds
         run: ./scripts/build.sh
+        shell: bash
+
+      - name: Update Readme
+        run: ./scripts/readme.sh
         shell: bash
 
       - name: Publish Release
@@ -61,3 +51,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           n: 3
+
+      - name: Remove Artifacts
+        run: |
+          rm *.tar.gz
+          rm *.txt
+
+      - name: Auto Commit
+        uses: "stefanzweifel/git-auto-commit-action@v4.11.0"
+        with:
+          commit_message: 🔼 Auto Update
