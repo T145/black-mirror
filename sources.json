@@ -60,6 +60,23 @@
     ],
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
   },
+  "anudeep_false_positives": {
+    "color": "white",
+    "format": "domain",
+    "mirrors": [
+      "https://raw.githubusercontent.com/anudeepND/blacklist/master/miscellaneous/false-positives.txt",
+      "https://hosts.anudeep.me/mirror/miscellaneous/false-positives.txt"
+    ],
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "anudeep_whitelist": {
+    "color": "white",
+    "format": "domain",
+    "mirrors": [
+      "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
+    ],
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
   "blackbird": {
     "color": "black",
     "format": "domain",
