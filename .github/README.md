@@ -162,7 +162,7 @@
         <code>threatcrowd</code>, <a href=
         "https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community">
           <code>antisocialengineer</code></a>,
-          <code>windscribe</code>, <code>cyberthreat</code>,
+          <a href="https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png"><code>windscribe</code></a>, <code>cyberthreat</code>,
           <code>not_on_my_shift</code>
         </li>
       </ul>
