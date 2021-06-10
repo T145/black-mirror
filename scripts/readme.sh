@@ -2,13 +2,13 @@
 
 set -eu
 
-domain_entries=$(LC_ALL=en_US.UTF-8 gawk num="$(cat black_domain.txt | wc -l)" -f ./scripts/thousands.awk)
+domain_entries=$(LC_ALL=en_US.UTF-8 printf "%'d" "$(cat black_domain.txt | wc -l)")
 domain_size=$(du -h black_domain.txt | gawk -F'\t' '{ print $1 }')
 
-ipv4_entries=$(LC_ALL=en_US.UTF-8 gawk num="$(($(cat black_ipv4.txt | wc -l) - $domain_entries))" -f ./scripts/thousands.awk)
+ipv4_entries=$(LC_ALL=en_US.UTF-8 printf "%'d" "$(($(cat black_ipv4.txt | wc -l) - $domain_entries))")
 ipv4_size=$(du -h black_ipv4.txt | gawk -F'\t' '{ print $1 }')
 
-ipv6_entries=$(LC_ALL=en_US.UTF-8 gawk num="$(($(cat black_ipv6.txt | wc -l) - $domain_entries))" -f ./scripts/thousands.awk)
+ipv6_entries=$(LC_ALL=en_US.UTF-8 printf "%'d" "$(($(cat black_ipv6.txt | wc -l) - $domain_entries))")
 ipv6_size=$(du -h black_ipv6.txt | gawk -F'\t' '{ print $1 }')
 
 sed -i \
