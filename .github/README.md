@@ -171,9 +171,13 @@
   <h3 id="-whitelists">⚪ Whitelists</h3>
   <ul>
     <li>
-      <a href=
-      "https://github.com/EnergizedProtection/unblock#packs">Energized
-      Unblock</a>
+      <a href="https://github.com/EnergizedProtection/unblock#packs">Energized Unblock</a>
+    </li>
+    <li>
+      <a href="https://github.com/anudeepND/blacklist/blob/master/miscellaneous/false-positives.txt">Anudeep's False Positives</a>
+    </li>
+    <li>
+      <a href="https://github.com/anudeepND/whitelist#overview">Anudeep's Whitelist</a>
     </li>
   </ul>
   <h2 id="-hyperlinks">⚓ Hyperlinks</h2>
