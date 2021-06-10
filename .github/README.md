@@ -54,9 +54,9 @@
 
 |     List Name    |                                                                     Description                                                                    | Unique Entries | ~ File Size |                                                   Source                                                  |
 |:----------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------:|----------------|-------------|:---------------------------------------------------------------------------------------------------------:|
-| black_domain.txt |                                                            Contains regular host entries                                                           |        7249795        |      161M       | [black_domain.tar.gz](https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz) |
-|  black_ipv4.txt  | Prepended with [`0.0.0.0`](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist#recommendation-for-using-0000-instead-of-127001) |        406660        |      225M       |   [black_ipv4.tar.gz](https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz)   |
-|  black_ipv6.txt  |                    Prepended with [`::`](https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0)                    |        53854        |      183M       |   [black_ipv6.tar.gz](https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz)   |
+| black_domain.txt |                                                            Contains regular host entries                                                           |        7250087        |      161MB       | [black_domain.tar.gz](https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz) |
+|  black_ipv4.txt  | Prepended with [`0.0.0.0`](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist#recommendation-for-using-0000-instead-of-127001) |        406981        |      225MB       |   [black_ipv4.tar.gz](https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz)   |
+|  black_ipv6.txt  |                    Prepended with [`::`](https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0)                    |        53854        |      183MB       |   [black_ipv6.tar.gz](https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz)   |
 
 ## 🧰 Usage
 
