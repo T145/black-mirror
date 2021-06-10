@@ -210,7 +210,7 @@
           "https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist#recommendation-for-using-0000-instead-of-127001">
           <code>0.0.0.0</code></a>
         </td>
-        <td id="ipv4-entries">371</td>
+        <td id="ipv4-entries">409,904</td>
         <td id="ipv4-size">225MB</td>
         <td style="text-align:center">
           <a href=
@@ -225,7 +225,7 @@
           "https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0">
           <code>::</code></a>
         </td>
-        <td id="ipv6-entries">371</td>
+        <td id="ipv6-entries">53,870</td>
         <td id="ipv6-size">182MB</td>
         <td style="text-align:center">
           <a href=
