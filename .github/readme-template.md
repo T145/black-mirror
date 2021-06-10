@@ -52,13 +52,67 @@
 
 ## ⚓ Hyperlinks
 
-|     List Name    |                                                                     Description                                                                    | Unique Entries | ~ File Size |                                                   Source                                                  |
-|:----------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------:|----------------|-------------|:---------------------------------------------------------------------------------------------------------:|
-| black_domain.txt |                                                            Contains regular host entries                                                           |        __DOMAIN_ENTRIES        |      __DOMAIN_SIZEB       | [black_domain.tar.gz](https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz) |
-|  black_ipv4.txt  | Prepended with [`0.0.0.0`](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist#recommendation-for-using-0000-instead-of-127001) |        __IPV4_ENTRIES        |      __IPV4_SIZEB       |   [black_ipv4.tar.gz](https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz)   |
-|  black_ipv6.txt  |                    Prepended with [`::`](https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0)                    |        __IPV6_ENTRIES        |      __IPV6_SIZEB       |   [black_ipv6.tar.gz](https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz)   |
+> The IPv4 and IPv6 lists contain the final Domain list
 
-## 🧰 Usage
+<table>
+  <tbody>
+    <tr>
+      <td>List Name</td>
+      <td>Description</td>
+      <td>Unique Entries</td>
+      <td>File Size</td>
+      <td>Source</td>
+    </tr>
+    <tr>
+      <td>black_domain.txt</td>
+      <td>Contains regular host entries</td>
+      <td id="domain_entries">&nbsp;</td>
+      <td id="domain_size">&nbsp;</td>
+      <td>
+        <a
+          href="https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz"
+          >black_domain.tar.gz</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>black_ipv4.txt</td>
+      <td>
+        Prepended with "<a
+          href="https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist#recommendation-for-using-0000-instead-of-127001"
+          >0.0.0.0</a
+        >&nbsp;"
+      </td>
+      <td id="ipv4_entries">&nbsp;</td>
+      <td id="ipv4_size">&nbsp;</td>
+      <td>
+        <a
+          href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz"
+          >black_ipv4.tar.gz</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>black_ipv6.txt</td>
+      <td>
+        Prepended with "<a
+          href="https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0"
+          >::</a
+        >&nbsp;"
+      </td>
+      <td id="ipv6_entries">&nbsp;</td>
+      <td id="ipv6_size">&nbsp;</td>
+      <td>
+        <a
+          href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz"
+          >black_ipv6.tar.gz</a
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## 🛠️ Usage
 
 #### dnsmasq
 
