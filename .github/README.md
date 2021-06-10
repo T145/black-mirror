@@ -8,32 +8,32 @@
   <h2 id="-philosophy">🧠 Philosophy</h2>
   <ul>
     <li>Keep it 100% open-source.
-      <blockquote>
-        <p>The "how it's made" is just as important as the final
+      <ul>
+        <li>The "how it's made" is just as important as the final
         product. Many open-source blocklist projects I've seen
         don't have "how" made public. This project is open and
         flexible, so you can fork it and whitelist what you need
-        for personalized application.</p>
-      </blockquote>
+        for personalized application.</li>
+      </ul>
     </li>
     <li>Make it secure.
-      <blockquote>
-        <p>This project takes on a firewall security mindset, which
+      <ul>
+        <li>This project takes on a firewall security mindset, which
         is basically block everything and whitelist what's needed.
         Obviously this list isn't a firewall, so it just blocks as
         much as possible. Please report any "false positives" in an
         issue. Be sure to set up client and network firewalls, as
-        this is no substitute.</p>
-      </blockquote>
+        this is no substitute.</li>
+      </ul>
     </li>
     <li>Let it grow!
-      <blockquote>
-        <p>Contribute any useful sources you can think of manually
+      <ul>
+        <li>Contribute any useful sources you can think of manually
         by editting the <code>sources.json</code> file directly on
         a fork and making a pull request, or by creating an issue
         and placing your recommendations there. Help The Blacklist
-        reach <code>node_modules</code>-level heights!</p>
-      </blockquote>
+        reach <code>node_modules</code>-level heights!</li>
+      </ul>
     </li>
   </ul>
   <h2 id="-attributes">📋 Attributes</h2>
