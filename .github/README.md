@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta name="author" content="T145">
-  <meta name="description" content="Block all the things">
-</head>
 <body>
   <h2 id="-philosophy">🧠 Philosophy</h2>
   <ul>
