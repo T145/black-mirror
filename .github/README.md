@@ -3,7 +3,6 @@
 <head>
   <meta name="author" content="T145">
   <meta name="description" content="Block all the things">
-  <title>The Blacklist</title>
 </head>
 <body>
   <h2 id="-philosophy">🧠 Philosophy</h2>
