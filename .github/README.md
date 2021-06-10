@@ -195,7 +195,7 @@
         <td style="text-align:center">black_domain.txt</td>
         <td style="text-align:center">Contains regular host
         entries</td>
-        <td id="domain-entries">7250087</td>
+        <td id="domain-entries">7,234,371</td>
         <td id="domain-size">161MB</td>
         <td style="text-align:center">
           <a href=
@@ -210,7 +210,7 @@
           "https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist#recommendation-for-using-0000-instead-of-127001">
           <code>0.0.0.0</code></a>
         </td>
-        <td id="ipv4-entries">406981</td>
+        <td id="ipv4-entries">371</td>
         <td id="ipv4-size">225MB</td>
         <td style="text-align:center">
           <a href=
@@ -225,8 +225,8 @@
           "https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0">
           <code>::</code></a>
         </td>
-        <td id="ipv6-entries">53854</td>
-        <td id="ipv6-size">183MB</td>
+        <td id="ipv6-entries">371</td>
+        <td id="ipv6-size">182MB</td>
         <td style="text-align:center">
           <a href=
           "https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz">
