@@ -49,6 +49,7 @@
     <p><em>Please report any redundant sources in an
     issue!</em></p>
   </blockquote>
+  <h3 id="-blacklists">⚫ Blacklists</h3>
   <ul>
     <li>
       <a href=
@@ -167,7 +168,18 @@
       </ul>
     </li>
   </ul>
+  <h3 id="-whitelists">⚪ Whitelists</h3>
+  <ul>
+    <li>
+      <a href=
+      "https://github.com/EnergizedProtection/unblock#packs">Energized
+      Unblock</a>
+    </li>
+  </ul>
   <h2 id="-hyperlinks">⚓ Hyperlinks</h2>
+  <blockquote>
+    <p><em>The IPv4 & IPv6 lists include the Domain list</em></p>
+  </blockquote>
   <table>
     <thead>
       <tr>
