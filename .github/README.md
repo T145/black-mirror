@@ -200,7 +200,7 @@
         <td style="text-align:center">Contains regular host
         entries</td>
         <td id="domain-count">7,243,873</td>
-        <td id="domain-filesize">du -h black_domain.txtB</td>
+        <td id="domain-filesize">*Updating next build*</td>
         <td style="text-align:center">
           <a href=
           "https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz">
@@ -215,7 +215,7 @@
           <code>0.0.0.0</code></a>
         </td>
         <td id="ipv4-count">411,405</td>
-        <td id="ipv4-filesize">du -h black_ipv4.txtB</td>
+        <td id="ipv4-filesize">*Updating next build*</td>
         <td style="text-align:center">
           <a href=
           "https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz">
@@ -230,7 +230,7 @@
           <code>::</code></a>
         </td>
         <td id="ipv6-count">53,870</td>
-        <td id="ipv6-filesize">du -h black_ipv6.txtB</td>
+        <td id="ipv6-filesize">*Updating next build*</td>
         <td style="text-align:center">
           <a href=
           "https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz">
