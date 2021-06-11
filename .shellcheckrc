@@ -1,0 +1,7 @@
+# https://www.mankier.com/1/shellcheck#RC_Files
+
+source-path=SCRIPTDIR
+source-path=./scripts
+
+# cat <file> | wc is used in `readme_update.sh`, which shellcheck complains about
+disable=SC2002
