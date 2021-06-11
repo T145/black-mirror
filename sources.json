@@ -4346,14 +4346,6 @@
     ],
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
   },
-  "windscribe_controlid_filter_ads": {
-    "color": "black",
-    "format": "domain",
-    "mirrors": [
-      "https://assets.windscribe.com/custom_blocklists/ads.txt"
-    ],
-    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
-  },
   "windscribe_controlid_filter_127_ads": {
     "color": "black",
     "format": "domain",
@@ -4361,6 +4353,14 @@
       "https://assets.windscribe.com/custom_blocklists/ads.txt"
     ],
     "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+  },
+  "windscribe_controlid_filter_ads": {
+    "color": "black",
+    "format": "domain",
+    "mirrors": [
+      "https://assets.windscribe.com/custom_blocklists/ads.txt"
+    ],
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
   },
   "windscribe_controlid_filter_adult_content": {
     "color": "black",
@@ -4386,19 +4386,19 @@
     ],
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
   },
-  "windscribe_controlid_filter_malware": {
-    "color": "black",
-    "format": "domain",
-    "mirrors": [
-      "https://assets.windscribe.com/custom_blocklists/malware.txt"
-    ],
-    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
-  },
   "windscribe_controlid_filter_iot_telemetry": {
     "color": "black",
     "format": "domain",
     "mirrors": [
       "https://assets.windscribe.com/custom_blocklists/iot.txt"
+    ],
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "windscribe_controlid_filter_malware": {
+    "color": "black",
+    "format": "domain",
+    "mirrors": [
+      "https://assets.windscribe.com/custom_blocklists/malware.txt"
     ],
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
   },

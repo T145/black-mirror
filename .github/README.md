@@ -199,8 +199,8 @@
         <td style="text-align:center">black_domain.txt</td>
         <td style="text-align:center">Contains regular host
         entries</td>
-        <td id="domain-count">7,234,371</td>
-        <td id="domain-filesize">161MB</td>
+        <td id="domain-count">7,243,873</td>
+        <td id="domain-filesize">du -h black_domain.txtB</td>
         <td style="text-align:center">
           <a href=
           "https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz">
@@ -214,8 +214,8 @@
           "https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist#recommendation-for-using-0000-instead-of-127001">
           <code>0.0.0.0</code></a>
         </td>
-        <td id="ipv4-count">409,904</td>
-        <td id="ipv4-filesize">225MB</td>
+        <td id="ipv4-count">411,405</td>
+        <td id="ipv4-filesize">du -h black_ipv4.txtB</td>
         <td style="text-align:center">
           <a href=
           "https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz">
@@ -230,7 +230,7 @@
           <code>::</code></a>
         </td>
         <td id="ipv6-count">53,870</td>
-        <td id="ipv6-filesize">182MB</td>
+        <td id="ipv6-filesize">du -h black_ipv6.txtB</td>
         <td style="text-align:center">
           <a href=
           "https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz">
