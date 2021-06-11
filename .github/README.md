@@ -24,10 +24,9 @@
     </li>
     <li>Let it grow!
       <ul>
-        <li>Contribute any useful sources you can think of manually
-        by editting the <code>sources.json</code> file directly on
-        a fork and making a pull request, or by creating an issue
-        and placing your recommendations there. Help The Blacklist
+        <li>Contribute any useful sources you can think of through
+        an issue or by forking the <code>user-submissions</code> branch
+        and posting some hosts in a respective list. Help The Blacklist
         reach <code>node_modules</code>-level heights!</li>
       </ul>
     </li>
