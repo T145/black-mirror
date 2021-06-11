@@ -245,7 +245,7 @@
       </tr>
     </tbody>
   </table>
-  <h2 id="-usage">🧰 Usage</h2>
+  <h2 id="-usage">⚒️ Usage</h2>
   <h4 id="dnsmasq">dnsmasq</h4>
   <p>Many popular platforms such as OpenWRT, DDWRT, and Pihole use
   DNSmasq as their choice TCP powerhouse. After inspecting many
@@ -253,11 +253,11 @@
   <code>dnsmasq.conf</code> format. This list doesn't support it
   because you can just place
   <code>addn-hosts=black_ipv{4-6}.txt</code> in the config or as a
-  passed parameter and have it work properly. I've tested this
+  passed parameter and have it work properly. If you're using the
+  <code>RADVD</code> daemon, use the IPv6 list. Otherwise, use the IPv4 version
+  even if you have IPv6 support set up. I've tested this
   across all the mentioned platforms using <code>dig{6}</code> on a
   small sample size and had each host null-routed successfully.
-  If you're using the <code>RADVD</code> daemon, use the IPv6 version.
-  Otherwise, use the IPv4 version.
   <a href="https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html">DNSmasq's
   man page</a> discusses this further, and <a href=
   "https://wiki.dd-wrt.com/wiki/index.php/Ad_blocking">DDWRT's ad
