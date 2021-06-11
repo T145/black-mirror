@@ -217,7 +217,7 @@
         <td style="text-align:center">black_ipv4.txt</td>
         <td style="text-align:center">
           Prepended with <a href=
-          "https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist#recommendation-for-using-0000-instead-of-127001">
+          "https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001">
           <code>0.0.0.0</code></a>
         </td>
         <td id="ipv4-count">411,745</td>
