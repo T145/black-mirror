@@ -168,6 +168,13 @@
         </li>
       </ul>
     </li>
+    <li>
+      <a href="https://github.com/lightswitch05/hosts/tree/master/docs/lists">lightswitch05's Sources</a>
+      <ul>
+        <li>Unique sources include: <code>amp_hosts</code>, <code>facebook</code>, <code>hate_and_junk</code></li>
+        <li>The rest are included in <code>Energized</code></li>
+      </ul>
+    </li>
   </ul>
   <h3 id="-whitelists">⚪ Whitelists</h3>
   <ul>

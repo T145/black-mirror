@@ -4433,5 +4433,32 @@
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update.txt"
     ],
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+  },
+  "lightswitch_amp_hosts": {
+    "color": "black",
+    "format": "domain",
+    "mirrors": [
+      "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/amp-hosts-extended.txt",
+      "https://www.github.developerdan.com/hosts/lists/amp-hosts-extended.txt"
+    ],
+    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+  },
+  "lightswitch_facebook": {
+    "color": "black",
+    "format": "domain",
+    "mirrors": [
+      "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/facebook-extended.txt",
+      "https://www.github.developerdan.com/hosts/lists/facebook-extended.txt"
+    ],
+    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+  },
+  "lightswitch_hate_and_junk": {
+    "color": "black",
+    "format": "domain",
+    "mirrors": [
+      "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/hate-and-junk-extended.txt",
+      "https://www.github.developerdan.com/hosts/lists/hate-and-junk-extended.txt"
+    ],
+    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
   }
 }
