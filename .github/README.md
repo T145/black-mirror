@@ -198,10 +198,9 @@
     <tbody>
       <tr>
         <td style="text-align:center">black_domain.txt</td>
-        <td style="text-align:center">Contains regular host
-        entries</td>
-        <td id="domain_count">7,265,738</td>
-        <td id="domain_filesize">161M</td>
+        <td style="text-align:center">Contains regular host entries</td>
+        <td id="domain-count">7,265,738</td>
+        <td id="domain-filesize">161M</td>
         <td style="text-align:center">
           <a href=
           "https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz">
@@ -215,8 +214,8 @@
           "https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001">
           <code>0.0.0.0</code></a>
         </td>
-        <td id="ipv4_count">405,171</td>
-        <td id="ipv4_filesize">225M</td>
+        <td id="ipv4-count">405,171</td>
+        <td id="ipv4-filesize">225M</td>
         <td style="text-align:center">
           <a href=
           "https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz">
@@ -230,8 +229,8 @@
           "https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0">
           <code>::</code></a>
         </td>
-        <td id="ipv6_count">53,894</td>
-        <td id="ipv6_filesize">183M</td>
+        <td id="ipv6-count">53,894</td>
+        <td id="ipv6-filesize">183M</td>
         <td style="text-align:center">
           <a href=
           "https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz">
