@@ -182,7 +182,7 @@
   </ul>
   <h2 id="-hyperlinks">⚓ Hyperlinks</h2>
   <blockquote>
-    <p><em>The IPv4 & IPv6 lists include the Domain list</em></p>
+    <p><em>The IPv4 and IPv6 lists include the Domain list</em></p>
   </blockquote>
   <table>
     <thead>
@@ -255,7 +255,7 @@
   man page</a> discusses this further, and <a href=
   "https://wiki.dd-wrt.com/wiki/index.php/Ad_blocking">DDWRT's ad
   blocking wiki page</a> provides examples.</p>
-  <h4 id="ubound">ubound</h4>
+  <h4 id="unbound">unbound</h4>
   <p>Similar to dnsmasq, but requires more manual configuration.
   Use the <code>black_ipv{4-6}.txt</code> list(s), and rename the
   extracted file into a *.conf file. <a href=
