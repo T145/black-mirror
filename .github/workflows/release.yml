@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: "actions/checkout@v2.3.4"
+      - name: Clone Repo
+        uses: "actions/checkout@v2.3.4"
         with:
           ref: ${{ github.head_ref }}
 
@@ -24,15 +25,15 @@ jobs:
         shell: bash
 
       - name: Install Dependencies
-        run: ./scripts/setup.sh
+        run: ./scripts/setup_env.sh
         shell: bash
 
       - name: Create Builds
-        run: ./scripts/build.sh
+        run: ./scripts/create_builds.sh
         shell: bash
 
-      - name: Update Readme
-        run: ./scripts/readme.sh
+      - name: Update README.md
+        run: ./scripts/update_readme.sh
         shell: bash
 
       - name: Publish Release
