@@ -184,7 +184,6 @@
   <h2 id="-hyperlinks">⚓ Hyperlinks</h2>
   <blockquote>
     <p><em>The IPv4 and IPv6 lists include the Domain list</em></p>
-    <p><em>CHOOSE ONLY ONE LIST</em></p>
   </blockquote>
   <table>
     <thead>
@@ -266,5 +265,7 @@
   Steffinstanly discusses how to apply blocklists</a>.</p>
   <h4 id="personaldnsfilter">personalDNSfilter</h4>
   <p>Use the domain list.</p>
+  <h4 id="desktopos">Desktop OS Hosts File</h4>
+  <p>Use both the IPv4 and IPv6 lists.</p>
 </body>
 </html>
