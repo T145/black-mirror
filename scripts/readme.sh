@@ -1,21 +1,20 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 export LANG=en_US.UTF-8
 export LANGUAGE=en:el
-
-set -eu
 
 domain_linecount=$(cat black_domain.txt | wc -l)
 ipv4_linecount=$(($(cat black_ipv4.txt | wc -l)-$domain_linecount))
 ipv6_linecount=$(($(cat black_ipv6.txt | wc -l)-$domain_linecount))
 
-domain_entries=$(printf "%'d" $domain_linecount)
+domain_entries=$(printf "%'d" "$domain_linecount")
 domain_size=$(du -h black_domain.txt | gawk -F'\t' '{ print $1 }')
 
-ipv4_entries=$(printf "%'d" $ipv4_linecount)
+ipv4_entries=$(printf "%'d" "$ipv4_linecount")
 ipv4_size=$(du -h black_ipv4.txt | gawk -F'\t' '{ print $1 }')
 
-ipv6_entries=$(printf "%'d" $ipv6_linecount)
+ipv6_entries=$(printf "%'d" "$ipv6_linecount")
 ipv6_size=$(du -h black_ipv6.txt | gawk -F'\t' '{ print $1 }')
 
 sed -i \

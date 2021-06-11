@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
-
-set -e
+set -euo pipefail
 
 install_if_not_exist() {
-  if dpkg -s $1 &>/dev/null; then
-    PKG_EXIST=$(dpkg -s $1 | grep "install ok installed")
+  if dpkg -s "$1" &>/dev/null; then
+    PKG_EXIST=$(dpkg -s "$1" | grep "install ok installed")
     if [ -z "$PKG_EXIST" ]; then
-      sudo apt install $1 -y
+      sudo apt install "$1" -y
     fi
   else
-    sudo apt install $1 -y
+    sudo apt install "$1" -y
   fi
 }
 
