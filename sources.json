@@ -17,7 +17,7 @@
     "mirrors": [
       "https://s3.amazonaws.com/alexa-static/top-1m.csv.zip"
     ],
-    "rule": "BEGIN{FS=\",\"};{if($2~/porn/||/fuck/||/sex/||/xxx/||/gay/||/hentai/||/incest/||/xvideos/||/pussy/||/dick/||/blowjob/){print tolower($2)}}"
+    "rule": "BEGIN{FS=\",\"};{if($2~/cunt/||/pussy/||/lesbian/||/voyeur/||/fetish/||/interracial/||/goodwank/||/boob/||/hugetits/||/bigtits/||/smalltits/||/porn/||/fuck/||/sex/||/gay/||/hentai/||/incest/||/xvideos/||/blowjob/||/69/||/erotic/||/teen/||/horny/||/xxx/||/blowjob/||/dickx/||/dickup/||/virgin/||/explicittube/||/raunchy/){print tolower($2)}}"
   },
   "android_tracking": {
     "color": "black",
