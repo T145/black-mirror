@@ -199,7 +199,7 @@
       <tr>
         <td style="text-align:center">black_domain.txt</td>
         <td style="text-align:center">Contains regular host entries</td>
-        <td id="domain-count">7,265,738</td>
+        <td id="domain-count">7,263,927</td>
         <td id="domain-filesize">161M</td>
         <td style="text-align:center">
           <a href=
@@ -214,7 +214,7 @@
           "https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001">
           <code>0.0.0.0</code></a>
         </td>
-        <td id="ipv4-count">405,171</td>
+        <td id="ipv4-count">405,620</td>
         <td id="ipv4-filesize">225M</td>
         <td style="text-align:center">
           <a href=
