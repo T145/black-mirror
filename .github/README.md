@@ -45,8 +45,11 @@
   </ol>
   <h2 id="-sources">📚 Sources</h2>
   <blockquote>
-    <p><em>Please report any redundant sources in an
-    issue!</em></p>
+    <p>
+      <em>Please report any redundant sources in an issue!</em>
+      <em>Be sure to check out the custom <a href="https://github.com/T145/the-blacklist/blob/user-submissions/blacklist.txt">blacklist</a>
+      and <a href="https://github.com/T145/the-blacklist/blob/user-submissions/whitelist.txt">whitelist</a>!</em>
+    </p>
   </blockquote>
   <h3 id="-blacklists">⚫ Blacklists</h3>
   <ul>
@@ -122,8 +125,7 @@
       for Windows</a>
     </li>
     <li>
-      <a href=
-      "https://github.com/T145/the-blacklist/blob/master/sources.json#L5">
+      <a href="https://www.alexa.com/topsites">
       Amazon Alexa Top 1M Sites</a>
       <ul>
         <li>Used to block popular porn sites</li>
@@ -166,9 +168,6 @@
         </li>
       </ul>
     </li>
-    <li>
-      <a href="https://github.com/T145/the-blacklist/blob/user-submissions/blacklist.txt">Custom Blacklist</a>
-    </li>
   </ul>
   <h3 id="-whitelists">⚪ Whitelists</h3>
   <ul>
@@ -180,9 +179,6 @@
     </li>
     <li>
       <a href="https://github.com/anudeepND/whitelist#overview">AnudeepND Whitelist</a>
-    </li>
-    <li>
-      <a href="https://github.com/T145/the-blacklist/blob/user-submissions/whitelist.txt">Custom Whitelist</a>
     </li>
   </ul>
   <h2 id="-hyperlinks">⚓ Hyperlinks</h2>
