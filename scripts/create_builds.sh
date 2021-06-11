@@ -15,7 +15,7 @@ for color in 'white' 'black'; do
                     printf "%s\n out=%s.txt\n",$0,key
                 }
             }'
-        done | aria2c -i- -q -d "${downloads}/${color}" --max-concurrent-downloads=10 --optimize-concurrent-downloads=true --auto-file-renaming=false --realtime-chunk-checksum=false --async-dns-server=1.1.1.1:53,1.0.0.1:53,8.8.8.8:53,8.8.4.4:53,9.9.9.9:53,9.9.9.10:53,77.88.8.8:53,77.88.8.1:53,208.67.222.222:53,208.67.220.220:53
+        done | aria2c -i- -q -d "${downloads}/${color}" -x 2 --max-concurrent-downloads=10 --optimize-concurrent-downloads=true --auto-file-renaming=false --realtime-chunk-checksum=false --async-dns-server=1.1.1.1:53,1.0.0.1:53,8.8.8.8:53,8.8.4.4:53,9.9.9.9:53,9.9.9.10:53,77.88.8.8:53,77.88.8.1:53,208.67.222.222:53,208.67.220.220:53
 
     for format in 'domain' 'ipv4' 'ipv6'; do
         jq --arg color "$color" --arg format "$format" 'to_entries[] | select(.value.color == $color and .value.format == $format)' sources.json |
