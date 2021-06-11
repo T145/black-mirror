@@ -25,7 +25,7 @@ ipv6_filesize=$(get_filesize black_ipv6.txt)
 # Arguments: variable name list
 make_subst_script() {
     for i; do
-        printf 's/\(<td id="%s">\).*\(<\/td>\)/\\1%s\\2/\n' "$i" "${!i//_/-}"
+        printf 's/\(<td id="%s">\).*\(<\/td>\)/\\1%s\\2/\n' "${i//_/-}" "${!i}"
     done
 }
 
