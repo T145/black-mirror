@@ -98,7 +98,7 @@
     <li>
       <a href=
       "https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt">
-      Anudeep Facebook</a>
+      AnudeepND Facebook</a>
       <ul>
         <li>
           <a href="https://github.com/anudeepND/blacklist">Other
@@ -167,6 +167,9 @@
         </li>
       </ul>
     </li>
+    <li>
+      <a href="https://github.com/T145/the-blacklist/blob/user-submissions/blacklist.txt">Custom Blacklist</a>
+    </li>
   </ul>
   <h3 id="-whitelists">⚪ Whitelists</h3>
   <ul>
@@ -174,10 +177,13 @@
       <a href="https://github.com/EnergizedProtection/unblock#packs">Energized Unblock</a>
     </li>
     <li>
-      <a href="https://github.com/anudeepND/blacklist/blob/master/miscellaneous/false-positives.txt">Anudeep's False Positives</a>
+      <a href="https://github.com/anudeepND/blacklist/blob/master/miscellaneous/false-positives.txt">AnudeepND False Positives</a>
     </li>
     <li>
-      <a href="https://github.com/anudeepND/whitelist#overview">Anudeep's Whitelist</a>
+      <a href="https://github.com/anudeepND/whitelist#overview">AnudeepND Whitelist</a>
+    </li>
+    <li>
+      <a href="https://github.com/T145/the-blacklist/blob/user-submissions/whitelist.txt">Custom Whitelist</a>
     </li>
   </ul>
   <h2 id="-hyperlinks">⚓ Hyperlinks</h2>
