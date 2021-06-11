@@ -13,7 +13,7 @@ ipv4_count=$(printf "%'d" "$unique_ipv4_count")
 ipv6_count=$(printf "%'d" "$unique_ipv6_count")
 
 get_filesize() {
-    echo du -h "$1" | gawk -F'\t' '{ print $1 }'
+    du -h "$1" | gawk -F'\t' '{ print $1 }'
 }
 
 domain_filesize=$(get_filesize black_domain.txt)
