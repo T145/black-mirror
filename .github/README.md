@@ -162,10 +162,11 @@
         "https://sebsauvage.net/hosts/hosts"><code>sebsauvage</code></a>),
         <code>threatcrowd</code>, <a href=
         "https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community">
-          <code>antisocialengineer</code></a>,
-          <a href="https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png"><code>windscribe</code></a>, <code>cyberthreat</code>,
-          <code>not_on_my_shift</code>
+          <code>antisocialengineer</code></a>, <a href=
+          "https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png">
+          <code>windscribe</code><a>, <code>cyberthreat</code>, <code>not_on_my_shift</code>
         </li>
+        <li>References lightswitch05 and pDNSf sources</li>
       </ul>
     </li>
     <li>
@@ -173,6 +174,12 @@
       <ul>
         <li>Unique sources include: <code>amp_hosts</code>, <code>facebook</code>, <code>hate_and_junk</code></li>
         <li>The rest are included in <code>Energized</code></li>
+      </ul>
+    </li>
+    <li>
+      <a href="https://github.com/j-moriarti/pDNSf-Hosts-collection/blob/master/Download-and-Process-Hosts.sh">pDNSf Sources</a>
+      <ul>
+        <li>Unique sources include: <a href="https://rescure.me/feeds.html"><code>resecure_me</code></a>, <a href="https://kriskintel.com/"><code>kriskintel</code></a>
       </ul>
     </li>
   </ul>
