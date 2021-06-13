@@ -4,7 +4,15 @@ set -euo pipefail
 downloads=$(mktemp -d)
 trap 'rm -rf "$downloads"' EXIT || exit 1
 
+# params: list file path, sort column, cache dir
+sort_list() {
+    #sort -o "${color}_${format}.txt" -u -S 90% --parallel=4 -T "${downloads}/${color}" "${color}_${format}.txt"
+    sort -o "$1" -k $2 -u -S 90% --parallel=4 -T "$3" "$1"
+}
+
 for color in 'white' 'black'; do
+    cache_dir="${downloads}/${color}"
+
     jq --arg color "$color" 'to_entries[] | select(.value.color == $color)' sources.json |
         jq -r -s 'from_entries | keys[] as $k | "\($k)#\(.[$k] | .mirrors)"' |
         while IFS=$'#' read -r key mirrors; do
@@ -15,13 +23,13 @@ for color in 'white' 'black'; do
                     printf "%s\n out=%s.txt\n",$0,key
                 }
             }'
-        done | aria2c --conf-path='./configs/aria2.conf' -d "${downloads}/${color}"
+        done | aria2c --conf-path='./configs/aria2.conf' -d "$cache_dir"
 
     for format in 'domain' 'ipv4' 'ipv6'; do
         jq --arg color "$color" --arg format "$format" 'to_entries[] | select(.value.color == $color and .value.format == $format)' sources.json |
             jq -r -s 'from_entries | keys[] as $k | "\($k)#\(.[$k] | .rule)"' |
             while IFS=$'#' read -r key rule; do
-                fpath=$(find -P -O3 "${downloads}/${color}" -type f -name "$key*")
+                fpath=$(find -P -O3 "$cache_dir" -type f -name "$key*")
 
                 case $fpath in
                 *.tar.gz)
@@ -52,7 +60,11 @@ for color in 'white' 'black'; do
             done
 
         if test -f "${color}_${format}.txt"; then
-            sort -o "${color}_${format}.txt" -u -S 90% --parallel=4 -T "${downloads}/${color}" "${color}_${format}.txt"
+            if [[ "$format" == "domain" ]]; then
+                sort_list "${color}_${format}.txt" 1 "$cache_dir"
+            else
+                sort_list "${color}_${format}.txt" 2 "$cache_dir"
+            fi
 
             if [[ "$color" == "black" ]]; then
                 if test -f "white_${format}.txt"; then
