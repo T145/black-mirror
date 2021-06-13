@@ -179,7 +179,8 @@
     <li>
       <a href="https://github.com/j-moriarti/pDNSf-Hosts-collection/blob/master/Download-and-Process-Hosts.sh">pDNSf Sources</a>
       <ul>
-        <li>Unique sources include: <a href="https://rescure.me/feeds.html"><code>resecure_me</code></a>, <a href="https://kriskintel.com/"><code>kriskintel</code></a>
+        <li>Unique sources include: <a href="https://rescure.me/feeds.html"><code>resecure_me</code></a>, <a href="https://kriskintel.com/"><code>kriskintel</code></a>,
+        <a href="https://filtri-dns.ga/"><code>filtri_dns</code></a>
       </ul>
     </li>
   </ul>
