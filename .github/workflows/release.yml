@@ -25,7 +25,7 @@ jobs:
         shell: bash
 
       - name: Install Dependencies
-        run: ./scripts/setup_env.sh
+        run: sudo apt install aria2 coreutils gawk jq moreutils sed
         shell: bash
 
       - name: Create Builds
