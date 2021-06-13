@@ -4,10 +4,9 @@ set -euo pipefail
 downloads=$(mktemp -d)
 trap 'rm -rf "$downloads"' EXIT || exit 1
 
-# params: list file path, sort column, cache dir
+# params: list name, sort column, cache dir
 sort_list() {
-    #sort -o "${color}_${format}.txt" -u -S 90% --parallel=4 -T "${downloads}/${color}" "${color}_${format}.txt"
-    sort -o "$1" -k $2 -u -S 90% --parallel=4 -T "$3" "$1"
+    sort -o "$1" -k "$2" -u -S 90% --parallel=4 -T "$3" "$1"
 }
 
 for color in 'white' 'black'; do
@@ -26,6 +25,8 @@ for color in 'white' 'black'; do
         done | aria2c --conf-path='./configs/aria2.conf' -d "$cache_dir"
 
     for format in 'domain' 'ipv4' 'ipv6'; do
+        list_name="${color}_${format}.txt"
+
         jq --arg color "$color" --arg format "$format" 'to_entries[] | select(.value.color == $color and .value.format == $format)' sources.json |
             jq -r -s 'from_entries | keys[] as $k | "\($k)#\(.[$k] | .rule)"' |
             while IFS=$'#' read -r key rule; do
@@ -59,11 +60,11 @@ for color in 'white' 'black'; do
                     }'
             done
 
-        if test -f "${color}_${format}.txt"; then
+        if test -f "$list_name"; then
             if [[ "$format" == "domain" ]]; then
-                sort_list "${color}_${format}.txt" 1 "$cache_dir"
+                sort_list "$list_name" 1 "$cache_dir"
             else
-                sort_list "${color}_${format}.txt" 2 "$cache_dir"
+                sort_list "$list_name" 2 "$cache_dir"
             fi
 
             if [[ "$color" == "black" ]]; then
