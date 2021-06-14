@@ -4692,5 +4692,13 @@
       "https://osint.digitalside.it/Threat-Intel/lists/latestips.txt"
     ],
     "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
+  },
+  "threatcrowd_inc": {
+    "color": "black",
+    "format": "ipv4",
+    "mirrors": [
+      "https://threatcrowd.org/inc/blacklist.txt"
+    ],
+    "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
   }
 }
