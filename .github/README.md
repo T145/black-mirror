@@ -58,7 +58,7 @@
       "https://github.com/openwrt/packages/blob/master/net/adblock/files/adblock.sources">
       OpenWRT Adblock Sources</a>
       <ul>
-        <li>Redundant sources removed include the following:
+        <li>Redundant sources included in `Energized Unified &amp; Extensions` that were removed:
         <code>adaway</code>, <code>adguard</code>,
         <code>adguard_tracking</code>, <code>anudeep</code>,
         <code>bitcoin</code>, <code>disconnect</code>,
@@ -70,8 +70,6 @@
         <code>stevenblack</code>, <code>spam404</code>,
         <code>stopforumspam</code>, <code>whocares</code>,
         <code>winhelp</code>, <code>yoyo</code></li>
-        <li>These redundant sources are included in the Energized
-        list and its extensions</li>
       </ul>
     </li>
     <li>
