@@ -214,7 +214,7 @@
       <tr>
         <td style="text-align:center">black_domain.txt</td>
         <td style="text-align:center">Contains regular host entries</td>
-        <td id="domain-count">7,291,884</td>
+        <td id="domain-count">7,308,779</td>
         <td id="domain-filesize">162M</td>
         <td style="text-align:center">
           <a href=
@@ -229,8 +229,8 @@
           "https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001">
           <code>0.0.0.0</code></a>
         </td>
-        <td id="ipv4-count">412,805</td>
-        <td id="ipv4-filesize">226M</td>
+        <td id="ipv4-count">407,604</td>
+        <td id="ipv4-filesize">227M</td>
         <td style="text-align:center">
           <a href=
           "https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz">

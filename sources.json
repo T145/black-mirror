@@ -326,6 +326,14 @@
     ],
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
   },
+  "filtri_dns": {
+    "color": "black",
+    "format": "domain",
+    "mirrors": [
+      "https://filtri-dns.ga/filtri.txt"
+    ],
+    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+  },
   "firehol_level4": {
     "color": "black",
     "format": "ipv4",
@@ -4658,14 +4666,6 @@
     "format": "domain",
     "mirrors": [
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update.txt"
-    ],
-    "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
-  },
-  "filtri_dns": {
-    "color": "black",
-    "format": "domain",
-    "mirrors": [
-      "https://filtri-dns.ga/filtri.txt"
     ],
     "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
   }
