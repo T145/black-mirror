@@ -228,9 +228,9 @@
       <tr>
         <td style="text-align:center">black_ipv4.txt</td>
         <td style="text-align:center">
-          Prepended with <a href=
+          Hosts prepended with <a href=
           "https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001">
-          <code>0.0.0.0</code></a>
+          &quot;0.0.0.0&quot;</a>
         </td>
         <td id="ipv4-count">407,604</td>
         <td id="ipv4-filesize">227M</td>
@@ -243,9 +243,9 @@
       <tr>
         <td style="text-align:center">black_ipv6.txt</td>
         <td style="text-align:center">
-          Prepended with <a href=
+          Hosts prepended with <a href=
           "https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0">
-          <code>::</code></a>
+          &quot;::&quot;</a>
         </td>
         <td id="ipv6-count">53,916</td>
         <td id="ipv6-filesize">184M</td>
