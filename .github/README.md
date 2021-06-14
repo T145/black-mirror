@@ -58,7 +58,7 @@
       "https://github.com/openwrt/packages/blob/master/net/adblock/files/adblock.sources">
       OpenWRT Adblock Sources</a>
       <ul>
-        <li>Redundant sources included in <code>Energized Unified &amp; Extensions</code> that were removed:
+        <li>Sources in <code>Energized Unified &amp; Extensions</code> that were removed:
         <code>adaway</code>, <code>adguard</code>,
         <code>adguard_tracking</code>, <code>anudeep</code>,
         <code>bitcoin</code>, <code>disconnect</code>,
