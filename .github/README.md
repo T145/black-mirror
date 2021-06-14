@@ -164,7 +164,7 @@
           "https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png">
           <code>windscribe</code><a>, <code>cyberthreat</code>, <code>not_on_my_shift</code>
         </li>
-        <li>References lightswitch05 and pDNSf sources</li>
+        <li>References <block>lightswitch05</block> and <block>pDNSf</block> sources</li>
       </ul>
     </li>
     <li>
@@ -179,6 +179,12 @@
       <ul>
         <li>Unique sources include: <a href="https://rescure.me/feeds.html"><code>resecure_me</code></a>, <a href="https://kriskintel.com/"><code>kriskintel</code></a>,
         <a href="https://filtri-dns.ga/"><code>filtri_dns</code></a>
+        <li>
+          <a href="https://github.com/hectorm/hblock/blob/master/SOURCES.md">Host File Project Sources</a>
+          <ul>
+            <li>Unique sources include: <a href="https://osint.digitalside.it/#SubscribeMISPfeed"><code>digitalside</code></a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
