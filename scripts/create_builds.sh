@@ -72,12 +72,12 @@ for color in 'white' 'black'; do
                     grep -Fxvf "white_${format}.txt" "black_${format}.txt" | sponge "black_${format}.txt"
                 fi
 
-                tar -czf "black_$format.tar.gz" "black_$format.txt"
-            fi
+                if [[ "$format" == "domain" ]]; then
+                    gawk '{ print "0.0.0.0 " $0 }' "${color}_domain.txt" >"${color}_ipv4.txt"
+                    gawk '{ print ":: " $0 }' "${color}_domain.txt" >"${color}_ipv6.txt"
+                fi
 
-            if [[ "$format" == "domain" ]]; then
-                gawk '{ print "0.0.0.0 " $0 }' "${color}_domain.txt" >"${color}_ipv4.txt"
-                gawk '{ print ":: " $0 }' "${color}_domain.txt" >"${color}_ipv6.txt"
+                tar -czf "black_$format.tar.gz" "black_$format.txt"
             fi
         fi
     done
