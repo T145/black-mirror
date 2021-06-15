@@ -4629,6 +4629,14 @@
     ],
     "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
   },
+  "ut_capitole_domains": {
+    "color": "black",
+    "format": "domain",
+    "mirrors": [
+      "https://www.shallalist.de/Downloads/shallalist.tar.gz"
+    ],
+    "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{if($1!~/\\.free\\.fr$/){if($1~/^0\\.0\\.0\\.0/){sub(/0.0.0.0/,\"\");print}else{print tolower($1)}}}"
+  },
   "wally3k": {
     "color": "black",
     "format": "domain",
