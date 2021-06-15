@@ -116,21 +116,21 @@
      <td style="text-align:center">Contains regular host entries</td>
      <td id="domain-count">6,450,154</td>
      <td id="domain-filesize">139M</td>
-     <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz"> black_domain.tar.gz</a> </td>
+     <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz">black_domain.tar.gz</a> </td>
     </tr>
     <tr>
      <td style="text-align:center">black_ipv4.txt</td>
-     <td style="text-align:center"> Hosts prepended with &quot;<a href="https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001"> 0.0.0.0</a>&quot; </td>
+     <td style="text-align:center"> Hosts prepended with &quot;<a href="https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001">0.0.0.0</a>&quot; </td>
      <td id="ipv4-count">529,525</td>
      <td id="ipv4-filesize">200M</td>
-     <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz"> black_ipv4.tar.gz</a> </td>
+     <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz">black_ipv4.tar.gz</a> </td>
     </tr>
     <tr>
      <td style="text-align:center">black_ipv6.txt</td>
-     <td style="text-align:center"> Hosts prepended with &quot;<a href="https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0"> ::</a>&quot; </td>
+     <td style="text-align:center"> Hosts prepended with &quot;<a href="https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0">::</a>&quot; </td>
      <td id="ipv6-count">53,916</td>
      <td id="ipv6-filesize">159M</td>
-     <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz"> black_ipv6.tar.gz</a> </td>
+     <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz">black_ipv6.tar.gz</a> </td>
     </tr>
    </tbody>
   </table>
