@@ -36,6 +36,12 @@ jobs:
         run: ./scripts/update_readme.sh
         shell: bash
 
+      - name: Create md5sum
+        run: |
+          md5sum black_domain.tar.gz > checksum.md5
+          md5sum black_ipv4.tar.gz >> checksum.md5
+          md5sum black_ipv6.tar.gz >> checksum.md5
+
       - name: Publish Release
         uses: "marvinpinto/action-automatic-releases@v1.2.1"
         with:
