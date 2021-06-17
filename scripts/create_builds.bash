@@ -45,7 +45,7 @@ for color in 'white' 'black'; do
                 *) cat "$fpath" ;;
                 esac |
                     gawk --sandbox -O -- "$rule" | # apply the regex rule
-                    gawk '!x[$0]++' |              # filter duplicates out
+                    mawk '!x[$0]++' |              # filter duplicates out
                     gawk -v format="$format" -v color="$color" '{
                         switch (format) {
                         case "domain":

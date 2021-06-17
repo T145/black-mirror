@@ -25,7 +25,7 @@ jobs:
         shell: bash
 
       - name: Install Dependencies
-        run: sudo apt install aria2 coreutils gawk jq moreutils sed
+        run: sudo apt install aria2 coreutils gawk jq mawk moreutils sed
         shell: bash
 
       - name: Create Builds
