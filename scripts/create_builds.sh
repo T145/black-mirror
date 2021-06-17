@@ -27,8 +27,9 @@ for color in 'white' 'black'; do
     for format in 'domain' 'ipv4' 'ipv6'; do
         list_name="${color}_${format}.txt"
 
-        jq --arg color "$color" --arg format "$format" 'to_entries[] | select(.value.color == $color and .value.format == $format)' sources.json |
-            jq -r -s 'from_entries | keys[] as $k | "\($k)#\(.[$k] | .rule)"' |
+        jq -r --arg color "$color" --arg format "$format" '
+            with_entries(select(.value.color == $color and .value.format == $format)) |
+            keys[] as $k | "\($k)#\(.[$k].rule)"' sources.json |
             while IFS=$'#' read -r key rule; do
                 fpath=$(find -P -O3 "$cache_dir" -type f -name "$key*")
 
