@@ -78,7 +78,7 @@
      <li> <a href="https://github.com/j-moriarti/pDNSf-Hosts-collection/blob/master/Download-and-Process-Hosts.sh">pDNSf</a> Sources
       <ul>
        <li>Unique sources include: <a href="https://rescure.me/feeds.html"><code>resecure_me</code></a>, <a href="https://kriskintel.com/"><code>kriskintel</code></a>, <a href="https://filtri-dns.ga/"><code>filtri_dns</code></a> </li>
-       <li> <a href="https://github.com/hectorm/hblock/blob/master/SOURCES.md">Host File Project</a> / <a href="https://github.com/mkb2091/blockconvert/blob/master/filterlists.csv">blockconvert</a> Sources
+       <li> <a href="https://github.com/mkb2091/blockconvert/blob/master/filterlists.csv">blockconvert</a>/<a href="https://github.com/hectorm/hblock/blob/master/SOURCES.md">Host File Project</a> Sources
         <ul>
          <li>Unique sources include: <a href="https://osint.digitalside.it/#SubscribeMISPfeed"><code>digitalside</code></a></li>
         </ul> </li>
