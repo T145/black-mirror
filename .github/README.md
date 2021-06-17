@@ -89,6 +89,11 @@
         <li>Unique sources include: <code>feodotracker</code>, <code>sslbl</code>, <code>urlhaus</code> </li>
       </ul>
     </li>
+    <li> <a href="https://github.com/maravento/blackweb/blob/master/bwupdate/bwupdate.sh">Blackweb</a> Sources
+      <ul>
+        <li>Unique sources include: <a href="http://taz.net.au/Mail/"><code>taz.net.au</code></a> </li>
+      </ul>
+    </li>
   </ul>
   <h3 id="-whitelists">⚪ Whitelists</h3>
   <ul>
