@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail # put bash into strict mode
-umask 077 # change all generated files from 777 perms to 700
+umask 077         # change all generated file perms from 777 to 700
 
 downloads=$(mktemp -d)
 trap 'rm -rf "$downloads"' EXIT || exit 1
@@ -13,8 +13,9 @@ sort_list() {
 for color in 'white' 'black'; do
     cache_dir="${downloads}/${color}"
 
-    jq --arg color "$color" 'to_entries[] | select(.value.color == $color)' sources.json |
-        jq -r -s 'from_entries | keys[] as $k | "\($k)#\(.[$k] | .mirrors)"' |
+    jq -r --arg color "$color" '
+        with_entries(select(.value.color == $color)) |
+        keys[] as $k | "\($k)#\(.[$k] | .mirrors)"' sources.json |
         while IFS=$'#' read -r key mirrors; do
             echo "$mirrors" | tr -d '[]"' | tr -s ',' "\t" | gawk -v key="$key" '{
                 if ($0 ~ /\.tar.gz$/ || /\.zip$/) {
