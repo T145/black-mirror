@@ -4756,5 +4756,13 @@
       "http://taz.net.au/Mail/SpamDomains"
     ],
     "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+  },
+  "cybercrime_domains": {
+    "color": "black",
+    "format": "domain",
+    "mirrors": [
+      "https://cybercrime-tracker.net/all.php"
+    ],
+    "rule": "BEGIN{FS=\"/\"}{if($1~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/){print tolower($1)}}"
   }
 }
