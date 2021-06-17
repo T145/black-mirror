@@ -29,11 +29,11 @@ jobs:
         shell: bash
 
       - name: Create Builds
-        run: ./scripts/create_builds.sh
+        run: ./scripts/create_builds.bash
         shell: bash
 
       - name: Update README.md
-        run: ./scripts/update_readme.sh
+        run: ./scripts/update_readme.bash
         shell: bash
 
       - name: Publish Release
