@@ -91,7 +91,7 @@
     </li>
     <li> <a href="https://github.com/maravento/blackweb/blob/master/bwupdate/bwupdate.sh">Blackweb</a> Sources
       <ul>
-        <li>Unique sources include: <a href="https://cybercrime-tracker.net/"><code>cybercrime</code></a>, <a href="http://taz.net.au/Mail/"><code>taz.net.au</code></a> </li>
+        <li>Unique sources include: <a href="https://cybercrime-tracker.net/"><code>cybercrime</code></a>, <a href="https://data.netlab.360.com/"><code>360_netlab</code></a>, <a href="http://taz.net.au/Mail/"><code>taz.net.au</code></a> </li>
       </ul>
     </li>
   </ul>
