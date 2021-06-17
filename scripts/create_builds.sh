@@ -61,23 +61,26 @@ for color in 'white' 'black'; do
             done
 
         if test -f "$list_name"; then
-            if [[ "$format" == "domain" ]]; then
+            if [[ "$format" == 'domain' ]]; then
                 sort_list "$list_name" 1 "$cache_dir"
             else
                 sort_list "$list_name" 2 "$cache_dir"
             fi
 
-            if [[ "$color" == "black" ]]; then
+            if [[ "$color" == 'black' ]]; then
+                blacklist="black_${format}.txt"
+
                 if test -f "white_${format}.txt"; then
-                    grep -Fxvf "white_${format}.txt" "black_${format}.txt" | sponge "black_${format}.txt"
+                    grep -Fxvf "white_${format}.txt" "$blacklist" | sponge "$blacklist"
                 fi
 
-                if [[ "$format" == "domain" ]]; then
-                    gawk '{ print "0.0.0.0 " $0 }' "${color}_domain.txt" >"${color}_ipv4.txt"
-                    gawk '{ print ":: " $0 }' "${color}_domain.txt" >"${color}_ipv6.txt"
+                if [[ "$format" == 'domain' ]]; then
+                    gawk '{ print "0.0.0.0 " $0 }' "$blacklist" >'black_ipv4.txt'
+                    gawk '{ print ":: " $0 }' "$blacklist" >'black_ipv6.txt'
                 fi
 
-                tar -czf "black_$format.tar.gz" "black_$format.txt"
+                tar -czf "black_${format}.tar.gz" "$blacklist"
+                md5sum "black_${format}.tar.gz" >"black_${format}.md5"
             fi
         fi
     done

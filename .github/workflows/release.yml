@@ -36,12 +36,6 @@ jobs:
         run: ./scripts/update_readme.sh
         shell: bash
 
-      - name: Create md5sum
-        run: |
-          md5sum black_domain.tar.gz > checksum.md5
-          md5sum black_ipv4.tar.gz >> checksum.md5
-          md5sum black_ipv6.tar.gz >> checksum.md5
-
       - name: Publish Release
         uses: "marvinpinto/action-automatic-releases@v1.2.1"
         with:
@@ -51,6 +45,7 @@ jobs:
           title: "Production Builds"
           files: |
             *.tar.gz
+            *.md5
 
       - name: Remove Old Releases
         uses: eregon/keep-last-n-releases@v1
@@ -63,6 +58,7 @@ jobs:
         run: |
           rm *.tar.gz
           rm *.txt
+          rm *.md5
 
       - name: Auto Commit
         uses: "stefanzweifel/git-auto-commit-action@v4.11.0"
