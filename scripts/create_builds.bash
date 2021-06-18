@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail # put bash into strict mode
-umask 077         # change all generated file perms from 777 to 700
+umask 055         # change all generated file perms from 755 to 700
 
 downloads=$(mktemp -d)
 trap 'rm -rf "$downloads"' EXIT || exit 1
