@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="https://thetechportal.com/wp-content/uploads/2019/04/black-hole-real-tech-portal.jpg" alt="Black Hole Image" />
   <h1>The Blacklist</h1>
   <h3>⚡ Speed | 🧱 Stability | 🔒 Security</h3>
 </div>
@@ -16,6 +15,8 @@
   - Blacklist social media, irreputable news sources, propaganda, etc.
 - Block garbage
   - Blacklist illegal sites, pornography, untrusted torrenting providers, etc.
+- Be bigger, not bloated
+  - List sources promote growth, minimal redundancy, and modern application.
 
 ## 📋 Attributes
 
