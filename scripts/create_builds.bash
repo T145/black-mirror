@@ -13,25 +13,18 @@ sort_list() {
 for color in 'white' 'black'; do
     cache_dir="${downloads}/${color}"
 
-    jq -r --arg color "$color" '
-        with_entries(select(.value.color == $color)) |
-        keys[] as $k | "\($k)#\(.[$k] | .mirrors)"' sources.json |
-        while IFS=$'#' read -r key mirrors; do
-            echo "$mirrors" | tr -d '[]"' | tr -s ',' "\t" | gawk -v key="$key" '{
-                if ($0 ~ /\.tar.gz$/ || /\.zip$/) {
-                    printf "%s\n out=%s.%s\n",$0,key,gensub(/^(.*[/])?[^.]*[.]?/, "", 1, $0)
-                } else {
-                    printf "%s\n out=%s.txt\n",$0,key
-                }
-            }'
-        done | aria2c --conf-path='./configs/aria2.conf' -d "$cache_dir"
+    jq -r --arg color "$color" 'to_entries[] |
+        select(.value.color == $color) |
+        {key, mirrors: .value.mirrors} |
+        .extension = (.mirrors[0] | match(".(tar.gz|zip)").captures[0].string // "txt") |
+        (.mirrors | join("\t")), " out=\(.key).\(.extension)"' sources.json |
+        aria2c --conf-path='./configs/aria2.conf' -d "$cache_dir"
 
     for format in 'domain' 'ipv4' 'ipv6'; do
         list_name="${color}_${format}.txt"
 
-        jq -r --arg color "$color" --arg format "$format" '
-            with_entries(select(.value.color == $color and .value.format == $format)) |
-            keys[] as $k | "\($k)#\(.[$k].rule)"' sources.json |
+        jq -r --arg color "$color" --arg format "$format" 'to_entries[] |
+            select(.value.color == $color and .value.format == $format) | "\(.key)#\(.value.rule)"' sources.json |
             while IFS=$'#' read -r key rule; do
                 fpath=$(find -P -O3 "$cache_dir" -type f -name "$key*")
 
@@ -45,22 +38,15 @@ for color in 'white' 'black'; do
                 *) cat "$fpath" ;;
                 esac |
                     gawk --sandbox -O -- "$rule" | # apply the regex rule
-                    mawk '!x[$0]++' |              # filter duplicates out
-                    gawk -v format="$format" -v color="$color" '{
-                        switch (format) {
-                        case "domain":
-                            print $0 >> color "_domain.txt"
-                            break
-                        case "ipv4":
-                            print "0.0.0.0 " $0 >> color "_ipv4.txt"
-                            break
-                        case "ipv6":
-                            print ":: " $0 >> color "_ipv6.txt"
-                            break
-                        default:
-                            break
+                    gawk -v format="$format" -v filename="$list_name" '
+                        BEGIN {
+                            prefixes["ipv4"] = "0.0.0.0 "
+                            prefixes["ipv6"] = ":: "
+                            prefixes["domain"] = ""
                         }
-                    }'
+                        !seen[$0]++ {
+                            print prefixes[format] $0 >> filename
+                        }'
             done
 
         if test -f "$list_name"; then
