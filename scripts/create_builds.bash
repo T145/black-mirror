@@ -2,8 +2,8 @@
 set -euo pipefail # put bash into strict mode
 umask 055         # change all generated file perms from 755 to 700
 
-downloads=$(mktemp -d)
-trap 'rm -rf "$downloads"' EXIT || exit 1
+readonly DOWNLOADS=$(mktemp -d)
+trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 
 # params: list name, sort column, cache dir
 sort_list() {
@@ -11,7 +11,7 @@ sort_list() {
 }
 
 for color in 'white' 'black'; do
-    local cache_dir="${downloads}/${color}"
+    local cache_dir="${DOWNLOADS}/${color}"
 
     jq -r --arg color "$color" 'to_entries[] |
         select(.value.color == $color) |
