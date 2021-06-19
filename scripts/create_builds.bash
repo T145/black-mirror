@@ -28,17 +28,19 @@ for color in 'white' 'black'; do
             while IFS=$'#' read -r key rule; do
                 fpath=$(find -P -O3 "$cache_dir" -type f -name "$key*")
 
-                case $fpath in
-                *.json) jq -r "$rule" "$fpath" ;;
-                *.tar.gz)
-                    # Both Shallalist and Ut-capitole adhere to this format
-                    # If any archives are added that do not, this line needs to change
-                    tar -xOzf "$fpath" --wildcards-match-slash --wildcards '*/domains' |
-                        gawk --sandbox -O -- "$rule" ;;
-                *.zip) zcat "$fpath" | gawk --sandbox -O -- "$rule" ;;
-                *) cat "$fpath" | gawk --sandbox -O -- "$rule" ;;
-                esac |
-                    gawk -v format="$format" -v filename="$list_name" '
+                if [[ $fpath == *.json ]]; then
+                    jq -r "$rule" "$fpath"
+                else
+                    case $fpath in
+                    *.tar.gz)
+                        # Both Shallalist and Ut-capitole adhere to this format
+                        # If any archives are added that do not, this line needs to change
+                        tar -xOzf "$fpath" --wildcards-match-slash --wildcards '*/domains'
+                        ;;
+                    *.zip) zcat "$fpath" ;;
+                    *) cat "$fpath" ;;
+                    esac | gawk --sandbox -O -- "$rule"
+                fi | gawk -v format="$format" -v filename="$list_name" '
                         BEGIN {
                             prefixes["ipv4"] = "0.0.0.0 "
                             prefixes["ipv6"] = ":: "
