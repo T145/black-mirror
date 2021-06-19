@@ -72,6 +72,7 @@
 *   [Energized Unblock](https://github.com/EnergizedProtection/unblock#packs)
 *   [AnudeepND False Positives](https://github.com/anudeepND/blacklist/blob/master/miscellaneous/false-positives.txt)
 *   [AnudeepND Whitelist](https://github.com/anudeepND/whitelist#overview)
+*   [Hipo University Domains List](https://github.com/Hipo/university-domains-list#university-domains-and-names-data-list--api)
 
 ## ⚓ Hyperlinks
 

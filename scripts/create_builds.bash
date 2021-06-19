@@ -16,7 +16,7 @@ for color in 'white' 'black'; do
     jq -r --arg color "$color" 'to_entries[] |
         select(.value.color == $color) |
         {key, mirrors: .value.mirrors} |
-        .extension = (.mirrors[0] | match(".(tar.gz|zip)").captures[0].string // "txt") |
+        .extension = (.mirrors[0] | match(".(tar.gz|zip|json)").captures[0].string // "txt") |
         (.mirrors | join("\t")), " out=\(.key).\(.extension)"' sources.json |
         aria2c --conf-path='./configs/aria2.conf' -d "$cache_dir"
 
@@ -29,15 +29,15 @@ for color in 'white' 'black'; do
                 fpath=$(find -P -O3 "$cache_dir" -type f -name "$key*")
 
                 case $fpath in
+                *.json) jq -r "$rule" "$fpath" ;;
                 *.tar.gz)
                     # Both Shallalist and Ut-capitole adhere to this format
                     # If any archives are added that do not, this line needs to change
-                    tar -xOzf "$fpath" --wildcards-match-slash --wildcards '*/domains'
-                    ;;
-                *.zip) zcat "$fpath" ;;
-                *) cat "$fpath" ;;
+                    tar -xOzf "$fpath" --wildcards-match-slash --wildcards '*/domains' |
+                        gawk --sandbox -O -- "$rule" ;;
+                *.zip) zcat "$fpath" | gawk --sandbox -O -- "$rule" ;;
+                *) cat "$fpath" | gawk --sandbox -O -- "$rule" ;;
                 esac |
-                    gawk --sandbox -O -- "$rule" | # apply the regex rule
                     gawk -v format="$format" -v filename="$list_name" '
                         BEGIN {
                             prefixes["ipv4"] = "0.0.0.0 "
