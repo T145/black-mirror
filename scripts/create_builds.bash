@@ -11,7 +11,7 @@ sort_list() {
 }
 
 for color in 'white' 'black'; do
-    cache_dir="${downloads}/${color}"
+    local cache_dir="${downloads}/${color}"
 
     jq -r --arg color "$color" 'to_entries[] |
         select(.value.color == $color) |
@@ -21,12 +21,12 @@ for color in 'white' 'black'; do
         aria2c --conf-path='./configs/aria2.conf' -d "$cache_dir"
 
     for format in 'domain' 'ipv4' 'ipv6'; do
-        list_name="${color}_${format}.txt"
+        local list_name="${color}_${format}.txt"
 
         jq -r --arg color "$color" --arg format "$format" 'to_entries[] |
             select(.value.color == $color and .value.format == $format) | "\(.key)#\(.value.rule)"' sources.json |
             while IFS=$'#' read -r key rule; do
-                fpath=$(find -P -O3 "$cache_dir" -type f -name "$key*")
+                local fpath=$(find -P -O3 "$cache_dir" -type f -name "$key*")
 
                 if [[ $fpath == *.json ]]; then
                     jq -r "$rule" "$fpath"
@@ -59,7 +59,7 @@ for color in 'white' 'black'; do
             fi
 
             if [[ "$color" == 'black' ]]; then
-                blacklist="black_${format}.txt"
+                local blacklist="black_${format}.txt"
 
                 if test -f "white_${format}.txt"; then
                     grep -Fxvf "white_${format}.txt" "$blacklist" | sponge "$blacklist"
