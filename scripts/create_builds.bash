@@ -37,6 +37,9 @@ for color in 'white' 'black'; do
                 jq) jq -r "$rule" ;;
                 gawk) gawk --sandbox -O -- "$rule" ;;
                 mawk) mawk "$rule" ;;
+                xmlstarlet)
+                # xmlstarlet sel -t -m "/rss/channel/item" -v "substring-before(title,' ')" -n rss.xml
+                ;;
                 *) echo "WARN: \"${key}\" doesn't have a valid engine!" ;;
                 esac | gawk -v format="$format" -v list="$list" '
                         BEGIN {
