@@ -1504,5 +1504,18 @@
     "mirrors": [
       "https://infosharing.cybersaiyan.it/feeds/CS-PIHOLE"
     ]
+  },
+  "bruteforceblocker": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "$1~/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $1}"
+      }
+    ],
+    "mirrors": [
+      "http://danger.rulez.sk/projects/bruteforceblocker/blist.php"
+    ]
   }
 }
