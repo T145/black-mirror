@@ -50,7 +50,7 @@
     *   Used to block popular porn sites
 *   [FireHOL Level 4](https://github.com/firehol/blocklist-ipsets)
     *   Levels 1-3 are included in `Energized Extensions`
-*   [IPverse](http://ipverse.net/)
+*   <strike>[IPverse](http://ipverse.net/)</strike>
 *   [1Hosts Xtra](https://github.com/badmojr/1Hosts)
     *   Mini & Pro versions are now being included in `Energized`
 *   [Dean's Filterlist](https://github.com/hl2guide/Filterlist-for-AdGuard-or-PiHole) Sources
