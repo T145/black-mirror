@@ -61,14 +61,13 @@ for color in 'white' 'black'; do
                 if [[ "$format" == 'domain' ]]; then
                     gawk '{ print "0.0.0.0 " $0 }' "$list" >>'black_ipv4.txt'
                     gawk '{ print ":: " $0 }' "$list" >>'black_ipv6.txt'
-                    tar -czf 'black_domain.tar.gz' "$list"
-                    tar -czf 'black_ipv4.tar.gz' 'black_ipv4.txt'
-                    tar -czf 'black_ipv6.tar.gz' 'black_ipv6.txt'
-                    md5sum 'black_domain.tar.gz' >'black_domain.md5'
-                    md5sum 'black_ipv4.tar.gz' >'black_ipv4.md5'
-                    md5sum 'black_ipv6.tar.gz' >'black_ipv6.md5'
                 fi
             fi
         fi
+    done
+
+    for release in 'black_domain' 'black_ipv4' 'black_ipv6'; do
+        tar -czf "${release}.tar.gz" "${release}.txt"
+        md5sum "${release}.tar.gz" >"${release}.md5"
     done
 done
