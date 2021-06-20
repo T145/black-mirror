@@ -68,7 +68,7 @@ for color in 'white' 'black'; do
         fi
     done
 
-    # we're doing this after everything else so all the domain
+    # we're doing this after everything else so the domain
     # list is efficiently applied to the other lists
     if [[ "$format" == 'domain' ]]; then
         for release in 'black_domain' 'black_ipv4' 'black_ipv6'; do

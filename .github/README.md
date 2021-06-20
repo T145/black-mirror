@@ -80,8 +80,11 @@
 *   [Energized Unblock](https://github.com/EnergizedProtection/unblock#packs)
 *   [AnudeepND False Positives](https://github.com/anudeepND/blacklist/blob/master/miscellaneous/false-positives.txt)
 *   [AnudeepND Whitelist](https://github.com/anudeepND/whitelist#overview)
-*   [Hipo University Domains List](https://github.com/Hipo/university-domains-list#university-domains-and-names-data-list--api)
-*   [Public DNS Server List](https://public-dns.info/)
+*   [BlackWeb](https://github.com/maravento/blackweb#allowlists-urltld) Sources
+    *   [Hipo University Domains List](https://github.com/Hipo/university-domains-list#university-domains-and-names-data-list--api)
+    *   [Public DNS Server List](https://public-dns.info/)
+*   [BlackIP](https://github.com/maravento/blackip#blocklists) Sources
+    *   [`check_torproject_bulkexitlist`](https://check.torproject.org/api/bulk), [`dan_me_uk`]()
 
 ## ⚓ Hyperlinks
 
