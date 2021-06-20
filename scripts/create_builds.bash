@@ -70,7 +70,7 @@ for color in 'white' 'black'; do
 
     # we're doing this after everything else so the domain
     # list is efficiently applied to the other lists
-    if [[ "$format" == 'domain' ]]; then
+    if [[ "$color" == 'black' ]]; then
         for release in 'black_domain' 'black_ipv4' 'black_ipv6'; do
             tar -czf "${release}.tar.gz" "${release}.txt"
             md5sum "${release}.tar.gz" >"${release}.md5"

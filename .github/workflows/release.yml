@@ -47,13 +47,6 @@ jobs:
             *.tar.gz
             *.md5
 
-      - name: Remove Old Releases
-        uses: eregon/keep-last-n-releases@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          n: 3
-
       - name: Remove Artifacts
         run: |
           rm *.tar.gz
