@@ -81,19 +81,6 @@
       "https://urlhaus.abuse.ch/downloads/text_online/"
     ]
   },
-  "alexa_anti_porn": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\",\"}$2~/cunt/||/pussy/||/lesbian/||/voyeur/||/fetish/||/interracial/||/goodwank/||/boob/||/hugetits/||/bigtits/||/smalltits/||/porn/||/fuck/||/sex/||/gay/||/hentai/||/incest/||/xvideos/||/blowjob/||/69/||/erotic/||/teen/||/horny/||/xxx/||/blowjob/||/dickx/||/dickup/||/virgin/||/explicittube/||/raunchy/{print tolower($2)}"
-      }
-    ],
-    "mirrors": [
-      "https://s3.amazonaws.com/alexa-static/top-1m.csv.zip"
-    ]
-  },
   "android_tracking": {
     "color": "black",
     "filters": [
@@ -1591,6 +1578,19 @@
     ],
     "mirrors": [
       "https://router.unrealsec.eu/badips"
+    ]
+  },
+  "4skinskywalker_anti_porn": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "$2~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/4skinSkywalker/Anti-Porn-HOSTS-File/master/HOSTS.txt"
     ]
   }
 }

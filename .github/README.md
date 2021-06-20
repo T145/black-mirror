@@ -46,8 +46,8 @@
     *   Spy list contained in `Energized`
 *   [The Block List Project](https://blocklistproject.github.io/Lists/)
 *   [Blackbird for Windows](https://getblackbird.net/blacklist/hosts/)
-*   [Amazon Alexa Top 1M Sites](https://www.alexa.com/topsites)
-    *   Used to block popular porn sites
+*   <strike>[Alexa Top 1M](https://s3.amazonaws.com/alexa-static/top-1m.csv.zip)</strike>
+    *   <strike>Used to block popular porn sites</strike>
 *   [FireHOL Level 4](https://github.com/firehol/blocklist-ipsets)
     *   Levels 1-3 are included in `Energized Extensions`
 *   <strike>[IPverse](http://ipverse.net/)</strike>
@@ -75,6 +75,7 @@
     *   My parsing is strict, so there shouldn't be any problems referencing this source. This is also a blacklist, so there shouldn't be any way to back door things.
 *   [CyberSaiyanIT](https://github.com/CyberSaiyanIT/InfoSharing)
 *   [UnrealSecurity](https://github.com/UnrealSecurity/badips)
+*   [4skinSkywalker Anti Porn](https://github.com/4skinSkywalker/anti-porn-hosts-file)
 
 ### ⚪ Whitelists
 
