@@ -146,5 +146,5 @@ Use both the IPv4 and IPv6 lists.
 
 <div align="center">
   <h2>Together we'll make a better internet!</h2>
-  <sub>A project by <a href="https://github.com/T145" target="_blank">T145</a> with 💖<pub>
+  <sub>A project by <a href="https://github.com/T145" target="_blank">T145</a> made with 💖<pub>
 </div>
