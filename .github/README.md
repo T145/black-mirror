@@ -64,14 +64,16 @@
             *   Unique sources include: [`digitalside`](https://osint.digitalside.it/#SubscribeMISPfeed)
 *   [Abuse.ch](https://abuse.ch/#about) Sources
     *   Unique sources include: `feodotracker`, `sslbl`, `urlhaus`
-*   [Blackweb](https://github.com/maravento/blackweb/blob/master/bwupdate/bwupdate.sh) Sources
-    *   Unique sources include: [`360_netlab`](https://data.netlab.360.com/), [`cybercrime`](https://cybercrime-tracker.net/), [`taz.net.au`](http://taz.net.au/Mail/)
+*   [BlackWeb](https://github.com/maravento/blackweb#blocklists) Sources
+    *   Unique sources include: [`360_netlab`](https://data.netlab.360.com/), [`myip_full_blacklist`](https://myip.ms/browse/blacklist)
+    *   Found: [`myip_webcrawlers`](https://myip.ms/browse/web_bots)
+*   [BlackIP](https://github.com/maravento/blackip#blocklists) Sources
+    *   Unique sources include: [bruteforceblocker](http://danger.rulez.sk/index.php/bruteforceblocker/)
 *   Malc0de Domains
     *   IPs are included in `Energized`
     *   **_MALC0DE'S RSS FEED CONTAINS SHADE RANSOMWARE, SO THE SITE HAS NOT BEEN LINKED!_**
     *   My parsing is strict, so there shouldn't be any problems referencing this source. This is also a blacklist, so there shouldn't be any way to back door things.
 *   [CyberSaiyanIT](https://github.com/CyberSaiyanIT/InfoSharing)
-*   [bruteforceblocker](http://danger.rulez.sk/index.php/bruteforceblocker/)
 
 ### ⚪ Whitelists
 
