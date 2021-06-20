@@ -1579,5 +1579,18 @@
     "mirrors": [
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update.txt"
     ]
+  },
+  "unrealsecurity": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://router.unrealsec.eu/badips"
+    ]
   }
 }
