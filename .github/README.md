@@ -54,20 +54,20 @@
 *   [1Hosts Xtra](https://github.com/badmojr/1Hosts)
     *   Mini & Pro versions are now being included in `Energized`
 *   [Dean's Filterlist](https://github.com/hl2guide/Filterlist-for-AdGuard-or-PiHole) Sources
-    *   Unique sources include: [`blocklist_de`](https://www.blocklist.de/en/index.html), [`geoffrey_frogeye`](https://hostfiles.frogeye.fr/) (Taken from [`sebsauvage`](https://sebsauvage.net/hosts/hosts)), `threatcrowd`, [`antisocialengineer`](https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community), [`windscribe`](https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png), `cyberthreat`, `not_on_my_shift`
+    *   Unique: [`blocklist_de`](https://www.blocklist.de/en/index.html), [`geoffrey_frogeye`](https://hostfiles.frogeye.fr/) (Taken from [`sebsauvage`](https://sebsauvage.net/hosts/hosts)), `threatcrowd`, [`antisocialengineer`](https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community), [`windscribe`](https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png), `cyberthreat`, `not_on_my_shift`
     *   [lightswitch05/developerdan](https://github.com/lightswitch05/hosts/tree/master/docs/lists) Sources
-        *   Unique sources include: `amp_hosts`, `facebook`, `hate_and_junk`
+        *   Unique: `amp_hosts`, `facebook`, `hate_and_junk`
         *   The rest are included in `Energized`
     *   [pDNSf](https://github.com/j-moriarti/pDNSf-Hosts-collection/blob/master/Download-and-Process-Hosts.sh) Sources
-        *   Unique sources include: [`resecure_me`](https://rescure.me/feeds.html), [`kriskintel`](https://kriskintel.com/), [`filtri_dns`](https://filtri-dns.ga/)
+        *   Unique: [`resecure_me`](https://rescure.me/feeds.html), [`kriskintel`](https://kriskintel.com/), [`filtri_dns`](https://filtri-dns.ga/)
         *   [blockconvert](https://github.com/mkb2091/blockconvert/blob/master/filterlists.csv)/[Host File Project](https://github.com/hectorm/hblock/blob/master/SOURCES.md) Sources
-            *   Unique sources include: [`digitalside`](https://osint.digitalside.it/#SubscribeMISPfeed)
+            *   Unique: [`digitalside`](https://osint.digitalside.it/#SubscribeMISPfeed)
 *   [Abuse.ch](https://abuse.ch/#about) Sources
-    *   Unique sources include: `feodotracker`, `sslbl`, `urlhaus`
+    *   Unique: `feodotracker`, `sslbl`, `urlhaus`
 *   [BlackWeb](https://github.com/maravento/blackweb#blocklists) Sources
-    *   Unique sources include: [`360_netlab`](https://data.netlab.360.com/), [`cybercrime`](https://cybercrime-tracker.net/), [`taz_spam`](http://taz.net.au/Mail/)
+    *   Unique: [`360_netlab`](https://data.netlab.360.com/), [`cybercrime`](https://cybercrime-tracker.net/), [`taz_spam`](http://taz.net.au/Mail/)
 *   [BlackIP](https://github.com/maravento/blackip#blocklists) Sources
-    *   Unique sources include: [`bruteforceblocker`](http://danger.rulez.sk/index.php/bruteforceblocker/), [`myip_full_blacklist`](https://myip.ms/browse/blacklist)
+    *   Unique: [`bruteforceblocker`](http://danger.rulez.sk/index.php/bruteforceblocker/), [`myip_full_blacklist`](https://myip.ms/browse/blacklist)
     *   Found: [`myip_webcrawlers`](https://myip.ms/browse/web_bots)
 *   Malc0de Domains
     *   IPs are included in `Energized`
@@ -81,10 +81,9 @@
 *   [AnudeepND False Positives](https://github.com/anudeepND/blacklist/blob/master/miscellaneous/false-positives.txt)
 *   [AnudeepND Whitelist](https://github.com/anudeepND/whitelist#overview)
 *   [BlackWeb](https://github.com/maravento/blackweb#allowlists-urltld) Sources
-    *   [Hipo University Domains List](https://github.com/Hipo/university-domains-list#university-domains-and-names-data-list--api)
-    *   [Public DNS Server List](https://public-dns.info/)
+    *   Unique: [`hipo_universities`](https://github.com/Hipo/university-domains-list#university-domains-and-names-data-list--api), [`public_dns`](https://public-dns.info/)
 *   [BlackIP](https://github.com/maravento/blackip#blocklists) Sources
-    *   [`check_torproject_bulkexitlist`](https://check.torproject.org/api/bulk), [`dan_me_uk`]()
+    *   Unique: [`check_torproject_bulkexitlist`](https://check.torproject.org/api/bulk), [`dan_me_uk`](https://www.dan.me.uk/)
 
 ## ⚓ Hyperlinks
 
