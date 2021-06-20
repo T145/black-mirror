@@ -66,9 +66,9 @@
     *   Unique sources include: `feodotracker`, `sslbl`, `urlhaus`
 *   [BlackWeb](https://github.com/maravento/blackweb#blocklists) Sources
     *   Unique sources include: [`360_netlab`](https://data.netlab.360.com/), [`myip_full_blacklist`](https://myip.ms/browse/blacklist)
-    *   Found: [`myip_webcrawlers`](https://myip.ms/browse/web_bots)
 *   [BlackIP](https://github.com/maravento/blackip#blocklists) Sources
-    *   Unique sources include: [bruteforceblocker](http://danger.rulez.sk/index.php/bruteforceblocker/)
+    *   Unique sources include: [`bruteforceblocker`](http://danger.rulez.sk/index.php/bruteforceblocker/)
+    *   Found: [`myip_webcrawlers`](https://myip.ms/browse/web_bots)
 *   Malc0de Domains
     *   IPs are included in `Energized`
     *   **_MALC0DE'S RSS FEED CONTAINS SHADE RANSOMWARE, SO THE SITE HAS NOT BEEN LINKED!_**
