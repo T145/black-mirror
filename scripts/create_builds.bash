@@ -2,7 +2,9 @@
 set -euo pipefail # put bash into strict mode
 umask 055         # change all generated file perms from 755 to 700
 
-readonly DOWNLOADS=$(mktemp -d)
+# https://github.com/koalaman/shellcheck/wiki/SC2155
+DOWNLOADS=$(mktemp -d)
+readonly DOWNLOADS
 trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 
 for color in 'white' 'black'; do
