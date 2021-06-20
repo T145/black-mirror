@@ -66,10 +66,11 @@
     *   Unique sources include: `feodotracker`, `sslbl`, `urlhaus`
 *   [Blackweb](https://github.com/maravento/blackweb/blob/master/bwupdate/bwupdate.sh) Sources
     *   Unique sources include: [`360_netlab`](https://data.netlab.360.com/), [`cybercrime`](https://cybercrime-tracker.net/), [`taz.net.au`](http://taz.net.au/Mail/)
-*   malc0de domains
+*   Malc0de Domains
     *   IPs are included in `Energized`
     *   **_MALC0DE'S RSS FEED CONTAINS SHADE RANSOMWARE, SO THE SITE HAS NOT BEEN LINKED!_**
     *   My parsing is strict, so there shouldn't be any problems referencing this source. This is also a blacklist, so there shouldn't be any way to back door things.
+*   [CyberSaiyanIT](https://github.com/CyberSaiyanIT/InfoSharing)
 
 ### ⚪ Whitelists
 
