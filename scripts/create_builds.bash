@@ -68,8 +68,12 @@ for color in 'white' 'black'; do
         fi
     done
 
-    for release in 'black_domain' 'black_ipv4' 'black_ipv6'; do
-        tar -czf "${release}.tar.gz" "${release}.txt"
-        md5sum "${release}.tar.gz" >"${release}.md5"
-    done
+    # we're doing this after everything else so all the domain
+    # list is efficiently applied to the other lists
+    if [[ "$format" == 'domain' ]]; then
+        for release in 'black_domain' 'black_ipv4' 'black_ipv6'; do
+            tar -czf "${release}.tar.gz" "${release}.txt"
+            md5sum "${release}.tar.gz" >"${release}.md5"
+        done
+    fi
 done
