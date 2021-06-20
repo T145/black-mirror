@@ -1491,5 +1491,18 @@
     "mirrors": [
       "http://malc0de.com/bl/BOOT"
     ]
+  },
+  "cybersaiyan": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print tolower($0)}"
+      }
+    ],
+    "mirrors": [
+      "https://infosharing.cybersaiyan.it/feeds/CS-PIHOLE"
+    ]
   }
 }
