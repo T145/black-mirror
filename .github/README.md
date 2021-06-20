@@ -65,9 +65,9 @@
 *   [Abuse.ch](https://abuse.ch/#about) Sources
     *   Unique sources include: `feodotracker`, `sslbl`, `urlhaus`
 *   [BlackWeb](https://github.com/maravento/blackweb#blocklists) Sources
-    *   Unique sources include: [`360_netlab`](https://data.netlab.360.com/), [`myip_full_blacklist`](https://myip.ms/browse/blacklist)
+    *   Unique sources include: [`360_netlab`](https://data.netlab.360.com/), [`cybercrime`](https://cybercrime-tracker.net/), [`taz_spam`](http://taz.net.au/Mail/)
 *   [BlackIP](https://github.com/maravento/blackip#blocklists) Sources
-    *   Unique sources include: [`bruteforceblocker`](http://danger.rulez.sk/index.php/bruteforceblocker/)
+    *   Unique sources include: [`bruteforceblocker`](http://danger.rulez.sk/index.php/bruteforceblocker/), [`myip_full_blacklist`](https://myip.ms/browse/blacklist)
     *   Found: [`myip_webcrawlers`](https://myip.ms/browse/web_bots)
 *   Malc0de Domains
     *   IPs are included in `Energized`
