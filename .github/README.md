@@ -74,6 +74,7 @@
     *   **_MALC0DE'S RSS FEED CONTAINS SHADE RANSOMWARE, SO THE SITE HAS NOT BEEN LINKED!_**
     *   My parsing is strict, so there shouldn't be any problems referencing this source. This is also a blacklist, so there shouldn't be any way to back door things.
 *   [CyberSaiyanIT](https://github.com/CyberSaiyanIT/InfoSharing)
+*   [UnrealSecurity](https://github.com/UnrealSecurity/badips)
 
 ### ⚪ Whitelists
 
