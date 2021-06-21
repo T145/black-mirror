@@ -29,6 +29,19 @@
       "https://data.netlab.360.com/feeds/dga/dga.txt"
     ]
   },
+  "4skinskywalker_anti_porn": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "$2~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/4skinSkywalker/Anti-Porn-HOSTS-File/master/HOSTS.txt"
+    ]
+  },
   "abuse_ch_feodotracker": {
     "color": "black",
     "filters": [
@@ -617,6 +630,19 @@
     ],
     "mirrors": [
       "https://osint.digitalside.it/Threat-Intel/lists/latestips.txt"
+    ]
+  },
+  "emergingthreats": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://rules.emergingthreats.net/blockrules/compromised-ips.txt"
     ]
   },
   "energized_ips": {
@@ -1427,6 +1453,19 @@
       "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/tiuxo/hosts"
     ]
   },
+  "unrealsecurity": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://router.unrealsec.eu/badips"
+    ]
+  },
   "ut_capitole": {
     "color": "black",
     "filters": [
@@ -1565,45 +1604,6 @@
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update.txt"
-    ]
-  },
-  "unrealsecurity": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://router.unrealsec.eu/badips"
-    ]
-  },
-  "4skinskywalker_anti_porn": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "$2~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/4skinSkywalker/Anti-Porn-HOSTS-File/master/HOSTS.txt"
-    ]
-  },
-  "emergingthreats": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://rules.emergingthreats.net/blockrules/compromised-ips.txt"
     ]
   }
 }
