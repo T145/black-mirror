@@ -7,8 +7,6 @@ DOWNLOADS=$(mktemp -d)
 readonly DOWNLOADS
 trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 
-main
-
 # params: key, cache dir
 get_file_contents() {
     local list
@@ -99,3 +97,6 @@ main() {
         done
     done
 }
+
+# https://github.com/koalaman/shellcheck/wiki/SC2218
+main
