@@ -624,7 +624,20 @@
       "https://osint.digitalside.it/Threat-Intel/lists/latestips.txt"
     ]
   },
-  "emergingthreats": {
+  "emergingthreats_block_ips": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "ipv4",
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt"
+    ]
+  },
+  "emergingthreats_compromised": {
     "color": "black",
     "filters": [
       {
