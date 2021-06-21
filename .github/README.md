@@ -90,8 +90,6 @@
 
 ## ⚓ Hyperlinks
 
-> IPv4 and IPv6 builds include the Domain list!
-
 <table>
   <thead>
     <tr>
@@ -105,7 +103,7 @@
   <tbody>
     <tr>
       <td style="text-align:center">dom.txt</td>
-      <td style="text-align:center">Contains regular host entries</td>
+      <td style="text-align:center">Contains regular domain entries</td>
       <td id="dom-count">8,733,306</td>
       <td id="dom-filesize">191M</td>
       <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/dom.tar.gz">dom.tar.gz</a> </td>
