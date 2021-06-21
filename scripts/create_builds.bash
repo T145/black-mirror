@@ -82,9 +82,9 @@ main() {
         done
 
         if [[ "$color" == 'black' ]]; then
-            for format in 'ip4' 'ip6' 'dom'; do
-                tar -czf "${format}.tar.gz" "${format}.txt"
-                md5sum "${format}.tar.gz" >"${format}.md5"
+            for release in 'black_dom' 'black_ip4' 'black_ip6'; do
+                tar -czf "${release}.tar.gz" "${release}.txt"
+                md5sum "${release}.tar.gz" >"${release}.md5"
             done
         fi
     done
