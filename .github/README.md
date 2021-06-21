@@ -146,8 +146,9 @@ Use the domain list.
 #### Desktop OS Hosts File
 
 ```bash
-gawk '{print "0.0.0.0 " $0}' ip4.txt >>hosts
-gawk '{print ":: " $0}' ip6.txt >>hosts
+gawk '{print "0.0.0.0 " $0}' black_domain.txt >>hosts
+gawk '{print "0.0.0.0 " $0}' black_ipv4.txt >>hosts
+gawk '{print ":: " $0}' black_ipv6.txt >>hosts
 ```
 
 ---
