@@ -24,7 +24,7 @@
 2. No excess whitespace (trailing, blank lines)
 3. No lingering webscraper garbage
 4. Ending with `lf`
-5. Domain-only, IPv4, and IPv6 variants
+5. Domain-only, IPv4-only, and IPv6-only variants
 6. Updates at [0:00 UTC](https://www.timeanddate.com/time/zone/timezone/utc)
 
 ## 📚 Sources
@@ -94,36 +94,36 @@
 
 <table>
   <thead>
-  <tr>
-    <th style="text-align:center">List Name</th>
-    <th style="text-align:center">Description</th>
-    <th>Unique Entries</th>
-    <th>~ File Size</th>
-    <th style="text-align:center">Source</th>
-  </tr>
+    <tr>
+      <th style="text-align:center">List Name</th>
+      <th style="text-align:center">Description</th>
+      <th>Unique Entries</th>
+      <th>~ File Size</th>
+      <th style="text-align:center">Source</th>
+    </tr>
   </thead>
   <tbody>
-  <tr>
-    <td style="text-align:center">black_domain.txt</td>
-    <td style="text-align:center">Contains regular host entries</td>
-    <td id="domain-count">8,733,306</td>
-    <td id="domain-filesize">191M</td>
-    <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz">black_domain.tar.gz</a> </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">black_ipv4.txt</td>
-    <td style="text-align:center"> Hosts prepended with &quot;<a href="https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001">0.0.0.0</a>&quot; </td>
-    <td id="ipv4-count">986,116</td>
-    <td id="ipv4-filesize">278M</td>
-    <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz">black_ipv4.tar.gz</a> </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">black_ipv6.txt</td>
-    <td style="text-align:center"> Hosts prepended with &quot;<a href="https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0">::</a>&quot; </td>
-    <td id="ipv6-count">6,052</td>
-    <td id="ipv6-filesize">216M</td>
-    <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz">black_ipv6.tar.gz</a> </td>
-  </tr>
+    <tr>
+      <td style="text-align:center">dom.txt</td>
+      <td style="text-align:center">Contains regular host entries</td>
+      <td id="dom-count">8,733,306</td>
+      <td id="dom-filesize">191M</td>
+      <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/dom.tar.gz">dom.tar.gz</a> </td>
+    </tr>
+    <tr>
+      <td style="text-align:center">ip4.txt</td>
+      <td style="text-align:center">Contains valid IPv4 addresses &amp; CIDR blocks</td>
+      <td id="ip4-count">986,116</td>
+      <td id="ip4-filesize">278M</td>
+      <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/ip4.tar.gz">ip4.tar.gz</a> </td>
+    </tr>
+    <tr>
+      <td style="text-align:center">ip6.txt</td>
+      <td style="text-align:center">Contains valid IPv6 addresses</td>
+      <td id="ip6-count">6,052</td>
+      <td id="ip6-filesize">216M</td>
+      <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/ip6.tar.gz">ip6.tar.gz</a> </td>
+    </tr>
   </tbody>
 </table>
 
@@ -131,11 +131,15 @@
 
 #### dnsmasq
 
-Many popular platforms such as OpenWRT, DDWRT, and Pihole use DNSmasq as their choice TCP powerhouse. After inspecting many domain blocklists you'll inevitably run across a list in the `dnsmasq.conf` format. This list doesn't support it because you can just place `addn-hosts=black_ipv{4-6}.txt` in the config or as a passed parameter and have it work properly. If you're using the `RADVD` daemon, use the IPv6 list. Otherwise, use the IPv4 version even if you have IPv6 support set up. I've tested this across all the mentioned platforms using `dig{6}` on a small sample size and had each host null-routed successfully. [DNSmasq's man page](https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html) discusses this further, and [DDWRT's ad blocking wiki page](https://wiki.dd-wrt.com/wiki/index.php/Ad_blocking) provides examples.
+Many popular platforms such as OpenWRT, DDWRT, and Pihole use DNSmasq as their choice TCP powerhouse. After inspecting many domain blocklists you'll inevitably run across a list in the `dnsmasq.conf` format. This list doesn't support it because you can use the `addn-hosts` parameter to have it work properly.
+
+If you're using the `RADVD` daemon, prepend any entries with [`::`](https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0). Otherwise, even if you have IPv6 support set up, prepend entries with [`0.0.0.0`](https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001).
+
+I've tested this across all the mentioned platforms using `dig{6}` on a small sample size and had each host null-routed successfully. [DNSmasq's man page](https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html) discusses configuration further, and [DDWRT's ad blocking wiki page](https://wiki.dd-wrt.com/wiki/index.php/Ad_blocking) provides some examples.
 
 #### unbound
 
-Similar to dnsmasq, but requires more manual configuration. Use the `black_ipv{4-6}.txt` list(s), and rename the extracted file into a \*.conf file. [Steffinstanly discusses how to apply blocklists](https://medium.com/@steffinstanly/unbound-dns-blocking-3567986a5735).
+Similar to dnsmasq, but requires more manual configuration. Name any products as a \*.conf file. [Then follow Steffinstanly's instructions on how to apply blocklists](https://medium.com/@steffinstanly/unbound-dns-blocking-3567986a5735).
 
 #### personalDNSfilter
 
@@ -143,7 +147,10 @@ Use the domain list.
 
 #### Desktop OS Hosts File
 
-Use both the IPv4 and IPv6 lists.
+```bash
+gawk '{print "0.0.0.0 " $0}' ip4.txt >>hosts
+gawk '{print ":: " $0}' ip6.txt >>hosts
+```
 
 ---
 

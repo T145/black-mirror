@@ -41,14 +41,9 @@ add_to_list() {
     local list
     list="${1}_${2}.txt"
 
-    gawk -v format="$2" -v list="$list" '
-        BEGIN {
-            prefixes["ipv4"] = "0.0.0.0 "
-            prefixes["ipv6"] = ":: "
-            prefixes["domain"] = ""
-        }
+    gawk -v list="$list" '
         !seen[$0]++ {
-            print prefixes[format] $0 >> list
+            print $0 >> list
         }'
 }
 
@@ -72,7 +67,7 @@ main() {
                     add_to_list "$color" "$format"
             done
 
-        for format in 'ipv4' 'ipv6' 'domain'; do
+        for format in 'ip4' 'ip6' 'dom'; do
             list="${color}_${format}.txt"
 
             if test -f "$list"; then
@@ -82,19 +77,16 @@ main() {
                     if test -f "white_${format}.txt"; then
                         grep -Fxvf "white_${format}.txt" "$list" | sponge "$list"
                     fi
-
-                    if [[ "$format" == 'domain' ]]; then
-                        gawk '{ print "0.0.0.0 " $0 }' "$list" >>'black_ipv4.txt'
-                        gawk '{ print ":: " $0 }' "$list" >>'black_ipv6.txt'
-
-                        for release in 'black_domain' 'black_ipv4' 'black_ipv6'; do
-                            tar -czf "${release}.tar.gz" "${release}.txt"
-                            md5sum "${release}.tar.gz" >"${release}.md5"
-                        done
-                    fi
                 fi
             fi
         done
+
+        if [[ "$color" == 'black' ]]; then
+            for format in 'ip4' 'ip6' 'dom'; do
+                tar -czf "${format}.tar.gz" "${format}.txt"
+                md5sum "${format}.tar.gz" >"${format}.md5"
+            done
+        fi
     done
 }
 
