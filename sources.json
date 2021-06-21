@@ -1592,5 +1592,18 @@
     "mirrors": [
       "https://raw.githubusercontent.com/4skinSkywalker/Anti-Porn-HOSTS-File/master/HOSTS.txt"
     ]
+  },
+  "emergingthreats": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://rules.emergingthreats.net/blockrules/compromised-ips.txt"
+    ]
   }
 }
