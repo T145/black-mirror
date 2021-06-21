@@ -35,6 +35,7 @@
 
 *   [OpenWRT Adblock](https://github.com/openwrt/packages/blob/master/net/adblock/files/adblock.sources) Sources
     *   Sources in `Energized Unified & Extensions` that were removed: `adaway`, `adguard`, `adguard_tracking`, `anudeep`, `bitcoin`, `disconnect`, `reg_cn`, `reg_cz`, `reg_de`, `reg_es`, `reg_fr`, `reg_it`, `reg_nl`, `reg_ro`, `reg_ru`, `reg_vn`, `stevenblack`, `spam404`, `stopforumspam`, `whocares`, `winhelp`, `yoyo`
+    *   Found: [`oisd_extra`](https://oisd.nl/downloadsXtra)
 *   [Energized Unified](https://github.com/EnergizedProtection/block#packs-2)
 *   [Energized Extensions](https://github.com/EnergizedProtection/block#extensions-2)
     *   The `Xtreme Extension` isn't very descriptive, but has been included anyway
