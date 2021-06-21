@@ -1636,5 +1636,19 @@
     "mirrors":[
       "https://raw.githubusercontent.com/adversarialtools/apple-telemetry/master/blacklist"
     ]
+  },
+  "mailscanner_bad_phishing": {
+    "_comment": "Could use the 'phishing.safe.sites.conf' as a whitelist",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>5{print $0}"
+      }
+    ],
+    "mirrors": [
+      "http://phishing.mailscanner.info/phishing.bad.sites.conf"
+    ]
   }
 }
