@@ -4,21 +4,21 @@ set -euo pipefail
 export LANG=en_US.UTF-8
 export LANGUAGE=en:el
 
-unique_dom_count=$(wc -l <black_dom.txt)
-unique_ip4_count=$(($(wc -l <black_ip4.txt) - unique_dom_count))
-unique_ip6_count=$(($(wc -l <black_ip6.txt) - unique_dom_count))
+unique_domain_count=$(wc -l <black_domain.txt)
+unique_ipv4_count=$(($(wc -l <black_ipv4.txt) - unique_domain_count))
+unique_ipv6_count=$(($(wc -l <black_ipv6.txt) - unique_domain_count))
 
-dom_count=$(printf "%'d" "$unique_dom_count")
-ip4_count=$(printf "%'d" "$unique_ip4_count")
-ip6_count=$(printf "%'d" "$unique_ip6_count")
+domain_count=$(printf "%'d" "$unique_domain_count")
+ipv4_count=$(printf "%'d" "$unique_ipv4_count")
+ipv6_count=$(printf "%'d" "$unique_ipv6_count")
 
 get_filesize() {
     stat -c %s "$1" | numfmt --to=iec
 }
 
-dom_filesize=$(get_filesize black_dom.txt)
-ip4_filesize=$(get_filesize black_ip4.txt)
-ip6_filesize=$(get_filesize black_ip6.txt)
+domain_filesize=$(get_filesize black_domain.txt)
+ipv4_filesize=$(get_filesize black_ipv4.txt)
+ipv6_filesize=$(get_filesize black_ipv6.txt)
 
 # Produces a sed script that replaces TD element contents
 # with the value of a same-named variable.
@@ -29,5 +29,5 @@ make_subst_script() {
     done
 }
 
-sed -e "$(make_subst_script dom_count dom_filesize ip4_count ip4_filesize ip6_count ip6_filesize)" \
+sed -e "$(make_subst_script domain_count domain_filesize ipv4_count ipv4_filesize ipv6_count ipv6_filesize)" \
     -i .github/README.md
