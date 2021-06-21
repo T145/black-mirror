@@ -76,6 +76,7 @@
 *   [CyberSaiyanIT](https://github.com/CyberSaiyanIT/InfoSharing)
 *   [UnrealSecurity](https://github.com/UnrealSecurity/badips)
 *   [4skinSkywalker Anti Porn](https://github.com/4skinSkywalker/anti-porn-hosts-file)
+*   [EmergingThreats](https://rules.emergingthreats.net/blockrules/)
 
 ### ⚪ Whitelists
 
