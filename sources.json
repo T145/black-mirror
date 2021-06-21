@@ -1610,5 +1610,31 @@
     "mirrors": [
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update.txt"
     ]
+  },
+  "ios_trackers": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors":[
+      "https://raw.githubusercontent.com/jakejarvis/ios-trackers/master/blocklist.txt"
+    ]
+  },
+  "apple_telemetry": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors":[
+      "https://raw.githubusercontent.com/adversarialtools/apple-telemetry/master/blacklist"
+    ]
   }
 }

@@ -77,6 +77,8 @@
 *   [UnrealSecurity](https://github.com/UnrealSecurity/badips)
 *   [4skinSkywalker Anti Porn](https://github.com/4skinSkywalker/anti-porn-hosts-file)
 *   [EmergingThreats](https://rules.emergingthreats.net/blockrules/)
+*   [Sheriff53](https://notabug.org/phronimon/Sheriff53/src/master/docs/THIRD_PARTY_LISTS.md) Sources
+    *   Unique: [`ios_trackers`](https://github.com/jakejarvis/ios-trackers), [`apple_telemetry`](https://github.com/adversarialtools/apple-telemetry)
 
 ### ⚪ Whitelists
 
