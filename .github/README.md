@@ -29,7 +29,7 @@
 
 ## 📚 Sources
 
-> _Please report any redundant sources in an issue!_ _Be sure to check out the custom [blacklist](https://github.com/T145/the-blacklist/blob/user-submissions/blacklist.txt) and [whitelist](https://github.com/T145/the-blacklist/blob/user-submissions/whitelist.txt)!_
+> _Please report any redundant sources in an issue! Be sure to check out the custom [blacklist](https://github.com/T145/the-blacklist/blob/user-submissions/blacklist.txt) and [whitelist](https://github.com/T145/the-blacklist/blob/user-submissions/whitelist.txt)!_
 
 ### ⚫ Blacklists
 
@@ -93,7 +93,7 @@
 
 ### 🧟 Zombies
 
-> Sources that are dead and not included but may be worth mentioning
+> Sources that are dead and not included but may be [worth mentioning](https://blog.talosintelligence.com/2021/03/domain-dumpster-diving.html)
 
 *   [BlackWeb](https://github.com/maravento/blackweb#blocklists) Sources
     *   [Squidguard Archive](http://squidguard.mesd.k12.or.us/)
