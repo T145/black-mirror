@@ -73,10 +73,8 @@ main() {
             if test -f "$list"; then
                 sort -o "$list" -u -S 90% --parallel=4 -T "$cache_dir" "$list"
 
-                if [[ "$color" == 'black' ]]; then
-                    if test -f "white_${format}.txt"; then
-                        grep -Fxvf "white_${format}.txt" "$list" | sponge "$list"
-                    fi
+                if [[ "$color" == 'black' && -f "white_${format}.txt" ]]; then
+                    grep -Fxvf "white_${format}.txt" "$list" | sponge "$list"
                 fi
             fi
         done
