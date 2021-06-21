@@ -88,7 +88,22 @@
 *   [BlackWeb](https://github.com/maravento/blackweb#allowlists-urltld) Sources
     *   Unique: [`hipo_universities`](https://github.com/Hipo/university-domains-list#university-domains-and-names-data-list--api), [`public_dns`](https://public-dns.info/)
 *   [BlackIP](https://github.com/maravento/blackip#blocklists) Sources
-    *   Unique: [`check_torproject_bulkexitlist`](https://check.torproject.org/api/bulk), [`dan_me_uk`](https://www.dan.me.uk/)
+    *   Unique: [`tor_bulkexitlist`](https://check.torproject.org/api/bulk), [`dan_me_uk`](https://www.dan.me.uk/)
+
+### 🧟 Zombies
+
+> Sources that are dead and not included but may be worth mentioning
+
+*   [BlackWeb](https://github.com/maravento/blackweb#blocklists) Sources
+    *   [Squidguard Archive](http://squidguard.mesd.k12.or.us/)
+        *   Found individually a while back
+        *   Contains some obvious placeholder/garbage domains
+*   [pDNSf](https://github.com/j-moriarti/pDNSf-Hosts-collection/blob/master/Download-and-Process-Hosts.sh) Sources
+    *   [Zonefiles.io](https://zonefiles.io/compromised-ip-list/)
+        *   Supposedly up-to-date, but references many offline resources like the legacy abuse.ch domains
+*   [Sheriff53](https://notabug.org/phronimon/Sheriff53/src/master/docs/THIRD_PARTY_LISTS.md) Sources
+    *   [BarbBlock](https://github.com/paulgb/BarbBlock/blob/master/blacklists/domain-list.txt)
+    *   [NSABlocklist](https://github.com/nextdns/metadata/blob/master/privacy/blocklists/nsa-blocklist.json)
 
 ## ⚓ Hyperlinks
 
