@@ -67,7 +67,7 @@ main() {
                     add_to_list "$color" "$format"
             done
 
-        for format in 'ip4' 'ip6' 'dom'; do
+        for format in 'ipv4' 'ipv6' 'domain'; do
             list="${color}_${format}.txt"
 
             if test -f "$list"; then
@@ -82,7 +82,7 @@ main() {
         done
 
         if [[ "$color" == 'black' ]]; then
-            for release in 'black_dom' 'black_ip4' 'black_ip6'; do
+            for release in 'black_domain' 'black_ipv4' 'black_ipv6'; do
                 tar -czf "${release}.tar.gz" "${release}.txt"
                 md5sum "${release}.tar.gz" >"${release}.md5"
             done
