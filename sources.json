@@ -1650,5 +1650,18 @@
     "mirrors": [
       "http://phishing.mailscanner.info/phishing.bad.sites.conf"
     ]
+  },
+  "binarydefense": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "NR>13{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://www.binarydefense.com/banlist.txt"
+    ]
   }
 }
