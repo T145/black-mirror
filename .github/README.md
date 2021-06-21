@@ -54,7 +54,7 @@
 *   [1Hosts Xtra](https://github.com/badmojr/1Hosts)
     *   Mini & Pro versions are now being included in `Energized`
 *   [Dean's Filterlist](https://github.com/hl2guide/Filterlist-for-AdGuard-or-PiHole) Sources
-    *   Unique: [`blocklist_de`](https://www.blocklist.de/en/index.html), [`geoffrey_frogeye`](https://hostfiles.frogeye.fr/) (Taken from [`sebsauvage`](https://sebsauvage.net/hosts/hosts)), `threatcrowd`, [`antisocialengineer`](https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community), [`windscribe`](https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png), `cyberthreat`, `not_on_my_shift`
+    *   Unique: [`blocklist_de`](https://www.blocklist.de/en/index.html), [`geoffrey_frogeye`](https://hostfiles.frogeye.fr/) (Taken from [`sebsauvage`](https://sebsauvage.net/hosts/hosts)), [`threatcrowd`](https://threatcrowd.org/), [`antisocialengineer`](https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community), [`windscribe`](https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png), [`cyberthreat`](https://www.cyberthreatcoalition.org/blocklist), [`not_on_my_shift`](https://orca.pet/notonmyshift/)
     *   [lightswitch05/developerdan](https://github.com/lightswitch05/hosts/tree/master/docs/lists) Sources
         *   Unique: `amp_hosts`, `facebook`, `hate_and_junk`
         *   The rest are included in `Energized`
