@@ -1677,5 +1677,18 @@
     "mirrors": [
       "https://www.binarydefense.com/banlist.txt"
     ]
+  },
+  "matomo_spam": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/matomo-org/referrer-spam-list/master/spammers.txt"
+    ]
   }
 }
