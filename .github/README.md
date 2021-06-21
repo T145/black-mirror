@@ -90,40 +90,42 @@
 
 ## ⚓ Hyperlinks
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:center">List Name</th>
-      <th style="text-align:center">Description</th>
-      <th>Unique Entries</th>
-      <th>~ File Size</th>
-      <th style="text-align:center">Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:center">dom.txt</td>
-      <td style="text-align:center">Contains regular domain entries</td>
-      <td id="dom-count">8,733,306</td>
-      <td id="dom-filesize">191M</td>
-      <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/dom.tar.gz">dom.tar.gz</a> </td>
-    </tr>
-    <tr>
-      <td style="text-align:center">ip4.txt</td>
-      <td style="text-align:center">Contains valid IPv4 addresses &amp; CIDR blocks</td>
-      <td id="ip4-count">986,116</td>
-      <td id="ip4-filesize">278M</td>
-      <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/ip4.tar.gz">ip4.tar.gz</a> </td>
-    </tr>
-    <tr>
-      <td style="text-align:center">ip6.txt</td>
-      <td style="text-align:center">Contains valid IPv6 addresses</td>
-      <td id="ip6-count">6,052</td>
-      <td id="ip6-filesize">216M</td>
-      <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/ip6.tar.gz">ip6.tar.gz</a> </td>
-    </tr>
-  </tbody>
-</table>
+<div align="center">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:center">List Name</th>
+        <th style="text-align:center">Description</th>
+        <th>Unique Entries</th>
+        <th>~ File Size</th>
+        <th style="text-align:center">Source</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:center">black_dom.txt</td>
+        <td style="text-align:center">Contains regular domain entries</td>
+        <td id="dom-count">8,733,306</td>
+        <td id="dom-filesize">191M</td>
+        <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_dom.tar.gz">black_dom.tar.gz</a> </td>
+      </tr>
+      <tr>
+        <td style="text-align:center">black_ip4.txt</td>
+        <td style="text-align:center">Contains valid IPv4 addresses &amp; CIDR blocks</td>
+        <td id="ip4-count">986,116</td>
+        <td id="ip4-filesize">278M</td>
+        <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ip4.tar.gz">black_ip4.tar.gz</a> </td>
+      </tr>
+      <tr>
+        <td style="text-align:center">black_ip6.txt</td>
+        <td style="text-align:center">Contains valid IPv6 addresses</td>
+        <td id="ip6-count">6,052</td>
+        <td id="ip6-filesize">216M</td>
+        <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ip6.tar.gz">black_ip6.tar.gz</a> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## ⚒️ Usage
 

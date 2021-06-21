@@ -4,9 +4,9 @@ set -euo pipefail
 export LANG=en_US.UTF-8
 export LANGUAGE=en:el
 
-unique_dom_count=$(wc -l <dom.txt)
-unique_ip4_count=$(($(wc -l <ip4.txt) - unique_dom_count))
-unique_ip6_count=$(($(wc -l <ip6.txt) - unique_dom_count))
+unique_dom_count=$(wc -l <black_dom.txt)
+unique_ip4_count=$(($(wc -l <black_ip4.txt) - unique_dom_count))
+unique_ip6_count=$(($(wc -l <black_ip6.txt) - unique_dom_count))
 
 dom_count=$(printf "%'d" "$unique_dom_count")
 ip4_count=$(printf "%'d" "$unique_ip4_count")
@@ -16,9 +16,9 @@ get_filesize() {
     stat -c %s "$1" | numfmt --to=iec
 }
 
-dom_filesize=$(get_filesize dom.txt)
-ip4_filesize=$(get_filesize ip4.txt)
-ip6_filesize=$(get_filesize ip6.txt)
+dom_filesize=$(get_filesize black_dom.txt)
+ip4_filesize=$(get_filesize black_ip4.txt)
+ip6_filesize=$(get_filesize black_ip6.txt)
 
 # Produces a sed script that replaces TD element contents
 # with the value of a same-named variable.
