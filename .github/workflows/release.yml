@@ -24,6 +24,12 @@ jobs:
           mv temp.json sources.json
         shell: bash
 
+      - name: Reset Aria2 Log
+        run: |
+          rm logs/aria2.log
+          touch logs/aria2.log
+        shell: bash
+
       - name: Install Dependencies
         run: sudo apt install aria2 coreutils gawk jq mawk moreutils prips sed
         shell: bash
