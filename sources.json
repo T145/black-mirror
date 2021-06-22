@@ -1997,5 +1997,18 @@
     "mirrors": [
       "https://www.threatsourcing.com/dnall-free.txt"
     ]
+  },
+  "maltrail": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/stamparm/aux/master/maltrail-malware-domains.txt"
+    ]
   }
 }
