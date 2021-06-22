@@ -179,6 +179,32 @@
       "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
     ]
   },
+  "apple_telemetry": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/adversarialtools/apple-telemetry/master/blacklist"
+    ]
+  },
+  "binarydefense": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "NR>13{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://www.binarydefense.com/banlist.txt"
+    ]
+  },
   "blackbird": {
     "color": "black",
     "filters": [
@@ -833,6 +859,19 @@
       "https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json"
     ]
   },
+  "ios_trackers": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/jakejarvis/ios-trackers/master/blocklist.txt"
+    ]
+  },
   "kriskintel_covid": {
     "color": "black",
     "filters": [
@@ -932,6 +971,20 @@
       "https://www.github.developerdan.com/hosts/lists/hate-and-junk-extended.txt"
     ]
   },
+  "mailscanner_bad_phishing": {
+    "_comment": "Could use the 'phishing.safe.sites.conf' as a whitelist",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>5{print $0}"
+      }
+    ],
+    "mirrors": [
+      "http://phishing.mailscanner.info/phishing.bad.sites.conf"
+    ]
+  },
   "malc0de_domains": {
     "color": "black",
     "filters": [
@@ -957,6 +1010,19 @@
     "mirrors": [
       "https://raw.githubusercontent.com/marktron/fakenews/master/fakenews",
       "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/fakenews/hosts"
+    ]
+  },
+  "matomo_spam": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/matomo-org/referrer-spam-list/master/spammers.txt"
     ]
   },
   "myip_full_blacklist": {
@@ -1016,19 +1082,6 @@
       "https://raw.githubusercontent.com/notracking/hosts-blocklists/master/dnscrypt-proxy/dnscrypt-proxy.blacklist.txt"
     ]
   },
-  "oisd_full": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "NR>13{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://dbl.oisd.nl"
-    ]
-  },
   "oisd_extra": {
     "color": "black",
     "filters": [
@@ -1040,6 +1093,19 @@
     ],
     "mirrors": [
       "https://dbl.oisd.nl/extra/"
+    ]
+  },
+  "oisd_full": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>13{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://dbl.oisd.nl"
     ]
   },
   "openphish_feed": {
@@ -1623,72 +1689,6 @@
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update.txt"
-    ]
-  },
-  "ios_trackers": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "{print $0}"
-      }
-    ],
-    "mirrors":[
-      "https://raw.githubusercontent.com/jakejarvis/ios-trackers/master/blocklist.txt"
-    ]
-  },
-  "apple_telemetry": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "{print $0}"
-      }
-    ],
-    "mirrors":[
-      "https://raw.githubusercontent.com/adversarialtools/apple-telemetry/master/blacklist"
-    ]
-  },
-  "mailscanner_bad_phishing": {
-    "_comment": "Could use the 'phishing.safe.sites.conf' as a whitelist",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "NR>5{print $0}"
-      }
-    ],
-    "mirrors": [
-      "http://phishing.mailscanner.info/phishing.bad.sites.conf"
-    ]
-  },
-  "binarydefense": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "NR>13{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://www.binarydefense.com/banlist.txt"
-    ]
-  },
-  "matomo_spam": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/matomo-org/referrer-spam-list/master/spammers.txt"
     ]
   }
 }
