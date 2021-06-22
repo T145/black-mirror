@@ -270,11 +270,21 @@
 
 ## ⚒️ Usage
 
+[Extract any archived release](https://linuxize.com/post/how-to-create-and-extract-archives-using-the-tar-command-in-linux/#extracting-tar-archive) like so:
+
+```bash
+tar -xvf black_{release}.tar.gz
+```
+
 #### dnsmasq
 
-Many popular platforms such as OpenWRT, DDWRT, and Pihole use DNSmasq as their choice TCP powerhouse. After inspecting many domain blocklists you'll inevitably run across a list in the `dnsmasq.conf` format. This list doesn't support it because you can use the `addn-hosts` parameter to have it work properly.
+Many popular platforms such as OpenWRT, DDWRT, and Pihole use DNSmasq as their choice TCP powerhouse. After inspecting many domain blocklists you'll inevitably run across a list in the `dnsmasq.conf` format. This list doesn't support it because you can use the `addn-hosts` parameter to hosts in the list.
 
-If you're using the `RADVD` daemon, prepend any entries with [`::`](https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0). Otherwise, even if you have IPv6 support set up, prepend entries with [`0.0.0.0`](https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001).
+```bash
+gawk '{print "0.0.0.0 " $0}' black_domain.txt >>etc_hosts # OR gawk '{print ":: " $0}' black_domain.txt >>etc_hosts
+```
+
+If you're using the `RADVD` daemon, prepend any hosts with [`::`](https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0). Otherwise, even if you have IPv6 support set up, prepend hosts with [`0.0.0.0`](https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001).
 
 I've tested this across all the mentioned platforms using `dig{6}` on a small sample size and had each host null-routed successfully. [DNSmasq's man page](https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html) discusses configuration further, and [DDWRT's ad blocking wiki page](https://wiki.dd-wrt.com/wiki/index.php/Ad_blocking) provides some examples.
 
@@ -289,7 +299,7 @@ Use the domain list.
 #### Desktop OS Hosts File
 
 ```bash
-gawk '{print "0.0.0.0 " $0}' black_domain.txt >>hosts
+gawk '{print "0.0.0.0 " $0}' black_domain.txt >>hosts # OR gawk '{print ":: " $0}' black_domain.txt >>hosts
 gawk '{print "0.0.0.0 " $0}' black_ipv4.txt >>hosts
 gawk '{print ":: " $0}' black_ipv6.txt >>hosts
 ```
