@@ -129,14 +129,14 @@
     <tr>
       <td style="text-align:center">black_ipv4.txt</td>
       <td style="text-align:center">Contains valid IPv4 addresses &amp; CIDR blocks</td>
-      <td id="ipv4-count">-7,212,966</td>
+      <td id="ipv4-count">1,520,328</td>
       <td id="ipv4-filesize">21M</td>
       <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz">black_ipv4.tar.gz</a> </td>
     </tr>
     <tr>
       <td style="text-align:center">black_ipv6.txt</td>
       <td style="text-align:center">Contains valid IPv6 addresses</td>
-      <td id="ipv6-count">-8,723,812</td>
+      <td id="ipv6-count">6,041</td>
       <td id="ipv6-filesize">197K</td>
       <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz">black_ipv6.tar.gz</a> </td>
     </tr>
