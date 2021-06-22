@@ -123,8 +123,8 @@
     <tr>
       <td style="text-align:center">black_domain.txt</td>
       <td style="text-align:center">Contains regular domain entries</td>
-      <td id="dom-count">8,733,306</td>
-      <td id="dom-filesize">191M</td>
+      <td id="domain-count">8,733,306</td>
+      <td id="domain-filesize">191M</td>
       <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz">black_domain.tar.gz</a> </td>
     </tr>
     <tr>
