@@ -105,6 +105,7 @@
 *   [Sheriff53](https://notabug.org/phronimon/Sheriff53/src/master/docs/THIRD_PARTY_LISTS.md) Sources
     *   [BarbBlock](https://github.com/paulgb/BarbBlock/blob/master/blacklists/domain-list.txt)
     *   [NSABlocklist](https://github.com/nextdns/metadata/blob/master/privacy/blocklists/nsa-blocklist.json)
+*   [Wael](https://www.wael.name/other/best-blocklist/) (2020)
 
 ## ⚓ Hyperlinks
 
