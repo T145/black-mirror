@@ -2023,5 +2023,18 @@
     "mirrors": [
       "http://charles.the-haleys.org/ssh_dico_attack_hdeny_format.php/hostsdeny.txt"
     ]
+  },
+  "darklist": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "NR>3{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://www.darklist.de/raw.php"
+    ]
   }
 }
