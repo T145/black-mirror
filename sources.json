@@ -1966,5 +1966,36 @@
     "mirrors": [
       "https://report.rutgers.edu/DROP/attackers"
     ]
+  },
+  "threatsourcing_malicious_ips": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://www.threatsourcing.com/ipall-free.txt"
+    ]
+  },
+  "threatsourcing_dns_names": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print $0}"
+      },
+      {
+        "engine": "gawk",
+        "format": "ipv4",
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(:|$)/{sub(/:.*/,\"\",$0); print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://www.threatsourcing.com/dnall-free.txt"
+    ]
   }
 }
