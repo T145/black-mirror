@@ -1953,5 +1953,18 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/univsydney?json"
     ]
+  },
+  "rutgers": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://report.rutgers.edu/DROP/attackers"
+    ]
   }
 }

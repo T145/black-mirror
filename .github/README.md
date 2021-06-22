@@ -160,6 +160,7 @@
         *   [`cinsscore`](https://cinsscore.com/#list)
         *   [`openportstats`](http://www.openportstats.com/)
             *   Similar to IPverse; not included
+*   [Rutgers University Attack Log](https://www.rutgers.edu/)
 
 ### ⚪ Whitelists
 
