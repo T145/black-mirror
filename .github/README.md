@@ -132,7 +132,7 @@
     *   Unique
         *   [`ios_trackers`](https://github.com/jakejarvis/ios-trackers)
         *   [`apple_telemetry`](https://github.com/adversarialtools/apple-telemetry)
-*   [ISC Sans](https://isc.sans.edu/)
+*   [ISC Sans](https://isc.sans.edu/)/[DShield](https://www.dshield.org/)
     *   Unique
         *   [`adscore`](https://www.adscore.com/)
         *   [`alphastrike`](https://www.alphastrike.io/en/frontpage/)
@@ -206,12 +206,30 @@
 *   [malware-ioc](https://github.com/eset/malware-ioc)
 *   [malwaredomains](http://malwaredomains.lehigh.edu/files/)
 *   [multiproxy](https://multiproxy.org/)
+*   [joewein](https://www.joewein.net/)
+    *   https://www.joewein.net/dl/bl/dom-bl-base.txt
+    *   https://www.joewein.net/dl/bl/dom-bl.txt
+*   [malwaredomainlist](http://www.malwaredomainlist.com/)
+*   [malware-traffic-analysis](https://www.malware-traffic-analysis.net/index.html)
+*   [nothink](https://www.nothink.org/)
+*   [targetedthreats](https://github.com/botherder/targetedthreats/)
+*   [policeman-rulesets](https://github.com/futpib/policeman-rulesets/)
+*   malwared
+    *   https://malwared.malwaremustdie.org/rss.php
+    *   https://malwared.malwaremustdie.org/rss_bin.php
+    *   https://malwared.malwaremustdie.org/rss_ssh.php
+*   [threatfeeds](https://threatfeeds.io/)
+    *   Some 200 sources updated a long time ago
 
-### On The Fence
+### 🤺 On The Fence
 
-> Valid feeds that have little to no info and need verification
+> Valid files/feeds that have little to no info and need verification
 
 *   [alienvault](https://reputation.alienvault.com/reputation.data)
+*   [mirc](https://www.mirc.com/servers.ini)
+*   [cryptolaemus](https://paste.cryptolaemus.com/)
+*   [MISP](https://github.com/MISP)/[circllu](https://www.circl.lu/doc/misp/feed-osint/)
+*   [vmx](http://vmx.yourcmc.ru/BAD_HOSTS.IP4)
 
 ## ⚓ Hyperlinks
 
