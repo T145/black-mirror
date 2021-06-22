@@ -34,29 +34,29 @@
 ### ⚫ Blacklists
 
 *   [OpenWRT Adblock](https://github.com/openwrt/packages/blob/master/net/adblock/files/adblock.sources) Sources
-    *   Removed sources contained in `Energized Unified & Extensions`
-        *   `adaway`
-        *   `adguard`
-        *   `adguard_tracking`
-        *   `anudeep`
-        *   `bitcoin`
-        *   `disconnect`
-        *   `reg_cn`
-        *   `reg_cz`
-        *   `reg_de`
-        *   `reg_es`
-        *   `reg_fr`
-        *   `reg_it`
-        *   `reg_nl`
-        *   `reg_ro`
-        *   `reg_ru`
-        *   `reg_vn`
-        *   `stevenblack`
-        *   `spam404`
-        *   `stopforumspam`
-        *   `whocares`
-        *   `winhelp`
-        *   `yoyo`
+    *   Unique
+        *   `android_tracking`
+        *   `andryou`
+        *   `anti_ad`
+        *   `firetv_tracking`
+        *   `games_tracking`
+        *   `gaming`
+        *   `notracking`
+        *   `oisd_full`
+        *   `openphish`
+        *   `phishing_army`
+        *   `reg_fi`
+        *   `reg_id`
+        *   `reg_kr`
+        *   `reg_pl1`
+        *   `reg_pl2`
+        *   `reg_se`
+        *   `shallalist`
+        *   `smarttv_tracking`
+        *   `utcapitole`
+        *   `wally3k`
+        *   `winspy`
+    *   Other sources contained in `Energized Unified & Extensions`
     *   Found
         *   [`oisd_extra`](https://oisd.nl/downloadsXtra)
 *   [Energized Unified](https://github.com/EnergizedProtection/block#packs-2)
