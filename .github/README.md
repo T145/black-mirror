@@ -146,6 +146,16 @@
         *   [`ipip`](https://en.ipip.net/)
         *   [`netsystems`](https://www.netsystemsresearch.com/)
         *   [`onyphe`](https://onyphe.io/)
+        *   [`rapid7sonar`](https://opendata.rapid7.com/)
+        *   [`recyber`](https://www.recyber.net/)
+        *   [`scorecard`](https://www.scorecardresearch.com/about.aspx?newlanguage=1)
+        *   [`shadowserver`](https://www.shadowserver.org/topics/scans/)
+        *   [`shodan`](https://www.shodan.io/)
+        *   [`stretchoid`](http://www.stretchoid.com/)
+        *   (Skipping tldns and tor since they're "other" lists and not especially malicious)
+            * Whitelist TLD Name Servers and Tor Exit Nodes from Tor Project?
+        *   [`univmichigan`](https://umich.edu/)
+        *   [`univsydney`](https://www.sydney.edu.au/)
     *   Found
         *   [`cinsscore`](https://cinsscore.com/#list)
         *   [`openportstats`](http://www.openportstats.com/)
