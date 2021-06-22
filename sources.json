@@ -2010,5 +2010,18 @@
     "mirrors": [
       "https://raw.githubusercontent.com/stamparm/aux/master/maltrail-malware-domains.txt"
     ]
+  },
+  "charles_haley": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "NR>1{print $3}"
+      }
+    ],
+    "mirrors": [
+      "http://charles.the-haleys.org/ssh_dico_attack_hdeny_format.php/hostsdeny.txt"
+    ]
   }
 }
