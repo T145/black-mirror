@@ -162,6 +162,7 @@
             *   Similar to IPverse; not included
 *   [Rutgers University Attack Log](https://www.rutgers.edu/)
 *   [threatsourcing](https://www.threatsourcing.com/)
+*   [maltrail](https://github.com/stamparm/maltrail#blacklist)
 
 ### ⚪ Whitelists
 
@@ -195,6 +196,13 @@
 *   [Sblam](https://github.com/kornelski/Sblam/tree/master/data)
 *   [St. Dominic's Priory College](https://www.stdominics.sa.edu.au/) [Droplists](https://threatintel.stdominics.sa.edu.au/)
 *   [URLVir](https://www.urlvir.com/)
+*   [unit42](https://github.com/pan-unit42/iocs)
+    *   Select `Go to file`, then search using the term "domains"
+*   [fireeye](https://github.com/fireeye/iocs)
+*   [aptnotes](https://github.com/aptnotes/data#how-is-this-data-being-utilized)
+*   [malware-indicators](https://github.com/citizenlab/malware-indicators)
+*   [da667](https://github.com/da667/667s_Shitlist)
+*   [malware-ioc](https://github.com/eset/malware-ioc)
 
 ## ⚓ Hyperlinks
 
