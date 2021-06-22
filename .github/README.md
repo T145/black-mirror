@@ -220,16 +220,6 @@
 *   [threatfeeds](https://threatfeeds.io/)
     *   Some 200 sources updated a long time ago
 
-### 🤺 On The Fence
-
-> Valid files/feeds that have little to no info and need verification
-
-*   [alienvault](https://reputation.alienvault.com/reputation.data)
-*   [mirc](https://www.mirc.com/servers.ini)
-*   [cryptolaemus](https://paste.cryptolaemus.com/)
-*   [MISP](https://github.com/MISP)/[circllu](https://www.circl.lu/doc/misp/feed-osint/)
-*   [vmx](http://vmx.yourcmc.ru/BAD_HOSTS.IP4)
-
 ## ⚓ Hyperlinks
 
 <table>
