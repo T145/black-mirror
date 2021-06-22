@@ -80,6 +80,9 @@
 *   [EmergingThreats](https://rules.emergingthreats.net/blockrules/)
 *   [Sheriff53](https://notabug.org/phronimon/Sheriff53/src/master/docs/THIRD_PARTY_LISTS.md) Sources
     *   Unique: [`ios_trackers`](https://github.com/jakejarvis/ios-trackers), [`apple_telemetry`](https://github.com/adversarialtools/apple-telemetry)
+*   [`ISC Sans`](https://isc.sans.edu/)
+    *   Unique: [`adscore`](https://www.adscore.com/), [`alphastrike`](https://www.alphastrike.io/en/frontpage/), [`arbor`](https://www.netscout.com/arbor-ddos), [`blindferret`](https://zmap.io/), [`censys`](https://censys.io/), [`ciarmy`](https://cinsarmy.com/list-download/), [`cybergreen`](https://github.com/cybergreen-net), [`erratasec`](https://github.com/robertdavidgraham/masscan), [`internetcensus`](https://www.internet-census.org/home.html), [`ipip`](https://en.ipip.net/), [`netsystems`](https://www.netsystemsresearch.com/), [`onyphe`](https://onyphe.io/)
+    *   Found: [`cinsscore`](https://cinsscore.com/#list), [`openportstats`](http://www.openportstats.com/) (Similar to IPverse; not included)
 
 ### ⚪ Whitelists
 
@@ -106,6 +109,10 @@
     *   [BarbBlock](https://github.com/paulgb/BarbBlock/blob/master/blacklists/domain-list.txt)
     *   [NSABlocklist](https://github.com/nextdns/metadata/blob/master/privacy/blocklists/nsa-blocklist.json)
 *   [Wael](https://www.wael.name/other/best-blocklist/) (2020)
+*   [`ISC Sans`](https://isc.sans.edu/)
+    *   [`bebloh/cryptowall/hesperbot/matsnu/qakbot/ramnit`](https://www.bambenekconsulting.com/)
+    *   [`dryeza`](https://github.com/techhelplist)
+    *   `openbl_ftp/openbl_http/openbl_mail/openbl_smtp/openbl_ssh/`
 
 ## ⚓ Hyperlinks
 
