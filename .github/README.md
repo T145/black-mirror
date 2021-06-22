@@ -163,6 +163,7 @@
 *   [Rutgers University Attack Log](https://www.rutgers.edu/)
 *   [threatsourcing](https://www.threatsourcing.com/)
 *   [maltrail](https://github.com/stamparm/maltrail#blacklist)
+*   [Charles B. Haley](http://charles.the-haleys.org/)
 
 ### ⚪ Whitelists
 
@@ -203,6 +204,14 @@
 *   [malware-indicators](https://github.com/citizenlab/malware-indicators)
 *   [da667](https://github.com/da667/667s_Shitlist)
 *   [malware-ioc](https://github.com/eset/malware-ioc)
+*   [malwaredomains](http://malwaredomains.lehigh.edu/files/)
+*   [multiproxy](https://multiproxy.org/)
+
+### On The Fence
+
+> Valid feeds that have little to no info and need verification
+
+*   [alienvault](https://reputation.alienvault.com/reputation.data)
 
 ## ⚓ Hyperlinks
 
