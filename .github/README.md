@@ -163,6 +163,7 @@
 *   [threatsourcing](https://www.threatsourcing.com/)
 *   [maltrail](https://github.com/stamparm/maltrail#blacklist)
 *   [Charles B. Haley](http://charles.the-haleys.org/)
+*   [darklist](https://www.darklist.de/)
 
 ### ⚪ Whitelists
 
