@@ -161,6 +161,7 @@
         *   [`openportstats`](http://www.openportstats.com/)
             *   Similar to IPverse; not included
 *   [Rutgers University Attack Log](https://www.rutgers.edu/)
+*   [threatsourcing](https://www.threatsourcing.com/)
 
 ### ⚪ Whitelists
 
@@ -190,7 +191,10 @@
 *   [Sheriff53](https://notabug.org/phronimon/Sheriff53/src/master/docs/THIRD_PARTY_LISTS.md) Sources
     *   [BarbBlock](https://github.com/paulgb/BarbBlock/blob/master/blacklists/domain-list.txt)
     *   [NSABlocklist](https://github.com/nextdns/metadata/blob/master/privacy/blocklists/nsa-blocklist.json)
-*   [Wael](https://www.wael.name/other/best-blocklist/) (2020)
+*   [Wael](https://www.wael.name/other/best-blocklist/)
+*   [Sblam](https://github.com/kornelski/Sblam/tree/master/data)
+*   [St. Dominic's Priory College](https://www.stdominics.sa.edu.au/) [Droplists](https://threatintel.stdominics.sa.edu.au/)
+*   [URLVir](https://www.urlvir.com/)
 
 ## ⚓ Hyperlinks
 
