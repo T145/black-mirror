@@ -1862,5 +1862,96 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/onyphe?json"
     ]
+  },
+  "rapid7sonar": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/rapid7sonar?json"
+    ]
+  },
+  "recyber": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/recyber?json"
+    ]
+  },
+  "scorecard": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/scorecard?json"
+    ]
+  },
+  "shodan": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/shodan?json"
+    ]
+  },
+  "stretchoid": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/stretchoid?json"
+    ]
+  },
+  "univmichigan": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/univmichigan?json"
+    ]
+  },
+  "univsydney": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/univsydney?json"
+    ]
   }
 }
