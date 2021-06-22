@@ -35,93 +35,92 @@
 
 *   [OpenWRT Adblock](https://github.com/openwrt/packages/blob/master/net/adblock/files/adblock.sources) Sources
     *   Unique
-        *   `android_tracking`
-        *   `andryou`
-        *   `anti_ad`
-        *   `firetv_tracking`
-        *   `games_tracking`
-        *   `gaming`
-        *   `notracking`
-        *   `oisd_full`
-        *   `openphish`
-        *   `phishing_army`
-        *   `reg_fi`
-        *   `reg_id`
-        *   `reg_kr`
-        *   `reg_pl1`
-        *   `reg_pl2`
-        *   `reg_se`
-        *   `shallalist`
-        *   `smarttv_tracking`
-        *   `utcapitole`
-        *   `wally3k`
-        *   `winspy`
-    *   Other sources contained in `Energized Unified & Extensions`
+        *   android_tracking
+        *   andryou
+        *   anti_ad
+        *   firetv_tracking
+        *   games_tracking
+        *   gaming
+        *   notracking
+        *   oisd_full
+        *   openphish
+        *   phishing_army
+        *   reg_fi
+        *   reg_id
+        *   reg_kr
+        *   reg_pl1
+        *   reg_pl2
+        *   reg_se
+        *   shallalist
+        *   smarttv_tracking
+        *   utcapitole
+        *   wally3k
+    *   Other sources contained in **Energized Unified & Extensions**
     *   Found
-        *   [`oisd_extra`](https://oisd.nl/downloadsXtra)
+        *   [oisd_extra](https://oisd.nl/downloadsXtra)
 *   [Energized Unified](https://github.com/EnergizedProtection/block#packs-2)
 *   [Energized Extensions](https://github.com/EnergizedProtection/block#extensions-2)
-    *   The `Xtreme Extension` isn't very descriptive, but has been included anyway
+    *   The **Xtreme Extension** isn't very descriptive, but has been included anyway
 *   [StevenBlack Extensions](https://github.com/StevenBlack/hosts/tree/master/extensions)
-    *   Unified hosts and some extensions contained in `Energized`
+    *   Unified hosts and some extensions contained in **Energized Unified**
 *   [AnudeepND Facebook](https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt)
-    *   [Other lists](https://github.com/anudeepND/blacklist) contained in `Energized`
+    *   [Other lists](https://github.com/anudeepND/blacklist) contained in **Energized Unified**
 *   [WindowsSpyBlocker Extra & Update](https://github.com/crazy-max/WindowsSpyBlocker/tree/master/data/hosts)
-    *   Spy list contained in `Energized`
+    *   Spy list contained in **Energized Unified**
 *   [The Block List Project](https://blocklistproject.github.io/Lists/)
 *   [Blackbird for Windows](https://getblackbird.net/blacklist/hosts/)
 *   <strike>[Alexa Top 1M](https://s3.amazonaws.com/alexa-static/top-1m.csv.zip)</strike>
     *   <strike>Used to block popular porn sites</strike>
 *   [FireHOL Level 4](https://github.com/firehol/blocklist-ipsets)
-    *   Levels 1-3 are included in `Energized Extensions`
+    *   Levels 1-3 are included in **Energized Extensions**
 *   <strike>[IPverse](http://ipverse.net/)</strike>
 *   [1Hosts Xtra](https://github.com/badmojr/1Hosts)
-    *   Mini & Pro versions are now being included in `Energized`
+    *   Mini & Pro versions are now being included in **Energized Unified**
 *   [Dean's Filterlist](https://github.com/hl2guide/Filterlist-for-AdGuard-or-PiHole) Sources
     *   Unique
-        *   [`blocklist_de`](https://www.blocklist.de/en/index.html)
-        *   [`geoffrey_frogeye`](https://hostfiles.frogeye.fr/)
-            *   Taken from [`sebsauvage`](https://sebsauvage.net/hosts/hosts)
-        *   [`threatcrowd`](https://threatcrowd.org/)
-        *   [`antisocialengineer`](https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community)
-        *   [`windscribe`](https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png)
-        *   [`cyberthreat`](https://www.cyberthreatcoalition.org/blocklist)
-        *   [`not_on_my_shift`](https://orca.pet/notonmyshift/)
+        *   [blocklist_de](https://www.blocklist.de/en/index.html)
+        *   [geoffrey_frogeye](https://hostfiles.frogeye.fr/)
+            *   Taken from [sebsauvage](https://sebsauvage.net/hosts/hosts)
+        *   [threatcrowd](https://threatcrowd.org/)
+        *   [antisocialengineer](https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community)
+        *   [windscribe](https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png)
+        *   [cyberthreat](https://www.cyberthreatcoalition.org/blocklist)
+        *   [not_on_my_shift](https://orca.pet/notonmyshift/)
     *   [lightswitch05/developerdan](https://github.com/lightswitch05/hosts/tree/master/docs/lists) Sources
         *   Unique
-            *   `amp_hosts`
-            *   `facebook`
-            *   `hate_and_junk`
-        *   The rest are included in `Energized`
+            *   amp_hosts
+            *   facebook
+            *   hate_and_junk
+        *   The rest are included in **Energized Unified**
     *   [pDNSf](https://github.com/j-moriarti/pDNSf-Hosts-collection/blob/master/Download-and-Process-Hosts.sh) Sources
         *   Unique
-            *   [`resecure_me`](https://rescure.me/feeds.html)
-            *   [`kriskintel`](https://kriskintel.com/)
-            *   [`filtri_dns`](https://filtri-dns.ga/)
-            *   [`mailscanner`](http://phishing.mailscanner.info/)
-            *   [`binarydefense`](https://www.binarydefense.com/)
+            *   [resecure_me](https://rescure.me/feeds.html)
+            *   [kriskintel](https://kriskintel.com/)
+            *   [filtri_dns](https://filtri-dns.ga/)
+            *   [mailscanner](http://phishing.mailscanner.info/)
+            *   [binarydefense](https://www.binarydefense.com/)
         *   [blockconvert](https://github.com/mkb2091/blockconvert/blob/master/filterlists.csv)/[Host File Project](https://github.com/hectorm/hblock/blob/master/SOURCES.md) Sources
             *   Unique
-                *   [`digitalside`](https://osint.digitalside.it/#SubscribeMISPfeed)
-                *   [`matomo_spam`](https://github.com/matomo-org/referrer-spam-list)
+                *   [digitalside](https://osint.digitalside.it/#SubscribeMISPfeed)
+                *   [matomo_spam](https://github.com/matomo-org/referrer-spam-list)
 *   [Abuse.ch](https://abuse.ch/#about) Sources
     *   Unique
-        *   `feodotracker`
-        *   `sslbl`
-        *   `urlhaus`
+        *   feodotracker
+        *   sslbl
+        *   urlhaus
 *   [BlackWeb](https://github.com/maravento/blackweb#blocklists) Sources
     *   Unique
-        *   [`360_netlab`](https://data.netlab.360.com/)
-        *   [`cybercrime`](https://cybercrime-tracker.net/)
-        *   [`taz_spam`](http://taz.net.au/Mail/)
+        *   [360_netlab](https://data.netlab.360.com/)
+        *   [cybercrime](https://cybercrime-tracker.net/)
+        *   [taz_spam](http://taz.net.au/Mail/)
 *   [BlackIP](https://github.com/maravento/blackip#blocklists) Sources
     *   Unique
-        *   [`bruteforceblocker`](http://danger.rulez.sk/index.php/bruteforceblocker/)
-        *   [`myip_full_blacklist`](https://myip.ms/browse/blacklist)
+        *   [bruteforceblocker](http://danger.rulez.sk/index.php/bruteforceblocker/)
+        *   [myip_full_blacklist](https://myip.ms/browse/blacklist)
     *   Found
-        *   [`myip_webcrawlers`](https://myip.ms/browse/web_bots)
+        *   [myip_webcrawlers](https://myip.ms/browse/web_bots)
 *   Malc0de Domains
-    *   IPs are included in `Energized`
+    *   IPs are included in **Energized**
     *   **_MALC0DE'S RSS FEED CONTAINS SHADE RANSOMWARE, SO THE SITE HAS NOT BEEN LINKED!_**
     *   My parsing is strict, so there shouldn't be any problems referencing this source. This is also a blacklist, so there shouldn't be any way to back door things.
 *   [CyberSaiyanIT](https://github.com/CyberSaiyanIT/InfoSharing)
@@ -130,35 +129,35 @@
 *   [EmergingThreats](https://rules.emergingthreats.net/blockrules/)
 *   [Sheriff53](https://notabug.org/phronimon/Sheriff53/src/master/docs/THIRD_PARTY_LISTS.md) Sources
     *   Unique
-        *   [`ios_trackers`](https://github.com/jakejarvis/ios-trackers)
-        *   [`apple_telemetry`](https://github.com/adversarialtools/apple-telemetry)
+        *   [ios_trackers](https://github.com/jakejarvis/ios-trackers)
+        *   [apple_telemetry](https://github.com/adversarialtools/apple-telemetry)
 *   [ISC Sans](https://isc.sans.edu/)/[DShield](https://www.dshield.org/)
     *   Unique
-        *   [`adscore`](https://www.adscore.com/)
-        *   [`alphastrike`](https://www.alphastrike.io/en/frontpage/)
-        *   [`arbor`](https://www.netscout.com/arbor-ddos)
-        *   [`blindferret`](https://zmap.io/)
-        *   [`censys`](https://censys.io/)
-        *   [`ciarmy`](https://cinsarmy.com/list-download/)
-        *   [`cybergreen`](https://github.com/cybergreen-net)
-        *   [`erratasec`](https://github.com/robertdavidgraham/masscan)
-        *   [`internetcensus`](https://www.internet-census.org/home.html)
-        *   [`ipip`](https://en.ipip.net/)
-        *   [`netsystems`](https://www.netsystemsresearch.com/)
-        *   [`onyphe`](https://onyphe.io/)
-        *   [`rapid7sonar`](https://opendata.rapid7.com/)
-        *   [`recyber`](https://www.recyber.net/)
-        *   [`scorecard`](https://www.scorecardresearch.com/about.aspx?newlanguage=1)
-        *   [`shadowserver`](https://www.shadowserver.org/topics/scans/)
-        *   [`shodan`](https://www.shodan.io/)
-        *   [`stretchoid`](http://www.stretchoid.com/)
+        *   [adscore](https://www.adscore.com/)
+        *   [alphastrike](https://www.alphastrike.io/en/frontpage/)
+        *   [arbor](https://www.netscout.com/arbor-ddos)
+        *   [blindferret](https://zmap.io/)
+        *   [censys](https://censys.io/)
+        *   [ciarmy](https://cinsarmy.com/list-download/)
+        *   [cybergreen](https://github.com/cybergreen-net)
+        *   [erratasec](https://github.com/robertdavidgraham/masscan)
+        *   [internetcensus](https://www.internet-census.org/home.html)
+        *   [ipip](https://en.ipip.net/)
+        *   [netsystems](https://www.netsystemsresearch.com/)
+        *   [onyphe](https://onyphe.io/)
+        *   [rapid7sonar](https://opendata.rapid7.com/)
+        *   [recyber](https://www.recyber.net/)
+        *   [scorecard](https://www.scorecardresearch.com/about.aspx?newlanguage=1)
+        *   [shadowserver](https://www.shadowserver.org/topics/scans/)
+        *   [shodan](https://www.shodan.io/)
+        *   [stretchoid](http://www.stretchoid.com/)
         *   (Skipping tldns and tor since they're "other" lists and not especially malicious)
             * Whitelist TLD Name Servers and Tor Exit Nodes from Tor Project?
-        *   [`univmichigan`](https://umich.edu/)
-        *   [`univsydney`](https://www.sydney.edu.au/)
+        *   [univmichigan](https://umich.edu/)
+        *   [univsydney](https://www.sydney.edu.au/)
     *   Found
-        *   [`cinsscore`](https://cinsscore.com/#list)
-        *   [`openportstats`](http://www.openportstats.com/)
+        *   [cinsscore](https://cinsscore.com/#list)
+        *   [openportstats](http://www.openportstats.com/)
             *   Similar to IPverse; not included
 *   [Rutgers University Attack Log](https://www.rutgers.edu/)
 *   [threatsourcing](https://www.threatsourcing.com/)
@@ -172,12 +171,12 @@
 *   [AnudeepND Whitelist](https://github.com/anudeepND/whitelist#overview)
 *   [BlackWeb](https://github.com/maravento/blackweb#allowlists-urltld) Sources
     *   Unique
-        *   [`hipo_universities`](https://github.com/Hipo/university-domains-list#university-domains-and-names-data-list--api)
-        *   [`public_dns`](https://public-dns.info/)
+        *   [hipo_universities](https://github.com/Hipo/university-domains-list#university-domains-and-names-data-list--api)
+        *   [public_dns](https://public-dns.info/)
 *   [BlackIP](https://github.com/maravento/blackip#blocklists) Sources
     *   Unique
-        *   [`tor_bulkexitlist`](https://check.torproject.org/api/bulk)
-        *   [`dan_me_uk`](https://www.dan.me.uk/)
+        *   [tor_bulkexitlist](https://check.torproject.org/api/bulk)
+        *   [dan_me_uk](https://www.dan.me.uk/)
 
 ### 🧟 Zombies
 
