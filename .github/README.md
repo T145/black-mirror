@@ -1,7 +1,15 @@
-<div align="center">
+<p align="center">
+  <img src="logo.png"
+       alt="logo"
+       longdesc="https://github.com/T145/the-blacklist/master/.github/logo.png"
+       crossorigin="anonymous"
+       referrerpolicy="no-referrer" />
+</p>
+
+<p align="center">
   <h1>The Blacklist</h1>
   <h3>⚡ Speed | 🧱 Stability | 🔒 Security</h3>
-</div>
+</p>
 
 ## 🥅 Goals
 
@@ -223,7 +231,10 @@
     *   https://malwared.malwaremustdie.org/rss_bin.php
     *   https://malwared.malwaremustdie.org/rss_ssh.php
 *   [threatfeeds](https://threatfeeds.io/)
-    *   Some 200 sources updated a long time ago
+    *   Some HTTP-200 sources updated a long time ago
+*   [yourcmc](http://vmx.yourcmc.ru/BAD_HOSTS.IP4)
+    *   `Last-Modified: Wed, 04 Jul 2012 21:04:35 GMT`
+*   [iblocklist](https://www.iblocklist.com/lists)
 
 ## ⚓ Hyperlinks
 
@@ -267,8 +278,9 @@
 [Extract any archived release](https://linuxize.com/post/how-to-create-and-extract-archives-using-the-tar-command-in-linux/#extracting-tar-archive) like so:
 
 ```bash
-tar -xvf black_{release}.tar.gz
+tar -xf black_{release}.tar.gz
 ```
+> _NOTE: Windows 10 has native `tar` support._
 
 #### dnsmasq
 
@@ -300,7 +312,7 @@ gawk '{print ":: " $0}' black_ipv6.txt >>hosts
 
 ---
 
-<div align="center">
+<p align="center">
   <h2>Together we'll make a better internet!</h2>
   <sub>A project by <a href="https://github.com/T145" target="_blank">T145</a> made with 💖<pub>
-</div>
+</p>
