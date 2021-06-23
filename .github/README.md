@@ -167,6 +167,7 @@
 *   [h3x](https://tracker.h3x.eu/)
 *   [pornrecords](https://github.com/mypdns/porn-records#submit)
 *   [cryptolaemus](https://paste.cryptolaemus.com/)
+*   [vxvault](http://vxvault.net/ViriList.php)
 
 ### ⚪ Whitelists
 
