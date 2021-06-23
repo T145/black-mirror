@@ -1,15 +1,12 @@
-<p align="center">
+<div align="center">
   <img src="logo.png"
        alt="logo"
        longdesc="https://github.com/T145/the-blacklist/master/.github/logo.png"
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
-</p>
-
-<p align="center">
   <h1>The Blacklist</h1>
   <h3>⚡ Speed | 🧱 Stability | 🔒 Security</h3>
-</p>
+</div>
 
 ## 🥅 Goals
 
@@ -312,7 +309,7 @@ gawk '{print ":: " $0}' black_ipv6.txt >>hosts
 
 ---
 
-<p align="center">
+<div align="center">
   <h2>Together we'll make a better internet!</h2>
   <sub>A project by <a href="https://github.com/T145" target="_blank">T145</a> made with 💖<pub>
-</p>
+</div>
