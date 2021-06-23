@@ -34,6 +34,10 @@ jobs:
         run: sudo apt install aria2 coreutils gawk jq mawk moreutils prips sed
         shell: bash
 
+      - name: Update Valid Pihole Sources
+        run: jq -jr 'to_entries[] | select(.value.color == "black") | .value.mirrors[0] as $url | .value.filters[] | if (.engine == "mawk" and .format == "domain") then ($url, " ") else empty end' sources.json | sed 's/ $/\n/' >sources.pihole
+        shell: bash
+
       - name: Create Builds
         run: ./scripts/create_builds.bash
         shell: bash
