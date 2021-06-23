@@ -173,6 +173,7 @@
 *   [pornrecords](https://github.com/mypdns/porn-records#submit)
 *   [cryptolaemus](https://paste.cryptolaemus.com/)
 *   [vxvault](http://vxvault.net/ViriList.php)
+*   [alienvault](https://status.alienvault.cloud/)
 
 ### ⚪ Whitelists
 
