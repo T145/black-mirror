@@ -2050,5 +2050,96 @@
     "mirrors": [
       "https://tracker.h3x.eu/api/sites_1week.php"
     ]
+  },
+  "pornrecords_domains": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/domains.list"
+    ]
+  },
+  "pornrecords_hosts": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/hosts.list"
+    ]
+  },
+  "pornrecords_mobile": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/mobile.list"
+    ]
+  },
+  "pornrecords_rpz_ip": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/rpz-ip"
+    ]
+  },
+  "pornrecords_snuff": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/snuff.list"
+    ]
+  },
+  "pornrecords_wildcard": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/wildcard.list"
+    ]
+  },
+  "pornrecords_rpz_dnsname": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/wildcard.rpz-nsdname.list"
+    ]
   }
 }

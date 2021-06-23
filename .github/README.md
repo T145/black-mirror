@@ -165,6 +165,7 @@
 *   [Charles B. Haley](http://charles.the-haleys.org/)
 *   [darklist](https://www.darklist.de/)
 *   [h3x](https://tracker.h3x.eu/)
+*   [pornrecords](https://github.com/mypdns/porn-records#submit)
 
 ### ⚪ Whitelists
 
