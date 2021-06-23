@@ -2036,5 +2036,18 @@
     "mirrors": [
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update.txt"
     ]
+  },
+  "h3x": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "ipv4",
+        "rule": "BEGIN{RS=\"([0-9]+\\\\.){3}[0-9]+\"}RT{print RT}"
+      }
+    ],
+    "mirrors": [
+      "https://tracker.h3x.eu/api/sites_1week.php"
+    ]
   }
 }
