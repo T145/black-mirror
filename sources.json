@@ -2193,5 +2193,18 @@
     "mirrors": [
       "http://vxvault.net/URL_List.php"
     ]
+  },
+  "alienvault": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\"#\"}{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://reputation.alienvault.com/reputation.data"
+    ]
   }
 }
