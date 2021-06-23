@@ -52,12 +52,16 @@ jobs:
           files: |
             *.tar.gz
             *.md5
+            *.sha1
+            *.sha256
 
       - name: Remove Artifacts
         run: |
           rm *.tar.gz
           rm *.txt
           rm *.md5
+          rm *.sha1
+          rm *.sha256
 
       - name: Auto Commit
         uses: "stefanzweifel/git-auto-commit-action@v4.11.0"
