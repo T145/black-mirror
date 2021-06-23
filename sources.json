@@ -2174,5 +2174,24 @@
     "mirrors": [
       "https://paste.cryptolaemus.com/dbucket/"
     ]
+  },
+  "vxvault": {
+    "_comment": "Can use 'http://vxvault.net/ViriList.php?s=0&m=100', where 's'=pagenum, 'm'=displaycount, but the list used is sufficient.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print tolower($3)}"
+      },
+      {
+        "engine": "gawk",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([0-9]{1,3}\\.){3}[0-9]{1,3}+(\\/|:|$)/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "http://vxvault.net/URL_List.php"
+    ]
   }
 }
