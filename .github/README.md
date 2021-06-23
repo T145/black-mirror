@@ -174,6 +174,7 @@
 *   [cryptolaemus](https://paste.cryptolaemus.com/)
 *   [vxvault](http://vxvault.net/ViriList.php)
 *   [alienvault](https://status.alienvault.cloud/)
+*   [turris](https://project.turris.cz/greylist-data/legend.txt)
 
 ### ⚪ Whitelists
 
