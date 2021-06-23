@@ -2015,9 +2015,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+        "rule": "NR>6{print $2}"
       }
     ],
     "mirrors": [
@@ -2028,9 +2028,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+        "rule": "NR>6{print $2}"
       }
     ],
     "mirrors": [
@@ -2039,6 +2039,7 @@
   },
   "h3x": {
     "color": "black",
+    "_comment": "Has IPv4 addresses; no ranges: can have domains",
     "filters": [
       {
         "engine": "gawk",
