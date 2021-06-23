@@ -83,6 +83,8 @@ main() {
     for release in 'black_domain' 'black_ipv4' 'black_ipv6'; do
         tar -czf "${release}.tar.gz" "${release}.txt"
         md5sum "${release}.tar.gz" >"${release}.md5"
+        sha1sum "${release}.tar.gz" >"${release}.sha1"
+        sha256sum "${release}.tar.gz" >"${release}.sha256"
     done
 }
 
