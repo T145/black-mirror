@@ -178,6 +178,7 @@
 *   [spamhaus](https://www.spamhaus.org/)
 *   [voipbl](http://www.voipbl.org/#advanced)
 *   [botvrij](https://www.botvrij.eu/)
+*   [malsilo/raw-data](https://raw-data.gitlab.io/post/feeds/)
 
 ### ⚪ Whitelists
 

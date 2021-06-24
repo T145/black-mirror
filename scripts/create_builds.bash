@@ -23,16 +23,23 @@ get_file_contents() {
     esac
 }
 
-# params: key, engine, rule
+# params: engine, rule
 parse_file_contents() {
-    case $2 in
-    jq) jq -r "$3" ;;
-    gawk) gawk --sandbox -O -- "$3" ;;
-    mawk) mawk "$3" ;;
+    case $1 in
+    mawk) mawk "$2" ;;
+    gawk) gawk --sandbox -O -- "$2" ;;
+    miller)
+        if [[ $2 =~ ^[0-9]+$ ]]; then
+            mlr --mmap --csv --skip-comments -N cut -f "$2"
+        else
+            mlr --mmap --csv --skip-comments --headerless-csv-output cut -f "$2"
+        fi
+        ;;
+    jq) jq -r "$2" ;;
     xmlstarlet)
         # xmlstarlet sel -t -m "/rss/channel/item" -v "substring-before(title,' ')" -n rss.xml
         ;;
-    *) echo "WARN: \"${1}\" doesn't have a valid engine!" ;;
+    *) ;;
     esac
 }
 
@@ -63,7 +70,7 @@ main() {
          .key as $k | .value.filters[] | "\($k)#\(.engine)#\(.format)#\(.rule)"' sources.json |
             while IFS='#' read -r key engine format rule; do
                 get_file_contents "$key" "$cache_dir" |
-                    parse_file_contents "$key" "$engine" "$rule" |
+                    parse_file_contents "$engine" "$rule" |
                     add_to_list "$color" "$format"
             done
 
