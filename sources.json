@@ -2263,5 +2263,83 @@
     "mirrors": [
       "https://voipbl.org/update"
     ]
+  },
+  "botvrij_misp": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ivp4",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://www.botvrij.eu/data/misp.text_ip-dst.ADMIN.txt"
+    ]
+  },
+  "botvrij_url": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://www.botvrij.eu/data/ioclist.url.raw"
+    ]
+  },
+  "botvrij_domain": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://www.botvrij.eu/data/ioclist.domain.raw"
+    ]
+  },
+  "botvrij_hostname": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://www.botvrij.eu/data/ioclist.hostname.raw"
+    ]
+  },
+  "botvrij_dst_ip": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://www.botvrij.eu/data/ioclist.ip-dst.raw"
+    ]
+  },
+  "botvrij_blocklist": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\",\"}NR>1{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://www.botvrij.eu/data/blocklist/blocklist_full.csv"
+    ]
   }
 }
