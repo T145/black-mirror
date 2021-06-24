@@ -175,6 +175,7 @@
 *   [vxvault](http://vxvault.net/ViriList.php)
 *   [alienvault](https://status.alienvault.cloud/)
 *   [turris](https://project.turris.cz/greylist-data/legend.txt)
+*   [spamhaus](https://www.spamhaus.org/)
 
 ### ⚪ Whitelists
 
