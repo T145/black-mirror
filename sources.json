@@ -2250,5 +2250,18 @@
     "mirrors": [
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update.txt"
     ]
+  },
+  "voipbl": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ivp4",
+        "rule": "NR>1{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://voipbl.org/update"
+    ]
   }
 }
