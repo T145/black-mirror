@@ -177,6 +177,7 @@
 *   [turris](https://project.turris.cz/greylist-data/legend.txt)
 *   [spamhaus](https://www.spamhaus.org/)
 *   [voipbl](http://www.voipbl.org/#advanced)
+*   [botvrij](https://www.botvrij.eu/)
 
 ### ⚪ Whitelists
 
