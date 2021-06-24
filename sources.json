@@ -2224,5 +2224,31 @@
     "mirrors": [
       "https://project.turris.cz/greylist-data/greylist-latest.csv"
     ]
+  },
+  "spamhaus_drop": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ivp4",
+        "rule": "NR>4{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://www.spamhaus.org/drop/drop.txt"
+    ]
+  },
+  "spamhaus_edrop": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ivp4",
+        "rule": "NR>4{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://www.spamhaus.org/drop/edrop.txt"
+    ]
   }
 }
