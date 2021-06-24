@@ -31,7 +31,7 @@ jobs:
         shell: bash
 
       - name: Install Dependencies
-        run: sudo apt install aria2 coreutils gawk jq mawk moreutils prips sed
+        run: sudo apt install aria2 gawk jq mawk miller moreutils sed
         shell: bash
 
       - name: Update Valid Pihole Sources

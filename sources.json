@@ -46,9 +46,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "miller",
         "format": "ipv4",
-        "rule": "BEGIN{FS=\"\\\"*,\\\"*\"}$2~/^([0-9]+(\\.|$)){4}/{print $2}"
+        "rule": "dst_ip"
       }
     ],
     "mirrors": [
@@ -59,9 +59,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "miller",
         "format": "ipv4",
-        "rule": "BEGIN{FS=\",\"}$2~/^([0-9]+(\\.|$)){4}/{print $2}"
+        "rule": 2
       }
     ],
     "mirrors": [
@@ -2036,6 +2036,7 @@
     ]
   },
   "turris": {
+    "_comment": "TODO: Use miller to check this file.",
     "color": "black",
     "filters": [
       {
@@ -2333,9 +2334,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "miller",
         "format": "domain",
-        "rule": "BEGIN{FS=\",\"}NR>1{print $1}"
+        "rule": "value"
       }
     ],
     "mirrors": [
