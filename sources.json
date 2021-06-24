@@ -99,6 +99,19 @@
       "https://isc.sans.edu/api/threatlist/adscore?json"
     ]
   },
+  "alienvault": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\"#\"}{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://reputation.alienvault.com/reputation.data"
+    ]
+  },
   "alphastrike": {
     "color": "black",
     "filters": [
@@ -630,6 +643,39 @@
       "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/clefspeare13/hosts"
     ]
   },
+  "cryptolaemus_dbucket": {
+    "_comment": "All reported domains seem to appear in the dbucket, so use it for domains.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print $0}"
+      },
+      {
+        "engine": "gawk",
+        "format": "ipv4",
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(:|$)/{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://paste.cryptolaemus.com/dbucket/"
+    ]
+  },
+  "cryptolaemus_feed": {
+    "_comment": "Recently reported IPs appear in the feed.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "ipv4",
+        "rule": "BEGIN{RS=\"([0-9]+\\\\.){3}[0-9]+\"}RT{print RT}"
+      }
+    ],
+    "mirrors": [
+      "https://paste.cryptolaemus.com/feed.xml"
+    ]
+  },
   "custom_domain_blacklist": {
     "color": "black",
     "filters": [
@@ -992,6 +1038,20 @@
       "https://hostfiles.frogeye.fr/multiparty-only-trackers.txt"
     ]
   },
+  "h3x": {
+    "_comment": "Has IPv4 addresses; no ranges: can have domains",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "ipv4",
+        "rule": "BEGIN{RS=\"([0-9]+\\\\.){3}[0-9]+\"}RT{print RT}"
+      }
+    ],
+    "mirrors": [
+      "https://tracker.h3x.eu/api/sites_1week.php"
+    ]
+  },
   "hipo_universities": {
     "color": "white",
     "filters": [
@@ -1343,6 +1403,97 @@
     ],
     "mirrors": [
       "https://phishing.army/download/phishing_army_blocklist_extended.txt"
+    ]
+  },
+  "pornrecords_domains": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/domains.list"
+    ]
+  },
+  "pornrecords_hosts": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/hosts.list"
+    ]
+  },
+  "pornrecords_mobile": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/mobile.list"
+    ]
+  },
+  "pornrecords_rpz_dnsname": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/wildcard.rpz-nsdname"
+    ]
+  },
+  "pornrecords_rpz_ip": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/rpz-ip"
+    ]
+  },
+  "pornrecords_snuff": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/snuff.list"
+    ]
+  },
+  "pornrecords_wildcard": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/wildcard.list"
     ]
   },
   "public_dns": {
@@ -1748,6 +1899,32 @@
       "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt"
     ]
   },
+  "spamhaus_drop": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ivp4",
+        "rule": "NR>4{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://www.spamhaus.org/drop/drop.txt"
+    ]
+  },
+  "spamhaus_edrop": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ivp4",
+        "rule": "NR>4{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://www.spamhaus.org/drop/edrop.txt"
+    ]
+  },
   "stretchoid": {
     "color": "black",
     "filters": [
@@ -1858,6 +2035,24 @@
       "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/tiuxo/hosts"
     ]
   },
+  "turris": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\",\"}$1~/^([0-9]+(\\.|$)){4}/{print $1}"
+      },
+      {
+        "engine": "gawk",
+        "format": "ipv6",
+        "rule": "BEGIN{FS=\",\"}$1~/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://project.turris.cz/greylist-data/greylist-latest.csv"
+    ]
+  },
   "univmichigan": {
     "color": "black",
     "filters": [
@@ -1913,6 +2108,25 @@
     ],
     "mirrors": [
       "https://dsi.ut-capitole.fr/blacklists/download/blacklists.tar.gz"
+    ]
+  },
+  "vxvault": {
+    "_comment": "Can use 'http://vxvault.net/ViriList.php?s=0&m=100', where 's'=pagenum, 'm'=displaycount, but the list used is sufficient.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print tolower($3)}"
+      },
+      {
+        "engine": "gawk",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([0-9]{1,3}\\.){3}[0-9]{1,3}+(\\/|:|$)/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "http://vxvault.net/URL_List.php"
     ]
   },
   "wally3k": {
@@ -2035,220 +2249,6 @@
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update.txt"
-    ]
-  },
-  "h3x": {
-    "color": "black",
-    "_comment": "Has IPv4 addresses; no ranges: can have domains",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "ipv4",
-        "rule": "BEGIN{RS=\"([0-9]+\\\\.){3}[0-9]+\"}RT{print RT}"
-      }
-    ],
-    "mirrors": [
-      "https://tracker.h3x.eu/api/sites_1week.php"
-    ]
-  },
-  "pornrecords_domains": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/domains.list"
-    ]
-  },
-  "pornrecords_hosts": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/hosts.list"
-    ]
-  },
-  "pornrecords_mobile": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/mobile.list"
-    ]
-  },
-  "pornrecords_rpz_ip": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/rpz-ip"
-    ]
-  },
-  "pornrecords_snuff": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/snuff.list"
-    ]
-  },
-  "pornrecords_wildcard": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/wildcard.list"
-    ]
-  },
-  "pornrecords_rpz_dnsname": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/wildcard.rpz-nsdname"
-    ]
-  },
-  "cryptolaemus_feed": {
-    "_comment": "Recently reported IPs appear in the feed.",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "ipv4",
-        "rule": "BEGIN{RS=\"([0-9]+\\\\.){3}[0-9]+\"}RT{print RT}"
-      }
-    ],
-    "mirrors": [
-      "https://paste.cryptolaemus.com/feed.xml"
-    ]
-  },
-  "cryptolaemus_dbucket": {
-    "_comment": "All reported domains seem to appear in the dbucket, so use it for domains.",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print $0}"
-      },
-      {
-        "engine": "gawk",
-        "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(:|$)/{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://paste.cryptolaemus.com/dbucket/"
-    ]
-  },
-  "vxvault": {
-    "_comment": "Can use 'http://vxvault.net/ViriList.php?s=0&m=100', where 's'=pagenum, 'm'=displaycount, but the list used is sufficient.",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print tolower($3)}"
-      },
-      {
-        "engine": "gawk",
-        "format": "ipv4",
-        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([0-9]{1,3}\\.){3}[0-9]{1,3}+(\\/|:|$)/{print tolower($3)}"
-      }
-    ],
-    "mirrors": [
-      "http://vxvault.net/URL_List.php"
-    ]
-  },
-  "alienvault": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "ipv4",
-        "rule": "BEGIN{FS=\"#\"}{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://reputation.alienvault.com/reputation.data"
-    ]
-  },
-  "turris": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "ipv4",
-        "rule": "BEGIN{FS=\",\"}$1~/^([0-9]+(\\.|$)){4}/{print $1}"
-      },
-      {
-        "engine": "gawk",
-        "format": "ipv6",
-        "rule": "BEGIN{FS=\",\"}$1~/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://project.turris.cz/greylist-data/greylist-latest.csv"
-    ]
-  },
-  "spamhaus_drop": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ivp4",
-        "rule": "NR>4{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://www.spamhaus.org/drop/drop.txt"
-    ]
-  },
-  "spamhaus_edrop": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ivp4",
-        "rule": "NR>4{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://www.spamhaus.org/drop/edrop.txt"
     ]
   }
 }
