@@ -74,11 +74,8 @@
     *   Spy list contained in **Energized Unified**
 *   [The Block List Project](https://blocklistproject.github.io/Lists/)
 *   [Blackbird for Windows](https://getblackbird.net/blacklist/hosts/)
-*   <strike>[Alexa Top 1M](https://s3.amazonaws.com/alexa-static/top-1m.csv.zip)</strike>
-    *   <strike>Used to block popular porn sites</strike>
 *   [FireHOL Level 4](https://github.com/firehol/blocklist-ipsets)
     *   Levels 1-3 are included in **Energized Extensions**
-*   <strike>[IPverse](http://ipverse.net/)</strike>
 *   [1Hosts Xtra](https://github.com/badmojr/1Hosts)
     *   Mini & Pro versions are now being included in **Energized Unified**
 *   [Dean's Filterlist](https://github.com/hl2guide/Filterlist-for-AdGuard-or-PiHole) Sources
@@ -159,7 +156,7 @@
     *   Found
         *   [cinsscore](https://cinsscore.com/#list)
         *   [openportstats](http://www.openportstats.com/)
-            *   Similar to IPverse; not included
+            *   Similar to [IPverse](http://ipverse.net/); not included
 *   [Rutgers University Attack Log](https://www.rutgers.edu/)
 *   [threatsourcing](https://www.threatsourcing.com/)
 *   [maltrail](https://github.com/stamparm/maltrail#blacklist)
