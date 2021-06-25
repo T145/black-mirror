@@ -1295,19 +1295,6 @@
       "http://phishing.mailscanner.info/phishing.bad.sites.conf"
     ]
   },
-  "malc0de_domains": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "$2~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
-      }
-    ],
-    "mirrors": [
-      "http://malc0de.com/bl/BOOT"
-    ]
-  },
   "maltrail": {
     "color": "black",
     "filters": [

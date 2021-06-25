@@ -124,10 +124,6 @@
         *   [myip_full_blacklist](https://myip.ms/browse/blacklist)
     *   Found
         *   [myip_webcrawlers](https://myip.ms/browse/web_bots)
-*   Malc0de Domains
-    *   IPs are included in **Energized**
-    *   **_MALC0DE'S RSS FEED CONTAINS SHADE RANSOMWARE, SO THE SITE HAS NOT BEEN LINKED!_**
-    *   My parsing is strict, so there shouldn't be any problems referencing this source. This is also a blacklist, so there shouldn't be any way to back door things.
 *   [CyberSaiyanIT](https://github.com/CyberSaiyanIT/InfoSharing)
 *   [UnrealSecurity](https://github.com/UnrealSecurity/badips)
 *   [4skinSkywalker Anti Porn](https://github.com/4skinSkywalker/anti-porn-hosts-file)
