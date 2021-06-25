@@ -19,6 +19,7 @@ get_file_contents() {
         tar -xOzf "$list" --wildcards-match-slash --wildcards '*/domains'
         ;;
     *.zip) zcat "$list" ;;
+    *.7z) 7za -y -so e "$list" ;;
     *) cat "$list" ;;
     esac
 }
@@ -50,7 +51,7 @@ main() {
         jq -r --arg color "$color" 'to_entries[] |
         select(.value.color == $color) |
         {key, mirrors: .value.mirrors} |
-        .extension = (.mirrors[0] | match(".(tar.gz|zip|json)").captures[0].string // "txt") |
+        .extension = (.mirrors[0] | match(".(tar.gz|zip|7z|json)").captures[0].string // "txt") |
         (.mirrors | join("\t")), " out=\(.key).\(.extension)"' sources.json |
             aria2c --conf-path='./configs/aria2.conf' -d "$cache_dir"
 
