@@ -2342,5 +2342,19 @@
     "mirrors": [
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update.txt"
     ]
+  },
+  "malsilo_domains": {
+    "_comment": "TODO: Add the content from the ips and urls lists.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "miller",
+        "format": "domain",
+        "rule": 3
+      }
+    ],
+    "mirrors": [
+      "https://malsilo.gitlab.io/feeds/dumps/domain_list.txt"
+    ]
   }
 }
