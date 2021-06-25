@@ -232,6 +232,10 @@
 *   [yourcmc](http://vmx.yourcmc.ru/BAD_HOSTS.IP4)
     *   `Last-Modified: Wed, 04 Jul 2012 21:04:35 GMT`
 *   [iblocklist](https://www.iblocklist.com/lists)
+*   [malc0de](http://malc0de.com/bl/)
+    *   **_MALC0DE'S RSS FEED CONTAINS SHADE RANSOMWARE! YOU HAVE BEEN WARNED._**
+*   [cameleon](https://sysctl.org/cameleon/)
+*   [hexxium](https://github.com/HexxiumCreations/threat-list)
 
 ## ⚓ Hyperlinks
 
