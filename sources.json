@@ -2395,5 +2395,70 @@
     "mirrors": [
       "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual%20lists/The_Quantum_Youtube-Ads-List.txt"
     ]
+  },
+  "airelle_hmis": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+      }
+    ],
+    "mirrors": [
+      "http://rlwpx.free.fr/WPFF/hmis.7z"
+    ]
+  },
+  "airelle_hsex": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+      }
+    ],
+    "mirrors": [
+      "http://rlwpx.free.fr/WPFF/hsex.7z"
+    ]
+  },
+  "airelle_hrsk": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+      }
+    ],
+    "mirrors": [
+      "http://rlwpx.free.fr/WPFF/hrsk.7z"
+    ]
+  },
+  "airelle_hpub": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+      }
+    ],
+    "mirrors": [
+      "http://rlwpx.free.fr/WPFF/hpub.7z"
+    ]
+  },
+  "airelle_htrc": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+      }
+    ],
+    "mirrors": [
+      "http://rlwpx.free.fr/WPFF/htrc.7z"
+    ]
   }
 }
