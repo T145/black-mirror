@@ -229,10 +229,7 @@
 *   [nothink](https://www.nothink.org/)
 *   [targetedthreats](https://github.com/botherder/targetedthreats/)
 *   [policeman-rulesets](https://github.com/futpib/policeman-rulesets/)
-*   malwared
-    *   https://malwared.malwaremustdie.org/rss.php
-    *   https://malwared.malwaremustdie.org/rss_bin.php
-    *   https://malwared.malwaremustdie.org/rss_ssh.php
+*   [malwaremustdie](https://malwared.malwaremustdie.org/)
 *   [threatfeeds](https://threatfeeds.io/)
     *   Some HTTP-200 sources updated a long time ago
 *   [yourcmc](http://vmx.yourcmc.ru/BAD_HOSTS.IP4)
