@@ -179,6 +179,7 @@
 *   [voipbl](http://www.voipbl.org/#advanced)
 *   [botvrij](https://www.botvrij.eu/)
 *   [malsilo/raw-data](https://raw-data.gitlab.io/post/feeds/)
+*   [The Quantum Ad-List](https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list)
 
 ### ⚪ Whitelists
 
