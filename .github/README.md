@@ -62,6 +62,7 @@
 *   [Energized Xtreme Extension](https://github.com/EnergizedProtection/block#extensions-2)
 *   [AnudeepND](https://github.com/anudeepND/blacklist)
 *   [WindowsSpyBlocker](https://github.com/crazy-max/WindowsSpyBlocker/tree/master/data/hosts)
+*   [Sinfonietta](https://github.com/Sinfonietta/hostfiles)
 *   [The Block List Project](https://blocklistproject.github.io/Lists/)
 *   [Blackbird for Windows](https://getblackbird.net/blacklist/hosts/)
 *   [FireHOL Level 4](https://github.com/firehol/blocklist-ipsets)

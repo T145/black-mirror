@@ -2025,13 +2025,42 @@
       "https://isc.sans.edu/api/threatlist/shodan?json"
     ]
   },
+  "sinfonietta_porn": {
+    "_comment": "Original: https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts / https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/sinfonietta/hosts; used build has been optimized",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>9{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://block.energized.pro/assets/sources/filter/sinfonietta-porn.txt"
+    ]
+  },
+  "sinfonietta_snuff": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>2{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/snuff-hosts",
+      "https://block.energized.pro/assets/sources/filter/sinfonietta-snuff.txt",
+      "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/sinfonietta-snuff/hosts"
+    ]
+  },
   "sinfonietta_gambling": {
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+        "rule": "NR>6{print $2}"
       }
     ],
     "mirrors": [
@@ -2043,9 +2072,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+        "rule": "$0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
