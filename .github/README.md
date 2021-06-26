@@ -34,41 +34,33 @@
 
 ## 📚 Sources
 
-> _Please report any redundant sources in an issue! Be sure to check out the custom [blacklist](https://github.com/T145/the-blacklist/blob/user-submissions/blacklist.txt) and [whitelist](https://github.com/T145/the-blacklist/blob/user-submissions/whitelist.txt)!_
+> _Please report any redundant sources in an issue!_
 
 ### ⚫ Blacklists
 
-*   [OpenWRT Adblock](https://github.com/openwrt/packages/blob/master/net/adblock/files/adblock.sources) Sources
-    *   Unique
-        *   android_tracking
-        *   andryou
-        *   anti_ad
-        *   firetv_tracking
-        *   games_tracking
-        *   gaming
-        *   notracking
-        *   oisd_full
-        *   openphish
-        *   phishing_army
-        *   reg_fi
-        *   reg_id
-        *   reg_kr
-        *   reg_pl1
-        *   reg_pl2
-        *   reg_se
-        *   shallalist
-        *   smarttv_tracking
-        *   utcapitole
-        *   wally3k
-    *   Other sources contained in **Energized Unified & Extensions**
-    *   Found
-        *   [oisd_extra](https://oisd.nl/downloadsXtra)
-*   [Energized Unified](https://github.com/EnergizedProtection/block#packs-2)
-*   [Energized Extensions](https://github.com/EnergizedProtection/block#extensions-2)
-    *   The **Xtreme Extension** isn't very descriptive, but has been included anyway
-*   [StevenBlack Extensions](https://github.com/StevenBlack/hosts/tree/master/extensions)
-    *   Unified hosts and some extensions contained in **Energized Unified**
-*   [AnudeepND Facebook](https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt)
+*   android_tracking
+*   andryou
+*   anti_ad
+*   firetv_tracking
+*   games_tracking
+*   gaming
+*   notracking
+*   oisd_full
+*   openphish
+*   phishing_army
+*   reg_fi
+*   reg_id
+*   reg_kr
+*   reg_pl1
+*   reg_pl2
+*   reg_se
+*   shallalist
+*   smarttv_tracking
+*   utcapitole
+*   wally3k
+*   [oisd_extra](https://oisd.nl/downloadsXtra)
+*   [Energized Xtreme Extension](https://github.com/EnergizedProtection/block#extensions-2)
+*   [AnudeepND](https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt)
     *   [Other lists](https://github.com/anudeepND/blacklist) contained in **Energized Unified**
 *   [WindowsSpyBlocker Extra & Update](https://github.com/crazy-max/WindowsSpyBlocker/tree/master/data/hosts)
     *   Spy list contained in **Energized Unified**
@@ -76,8 +68,6 @@
 *   [Blackbird for Windows](https://getblackbird.net/blacklist/hosts/)
 *   [FireHOL Level 4](https://github.com/firehol/blocklist-ipsets)
     *   Levels 1-3 are included in **Energized Extensions**
-*   [1Hosts Xtra](https://github.com/badmojr/1Hosts)
-    *   Mini & Pro versions are now being included in **Energized Unified**
 *   [blocklist_de](https://www.blocklist.de/en/index.html)
 *   [geoffrey_frogeye](https://hostfiles.frogeye.fr/)
     *   Taken from [sebsauvage](https://sebsauvage.net/hosts/hosts)
