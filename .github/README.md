@@ -140,8 +140,6 @@
         *   [univsydney](https://www.sydney.edu.au/)
     *   Found
         *   [cinsscore](https://cinsscore.com/#list)
-        *   [openportstats](http://www.openportstats.com/)
-            *   Similar to [IPverse](http://ipverse.net/); not included
 *   [Rutgers University Attack Log](https://www.rutgers.edu/)
 *   [threatsourcing](https://www.threatsourcing.com/)
 *   [maltrail](https://github.com/stamparm/maltrail#blacklist)
@@ -212,6 +210,14 @@
     *   **_MALC0DE'S RSS FEED CONTAINS SHADE RANSOMWARE! YOU HAVE BEEN WARNED._**
 *   [cameleon](https://sysctl.org/cameleon/)
 *   [hexxium](https://github.com/HexxiumCreations/threat-list)
+
+### IP Block Providers
+
+> Simply provide ip blocks for entire geographic regions
+
+*   [openportstats](http://www.openportstats.com/)
+*   [ipdeny](https://www.ipdeny.com/ipblocks/)
+*   [IPverse](http://ipverse.net/)
 
 ## ⚓ Hyperlinks
 
