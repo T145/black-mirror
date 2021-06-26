@@ -160,6 +160,7 @@
     *   Save as "adfree.gz," and run "gunzip adfree.gz"
 *   [canihazprivacy](https://canihazprivacy.com/)
 *   [ftpmorph pastebin](https://pastebin.com/raw/gKaWxety)
+*   [my](https://github.com/mypdns/matrix)[pdns](https://mypdns.org/mypdns/support/-/wikis/Blacklists/Abusech-badips)
 
 ### 🧟 Zombies
 
