@@ -78,57 +78,42 @@
     *   Levels 1-3 are included in **Energized Extensions**
 *   [1Hosts Xtra](https://github.com/badmojr/1Hosts)
     *   Mini & Pro versions are now being included in **Energized Unified**
-*   [Dean's Filterlist](https://github.com/hl2guide/Filterlist-for-AdGuard-or-PiHole) Sources
-    *   Unique
-        *   [blocklist_de](https://www.blocklist.de/en/index.html)
-        *   [geoffrey_frogeye](https://hostfiles.frogeye.fr/)
-            *   Taken from [sebsauvage](https://sebsauvage.net/hosts/hosts)
-        *   [threatcrowd](https://threatcrowd.org/)
-        *   [antisocialengineer](https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community)
-        *   [windscribe](https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png)
-        *   [cyberthreat](https://www.cyberthreatcoalition.org/blocklist)
-        *   [not_on_my_shift](https://orca.pet/notonmyshift/)
-    *   [lightswitch05/developerdan](https://github.com/lightswitch05/hosts/tree/master/docs/lists) Sources
-        *   Unique
-            *   amp_hosts
-            *   facebook
-            *   hate_and_junk
-        *   The rest are included in **Energized Unified**
-    *   [pDNSf](https://github.com/j-moriarti/pDNSf-Hosts-collection/blob/master/Download-and-Process-Hosts.sh) Sources
-        *   Unique
-            *   [resecure_me](https://rescure.me/feeds.html)
-            *   [kriskintel](https://kriskintel.com/)
-            *   [filtri_dns](https://filtri-dns.ga/)
-            *   [mailscanner](http://phishing.mailscanner.info/)
-            *   [binarydefense](https://www.binarydefense.com/)
-        *   [blockconvert](https://github.com/mkb2091/blockconvert/blob/master/filterlists.csv)/[Host File Project](https://github.com/hectorm/hblock/blob/master/SOURCES.md) Sources
-            *   Unique
-                *   [digitalside](https://osint.digitalside.it/#SubscribeMISPfeed)
-                *   [matomo_spam](https://github.com/matomo-org/referrer-spam-list)
+*   [blocklist_de](https://www.blocklist.de/en/index.html)
+*   [geoffrey_frogeye](https://hostfiles.frogeye.fr/)
+    *   Taken from [sebsauvage](https://sebsauvage.net/hosts/hosts)
+*   [threatcrowd](https://threatcrowd.org/)
+*   [antisocialengineer](https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community)
+*   [windscribe](https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png)
+*   [cyberthreat](https://www.cyberthreatcoalition.org/blocklist)
+*   [not_on_my_shift](https://orca.pet/notonmyshift/)
+*   [lightswitch05/developerdan](https://github.com/lightswitch05/hosts/tree/master/docs/lists) Sources
+    *   amp_hosts
+    *   facebook
+    *   hate_and_junk
+    *   The rest are included in **Energized Unified**
+*   [resecure_me](https://rescure.me/feeds.html)
+*   [kriskintel](https://kriskintel.com/)
+*   [filtri_dns](https://filtri-dns.ga/)
+*   [mailscanner](http://phishing.mailscanner.info/)
+*   [binarydefense](https://www.binarydefense.com/)
+*   [digitalside](https://osint.digitalside.it/#SubscribeMISPfeed)
+*   [matomo_spam](https://github.com/matomo-org/referrer-spam-list)
 *   [Abuse.ch](https://abuse.ch/#about) Sources
-    *   Unique
-        *   feodotracker
-        *   sslbl
-        *   urlhaus
-*   [BlackWeb](https://github.com/maravento/blackweb#blocklists) Sources
-    *   Unique
-        *   [360_netlab](https://data.netlab.360.com/)
-        *   [cybercrime](https://cybercrime-tracker.net/)
-        *   [taz_spam](http://taz.net.au/Mail/)
-*   [BlackIP](https://github.com/maravento/blackip#blocklists) Sources
-    *   Unique
-        *   [bruteforceblocker](http://danger.rulez.sk/index.php/bruteforceblocker/)
-        *   [myip_full_blacklist](https://myip.ms/browse/blacklist)
-    *   Found
-        *   [myip_webcrawlers](https://myip.ms/browse/web_bots)
+    *   feodotracker
+    *   sslbl
+    *   urlhaus
+*   [360_netlab](https://data.netlab.360.com/)
+*   [cybercrime](https://cybercrime-tracker.net/)
+*   [taz_spam](http://taz.net.au/Mail/)
+*   [bruteforceblocker](http://danger.rulez.sk/index.php/bruteforceblocker/)
+*   [myip_full_blacklist](https://myip.ms/browse/blacklist)
+*   [myip_webcrawlers](https://myip.ms/browse/web_bots)
 *   [CyberSaiyanIT](https://github.com/CyberSaiyanIT/InfoSharing)
 *   [UnrealSecurity](https://github.com/UnrealSecurity/badips)
 *   [4skinSkywalker Anti Porn](https://github.com/4skinSkywalker/anti-porn-hosts-file)
 *   [EmergingThreats](https://rules.emergingthreats.net/blockrules/)
-*   [Sheriff53](https://notabug.org/phronimon/Sheriff53/src/master/docs/THIRD_PARTY_LISTS.md) Sources
-    *   Unique
-        *   [ios_trackers](https://github.com/jakejarvis/ios-trackers)
-        *   [apple_telemetry](https://github.com/adversarialtools/apple-telemetry)
+*   [ios_trackers](https://github.com/jakejarvis/ios-trackers)
+*   [apple_telemetry](https://github.com/adversarialtools/apple-telemetry)
 *   [ISC Sans](https://isc.sans.edu/)/[DShield](https://www.dshield.org/)
     *   Unique
         *   [adscore](https://www.adscore.com/)
@@ -180,29 +165,22 @@
 *   [Energized Unblock](https://github.com/EnergizedProtection/unblock#packs)
 *   [AnudeepND False Positives](https://github.com/anudeepND/blacklist/blob/master/miscellaneous/false-positives.txt)
 *   [AnudeepND Whitelist](https://github.com/anudeepND/whitelist#overview)
-*   [BlackWeb](https://github.com/maravento/blackweb#allowlists-urltld) Sources
-    *   Unique
-        *   [hipo_universities](https://github.com/Hipo/university-domains-list#university-domains-and-names-data-list--api)
-        *   [public_dns](https://public-dns.info/)
-*   [BlackIP](https://github.com/maravento/blackip#blocklists) Sources
-    *   Unique
-        *   [tor_bulkexitlist](https://check.torproject.org/api/bulk)
-        *   [dan_me_uk](https://www.dan.me.uk/)
+*   [hipo_universities](https://github.com/Hipo/university-domains-list#university-domains-and-names-data-list--api)
+*   [public_dns](https://public-dns.info/)
+*   [tor_bulkexitlist](https://check.torproject.org/api/bulk)
+*   [dan_me_uk](https://www.dan.me.uk/)
 
 ### 🧟 Zombies
 
 > Sources that are dead and not included but may be [worth mentioning](https://blog.talosintelligence.com/2021/03/domain-dumpster-diving.html)
 
-*   [BlackWeb](https://github.com/maravento/blackweb#blocklists) Sources
-    *   [Squidguard Archive](http://squidguard.mesd.k12.or.us/)
-        *   Found individually a while back
-        *   Contains some obvious placeholder/garbage domains
-*   [pDNSf](https://github.com/j-moriarti/pDNSf-Hosts-collection/blob/master/Download-and-Process-Hosts.sh) Sources
-    *   [Zonefiles.io](https://zonefiles.io/compromised-ip-list/)
-        *   Supposedly up-to-date, but references many offline resources like the legacy abuse.ch domains
-*   [Sheriff53](https://notabug.org/phronimon/Sheriff53/src/master/docs/THIRD_PARTY_LISTS.md) Sources
-    *   [BarbBlock](https://github.com/paulgb/BarbBlock/blob/master/blacklists/domain-list.txt)
-    *   [NSABlocklist](https://github.com/nextdns/metadata/blob/master/privacy/blocklists/nsa-blocklist.json)
+*   [Squidguard Archive](http://squidguard.mesd.k12.or.us/)
+    *   Found individually a while back
+    *   Contains some obvious placeholder/garbage domains
+*   [Zonefiles.io](https://zonefiles.io/compromised-ip-list/)
+    *   Supposedly up-to-date, but references many offline resources like the legacy abuse.ch domains
+*   [BarbBlock](https://github.com/paulgb/BarbBlock/blob/master/blacklists/domain-list.txt)
+*   [NSABlocklist](https://github.com/nextdns/metadata/blob/master/privacy/blocklists/nsa-blocklist.json)
 *   [Wael](https://www.wael.name/other/best-blocklist/)
 *   [Sblam](https://github.com/kornelski/Sblam/tree/master/data)
 *   [St. Dominic's Priory College](https://www.stdominics.sa.edu.au/) [Droplists](https://threatintel.stdominics.sa.edu.au/)
