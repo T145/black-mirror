@@ -2497,5 +2497,23 @@
       "https://raw.githubusercontent.com/austinheap/sophos-xg-block-lists/master/dan-pollock-someonewhocares-org.txt",
       "https://raw.githubusercontent.com/hectorm/hmirror/master/data/someonewhocares.org/list.txt"
     ]
+  },
+  "280blocker": {
+    "_comment": "Using the pre-optimized Energized mirror.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>9{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://block.energized.pro/assets/sources/filter/280blocker.txt"
+    ],
+    "variants": [
+      "https://filter.futa.gg/280blocker/280blocker_domain_ag.txt",
+      "https://block.energized.pro/mirror/280blocker_domain_ag.txt"
+    ]
   }
 }
