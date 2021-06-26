@@ -143,6 +143,7 @@
 *   [The Quantum Ad-List](https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list)
 *   [Airelle's Hosts](http://rlwpx.free.fr/WPFF/hosts.htm)
 *   [someonewhocares](https://someonewhocares.org/)
+*   [280blocker](https://280blocker.net/)
 
 ### ⚪ Whitelists
 
