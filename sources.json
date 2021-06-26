@@ -2026,7 +2026,7 @@
     ]
   },
   "sinfonietta_porn": {
-    "_comment": "Original: https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts / https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/sinfonietta/hosts; used build has been optimized",
+    "_comment": "Using the pre-optimized Energized mirror.",
     "color": "black",
     "filters": [
       {
@@ -2037,6 +2037,10 @@
     ],
     "mirrors": [
       "https://block.energized.pro/assets/sources/filter/sinfonietta-porn.txt"
+    ],
+    "variants": [
+      "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts",
+      "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/sinfonietta/hosts"
     ]
   },
   "sinfonietta_snuff": {
@@ -2473,6 +2477,25 @@
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update_v6.txt"
+    ]
+  },
+  "someonewhocares": {
+    "_comment": "Using the pre-optimized Energized mirror.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>9{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://block.energized.pro/assets/sources/filter/someonewhocares.org.txt"
+    ],
+    "variants": [
+      "https://someonewhocares.org/hosts/zero/hosts",
+      "https://raw.githubusercontent.com/austinheap/sophos-xg-block-lists/master/dan-pollock-someonewhocares-org.txt",
+      "https://raw.githubusercontent.com/hectorm/hmirror/master/data/someonewhocares.org/list.txt"
     ]
   }
 }
