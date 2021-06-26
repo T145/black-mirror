@@ -46,6 +46,7 @@
 *   gaming
 *   notracking
 *   oisd_full
+*   [oisd_extra](https://oisd.nl/downloadsXtra)
 *   openphish
 *   phishing_army
 *   reg_fi
@@ -58,10 +59,8 @@
 *   smarttv_tracking
 *   utcapitole
 *   wally3k
-*   [oisd_extra](https://oisd.nl/downloadsXtra)
 *   [Energized Xtreme Extension](https://github.com/EnergizedProtection/block#extensions-2)
-*   [AnudeepND](https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt)
-    *   [Other lists](https://github.com/anudeepND/blacklist) contained in **Energized Unified**
+*   [AnudeepND](https://github.com/anudeepND/blacklist)
 *   [WindowsSpyBlocker Extra & Update](https://github.com/crazy-max/WindowsSpyBlocker/tree/master/data/hosts)
     *   Spy list contained in **Energized Unified**
 *   [The Block List Project](https://blocklistproject.github.io/Lists/)
@@ -76,11 +75,7 @@
 *   [windscribe](https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png)
 *   [cyberthreat](https://www.cyberthreatcoalition.org/blocklist)
 *   [not_on_my_shift](https://orca.pet/notonmyshift/)
-*   [lightswitch05/developerdan](https://github.com/lightswitch05/hosts/tree/master/docs/lists) Sources
-    *   amp_hosts
-    *   facebook
-    *   hate_and_junk
-    *   The rest are included in **Energized Unified**
+*   [lightswitch05/developerdan](https://github.com/lightswitch05/hosts) Sources
 *   [resecure_me](https://rescure.me/feeds.html)
 *   [kriskintel](https://kriskintel.com/)
 *   [filtri_dns](https://filtri-dns.ga/)
