@@ -225,6 +225,34 @@
       "https://raw.githubusercontent.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community/main/UK-Community.txt"
     ]
   },
+  "anudeep_adservers": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt",
+      "https://hosts.anudeep.me/mirror/adservers.txt"
+    ]
+  },
+  "anudeep_coinminer": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>9{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt",
+      "https://hosts.anudeep.me/mirror/CoinMiner.txt"
+    ]
+  },
   "anudeep_facebook": {
     "color": "black",
     "filters": [
@@ -351,6 +379,7 @@
     ]
   },
   "blp_abuse": {
+    "_comment": "CONTAINS IPV4 ADDRESSES!",
     "color": "black",
     "filters": [
       {
@@ -821,7 +850,7 @@
       "https://paste.cryptolaemus.com/feed.xml"
     ]
   },
-  "cybercrime_tracker": {
+  "cybercrime_all": {
     "color": "black",
     "filters": [
       {
@@ -1215,6 +1244,20 @@
       "https://kriskintel.com/feeds/ktip_ransomware_feeds.txt"
     ]
   },
+  "lightswitch_ads_and_tracking": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/ads-and-tracking-extended.txt",
+      "https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt"
+    ]
+  },
   "lightswitch_amp_hosts": {
     "color": "black",
     "filters": [
@@ -1255,6 +1298,20 @@
     "mirrors": [
       "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/hate-and-junk-extended.txt",
       "https://www.github.developerdan.com/hosts/lists/hate-and-junk-extended.txt"
+    ]
+  },
+  "lightswitch_tracking_aggressive": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/tracking-aggressive-extended.txt",
+      "https://www.github.developerdan.com/hosts/lists/tracking-aggressive-extended.txt"
     ]
   },
   "mailscanner_bad_phishing": {
@@ -1370,6 +1427,7 @@
     ]
   },
   "not_on_my_shift": {
+    "_comment": "May want to use 'https://orca.pet/notonmyshift/hosts.txt' to block www.* hosts.",
     "color": "black",
     "filters": [
       {
