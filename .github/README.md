@@ -61,8 +61,7 @@
 *   wally3k
 *   [Energized Xtreme Extension](https://github.com/EnergizedProtection/block#extensions-2)
 *   [AnudeepND](https://github.com/anudeepND/blacklist)
-*   [WindowsSpyBlocker Extra & Update](https://github.com/crazy-max/WindowsSpyBlocker/tree/master/data/hosts)
-    *   Spy list contained in **Energized Unified**
+*   [WindowsSpyBlocker](https://github.com/crazy-max/WindowsSpyBlocker/tree/master/data/hosts)
 *   [The Block List Project](https://blocklistproject.github.io/Lists/)
 *   [Blackbird for Windows](https://getblackbird.net/blacklist/hosts/)
 *   [FireHOL Level 4](https://github.com/firehol/blocklist-ipsets)
@@ -153,6 +152,13 @@
 *   [tor_bulkexitlist](https://check.torproject.org/api/bulk)
 *   [dan_me_uk](https://www.dan.me.uk/)
 
+### 🥢 Duplicates
+
+*   [adfree](https://adfree-hosts.odiousapps.com/adfree.php)
+    *   Save as "adfree.gz," and run "gunzip adfree.gz"
+*   [canihazprivacy](https://canihazprivacy.com/)
+*   [ftpmorph pastebin](https://pastebin.com/raw/gKaWxety)
+
 ### 🧟 Zombies
 
 > Sources that are dead and not included but may be [worth mentioning](https://blog.talosintelligence.com/2021/03/domain-dumpster-diving.html)
@@ -200,6 +206,10 @@
     *   `last-modified: Sun, 01 Sep 2002 16:05:00 GMT`
 *   [BadHosts](http://www.hostsfile.org/Downloads/BadHosts.unx.zip)
     *   Last updated in 2018
+*   [gjtech](https://web.archive.org/web/20160221135711/http://adblock.gjtech.net/?format=unix-hosts)
+*   [ethanr dns-blacklists](https://bitbucket.org/ethanr/dns-blacklists/src/master/bad_lists/)
+*   [keweonDNS](https://forum.xda-developers.com/t/keweondns-now-with-improved-certificate-ios-mac-android.3681139/) [up2date](https://pastebin.com/raw/UP3s7pEB)
+*   [deathbybandaid](https://github.com/deathbybandaid/piholeparser/tree/master/Subscribable-Lists/ParsedBlacklists)
 
 ### 🌐 IP Block Providers
 
