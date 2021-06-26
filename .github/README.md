@@ -210,14 +210,32 @@
     *   **_MALC0DE'S RSS FEED CONTAINS SHADE RANSOMWARE! YOU HAVE BEEN WARNED._**
 *   [cameleon](https://sysctl.org/cameleon/)
 *   [hexxium](https://github.com/HexxiumCreations/threat-list)
+*   [malfeed](https://github.com/eSentire/malfeed/)
+*   [carl.net](https://carl.net/spam/access.txt)
+    *   `last-modified: Sun, 01 Sep 2002 16:05:00 GMT`
+*   [BadHosts](http://www.hostsfile.org/Downloads/BadHosts.unx.zip)
+    *   Last updated in 2018
 
-### IP Block Providers
+### 🌐 IP Block Providers
 
-> Simply provide ip blocks for entire geographic regions
+> Simply provide ip blocks for entire geographic regions (not used by The Blacklist)
 
 *   [openportstats](http://www.openportstats.com/)
 *   [ipdeny](https://www.ipdeny.com/ipblocks/)
 *   [IPverse](http://ipverse.net/)
+
+### 📦 Big Data
+
+> These are typically used by other blacklist projects
+
+List Name | URL
+--- | --- |
+Alexa | https://s3.amazonaws.com/alexa-static/top-1m.csv.zip
+Umbrella | https://downloads.majestic.com/majestic_million.csv
+Statvoo | https://statvoo.com/dl/top-1million-sites.csv.zip
+Openpagerank | https://www.domcop.com/files/top/top10milliondomains.csv.zip
+Quantcast | https://toplists.net.in.tum.de/archive/quantcast/quantcast-top-sites-2021-06-25_0900_UTC.txt.xz
+Tranco list | https://tranco-list.eu/download/W7X9/full
 
 ## ⚓ Hyperlinks
 
