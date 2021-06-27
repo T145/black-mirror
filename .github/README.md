@@ -184,6 +184,7 @@
 *   [betterfyi](https://better.fyi/)
 *   [ayashige](https://github.com/ninoseki/ayashige)
 *   [yoyo](https://pgl.yoyo.org/adservers/)
+*   [winhelp2002](https://winhelp2002.mvps.org/hosts.htm)
 
 ### ⚪ Whitelists
 

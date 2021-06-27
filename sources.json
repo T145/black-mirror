@@ -2575,5 +2575,21 @@
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
+  },
+  "winhelp": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "NR>30 && $0~/^[^#]/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://winhelp2002.mvps.org/hosts.txt"
+    ],
+    "variants": [
+      "https://block.energized.pro/assets/sources/filter/winhelp2002.mvps.org.txt"
+    ]
   }
 }
