@@ -2533,5 +2533,18 @@
       "https://better.fyi/blockerList.txt",
       "https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt"
     ]
+  },
+  "ayashige": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "domain",
+        "rule": ".[].domain"
+      }
+    ],
+    "mirrors": [
+      "https://ayashige.herokuapp.com/feed"
+    ]
   }
 }
