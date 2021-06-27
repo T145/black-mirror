@@ -2515,5 +2515,23 @@
     "mirrors": [
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update_v6.txt"
     ]
+  },
+  "betterfyi": {
+    "_comment": "Using the pre-optimized Energized mirror.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>9{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://block.energized.pro/assets/sources/filter/better-fyi-trackers.txt"
+    ],
+    "variants": [
+      "https://better.fyi/blockerList.txt",
+      "https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt"
+    ]
   }
 }
