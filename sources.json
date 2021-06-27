@@ -2581,7 +2581,7 @@
     "filters": [
       {
         "engine": "mawk",
-        "format": "ipv4",
+        "format": "domain",
         "rule": "NR>30 && $0~/^[^#]/{print $2}"
       }
     ],
@@ -2590,6 +2590,20 @@
     ],
     "variants": [
       "https://block.energized.pro/assets/sources/filter/winhelp2002.mvps.org.txt"
+    ]
+  },
+  "blockada_ddgtrackerradar": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>6{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/ddgtrackerradar/standard/hosts.txt",
+      "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt"
     ]
   }
 }
