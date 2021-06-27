@@ -1,4 +1,22 @@
 {
+  "280blocker": {
+    "_comment": "Using the pre-optimized Energized mirror.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>9{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://block.energized.pro/assets/sources/filter/280blocker.txt"
+    ],
+    "variants": [
+      "https://filter.futa.gg/280blocker/280blocker_domain_ag.txt",
+      "https://block.energized.pro/mirror/280blocker_domain_ag.txt"
+    ]
+  },
   "360_netlab": {
     "color": "black",
     "filters": [
@@ -760,19 +778,6 @@
     ],
     "mirrors": [
       "http://charles.the-haleys.org/ssh_dico_attack_hdeny_format.php/hostsdeny.txt"
-    ]
-  },
-  "tor_bulkexitlist": {
-    "color": "white",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://check.torproject.org/torbulkexitlist"
     ]
   },
   "ciarmy": {
@@ -2025,6 +2030,20 @@
       "https://isc.sans.edu/api/threatlist/shodan?json"
     ]
   },
+  "sinfonietta_gambling": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>6{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/gambling-hosts",
+      "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/gambling/hosts"
+    ]
+  },
   "sinfonietta_porn": {
     "_comment": "Using the pre-optimized Energized mirror.",
     "color": "black",
@@ -2058,20 +2077,6 @@
       "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/sinfonietta-snuff/hosts"
     ]
   },
-  "sinfonietta_gambling": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "NR>6{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/gambling-hosts",
-      "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/gambling/hosts"
-    ]
-  },
   "sinfonietta_social": {
     "color": "black",
     "filters": [
@@ -2097,6 +2102,25 @@
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt"
+    ]
+  },
+  "someonewhocares": {
+    "_comment": "Using the pre-optimized Energized mirror.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>9{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://block.energized.pro/assets/sources/filter/someonewhocares.org.txt"
+    ],
+    "variants": [
+      "https://someonewhocares.org/hosts/zero/hosts",
+      "https://raw.githubusercontent.com/austinheap/sophos-xg-block-lists/master/dan-pollock-someonewhocares-org.txt",
+      "https://raw.githubusercontent.com/hectorm/hmirror/master/data/someonewhocares.org/list.txt"
     ]
   },
   "spamhaus_drop": {
@@ -2233,6 +2257,19 @@
     "mirrors": [
       "https://raw.githubusercontent.com/tiuxo/hosts/master/porn",
       "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/tiuxo/hosts"
+    ]
+  },
+  "tor_bulkexitlist": {
+    "color": "white",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://check.torproject.org/torbulkexitlist"
     ]
   },
   "turris": {
@@ -2477,43 +2514,6 @@
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update_v6.txt"
-    ]
-  },
-  "someonewhocares": {
-    "_comment": "Using the pre-optimized Energized mirror.",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "NR>9{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://block.energized.pro/assets/sources/filter/someonewhocares.org.txt"
-    ],
-    "variants": [
-      "https://someonewhocares.org/hosts/zero/hosts",
-      "https://raw.githubusercontent.com/austinheap/sophos-xg-block-lists/master/dan-pollock-someonewhocares-org.txt",
-      "https://raw.githubusercontent.com/hectorm/hmirror/master/data/someonewhocares.org/list.txt"
-    ]
-  },
-  "280blocker": {
-    "_comment": "Using the pre-optimized Energized mirror.",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "NR>9{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://block.energized.pro/assets/sources/filter/280blocker.txt"
-    ],
-    "variants": [
-      "https://filter.futa.gg/280blocker/280blocker_domain_ag.txt",
-      "https://block.energized.pro/mirror/280blocker_domain_ag.txt"
     ]
   }
 }
