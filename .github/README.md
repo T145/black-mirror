@@ -106,7 +106,6 @@
     *   Levels 1-3 are included in **Energized Extensions**
 *   [blocklist_de](https://www.blocklist.de/en/index.html)
 *   [geoffrey_frogeye](https://hostfiles.frogeye.fr/)
-    *   Taken from [sebsauvage](https://sebsauvage.net/hosts/hosts)
 *   [threatcrowd](https://threatcrowd.org/)
 *   [antisocialengineer](https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community)
 *   [windscribe](https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png)
@@ -199,13 +198,15 @@
 
 ### 🥢 Duplicates
 
+> Sources that contain duplicate and potentially deprecated data
+
 *   [adfree](https://adfree-hosts.odiousapps.com/adfree.php)
     *   Save as "adfree.gz," and run "gunzip adfree.gz"
 *   [canihazprivacy](https://canihazprivacy.com/)
 *   [ftpmorph pastebin](https://pastebin.com/raw/gKaWxety)
 *   [my](https://github.com/mypdns/matrix)[pdns](https://mypdns.org/mypdns/support/-/wikis/Blacklists/Abusech-badips)
-*   [gnuzilla](https://gnuzilla.gnu.org/filters/retriever/)
-    *   In `update.sh`:
+*   [gnuzilla](https://gnuzilla.gnu.org/filters/)
+    *   In [`update.sh`](https://gnuzilla.gnu.org/filters/retriever/update.sh):
         ```bash
         wget https://easylist-downloads.adblockplus.org/easyprivacy.txt -q
         wget https://easylist-downloads.adblockplus.org/easylist.txt -q
@@ -217,7 +218,7 @@
 
 ### 🧟 Zombies
 
-> Sources that are dead and not included but may be [worth mentioning](https://blog.talosintelligence.com/2021/03/domain-dumpster-diving.html)
+> Sources that are dead or deprecated and not included but may be [worth mentioning](https://blog.talosintelligence.com/2021/03/domain-dumpster-diving.html)
 
 *   [Squidguard Archive](http://squidguard.mesd.k12.or.us/)
     *   Found individually a while back
@@ -324,9 +325,10 @@ Use the domain list.
 #### Desktop OS Hosts File
 
 ```bash
-gawk '{print "0.0.0.0 " $0}' black_domain.txt >>hosts # OR gawk '{print ":: " $0}' black_domain.txt >>hosts
-gawk '{print "0.0.0.0 " $0}' black_ipv4.txt >>hosts
-gawk '{print ":: " $0}' black_ipv6.txt >>hosts
+mawk '{print "0.0.0.0 " $0}' black_domain.txt >>hosts
+# mawk '{print ":: " $0}' black_domain.txt >>hosts
+mawk '{print "0.0.0.0 " $0}' black_ipv4.txt >>hosts
+mawk '{print ":: " $0}' black_ipv6.txt >>hosts
 ```
 
 ---
