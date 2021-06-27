@@ -68,7 +68,10 @@ main() {
             list="${color}_${format}.txt"
 
             if test -f "$list"; then
-                sort -o "$list" -u -S 90% --parallel=4 -T "$cache_dir" "$list"
+                case $format in
+                ipv4) sort -o "$list" -u -t . -k 3,3n -k 4,4n -S 90% --parallel=4 -T "$cache_dir" "$list" ;;
+                *) sort -o "$list" -u -S 90% --parallel=4 -T "$cache_dir" "$list" ;;
+                esac
 
                 if [[ "$color" == 'black' && -f "white_${format}.txt" ]]; then
                     grep -Fxvf "white_${format}.txt" "$list" | sponge "$list"
