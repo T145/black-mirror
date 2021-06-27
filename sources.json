@@ -2546,5 +2546,34 @@
     "mirrors": [
       "https://ayashige.herokuapp.com/feed"
     ]
+  },
+  "yoyo_domains": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=nohtml&showintro=0&mimetype=plaintext"
+    ],
+    "variants": [
+      "https://block.energized.pro/assets/sources/filter/pgl.yoyo.org.txt"
+    ]
+  },
+  "yoyo_ips": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
+    ]
   }
 }

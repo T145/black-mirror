@@ -183,6 +183,7 @@
 *   [280blocker](https://280blocker.net/)
 *   [betterfyi](https://better.fyi/)
 *   [ayashige](https://github.com/ninoseki/ayashige)
+*   [yoyo](https://pgl.yoyo.org/adservers/)
 
 ### ⚪ Whitelists
 
