@@ -23,6 +23,43 @@
 - Be bigger, not bloated
   - List sources promote growth, minimal redundancy, and modern application.
 
+### ⚓ Hyperlinks
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">List Name</th>
+      <th style="text-align:center">Description</th>
+      <th>Unique Entries</th>
+      <th>~ File Size</th>
+      <th style="text-align:center">Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">black_domain.txt</td>
+      <td style="text-align:center">Contains regular domain entries</td>
+      <td id="domain-count">8,774,300</td>
+      <td id="domain-filesize">192M</td>
+      <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz">black_domain.tar.gz</a> </td>
+    </tr>
+    <tr>
+      <td style="text-align:center">black_ipv4.txt</td>
+      <td style="text-align:center">Contains valid IPv4 addresses &amp; CIDR blocks</td>
+      <td id="ipv4-count">1,479,579</td>
+      <td id="ipv4-filesize">21M</td>
+      <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz">black_ipv4.tar.gz</a> </td>
+    </tr>
+    <tr>
+      <td style="text-align:center">black_ipv6.txt</td>
+      <td style="text-align:center">Contains valid IPv6 addresses</td>
+      <td id="ipv6-count">6,053</td>
+      <td id="ipv6-filesize">197K</td>
+      <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz">black_ipv6.tar.gz</a> </td>
+    </tr>
+  </tbody>
+</table>
+
 ## 📋 Attributes
 
 1. No comments
@@ -235,43 +272,6 @@ Statvoo | https://statvoo.com/dl/top-1million-sites.csv.zip
 Openpagerank | https://www.domcop.com/files/top/top10milliondomains.csv.zip
 Quantcast | https://toplists.net.in.tum.de/archive/quantcast/quantcast-top-sites-2021-06-25_0900_UTC.txt.xz
 Tranco list | https://tranco-list.eu/download/W7X9/full
-
-## ⚓ Hyperlinks
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:center">List Name</th>
-      <th style="text-align:center">Description</th>
-      <th>Unique Entries</th>
-      <th>~ File Size</th>
-      <th style="text-align:center">Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:center">black_domain.txt</td>
-      <td style="text-align:center">Contains regular domain entries</td>
-      <td id="domain-count">8,774,300</td>
-      <td id="domain-filesize">192M</td>
-      <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz">black_domain.tar.gz</a> </td>
-    </tr>
-    <tr>
-      <td style="text-align:center">black_ipv4.txt</td>
-      <td style="text-align:center">Contains valid IPv4 addresses &amp; CIDR blocks</td>
-      <td id="ipv4-count">1,479,579</td>
-      <td id="ipv4-filesize">21M</td>
-      <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz">black_ipv4.tar.gz</a> </td>
-    </tr>
-    <tr>
-      <td style="text-align:center">black_ipv6.txt</td>
-      <td style="text-align:center">Contains valid IPv6 addresses</td>
-      <td id="ipv6-count">6,053</td>
-      <td id="ipv6-filesize">197K</td>
-      <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz">black_ipv6.tar.gz</a> </td>
-    </tr>
-  </tbody>
-</table>
 
 ## ⚒️ Usage
 
