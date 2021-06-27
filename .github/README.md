@@ -211,6 +211,7 @@
         #wget https://easylist-downloads.adblockplus.org/fanboy-annoyance.txt -q
         wget https://easylist-downloads.adblockplus.org/fanboy-social.txt -q
         ```
+*   [sebsauvage](https://sebsauvage.net/hosts/hosts)
 
 ### 🧟 Zombies
 
