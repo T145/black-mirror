@@ -181,6 +181,7 @@
 *   [Airelle's Hosts](http://rlwpx.free.fr/WPFF/hosts.htm)
 *   [someonewhocares](https://someonewhocares.org/)
 *   [280blocker](https://280blocker.net/)
+*   [betterfyi](https://better.fyi/)
 
 ### ⚪ Whitelists
 
