@@ -202,6 +202,15 @@
 *   [canihazprivacy](https://canihazprivacy.com/)
 *   [ftpmorph pastebin](https://pastebin.com/raw/gKaWxety)
 *   [my](https://github.com/mypdns/matrix)[pdns](https://mypdns.org/mypdns/support/-/wikis/Blacklists/Abusech-badips)
+*   [gnuzilla](https://gnuzilla.gnu.org/filters/retriever/)
+    *   In `update.sh`:
+        ```bash
+        wget https://easylist-downloads.adblockplus.org/easyprivacy.txt -q
+        wget https://easylist-downloads.adblockplus.org/easylist.txt -q
+        #wget https://easylist-downloads.adblockplus.org/antiadblockfilters.txt -q
+        #wget https://easylist-downloads.adblockplus.org/fanboy-annoyance.txt -q
+        wget https://easylist-downloads.adblockplus.org/fanboy-social.txt -q
+        ```
 
 ### 🧟 Zombies
 
