@@ -185,6 +185,7 @@
 *   [yoyo](https://pgl.yoyo.org/adservers/)
 *   [winhelp2002](https://winhelp2002.mvps.org/hosts.htm)
 *   [blockada duckduckgo trackers](https://go.blokada.org/ddgtrackerradar)
+*   [Exodus trackers](https://etip.exodus-privacy.eu.org/trackers/all)
 
 ### ⚪ Whitelists
 
