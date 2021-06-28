@@ -60,18 +60,16 @@ main() {
          .key as $k | .value.filters[] | "\($k)#\(.engine)#\(.format)#\(.rule)"' sources.json |
             while IFS='#' read -r key engine format rule; do
                 get_file_contents "$key" "$cache_dir" |
-                    parse_file_contents "$engine" "$rule" |  # quickly remove internal duplicates
-                    mawk '!seen[$0]++' >> "${color}_${format}.txt" # then append contents to list
+                    parse_file_contents "$engine" "$rule" |       # quickly remove internal duplicates
+                    mawk '!seen[$0]++' >>"${color}_${format}.txt" # then append contents to list
             done
 
         for format in 'ipv4' 'ipv6' 'domain'; do
             list="${color}_${format}.txt"
 
             if test -f "$list"; then
-                case $format in
-                ipv4) sort -o "$list" -u -t . -k 3,3n -k 4,4n -S 90% --parallel=4 -T "$cache_dir" "$list" ;;
-                *) sort -o "$list" -u -S 90% --parallel=4 -T "$cache_dir" "$list" ;;
-                esac
+                # ipv4: sort -o "$list" -u -t . -k 3,3n -k 4,4n -S 90% --parallel=4 -T "$cache_dir" "$list"
+                sort -o "$list" -u -S 90% --parallel=4 -T "$cache_dir" "$list"
 
                 if [[ "$color" == 'black' && -f "white_${format}.txt" ]]; then
                     grep -Fxvf "white_${format}.txt" "$list" | sponge "$list"
