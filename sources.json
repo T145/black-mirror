@@ -2651,5 +2651,89 @@
     "mirrors": [
       "https://npc.0am.jp/hosts.php?dl=1"
     ]
+  },
+  "fanboy_ultimate": {
+    "_comment": "The 'anti-facebook' list is covered by other Facebook hate.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://secure.fanboy.co.nz/r/fanboy-ultimate.txt",
+      "https://fanboy.co.nz/r/fanboy-ultimate.txt"
+    ],
+    "variants": [
+      "https://block.energized.pro/assets/sources/filter/fanboy-ultimate.txt"
+    ]
+  },
+  "fanboy_cookiemonster": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://secure.fanboy.co.nz/r/fanboy-cookiemonster.txt",
+      "https://fanboy.co.nz/r/fanboy-cookiemonster.txt"
+    ],
+    "variants": [
+      "https://block.energized.pro/assets/sources/filter/fanboy-cookiemonster.txt"
+    ]
+  },
+  "fanboy_antifonts": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://secure.fanboy.co.nz/r/fanboy-antifonts.txt",
+      "https://fanboy.co.nz/r/fanboy-antifonts.txt"
+    ]
+  },
+  "fanboy_indian": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://secure.fanboy.co.nz/r/fanboy-indian.txt",
+      "https://fanboy.co.nz/r/fanboy-indian.txt"
+    ],
+    "variants": [
+      "https://block.energized.pro/assets/sources/filter/fanboy-indian.txt"
+    ]
+  },
+  "fanboy_vietnam": {
+    "_comment": "Using the pre-optimized Energized mirror: the original source is deprecated.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>9{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://block.energized.pro/assets/sources/filter/fanboy-vietnam.txt"
+    ],
+    "variants": [
+      "https://secure.fanboy.co.nz/fanboy-vietnam.txt",
+      "https://fanboy.co.nz/fanboy-vietnam.txt"
+    ]
   }
 }
