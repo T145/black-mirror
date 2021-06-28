@@ -103,7 +103,6 @@
 *   [The Block List Project](https://blocklistproject.github.io/Lists/)
 *   [Blackbird for Windows](https://getblackbird.net/blacklist/hosts/)
 *   [FireHOL Level 4](https://github.com/firehol/blocklist-ipsets)
-    *   Levels 1-3 are included in **Energized Extensions**
 *   [blocklist_de](https://www.blocklist.de/en/index.html)
 *   [geoffrey_frogeye](https://hostfiles.frogeye.fr/)
 *   [threatcrowd](https://threatcrowd.org/)
@@ -187,6 +186,7 @@
 *   [blockada duckduckgo trackers](https://go.blokada.org/ddgtrackerradar)
 *   [Exodus trackers](https://etip.exodus-privacy.eu.org/trackers/all)
 *   [npc hosts](https://npc.0am.jp/hosts.php)
+*   [fanboy](https://secure.fanboy.co.nz/)
 
 ### ⚪ Whitelists
 
@@ -270,6 +270,8 @@
 *   [keweonDNS](https://forum.xda-developers.com/t/keweondns-now-with-improved-certificate-ios-mac-android.3681139/) [up2date](https://pastebin.com/raw/UP3s7pEB)
 *   [deathbybandaid](https://github.com/deathbybandaid/piholeparser/tree/master/Subscribable-Lists/ParsedBlacklists)
 *   [Ransomware Overview](https://docs.google.com/spreadsheets/u/1/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g/pubhtml#)
+*   [fanboy vietnam](https://fanboy.co.nz/fanboy-vietnam.txt)
+*   [ryanbr](https://github.com/ryanbr/fanboy-adblock)
 
 ### 🌐 IP Block Providers
 
