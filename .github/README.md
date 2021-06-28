@@ -186,6 +186,7 @@
 *   [winhelp2002](https://winhelp2002.mvps.org/hosts.htm)
 *   [blockada duckduckgo trackers](https://go.blokada.org/ddgtrackerradar)
 *   [Exodus trackers](https://etip.exodus-privacy.eu.org/trackers/all)
+*   [npc hosts](https://npc.0am.jp/hosts.php)
 
 ### ⚪ Whitelists
 
@@ -268,6 +269,7 @@
 *   [ethanr dns-blacklists](https://bitbucket.org/ethanr/dns-blacklists/src/master/bad_lists/)
 *   [keweonDNS](https://forum.xda-developers.com/t/keweondns-now-with-improved-certificate-ios-mac-android.3681139/) [up2date](https://pastebin.com/raw/UP3s7pEB)
 *   [deathbybandaid](https://github.com/deathbybandaid/piholeparser/tree/master/Subscribable-Lists/ParsedBlacklists)
+*   [Ransomware Overview](https://docs.google.com/spreadsheets/u/1/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g/pubhtml#)
 
 ### 🌐 IP Block Providers
 
