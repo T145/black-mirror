@@ -2605,5 +2605,36 @@
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
+  },
+  "exodus_domains": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://github.com/T145/black-mirror/releases/download/latest/exodus_domains.txt"
+    ],
+    "variants": [
+      "https://etip.exodus-privacy.eu.org/trackers/export",
+      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/exodusprivacy/standard/hosts.txt",
+      "https://blokada.org/blocklists/exodusprivacy/standard/hosts.txt"
+    ]
+  },
+  "exodus_ips": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://github.com/T145/black-mirror/releases/download/latest/exodus_ips.txt"
+    ]
   }
 }
