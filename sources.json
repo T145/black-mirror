@@ -338,6 +338,37 @@
       "https://isc.sans.edu/api/threatlist/arbor?json"
     ]
   },
+  "ayashige": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "domain",
+        "rule": ".[].domain"
+      }
+    ],
+    "mirrors": [
+      "https://ayashige.herokuapp.com/feed"
+    ]
+  },
+  "betterfyi": {
+    "_comment": "Using the pre-optimized Energized mirror.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>9{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://block.energized.pro/assets/sources/filter/better-fyi-trackers.txt"
+    ],
+    "variants": [
+      "https://better.fyi/blockerList.txt",
+      "https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt"
+    ]
+  },
   "binarydefense": {
     "color": "black",
     "filters": [
@@ -375,6 +406,20 @@
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/blindferret?json"
+    ]
+  },
+  "blockada_ddgtrackerradar": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>6{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/ddgtrackerradar/standard/hosts.txt",
+      "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt"
     ]
   },
   "blocklist_de": {
@@ -2476,6 +2521,22 @@
       "https://assets.windscribe.com/custom_blocklists/malware.txt"
     ]
   },
+  "winhelp": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>30 && $0~/^[^#]/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://winhelp2002.mvps.org/hosts.txt"
+    ],
+    "variants": [
+      "https://block.energized.pro/assets/sources/filter/winhelp2002.mvps.org.txt"
+    ]
+  },
   "winspy_extra": {
     "color": "black",
     "filters": [
@@ -2516,37 +2577,6 @@
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update_v6.txt"
     ]
   },
-  "betterfyi": {
-    "_comment": "Using the pre-optimized Energized mirror.",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "NR>9{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://block.energized.pro/assets/sources/filter/better-fyi-trackers.txt"
-    ],
-    "variants": [
-      "https://better.fyi/blockerList.txt",
-      "https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt"
-    ]
-  },
-  "ayashige": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "domain",
-        "rule": ".[].domain"
-      }
-    ],
-    "mirrors": [
-      "https://ayashige.herokuapp.com/feed"
-    ]
-  },
   "yoyo_domains": {
     "color": "black",
     "filters": [
@@ -2574,36 +2604,6 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ]
-  },
-  "winhelp": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "NR>30 && $0~/^[^#]/{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://winhelp2002.mvps.org/hosts.txt"
-    ],
-    "variants": [
-      "https://block.energized.pro/assets/sources/filter/winhelp2002.mvps.org.txt"
-    ]
-  },
-  "blockada_ddgtrackerradar": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "NR>6{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/ddgtrackerradar/standard/hosts.txt",
-      "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt"
     ]
   }
 }
