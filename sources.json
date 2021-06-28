@@ -1148,6 +1148,7 @@
     ]
   },
   "geoffrey_frogeye_firstparty": {
+    "_comment": "Has a 'firstparty-only-trackers' list, which is smaller.",
     "color": "black",
     "filters": [
       {
@@ -1157,10 +1158,11 @@
       }
     ],
     "mirrors": [
-      "https://hostfiles.frogeye.fr/firstparty-only-trackers.txt"
+      "https://hostfiles.frogeye.fr/firstparty-trackers.txt"
     ]
   },
   "geoffrey_frogeye_multiparty": {
+    "_comment": "Has a 'multiparty-only-trackers' list, which is smaller.",
     "color": "black",
     "filters": [
       {
@@ -1170,7 +1172,7 @@
       }
     ],
     "mirrors": [
-      "https://hostfiles.frogeye.fr/multiparty-only-trackers.txt"
+      "https://hostfiles.frogeye.fr/multiparty-trackers.txt"
     ]
   },
   "h3x": {
@@ -2635,6 +2637,19 @@
     ],
     "mirrors": [
       "https://github.com/T145/black-mirror/releases/download/latest/exodus_ips.txt"
+    ]
+  },
+  "npc_hosts": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "BEGIN{OFS=\"\\n\"}$0~/^[^#]/{$1=\"\"; printf \"%s\",$0}"
+      }
+    ],
+    "mirrors": [
+      "https://npc.0am.jp/hosts.php?dl=1"
     ]
   }
 }
