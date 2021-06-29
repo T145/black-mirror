@@ -2789,5 +2789,20 @@
     "variants": [
       "https://block.energized.pro/assets/sources/filter/zerodot1-coinblockerlists-optional.txt"
     ]
+  },
+  "coinblockerlists_whitelist": {
+    "color": "white",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/raw/master/white_list.txt",
+      "https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/white_list.txt",
+      "https://zerodot1.gitlab.io/CoinBlockerLists/white_list.txt"
+    ]
   }
 }
