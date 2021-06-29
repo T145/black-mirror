@@ -48,12 +48,14 @@ main() {
     for color in 'white' 'black'; do
         cache_dir="${DOWNLOADS}/${color}"
 
+        set +e # temporarily disable strict fail, in case downloads fail
         jq -r --arg color "$color" 'to_entries[] |
         select(.value.color == $color) |
         {key, mirrors: .value.mirrors} |
         .extension = (.mirrors[0] | match(".(tar.gz|zip|7z|json)").captures[0].string // "txt") |
         (.mirrors | join("\t")), " out=\(.key).\(.extension)"' sources.json |
             aria2c --conf-path='./configs/aria2.conf' -d "$cache_dir"
+        set -e
 
         jq -r --arg color "$color" 'to_entries[] |
         select(.value.color == $color) |
