@@ -127,6 +127,7 @@
 *   [public_dns](https://public-dns.info/)
 *   [tor_bulkexitlist](https://check.torproject.org/api/bulk)
 *   [dan_me_uk](https://www.dan.me.uk/)
+*   [CoinBlockerWhiteList](https://gitlab.com/ZeroDot1/CoinBlockerLists/-/blob/master/white_list.txt)
 
 ### 🥢 Duplicates
 
