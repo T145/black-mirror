@@ -1,0 +1,31 @@
+name: Check Sources
+
+on:
+  #repository_dispatch:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 23 * * *"
+
+jobs:
+  check_sources:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Clone Repo
+        uses: "actions/checkout@v2.3.4"
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Check Links
+        uses: lycheeverse/lychee-action@v1.0.8
+        with:
+          args: --verbose --no-progress sources.txt
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Create Issue From File
+        uses: peter-evans/create-issue-from-file@v3.0.0
+        with:
+          title: Link Checker Report
+          content-filepath: ./lychee/out.md
+          labels: report, automated issue
