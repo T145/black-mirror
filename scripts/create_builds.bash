@@ -53,13 +53,13 @@ main() {
         select(.value.color == $color) |
         {key, mirrors: .value.mirrors} |
         .extension = (.mirrors[0] | match(".(tar.gz|zip|7z|json)").captures[0].string // "txt") |
-        (.mirrors | join("\t")), " out=\(.key).\(.extension)"' sources.json |
+        (.mirrors | join("\t")), " out=\(.key).\(.extension)"' sources/sources.json |
             aria2c --conf-path='./configs/aria2.conf' -d "$cache_dir"
         set -e
 
         jq -r --arg color "$color" 'to_entries[] |
         select(.value.color == $color) |
-         .key as $k | .value.filters[] | "\($k)#\(.engine)#\(.format)#\(.rule)"' sources.json |
+         .key as $k | .value.filters[] | "\($k)#\(.engine)#\(.format)#\(.rule)"' sources/sources.json |
             while IFS='#' read -r key engine format rule; do
                 get_file_contents "$key" "$cache_dir" |
                     parse_file_contents "$engine" "$rule" |       # quickly remove internal duplicates
