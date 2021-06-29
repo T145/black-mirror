@@ -2735,5 +2735,59 @@
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
+  },
+  "coinblockerlists_list": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/raw/master/list.txt",
+      "https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list.txt",
+      "https://zerodot1.gitlab.io/CoinBlockerLists/list.txt"
+    ],
+    "variants": [
+      "https://block.energized.pro/assets/sources/filter/zerodot1-coinblockerlists.txt"
+    ]
+  },
+  "coinblockerlists_browser": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/raw/master/list_browser.txt",
+      "https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_browser.txt",
+      "https://zerodot1.gitlab.io/CoinBlockerLists/list_browser.txt"
+    ],
+    "variants": [
+      "https://block.energized.pro/assets/sources/filter/zerodot1-coinblockerlists-browser.txt"
+    ]
+  },
+  "coinblockerlists_optional": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/raw/master/list_optional.txt",
+      "https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt",
+      "https://zerodot1.gitlab.io/CoinBlockerLists/list_optional.txt"
+    ],
+    "variants": [
+      "https://block.energized.pro/assets/sources/filter/zerodot1-coinblockerlists-optional.txt"
+    ]
   }
 }

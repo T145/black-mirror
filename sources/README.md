@@ -116,6 +116,7 @@
 *   [Exodus trackers](https://etip.exodus-privacy.eu.org/trackers/all)
 *   [npc hosts](https://npc.0am.jp/hosts.php)
 *   [fanboy](https://secure.fanboy.co.nz/)
+*   [CoinBlockerLists](https://zerodot1.gitlab.io/CoinBlockerListsWeb/)
 
 ### ⚪ Whitelists
 
