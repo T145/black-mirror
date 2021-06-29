@@ -117,6 +117,7 @@
 *   [npc hosts](https://npc.0am.jp/hosts.php)
 *   [fanboy](https://secure.fanboy.co.nz/)
 *   [CoinBlockerLists](https://zerodot1.gitlab.io/CoinBlockerListsWeb/)
+*   [ShadowWhisperer](https://github.com/ShadowWhisperer/BlockLists/)
 
 ### ⚪ Whitelists
 
@@ -128,6 +129,7 @@
 *   [tor_bulkexitlist](https://check.torproject.org/api/bulk)
 *   [dan_me_uk](https://www.dan.me.uk/)
 *   [CoinBlockerWhiteList](https://gitlab.com/ZeroDot1/CoinBlockerLists/-/blob/master/white_list.txt)
+*   [ShadowWhisperer's Filter](https://github.com/ShadowWhisperer/BlockLists/tree/master/Whitelists)
 
 ### 🥢 Duplicates
 
