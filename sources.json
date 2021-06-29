@@ -1082,6 +1082,121 @@
       "https://isc.sans.edu/api/threatlist/erratasec?json"
     ]
   },
+  "exodus_domains": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://github.com/T145/black-mirror/releases/download/latest/exodus_domains.txt"
+    ],
+    "variants": [
+      "https://etip.exodus-privacy.eu.org/trackers/export",
+      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/exodusprivacy/standard/hosts.txt",
+      "https://blokada.org/blocklists/exodusprivacy/standard/hosts.txt"
+    ]
+  },
+  "exodus_ips": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://github.com/T145/black-mirror/releases/download/latest/exodus_ips.txt"
+    ]
+  },
+  "fanboy_antifonts": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://secure.fanboy.co.nz/fanboy-antifonts.txt",
+      "https://fanboy.co.nz/fanboy-antifonts.txt"
+    ]
+  },
+  "fanboy_cookiemonster": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+      "https://fanboy.co.nz/fanboy-cookiemonster.txt"
+    ],
+    "variants": [
+      "https://block.energized.pro/assets/sources/filter/fanboy-cookiemonster.txt"
+    ]
+  },
+  "fanboy_indian": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://secure.fanboy.co.nz/fanboy-indian.txt",
+      "https://fanboy.co.nz/fanboy-indian.txt"
+    ],
+    "variants": [
+      "https://block.energized.pro/assets/sources/filter/fanboy-indian.txt"
+    ]
+  },
+  "fanboy_ultimate": {
+    "_comment": "The 'anti-facebook' list is covered by other Facebook hate.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://secure.fanboy.co.nz/r/fanboy-ultimate.txt",
+      "https://fanboy.co.nz/r/fanboy-ultimate.txt"
+    ],
+    "variants": [
+      "https://block.energized.pro/assets/sources/filter/fanboy-ultimate.txt"
+    ]
+  },
+  "fanboy_vietnam": {
+    "_comment": "Using the pre-optimized Energized mirror: the original source is deprecated.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>9{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://block.energized.pro/assets/sources/filter/fanboy-vietnam.txt"
+    ],
+    "variants": [
+      "https://secure.fanboy.co.nz/fanboy-vietnam.txt",
+      "https://fanboy.co.nz/fanboy-vietnam.txt"
+    ]
+  },
   "filtri_dns": {
     "color": "black",
     "filters": [
@@ -1505,6 +1620,19 @@
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/notracking/hosts-blocklists/master/dnscrypt-proxy/dnscrypt-proxy.blacklist.txt"
+    ]
+  },
+  "npc_hosts": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "BEGIN{OFS=\"\\n\"}$0~/^[^#]/{$1=\"\"; printf \"%s\",$0}"
+      }
+    ],
+    "mirrors": [
+      "https://npc.0am.jp/hosts.php?dl=1"
     ]
   },
   "oisd_extra": {
@@ -2606,134 +2734,6 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ]
-  },
-  "exodus_domains": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://github.com/T145/black-mirror/releases/download/latest/exodus_domains.txt"
-    ],
-    "variants": [
-      "https://etip.exodus-privacy.eu.org/trackers/export",
-      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/exodusprivacy/standard/hosts.txt",
-      "https://blokada.org/blocklists/exodusprivacy/standard/hosts.txt"
-    ]
-  },
-  "exodus_ips": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://github.com/T145/black-mirror/releases/download/latest/exodus_ips.txt"
-    ]
-  },
-  "npc_hosts": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "BEGIN{OFS=\"\\n\"}$0~/^[^#]/{$1=\"\"; printf \"%s\",$0}"
-      }
-    ],
-    "mirrors": [
-      "https://npc.0am.jp/hosts.php?dl=1"
-    ]
-  },
-  "fanboy_ultimate": {
-    "_comment": "The 'anti-facebook' list is covered by other Facebook hate.",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
-      }
-    ],
-    "mirrors": [
-      "https://secure.fanboy.co.nz/r/fanboy-ultimate.txt",
-      "https://fanboy.co.nz/r/fanboy-ultimate.txt"
-    ],
-    "variants": [
-      "https://block.energized.pro/assets/sources/filter/fanboy-ultimate.txt"
-    ]
-  },
-  "fanboy_cookiemonster": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
-      }
-    ],
-    "mirrors": [
-      "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
-      "https://fanboy.co.nz/fanboy-cookiemonster.txt"
-    ],
-    "variants": [
-      "https://block.energized.pro/assets/sources/filter/fanboy-cookiemonster.txt"
-    ]
-  },
-  "fanboy_antifonts": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
-      }
-    ],
-    "mirrors": [
-      "https://secure.fanboy.co.nz/fanboy-antifonts.txt",
-      "https://fanboy.co.nz/fanboy-antifonts.txt"
-    ]
-  },
-  "fanboy_indian": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
-      }
-    ],
-    "mirrors": [
-      "https://secure.fanboy.co.nz/fanboy-indian.txt",
-      "https://fanboy.co.nz/fanboy-indian.txt"
-    ],
-    "variants": [
-      "https://block.energized.pro/assets/sources/filter/fanboy-indian.txt"
-    ]
-  },
-  "fanboy_vietnam": {
-    "_comment": "Using the pre-optimized Energized mirror: the original source is deprecated.",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "NR>9{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://block.energized.pro/assets/sources/filter/fanboy-vietnam.txt"
-    ],
-    "variants": [
-      "https://secure.fanboy.co.nz/fanboy-vietnam.txt",
-      "https://fanboy.co.nz/fanboy-vietnam.txt"
     ]
   }
 }
