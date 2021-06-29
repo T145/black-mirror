@@ -2639,6 +2639,19 @@
       "https://github.com/T145/black-mirror/releases/download/latest/exodus_ips.txt"
     ]
   },
+  "npc_hosts": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "BEGIN{OFS=\"\\n\"}$0~/^[^#]/{$1=\"\"; printf \"%s\",$0}"
+      }
+    ],
+    "mirrors": [
+      "https://npc.0am.jp/hosts.php?dl=1"
+    ]
+  },
   "fanboy_ultimate": {
     "_comment": "The 'anti-facebook' list is covered by other Facebook hate.",
     "color": "black",
