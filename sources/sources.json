@@ -2804,5 +2804,291 @@
       "https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/white_list.txt",
       "https://zerodot1.gitlab.io/CoinBlockerLists/white_list.txt"
     ]
+  },
+  "shadowwhisperer_ads": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Ads"
+    ]
+  },
+  "shadowwhisperer_adult": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Adult"
+    ]
+  },
+  "shadowwhisperer_apple": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Apple"
+    ]
+  },
+  "shadowwhisperer_bloat": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Bloat"
+    ]
+  },
+  "shadowwhisperer_chat": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Chat"
+    ]
+  },
+  "shadowwhisperer_cryptocurrency": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Cryptocurrency"
+    ]
+  },
+  "shadowwhisperer_dating": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Dating"
+    ]
+  },
+  "shadowwhisperer_dynamic": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Dynamic"
+    ]
+  },
+  "shadowwhisperer_free": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Free"
+    ]
+  },
+  "shadowwhisperer_gambling": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Gambling"
+    ]
+  },
+  "shadowwhisperer_junk": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Junk"
+    ]
+  },
+  "shadowwhisperer_malware": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Malware"
+    ]
+  },
+  "shadowwhisperer_marketing": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10 && $0~/^[^#]/{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Marketing"
+    ]
+  },
+  "shadowwhisperer_marketing_email": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Marketing-Email"
+    ]
+  },
+  "shadowwhisperer_microsoft": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10 && $0~/^[^#]/{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Microsoft"
+    ]
+  },
+  "shadowwhisperer_remote": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Remote"
+    ]
+  },
+  "shadowwhisperer_risk": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10 && $0~/^[^#]/{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Risk"
+    ]
+  },
+  "shadowwhisperer_scam": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Scam"
+    ]
+  },
+  "shadowwhisperer_shock": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Shock"
+    ]
+  },
+  "shadowwhisperer_tracking": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Tracking"
+    ]
+  },
+  "shadowwhisperer_tunnels": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>10{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Tunnels"
+    ]
+  },
+  "shadowwhisperer_whitelist": {
+    "color": "white",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Whitelists/Filter"
+    ]
   }
 }
