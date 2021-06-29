@@ -15,13 +15,26 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-      - name: Fix Script Permissions
-        run: chmod 755 -R ./scripts
+      - name: Prepare Workspace
+        run: |
+          sudo apt update -y
+          sudo apt upgrade -y
+          sudo apt install aria2 gawk jq mawk miller moreutils sed p7zip-full
+          chmod 755 -R ./scripts
+        shell: bash
 
       - name: Fix Sources
         run: |
-          jq -S -M '.' sources.json > temp.json
-          mv temp.json sources.json
+          jq -S -M '.' sources/sources.json > temp.json
+          mv temp.json sources/sources.json
+        shell: bash
+
+      - name: Export Sources in Pihole Format
+        run: jq -jr 'to_entries[] | select(.value.color == "black") | .value.mirrors[0] as $url | .value.filters[] | if (.engine == "mawk" and .format == "domain") then ($url, " ") else empty end' sources/sources.json | sed 's/ $/\n/' >sources/sources.pihole
+        shell: bash
+
+      - name: Export Sources in Text Format
+        run: jq -r 'to_entries[].value.mirrors[]' sources/sources.json >sources/sources.txt
         shell: bash
 
       - name: Reset Aria2 Log
@@ -30,16 +43,8 @@ jobs:
           touch logs/aria2.log
         shell: bash
 
-      - name: Install Dependencies
-        run: sudo apt install aria2 gawk jq mawk miller moreutils sed p7zip-full
-        shell: bash
-
-      - name: Update Valid Pihole Sources
-        run: jq -jr 'to_entries[] | select(.value.color == "black") | .value.mirrors[0] as $url | .value.filters[] | if (.engine == "mawk" and .format == "domain") then ($url, " ") else empty end' sources.json | sed 's/ $/\n/' >sources.pihole
-        shell: bash
-
       - name: Create Builds
-        run: ./scripts/create_builds.bash --debugging
+        run: ./scripts/create_builds.bash
         shell: bash
 
       - name: Update README.md

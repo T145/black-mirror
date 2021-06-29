@@ -1,4 +1,11 @@
 .DS_Store
+
+# Ensure build artifacts are ignored
 *.txt
 *.tar.gz
 *.md5
+*.sha1
+*.sha256
+
+# Don't ignore the text-format sources file
+!sources/sources.txt
