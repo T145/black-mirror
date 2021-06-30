@@ -118,6 +118,9 @@
 *   [fanboy](https://secure.fanboy.co.nz/)
 *   [CoinBlockerLists](https://zerodot1.gitlab.io/CoinBlockerListsWeb/)
 *   [ShadowWhisperer](https://github.com/ShadowWhisperer/BlockLists/)
+*   [OpenDBL](https://www.opendbl.net/)
+    *   bruteforceblocker
+    *   talos (cisco)
 
 ### ⚪ Whitelists
 
