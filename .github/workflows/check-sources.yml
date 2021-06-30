@@ -19,7 +19,7 @@ jobs:
       - name: Check Links
         uses: lycheeverse/lychee-action@v1.0.8
         with:
-          args: --verbose --no-progress sources.txt
+          args: --verbose --no-progress sources/sources.txt
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
