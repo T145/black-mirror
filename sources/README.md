@@ -208,3 +208,4 @@
 *   [Ransomware Overview](https://docs.google.com/spreadsheets/u/1/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g/pubhtml#)
 *   [fanboy vietnam](https://fanboy.co.nz/fanboy-vietnam.txt)
 *   [ryanbr](https://github.com/ryanbr/fanboy-adblock)
+*   [Princeton Webcensus](https://webtransparency.cs.princeton.edu/webcensus/)
