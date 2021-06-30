@@ -54,7 +54,7 @@
 *   [360_netlab](https://data.netlab.360.com/)
 *   [cybercrime](https://cybercrime-tracker.net/)
 *   [taz_spam](http://taz.net.au/Mail/)
-*   [bruteforceblocker](http://danger.rulez.sk/index.php/bruteforceblocker/)
+*   <strike>[bruteforceblocker](http://danger.rulez.sk/index.php/bruteforceblocker/)</strike>
 *   [myip_full_blacklist](https://myip.ms/browse/blacklist)
 *   [myip_webcrawlers](https://myip.ms/browse/web_bots)
 *   [CyberSaiyanIT](https://github.com/CyberSaiyanIT/InfoSharing)
