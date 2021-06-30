@@ -31,7 +31,7 @@ jobs:
         shell: bash
 
       - name: Export Sources in Pihole Format
-        run: jq -jr 'to_entries[] | select(.value.color == "black") | .value.mirrors[0] as $url | .value.filters[] | if (.engine == "mawk" and .format == "domain") then ($url, " ") else empty end' sources/sources.json | sed 's/ $/\n/' >sources/sources.pihole
+        run: jq -jr 'to_entries[] | select(.value.color == "black") | .value.mirrors[0] as $url | .value.filters[] | if (.engine != "gawk" and .format == "domain") then ($url, " ") else empty end' sources/sources.json | sed 's/ $/\n/' >sources/sources.pihole
         shell: bash
 
       - name: Export Sources in Text Format
