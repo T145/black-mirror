@@ -786,19 +786,6 @@
       "https://www.botvrij.eu/data/ioclist.url.raw"
     ]
   },
-  "bruteforceblocker": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "NR>5{print $1}"
-      }
-    ],
-    "mirrors": [
-      "http://danger.rulez.sk/projects/bruteforceblocker/blist.php"
-    ]
-  },
   "censys": {
     "color": "black",
     "filters": [
