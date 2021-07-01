@@ -69,7 +69,7 @@ main() {
                         parse_file_contents "$engine" "$rule" |
                         mawk '!seen[$0]++' |
                         if [[ "$format" == 'domain' ]]; then
-                            ./idn_to_punycode.pl
+                            ./scripts/idn_to_punycode.pl
                         else
                             cat
                         fi >>"${color}_${format}.txt"
