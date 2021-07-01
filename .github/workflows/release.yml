@@ -20,7 +20,7 @@ jobs:
         run: |
           sudo apt update -y
           sudo apt upgrade -y
-          sudo apt install aria2 gawk idn jq mawk miller moreutils sed p7zip-full
+          sudo apt install aria2 gawk libnet-libidn-perl libnet-idn-encode-perl jq mawk miller moreutils sed p7zip-full
           chmod 755 -R ./scripts
         shell: bash
 
