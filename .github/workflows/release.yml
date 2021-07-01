@@ -25,7 +25,7 @@ jobs:
 
       - name: Fix Sources
         run: |
-          jq -S -M '.' sources/sources.json > temp.json
+          jq -Sr '.' sources/sources.json > temp.json
           mv temp.json sources/sources.json
         shell: bash
 

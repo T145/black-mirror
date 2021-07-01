@@ -1712,6 +1712,32 @@
       "https://isc.sans.edu/api/threatlist/onyphe?json"
     ]
   },
+  "opendbl_bruteforceblocker": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "NR>1"
+      }
+    ],
+    "mirrors": [
+      "https://www.opendbl.net/lists/bruteforce.list"
+    ]
+  },
+  "opendbl_talos": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "NR>1"
+      }
+    ],
+    "mirrors": [
+      "https://www.opendbl.net/lists/talos.list"
+    ]
+  },
   "openphish_feed": {
     "color": "black",
     "filters": [
@@ -3044,32 +3070,6 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ]
-  },
-  "opendbl_bruteforceblocker": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "NR>1"
-      }
-    ],
-    "mirrors": [
-      "https://www.opendbl.net/lists/bruteforce.list"
-    ]
-  },
-  "opendbl_talos": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "NR>1"
-      }
-    ],
-    "mirrors": [
-      "https://www.opendbl.net/lists/talos.list"
     ]
   }
 }
