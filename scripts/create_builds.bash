@@ -28,12 +28,8 @@ get_file_contents() {
     fi
 }
 
-# params: engine, rule, format
+# params: engine, rule
 parse_file_contents() {
-    if [[ "$3" == 'domain' ]]; then
-        ./scripts/idn_to_punycode.pl
-    fi
-
     case $1 in
     mawk) mawk "$2" ;;
     gawk) gawk --sandbox -O -- "$2" ;;
@@ -71,8 +67,11 @@ main() {
          .key as $k | .value.filters[] | "\($k)#\(.engine)#\(.format)#\(.rule)"' sources/sources.json |
             while IFS='#' read -r key engine format rule; do
                 get_file_contents "$key" "$cache_dir" |
-                    parse_file_contents "$engine" "$rule" "$format" | # quickly remove internal duplicates
-                    mawk '!seen[$0]++' >>"${color}_${format}.txt"     # then append contents to list
+                    if [[ "$format" == 'domain' ]]; then
+                        ./scripts/idn_to_punycode.pl
+                    fi |
+                    parse_file_contents "$engine" "$rule" |       # quickly remove internal duplicates
+                    mawk '!seen[$0]++' >>"${color}_${format}.txt" # then append contents to list
             done
 
         for format in 'ipv4' 'ipv6' 'domain'; do
