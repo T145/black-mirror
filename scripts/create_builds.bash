@@ -31,7 +31,7 @@ get_file_contents() {
 # params: engine, rule, format
 parse_file_contents() {
     if [[ "$3" == 'domain' ]]; then
-        ./scripts/idn2punycode.pl
+        ./scripts/idn_to_punycode.pl
     fi
 
     case $1 in
