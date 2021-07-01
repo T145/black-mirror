@@ -12,7 +12,7 @@ get_file_contents() {
     local fpath
     fpath=$(find -P -O3 "$2" -type f -name "$1*")
 
-    if [ ! -z "$fpath"]; then
+    if [ ! -z "$fpath" ]; then
         case $fpath in
         *.tar.gz)
             # Both Shallafpath and Ut-capitole adhere to this format
@@ -23,13 +23,17 @@ get_file_contents() {
         *.7z) 7za -y -so e "$fpath" ;;
         *) cat "$fpath" ;;
         esac
-    else        # the file download failed and fpath is an empty string
-        echo '' # pass on an empty string that should be ignored
+    else     # the file download failed and fpath is an empty string
+        echo # pass on an empty string that should be ignored
     fi
 }
 
-# params: engine, rule
+# params: engine, rule, format
 parse_file_contents() {
+    if [[ "$3" == 'domain' ]]; then
+        idn
+    fi
+
     case $1 in
     mawk) mawk "$2" ;;
     gawk) gawk --sandbox -O -- "$2" ;;
@@ -67,8 +71,8 @@ main() {
          .key as $k | .value.filters[] | "\($k)#\(.engine)#\(.format)#\(.rule)"' sources/sources.json |
             while IFS='#' read -r key engine format rule; do
                 get_file_contents "$key" "$cache_dir" |
-                    parse_file_contents "$engine" "$rule" |       # quickly remove internal duplicates
-                    mawk '!seen[$0]++' >>"${color}_${format}.txt" # then append contents to list
+                    parse_file_contents "$engine" "$rule" "$format" | # quickly remove internal duplicates
+                    mawk '!seen[$0]++' >>"${color}_${format}.txt"     # then append contents to list
             done
 
         for format in 'ipv4' 'ipv6' 'domain'; do
