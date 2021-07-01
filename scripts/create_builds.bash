@@ -22,7 +22,10 @@ get_file_contents() {
         *.zip) zcat "$fpath" ;;
         *.7z) 7za -y -so e "$fpath" ;;
         *) cat "$fpath" ;;
-        esac
+        esac |
+            if [[ "$3" == 'domain' ]]; then
+                ./scripts/idn_to_punycode.pl
+            fi
     else     # the file download failed and fpath is an empty string
         echo # pass on an empty string that should be ignored
     fi
