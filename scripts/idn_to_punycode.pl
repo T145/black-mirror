@@ -11,6 +11,6 @@ foreach $line ( <STDIN> ) {
       my $a = domain_to_ascii( $line );
       print "$a\n";
    } catch {
-      warn "Attempted to generate Punycode domain >255 characters!";
+      #warn "Attempted to generate Punycode domain >255 characters!";
    }
 }
