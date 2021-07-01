@@ -7,7 +7,7 @@ DOWNLOADS=$(mktemp -d)
 readonly DOWNLOADS
 trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 
-# params: sub_list
+# params: src_list
 get_file_contents() {
     case $1 in
     *.tar.gz)
@@ -43,7 +43,7 @@ parse_file_contents() {
 
 main() {
     local cache_dir
-    local sub_list
+    local src_list
     local list
 
     for color in 'white' 'black'; do
@@ -62,10 +62,10 @@ main() {
         select(.value.color == $color) |
          .key as $k | .value.filters[] | "\($k)#\(.engine)#\(.format)#\(.rule)"' sources/sources.json |
             while IFS='#' read -r key engine format rule; do
-                sub_list=$(find -P -O3 "$cache_dir" -type f -name "$key*")
+                src_list=$(find -P -O3 "$cache_dir" -type f -name "$key*")
 
-                if [ -n "$sub_list" ]; then
-                    get_file_contents "$sub_list" |
+                if [ -n "$src_list" ]; then
+                    get_file_contents "$src_list" |
                         parse_file_contents "$engine" "$rule" |
                         mawk '!seen[$0]++' |
                         if [[ "$format" == 'domain' ]]; then
@@ -74,7 +74,7 @@ main() {
                             cat
                         fi >>"${color}_${format}.txt"
                 fi
-                # else the download failed and sub_list is empty
+                # else the download failed and src_list is empty
             done
 
         for format in 'ipv4' 'ipv6' 'domain'; do
