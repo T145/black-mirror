@@ -118,6 +118,9 @@
 *   [fanboy](https://secure.fanboy.co.nz/)
 *   [CoinBlockerLists](https://zerodot1.gitlab.io/CoinBlockerListsWeb/)
 *   [ShadowWhisperer](https://github.com/ShadowWhisperer/BlockLists/)
+*   [OpenDBL](https://www.opendbl.net/)
+    *   bruteforceblocker
+    *   talos (cisco)
 
 ### ⚪ Whitelists
 
@@ -205,3 +208,4 @@
 *   [Ransomware Overview](https://docs.google.com/spreadsheets/u/1/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g/pubhtml#)
 *   [fanboy vietnam](https://fanboy.co.nz/fanboy-vietnam.txt)
 *   [ryanbr](https://github.com/ryanbr/fanboy-adblock)
+*   [Princeton Webcensus](https://webtransparency.cs.princeton.edu/webcensus/)
