@@ -41,21 +41,21 @@
     <tr>
       <td style="text-align:center">black_domain.txt</td>
       <td style="text-align:center">Regular domain entries</td>
-      <td id="domain-count">9,000,401</td>
+      <td id="domain-count">8,997,752</td>
       <td id="domain-filesize">197M</td>
       <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz">black_domain.tar.gz</a> </td>
     </tr>
     <tr>
       <td style="text-align:center">black_ipv4.txt</td>
       <td style="text-align:center">Valid IPv4 addresses &amp; CIDR blocks</td>
-      <td id="ipv4-count">1,496,393</td>
+      <td id="ipv4-count">1,496,583</td>
       <td id="ipv4-filesize">21M</td>
       <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz">black_ipv4.tar.gz</a> </td>
     </tr>
     <tr>
       <td style="text-align:center">black_ipv6.txt</td>
       <td style="text-align:center">Valid IPv6 addresses</td>
-      <td id="ipv6-count">6,061</td>
+      <td id="ipv6-count">6,058</td>
       <td id="ipv6-filesize">198K</td>
       <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz">black_ipv6.tar.gz</a> </td>
     </tr>
