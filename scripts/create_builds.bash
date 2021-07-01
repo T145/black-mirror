@@ -7,7 +7,7 @@ DOWNLOADS=$(mktemp -d)
 readonly DOWNLOADS
 trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 
-# params: key, cache dir
+# params: key, cache dir, format
 get_file_contents() {
     local fpath
     fpath=$(find -P -O3 "$2" -type f -name "$1*")
@@ -22,7 +22,10 @@ get_file_contents() {
         *.zip) zcat "$fpath" ;;
         *.7z) 7za -y -so e "$fpath" ;;
         *) cat "$fpath" ;;
-        esac
+        esac |
+            if [[ "$3" == 'domain' ]]; then
+                ./scripts/idn_to_punycode.pl
+            fi
     else     # the file download failed and fpath is an empty string
         echo # pass on an empty string that should be ignored
     fi
@@ -66,10 +69,7 @@ main() {
         select(.value.color == $color) |
          .key as $k | .value.filters[] | "\($k)#\(.engine)#\(.format)#\(.rule)"' sources/sources.json |
             while IFS='#' read -r key engine format rule; do
-                get_file_contents "$key" "$cache_dir" |
-                    if [[ "$format" == 'domain' ]]; then
-                        ./scripts/idn_to_punycode.pl
-                    fi |
+                get_file_contents "$key" "$cache_dir" "$format" |
                     parse_file_contents "$engine" "$rule" |       # quickly remove internal duplicates
                     mawk '!seen[$0]++' >>"${color}_${format}.txt" # then append contents to list
             done
