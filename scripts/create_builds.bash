@@ -7,28 +7,21 @@ DOWNLOADS=$(mktemp -d)
 readonly DOWNLOADS
 trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 
-# params: key, cache dir, format
+# params: key, cache dir
 get_file_contents() {
-    local fpath
-    fpath=$(find -P -O3 "$2" -type f -name "$1*")
+    local list
+    list=$(find -P -O3 "$2" -type f -name "$1*")
 
-    if [ -n "$fpath" ]; then
-        case $fpath in
-        *.tar.gz)
-            # Both Shallafpath and Ut-capitole adhere to this format
-            # If any archives are added that do not, this line needs to change
-            tar -xOzf "$fpath" --wildcards-match-slash --wildcards '*/domains'
-            ;;
-        *.zip) zcat "$fpath" ;;
-        *.7z) 7za -y -so e "$fpath" ;;
-        *) cat "$fpath" ;;
-        esac |
-            if [[ "$3" == 'domain' ]]; then
-                ./scripts/idn_to_punycode.pl
-            fi
-    else     # the file download failed and fpath is an empty string
-        echo # pass on an empty string that should be ignored
-    fi
+    case $list in
+    *.tar.gz)
+        # Both Shallalist and Ut-capitole adhere to this format
+        # If any archives are added that do not, this line needs to change
+        tar -xOzf "$list" --wildcards-match-slash --wildcards '*/domains'
+        ;;
+    *.zip) zcat "$list" ;;
+    *.7z) 7za -y -so e "$list" ;;
+    *) cat "$list" ;;
+    esac
 }
 
 # params: engine, rule
@@ -36,7 +29,6 @@ parse_file_contents() {
     case $1 in
     mawk) mawk "$2" ;;
     gawk) gawk --sandbox -O -- "$2" ;;
-    jq) jq -r "$2" ;;
     miller)
         if [[ $2 =~ ^[0-9]+$ ]]; then
             mlr --mmap --csv --skip-comments -N cut -f "$2"
@@ -44,16 +36,16 @@ parse_file_contents() {
             mlr --mmap --csv --skip-comments --headerless-csv-output cut -f "$2"
         fi
         ;;
+    jq) jq -r "$2" ;;
     xmlstarlet)
         # xmlstarlet sel -t -m "/rss/channel/item" -v "substring-before(title,' ')" -n rss.xml
         ;;
-    cat) ;;
+    *) ;;
     esac
 }
 
 main() {
     for color in 'white' 'black'; do
-        local cache_dir
         cache_dir="${DOWNLOADS}/${color}"
 
         set +e # temporarily disable strict fail, in case downloads fail
@@ -69,16 +61,16 @@ main() {
         select(.value.color == $color) |
          .key as $k | .value.filters[] | "\($k)#\(.engine)#\(.format)#\(.rule)"' sources/sources.json |
             while IFS='#' read -r key engine format rule; do
-                get_file_contents "$key" "$cache_dir" "$format" |
+                get_file_contents "$key" "$cache_dir" |
                     parse_file_contents "$engine" "$rule" |       # quickly remove internal duplicates
                     mawk '!seen[$0]++' >>"${color}_${format}.txt" # then append contents to list
             done
 
         for format in 'ipv4' 'ipv6' 'domain'; do
-            local list
             list="${color}_${format}.txt"
 
             if test -f "$list"; then
+                # ipv4: sort -o "$list" -u -t . -k 3,3n -k 4,4n -S 90% --parallel=4 -T "$cache_dir" "$list"
                 sort -o "$list" -u -S 90% --parallel=4 -T "$cache_dir" "$list"
 
                 if [[ "$color" == 'black' && -f "white_${format}.txt" ]]; then
