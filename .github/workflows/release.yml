@@ -19,8 +19,7 @@ jobs:
       - name: Prepare Workspace
         run: |
           sudo apt update -y
-          sudo apt upgrade -y
-          sudo apt install aria2 gawk jq mawk miller moreutils sed p7zip-full
+          sudo apt install aria2 gawk jq libnet-libidn-perl libnet-idn-encode-perl libtry-tiny-perl mawk miller moreutils sed p7zip-full
           chmod 755 -R ./scripts
         shell: bash
 

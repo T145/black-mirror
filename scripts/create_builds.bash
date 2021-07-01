@@ -66,8 +66,13 @@ main() {
 
                 if [ -n "$sub_list" ]; then
                     get_file_contents "$sub_list" |
-                        parse_file_contents "$engine" "$rule" |       # quickly remove internal duplicates
-                        mawk '!seen[$0]++' >>"${color}_${format}.txt" # then append contents to list
+                        parse_file_contents "$engine" "$rule" |
+                        mawk '!seen[$0]++' |
+                        if [[ "$format" == 'domain' ]]; then
+                            ./idn_to_punycode.pl
+                        else
+                            cat
+                        fi >>"${color}_${format}.txt"
                 fi
                 # else the download failed and sub_list is empty
             done
