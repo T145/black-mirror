@@ -12,7 +12,7 @@ get_file_contents() {
     local fpath
     fpath=$(find -P -O3 "$2" -type f -name "$1*")
 
-    if [ ! -z "$fpath" ]; then
+    if [ -n "$fpath" ]; then
         case $fpath in
         *.tar.gz)
             # Both Shallafpath and Ut-capitole adhere to this format
