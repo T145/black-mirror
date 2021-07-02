@@ -41,6 +41,24 @@ parse_file_contents() {
     esac
 }
 
+# CAN CONTAIN: domains, unicode domains, punycode domains
+# params: color
+output_domain_format() {
+    ./scripts/idn_to_punycode.pl >>"${color}_domain.txt" # convert unicode domains to punycode (everything else falls through)
+}
+
+# CAN CONTAIN: addresses, CIDR block ranges, address-address ranges
+# params: color
+output_ipv4_format() {
+    cat >>"${color}_ipv4.txt"
+}
+
+# CAN CONTAIN: addresses
+# params: color
+output_ipv6_format() {
+    cat >>"${color}_ipv6.txt"
+}
+
 main() {
     local cache_dir
     local src_list
@@ -68,11 +86,11 @@ main() {
                     get_file_contents "$src_list" |
                         parse_file_contents "$engine" "$rule" |
                         mawk '!seen[$0]++' |
-                        if [[ "$format" == 'domain' ]]; then
-                            ./scripts/idn_to_punycode.pl
-                        else
-                            cat
-                        fi >>"${color}_${format}.txt"
+                        case $format in
+                        domain) output_domain_format "$color" ;;
+                        ipv4) output_ipv4_format "$color" ;;
+                        ipv6) output_ipv6_format "$color" ;;
+                        esac
                 fi
                 # else the download failed and src_list is empty
             done
