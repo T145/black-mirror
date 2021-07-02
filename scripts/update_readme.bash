@@ -6,10 +6,12 @@ export LANGUAGE=en:el
 
 unique_domain_count=$(wc -l <black_domain.txt)
 unique_ipv4_count=$(wc -l <black_ipv4.txt)
+unique_ipv4_cidr_count=$(wc -l <black_ipv4.txt)
 unique_ipv6_count=$(wc -l <black_ipv6.txt)
 
 domain_count=$(printf "%'d" "$unique_domain_count")
 ipv4_count=$(printf "%'d" "$unique_ipv4_count")
+ipv4_cidr_count=$(printf "%'d" "$unique_ipv4_cidr_count")
 ipv6_count=$(printf "%'d" "$unique_ipv6_count")
 
 get_filesize() {
@@ -18,6 +20,7 @@ get_filesize() {
 
 domain_filesize=$(get_filesize black_domain.txt)
 ipv4_filesize=$(get_filesize black_ipv4.txt)
+ipv4_cidr_filesize=$(get_filesize black_ipv4_cidr.txt)
 ipv6_filesize=$(get_filesize black_ipv6.txt)
 
 # Produces a sed script that replaces TD element contents
@@ -29,5 +32,5 @@ make_subst_script() {
     done
 }
 
-sed -e "$(make_subst_script domain_count domain_filesize ipv4_count ipv4_filesize ipv6_count ipv6_filesize)" \
+sed -e "$(make_subst_script domain_count domain_filesize ipv4_count ipv4_filesize ipv4_cidr_count ipv4_cidr_filesize ipv6_count ipv6_filesize)" \
     -i .github/README.md
