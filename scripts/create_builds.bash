@@ -15,9 +15,9 @@ get_file_contents() {
         # If any archives are added that do not, this line needs to change
         tar -xOzf "$1" --wildcards-match-slash --wildcards '*/domains'
         ;;
-    *.zip) zcat "$1" ;;
+    *.zip) zcat -s "$1" ;;
     *.7z) 7za -y -so e "$1" ;;
-    *) cat "$1" ;;
+    *) cat -s "$1" ;;
     esac
 }
 
@@ -50,13 +50,13 @@ output_domain_format() {
 # CAN CONTAIN: addresses, CIDR block ranges, address-address ranges
 # params: color
 output_ipv4_format() {
-    cat >>"${color}_ipv4.txt"
+    cat -s >>"${color}_ipv4.txt"
 }
 
 # CAN CONTAIN: addresses
 # params: color
 output_ipv6_format() {
-    cat >>"${color}_ipv6.txt"
+    cat -s >>"${color}_ipv6.txt"
 }
 
 main() {
