@@ -6,8 +6,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>9{print $2}",
-        "discovery": false
+        "rule": "NR>9{print $2}"
       }
     ],
     "mirrors": [
@@ -16,8 +15,7 @@
     "variants": [
       "https://filter.futa.gg/280blocker/280blocker_domain_ag.txt",
       "https://block.energized.pro/mirror/280blocker_domain_ag.txt"
-    ],
-    "scan": false
+    ]
   },
   "360_netlab": {
     "color": "black",
@@ -25,14 +23,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "$2~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "$2~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://data.netlab.360.com/feeds/dga/dga.txt"
-    ],
-    "scan": false
+    ]
   },
   "4skinskywalker_anti_porn": {
     "color": "black",
@@ -40,14 +36,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $2}",
-        "discovery": false
+        "rule": "{print $2}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/4skinSkywalker/Anti-Porn-HOSTS-File/master/HOSTS.txt"
-    ],
-    "scan": false
+    ]
   },
   "abuse_ch_feodotracker": {
     "color": "black",
@@ -55,14 +49,12 @@
       {
         "engine": "miller",
         "format": "ipv4",
-        "rule": "dst_ip",
-        "discovery": false
+        "rule": "dst_ip"
       }
     ],
     "mirrors": [
       "https://feodotracker.abuse.ch/downloads/ipblocklist_aggressive.csv"
-    ],
-    "scan": false
+    ]
   },
   "abuse_ch_sslbl": {
     "color": "black",
@@ -70,14 +62,12 @@
       {
         "engine": "miller",
         "format": "ipv4",
-        "rule": 2,
-        "discovery": false
+        "rule": 2
       }
     ],
     "mirrors": [
       "https://sslbl.abuse.ch/blacklist/sslipblacklist_aggressive.csv"
-    ],
-    "scan": false
+    ]
   },
   "abuse_ch_urlhaus": {
     "color": "black",
@@ -85,20 +75,17 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print $3}",
-        "discovery": false
+        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print $3}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([0-9]{1,3}\\.){3}[0-9]{1,3}+(\\/|:|$)/{sub(/:.*/,\"\",$3); print $3}",
-        "discovery": false
+        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([0-9]{1,3}\\.){3}[0-9]{1,3}+(\\/|:|$)/{sub(/:.*/,\"\",$3); print $3}"
       }
     ],
     "mirrors": [
       "https://urlhaus.abuse.ch/downloads/text/"
-    ],
-    "scan": false
+    ]
   },
   "adscore": {
     "color": "black",
@@ -106,14 +93,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/adscore?json"
-    ],
-    "scan": false
+    ]
   },
   "airelle_hmis": {
     "color": "black",
@@ -121,14 +106,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "http://rlwpx.free.fr/WPFF/hmis.7z"
-    ],
-    "scan": false
+    ]
   },
   "airelle_hpub": {
     "color": "black",
@@ -136,14 +119,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "http://rlwpx.free.fr/WPFF/hpub.7z"
-    ],
-    "scan": false
+    ]
   },
   "airelle_hrsk": {
     "color": "black",
@@ -151,14 +132,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "http://rlwpx.free.fr/WPFF/hrsk.7z"
-    ],
-    "scan": false
+    ]
   },
   "airelle_hsex": {
     "color": "black",
@@ -166,14 +145,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "http://rlwpx.free.fr/WPFF/hsex.7z"
-    ],
-    "scan": false
+    ]
   },
   "airelle_htrc": {
     "color": "black",
@@ -181,14 +158,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "http://rlwpx.free.fr/WPFF/htrc.7z"
-    ],
-    "scan": false
+    ]
   },
   "alienvault": {
     "color": "black",
@@ -196,14 +171,12 @@
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "BEGIN{FS=\"#\"}{print $1}",
-        "discovery": false
+        "rule": "BEGIN{FS=\"#\"}{print $1}"
       }
     ],
     "mirrors": [
       "https://reputation.alienvault.com/reputation.data"
-    ],
-    "scan": false
+    ]
   },
   "alphastrike": {
     "color": "black",
@@ -211,14 +184,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/alphastrike?json"
-    ],
-    "scan": false
+    ]
   },
   "android_tracking": {
     "color": "black",
@@ -226,14 +197,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print $0}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt"
-    ],
-    "scan": false
+    ]
   },
   "andryou": {
     "color": "black",
@@ -241,14 +210,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>12{print $0}",
-        "discovery": false
+        "rule": "NR>12{print $0}"
       }
     ],
     "mirrors": [
       "https://gitlab.com/andryou/block/raw/master/kouhai-compressed-domains"
-    ],
-    "scan": false
+    ]
   },
   "anti_ad": {
     "color": "black",
@@ -256,14 +223,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>4{print $0}",
-        "discovery": false
+        "rule": "NR>4{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt"
-    ],
-    "scan": false
+    ]
   },
   "antisocialengineer": {
     "color": "black",
@@ -271,14 +236,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community/main/UK-Community.txt"
-    ],
-    "scan": false
+    ]
   },
   "anudeep_adservers": {
     "color": "black",
@@ -286,15 +249,13 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $2}",
-        "discovery": false
+        "rule": "NR>10{print $2}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt",
       "https://hosts.anudeep.me/mirror/adservers.txt"
-    ],
-    "scan": false
+    ]
   },
   "anudeep_coinminer": {
     "color": "black",
@@ -302,15 +263,13 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>9{print $2}",
-        "discovery": false
+        "rule": "NR>9{print $2}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt",
       "https://hosts.anudeep.me/mirror/CoinMiner.txt"
-    ],
-    "scan": false
+    ]
   },
   "anudeep_facebook": {
     "color": "black",
@@ -318,15 +277,13 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>8{print $2}",
-        "discovery": false
+        "rule": "NR>8{print $2}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt",
       "https://hosts.anudeep.me/mirror/facebook.txt"
-    ],
-    "scan": false
+    ]
   },
   "anudeep_false_positives": {
     "color": "white",
@@ -334,15 +291,13 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>7{print $0}",
-        "discovery": false
+        "rule": "NR>7{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/anudeepND/blacklist/master/miscellaneous/false-positives.txt",
       "https://hosts.anudeep.me/mirror/miscellaneous/false-positives.txt"
-    ],
-    "scan": false
+    ]
   },
   "anudeep_whitelist": {
     "color": "white",
@@ -350,14 +305,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
-    ],
-    "scan": false
+    ]
   },
   "apple_telemetry": {
     "color": "black",
@@ -365,14 +318,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/adversarialtools/apple-telemetry/master/blacklist"
-    ],
-    "scan": false
+    ]
   },
   "arbor": {
     "color": "black",
@@ -380,14 +331,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/arbor?json"
-    ],
-    "scan": false
+    ]
   },
   "ayashige": {
     "color": "black",
@@ -395,14 +344,12 @@
       {
         "engine": "jq",
         "format": "domain",
-        "rule": ".[].domain",
-        "discovery": false
+        "rule": ".[].domain"
       }
     ],
     "mirrors": [
       "https://ayashige.herokuapp.com/feed"
-    ],
-    "scan": false
+    ]
   },
   "betterfyi": {
     "_comment": "Using the pre-optimized Energized mirror.",
@@ -411,8 +358,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>9{print $2}",
-        "discovery": false
+        "rule": "NR>9{print $2}"
       }
     ],
     "mirrors": [
@@ -421,8 +367,7 @@
     "variants": [
       "https://better.fyi/blockerList.txt",
       "https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt"
-    ],
-    "scan": false
+    ]
   },
   "binarydefense": {
     "color": "black",
@@ -430,14 +375,12 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "NR>13{print $0}",
-        "discovery": false
+        "rule": "NR>13{print $0}"
       }
     ],
     "mirrors": [
       "https://www.binarydefense.com/banlist.txt"
-    ],
-    "scan": false
+    ]
   },
   "blackbird": {
     "color": "black",
@@ -445,14 +388,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print $0}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print $0}"
       }
     ],
     "mirrors": [
       "https://getblackbird.net/blacklist/hosts.txt"
-    ],
-    "scan": false
+    ]
   },
   "blindferret": {
     "color": "black",
@@ -460,14 +401,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/blindferret?json"
-    ],
-    "scan": false
+    ]
   },
   "blockada_ddgtrackerradar": {
     "color": "black",
@@ -475,15 +414,13 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>6{print $0}",
-        "discovery": false
+        "rule": "NR>6{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/ddgtrackerradar/standard/hosts.txt",
       "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt"
-    ],
-    "scan": false
+    ]
   },
   "blocklist_de": {
     "color": "black",
@@ -491,21 +428,18 @@
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]+(\\.|$)){4}/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]+(\\.|$)){4}/{print $0}"
       },
       {
         "engine": "gawk",
         "format": "ipv6",
-        "rule": "/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/{print $0}",
-        "discovery": false
+        "rule": "/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/{print $0}"
       }
     ],
     "mirrors": [
       "https://lists.blocklist.de/lists/all.txt",
       "https://www.blocklist.de/downloads/export-ips_all.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_abuse": {
     "_comment": "CONTAINS IPV4 ADDRESSES!",
@@ -514,15 +448,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/abuse-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/abuse-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_ads": {
     "color": "black",
@@ -530,15 +462,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/ads-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/ads-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_crypto": {
     "color": "black",
@@ -546,15 +476,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/crypto-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/crypto-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_drugs": {
     "color": "black",
@@ -562,15 +490,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/drugs-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/drugs-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_facebook": {
     "color": "black",
@@ -578,15 +504,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/facebook-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/facebook-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_fraud": {
     "color": "black",
@@ -594,15 +518,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/fraud-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/fraud-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_gambling": {
     "color": "black",
@@ -610,15 +532,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/gambling-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/gambling-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_malware": {
     "color": "black",
@@ -626,15 +546,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/malware-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/malware-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_phishing": {
     "color": "black",
@@ -642,15 +560,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/phishing-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/phishing-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_piracy": {
     "color": "black",
@@ -658,15 +574,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/piracy-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/piracy-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_porn": {
     "color": "black",
@@ -674,15 +588,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/porn-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/porn-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_ransomware": {
     "color": "black",
@@ -690,15 +602,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/ransomware-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/ransomware-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_redirect": {
     "color": "black",
@@ -706,15 +616,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/redirect-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/redirect-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_scam": {
     "color": "black",
@@ -722,15 +630,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/scam-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/scam-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_smart_tv": {
     "color": "black",
@@ -738,15 +644,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/smart-tv-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/smart-tv-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_tiktok": {
     "color": "black",
@@ -754,15 +658,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/tiktok-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/tiktok-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_torrent": {
     "color": "black",
@@ -770,15 +672,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/torrent-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/torrent-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_tracking": {
     "color": "black",
@@ -786,15 +686,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/tracking-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/tracking-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "blp_whatsapp": {
     "color": "black",
@@ -802,15 +700,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/whatsapp-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/whatsapp-nl.txt"
-    ],
-    "scan": false
+    ]
   },
   "botvrij_blocklist": {
     "color": "black",
@@ -818,14 +714,12 @@
       {
         "engine": "miller",
         "format": "domain",
-        "rule": "value",
-        "discovery": false
+        "rule": "value"
       }
     ],
     "mirrors": [
       "https://www.botvrij.eu/data/blocklist/blocklist_full.csv"
-    ],
-    "scan": false
+    ]
   },
   "botvrij_domain": {
     "color": "black",
@@ -833,14 +727,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://www.botvrij.eu/data/ioclist.domain.raw"
-    ],
-    "scan": false
+    ]
   },
   "botvrij_dst_ip": {
     "color": "black",
@@ -848,14 +740,12 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://www.botvrij.eu/data/ioclist.ip-dst.raw"
-    ],
-    "scan": false
+    ]
   },
   "botvrij_hostname": {
     "color": "black",
@@ -863,14 +753,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://www.botvrij.eu/data/ioclist.hostname.raw"
-    ],
-    "scan": false
+    ]
   },
   "botvrij_misp": {
     "color": "black",
@@ -878,14 +766,12 @@
       {
         "engine": "mawk",
         "format": "ivp4",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://www.botvrij.eu/data/misp.text_ip-dst.ADMIN.txt"
-    ],
-    "scan": false
+    ]
   },
   "botvrij_url": {
     "color": "black",
@@ -893,14 +779,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print tolower($3)}",
-        "discovery": false
+        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print tolower($3)}"
       }
     ],
     "mirrors": [
       "https://www.botvrij.eu/data/ioclist.url.raw"
-    ],
-    "scan": false
+    ]
   },
   "censys": {
     "color": "black",
@@ -908,14 +792,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/censys?json"
-    ],
-    "scan": false
+    ]
   },
   "charles_haley": {
     "color": "black",
@@ -923,14 +805,12 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "NR>1{print $3}",
-        "discovery": false
+        "rule": "NR>1{print $3}"
       }
     ],
     "mirrors": [
       "http://charles.the-haleys.org/ssh_dico_attack_hdeny_format.php/hostsdeny.txt"
-    ],
-    "scan": false
+    ]
   },
   "ciarmy": {
     "_comment": "Produces some unique IPs apart from 'cinsscore'",
@@ -939,14 +819,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/ciarmy?json"
-    ],
-    "scan": false
+    ]
   },
   "cinsscore": {
     "color": "black",
@@ -954,15 +832,13 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://cinsscore.com/list/ci-badguys.txt",
       "http://www.ciarmy.com/list/ci-badguys.txt"
-    ],
-    "scan": false
+    ]
   },
   "clefspeare13_porn": {
     "color": "black",
@@ -970,15 +846,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/Clefspeare13/pornhosts/master/0.0.0.0/hosts",
       "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/clefspeare13/hosts"
-    ],
-    "scan": false
+    ]
   },
   "coinblockerlists_browser": {
     "color": "black",
@@ -986,8 +860,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
@@ -997,8 +870,7 @@
     ],
     "variants": [
       "https://block.energized.pro/assets/sources/filter/zerodot1-coinblockerlists-browser.txt"
-    ],
-    "scan": false
+    ]
   },
   "coinblockerlists_list": {
     "color": "black",
@@ -1006,8 +878,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
@@ -1017,8 +888,7 @@
     ],
     "variants": [
       "https://block.energized.pro/assets/sources/filter/zerodot1-coinblockerlists.txt"
-    ],
-    "scan": false
+    ]
   },
   "coinblockerlists_optional": {
     "color": "black",
@@ -1026,8 +896,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
@@ -1037,8 +906,7 @@
     ],
     "variants": [
       "https://block.energized.pro/assets/sources/filter/zerodot1-coinblockerlists-optional.txt"
-    ],
-    "scan": false
+    ]
   },
   "coinblockerlists_whitelist": {
     "color": "white",
@@ -1046,16 +914,14 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/raw/master/white_list.txt",
       "https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/white_list.txt",
       "https://zerodot1.gitlab.io/CoinBlockerLists/white_list.txt"
-    ],
-    "scan": false
+    ]
   },
   "cryptolaemus_dbucket": {
     "_comment": "All reported domains seem to appear in the dbucket, so use it for domains.",
@@ -1064,20 +930,17 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print $0}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print $0}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(:|$)/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(:|$)/{print $0}"
       }
     ],
     "mirrors": [
       "https://paste.cryptolaemus.com/dbucket/"
-    ],
-    "scan": false
+    ]
   },
   "cryptolaemus_feed": {
     "_comment": "Recently reported IPs appear in the feed.",
@@ -1086,14 +949,12 @@
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "BEGIN{RS=\"([0-9]+\\\\.){3}[0-9]+\"}RT{print RT}",
-        "discovery": false
+        "rule": "BEGIN{RS=\"([0-9]+\\\\.){3}[0-9]+\"}RT{print RT}"
       }
     ],
     "mirrors": [
       "https://paste.cryptolaemus.com/feed.xml"
-    ],
-    "scan": false
+    ]
   },
   "cybercrime_all": {
     "color": "black",
@@ -1101,20 +962,17 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "BEGIN{FS=\"/\"}$1~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "BEGIN{FS=\"/\"}$1~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "BEGIN{FS=\"/\"}$1~/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(:|$)/{split($1,a,\":\");print a[1]}",
-        "discovery": false
+        "rule": "BEGIN{FS=\"/\"}$1~/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(:|$)/{split($1,a,\":\");print a[1]}"
       }
     ],
     "mirrors": [
       "https://cybercrime-tracker.net/all.php"
-    ],
-    "scan": false
+    ]
   },
   "cybergreen": {
     "color": "black",
@@ -1122,14 +980,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/cybergreen?json"
-    ],
-    "scan": false
+    ]
   },
   "cybersaiyan": {
     "color": "black",
@@ -1137,14 +993,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print tolower($0)}",
-        "discovery": false
+        "rule": "{print tolower($0)}"
       }
     ],
     "mirrors": [
       "https://infosharing.cybersaiyan.it/feeds/CS-PIHOLE"
-    ],
-    "scan": false
+    ]
   },
   "cyberthreat": {
     "_comment": "The 'urls.txt' downloads at KBs/s, and the 'ips.txt' file is empty.",
@@ -1153,14 +1007,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>1{print $0}",
-        "discovery": false
+        "rule": "NR>1{print $0}"
       }
     ],
     "mirrors": [
       "https://blocklist.cyberthreatcoalition.org/vetted/domain.txt"
-    ],
-    "scan": false
+    ]
   },
   "dan_me_uk": {
     "color": "white",
@@ -1168,20 +1020,17 @@
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       },
       {
         "engine": "gawk",
         "format": "ipv6",
-        "rule": "/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/{print $0}",
-        "discovery": false
+        "rule": "/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/{print $0}"
       }
     ],
     "mirrors": [
       "https://www.dan.me.uk/torlist/"
-    ],
-    "scan": false
+    ]
   },
   "darklist": {
     "color": "black",
@@ -1189,14 +1038,12 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "NR>3{print $0}",
-        "discovery": false
+        "rule": "NR>3{print $0}"
       }
     ],
     "mirrors": [
       "https://www.darklist.de/raw.php"
-    ],
-    "scan": false
+    ]
   },
   "digitalside_domains": {
     "color": "black",
@@ -1204,15 +1051,13 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>11{print $0}",
-        "discovery": false
+        "rule": "NR>11{print $0}"
       }
     ],
     "mirrors": [
       "https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt",
       "https://raw.githubusercontent.com/davidonzo/Threat-Intel/master/lists/latestdomains.txt"
-    ],
-    "scan": false
+    ]
   },
   "digitalside_ips": {
     "color": "black",
@@ -1220,15 +1065,13 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "NR>11{print $0}",
-        "discovery": false
+        "rule": "NR>11{print $0}"
       }
     ],
     "mirrors": [
       "https://osint.digitalside.it/Threat-Intel/lists/latestips.txt",
       "https://raw.githubusercontent.com/davidonzo/Threat-Intel/master/lists/latestips.txt"
-    ],
-    "scan": false
+    ]
   },
   "emergingthreats_block_ips": {
     "color": "black",
@@ -1236,14 +1079,12 @@
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt"
-    ],
-    "scan": false
+    ]
   },
   "emergingthreats_compromised": {
     "color": "black",
@@ -1251,14 +1092,12 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://rules.emergingthreats.net/blockrules/compromised-ips.txt"
-    ],
-    "scan": false
+    ]
   },
   "energized_unblock": {
     "color": "white",
@@ -1266,14 +1105,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/EnergizedProtection/unblock/master/basic/formats/domains.txt"
-    ],
-    "scan": false
+    ]
   },
   "energized_xtreme": {
     "color": "black",
@@ -1281,14 +1118,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://block.energized.pro/extensions/xtreme/formats/domains.txt"
-    ],
-    "scan": false
+    ]
   },
   "erratasec": {
     "color": "black",
@@ -1296,14 +1131,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/erratasec?json"
-    ],
-    "scan": false
+    ]
   },
   "exodus_domains": {
     "color": "black",
@@ -1311,8 +1144,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
@@ -1322,8 +1154,7 @@
       "https://etip.exodus-privacy.eu.org/trackers/export",
       "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/exodusprivacy/standard/hosts.txt",
       "https://blokada.org/blocklists/exodusprivacy/standard/hosts.txt"
-    ],
-    "scan": false
+    ]
   },
   "exodus_ips": {
     "color": "black",
@@ -1331,14 +1162,12 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://github.com/T145/black-mirror/releases/download/latest/exodus_ips.txt"
-    ],
-    "scan": false
+    ]
   },
   "fanboy_antifonts": {
     "color": "black",
@@ -1346,15 +1175,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}",
-        "discovery": false
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
       }
     ],
     "mirrors": [
       "https://secure.fanboy.co.nz/fanboy-antifonts.txt",
       "https://fanboy.co.nz/fanboy-antifonts.txt"
-    ],
-    "scan": false
+    ]
   },
   "fanboy_cookiemonster": {
     "color": "black",
@@ -1362,8 +1189,7 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}",
-        "discovery": false
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
       }
     ],
     "mirrors": [
@@ -1372,8 +1198,7 @@
     ],
     "variants": [
       "https://block.energized.pro/assets/sources/filter/fanboy-cookiemonster.txt"
-    ],
-    "scan": false
+    ]
   },
   "fanboy_indian": {
     "color": "black",
@@ -1381,8 +1206,7 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}",
-        "discovery": false
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
       }
     ],
     "mirrors": [
@@ -1391,8 +1215,7 @@
     ],
     "variants": [
       "https://block.energized.pro/assets/sources/filter/fanboy-indian.txt"
-    ],
-    "scan": false
+    ]
   },
   "fanboy_ultimate": {
     "_comment": "The 'anti-facebook' list is covered by other Facebook hate.",
@@ -1401,8 +1224,7 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}",
-        "discovery": false
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
       }
     ],
     "mirrors": [
@@ -1411,8 +1233,7 @@
     ],
     "variants": [
       "https://block.energized.pro/assets/sources/filter/fanboy-ultimate.txt"
-    ],
-    "scan": false
+    ]
   },
   "fanboy_vietnam": {
     "_comment": "Using the pre-optimized Energized mirror: the original source is deprecated.",
@@ -1421,8 +1242,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>9{print $2}",
-        "discovery": false
+        "rule": "NR>9{print $2}"
       }
     ],
     "mirrors": [
@@ -1431,8 +1251,7 @@
     "variants": [
       "https://secure.fanboy.co.nz/fanboy-vietnam.txt",
       "https://fanboy.co.nz/fanboy-vietnam.txt"
-    ],
-    "scan": false
+    ]
   },
   "filtri_dns": {
     "color": "black",
@@ -1440,14 +1259,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://filtri-dns.ga/filtri.txt"
-    ],
-    "scan": false
+    ]
   },
   "firehol_level4": {
     "color": "black",
@@ -1455,14 +1272,12 @@
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level4.netset"
-    ],
-    "scan": false
+    ]
   },
   "firetv_tracking": {
     "color": "black",
@@ -1470,14 +1285,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/AmazonFireTV.txt"
-    ],
-    "scan": false
+    ]
   },
   "games_tracking": {
     "color": "black",
@@ -1485,14 +1298,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Main-Template/hosts"
-    ],
-    "scan": false
+    ]
   },
   "gaming": {
     "color": "black",
@@ -1500,14 +1311,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/dupontjean/pihole-blocklist/master/game.txt"
-    ],
-    "scan": false
+    ]
   },
   "geoffrey_frogeye_firstparty": {
     "_comment": "Has a 'firstparty-only-trackers' list, which is smaller.",
@@ -1516,14 +1325,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://hostfiles.frogeye.fr/firstparty-trackers.txt"
-    ],
-    "scan": false
+    ]
   },
   "geoffrey_frogeye_multiparty": {
     "_comment": "Has a 'multiparty-only-trackers' list, which is smaller.",
@@ -1532,14 +1339,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://hostfiles.frogeye.fr/multiparty-trackers.txt"
-    ],
-    "scan": false
+    ]
   },
   "h3x": {
     "_comment": "Has IPv4 addresses; no ranges: can have domains",
@@ -1548,14 +1353,12 @@
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "BEGIN{RS=\"([0-9]+\\\\.){3}[0-9]+\"}RT{print RT}",
-        "discovery": false
+        "rule": "BEGIN{RS=\"([0-9]+\\\\.){3}[0-9]+\"}RT{print RT}"
       }
     ],
     "mirrors": [
       "https://tracker.h3x.eu/api/sites_1week.php"
-    ],
-    "scan": false
+    ]
   },
   "hipo_universities": {
     "color": "white",
@@ -1563,14 +1366,12 @@
       {
         "engine": "jq",
         "format": "domain",
-        "rule": ".[] | .domains | join(\"\\n\")",
-        "discovery": false
+        "rule": ".[] | .domains | join(\"\\n\")"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json"
-    ],
-    "scan": false
+    ]
   },
   "internetcensus": {
     "color": "black",
@@ -1578,14 +1379,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/internetcensus?json"
-    ],
-    "scan": false
+    ]
   },
   "ios_trackers": {
     "color": "black",
@@ -1593,14 +1392,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/jakejarvis/ios-trackers/master/blocklist.txt"
-    ],
-    "scan": false
+    ]
   },
   "ipip": {
     "color": "black",
@@ -1608,14 +1405,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/ipip?json"
-    ],
-    "scan": false
+    ]
   },
   "kriskintel_covid": {
     "color": "black",
@@ -1623,14 +1418,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://kriskintel.com/feeds/ktip_covid_domains.txt"
-    ],
-    "scan": false
+    ]
   },
   "kriskintel_domains": {
     "color": "black",
@@ -1638,14 +1431,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://kriskintel.com/feeds/ktip_malicious_domains.txt"
-    ],
-    "scan": false
+    ]
   },
   "kriskintel_ips": {
     "color": "black",
@@ -1653,14 +1444,12 @@
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://kriskintel.com/feeds/ktip_malicious_Ips.txt"
-    ],
-    "scan": false
+    ]
   },
   "kriskintel_ransomware": {
     "color": "black",
@@ -1668,20 +1457,17 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://kriskintel.com/feeds/ktip_ransomware_feeds.txt"
-    ],
-    "scan": false
+    ]
   },
   "lightswitch_ads_and_tracking": {
     "color": "black",
@@ -1689,15 +1475,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/ads-and-tracking-extended.txt",
       "https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt"
-    ],
-    "scan": false
+    ]
   },
   "lightswitch_amp_hosts": {
     "color": "black",
@@ -1705,15 +1489,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/amp-hosts-extended.txt",
       "https://www.github.developerdan.com/hosts/lists/amp-hosts-extended.txt"
-    ],
-    "scan": false
+    ]
   },
   "lightswitch_facebook": {
     "color": "black",
@@ -1721,15 +1503,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/facebook-extended.txt",
       "https://www.github.developerdan.com/hosts/lists/facebook-extended.txt"
-    ],
-    "scan": false
+    ]
   },
   "lightswitch_hate_and_junk": {
     "color": "black",
@@ -1737,15 +1517,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/hate-and-junk-extended.txt",
       "https://www.github.developerdan.com/hosts/lists/hate-and-junk-extended.txt"
-    ],
-    "scan": false
+    ]
   },
   "lightswitch_tracking_aggressive": {
     "color": "black",
@@ -1753,15 +1531,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/tracking-aggressive-extended.txt",
       "https://www.github.developerdan.com/hosts/lists/tracking-aggressive-extended.txt"
-    ],
-    "scan": false
+    ]
   },
   "mailscanner_bad_phishing": {
     "_comment": "Could use the 'phishing.safe.sites.conf' as a whitelist",
@@ -1770,14 +1546,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>5{print $0}",
-        "discovery": false
+        "rule": "NR>5{print $0}"
       }
     ],
     "mirrors": [
       "http://phishing.mailscanner.info/phishing.bad.sites.conf"
-    ],
-    "scan": false
+    ]
   },
   "malsilo_domains": {
     "_comment": "TODO: Add the content from the ips and urls lists.",
@@ -1786,14 +1560,12 @@
       {
         "engine": "miller",
         "format": "domain",
-        "rule": 3,
-        "discovery": false
+        "rule": 3
       }
     ],
     "mirrors": [
       "https://malsilo.gitlab.io/feeds/dumps/domain_list.txt"
-    ],
-    "scan": false
+    ]
   },
   "maltrail": {
     "color": "black",
@@ -1801,14 +1573,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/stamparm/aux/master/maltrail-malware-domains.txt"
-    ],
-    "scan": false
+    ]
   },
   "marktron_fakenews": {
     "color": "black",
@@ -1816,15 +1586,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/marktron/fakenews/master/fakenews",
       "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/fakenews/hosts"
-    ],
-    "scan": false
+    ]
   },
   "matomo_spam": {
     "color": "black",
@@ -1832,14 +1600,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/matomo-org/referrer-spam-list/master/spammers.txt"
-    ],
-    "scan": false
+    ]
   },
   "myip_full_blacklist": {
     "color": "black",
@@ -1847,20 +1613,17 @@
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "$1~/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $1}",
-        "discovery": false
+        "rule": "$1~/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $1}"
       },
       {
         "engine": "gawk",
         "format": "ipv6",
-        "rule": "$1~/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/{print $1}",
-        "discovery": false
+        "rule": "$1~/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/{print $1}"
       }
     ],
     "mirrors": [
       "https://myip.ms/files/blacklist/general/full_blacklist_database.zip"
-    ],
-    "scan": false
+    ]
   },
   "myip_webcrawlers": {
     "color": "black",
@@ -1868,14 +1631,12 @@
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://myip.ms/files/bots/live_webcrawlers.txt"
-    ],
-    "scan": false
+    ]
   },
   "netsystems": {
     "color": "black",
@@ -1883,14 +1644,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/netsystems?json"
-    ],
-    "scan": false
+    ]
   },
   "not_on_my_shift": {
     "_comment": "May want to use 'https://orca.pet/notonmyshift/hosts.txt' to block www.* hosts.",
@@ -1899,14 +1658,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://orca.pet/notonmyshift/domains.txt"
-    ],
-    "scan": false
+    ]
   },
   "notracking": {
     "color": "black",
@@ -1914,14 +1671,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/notracking/hosts-blocklists/master/dnscrypt-proxy/dnscrypt-proxy.blacklist.txt"
-    ],
-    "scan": false
+    ]
   },
   "npc_hosts": {
     "color": "black",
@@ -1929,14 +1684,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "BEGIN{OFS=\"\\n\"}$0~/^[^#]/{$1=\"\"; printf \"%s\",$0}",
-        "discovery": false
+        "rule": "BEGIN{OFS=\"\\n\"}$0~/^[^#]/{$1=\"\"; printf \"%s\",$0}"
       }
     ],
     "mirrors": [
       "https://npc.0am.jp/hosts.php?dl=1"
-    ],
-    "scan": false
+    ]
   },
   "oisd_extra": {
     "color": "black",
@@ -1944,14 +1697,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>13{print $0}",
-        "discovery": false
+        "rule": "NR>13{print $0}"
       }
     ],
     "mirrors": [
       "https://dbl.oisd.nl/extra/"
-    ],
-    "scan": false
+    ]
   },
   "oisd_full": {
     "color": "black",
@@ -1959,14 +1710,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>13{print $0}",
-        "discovery": false
+        "rule": "NR>13{print $0}"
       }
     ],
     "mirrors": [
       "https://dbl.oisd.nl"
-    ],
-    "scan": false
+    ]
   },
   "onyphe": {
     "color": "black",
@@ -1974,14 +1723,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/onyphe?json"
-    ],
-    "scan": false
+    ]
   },
   "opendbl_bruteforceblocker": {
     "color": "black",
@@ -1989,14 +1736,12 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "NR>1",
-        "discovery": false
+        "rule": "NR>1"
       }
     ],
     "mirrors": [
       "https://www.opendbl.net/lists/bruteforce.list"
-    ],
-    "scan": false
+    ]
   },
   "opendbl_talos": {
     "color": "black",
@@ -2004,14 +1749,12 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "NR>1",
-        "discovery": false
+        "rule": "NR>1"
       }
     ],
     "mirrors": [
       "https://www.opendbl.net/lists/talos.list"
-    ],
-    "scan": false
+    ]
   },
   "openphish_feed": {
     "color": "black",
@@ -2019,14 +1762,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print tolower($3)}",
-        "discovery": false
+        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print tolower($3)}"
       }
     ],
     "mirrors": [
       "https://openphish.com/feed.txt"
-    ],
-    "scan": false
+    ]
   },
   "phishing_army": {
     "color": "black",
@@ -2034,14 +1775,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://phishing.army/download/phishing_army_blocklist_extended.txt"
-    ],
-    "scan": false
+    ]
   },
   "pornrecords_domains": {
     "color": "black",
@@ -2049,14 +1788,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/domains.list"
-    ],
-    "scan": false
+    ]
   },
   "pornrecords_hosts": {
     "color": "black",
@@ -2064,14 +1801,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/hosts.list"
-    ],
-    "scan": false
+    ]
   },
   "pornrecords_mobile": {
     "color": "black",
@@ -2079,14 +1814,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/mobile.list"
-    ],
-    "scan": false
+    ]
   },
   "pornrecords_rpz_dnsname": {
     "color": "black",
@@ -2094,14 +1827,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/wildcard.rpz-nsdname"
-    ],
-    "scan": false
+    ]
   },
   "pornrecords_rpz_ip": {
     "color": "black",
@@ -2109,14 +1840,12 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/rpz-ip"
-    ],
-    "scan": false
+    ]
   },
   "pornrecords_snuff": {
     "color": "black",
@@ -2124,14 +1853,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/snuff.list"
-    ],
-    "scan": false
+    ]
   },
   "pornrecords_wildcard": {
     "color": "black",
@@ -2139,14 +1866,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/mypdns/porn-records/master/submit_here/adult.mypdns.cloud/wildcard.list"
-    ],
-    "scan": false
+    ]
   },
   "public_dns": {
     "color": "white",
@@ -2154,20 +1879,17 @@
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       },
       {
         "engine": "gawk",
         "format": "ipv6",
-        "rule": "/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/{print $0}",
-        "discovery": false
+        "rule": "/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/{print $0}"
       }
     ],
     "mirrors": [
       "https://public-dns.info/nameservers.txt"
-    ],
-    "scan": false
+    ]
   },
   "quantum_abuse": {
     "color": "black",
@@ -2175,14 +1897,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual%20lists/The_Quantum_Abuse-List.txt"
-    ],
-    "scan": false
+    ]
   },
   "quantum_privacy": {
     "color": "black",
@@ -2190,14 +1910,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual%20lists/The_Quantum_Privacy-list.txt"
-    ],
-    "scan": false
+    ]
   },
   "quantum_simple_ads": {
     "color": "black",
@@ -2205,14 +1923,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual%20lists/The_Quantum_Simply-ads-list.txt"
-    ],
-    "scan": false
+    ]
   },
   "quantum_youtube_ads": {
     "color": "black",
@@ -2220,14 +1936,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual%20lists/The_Quantum_Youtube-Ads-List.txt"
-    ],
-    "scan": false
+    ]
   },
   "rapid7sonar": {
     "color": "black",
@@ -2235,14 +1949,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/rapid7sonar?json"
-    ],
-    "scan": false
+    ]
   },
   "recyber": {
     "color": "black",
@@ -2250,14 +1962,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/recyber?json"
-    ],
-    "scan": false
+    ]
   },
   "reg_fi": {
     "color": "black",
@@ -2265,14 +1975,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}",
-        "discovery": false
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt"
-    ],
-    "scan": false
+    ]
   },
   "reg_id": {
     "color": "black",
@@ -2280,14 +1988,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}",
-        "discovery": false
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
       }
     ],
     "mirrors": [
       "https://easylist-downloads.adblockplus.org/abpindo+easylist.txt"
-    ],
-    "scan": false
+    ]
   },
   "reg_kr": {
     "color": "black",
@@ -2295,14 +2001,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}",
-        "discovery": false
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/List-KR/List-KR/master/filter.txt"
-    ],
-    "scan": false
+    ]
   },
   "reg_pl1": {
     "color": "black",
@@ -2310,14 +2014,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt"
-    ],
-    "scan": false
+    ]
   },
   "reg_pl2": {
     "color": "black",
@@ -2325,14 +2027,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hostfile.txt"
-    ],
-    "scan": false
+    ]
   },
   "reg_se": {
     "color": "black",
@@ -2340,14 +2040,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt"
-    ],
-    "scan": false
+    ]
   },
   "resecure_clop": {
     "color": "black",
@@ -2355,20 +2053,17 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://rescure.me/malware/clop.txt"
-    ],
-    "scan": false
+    ]
   },
   "resecure_covid": {
     "color": "black",
@@ -2376,14 +2071,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://rescure.me/covid.txt"
-    ],
-    "scan": false
+    ]
   },
   "resecure_domain_blacklist": {
     "color": "black",
@@ -2391,14 +2084,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://rescure.me/rescure_domain_blacklist.txt"
-    ],
-    "scan": false
+    ]
   },
   "resecure_ekans": {
     "color": "black",
@@ -2406,20 +2097,17 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://rescure.me/malware/ekans.txt"
-    ],
-    "scan": false
+    ]
   },
   "resecure_ip_blacklist": {
     "color": "black",
@@ -2427,14 +2115,12 @@
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://rescure.me/rescure_blacklist.txt"
-    ],
-    "scan": false
+    ]
   },
   "resecure_maze": {
     "color": "black",
@@ -2442,20 +2128,17 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://rescure.me/malware/maze.txt"
-    ],
-    "scan": false
+    ]
   },
   "resecure_netwalker": {
     "color": "black",
@@ -2463,20 +2146,17 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://rescure.me/malware/netwalker.txt"
-    ],
-    "scan": false
+    ]
   },
   "resecure_ryuk": {
     "color": "black",
@@ -2484,20 +2164,17 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://rescure.me/malware/ryuk.txt"
-    ],
-    "scan": false
+    ]
   },
   "resecure_sobinokibi": {
     "color": "black",
@@ -2505,20 +2182,17 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://rescure.me/malware/sodinokibi.txt"
-    ],
-    "scan": false
+    ]
   },
   "resecure_try2cry": {
     "color": "black",
@@ -2526,20 +2200,17 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://rescure.me/malware/try2cry.txt"
-    ],
-    "scan": false
+    ]
   },
   "resecure_wastedlocker": {
     "color": "black",
@@ -2547,20 +2218,17 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://rescure.me/malware/wastedlocker.txt"
-    ],
-    "scan": false
+    ]
   },
   "rutgers": {
     "color": "black",
@@ -2568,14 +2236,12 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://report.rutgers.edu/DROP/attackers"
-    ],
-    "scan": false
+    ]
   },
   "scorecard": {
     "color": "black",
@@ -2583,14 +2249,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/scorecard?json"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_ads": {
     "color": "black",
@@ -2598,14 +2262,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Ads"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_adult": {
     "color": "black",
@@ -2613,14 +2275,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Adult"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_apple": {
     "color": "black",
@@ -2628,14 +2288,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Apple"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_bloat": {
     "color": "black",
@@ -2643,14 +2301,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Bloat"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_chat": {
     "color": "black",
@@ -2658,14 +2314,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Chat"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_cryptocurrency": {
     "color": "black",
@@ -2673,14 +2327,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Cryptocurrency"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_dating": {
     "color": "black",
@@ -2688,14 +2340,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Dating"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_dynamic": {
     "color": "black",
@@ -2703,14 +2353,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Dynamic"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_free": {
     "color": "black",
@@ -2718,14 +2366,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Free"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_gambling": {
     "color": "black",
@@ -2733,14 +2379,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Gambling"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_junk": {
     "color": "black",
@@ -2748,14 +2392,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Junk"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_malware": {
     "color": "black",
@@ -2763,14 +2405,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Malware"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_marketing_email": {
     "color": "black",
@@ -2778,14 +2418,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Marketing-Email"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_marketing_web": {
     "color": "black",
@@ -2793,14 +2431,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10 && $0~/^[^#]/{print $1}",
-        "discovery": false
+        "rule": "NR>10 && $0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Marketing"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_microsoft": {
     "color": "black",
@@ -2808,14 +2444,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10 && $0~/^[^#]/{print $1}",
-        "discovery": false
+        "rule": "NR>10 && $0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Microsoft"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_remote": {
     "color": "black",
@@ -2823,14 +2457,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Remote"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_risk": {
     "color": "black",
@@ -2838,14 +2470,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10 && $0~/^[^#]/{print $1}",
-        "discovery": false
+        "rule": "NR>10 && $0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Risk"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_scam": {
     "color": "black",
@@ -2853,14 +2483,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Scam"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_shock": {
     "color": "black",
@@ -2868,14 +2496,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Shock"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_tracking": {
     "color": "black",
@@ -2883,14 +2509,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Tracking"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_tunnels": {
     "color": "black",
@@ -2898,14 +2522,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}",
-        "discovery": false
+        "rule": "NR>10{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Tunnels"
-    ],
-    "scan": false
+    ]
   },
   "shadowwhisperer_whitelist": {
     "color": "white",
@@ -2913,14 +2535,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Whitelists/Filter"
-    ],
-    "scan": false
+    ]
   },
   "shallalist": {
     "color": "black",
@@ -2928,20 +2548,17 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://www.shallalist.de/Downloads/shallalist.tar.gz"
-    ],
-    "scan": false
+    ]
   },
   "shodan": {
     "color": "black",
@@ -2949,14 +2566,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/shodan?json"
-    ],
-    "scan": false
+    ]
   },
   "sinfonietta_gambling": {
     "color": "black",
@@ -2964,15 +2579,13 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>6{print $2}",
-        "discovery": false
+        "rule": "NR>6{print $2}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/gambling-hosts",
       "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/gambling/hosts"
-    ],
-    "scan": false
+    ]
   },
   "sinfonietta_porn": {
     "_comment": "Using the pre-optimized Energized mirror.",
@@ -2981,8 +2594,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>9{print $2}",
-        "discovery": false
+        "rule": "NR>9{print $2}"
       }
     ],
     "mirrors": [
@@ -2991,8 +2603,7 @@
     "variants": [
       "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts",
       "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/sinfonietta/hosts"
-    ],
-    "scan": false
+    ]
   },
   "sinfonietta_snuff": {
     "color": "black",
@@ -3000,16 +2611,14 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>2{print $2}",
-        "discovery": false
+        "rule": "NR>2{print $2}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/snuff-hosts",
       "https://block.energized.pro/assets/sources/filter/sinfonietta-snuff.txt",
       "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/sinfonietta-snuff/hosts"
-    ],
-    "scan": false
+    ]
   },
   "sinfonietta_social": {
     "color": "black",
@@ -3017,15 +2626,13 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $2}",
-        "discovery": false
+        "rule": "$0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/social-hosts",
       "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/social/sinfonietta/hosts"
-    ],
-    "scan": false
+    ]
   },
   "smarttv_tracking": {
     "color": "black",
@@ -3033,14 +2640,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt"
-    ],
-    "scan": false
+    ]
   },
   "someonewhocares": {
     "_comment": "Using the pre-optimized Energized mirror.",
@@ -3049,8 +2654,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>9{print $2}",
-        "discovery": false
+        "rule": "NR>9{print $2}"
       }
     ],
     "mirrors": [
@@ -3060,8 +2664,7 @@
       "https://someonewhocares.org/hosts/zero/hosts",
       "https://raw.githubusercontent.com/austinheap/sophos-xg-block-lists/master/dan-pollock-someonewhocares-org.txt",
       "https://raw.githubusercontent.com/hectorm/hmirror/master/data/someonewhocares.org/list.txt"
-    ],
-    "scan": false
+    ]
   },
   "spamhaus_drop": {
     "color": "black",
@@ -3069,14 +2672,12 @@
       {
         "engine": "mawk",
         "format": "ivp4",
-        "rule": "NR>4{print $1}",
-        "discovery": false
+        "rule": "NR>4{print $1}"
       }
     ],
     "mirrors": [
       "https://www.spamhaus.org/drop/drop.txt"
-    ],
-    "scan": false
+    ]
   },
   "spamhaus_edrop": {
     "color": "black",
@@ -3084,14 +2685,12 @@
       {
         "engine": "mawk",
         "format": "ivp4",
-        "rule": "NR>4{print $1}",
-        "discovery": false
+        "rule": "NR>4{print $1}"
       }
     ],
     "mirrors": [
       "https://www.spamhaus.org/drop/edrop.txt"
-    ],
-    "scan": false
+    ]
   },
   "stretchoid": {
     "color": "black",
@@ -3099,14 +2698,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/stretchoid?json"
-    ],
-    "scan": false
+    ]
   },
   "taz_spam": {
     "color": "black",
@@ -3114,14 +2711,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "http://taz.net.au/Mail/SpamDomains"
-    ],
-    "scan": false
+    ]
   },
   "threatcrowd_domains": {
     "color": "black",
@@ -3129,14 +2724,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://threatcrowd.org/feeds/domains.txt"
-    ],
-    "scan": false
+    ]
   },
   "threatcrowd_inc": {
     "color": "black",
@@ -3144,14 +2737,12 @@
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://threatcrowd.org/inc/blacklist.txt"
-    ],
-    "scan": false
+    ]
   },
   "threatcrowd_ips": {
     "color": "black",
@@ -3159,14 +2750,12 @@
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://threatcrowd.org/feeds/ips.txt"
-    ],
-    "scan": false
+    ]
   },
   "threatsourcing_dns_names": {
     "color": "black",
@@ -3174,20 +2763,17 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print $0}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print $0}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(:|$)/{sub(/:.*/,\"\",$0); print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(:|$)/{sub(/:.*/,\"\",$0); print $0}"
       }
     ],
     "mirrors": [
       "https://www.threatsourcing.com/dnall-free.txt"
-    ],
-    "scan": false
+    ]
   },
   "threatsourcing_malicious_ips": {
     "color": "black",
@@ -3195,14 +2781,12 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://www.threatsourcing.com/ipall-free.txt"
-    ],
-    "scan": false
+    ]
   },
   "tiuxo_porn": {
     "color": "black",
@@ -3210,15 +2794,13 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/tiuxo/hosts/master/porn",
       "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/tiuxo/hosts"
-    ],
-    "scan": false
+    ]
   },
   "tor_bulkexitlist": {
     "color": "white",
@@ -3226,14 +2808,12 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://check.torproject.org/torbulkexitlist"
-    ],
-    "scan": false
+    ]
   },
   "turris": {
     "_comment": "TODO: Use miller to check this file.",
@@ -3242,20 +2822,17 @@
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "BEGIN{FS=\",\"}$1~/^([0-9]+(\\.|$)){4}/{print $1}",
-        "discovery": false
+        "rule": "BEGIN{FS=\",\"}$1~/^([0-9]+(\\.|$)){4}/{print $1}"
       },
       {
         "engine": "gawk",
         "format": "ipv6",
-        "rule": "BEGIN{FS=\",\"}$1~/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/{print $1}",
-        "discovery": false
+        "rule": "BEGIN{FS=\",\"}$1~/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/{print $1}"
       }
     ],
     "mirrors": [
       "https://project.turris.cz/greylist-data/greylist-latest.csv"
-    ],
-    "scan": false
+    ]
   },
   "univmichigan": {
     "color": "black",
@@ -3263,14 +2840,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/univmichigan?json"
-    ],
-    "scan": false
+    ]
   },
   "univsydney": {
     "color": "black",
@@ -3278,14 +2853,12 @@
       {
         "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4",
-        "discovery": false
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/univsydney?json"
-    ],
-    "scan": false
+    ]
   },
   "unrealsecurity": {
     "color": "black",
@@ -3293,14 +2866,12 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://router.unrealsec.eu/badips"
-    ],
-    "scan": false
+    ]
   },
   "ut_capitole": {
     "color": "black",
@@ -3308,20 +2879,17 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{if($1!~/\\.free\\.fr$/){if($1~/^0\\.0\\.0\\.0/){sub(/0.0.0.0/,\"\");print}else{print tolower($1)}}}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{if($1!~/\\.free\\.fr$/){if($1~/^0\\.0\\.0\\.0/){sub(/0.0.0.0/,\"\");print}else{print tolower($1)}}}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}",
-        "discovery": false
+        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/{print $0}"
       }
     ],
     "mirrors": [
       "https://dsi.ut-capitole.fr/blacklists/download/blacklists.tar.gz"
-    ],
-    "scan": false
+    ]
   },
   "voipbl": {
     "color": "black",
@@ -3329,14 +2897,12 @@
       {
         "engine": "mawk",
         "format": "ivp4",
-        "rule": "NR>1{print $0}",
-        "discovery": false
+        "rule": "NR>1{print $0}"
       }
     ],
     "mirrors": [
       "https://voipbl.org/update"
-    ],
-    "scan": false
+    ]
   },
   "vxvault": {
     "_comment": "Can use 'http://vxvault.net/ViriList.php?s=0&m=100', where 's'=pagenum, 'm'=displaycount, but the list used is sufficient.",
@@ -3345,20 +2911,17 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print tolower($3)}",
-        "discovery": false
+        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print tolower($3)}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([0-9]{1,3}\\.){3}[0-9]{1,3}+(\\/|:|$)/{print tolower($3)}",
-        "discovery": false
+        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([0-9]{1,3}\\.){3}[0-9]{1,3}+(\\/|:|$)/{print tolower($3)}"
       }
     ],
     "mirrors": [
       "http://vxvault.net/URL_List.php"
-    ],
-    "scan": false
+    ]
   },
   "wally3k": {
     "color": "black",
@@ -3366,14 +2929,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://v.firebog.net/hosts/static/w3kbl.txt"
-    ],
-    "scan": false
+    ]
   },
   "windscribe_controlid_filter_ads": {
     "color": "black",
@@ -3381,20 +2942,17 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}",
-        "discovery": false
+        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
       },
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://assets.windscribe.com/custom_blocklists/ads.txt"
-    ],
-    "scan": false
+    ]
   },
   "windscribe_controlid_filter_adult_content": {
     "color": "black",
@@ -3402,14 +2960,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://assets.windscribe.com/custom_blocklists/porn.txt"
-    ],
-    "scan": false
+    ]
   },
   "windscribe_controlid_filter_clickbait": {
     "color": "black",
@@ -3417,14 +2973,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://assets.windscribe.com/custom_blocklists/clickbait.txt"
-    ],
-    "scan": false
+    ]
   },
   "windscribe_controlid_filter_gambling": {
     "color": "black",
@@ -3432,14 +2986,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://assets.windscribe.com/custom_blocklists/gambling.txt"
-    ],
-    "scan": false
+    ]
   },
   "windscribe_controlid_filter_iot_telemetry": {
     "color": "black",
@@ -3447,14 +2999,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://assets.windscribe.com/custom_blocklists/iot.txt"
-    ],
-    "scan": false
+    ]
   },
   "windscribe_controlid_filter_malware": {
     "color": "black",
@@ -3462,14 +3012,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}",
-        "discovery": false
+        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
       }
     ],
     "mirrors": [
       "https://assets.windscribe.com/custom_blocklists/malware.txt"
-    ],
-    "scan": false
+    ]
   },
   "winhelp": {
     "color": "black",
@@ -3477,8 +3025,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>30 && $0~/^[^#]/{print $2}",
-        "discovery": false
+        "rule": "NR>30 && $0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
@@ -3486,8 +3033,7 @@
     ],
     "variants": [
       "https://block.energized.pro/assets/sources/filter/winhelp2002.mvps.org.txt"
-    ],
-    "scan": false
+    ]
   },
   "winspy_extra": {
     "color": "black",
@@ -3495,14 +3041,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>6{print $2}",
-        "discovery": false
+        "rule": "NR>6{print $2}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/extra_v6.txt"
-    ],
-    "scan": false
+    ]
   },
   "winspy_spy": {
     "_comment": "The v6 lists are smaller in size; save as much as possible.",
@@ -3511,14 +3055,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>6{print $2}",
-        "discovery": false
+        "rule": "NR>6{print $2}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy_v6.txt"
-    ],
-    "scan": false
+    ]
   },
   "winspy_update": {
     "color": "black",
@@ -3526,14 +3068,12 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>6{print $2}",
-        "discovery": false
+        "rule": "NR>6{print $2}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update_v6.txt"
-    ],
-    "scan": false
+    ]
   },
   "yoyo_domains": {
     "color": "black",
@@ -3541,8 +3081,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
@@ -3550,8 +3089,7 @@
     ],
     "variants": [
       "https://block.energized.pro/assets/sources/filter/pgl.yoyo.org.txt"
-    ],
-    "scan": false
+    ]
   },
   "yoyo_ips": {
     "color": "black",
@@ -3559,13 +3097,11 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "{print $0}",
-        "discovery": false
+        "rule": "{print $0}"
       }
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ],
-    "scan": false
+    ]
   }
 }
