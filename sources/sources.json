@@ -2345,24 +2345,6 @@
       "discover": false
     }
   },
-  "opendbl_bruteforceblocker": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "NR>1"
-      }
-    ],
-    "mirrors": [
-      "https://www.opendbl.net/lists/bruteforce.list"
-    ],
-    "scan": {
-      "perform": false,
-      "alive_only": false,
-      "discover": false
-    }
-  },
   "opendbl_talos": {
     "color": "black",
     "filters": [
@@ -4208,5 +4190,26 @@
       "alive_only": false,
       "discover": false
     }
+  },
+  "bruteforceblocker": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "NR>5{print $1}"
+      }
+    ],
+    "mirrors": [
+      "http://danger.rulez.sk/projects/bruteforceblocker/blist.php?mindays=7&mincount=1"
+    ],
+    "scan": {
+      "perform": false,
+      "alive_only": false,
+      "discover": false
+    },
+    "variants": [
+      "https://www.opendbl.net/lists/bruteforce.list"
+    ]
   }
 }

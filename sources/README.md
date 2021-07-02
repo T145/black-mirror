@@ -54,7 +54,7 @@
 *   [360_netlab](https://data.netlab.360.com/)
 *   [cybercrime](https://cybercrime-tracker.net/)
 *   [taz_spam](http://taz.net.au/Mail/)
-*   <strike>[bruteforceblocker](http://danger.rulez.sk/index.php/bruteforceblocker/)</strike>
+*   [bruteforceblocker](http://danger.rulez.sk/index.php/bruteforceblocker/)
 *   [myip_full_blacklist](https://myip.ms/browse/blacklist)
 *   [myip_webcrawlers](https://myip.ms/browse/web_bots)
 *   [CyberSaiyanIT](https://github.com/CyberSaiyanIT/InfoSharing)
@@ -118,9 +118,7 @@
 *   [fanboy](https://secure.fanboy.co.nz/)
 *   [CoinBlockerLists](https://zerodot1.gitlab.io/CoinBlockerListsWeb/)
 *   [ShadowWhisperer](https://github.com/ShadowWhisperer/BlockLists/)
-*   [OpenDBL](https://www.opendbl.net/)
-    *   bruteforceblocker
-    *   talos (cisco)
+*   [OpenDBL/talos](https://www.opendbl.net/)
 
 ### ⚪ Whitelists
 
