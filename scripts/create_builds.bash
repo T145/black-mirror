@@ -110,7 +110,7 @@ main() {
                 if [ -n "$src_list" ]; then
                     get_file_contents "$src_list" |
                         parse_file_contents "$engine" "$rule" |
-                        mawk '!seen[$0]++' |
+                        mawk '!seen[$0]++' | # remove duplicate hosts
                         case $format in
                         domain) output_domain_format "$color" ;;
                         ipv4) output_ipv4_format "$color" ;;
