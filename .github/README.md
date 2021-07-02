@@ -40,21 +40,28 @@
   <tbody>
     <tr>
       <td style="text-align:center">black_domain.txt</td>
-      <td style="text-align:center">Regular domain entries</td>
+      <td style="text-align:center">Domain entries</td>
       <td id="domain-count">9,002,010</td>
       <td id="domain-filesize">197M</td>
       <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_domain.tar.gz">black_domain.tar.gz</a> </td>
     </tr>
     <tr>
       <td style="text-align:center">black_ipv4.txt</td>
-      <td style="text-align:center">Valid IPv4 addresses &amp; CIDR blocks</td>
+      <td style="text-align:center">IPv4 addresses</td>
       <td id="ipv4-count">1,499,220</td>
       <td id="ipv4-filesize">21M</td>
       <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4.tar.gz">black_ipv4.tar.gz</a> </td>
     </tr>
     <tr>
+      <td style="text-align:center">black_ipv4_cidr.txt</td>
+      <td style="text-align:center">IPv4 CIDR blocks</td>
+      <td id="ipv4-cidr-count">WILL-UPDATE</td>
+      <td id="ipv4-cidr-filesize">WILL-UPDATE</td>
+      <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4_cidr.tar.gz">black_ipv4_cidr.tar.gz</a> </td>
+    </tr>
+    <tr>
       <td style="text-align:center">black_ipv6.txt</td>
-      <td style="text-align:center">Valid IPv6 addresses</td>
+      <td style="text-align:center">IPv6 addresses</td>
       <td id="ipv6-count">6,056</td>
       <td id="ipv6-filesize">198K</td>
       <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv6.tar.gz">black_ipv6.tar.gz</a> </td>
