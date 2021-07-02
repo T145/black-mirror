@@ -7,6 +7,21 @@ DOWNLOADS=$(mktemp -d)
 readonly DOWNLOADS
 trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 
+RELEASE_IPV4='ipv4'
+readonly RELEASE_IPV4
+
+RELEASE_IPV4_CIDR='ipv4_cidr'
+readonly RELEASE_IPV4_CIDR
+
+RELEASE_IPV6='ipv6'
+readonly RELEASE_IPV6
+
+RELEASE_DOMAIN='domain'
+readonly RELEASE_DOMAIN
+
+RELEASES=(RELEASE_IPV4 RELEASE_IPV4_CIDR RELEASE_IPV6 RELEASE_DOMAIN)
+readonly RELEASES
+
 # params: src_list
 get_file_contents() {
     case $1 in
@@ -44,24 +59,33 @@ parse_file_contents() {
 # CAN CONTAIN: domains, unicode domains, punycode domains
 # params: color
 output_domain_format() {
-    ./scripts/idn_to_punycode.pl >>"${color}_domain.txt" # convert unicode domains to punycode (everything else falls through)
+    ./scripts/idn_to_punycode.pl >>"${1}_${RELEASE_DOMAIN}.txt" # convert unicode domains to punycode (everything else falls through)
 }
 
 # CAN CONTAIN: addresses, CIDR block ranges, address-address ranges
 # params: color
 output_ipv4_format() {
-    cat -s >>"${color}_ipv4.txt"
+    #cat -s >>"${color}_ipv4.txt"
+    # TODO: cross-reference IPV4 & IPV4 CIDR to remove any ips that fall in a CIDR block
+    while read -r line; do
+        case $line in
+        */*) printf "%s\n",$line >>"${1}_${RELEASE_IPV4_CIDR}.txt" ;; # cidr block
+        *-*) ipcalc "$line" >>"${1}_${RELEASE_IPV4_CIDR}.txt" ;;      # ip range
+        *) printf "%s\n",$line >>"${1}_${RELEASE_IPV4}.txt" ;;        # normal address
+        esac
+    done
 }
 
 # CAN CONTAIN: addresses
 # params: color
 output_ipv6_format() {
-    cat -s >>"${color}_ipv6.txt"
+    cat -s >>"${1}_${RELEASE_IPV6}.txt"
 }
 
 main() {
     local cache_dir
     local src_list
+    local output_base
     local list
 
     for color in 'white' 'black'; do
@@ -95,24 +119,25 @@ main() {
                 # else the download failed and src_list is empty
             done
 
-        for format in 'ipv4' 'ipv6' 'domain'; do
-            list="${color}_${format}.txt"
+        for release in "${RELEASES[@]}"; do
+            output_base="${color}_${release}"
+            list="${output_base}.txt"
 
             if test -f "$list"; then
                 sort -o "$list" -u -S 90% --parallel=4 -T "$cache_dir" "$list"
 
-                if [[ "$color" == 'black' && -f "white_${format}.txt" ]]; then
-                    grep -Fxvf "white_${format}.txt" "$list" | sponge "$list"
+                if [[ "$color" == 'black' ]]; then
+                    if test -f "white_${release}.txt"; then
+                        grep -Fxvf "white_${release}.txt" "$list" | sponge "$list"
+                    fi
+
+                    tar -czf "${output_base}.tar.gz" "$list"
+                    md5sum "${output_base}.tar.gz" >"${output_base}.md5"
+                    sha1sum "${output_base}.tar.gz" >"${output_base}.sha1"
+                    sha256sum "${output_base}.tar.gz" >"${output_base}.sha256"
                 fi
             fi
         done
-    done
-
-    for release in 'black_domain' 'black_ipv4' 'black_ipv6'; do
-        tar -czf "${release}.tar.gz" "${release}.txt"
-        md5sum "${release}.tar.gz" >"${release}.md5"
-        sha1sum "${release}.tar.gz" >"${release}.sha1"
-        sha256sum "${release}.tar.gz" >"${release}.sha256"
     done
 }
 
