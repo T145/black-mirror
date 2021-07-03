@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
-set -euo pipefail # put bash into strict mode
-umask 055         # change all generated file perms from 755 to 700
+#shopt -s extdebug     # or --debugging
+set +H +o history     # disable history features
+set -euET -o pipefail # put bash into strict mode & have it give descriptive errors
+umask 055             # change all generated file perms from 755 to 700
 
 # https://github.com/koalaman/shellcheck/wiki/SC2155
 DOWNLOADS=$(mktemp -d)
