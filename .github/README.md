@@ -55,7 +55,7 @@
     <tr>
       <td style="text-align:center">black_ipv4_cidr.txt</td>
       <td style="text-align:center">IPv4 CIDR blocks</td>
-      <td id="ipv4-cidr-count">1,499,310</td>
+      <td id="ipv4-cidr-count">WILL-UPDATE</td>
       <td id="ipv4-cidr-filesize">72K</td>
       <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/latest/download/black_ipv4_cidr.tar.gz">black_ipv4_cidr.tar.gz</a> </td>
     </tr>
