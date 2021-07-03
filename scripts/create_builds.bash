@@ -84,18 +84,18 @@ main() {
             if test -f "$list"; then
                 sort -o "$list" -u -S 90% --parallel=4 -T "$cache_dir" "$list"
 
-                if [[ "$color" == 'black' && -f "white_${format}.txt" ]]; then
-                    grep -Fxvf "white_${format}.txt" "$list" | sponge "$list"
+                if [[ "$color" == 'black' ]]; then
+                    if test -f "white_${format}.txt"; then
+                        grep -Fxvf "white_${format}.txt" "$list" | sponge "$list"
+                    fi
+
+                    tar -czf "black_${format}.tar.gz" "$list"
+                    md5sum "black_${format}.tar.gz" >"black_${format}.md5"
+                    sha1sum "black_${format}.tar.gz" >"black_${format}.sha1"
+                    sha256sum "black_${format}.tar.gz" >"black_${format}.sha256"
                 fi
             fi
         done
-    done
-
-    for release in 'black_domain' 'black_ipv4' 'black_ipv6'; do
-        tar -czf "${release}.tar.gz" "${release}.txt"
-        md5sum "${release}.tar.gz" >"${release}.md5"
-        sha1sum "${release}.tar.gz" >"${release}.sha1"
-        sha256sum "${release}.tar.gz" >"${release}.sha256"
     done
 }
 
