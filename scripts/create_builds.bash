@@ -4,7 +4,12 @@ umask 055         # change all generated file perms from 755 to 700
 
 # https://github.com/koalaman/shellcheck/wiki/SC2155
 DOWNLOADS=$(mktemp -d)
-readonly DOWNLOADS
+FORMAT_DOMAIN='domain'
+FORMAT_IPV4='ipv4'
+FORMAT_IPV4_CIDR='ipv4_cidr'
+FORMAT_IPV6='ipv6'
+FORMATS=(FORMAT_DOMAIN FORMAT_IPV4 FORMAT_IPV4_CIDR FORMAT_IPV6)
+readonly DOWNLOADS, FORMAT_DOMAIN, FORMAT_IPV4, FORMAT_IPV4_CIDR, FORMAT_IPV6, FORMATS
 trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 
 # params: src_list
@@ -42,6 +47,23 @@ parse_file_contents() {
     esac
 }
 
+# params: format, color
+handle_format_output() {
+    case $1 in
+    domain) ./scripts/idn_to_punycode.pl >>"${2}_${1}.txt" ;;
+    ipv4)
+        while IFS= read -r line; do
+            case $line in
+            */*) printf "%s\n" "$line" >>"${2}_ipv4_cidr.txt" ;; # cidr block
+            *-*) ipcalc "$line" >>"${2}_ipv4_cidr.txt" ;;        # deaggregate ip range
+            *) printf "%s\n" "$line" "${2}_ipv4.txt" ;;          # address
+            esac
+        done
+        ;;
+    ipv6) cat -s >>"${2}_${1}.txt" ;;
+    esac
+}
+
 main() {
     local cache_dir
     local src_list
@@ -69,16 +91,12 @@ main() {
                     get_file_contents "$src_list" |
                         parse_file_contents "$engine" "$rule" |
                         mawk '!seen[$0]++' |
-                        if [[ "$format" == 'domain' ]]; then
-                            ./scripts/idn_to_punycode.pl
-                        else
-                            cat -s
-                        fi >>"${color}_${format}.txt"
+                        handle_format_output "$format" "$color"
                 fi
                 # else the download failed and src_list is empty
             done
 
-        for format in 'ipv4' 'ipv6' 'domain'; do
+        for format in "${FORMATS[@]}"; do
             list="${color}_${format}.txt"
 
             if test -f "$list"; then
