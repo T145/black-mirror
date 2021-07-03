@@ -1,11 +1,16 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -W
+use strict;
+# https://perldoc.perl.org/perlrun#-W
+#use warnings;
+
 use Try::Tiny;
 use Net::IDN::Encode ':all';
 use open ':std', ':encoding(UTF-8)';
-foreach $line ( <STDIN> ) {
+
+while ( <STDIN> ) {
     try {
-        chomp ( $line );
-        my $a = domain_to_ascii( $line );
-        print "$a\n";
+        chomp $_;
+        printf "%s\n",domain_to_ascii $_
+        #print domain_to_ascii($_),"\n";
     }
 }
