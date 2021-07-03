@@ -24,6 +24,7 @@ get_file_contents() {
 # params: engine, rule
 parse_file_contents() {
     case $1 in
+    cat) cat -s ;;
     mawk) mawk "$2" ;;
     gawk) gawk --sandbox -O -- "$2" ;;
     jq) jq -r "$2" ;;
