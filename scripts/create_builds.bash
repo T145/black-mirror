@@ -97,11 +97,7 @@ main() {
                     get_file_contents "$src_list" |
                         parse_file_contents "$engine" "$rule" |
                         mawk '!seen[$0]++' |
-                        if [[ "$format" == 'domain' ]]; then
-                            ./scripts/idn_to_punycode.pl
-                        elif [[ "$format" == 'ipv4' ]]; then
-
-                        fi
+                        handle_format_output "$format" "$color"
                 fi
                 # else the download failed and src_list is empty
             done
