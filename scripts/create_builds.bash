@@ -17,7 +17,7 @@ get_file_contents() {
         ;;
     *.zip) zcat "$1" ;;
     *.7z) 7za -y -so e "$1" ;;
-    *) cat "$1" ;;
+    *) cat -s "$1" ;;
     esac
 }
 
@@ -71,7 +71,7 @@ main() {
                         if [[ "$format" == 'domain' ]]; then
                             ./scripts/idn_to_punycode.pl
                         else
-                            cat
+                            cat -s
                         fi >>"${color}_${format}.txt"
                 fi
                 # else the download failed and src_list is empty
