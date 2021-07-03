@@ -1,26 +1,11 @@
 #!/usr/bin/env bash
-set -o errtrace # Enable the err trap, code will get called when an error is detected
-trap "echo ERROR: There was an error in ${FUNCNAME-main context}, details to follow" ERR
-
-set -eu pipefail # put bash into strict mode
-umask 055        # change all generated file perms from 755 to 700
+set -euo pipefail # put bash into strict mode
+umask 055         # change all generated file perms from 755 to 700
 
 # https://github.com/koalaman/shellcheck/wiki/SC2155
 DOWNLOADS=$(mktemp -d)
 readonly DOWNLOADS
 trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
-
-RELEASE_IPV4='ipv4'
-readonly RELEASE_IPV4
-
-RELEASE_IPV6='ipv6'
-readonly RELEASE_IPV6
-
-RELEASE_DOMAIN='domain'
-readonly RELEASE_DOMAIN
-
-RELEASES=(RELEASE_IPV4 RELEASE_IPV6 RELEASE_DOMAIN)
-readonly RELEASES
 
 # params: src_list
 get_file_contents() {
@@ -32,7 +17,7 @@ get_file_contents() {
         ;;
     *.zip) zcat "$1" ;;
     *.7z) 7za -y -so e "$1" ;;
-    *) cat -s "$1" ;; # -s causes broken pipes
+    *) cat "$1" ;;
     esac
 }
 
@@ -56,36 +41,9 @@ parse_file_contents() {
     esac
 }
 
-# CAN CONTAIN: domains, unicode domains, punycode domains
-# params: color
-output_domain_format() {
-    ./scripts/idn_to_punycode.pl >>"${1}_${RELEASE_DOMAIN}.txt" # convert unicode domains to punycode (everything else falls through)
-}
-
-# CAN CONTAIN: addresses, CIDR block ranges, address-address ranges
-# params: color
-output_ipv4_format() {
-    cat >>"${1}_${RELEASE_IPV4}.txt"
-    # TODO: cross-reference IPV4 & IPV4 CIDR to remove any ips that fall in a CIDR block
-    #while read -r line; do
-    #    case $line in
-    #    */*) printf "%s\n",$line >>"${1}_${RELEASE_IPV4_CIDR}.txt" ;; # cidr block
-    #    *-*) ipcalc "$line" >>"${1}_${RELEASE_IPV4_CIDR}.txt" ;;      # ip range
-    #    *) printf "%s\n",$line >>"${1}_${RELEASE_IPV4}.txt" ;;        # normal address
-    #    esac
-    #done
-}
-
-# CAN CONTAIN: addresses
-# params: color
-output_ipv6_format() {
-    cat >>"${1}_${RELEASE_IPV6}.txt"
-}
-
 main() {
     local cache_dir
     local src_list
-    local output_base
     local list
 
     for color in 'white' 'black'; do
@@ -109,35 +67,34 @@ main() {
                 if [ -n "$src_list" ]; then
                     get_file_contents "$src_list" |
                         parse_file_contents "$engine" "$rule" |
-                        mawk '!seen[$0]++' | # remove duplicate hosts
+                        mawk '!seen[$0]++' |
                         if [[ "$format" == 'domain' ]]; then
                             ./scripts/idn_to_punycode.pl
                         else
-                            cat -s
+                            cat
                         fi >>"${color}_${format}.txt"
                 fi
                 # else the download failed and src_list is empty
             done
 
-        for release in "${RELEASES[@]}"; do
-            output_base="${color}_${release}"
-            list="${output_base}.txt"
+        for format in 'ipv4' 'ipv6' 'domain'; do
+            list="${color}_${format}.txt"
 
             if test -f "$list"; then
                 sort -o "$list" -u -S 90% --parallel=4 -T "$cache_dir" "$list"
 
-                if [[ "$color" == 'black' ]]; then
-                    if test -f "white_${release}.txt"; then
-                        grep -Fxvf "white_${release}.txt" "$list" | sponge "$list"
-                    fi
-
-                    tar -czf "${output_base}.tar.gz" "$list"
-                    md5sum "${output_base}.tar.gz" >"${output_base}.md5"
-                    sha1sum "${output_base}.tar.gz" >"${output_base}.sha1"
-                    sha256sum "${output_base}.tar.gz" >"${output_base}.sha256"
+                if [[ "$color" == 'black' && -f "white_${format}.txt" ]]; then
+                    grep -Fxvf "white_${format}.txt" "$list" | sponge "$list"
                 fi
             fi
         done
+    done
+
+    for release in 'black_domain' 'black_ipv4' 'black_ipv6'; do
+        tar -czf "${release}.tar.gz" "${release}.txt"
+        md5sum "${release}.tar.gz" >"${release}.md5"
+        sha1sum "${release}.tar.gz" >"${release}.sha1"
+        sha256sum "${release}.tar.gz" >"${release}.sha256"
     done
 }
 
