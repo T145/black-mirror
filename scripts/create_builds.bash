@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
-set -o errtrace # Enable the err trap, code will get called when an error is detected
-trap "echo ERROR: There was an error in ${FUNCNAME-main context}, details to follow" ERR
-
-set -eu pipefail # put bash into strict mode
+set -euo pipefail # put bash into strict mode
 umask 055         # change all generated file perms from 755 to 700
 
 # https://github.com/koalaman/shellcheck/wiki/SC2155
@@ -33,7 +30,7 @@ get_file_contents() {
         # If any archives are added that do not, this line needs to change
         tar -xOzf "$1" --wildcards-match-slash --wildcards '*/domains'
         ;;
-    *.zip) zcat -s "$1" ;;
+    *.zip) zcat "$1" ;;
     *.7z) 7za -y -so e "$1" ;;
     *) cat -s "$1" ;;
     esac
