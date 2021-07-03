@@ -119,6 +119,7 @@
 *   [CoinBlockerLists](https://zerodot1.gitlab.io/CoinBlockerListsWeb/)
 *   [ShadowWhisperer](https://github.com/ShadowWhisperer/BlockLists/)
 *   [OpenDBL/talos](https://www.opendbl.net/)
+*   [azorult tracker](https://azorult-tracker.net/about)
 
 ### ⚪ Whitelists
 
