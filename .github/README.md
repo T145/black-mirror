@@ -69,6 +69,11 @@
   </tbody>
 </table>
 
+Use this command to get all available download URLs:
+```bash
+curl -s https://api.github.com/repos/T145/the-blacklist/releases/latest | jq -r '.assets[].browser_download_url'
+```
+
 ## 📋 Attributes
 
 1. No comments
