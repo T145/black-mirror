@@ -59,14 +59,16 @@ jobs:
           prerelease: false
           title: "Production Builds"
           files: |
-            *.tar.gz
+            black_domain.txt
+            black_ipv4.txt
+            black_ipv4_cidr.txt
+            black_ipv6.txt
             *.md5
             *.sha1
             *.sha256
 
       - name: Remove Artifacts
         run: |
-          rm *.tar.gz
           rm *.txt
           rm *.md5
           rm *.sha1

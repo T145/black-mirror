@@ -108,10 +108,9 @@ main() {
                         grep -Fxvf "white_${format}.txt" "$list" | sponge "$list"
                     fi
 
-                    tar -czf "black_${format}.tar.gz" "$list"
-                    md5sum "black_${format}.tar.gz" >"black_${format}.md5"
-                    sha1sum "black_${format}.tar.gz" >"black_${format}.sha1"
-                    sha256sum "black_${format}.tar.gz" >"black_${format}.sha256"
+                    md5sum "$list" >"black_${format}.md5"
+                    sha1sum "$list" >"black_${format}.sha1"
+                    sha256sum "$list" >"black_${format}.sha256"
                 fi
             fi
         done
