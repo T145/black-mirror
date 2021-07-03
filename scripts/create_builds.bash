@@ -42,7 +42,10 @@ get_file_contents() {
 # params: engine, rule
 parse_file_contents() {
     case $1 in
+<<<<<<< HEAD
     cat) cat ;;
+=======
+>>>>>>> parent of be5f48f (Pass on raw input)
     mawk) mawk "$2" ;;
     gawk) gawk --sandbox -O -- "$2" ;;
     jq) jq -r "$2" ;;
@@ -56,7 +59,7 @@ parse_file_contents() {
     xmlstarlet)
         # xmlstarlet sel -t -m "/rss/channel/item" -v "substring-before(title,' ')" -n rss.xml
         ;;
-    *) ;; # TODO: log warning that an engine isn't assigned
+    *) ;;
     esac
 }
 
