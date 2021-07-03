@@ -4211,5 +4211,44 @@
       "discover": false,
       "perform": false
     }
+  },
+  "azorult_domains": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://azorult-tracker.net/api/list/domain?format=plain"
+    ],
+    "scan": {
+      "alive_only": false,
+      "discover": false,
+      "perform": false
+    },
+    "variants": [
+      "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/AZORult%20-%20Malware%20Domain%20Feed%20V2"
+    ]
+  },
+  "azorult_ips": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "ipv4",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://azorult-tracker.net/api/list/ip?format=plain"
+    ],
+    "scan": {
+      "alive_only": false,
+      "discover": false,
+      "perform": false
+    }
   }
 }
