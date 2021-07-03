@@ -32,7 +32,7 @@ get_file_contents() {
         ;;
     *.zip) zcat "$1" ;;
     *.7z) 7za -y -so e "$1" ;;
-    *) cat "$1" ;; # -s causes broken pipes
+    *) cat -s "$1" ;; # -s causes broken pipes
     esac
 }
 
@@ -110,11 +110,11 @@ main() {
                     get_file_contents "$src_list" |
                         parse_file_contents "$engine" "$rule" |
                         mawk '!seen[$0]++' | # remove duplicate hosts
-                        case $format in
-                        domain) output_domain_format "$color" ;;
-                        ipv4) output_ipv4_format "$color" ;;
-                        ipv6) output_ipv6_format "$color" ;;
-                        esac
+                        if [[ "$format" == 'domain' ]] then;
+                            ./scripts/idn_to_punycode.pl
+                        else
+                            cat -s
+                        fi >>"${color}_${format}.txt"
                 fi
                 # else the download failed and src_list is empty
             done
