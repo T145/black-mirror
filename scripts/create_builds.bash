@@ -11,7 +11,7 @@ FORMAT_IPV4='ipv4'
 FORMAT_IPV4_CIDR='ipv4_cidr'
 FORMAT_IPV6='ipv6'
 readonly DOWNLOADS FORMAT_DOMAIN FORMAT_IPV4 FORMAT_IPV4_CIDR FORMAT_IPV6
-FORMATS=("$FORMAT_DOMAIN" "$FORMAT_IPV4" "$FORMAT_IPV4_CIDR" "$FORMAT_IPV6")
+FORMATS=("$FORMAT_IPV4" "$FORMAT_IPV6" "$FORMAT_DOMAIN")
 readonly -a FORMATS
 trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 
@@ -51,15 +51,16 @@ parse_file_contents() {
 }
 
 # params: format, color
+declare -Ft handle_format_output &>/dev/null && exit 1
 handle_format_output() {
     case $1 in
     domain) ./scripts/idn_to_punycode.pl >>"${2}_${1}.txt" ;;
     ipv4)
-        while IFS= read -r line; do
+        cat -s | while IFS= read -r line; do
             case $line in
             */*) printf "%s\n" "$line" >>"${2}_${1}_cidr.txt" ;; # cidr block
             *-*) ipcalc "$line" >>"${2}_${1}_cidr.txt" ;;        # deaggregate ip range
-            *) printf "%s\n" "$line" >>"${2}_${1}.txt" ;;          # address
+            *) printf "%s\n" "$line" >>"${2}_${1}.txt" ;;        # ip address
             esac
         done
         ;;
