@@ -6,7 +6,7 @@ export LANGUAGE=en:el
 
 unique_domain_count=$(wc -l <black_domain.txt)
 unique_ipv4_count=$(wc -l <black_ipv4.txt)
-unique_ipv4_cidr_count=$(wc -l <black_ipv4.txt)
+unique_ipv4_cidr_count=$(wc -l <black_ipv4_cidr.txt)
 unique_ipv6_count=$(wc -l <black_ipv6.txt)
 
 domain_count=$(printf "%'d" "$unique_domain_count")
