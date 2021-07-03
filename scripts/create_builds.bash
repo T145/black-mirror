@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-set -euo pipefail # put bash into strict mode
+set -o errtrace # Enable the err trap, code will get called when an error is detected
+trap "echo ERROR: There was an error in ${FUNCNAME-main context}, details to follow" ERR
+
+set -eu pipefail # put bash into strict mode
 umask 055         # change all generated file perms from 755 to 700
 
 # https://github.com/koalaman/shellcheck/wiki/SC2155
