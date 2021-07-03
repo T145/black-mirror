@@ -13,16 +13,13 @@ trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 RELEASE_IPV4='ipv4'
 readonly RELEASE_IPV4
 
-RELEASE_IPV4_CIDR='ipv4_cidr'
-readonly RELEASE_IPV4_CIDR
-
 RELEASE_IPV6='ipv6'
 readonly RELEASE_IPV6
 
 RELEASE_DOMAIN='domain'
 readonly RELEASE_DOMAIN
 
-RELEASES=(RELEASE_IPV4 RELEASE_IPV4_CIDR RELEASE_IPV6 RELEASE_DOMAIN)
+RELEASES=(RELEASE_IPV4 RELEASE_IPV6 RELEASE_DOMAIN)
 readonly RELEASES
 
 # params: src_list
@@ -68,15 +65,15 @@ output_domain_format() {
 # CAN CONTAIN: addresses, CIDR block ranges, address-address ranges
 # params: color
 output_ipv4_format() {
-    #cat >>"${color}_ipv4.txt"
+    cat >>"${1}_${RELEASE_IPV4}.txt"
     # TODO: cross-reference IPV4 & IPV4 CIDR to remove any ips that fall in a CIDR block
-    while read -r line; do
-        case $line in
-        */*) printf "%s\n",$line >>"${1}_${RELEASE_IPV4_CIDR}.txt" ;; # cidr block
-        *-*) ipcalc "$line" >>"${1}_${RELEASE_IPV4_CIDR}.txt" ;;      # ip range
-        *) printf "%s\n",$line >>"${1}_${RELEASE_IPV4}.txt" ;;        # normal address
-        esac
-    done
+    #while read -r line; do
+    #    case $line in
+    #    */*) printf "%s\n",$line >>"${1}_${RELEASE_IPV4_CIDR}.txt" ;; # cidr block
+    #    *-*) ipcalc "$line" >>"${1}_${RELEASE_IPV4_CIDR}.txt" ;;      # ip range
+    #    *) printf "%s\n",$line >>"${1}_${RELEASE_IPV4}.txt" ;;        # normal address
+    #    esac
+    #done
 }
 
 # CAN CONTAIN: addresses
