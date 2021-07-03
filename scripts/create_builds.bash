@@ -42,10 +42,6 @@ get_file_contents() {
 # params: engine, rule
 parse_file_contents() {
     case $1 in
-<<<<<<< HEAD
-    cat) cat ;;
-=======
->>>>>>> parent of be5f48f (Pass on raw input)
     mawk) mawk "$2" ;;
     gawk) gawk --sandbox -O -- "$2" ;;
     jq) jq -r "$2" ;;
