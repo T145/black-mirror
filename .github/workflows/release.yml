@@ -44,7 +44,7 @@ jobs:
         shell: bash
 
       - name: Create Builds
-        run: ./scripts/create_builds.bash --debugging
+        run: ./scripts/create_builds.bash
         shell: bash
 
       - name: Update README.md
