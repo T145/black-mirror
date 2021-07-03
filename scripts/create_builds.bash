@@ -3,7 +3,7 @@ set -o errtrace # Enable the err trap, code will get called when an error is det
 trap "echo ERROR: There was an error in ${FUNCNAME-main context}, details to follow" ERR
 
 set -eu pipefail # put bash into strict mode
-umask 055         # change all generated file perms from 755 to 700
+umask 055        # change all generated file perms from 755 to 700
 
 # https://github.com/koalaman/shellcheck/wiki/SC2155
 DOWNLOADS=$(mktemp -d)
@@ -35,7 +35,7 @@ get_file_contents() {
         ;;
     *.zip) zcat "$1" ;;
     *.7z) 7za -y -so e "$1" ;;
-    *) cat -s "$1" ;;
+    *) cat "$1" ;; # -s causes broken pipes
     esac
 }
 
@@ -69,7 +69,7 @@ output_domain_format() {
 # CAN CONTAIN: addresses, CIDR block ranges, address-address ranges
 # params: color
 output_ipv4_format() {
-    #cat -s >>"${color}_ipv4.txt"
+    #cat >>"${color}_ipv4.txt"
     # TODO: cross-reference IPV4 & IPV4 CIDR to remove any ips that fall in a CIDR block
     while read -r line; do
         case $line in
@@ -83,7 +83,7 @@ output_ipv4_format() {
 # CAN CONTAIN: addresses
 # params: color
 output_ipv6_format() {
-    cat -s >>"${1}_${RELEASE_IPV6}.txt"
+    cat >>"${1}_${RELEASE_IPV6}.txt"
 }
 
 main() {
