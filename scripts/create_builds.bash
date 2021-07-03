@@ -110,7 +110,7 @@ main() {
                     get_file_contents "$src_list" |
                         parse_file_contents "$engine" "$rule" |
                         mawk '!seen[$0]++' | # remove duplicate hosts
-                        if [[ "$format" == 'domain' ]] then;
+                        if [[ "$format" == 'domain' ]]; then
                             ./scripts/idn_to_punycode.pl
                         else
                             cat -s
