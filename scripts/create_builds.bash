@@ -11,7 +11,7 @@ FORMAT_IPV4='ipv4'
 FORMAT_IPV4_CIDR='ipv4_cidr'
 FORMAT_IPV6='ipv6'
 readonly DOWNLOADS FORMAT_DOMAIN FORMAT_IPV4 FORMAT_IPV4_CIDR FORMAT_IPV6
-FORMATS=("$FORMAT_IPV4" "$FORMAT_IPV6" "$FORMAT_DOMAIN")
+FORMATS=("$FORMAT_IPV4" "$FORMAT_IPV4_CIDR" "$FORMAT_IPV6" "$FORMAT_DOMAIN")
 readonly -a FORMATS
 trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 
@@ -56,13 +56,15 @@ handle_format_output() {
     case $1 in
     domain) ./scripts/idn_to_punycode.pl >>"${2}_${1}.txt" ;;
     ipv4)
-        cat -s | while IFS= read -r line; do
+        # read doesn't bother w/ pipe input as its undefined, leading to pipe breaks
+        # therefore open stdin as a separate file and read from it to close the previous pipe
+        while IFS= read -r line <&3; do
             case $line in
             */*) printf "%s\n" "$line" >>"${2}_${1}_cidr.txt" ;; # cidr block
             *-*) ipcalc "$line" >>"${2}_${1}_cidr.txt" ;;        # deaggregate ip range
             *) printf "%s\n" "$line" >>"${2}_${1}.txt" ;;        # ip address
             esac
-        done
+        done 3< /dev/stdin
         ;;
     ipv6) cat -s >>"${2}_${1}.txt" ;;
     esac
@@ -95,7 +97,11 @@ main() {
                     get_file_contents "$src_list" |
                         parse_file_contents "$engine" "$rule" |
                         mawk '!seen[$0]++' |
-                        handle_format_output "$format" "$color"
+                        if [[ "$format" == 'domain' ]]; then
+                            ./scripts/idn_to_punycode.pl
+                        elif [[ "$format" == 'ipv4' ]]; then
+
+                        fi
                 fi
                 # else the download failed and src_list is empty
             done
