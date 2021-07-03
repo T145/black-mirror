@@ -10,8 +10,9 @@ FORMAT_DOMAIN='domain'
 FORMAT_IPV4='ipv4'
 FORMAT_IPV4_CIDR='ipv4_cidr'
 FORMAT_IPV6='ipv6'
-FORMATS=(FORMAT_DOMAIN FORMAT_IPV4 FORMAT_IPV4_CIDR FORMAT_IPV6)
-readonly DOWNLOADS, FORMAT_DOMAIN, FORMAT_IPV4, FORMAT_IPV4_CIDR, FORMAT_IPV6, FORMATS
+readonly DOWNLOADS FORMAT_DOMAIN FORMAT_IPV4 FORMAT_IPV4_CIDR FORMAT_IPV6
+FORMATS=("$FORMAT_DOMAIN" "$FORMAT_IPV4" "$FORMAT_IPV4_CIDR" "$FORMAT_IPV6")
+readonly -a FORMATS
 trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 
 # params: src_list
@@ -56,9 +57,9 @@ handle_format_output() {
     ipv4)
         while IFS= read -r line; do
             case $line in
-            */*) printf "%s\n" "$line" >>"${2}_ipv4_cidr.txt" ;; # cidr block
-            *-*) ipcalc "$line" >>"${2}_ipv4_cidr.txt" ;;        # deaggregate ip range
-            *) printf "%s\n" "$line" "${2}_ipv4.txt" ;;          # address
+            */*) printf "%s\n" "$line" >>"${2}_${1}_cidr.txt" ;; # cidr block
+            *-*) ipcalc "$line" >>"${2}_${1}_cidr.txt" ;;        # deaggregate ip range
+            *) printf "%s\n" "$line" >>"${2}_${1}.txt" ;;          # address
             esac
         done
         ;;
