@@ -56,17 +56,15 @@ handle_format_output() {
     case $1 in
     domain) ./scripts/idn_to_punycode.pl >>"${2}_${1}.txt" ;;
     ipv4)
-        # read doesn't bother w/ pipe input as its undefined, leading to pipe breaks
-        # therefore open stdin as a separate file and read from it to close the previous pipe
-        while IFS= read -r line <&3; do
+        while IFS= read -r line; do
             case $line in
             */*) printf "%s\n" "$line" >>"${2}_${1}_cidr.txt" ;; # cidr block
             *-*) ipcalc "$line" >>"${2}_${1}_cidr.txt" ;;        # deaggregate ip range
             *) printf "%s\n" "$line" >>"${2}_${1}.txt" ;;        # ip address
             esac
-        done 3< /dev/stdin
+        done
         ;;
-    ipv6) cat -s >>"${2}_${1}.txt" ;;
+    ipv6) cat >>"${2}_${1}.txt" ;;
     esac
 }
 
@@ -94,10 +92,7 @@ main() {
                 src_list=$(find -P -O3 "$cache_dir" -type f -name "$key*")
 
                 if [ -n "$src_list" ]; then
-                    get_file_contents "$src_list" |
-                        parse_file_contents "$engine" "$rule" |
-                        mawk '!seen[$0]++' |
-                        handle_format_output "$format" "$color"
+                    handle_format_output "$format" "$color" < <(get_file_contents "$src_list" | parse_file_contents "$engine" "$rule" | mawk '!seen[$0]++')
                 fi
                 # else the download failed and src_list is empty
             done
