@@ -99,7 +99,10 @@ main() {
                 src_list=$(find -P -O3 "$cache_dir" -type f -name "$key*")
 
                 if [ -n "$src_list" ]; then
-                    handle_format_output "$format" "$color" < <(get_file_contents "$src_list" | parse_file_contents "$engine" "$rule" | mawk '!seen[$0]++')
+                    get_file_contents "$src_list" |
+                        parse_file_contents "$engine" "$rule" |
+                        mawk '!seen[$0]++' | # filter duplicates and blank lines
+                        handle_format_output "$format" "$color"
                 fi
                 # else the download failed and src_list is empty
             done
