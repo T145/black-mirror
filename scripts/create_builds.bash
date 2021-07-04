@@ -101,7 +101,8 @@ main() {
                 if [ -n "$src_list" ]; then
                     get_file_contents "$src_list" |
                         parse_file_contents "$engine" "$rule" |
-                        mawk '!seen[$0]++' | # filter duplicates and blank lines
+                        mawk '$0!~/^$/{print $0}' | # filter blank lines
+                        mawk '!seen[$0]++' |        # filter duplicates
                         handle_format_output "$format" "$color"
                 fi
                 # else the download failed and src_list is empty
