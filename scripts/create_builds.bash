@@ -43,8 +43,8 @@ parse_file_contents() {
             mlr --mmap --csv --skip-comments --headerless-csv-output cut -f "$2"
         fi
         ;;
-    xmlstarlet)
-        # xmlstarlet sel -t -m "/rss/channel/item" -v "substring-before(title,' ')" -n rss.xml
+    xmllint)
+        xmllint --xpath "$2"
         ;;
     *)
         echo "INVALID ENGINE: ${1}"
