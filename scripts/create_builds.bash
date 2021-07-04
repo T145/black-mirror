@@ -46,7 +46,10 @@ parse_file_contents() {
     xmlstarlet)
         # xmlstarlet sel -t -m "/rss/channel/item" -v "substring-before(title,' ')" -n rss.xml
         ;;
-    *) exit 1 ;;
+    *)
+        echo "INVALID ENGINE: ${1}"
+        exit 1
+        ;;
     esac
 }
 
@@ -65,7 +68,10 @@ handle_format_output() {
         done
         ;;
     ipv6) cat >>"${2}_${1}.txt" ;;
-    *) exit 1 ;;
+    *)
+        echo "INVALID FORMAT: ${1}"
+        exit 1
+        ;;
     esac
 }
 
