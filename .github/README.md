@@ -7,6 +7,7 @@
   <h1>The Blacklist</h1>
   <h3>⚡ Speed | 🧱 Stability | 🔒 Security</h3>
   <br>
+  <img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2FT145%2Fthe-blacklist" alt="Hits">
   <h3><a href="https://github.com/T145/black-mirror">BLACK MIRROR</a></h3>
 </div>
 
