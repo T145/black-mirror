@@ -45,12 +45,7 @@ parse_file_contents() {
             mlr --mmap --csv --skip-comments --headerless-csv-output cut -f "$2"
         fi
         ;;
-    #xslt3) # handles xpath 3.0 quickly
-    #    xslt3 -s:/dev/stdin -xp:"$2" ;;
-    #xmllint) # handles xpath 1.0 quickly
-    #    xmllint --xpath "$2" ;;
-    #saxon) # handles xquery 3.0 quickly
-    #    java -cp bin/SaxonHE10-5J/saxon-he-10.5.jar net.sf.saxon.Query -config:configs/saxon.xml -s:/dev/stdin -qs:"$2" ;;
+    saxon) java -cp bin/SaxonHE10-5J/saxon-he-10.5.jar net.sf.saxon.Query -config:configs/saxon.xml -s:/dev/stdin -qs:"$2" ;;
     *)
         echo "INVALID ENGINE: ${1}"
         exit 1
