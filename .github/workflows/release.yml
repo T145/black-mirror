@@ -50,21 +50,35 @@ jobs:
         run: ./scripts/update_readme.bash
         shell: bash
 
-      - name: Publish Release
+      - name: Publish Domain Release
         uses: "marvinpinto/action-automatic-releases@v1.2.1"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
+          automatic_release_tag: "latest-domain"
           prerelease: false
-          title: "Production Builds"
+          title: "Domain Builds"
           files: |
-            black_domain.txt
-            black_ipv4.txt
-            black_ipv4_cidr.txt
-            black_ipv6.txt
-            *.md5
-            *.sha1
-            *.sha256
+            black_domain*
+
+      - name: Publish IPv4 Release
+        uses: "marvinpinto/action-automatic-releases@v1.2.1"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest-ipv4"
+          prerelease: false
+          title: "IPv4 Builds"
+          files: |
+            black_ipv4*
+
+      - name: Publish IPv6 Release
+        uses: "marvinpinto/action-automatic-releases@v1.2.1"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest-ipv6"
+          prerelease: false
+          title: "IPv6 Builds"
+          files: |
+            black_ipv6*
 
       - name: Remove Artifacts
         run: |
