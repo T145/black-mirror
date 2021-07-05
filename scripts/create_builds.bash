@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #shopt -s extdebug     # or --debugging
-set +H +o history     # disable history features
+set +H +o history     # disable history features (helps avoid errors from "!" in strings)
 set -euET -o pipefail # put bash into strict mode & have it give descriptive errors
 umask 055             # change all generated file perms from 755 to 700
 
@@ -45,9 +45,12 @@ parse_file_contents() {
             mlr --mmap --csv --skip-comments --headerless-csv-output cut -f "$2"
         fi
         ;;
-    xmllint)
-        xmllint --xpath "$2"
-        ;;
+    #xslt3) # handles xpath 3.0 quickly
+    #    xslt3 -s:/dev/stdin -xp:"$2" ;;
+    #xmllint) # handles xpath 1.0 quickly
+    #    xmllint --xpath "$2" ;;
+    #saxon) # handles xquery 3.0 quickly
+    #    java -cp bin/SaxonHE10-5J/saxon-he-10.5.jar net.sf.saxon.Query -config:configs/saxon.xml -s:/dev/stdin -qs:"$2" ;;
     *)
         echo "INVALID ENGINE: ${1}"
         exit 1
@@ -91,7 +94,7 @@ main() {
         {key, mirrors: .value.mirrors} |
         .extension = (.mirrors[0] | match(".(tar.gz|zip|7z|json)").captures[0].string // "txt") |
         (.mirrors | join("\t")), " out=\(.key).\(.extension)"' sources/sources.json |
-            aria2c --conf-path='./configs/aria2.conf' -d "$cache_dir"
+            aria2c -i- -d "$cache_dir" --conf-path='./configs/aria2.conf'
         set -e
 
         jq -r --arg color "$color" 'to_entries[] |
