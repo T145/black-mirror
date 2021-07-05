@@ -16,6 +16,7 @@ readonly -a FORMATS
 trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 
 # params: src_list
+declare -Ft get_file_contents &>/dev/null && exit 1
 get_file_contents() {
     case $1 in
     *.tar.gz)
@@ -30,6 +31,7 @@ get_file_contents() {
 }
 
 # params: engine, rule
+declare -Ft parse_file_contents &>/dev/null && exit 1
 parse_file_contents() {
     case $1 in
     cat) cat -s ;;
