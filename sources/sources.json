@@ -4270,5 +4270,33 @@
       "discover": false,
       "perform": false
     }
+  },
+  "viriback": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\"/\";FNR!=1;}$3~/^([0-9]+(\\.|$)){4}/{print $3}"
+      },
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"/\";FNR!=1;}$3!~/^([0-9]+(\\.|$)){4}/{print $3}"
+      },
+      {
+        "engine": "miller",
+        "format": "ipv4",
+        "rule": "IP"
+      }
+    ],
+    "mirrors": [
+      "https://tracker.viriback.com/dump.php"
+    ],
+    "scan": {
+      "alive_only": false,
+      "discover": false,
+      "perform": false
+    }
   }
 }
