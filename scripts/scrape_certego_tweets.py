@@ -1,4 +1,6 @@
 import twint
+import sys
+sys.dont_write_bytecode = True
 
 # might be "shadow-banned" for being a bot,
 # therefore Profile is needed
