@@ -120,6 +120,7 @@
 *   [ShadowWhisperer](https://github.com/ShadowWhisperer/BlockLists/)
 *   [OpenDBL/talos](https://www.opendbl.net/)
 *   [azorult tracker](https://azorult-tracker.net/about)
+*   [Project Honey Pot](https://www.projecthoneypot.org/list_of_ips.php)
 
 ### ⚪ Whitelists
 
