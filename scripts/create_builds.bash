@@ -61,9 +61,10 @@ handle_format_output() {
     ipv4)
         while IFS= read -r line; do
             case $line in
-            */*) printf "%s\n" "$line" >>"${2}_${1}_cidr.txt" ;; # cidr block
-            *-*) ipcalc "$line" >>"${2}_${1}_cidr.txt" ;;        # deaggregate ip range
-            *) printf "%s\n" "$line" >>"${2}_${1}.txt" ;;        # ip address
+            */*) printf "%s\n" "$line" >>"${2}_${1}_cidr.txt" ;;   # cidr block
+            *-*) ipcalc "$line" >>"${2}_${1}_cidr.txt" ;;          # deaggregate ip range
+            *.*.*.*) printf "%s\n" "$line" >>"${2}_${1}.txt" ;;    # ip address
+            *) echo "WARN: This isn't an IPv4 address: ${line}" ;; # debug if ips are being processed well
             esac
         done
         ;;
