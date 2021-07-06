@@ -4252,5 +4252,23 @@
       "discover": false,
       "perform": false
     }
+  },
+  "projecthoneypot_last_bad_event_any_ip": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "saxon",
+        "format": "ipv4",
+        "rule": "//item/link!substring-after(., '_')"
+      }
+    ],
+    "mirrors": [
+      "http://www.projecthoneypot.org/list_of_ips.php?rss=1"
+    ],
+    "scan": {
+      "alive_only": false,
+      "discover": false,
+      "perform": false
+    }
   }
 }
