@@ -61,12 +61,14 @@ handle_format_output() {
     case $1 in
     domain)
         ./scripts/idn_to_punycode.pl |
-            case $line in
-            *.com) printf "%s\n" "$line" >>"${2}_${1}_com.txt" ;;
-            *.net) printf "%s\n" "$line" >>"${2}_${1}_net.txt" ;;
-            *.org) printf "%s\n" "$line" >>"${2}_${1}_org.txt" ;;
-            *) printf "%s\n" "$line" >>"${2}_${1}.txt" ;;
-            esac
+            while IFS= read -r line; do
+                case $line in
+                *.com) printf "%s\n" "$line" >>"${2}_${1}_com.txt" ;;
+                *.net) printf "%s\n" "$line" >>"${2}_${1}_net.txt" ;;
+                *.org) printf "%s\n" "$line" >>"${2}_${1}_org.txt" ;;
+                *) printf "%s\n" "$line" >>"${2}_${1}.txt" ;;
+                esac
+            done
         ;;
     ipv4)
         while IFS= read -r line; do
