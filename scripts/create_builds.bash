@@ -59,17 +59,7 @@ parse_file_contents() {
 declare -Ft handle_format_output &>/dev/null && exit 1
 handle_format_output() {
     case $1 in
-    domain)
-        ./scripts/idn_to_punycode.pl |
-            while IFS= read -r line; do
-                case $line in
-                *.com) printf "%s\n" "$line" >>"${2}_${1}_com.txt" ;;
-                *.net) printf "%s\n" "$line" >>"${2}_${1}_net.txt" ;;
-                *.org) printf "%s\n" "$line" >>"${2}_${1}_org.txt" ;;
-                *) printf "%s\n" "$line" >>"${2}_${1}.txt" ;;
-                esac
-            done
-        ;;
+    domain) ./scripts/idn_to_punycode.pl >>"${2}_${1}.txt" ;;
     ipv4)
         while IFS= read -r line; do
             case $line in
