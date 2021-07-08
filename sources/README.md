@@ -122,6 +122,7 @@
 *   [azorult tracker](https://azorult-tracker.net/about)
 *   [Project Honey Pot](https://www.projecthoneypot.org/list_of_ips.php)
 *   [viriback](https://tracker.viriback.com/)
+*   [PhishStats](https://phishstats.info/)
 
 ### ⚪ Whitelists
 
