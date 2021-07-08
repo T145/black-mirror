@@ -1,14 +1,23 @@
+from ast import literal_eval
+import csv
 import twint
+from urllib.parse import urlparse
+from os.path import split
 import sys
 sys.dont_write_bytecode = True
 
 # might be "shadow-banned" for being a bot,
 # therefore Profile is needed
+filename = 'certego.csv'
 c = twint.Config()
-c.Hide_output = True
-c.Username = "Certego_Intel"
-c.Since = "2021-1-1"
-c.Store_object = True
-c.Store_json = True
-c.Output = "tweets.json"
+c.Username = 'Certego_Intel'
+c.Store_csv = True
+c.Output = filename
 twint.run.Profile(c)
+
+with open(filename, 'r', newline='') as csv_file:
+  reader = csv.DictReader(csv_file)
+  for row in reader:
+    for url in literal_eval(row['urls']):
+      path = urlparse(url).path
+      print(split(path)[1])
