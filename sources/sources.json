@@ -2459,6 +2459,24 @@
       "perform": false
     }
   },
+  "phishstats": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "miller",
+        "format": "ipv4",
+        "rule": 4
+      }
+    ],
+    "mirrors": [
+      "https://phishstats.info/phish_score.csv"
+    ],
+    "scan": {
+      "alive_only": false,
+      "discover": false,
+      "perform": false
+    }
+  },
   "pornrecords_domains": {
     "color": "black",
     "filters": [
@@ -4292,24 +4310,6 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ],
-    "scan": {
-      "alive_only": false,
-      "discover": false,
-      "perform": false
-    }
-  },
-  "phishstats": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "miller",
-        "format": "ipv4",
-        "rule": 4
-      }
-    ],
-    "mirrors": [
-      "https://phishstats.info/phish_score.csv"
     ],
     "scan": {
       "alive_only": false,
