@@ -31,44 +31,54 @@
 <table>
   <thead>
     <tr>
-      <th style="text-align:center">Links</th>
+      <th style="text-align:center">Files</th>
       <th style="text-align:center">File Contents</th>
       <th>Unique Entries</th>
       <th>File Size</th>
+      <th>MD5</th>
+      <th>SHA1</th>
+      <th>SHA256</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/download/latest-domain/black_domain.txt">black_domain.txt</a> </td>
+      <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-domain/black_domain.txt">black_domain.txt</a></td>
       <td style="text-align:center">Domain entries</td>
       <td id="domain-count">9,265,720</td>
       <td id="domain-filesize">203M</td>
+      <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-domain/black_domain.md5">[🔗]</a></td>
+      <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-domain/black_domain.sha1">[🔗]</a></td>
+      <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-domain/black_domain.sha256">[🔗]</a></td>
     </tr>
     <tr>
-      <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4.txt">black_ipv4.txt</a> </td>
+      <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4.txt">black_ipv4.txt</a></td>
       <td style="text-align:center">IPv4 addresses</td>
       <td id="ipv4-count">1,519,549</td>
       <td id="ipv4-filesize">21M</td>
+      <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4.md5">[🔗]</a></td>
+      <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4.sha1">[🔗]</a></td>
+      <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4.sha256">[🔗]</a></td>
     </tr>
     <tr>
-      <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4_cidr.txt">black_ipv4_cidr.txt</a> </td>
+      <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4_cidr.txt">black_ipv4_cidr.txt</a></td>
       <td style="text-align:center">IPv4 CIDR blocks</td>
       <td id="ipv4-cidr-count">17,931</td>
       <td id="ipv4-cidr-filesize">298K</td>
+      <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4_cidr.md5">[🔗]</a></td>
+      <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4_cidr.sha1">[🔗]</a></td>
+      <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4_cidr.sha256">[🔗]</a></td>
     </tr>
     <tr>
-      <td style="text-align:center"> <a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv6/black_ipv6.txt">black_ipv6.txt</a> </td>
+      <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv6/black_ipv6.txt">black_ipv6.txt</a></td>
       <td style="text-align:center">IPv6 addresses</td>
       <td id="ipv6-count">6,048</td>
       <td id="ipv6-filesize">197K</td>
+      <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv6/black_ipv6.md5">[🔗]</a></td>
+      <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv6/black_ipv6.sha1">[🔗]</a></td>
+      <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv6/black_ipv6.sha256">[🔗]</a></td>
     </tr>
   </tbody>
 </table>
-
-Use this command to get all available download URLs:
-```bash
-curl -s https://api.github.com/repos/T145/the-blacklist/releases/latest | jq -r '.assets[].browser_download_url'
-```
 
 ## 📋 Attributes
 
