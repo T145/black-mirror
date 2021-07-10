@@ -18,7 +18,7 @@ jobs:
 
       - name: Prepare Workspace
         run: |
-          sudo apt install aria2 gawk ipcalc jq libnet-libidn-perl libnet-idn-encode-perl miller moreutils openjdk-16-jre-headless sed p7zip-full -y
+          sudo apt install aria2 gawk golang-go ipcalc jq libnet-libidn-perl libnet-idn-encode-perl miller moreutils openjdk-16-jre-headless sed p7zip-full -y
           chmod 755 -R ./scripts
         shell: bash
 
