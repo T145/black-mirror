@@ -4316,5 +4316,24 @@
       "discover": false,
       "perform": false
     }
+  },
+  "dandelion_antimalware": {
+    "_comment": "Contains IPv4 and IPv6 addresses, but since these are volatile and the list is manually updated they'll be ignored.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{OFS=\"\\n\"}$0~/^[^#]/{$1=\"\"; if ($0~/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/){printf \"%s\",$0}}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt"
+    ],
+    "scan": {
+      "alive_only": false,
+      "discover": false,
+      "perform": false
+    }
   }
 }
