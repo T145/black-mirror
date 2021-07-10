@@ -4,10 +4,9 @@
 
 ### ⚫ Blacklists
 
-*   android_tracking
+*   [Perflyst](https://github.com/Perflyst/PiHoleBlocklist)
 *   andryou
 *   anti_ad
-*   firetv_tracking
 *   games_tracking
 *   gaming
 *   notracking
@@ -22,7 +21,6 @@
 *   reg_pl2
 *   reg_se
 *   shallalist
-*   smarttv_tracking
 *   utcapitole
 *   wally3k
 *   [Energized Xtreme Extension](https://github.com/EnergizedProtection/block#extensions-2)
