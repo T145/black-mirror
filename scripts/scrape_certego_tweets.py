@@ -1,5 +1,5 @@
 from ast import literal_eval
-import csv
+from csv import DictReader
 import twint
 from urllib.parse import urlparse
 from os.path import split
@@ -16,7 +16,7 @@ c.Output = filename
 twint.run.Profile(c)
 
 with open(filename, 'r', newline='') as csv_file:
-  reader = csv.DictReader(csv_file)
+  reader = DictReader(csv_file)
   for row in reader:
     for url in literal_eval(row['urls']):
       path = urlparse(url).path
