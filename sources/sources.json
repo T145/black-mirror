@@ -4358,5 +4358,23 @@
       "discover": false,
       "perform": false
     }
+  },
+  "session_replay": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SessionReplay.txt"
+    ],
+    "scan": {
+      "alive_only": false,
+      "discover": false,
+      "perform": false
+    }
   }
 }
