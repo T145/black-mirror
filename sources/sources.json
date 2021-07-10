@@ -4335,5 +4335,28 @@
       "discover": false,
       "perform": false
     }
+  },
+  "certego": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/"
+      },
+      {
+        "engine": "gawk",
+        "format": "ipv4",
+        "rule": "/^([0-9]+(\\.|$)){4}/"
+      }
+    ],
+    "mirrors": [
+      "https://github.com/T145/black-mirror/releases/download/latest/certego.txt"
+    ],
+    "scan": {
+      "alive_only": false,
+      "discover": false,
+      "perform": false
+    }
   }
 }

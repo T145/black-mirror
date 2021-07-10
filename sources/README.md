@@ -124,6 +124,7 @@
 *   [viriback](https://tracker.viriback.com/)
 *   [PhishStats](https://phishstats.info/)
 *   [dandelionsprout/antimalware](https://github.com/DandelionSprout/adfilt/blob/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt)
+*   [Certego Intel](https://twitter.com/Certego_Intel)
 
 ### ⚪ Whitelists
 
