@@ -123,6 +123,7 @@
 *   [Project Honey Pot](https://www.projecthoneypot.org/list_of_ips.php)
 *   [viriback](https://tracker.viriback.com/)
 *   [PhishStats](https://phishstats.info/)
+*   [dandelionsprout/antimalware](https://github.com/DandelionSprout/adfilt/blob/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt)
 
 ### ⚪ Whitelists
 
