@@ -4324,11 +4324,11 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "BEGIN{OFS=\"\\n\"}$0~/^[^#]/{$1=\"\"; if ($0~/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/){printf \"%s\",$0}}"
+        "rule": "/^[^#]([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/"
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt"
+      "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareDomains.txt"
     ],
     "scan": {
       "alive_only": false,
