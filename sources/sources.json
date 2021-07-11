@@ -1149,6 +1149,29 @@
       "perform": false
     }
   },
+  "certego": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/"
+      },
+      {
+        "engine": "gawk",
+        "format": "ipv4",
+        "rule": "/^([0-9]+(\\.|$)){4}/"
+      }
+    ],
+    "mirrors": [
+      "https://github.com/T145/black-mirror/releases/download/latest/certego.txt"
+    ],
+    "scan": {
+      "alive_only": false,
+      "discover": false,
+      "perform": false
+    }
+  },
   "charles_haley": {
     "color": "black",
     "filters": [
@@ -1450,6 +1473,25 @@
     ],
     "mirrors": [
       "https://www.dan.me.uk/torlist/"
+    ],
+    "scan": {
+      "alive_only": false,
+      "discover": false,
+      "perform": false
+    }
+  },
+  "dandelion_antimalware": {
+    "_comment": "Contains IPv4 and IPv6 addresses, but since these are volatile and the list is manually updated they'll be ignored.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "/^[^#]([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareDomains.txt"
     ],
     "scan": {
       "alive_only": false,
@@ -3134,6 +3176,24 @@
       "perform": false
     }
   },
+  "session_replay": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SessionReplay.txt"
+    ],
+    "scan": {
+      "alive_only": false,
+      "discover": false,
+      "perform": false
+    }
+  },
   "shadowwhisperer_ads": {
     "color": "black",
     "filters": [
@@ -4310,66 +4370,6 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ],
-    "scan": {
-      "alive_only": false,
-      "discover": false,
-      "perform": false
-    }
-  },
-  "dandelion_antimalware": {
-    "_comment": "Contains IPv4 and IPv6 addresses, but since these are volatile and the list is manually updated they'll be ignored.",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "/^[^#]([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareDomains.txt"
-    ],
-    "scan": {
-      "alive_only": false,
-      "discover": false,
-      "perform": false
-    }
-  },
-  "certego": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/"
-      },
-      {
-        "engine": "gawk",
-        "format": "ipv4",
-        "rule": "/^([0-9]+(\\.|$)){4}/"
-      }
-    ],
-    "mirrors": [
-      "https://github.com/T145/black-mirror/releases/download/latest/certego.txt"
-    ],
-    "scan": {
-      "alive_only": false,
-      "discover": false,
-      "perform": false
-    }
-  },
-  "session_replay": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "cat",
-        "format": "domain",
-        "rule": ""
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SessionReplay.txt"
     ],
     "scan": {
       "alive_only": false,
