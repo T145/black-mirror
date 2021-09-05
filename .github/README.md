@@ -44,8 +44,8 @@
     <tr>
       <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-domain/black_domain.txt">black_domain.txt</a></td>
       <td style="text-align:center">Domain entries</td>
-      <td id="domain-count">9,276,041</td>
-      <td id="domain-filesize">203M</td>
+      <td id="domain-count">9,230,821</td>
+      <td id="domain-filesize">202M</td>
       <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-domain/black_domain.md5">[🔗]</a></td>
       <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-domain/black_domain.sha1">[🔗]</a></td>
       <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-domain/black_domain.sha256">[🔗]</a></td>
@@ -53,7 +53,7 @@
     <tr>
       <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4.txt">black_ipv4.txt</a></td>
       <td style="text-align:center">IPv4 addresses</td>
-      <td id="ipv4-count">843,441</td>
+      <td id="ipv4-count">843,815</td>
       <td id="ipv4-filesize">12M</td>
       <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4.md5">[🔗]</a></td>
       <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4.sha1">[🔗]</a></td>
@@ -62,8 +62,8 @@
     <tr>
       <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4_cidr.txt">black_ipv4_cidr.txt</a></td>
       <td style="text-align:center">IPv4 CIDR blocks</td>
-      <td id="ipv4-cidr-count">24,010</td>
-      <td id="ipv4-cidr-filesize">400K</td>
+      <td id="ipv4-cidr-count">24,130</td>
+      <td id="ipv4-cidr-filesize">402K</td>
       <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4_cidr.md5">[🔗]</a></td>
       <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4_cidr.sha1">[🔗]</a></td>
       <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4_cidr.sha256">[🔗]</a></td>
@@ -71,8 +71,8 @@
     <tr>
       <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv6/black_ipv6.txt">black_ipv6.txt</a></td>
       <td style="text-align:center">IPv6 addresses</td>
-      <td id="ipv6-count">6,211</td>
-      <td id="ipv6-filesize">202K</td>
+      <td id="ipv6-count">6,224</td>
+      <td id="ipv6-filesize">203K</td>
       <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv6/black_ipv6.md5">[🔗]</a></td>
       <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv6/black_ipv6.sha1">[🔗]</a></td>
       <td style="text-align:center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv6/black_ipv6.sha256">[🔗]</a></td>
