@@ -91,7 +91,7 @@
 *   [Charles B. Haley](http://charles.the-haleys.org/)
 *   [darklist](https://www.darklist.de/)
 *   [h3x](https://tracker.h3x.eu/)
-*   [pornrecords](https://github.com/mypdns/porn-records#submit)
+*   [Porn Records](https://github.com/porn-records/Porn-Records)
 *   [cryptolaemus](https://paste.cryptolaemus.com/)
 *   [vxvault](http://vxvault.net/ViriList.php)
 *   [alienvault](https://status.alienvault.cloud/)
