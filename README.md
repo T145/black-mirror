@@ -7,7 +7,7 @@
   <h1>The Blacklist</h1>
   <h3>⚡ Speed | 🧱 Stability | 🔒 Security</h3>
   <hr>
-  <a href="https://github.com/T145/black-mirror">BLACK MIRROR</a>
+  <a href="https://github.com/T145/black-mirror"><code>BLACK MIRROR</code></a>
   <hr>
   <img src="https://badges.pufler.dev/created/T145/the-blacklist"
        alt="nonce"
