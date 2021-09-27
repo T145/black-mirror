@@ -1312,24 +1312,6 @@
       "https://block.energized.pro/assets/sources/filter/fanboy-ultimate.txt"
     ]
   },
-  "fanboy_vietnam": {
-    "_comment": "Using the pre-optimized Energized mirror: the original source is deprecated.",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "NR>9{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://block.energized.pro/assets/sources/filter/fanboy-vietnam.txt"
-    ],
-    "variants": [
-      "https://secure.fanboy.co.nz/fanboy-vietnam.txt",
-      "https://fanboy.co.nz/fanboy-vietnam.txt"
-    ]
-  },
   "filtri_dns": {
     "color": "black",
     "filters": [
