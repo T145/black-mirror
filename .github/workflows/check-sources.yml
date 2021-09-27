@@ -24,9 +24,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Issue From File
-        if: ${{ failure() }}
         uses: peter-evans/create-issue-from-file@v3
         with:
           title: Dead Source Report
-          content-filepath: ./tmp/lychee/out.md
+          content-filepath: ./lychee/out.md
           labels: bug
