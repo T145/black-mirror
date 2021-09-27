@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="logo.png"
+  <img src=".github/images/logo.png"
        alt="logo"
-       longdesc="https://github.com/T145/the-blacklist/master/.github/logo.png"
+       longdesc="https://github.com/T145/the-blacklist/master/.github/images/logo.png"
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
   <h1>The Blacklist</h1>
