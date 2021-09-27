@@ -6,9 +6,24 @@
        referrerpolicy="no-referrer" />
   <h1>The Blacklist</h1>
   <h3>⚡ Speed | 🧱 Stability | 🔒 Security</h3>
-  <br>
-  <img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2FT145%2Fthe-blacklist" alt="Hits">
-  <h3><a href="https://github.com/T145/black-mirror">BLACK MIRROR</a></h3>
+  <hr>
+  <a href="https://github.com/T145/black-mirror">BLACK MIRROR</a>
+  <hr>
+  <img src="https://badges.pufler.dev/visits/T145/the-blacklist"
+       alt="visits"
+       longdesc="https://pufler.dev/git-badges/"
+       crossorigin="anonymous"
+       referrerpolicy="no-referrer" />
+  <img src="https://badges.pufler.dev/updated/T145/the-blacklist"
+       alt="last_updated"
+       longdesc="https://pufler.dev/git-badges/"
+       crossorigin="anonymous"
+       referrerpolicy="no-referrer" />
+  <img src="https://badges.pufler.dev/created/T145/the-blacklist"
+       alt="nonce"
+       longdesc="https://pufler.dev/git-badges/"
+       crossorigin="anonymous"
+       referrerpolicy="no-referrer" />
 </div>
 
 ## 🥅 Goals
