@@ -28,5 +28,5 @@ jobs:
         uses: peter-evans/create-issue-from-file@v3
         with:
           title: Dead Source Report
-          content-filepath: ./lychee/out.md
+          content-filepath: ./tmp/lychee/out.md
           labels: bug
