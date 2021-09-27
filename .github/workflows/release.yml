@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Clone Repo
-        uses: "actions/checkout@v2.3.4"
+        uses: actions/checkout@latest
         with:
           ref: ${{ github.head_ref }}
 
@@ -51,36 +51,40 @@ jobs:
         shell: bash
 
       - name: Publish Domain Release
-        uses: "marvinpinto/action-automatic-releases@v1.2.1"
+        if: ${{ success() }}
+        uses: marvinpinto/action-automatic-releases@latest
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest-domain"
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: latest-domain
           prerelease: false
-          title: "Domain Builds"
+          title: Domain Builds
           files: |
             black_domain*
 
       - name: Publish IPv4 Release
-        uses: "marvinpinto/action-automatic-releases@v1.2.1"
+        if: ${{ success() }}
+        uses: marvinpinto/action-automatic-releases@latest
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest-ipv4"
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: latest-ipv4
           prerelease: false
-          title: "IPv4 Builds"
+          title: IPv4 Builds
           files: |
             black_ipv4*
 
       - name: Publish IPv6 Release
-        uses: "marvinpinto/action-automatic-releases@v1.2.1"
+        if: ${{ success() }}
+        uses: marvinpinto/action-automatic-releases@latest
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest-ipv6"
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: latest-ipv6
           prerelease: false
-          title: "IPv6 Builds"
+          title: IPv6 Builds
           files: |
             black_ipv6*
 
       - name: Remove Artifacts
+        if: ${{ always() }}
         run: |
           rm *.txt
           rm *.md5
@@ -88,6 +92,7 @@ jobs:
           rm *.sha256
 
       - name: Auto Commit
-        uses: "stefanzweifel/git-auto-commit-action@v4.11.0"
+        if: ${{ success() }}
+        uses: stefanzweifel/git-auto-commit-action@latest
         with:
           commit_message: 🔼 Auto Update
