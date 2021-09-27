@@ -1,0 +1,29 @@
+name: Source Check
+
+on:
+  #repository_dispatch:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  source_check:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Clone Repo
+        uses: actions/checkout@v2
+
+      - name: Check Sources
+        run: |
+          sudo apt install aria2 -y
+          aria2c -i sources/sources.txt --dry-run --conf-path='./configs/aria2.conf'
+        shell: bash
+
+      - name: Create Issue From File
+        if: failure()
+        uses: peter-evans/create-issue-from-file@v3
+        with:
+          title: "[BUG] Some sources are dead!"
+          content-filepath: ./logs/aria2.log
+          labels: bug
