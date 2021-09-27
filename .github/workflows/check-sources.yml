@@ -12,12 +12,12 @@ jobs:
 
     steps:
       - name: Clone Repo
-        uses: actions/checkout@latest
+        uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
 
       - name: Check Links
-        uses: lycheeverse/lychee-action@latest
+        uses: lycheeverse/lychee-action@v1
         with:
           args: -vin -T 4 -m 5 sources/sources.txt
         env:
@@ -25,7 +25,7 @@ jobs:
 
       - name: Create Issue From File
         if: ${{ failure() }}
-        uses: peter-evans/create-issue-from-file@latest
+        uses: peter-evans/create-issue-from-file@v3
         with:
           title: Dead Source Report
           content-filepath: ./lychee/out.md
