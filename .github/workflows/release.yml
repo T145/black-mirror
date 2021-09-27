@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Clone Repo
-        uses: actions/checkout@latest
+        uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
 
@@ -93,6 +93,6 @@ jobs:
 
       - name: Auto Commit
         if: ${{ success() }}
-        uses: stefanzweifel/git-auto-commit-action@latest
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 🔼 Auto Update
