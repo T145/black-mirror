@@ -4,6 +4,12 @@ set +H +o history     # disable history features (helps avoid errors from "!" in
 set -euET -o pipefail # put bash into strict mode & have it give descriptive errors
 umask 055             # change all generated file perms from 755 to 700
 
+# fail if there are any function names matching
+# those in this program declared in this scope already
+declare -Ft get_file_contents &>/dev/null && exit 1
+declare -Ft parse_file_contents &>/dev/null && exit 1
+declare -Ft handle_format_output &>/dev/null && exit 1
+
 # https://github.com/koalaman/shellcheck/wiki/SC2155
 DOWNLOADS=$(mktemp -d)
 FORMAT_DOMAIN='domain'
@@ -16,7 +22,6 @@ readonly -a FORMATS
 trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 
 # params: src_list
-declare -Ft get_file_contents &>/dev/null && exit 1
 get_file_contents() {
     case $1 in
     *.tar.gz)
@@ -31,7 +36,6 @@ get_file_contents() {
 }
 
 # params: engine, rule
-declare -Ft parse_file_contents &>/dev/null && exit 1
 parse_file_contents() {
     case $1 in
     cat) cat -s ;;
@@ -56,7 +60,6 @@ parse_file_contents() {
 }
 
 # params: format, color
-declare -Ft handle_format_output &>/dev/null && exit 1
 handle_format_output() {
     case $1 in
     domain) ./scripts/idn_to_punycode.pl >>"${2}_${1}.txt" ;;
