@@ -9,8 +9,8 @@
   <hr>
   <a href="https://github.com/T145/black-mirror">BLACK MIRROR</a>
   <hr>
-  <img src="https://badges.pufler.dev/visits/T145/the-blacklist"
-       alt="visits"
+  <img src="https://badges.pufler.dev/created/T145/the-blacklist"
+       alt="nonce"
        longdesc="https://pufler.dev/git-badges/"
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
@@ -19,8 +19,8 @@
        longdesc="https://pufler.dev/git-badges/"
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
-  <img src="https://badges.pufler.dev/created/T145/the-blacklist"
-       alt="nonce"
+  <img src="https://badges.pufler.dev/visits/T145/the-blacklist"
+       alt="visits"
        longdesc="https://pufler.dev/git-badges/"
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
