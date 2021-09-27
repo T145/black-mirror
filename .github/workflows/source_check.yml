@@ -14,9 +14,10 @@ jobs:
       - name: Clone Repo
         uses: actions/checkout@v2
 
-      - name: Check Sources
+      - name: Update & Check Sources
         run: |
-          sudo apt install aria2 -y
+          sudo apt install jq -y
+          jq -r 'to_entries[].value.mirrors[]' sources/sources.json >sources/sources.txt
           aria2c -i sources/sources.txt --dry-run --conf-path='./configs/aria2.conf'
         shell: bash
 
