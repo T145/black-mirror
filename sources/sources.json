@@ -2365,7 +2365,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2378,7 +2378,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2391,7 +2391,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2404,7 +2404,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2417,7 +2417,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2430,7 +2430,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2443,7 +2443,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2456,7 +2456,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2469,24 +2469,11 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Free"
-    ]
-  },
-  "shadowwhisperer_gambling": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "NR>10{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Gambling"
     ]
   },
   "shadowwhisperer_junk": {
@@ -2495,7 +2482,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2508,7 +2495,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2521,7 +2508,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2534,7 +2521,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10 && $0~/^[^#]/{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2547,7 +2534,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10 && $0~/^[^#]/{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2560,7 +2547,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2573,7 +2560,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10 && $0~/^[^#]/{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2586,7 +2573,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2599,7 +2586,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2612,7 +2599,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2625,7 +2612,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
