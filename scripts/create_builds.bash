@@ -4,8 +4,7 @@ set +H +o history     # disable history features (helps avoid errors from "!" in
 set -euET -o pipefail # put bash into strict mode & have it give descriptive errors
 umask 055             # change all generated file perms from 755 to 700
 
-# fail if there are any function names matching
-# those in this program declared in this scope already
+# fail if there are declared function names matching this program's
 declare -Ft get_file_contents &>/dev/null && exit 1
 declare -Ft parse_file_contents &>/dev/null && exit 1
 declare -Ft handle_format_output &>/dev/null && exit 1
