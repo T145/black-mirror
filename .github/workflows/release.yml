@@ -52,38 +52,15 @@ jobs:
         run: ./core/update_readme.bash
         shell: bash
 
-      - name: Publish Domain Release
+      - name: Publish Release
         if: success()
         uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: latest-domain
+          automatic_release_tag: latest
           prerelease: false
-          title: Domain Builds
-          files: |
-            build/black_domain*
-
-      - name: Publish IPv4 Release
-        if: success()
-        uses: marvinpinto/action-automatic-releases@latest
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: latest-ipv4
-          prerelease: false
-          title: IPv4 Builds
-          files: |
-            build/black_ipv4*
-
-      - name: Publish IPv6 Release
-        if: success()
-        uses: marvinpinto/action-automatic-releases@latest
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: latest-ipv6
-          prerelease: false
-          title: IPv6 Builds
-          files: |
-            build/black_ipv6*
+          title: All Artifacts
+          files: build/*
 
       - name: Remove Artifacts
         if: always()
