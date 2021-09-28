@@ -56,7 +56,6 @@
 *   [myip_full_blacklist](https://myip.ms/browse/blacklist)
 *   [myip_webcrawlers](https://myip.ms/browse/web_bots)
 *   [CyberSaiyanIT](https://github.com/CyberSaiyanIT/InfoSharing)
-*   [UnrealSecurity](https://github.com/UnrealSecurity/badips)
 *   [4skinSkywalker Anti Porn](https://github.com/4skinSkywalker/anti-porn-hosts-file)
 *   [EmergingThreats](https://rules.emergingthreats.net/blockrules/)
 *   [ios-trackers](https://github.com/jakejarvis/ios-trackers)
@@ -209,3 +208,5 @@
 *   [fanboy vietnam](https://fanboy.co.nz/fanboy-vietnam.txt)
 *   [ryanbr](https://github.com/ryanbr/fanboy-adblock)
 *   [Princeton Webcensus](https://webtransparency.cs.princeton.edu/webcensus/)
+*   [UnrealSecurity](https://github.com/UnrealSecurity/badips)
+    *   Takes too long to respond; likely offline.
