@@ -115,7 +115,7 @@ main() {
             done
 
         for format in "${FORMATS[@]}"; do
-            list="${color}_${format}.txt"
+            list="build/${color}_${format}.txt"
 
             if test -f "$list"; then
                 sort -o "$list" -u -S 90% --parallel=4 -T "$cache_dir" "$list"
