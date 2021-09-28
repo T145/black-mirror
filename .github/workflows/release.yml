@@ -52,7 +52,7 @@ jobs:
         shell: bash
 
       - name: Publish Domain Release
-        if: ${{ success() }}
+        if: success()
         uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
@@ -63,7 +63,7 @@ jobs:
             black_domain*
 
       - name: Publish IPv4 Release
-        if: ${{ success() }}
+        if: success()
         uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
@@ -74,7 +74,7 @@ jobs:
             black_ipv4*
 
       - name: Publish IPv6 Release
-        if: ${{ success() }}
+        if: success()
         uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
@@ -85,7 +85,7 @@ jobs:
             black_ipv6*
 
       - name: Remove Artifacts
-        if: ${{ always() }}
+        if: always()
         run: |
           rm *.txt
           rm *.md5
@@ -93,7 +93,7 @@ jobs:
           rm *.sha256
 
       - name: Auto Commit
-        if: ${{ success() }}
+        if: success()
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 🔼 Auto Update
