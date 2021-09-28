@@ -8,7 +8,7 @@ sys.dont_write_bytecode = True
 
 # might be "shadow-banned" for being a bot,
 # therefore Profile is needed
-filename = 'certego.csv'
+filename = 'exports/certego.csv'
 c = twint.Config()
 c.Username = 'Certego_Intel'
 c.Store_csv = True
@@ -20,5 +20,5 @@ with open(filename, 'r', newline='') as csv_file:
     for row in reader:
         for url in literal_eval(row['urls']):
             path = urlparse(url).path
-            with open('certego.txt', 'a') as output:
+            with open('exports/certego.txt', 'a') as output:
                 output.write(f"{split(path)[1]}\n")
