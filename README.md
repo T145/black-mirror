@@ -1,25 +1,23 @@
 <div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/The_Blacklist_logo.svg/1024px-The_Blacklist_logo.svg.png"
-       width="300"
+  <img src=".github/images/logo.png"
+       width="420"
        alt="logo"
-       longdesc="https://github.com/T145/the-blacklist/master/README.md"
-       crossorigin="anonymous"
-       referrerpolicy="no-referrer" />
-  <h3>⚡ Speed | 🧱 Stability | 🔒 Security</h3>
+       longdesc="https://github.com/T145/black-mirror/master/README.md" />
+  <h3>🌓 Reflection | 💿 Redundancy | ✅ Reliability</h3>
   <hr>
-  <a href="https://github.com/T145/black-mirror"><code>BLACK MIRROR</code></a>
+  <p>Automatically compiled and maintained malicious domain & IP blacklist.</p>
   <hr>
-  <img src="https://badges.pufler.dev/created/T145/the-blacklist"
+  <img src="https://badges.pufler.dev/created/T145/black-mirror"
        alt="nonce"
        longdesc="https://pufler.dev/git-badges/"
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
-  <img src="https://badges.pufler.dev/updated/T145/the-blacklist"
+  <img src="https://badges.pufler.dev/updated/T145/black-mirror"
        alt="last_updated"
        longdesc="https://pufler.dev/git-badges/"
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
-  <img src="https://badges.pufler.dev/visits/T145/the-blacklist"
+  <img src="https://badges.pufler.dev/visits/T145/black-mirror"
        alt="visits"
        longdesc="https://pufler.dev/git-badges/"
        crossorigin="anonymous"
@@ -57,40 +55,40 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://github.com/T145/the-blacklist/releases/download/latest-domain/black_domain.txt">black_domain.txt</a></td>
+      <td><a href="https://github.com/T145/black-mirror/releases/download/latest-domain/black_domain.txt">black_domain.txt</a></td>
       <td>Domain entries</td>
       <td id="domain-count">9,257,881</td>
       <td id="domain-filesize">203M</td>
-      <td align="center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-domain/black_domain.md5">[🔗]</a></td>
-      <td align="center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-domain/black_domain.sha1">[🔗]</a></td>
-      <td align="center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-domain/black_domain.sha256">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-domain/black_domain.md5">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-domain/black_domain.sha1">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-domain/black_domain.sha256">[🔗]</a></td>
     </tr>
     <tr>
-      <td><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4.txt">black_ipv4.txt</a></td>
+      <td><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv4/black_ipv4.txt">black_ipv4.txt</a></td>
       <td>IPv4 addresses</td>
       <td id="ipv4-count">855,677</td>
       <td id="ipv4-filesize">12M</td>
-      <td align="center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4.md5">[🔗]</a></td>
-      <td align="center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4.sha1">[🔗]</a></td>
-      <td align="center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4.sha256">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv4/black_ipv4.md5">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv4/black_ipv4.sha1">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv4/black_ipv4.sha256">[🔗]</a></td>
     </tr>
     <tr>
-      <td><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4_cidr.txt">black_ipv4_cidr.txt</a></td>
+      <td><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv4/black_ipv4_cidr.txt">black_ipv4_cidr.txt</a></td>
       <td>IPv4 CIDR blocks</td>
       <td id="ipv4-cidr-count">27,706</td>
       <td id="ipv4-cidr-filesize">462K</td>
-      <td align="center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4_cidr.md5">[🔗]</a></td>
-      <td align="center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4_cidr.sha1">[🔗]</a></td>
-      <td align="center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv4/black_ipv4_cidr.sha256">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv4/black_ipv4_cidr.md5">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv4/black_ipv4_cidr.sha1">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv4/black_ipv4_cidr.sha256">[🔗]</a></td>
     </tr>
     <tr>
-      <td><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv6/black_ipv6.txt">black_ipv6.txt</a></td>
+      <td><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv6/black_ipv6.txt">black_ipv6.txt</a></td>
       <td>IPv6 addresses</td>
       <td id="ipv6-count">6,280</td>
       <td id="ipv6-filesize">205K</td>
-      <td align="center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv6/black_ipv6.md5">[🔗]</a></td>
-      <td align="center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv6/black_ipv6.sha1">[🔗]</a></td>
-      <td align="center"><a href="https://github.com/T145/the-blacklist/releases/download/latest-ipv6/black_ipv6.sha256">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv6/black_ipv6.md5">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv6/black_ipv6.sha1">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv6/black_ipv6.sha256">[🔗]</a></td>
     </tr>
   </tbody>
 </table>
@@ -130,7 +128,7 @@ Follow [this guide](https://aws.amazon.com/premiumsupport/knowledge-center/dns-r
 
 #### pihole
 
-If you'd like to update when some sources do or not extract a production build, just use the [single-line list](https://discourse.pi-hole.net/t/how-to-add-blocklists-v5-and-later/32127) [`sources.pihole`](https://github.com/T145/the-blacklist/blob/master/sources/sources.pihole). Note that this list only contains Pihole-compatible sources, and not all sources handled by The Blacklist. Some manual configuration may also be required.
+If you'd like to update when some sources do or not extract a production build, just use the [single-line list](https://discourse.pi-hole.net/t/how-to-add-blocklists-v5-and-later/32127) [`sources.pihole`](https://github.com/T145/black-mirror/blob/master/sources/sources.pihole). Note that this list only contains Pihole-compatible sources, and not all sources handled by The Blacklist. Some manual configuration may also be required.
 
 #### unbound
 
