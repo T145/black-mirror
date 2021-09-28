@@ -4,7 +4,7 @@
        longdesc="https://github.com/T145/the-blacklist/master/.github/images/logo.png"
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
-  <h1>The Blacklist</h1>
+  <h1>THE BLACKLIST</h1>
   <h3>⚡ Speed | 🧱 Stability | 🔒 Security</h3>
   <hr>
   <a href="https://github.com/T145/black-mirror"><code>BLACK MIRROR</code></a>
@@ -122,7 +122,11 @@ Target a file that has the hosts in a format similar to the Desktop OS Hosts Fil
 
 If you're using the `RADVD` daemon, prepend any listed hosts with [`::`](https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0). Otherwise, even if you have IPv6 support set up, prepend hosts with [`0.0.0.0`](https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001).
 
-I've tested this across all the mentioned platforms using `dig{6}` on a small sample size and had each host null-routed successfully. [DNSmasq's man page](https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html) discusses configuration further, and [DDWRT's ad blocking wiki page](https://wiki.dd-wrt.com/wiki/index.php/Ad_blocking) provides some examples.
+This has been tested across all the mentioned platforms using `dig{6}` on a small sample size and had each host null-routed successfully. [DNSmasq's man page](https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html) discusses configuration further, and [DDWRT's ad blocking wiki page](https://wiki.dd-wrt.com/wiki/index.php/Ad_blocking) provides some examples.
+
+##### Amazon EC2 DNS Resolver
+
+Follow [this guide](https://aws.amazon.com/premiumsupport/knowledge-center/dns-resolution-failures-ec2-linux/) to create a DNS server on a Amazon EC2 instance.
 
 #### pihole
 
