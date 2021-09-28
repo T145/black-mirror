@@ -33,4 +33,4 @@ make_subst_script() {
 }
 
 sed -e "$(make_subst_script domain_count domain_filesize ipv4_count ipv4_filesize ipv4_cidr_count ipv4_cidr_filesize ipv6_count ipv6_filesize)" \
-    -i .github/README.md
+    -i README.md
