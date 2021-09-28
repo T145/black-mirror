@@ -20,21 +20,22 @@ jobs:
         run: |
           sudo apt install golang-go ipcalc libnet-libidn-perl libnet-idn-encode-perl miller moreutils openjdk-16-jre-headless -y
           # pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint
+          chmod 755 -R ./core
           chmod 755 -R ./scripts
         shell: bash
 
-      - name: Fix Sources
+      - name: Sort Sources Alphabetically
         run: |
-          jq -S -M '.' sources/sources.json > temp.json
-          mv temp.json sources/sources.json
+          jq -S -M '.' core/sources.json > temp.json
+          mv temp.json core/sources.json
         shell: bash
 
-      - name: Export Sources in Pihole Format
-        run: jq -jr 'to_entries[] | select(.value.color == "black") | .value.mirrors[0] as $url | .value.filters[] | if (.engine == "cat" or .engine == "mawk") then ($url, " ") else empty end' sources/sources.json | sed 's/ $/\n/' >sources/sources.pihole
+      - name: Convert Sources to Pihole Format
+        run: jq -jr 'to_entries[] | select(.value.color == "black") | .value.mirrors[0] as $url | .value.filters[] | if (.engine == "cat" or .engine == "mawk") then ($url, " ") else empty end' core/sources.json | sed 's/ $/\n/' >sources/sources.pihole
         shell: bash
 
-      - name: Export Sources in Text Format
-        run: jq -r 'to_entries[].value.mirrors[]' sources/sources.json >sources/sources.txt
+      - name: Convert Sources to Text Format
+        run: jq -r 'to_entries[].value.mirrors[]' core/sources.json >sources/sources.txt
         shell: bash
 
       - name: Reset Aria2 Log
@@ -44,11 +45,11 @@ jobs:
         shell: bash
 
       - name: Create Builds
-        run: ./scripts/create_builds.bash
+        run: ./core/create_builds.bash
         shell: bash
 
       - name: Update README.md
-        run: ./scripts/update_readme.bash
+        run: ./core/update_readme.bash
         shell: bash
 
       - name: Publish Domain Release
@@ -60,7 +61,7 @@ jobs:
           prerelease: false
           title: Domain Builds
           files: |
-            black_domain*
+            build/black_domain*
 
       - name: Publish IPv4 Release
         if: success()
@@ -71,7 +72,7 @@ jobs:
           prerelease: false
           title: IPv4 Builds
           files: |
-            black_ipv4*
+            build/black_ipv4*
 
       - name: Publish IPv6 Release
         if: success()
@@ -82,15 +83,13 @@ jobs:
           prerelease: false
           title: IPv6 Builds
           files: |
-            black_ipv6*
+            build/black_ipv6*
 
       - name: Remove Artifacts
         if: always()
         run: |
-          rm *.txt
-          rm *.md5
-          rm *.sha1
-          rm *.sha256
+          rm -rf build/
+          # rm -rf exports/
 
       - name: Auto Commit
         if: success()
