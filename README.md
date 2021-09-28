@@ -1,10 +1,10 @@
 <div align="center">
-  <img src=".github/images/logo.png"
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/The_Blacklist_logo.svg/1024px-The_Blacklist_logo.svg.png"
+       width="300"
        alt="logo"
-       longdesc="https://github.com/T145/the-blacklist/master/.github/images/logo.png"
+       longdesc="https://github.com/T145/the-blacklist/master/README.md"
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
-  <h1>THE BLACKLIST</h1>
   <h3>⚡ Speed | 🧱 Stability | 🔒 Security</h3>
   <hr>
   <a href="https://github.com/T145/black-mirror"><code>BLACK MIRROR</code></a>
