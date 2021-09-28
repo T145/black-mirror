@@ -19,6 +19,7 @@ jobs:
       - name: Prepare Workspace
         run: |
           sudo apt install golang-go ipcalc libnet-libidn-perl libnet-idn-encode-perl miller moreutils openjdk-16-jre-headless -y
+          # pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint
           chmod 755 -R ./scripts
         shell: bash
 
