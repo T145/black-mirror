@@ -848,18 +848,13 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/"
-      },
-      {
-        "engine": "gawk",
-        "format": "ipv4",
-        "rule": "/^([0-9]+(\\.|$)){4}/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
-      "https://github.com/T145/black-mirror/releases/download/latest/certego.txt"
+      "https://github.com/scafroglia93/blocklists/blob/master/blocklists-certego.txt"
     ]
   },
   "charles_haley": {
@@ -1213,37 +1208,6 @@
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/erratasec?json"
-    ]
-  },
-  "exodus_domains": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "cat",
-        "format": "domain",
-        "rule": ""
-      }
-    ],
-    "mirrors": [
-      "https://github.com/T145/black-mirror/releases/download/latest/exodus_domains.txt"
-    ],
-    "variants": [
-      "https://etip.exodus-privacy.eu.org/trackers/export",
-      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/exodusprivacy/standard/hosts.txt",
-      "https://blokada.org/blocklists/exodusprivacy/standard/hosts.txt"
-    ]
-  },
-  "exodus_ips": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "cat",
-        "format": "ipv4",
-        "rule": ""
-      }
-    ],
-    "mirrors": [
-      "https://github.com/T145/black-mirror/releases/download/latest/exodus_ips.txt"
     ]
   },
   "fanboy_antifonts": {
