@@ -1,8 +1,8 @@
 #!/usr/bin/perl -Wn
+use open ':std', ':encoding(UTF-8)';
 use strict;
 use Try::Tiny;
-use Net::IDN::Encode ':all';
-use open ':std', ':encoding(UTF-8)';
+use Net::IDN::Encode 'domain_to_ascii';
 
 try {
     chomp $_;
