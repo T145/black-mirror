@@ -85,6 +85,9 @@ main() {
     local src_list
     local list
 
+    # make the build directory if it doesn't exist
+    mkdir -p build/
+
     for color in 'white' 'black'; do
         cache_dir="${DOWNLOADS}/${color}"
 
