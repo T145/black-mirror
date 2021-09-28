@@ -61,18 +61,18 @@ parse_file_contents() {
 # params: format, color
 handle_format_output() {
     case $1 in
-    domain) ./scripts/idn_to_punycode.pl >>"${2}_${1}.txt" ;;
+    domain) ./scripts/idn_to_punycode.pl >>"build/${2}_${1}.txt" ;;
     ipv4)
         while IFS= read -r line; do
             case $line in
-            */*) printf "%s\n" "$line" >>"${2}_${1}_cidr.txt" ;;   # cidr block
-            *-*) ipcalc "$line" >>"${2}_${1}_cidr.txt" ;;          # deaggregate ip range
-            *.*.*.*) printf "%s\n" "$line" >>"${2}_${1}.txt" ;;    # ip address
+            */*) printf "%s\n" "$line" >>"build/${2}_${1}_cidr.txt" ;;   # cidr block
+            *-*) ipcalc "$line" >>"build/${2}_${1}_cidr.txt" ;;          # deaggregate ip range
+            *.*.*.*) printf "%s\n" "$line" >>"build/${2}_${1}.txt" ;;    # ip address
             *) echo "WARN: This isn't an IPv4 address: ${line}" ;; # debug if ips are being processed well
             esac
         done
         ;;
-    ipv6) cat >>"${2}_${1}.txt" ;;
+    ipv6) cat >>"build/${2}_${1}.txt" ;;
     *)
         echo "INVALID FORMAT: ${1}"
         exit 1
@@ -93,13 +93,13 @@ main() {
         select(.value.color == $color) |
         {key, mirrors: .value.mirrors} |
         .extension = (.mirrors[0] | match(".(tar.gz|zip|7z|json)").captures[0].string // "txt") |
-        (.mirrors | join("\t")), " out=\(.key).\(.extension)"' sources/sources.json |
+        (.mirrors | join("\t")), " out=\(.key).\(.extension)"' core/sources.json |
             aria2c -i- -d "$cache_dir" --conf-path='./configs/aria2.conf'
         set -e
 
         jq -r --arg color "$color" 'to_entries[] |
         select(.value.color == $color) |
-         .key as $k | .value.filters[] | "\($k)#\(.engine)#\(.format)#\(.rule)"' sources/sources.json |
+         .key as $k | .value.filters[] | "\($k)#\(.engine)#\(.format)#\(.rule)"' core/sources.json |
             while IFS='#' read -r key engine format rule; do
                 src_list=$(find -P -O3 "$cache_dir" -type f -name "$key*")
 
@@ -118,13 +118,13 @@ main() {
                 sort -o "$list" -u -S 90% --parallel=4 -T "$cache_dir" "$list"
 
                 if [[ "$color" == 'black' ]]; then
-                    if test -f "white_${format}.txt"; then
-                        grep -Fxvf "white_${format}.txt" "$list" | sponge "$list"
+                    if test -f "build/white_${format}.txt"; then
+                        grep -Fxvf "build/white_${format}.txt" "$list" | sponge "$list"
                     fi
 
-                    md5sum "$list" >"black_${format}.md5"
-                    sha1sum "$list" >"black_${format}.sha1"
-                    sha256sum "$list" >"black_${format}.sha256"
+                    md5sum "$list" >"build/black_${format}.md5"
+                    sha1sum "$list" >"build/black_${format}.sha1"
+                    sha256sum "$list" >"build/black_${format}.sha256"
                 fi
             fi
         done
