@@ -1,6 +1,6 @@
 <div align="center">
   <img src=".github/images/logo.png"
-       width="420"
+       width="600"
        alt="logo"
        longdesc="https://github.com/T145/black-mirror/master/README.md" />
   <h3>🌓 Reflection | 💿 Redundancy | ✅ Reliability</h3>
