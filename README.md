@@ -55,40 +55,40 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://github.com/T145/black-mirror/releases/download/latest-domain/black_domain.txt">black_domain.txt</a></td>
+      <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_domain.txt">black_domain.txt</a></td>
       <td>Domain entries</td>
       <td id="domain-count">9,270,373</td>
       <td id="domain-filesize">203M</td>
-      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-domain/black_domain.md5">[🔗]</a></td>
-      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-domain/black_domain.sha1">[🔗]</a></td>
-      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-domain/black_domain.sha256">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_domain.md5">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_domain.sha1">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_domain.sha256">[🔗]</a></td>
     </tr>
     <tr>
-      <td><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv4/black_ipv4.txt">black_ipv4.txt</a></td>
+      <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.txt">black_ipv4.txt</a></td>
       <td>IPv4 addresses</td>
       <td id="ipv4-count">855,560</td>
       <td id="ipv4-filesize">12M</td>
-      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv4/black_ipv4.md5">[🔗]</a></td>
-      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv4/black_ipv4.sha1">[🔗]</a></td>
-      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv4/black_ipv4.sha256">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.md5">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.sha1">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.sha256">[🔗]</a></td>
     </tr>
     <tr>
-      <td><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv4/black_ipv4_cidr.txt">black_ipv4_cidr.txt</a></td>
+      <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4_cidr.txt">black_ipv4_cidr.txt</a></td>
       <td>IPv4 CIDR blocks</td>
       <td id="ipv4-cidr-count">27,881</td>
       <td id="ipv4-cidr-filesize">465K</td>
-      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv4/black_ipv4_cidr.md5">[🔗]</a></td>
-      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv4/black_ipv4_cidr.sha1">[🔗]</a></td>
-      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv4/black_ipv4_cidr.sha256">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4_cidr.md5">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4_cidr.sha1">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4_cidr.sha256">[🔗]</a></td>
     </tr>
     <tr>
-      <td><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv6/black_ipv6.txt">black_ipv6.txt</a></td>
+      <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.txt">black_ipv6.txt</a></td>
       <td>IPv6 addresses</td>
       <td id="ipv6-count">6,283</td>
       <td id="ipv6-filesize">205K</td>
-      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv6/black_ipv6.md5">[🔗]</a></td>
-      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv6/black_ipv6.sha1">[🔗]</a></td>
-      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest-ipv6/black_ipv6.sha256">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.md5">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.sha1">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.sha256">[🔗]</a></td>
     </tr>
   </tbody>
 </table>
@@ -118,7 +118,7 @@ mawk '{print ":: " $0}' black_ipv6.txt >>hosts
 Many popular platforms such as OpenWRT, DDWRT, and Pihole use DNSmasq as their choice TCP powerhouse. After inspecting many domain blocklists you'll inevitably run across a list in the `dnsmasq.conf` format. This list doesn't support it because you can use the `addn-hosts` parameter to add hosts in the list.
 Target a file that has the hosts in a format similar to the Desktop OS Hosts File format.
 
-If you're using the `RADVD` daemon, prepend any listed hosts with [`::`](https://stackoverflow.com/questions/40189084/what-is-ipv6-for-localhost-and-0-0-0-0). Otherwise, even if you have IPv6 support set up, prepend hosts with [`0.0.0.0`](https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001).
+If you're using the `RADVD` daemon, prepend any listed hosts with [`::`](https://stackoverflow.com/questions/40189084/what-is-for-localhost-and-0-0-0-0). Otherwise, even if you have IPv6 support set up, prepend hosts with [`0.0.0.0`](https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001).
 
 This has been tested across all the mentioned platforms using `dig{6}` on a small sample size and had each host null-routed successfully. [DNSmasq's man page](https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html) discusses configuration further, and [DDWRT's ad blocking wiki page](https://wiki.dd-wrt.com/wiki/index.php/Ad_blocking) provides some examples.
 
