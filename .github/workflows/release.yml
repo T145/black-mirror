@@ -22,13 +22,6 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-      - name: Prepare Workspace
-        run: |
-          # pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint
-          chmod 755 -R ./core
-          chmod 755 -R ./scripts
-        shell: bash
-
       - name: Sort Sources Alphabetically
         run: |
           jq -S -M '.' core/sources.json > temp.json
