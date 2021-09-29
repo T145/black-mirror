@@ -7,7 +7,7 @@ LABEL maintainer="T145" \
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt update
-RUN apt install git aria2 jq gawk sed golang-go ipcalc libnet-libidn-perl libnet-idn-encode-perl miller moreutils openjdk-16-jre-headless
+RUN apt install -y git aria2 jq gawk sed golang-go ipcalc libnet-libidn-perl libnet-idn-encode-perl miller moreutils openjdk-16-jre-headless
 RUN apt clean
 
 RUN git clone https://github.com/T145/black-mirror.git
