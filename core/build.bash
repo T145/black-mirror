@@ -22,6 +22,9 @@ FORMATS=("$FORMAT_IPV4" "$FORMAT_IPV4_CIDR" "$FORMAT_IPV6" "$FORMAT_DOMAIN")
 readonly -a FORMATS
 trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 
+# force byte-wise sorting and default langauge output
+export LC_ALL=C
+
 # params: src_list
 get_file_contents() {
     case $1 in
