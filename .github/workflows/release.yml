@@ -45,11 +45,11 @@ jobs:
         shell: bash
 
       - name: Create Builds
-        run: ./core/create_builds.bash
+        run: ./core/build.bash
         shell: bash
 
       - name: Update README.md
-        run: ./core/update_readme.bash
+        run: ./scripts/update_readme.bash
         shell: bash
 
       - name: Publish Release
@@ -66,7 +66,7 @@ jobs:
         if: always()
         run: |
           rm -rf build/
-          # rm -rf exports/
+          # rm -rf imports/
 
       - name: Auto Commit
         if: success()
