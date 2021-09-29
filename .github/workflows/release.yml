@@ -10,6 +10,12 @@ jobs:
   create_release:
     runs-on: ubuntu-20.04
 
+    container:
+      image: ghcr.io/t145/black-mirror:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - name: Clone Repo
         uses: actions/checkout@v2
@@ -18,7 +24,6 @@ jobs:
 
       - name: Prepare Workspace
         run: |
-          sudo apt install golang-go ipcalc libnet-libidn-perl libnet-idn-encode-perl miller moreutils openjdk-16-jre-headless -y
           # pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint
           chmod 755 -R ./core
           chmod 755 -R ./scripts
