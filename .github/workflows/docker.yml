@@ -6,6 +6,7 @@ on:
       - master
     paths:
       - 'Dockerfile'
+      - '.github/workflows/docker.yml'
 
 jobs:
   build:
@@ -15,7 +16,7 @@ jobs:
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: T145/black-mirror/black-mirror
+        name: T145/black-mirror
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
         registry: ghcr.io
