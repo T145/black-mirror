@@ -22,6 +22,16 @@
        longdesc="https://pufler.dev/git-badges/"
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
+  <img src="https://img.shields.io/github/workflow/status/T145/black-mirror/Create%20Release/master?label=release&logo=github"
+       alt="release"
+       longdesc="https://github.com/badges/shields/"
+       crossorigin="anonymous"
+       referrerpolicy="no-referrer" />
+  <img src="https://img.shields.io/github/workflow/status/T145/black-mirror/Update%20Docker%20Image/master?color=%232496ED&label=docker&logo=docker"
+       alt="docker"
+       longdesc="https://github.com/badges/shields/"
+       crossorigin="anonymous"
+       referrerpolicy="no-referrer" />
 </div>
 
 ## 🥅 Goals
