@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#shopt -s extdebug     # or --debugging
+shopt -s extdebug     # or --debugging
 set +H +o history     # disable history features (helps avoid errors from "!" in strings)
 set -euET -o pipefail # put bash into strict mode & have it give descriptive errors
 umask 055             # change all generated file perms from 755 to 700
