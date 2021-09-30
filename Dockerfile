@@ -23,5 +23,4 @@ RUN apt-get clean
 
 RUN git clone https://github.com/T145/black-mirror.git
 WORKDIR black-mirror
-RUN chmod 755 -R ./core
-RUN chmod 755 -R ./scripts
+RUN chmod 755 -R ./core -R ./scripts
