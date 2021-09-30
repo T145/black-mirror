@@ -17,7 +17,7 @@ RUN apt-get install -y apt-utils
 # upgrade with proper configurations
 RUN apt-get upgrade -y
 
-RUN apt-get install -y git aria2 jq gawk sed golang-go ipcalc libnet-libidn-perl libnet-idn-encode-perl miller moreutils openjdk-16-jre-headless
+RUN apt-get install -y git aria2 jq gawk sed golang-go ipcalc perl libnet-libidn-perl libnet-idn-encode-perl miller moreutils openjdk-16-jre-headless
 RUN apt-get clean
 # RUN pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint
 
