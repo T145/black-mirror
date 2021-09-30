@@ -17,6 +17,13 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
+      - name: Checkout latest repo version
+        uses: actions/checkout@v2
+
+      - name: Set script permissions
+        run: chmod 755 -R ./core -R ./scripts
+        shell: bash
+
       - name: Sort Sources Alphabetically
         run: |
           jq -S -M '.' core/sources.json > temp.json
