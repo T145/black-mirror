@@ -4,6 +4,10 @@ LABEL maintainer="T145" \
       version="1.0.0" \
       description="Custom Docker Image for Black Mirror."
 
+# configure debconf to be non-interactive
+# https://github.com/phusion/baseimage-docker/issues/58#issuecomment-47995343
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+
 # use apt-get & apt-cache over apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 RUN apt-get update -y
 
