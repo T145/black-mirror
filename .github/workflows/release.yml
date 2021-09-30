@@ -17,11 +17,6 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
-      - name: Clone Repo
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
-
       - name: Sort Sources Alphabetically
         run: |
           jq -S -M '.' core/sources.json > temp.json
