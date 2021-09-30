@@ -21,7 +21,7 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
         "rule": "$0~/^[^#]/{print $2}"
       }
