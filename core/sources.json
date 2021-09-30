@@ -1676,17 +1676,16 @@
     ]
   },
   "not_on_my_shift": {
-    "_comment": "May want to use 'https://orca.pet/notonmyshift/hosts.txt' to block www.* hosts.",
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
-      "https://orca.pet/notonmyshift/domains.txt"
+      "https://orca.pet/notonmyshift/hosts.txt"
     ]
   },
   "notracking": {
