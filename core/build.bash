@@ -11,6 +11,9 @@ declare -Ft get_file_contents &>/dev/null && exit 1
 declare -Ft parse_file_contents &>/dev/null && exit 1
 declare -Ft handle_format_output &>/dev/null && exit 1
 
+# force byte-wise sorting and default langauge output
+export LC_ALL=C
+
 # https://github.com/koalaman/shellcheck/wiki/SC2155
 DOWNLOADS=$(mktemp -d)
 FORMAT_DOMAIN='domain'
@@ -21,9 +24,6 @@ readonly DOWNLOADS FORMAT_DOMAIN FORMAT_IPV4 FORMAT_IPV4_CIDR FORMAT_IPV6
 FORMATS=("$FORMAT_IPV4" "$FORMAT_IPV4_CIDR" "$FORMAT_IPV6" "$FORMAT_DOMAIN")
 readonly -a FORMATS
 trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
-
-# force byte-wise sorting and default langauge output
-export LC_ALL=C
 
 # params: src_list
 get_file_contents() {
@@ -141,3 +141,6 @@ main() {
 
 # https://github.com/koalaman/shellcheck/wiki/SC2218
 main
+
+# reset the locale after processing
+export LC_ALL=en_US
