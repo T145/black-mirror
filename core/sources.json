@@ -6,7 +6,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>9{print $2}"
+        "rule": "$0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
@@ -23,7 +23,7 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "$2~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+        "rule": "$0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
@@ -104,9 +104,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+        "rule": "$0~/^[^#]/&&$2~/^[^localhost]/{print $2}"
       }
     ],
     "mirrors": [
@@ -117,9 +117,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+        "rule": "$0~/^[^#]/&&$2~/^[^localhost]/{print $2}"
       }
     ],
     "mirrors": [
@@ -130,9 +130,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+        "rule": "$0~/^[^#]/&&$2~/^[^localhost]/{print $2}"
       }
     ],
     "mirrors": [
@@ -143,9 +143,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+        "rule": "$0~/^[^#]/&&$2~/^[^localhost]/{print $2}"
       }
     ],
     "mirrors": [
@@ -156,9 +156,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+        "rule": "$0~/^[^#]/&&$2~/^[^localhost]/{print $2}"
       }
     ],
     "mirrors": [
@@ -195,9 +195,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -210,7 +210,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>12"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -223,7 +223,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>4"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -249,7 +249,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>10{print $2}"
+        "rule": "$0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
@@ -263,7 +263,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>9{print $2}"
+        "rule": "$0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
@@ -277,7 +277,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>8{print $2}"
+        "rule": "$0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
@@ -291,7 +291,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>7"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -388,7 +388,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>9{print $2}"
+        "rule": "$0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
@@ -405,7 +405,7 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "NR>13"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -416,9 +416,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/"
+        "rule": "$0~/^[^;]/{print $1}"
       }
     ],
     "mirrors": [
@@ -444,7 +444,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>6"
+        "rule": "$0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
@@ -472,13 +472,12 @@
     ]
   },
   "blp_abuse": {
-    "_comment": "CONTAINS IPV4 ADDRESSES!",
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -490,9 +489,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -504,9 +503,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -518,9 +517,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -532,9 +531,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -546,9 +545,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -560,9 +559,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -574,9 +573,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -588,9 +587,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -602,9 +601,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -616,9 +615,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -630,9 +629,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -644,9 +643,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -658,9 +657,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -672,9 +671,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -686,9 +685,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -700,9 +699,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -714,9 +713,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -728,9 +727,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -822,7 +821,7 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "NR>5{print $1}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -1176,9 +1175,9 @@
     "color": "white",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -1189,9 +1188,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2617,7 +2616,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>9{print $2}"
+        "rule": "$0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
@@ -2634,7 +2633,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>2{print $2}"
+        "rule": "$0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
@@ -2660,9 +2659,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2676,7 +2675,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>9{print $2}"
+        "rule": "$0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
@@ -2961,9 +2960,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -3059,7 +3058,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>30 && $0~/^[^#]/{print $2}"
+        "rule": "$0~/^[^#]/&&$2~/^[^localhost]/{print $2}"
       }
     ],
     "mirrors": [
@@ -3075,7 +3074,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>6{print $2}"
+        "rule": "$0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
@@ -3089,7 +3088,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>6{print $2}"
+        "rule": "$0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
@@ -3102,7 +3101,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>6{print $2}"
+        "rule": "$0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
