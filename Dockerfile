@@ -4,11 +4,17 @@ LABEL maintainer="T145" \
       version="1.0.0" \
       description="Custom Docker Image for Black Mirror."
 
-ARG DEBIAN_FRONTEND=noninteractive
+# use apt-get & apt-cache over apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
+RUN apt-get update -y
 
-RUN apt update
-RUN apt install -y git aria2 jq gawk sed golang-go ipcalc libnet-libidn-perl libnet-idn-encode-perl miller moreutils openjdk-16-jre-headless
-RUN apt clean
+# install apt-utils so debconf doesn't delay package configuration
+RUN apt-get install -y apt-utils
+
+# upgrade with proper configurations
+RUN apt-get upgrade -y
+
+RUN apt-get install -y git aria2 jq gawk sed golang-go ipcalc libnet-libidn-perl libnet-idn-encode-perl miller moreutils openjdk-16-jre-headless
+RUN apt-get clean
 # RUN pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint
 
 RUN git clone https://github.com/T145/black-mirror.git
