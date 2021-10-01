@@ -11,9 +11,6 @@ declare -Ft get_file_contents &>/dev/null && exit 1
 declare -Ft parse_file_contents &>/dev/null && exit 1
 declare -Ft handle_format_output &>/dev/null && exit 1
 
-# force byte-wise sorting and default langauge output
-export LC_ALL=C
-
 # https://github.com/koalaman/shellcheck/wiki/SC2155
 DOWNLOADS=$(mktemp -d)
 FORMAT_DOMAIN='domain'
@@ -138,6 +135,9 @@ main() {
         done
     done
 }
+
+# force byte-wise sorting and default langauge output
+export LC_ALL=C
 
 # https://github.com/koalaman/shellcheck/wiki/SC2218
 main
