@@ -3163,5 +3163,18 @@
     "mirrors": [
       "https://api.cybercure.ai/feed/get_ips"
     ]
+  },
+  "ipsum": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "$0~/^[^#]/{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt"
+    ]
   }
 }
