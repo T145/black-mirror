@@ -34,6 +34,7 @@ RUN apt-get -y install \
       libtry-tiny-perl \
       libnet-libidn-perl \
       libnet-idn-encode-perl \
+      libregexp-common-perl \
       # install go for projectdiscovery programs
       golang-go \
       # install java for saxon

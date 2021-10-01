@@ -50,6 +50,10 @@ parse_file_contents() {
             mlr --mmap --csv --skip-comments --headerless-csv-output cut -f "$2"
         fi
         ;;
+    perl)
+        # https://unix.stackexchange.com/a/566565
+        perl -MRegexp::Common=net -nE "$2"
+        ;;
     saxon) java -cp bin/SaxonHE10-5J/saxon-he-10.5.jar net.sf.saxon.Query -config:configs/saxon.xml -s:/dev/stdin -qs:"$2" ;;
     *)
         echo "INVALID ENGINE: ${1}"
@@ -70,7 +74,7 @@ handle_format_output() {
             */*) printf "%s\n" "$line" >>"build/${2}_${1}_cidr.txt" ;;   # cidr block
             *-*) ipcalc "$line" >>"build/${2}_${1}_cidr.txt" ;;          # deaggregate ip range
             *.*.*.*) printf "%s\n" "$line" >>"build/${2}_${1}.txt" ;;    # ip address
-            *) echo "WARN: This isn't an IPv4 address: ${line}" ;; # debug if ips are being processed well
+            *) echo "WARN: This isn't an IPv4 address: ${line}" ;;       # debug if ips are being processed well
             esac
         done
         ;;

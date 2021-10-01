@@ -3178,5 +3178,28 @@
     "mirrors": [
       "https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt"
     ]
+  },
+  "phishstats": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{RS=\"http[s]?:\/\/([[:alnum:]_-]{1,63}.)+[[:alpha:]]+/\"}RT{split(RT,a,\"/\"); print a[3]}"
+      },
+      {
+        "engine": "perl",
+        "format": "ipv4",
+        "rule": "say $& while /$RE{net}{IPv4}/g"
+      },
+      {
+        "engine": "perl",
+        "format": "ipv6",
+        "rule": "say $& while /$RE{net}{IPv6}/g"
+      }
+    ],
+    "mirrors": [
+      "https://phishstats.info/phish_score.csv"
+    ]
   }
 }
