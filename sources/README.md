@@ -124,6 +124,8 @@
 *   [Cyber Cure](https://www.cybercure.ai/start)
 *   [IPsum](https://github.com/stamparm/ipsum#about)
     *   Gets IPs from maltrail
+*   [Benkow_](https://benkow.cc/)
+    *   [Haruko](https://tracker.fumik0.com/)
 
 ### ⚪ Whitelists
 
@@ -216,3 +218,14 @@
     *   Takes too long to respond; likely offline.
 *   [ipspamlist](http://www.ipspamlist.com/)
     *   Last updated in 2020.
+
+# 🕵🏻 Lamers Unwelcome
+
+*   [cybercrime-tracker](https://atm.cybercrime-tracker.net/index.php)
+    *   [EMV](https://emv.cybercrime-tracker.net/index.php?x=faq)
+*   [MalwareBazaar](https://bazaar.abuse.ch/browse/)
+*   [virusbay](https://beta.virusbay.io/sample/browse)
+*   [malpedia](https://malpedia.caad.fkie.fraunhofer.de/)
+*   [manalyzer](https://manalyzer.org/)
+*   [malshare](https://malshare.com/daily/malshare.current.all.txt)
+*   [ecrimelabs](https://feeds.ecrimelabs.net/data/metasploit-cve)
