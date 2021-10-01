@@ -1034,6 +1034,24 @@
       "https://cybercrime-tracker.net/all.php"
     ]
   },
+  "cybercrime_ccamgate": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print tolower($3)}"
+      },
+      {
+        "engine": "gawk",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([0-9]{1,3}\\.){3}[0-9]{1,3}+(\\/|:|$)/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://cybercrime-tracker.net/ccamgate.php"
+    ]
+  },
   "cybergreen": {
     "color": "black",
     "filters": [
