@@ -3149,5 +3149,19 @@
     "mirrors": [
       "https://mirai.security.gives/data/ip_list.txt"
     ]
+  },
+  "cybercure_ips": {
+    "_comment": "TODO: Add https://api.cybercure.ai/feed/get_urls",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".data.ip[]"
+      }
+    ],
+    "mirrors": [
+      "https://api.cybercure.ai/feed/get_ips"
+    ]
   }
 }
