@@ -6,6 +6,9 @@ shopt -s execfail     # ensure interactive and non-interactive runtime are simil
 set -euET -o pipefail # put bash into strict mode & have it give descriptive errors
 umask 055             # change all generated file perms from 755 to 700
 
+# force byte-wise sorting and default langauge output
+export LC_ALL=C
+
 # fail if there are declared function names matching this program's
 declare -Ft get_file_contents &>/dev/null && exit 1
 declare -Ft parse_file_contents &>/dev/null && exit 1
@@ -140,9 +143,6 @@ main() {
         done
     done
 }
-
-# force byte-wise sorting and default langauge output
-export LC_ALL=C
 
 # https://github.com/koalaman/shellcheck/wiki/SC2218
 main
