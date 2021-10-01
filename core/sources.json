@@ -3136,5 +3136,18 @@
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
+  },
+  "mirai_tracker": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "NR>1{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://mirai.security.gives/data/ip_list.txt"
+    ]
   }
 }
