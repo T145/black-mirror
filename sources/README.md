@@ -121,7 +121,7 @@
 *   [dandelionsprout/antimalware](https://github.com/DandelionSprout/adfilt/blob/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt)
 *   [Certego Intel](https://twitter.com/Certego_Intel)
 *   [Mirai Tracker](https://mirai.security.gives/)
-*   [CyberCure](https://www.cybercure.com/)
+*   [Cyber Cure](https://www.cybercure.ai/start)
 *   [IPsum](https://github.com/stamparm/ipsum#about)
     *   Gets IPs from maltrail
 
