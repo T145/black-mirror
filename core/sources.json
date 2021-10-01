@@ -3152,18 +3152,35 @@
       "https://mirai.security.gives/data/ip_list.txt"
     ]
   },
-  "cybercure_ips": {
-    "_comment": "TODO: Add https://api.cybercure.ai/feed/get_urls",
+  "cyber_cure_ips": {
     "color": "black",
     "filters": [
       {
-        "engine": "jq",
+        "engine": "cat",
         "format": "ipv4",
-        "rule": ".data.ip[]"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://api.cybercure.ai/feed/get_ips"
+      "https://api.cybercure.ai/feed/get_ips?type=list"
+    ]
+  },
+  "cyber_cure_urls": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\",\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/) printf(\"%s\n\",a[3])}}"
+      },
+      {
+        "engine": "cat",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\",\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([0-9]+(\\.|$)){4}/) printf(\"%s\n\",a[3])}}"
+      }
+    ],
+    "mirrors": [
+      "https://api.cybercure.ai/feed/get_url?type=csv"
     ]
   },
   "ipsum": {

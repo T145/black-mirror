@@ -52,6 +52,7 @@ parse_file_contents() {
         ;;
     perl)
         # https://unix.stackexchange.com/a/566565
+        # https://manpages.ubuntu.com/manpages/hirsute/man3/Regexp::Common::net.3pm.html
         perl -MRegexp::Common=net -nE "$2"
         ;;
     saxon) java -cp bin/SaxonHE10-5J/saxon-he-10.5.jar net.sf.saxon.Query -config:configs/saxon.xml -s:/dev/stdin -qs:"$2" ;;
