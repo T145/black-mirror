@@ -10,7 +10,8 @@
 *   games_tracking
 *   gaming
 *   notracking
-*   oisd_full
+*   [oisd_full](https://oisd.nl/downloads)
+*   [oisd_extra](https://oisd.nl/downloadsXtra)
 *   openphish
 *   phishing_army
 *   reg_fi
@@ -213,7 +214,5 @@
 *   [Princeton Webcensus](https://webtransparency.cs.princeton.edu/webcensus/)
 *   [UnrealSecurity](https://github.com/UnrealSecurity/badips)
     *   Takes too long to respond; likely offline.
-*   [oisd_extra](https://oisd.nl/downloadsXtra)
-    *   Presently offline.
 *   [ipspamlist](http://www.ipspamlist.com/)
     *   Last updated in 2020.
