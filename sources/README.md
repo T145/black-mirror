@@ -121,6 +121,8 @@
 *   [Certego Intel](https://twitter.com/Certego_Intel)
 *   [Mirai Tracker](https://mirai.security.gives/)
 *   [CyberCure](https://www.cybercure.com/)
+*   [IPsum](https://github.com/stamparm/ipsum#about)
+    *   Gets IPs from maltrail
 
 ### ⚪ Whitelists
 
@@ -213,3 +215,5 @@
     *   Takes too long to respond; likely offline.
 *   [oisd_extra](https://oisd.nl/downloadsXtra)
     *   Presently offline.
+*   [ipspamlist](http://www.ipspamlist.com/)
+    *   Last updated in 2020.
