@@ -1,18 +1,19 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-export LANG=en_US.UTF-8
-export LANGUAGE=en:el
-
 unique_domain_count=$(wc -l <build/black_domain.txt)
 unique_ipv4_count=$(wc -l <build/black_ipv4.txt)
 unique_ipv4_cidr_count=$(wc -l <build/black_ipv4_cidr.txt)
 unique_ipv6_count=$(wc -l <build/black_ipv6.txt)
 
-domain_count=$(printf "%'d" "$unique_domain_count")
-ipv4_count=$(printf "%'d" "$unique_ipv4_count")
-ipv4_cidr_count=$(printf "%'d" "$unique_ipv4_cidr_count")
-ipv6_count=$(printf "%'d" "$unique_ipv6_count")
+add_commas() {
+    sed -e :x -e 's/\([0-9][0-9]*\)\([0-9][0-9][0-9]\)/\1,\2/' -e 'tx'
+}
+
+domain_count=$(add_commas "$unique_domain_count")
+ipv4_count=$(add_commas "$unique_ipv4_count")
+ipv4_cidr_count=$(add_commas "$unique_ipv4_cidr_count")
+ipv6_count=$(add_commas "$unique_ipv6_count")
 
 get_filesize() {
     stat -c %s "$1" | numfmt --to=iec
