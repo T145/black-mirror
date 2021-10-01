@@ -7,7 +7,7 @@ unique_ipv4_cidr_count=$(wc -l <build/black_ipv4_cidr.txt)
 unique_ipv6_count=$(wc -l <build/black_ipv6.txt)
 
 add_commas() {
-    sed -e :x -e 's/\([0-9][0-9]*\)\([0-9][0-9][0-9]\)/\1,\2/' -e 'tx'
+    echo "$1" | sed -e :x -e 's/\([0-9][0-9]*\)\([0-9][0-9][0-9]\)/\1,\2/' -e 'tx'
 }
 
 domain_count=$(add_commas "$unique_domain_count")
