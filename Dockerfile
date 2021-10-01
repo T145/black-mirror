@@ -1,7 +1,7 @@
 FROM ubuntu:21.04
 
 LABEL maintainer="T145" \
-      version="1.0.4" \
+      version="1.1.0" \
       description="Custom Docker Image used to run Black Mirror."
 
 # configure debconf to be non-interactive
@@ -19,9 +19,12 @@ RUN apt-get -y upgrade
 
 RUN apt-get -y install \
       # download utilities
+      gpg \
+      curl \
       git \
       aria2 \
       # archive managers
+      bzip2 \
       p7zip-full \
       # text processors
       gawk \
@@ -30,6 +33,8 @@ RUN apt-get -y install \
       moreutils \
       sed \
       ipcalc \
+      # build utilities
+      make \
       # perl
       libtry-tiny-perl \
       libnet-libidn-perl \
@@ -40,5 +45,9 @@ RUN apt-get -y install \
       # install java for saxon
       #openjdk-16-jre-headless
       default-jdk
+
 RUN apt-get clean
 # RUN pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint
+RUN curl -s pi.dk/3/ -o install.sh
+RUN bash install.sh
+RUN echo 'will cite' | parallel --citation || true
