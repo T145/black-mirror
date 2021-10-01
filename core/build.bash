@@ -143,4 +143,4 @@ main() {
 main
 
 # reset the locale after processing
-export LC_ALL=en_US
+unset LC_ALL
