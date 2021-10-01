@@ -764,6 +764,7 @@
     ]
   },
   "botvrij_dst_ip": {
+    "_comment": "Some entries have a '<ip>|<port>' format.",
     "color": "black",
     "filters": [
       {
@@ -803,6 +804,7 @@
     ]
   },
   "botvrij_url": {
+    "_comment": "Some entries do NOT start w/ http[s]?",
     "color": "black",
     "filters": [
       {
@@ -1123,7 +1125,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>11"
+        "rule": "$0~/^[^#]/"
       }
     ],
     "mirrors": [
@@ -1137,7 +1139,7 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "NR>11"
+        "rule": "$0~/^[^#]/"
       }
     ],
     "mirrors": [
@@ -1713,6 +1715,19 @@
       "http://npc.0am.jp/hosts.php?dl=1"
     ]
   },
+  "oisd_extra": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>13"
+      }
+    ],
+    "mirrors": [
+      "https://dbl.oisd.nl/extra/"
+    ]
+  },
   "oisd_full": {
     "color": "black",
     "filters": [
@@ -1776,19 +1791,6 @@
     ],
     "mirrors": [
       "https://phishing.army/download/phishing_army_blocklist_extended.txt"
-    ]
-  },
-  "phishstats": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "miller",
-        "format": "ipv4",
-        "rule": 4
-      }
-    ],
-    "mirrors": [
-      "https://phishstats.info/phish_score.csv"
     ]
   },
   "pornrecords_domains": {
