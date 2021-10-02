@@ -128,7 +128,7 @@ main() {
             list="build/${color}_${format}.txt"
 
             if test -f "$list"; then
-                sort -o "$list" -u -S 90% --parallel=4 -T "$cache_dir" "$list"
+                parsort -u -S 90% --parallel=4 -T "$cache_dir" "$list" | sponge "$list"
 
                 if [[ "$color" == 'black' ]]; then
                     if test -f "build/white_${format}.txt"; then
