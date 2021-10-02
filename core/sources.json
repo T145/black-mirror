@@ -1057,6 +1057,24 @@
       "https://api.cybercure.ai/feed/get_ips?type=list"
     ]
   },
+  "cyber_cure_urls": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\",\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/){printf a[3]}}}"
+      },
+      {
+        "engine": "cat",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\",\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([0-9]+(\\.|$)){4}/){print a[3]}}"
+      }
+    ],
+    "mirrors": [
+      "https://api.cybercure.ai/feed/get_url?type=csv"
+    ]
+  },
   "cybercrime_all": {
     "color": "black",
     "filters": [
@@ -1442,6 +1460,24 @@
     ],
     "mirrors": [
       "https://tracker.h3x.eu/api/sites_1week.php"
+    ]
+  },
+  "haruko": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"</br>\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/){printf a[3]}}}"
+      },
+      {
+        "engine": "gawk",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\"</br>\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(:|$)/){print a[3]}}}"
+      }
+    ],
+    "mirrors": [
+      "https://tracker.fumik0.com/api/get-urls"
     ]
   },
   "hipo_universities": {
@@ -1884,7 +1920,7 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "BEGIN{RS=\"http[s]?:\/\/([[:alnum:]_-]{1,63}.)+[[:alpha:]]+/\"}RT{split(RT,a,\"/\"); print a[3]}"
+        "rule": "BEGIN{RS=\"http[s]?://([[:alnum:]_-]{1,63}.)+[[:alpha:]]+/\"}RT{split(RT,a,\"/\"); print a[3]}"
       },
       {
         "engine": "perl",
@@ -3240,42 +3276,6 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ]
-  },
-  "cyber_cure_urls": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\",\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/){printf a[3]}}}"
-      },
-      {
-        "engine": "cat",
-        "format": "ipv4",
-        "rule": "BEGIN{FS=\",\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([0-9]+(\\.|$)){4}/){print a[3]}}"
-      }
-    ],
-    "mirrors": [
-      "https://api.cybercure.ai/feed/get_url?type=csv"
-    ]
-  },
-  "haruko": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\"</br>\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/){printf a[3]}}}"
-      },
-      {
-        "engine": "gawk",
-        "format": "ipv4",
-        "rule": "BEGIN{FS=\"</br>\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(:|$)/){print a[3]}}}"
-      }
-    ],
-    "mirrors": [
-      "https://tracker.fumik0.com/api/get-urls"
     ]
   }
 }
