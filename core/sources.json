@@ -381,6 +381,34 @@
       "https://azorult-tracker.net/api/list/ip?format=plain"
     ]
   },
+  "benkow_cc": {
+    "_comment": "TODO: Add domains from URLs.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "perl",
+        "format": "ipv4",
+        "rule": "say $& while /$RE{net}{IPv4}/g"
+      }
+    ],
+    "mirrors": [
+      "https://benkow.cc/export.php"
+    ]
+  },
+  "benkow_rat": {
+    "_comment": "TODO: Add domains from URLs.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "perl",
+        "format": "ipv4",
+        "rule": "say $& while /$RE{net}{IPv4}/g"
+      }
+    ],
+    "mirrors": [
+      "https://benkow.cc/export_rat.php"
+    ]
+  },
   "betterfyi": {
     "_comment": "Using the pre-optimized Energized mirror.",
     "color": "black",
@@ -1016,6 +1044,19 @@
       "https://paste.cryptolaemus.com/feed.xml"
     ]
   },
+  "cyber_cure_ips": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "ipv4",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://api.cybercure.ai/feed/get_ips?type=list"
+    ]
+  },
   "cybercrime_all": {
     "color": "black",
     "filters": [
@@ -1455,6 +1496,19 @@
       "https://isc.sans.edu/api/threatlist/ipip?json"
     ]
   },
+  "ipsum": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "$0~/^[^#]/{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt"
+    ]
+  },
   "kriskintel_covid": {
     "color": "black",
     "filters": [
@@ -1650,6 +1704,19 @@
       "https://raw.githubusercontent.com/matomo-org/referrer-spam-list/master/spammers.txt"
     ]
   },
+  "mirai_tracker": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "NR>1{print $0}"
+      }
+    ],
+    "mirrors": [
+      "https://mirai.security.gives/data/ip_list.txt"
+    ]
+  },
   "myip_full_blacklist": {
     "color": "black",
     "filters": [
@@ -1809,6 +1876,24 @@
     ],
     "mirrors": [
       "https://phishing.army/download/phishing_army_blocklist_extended.txt"
+    ]
+  },
+  "phishstats": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "perl",
+        "format": "ipv4",
+        "rule": "say $& while /$RE{net}{IPv4}/g"
+      },
+      {
+        "engine": "perl",
+        "format": "ipv6",
+        "rule": "say $& while /$RE{net}{IPv6}/g"
+      }
+    ],
+    "mirrors": [
+      "https://phishstats.info/phish_score.csv"
     ]
   },
   "pornrecords_domains": {
@@ -3145,91 +3230,6 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ]
-  },
-  "mirai_tracker": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "NR>1{print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://mirai.security.gives/data/ip_list.txt"
-    ]
-  },
-  "cyber_cure_ips": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "cat",
-        "format": "ipv4",
-        "rule": ""
-      }
-    ],
-    "mirrors": [
-      "https://api.cybercure.ai/feed/get_ips?type=list"
-    ]
-  },
-  "ipsum": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "$0~/^[^#]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt"
-    ]
-  },
-  "phishstats": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "perl",
-        "format": "ipv4",
-        "rule": "say $& while /$RE{net}{IPv4}/g"
-      },
-      {
-        "engine": "perl",
-        "format": "ipv6",
-        "rule": "say $& while /$RE{net}{IPv6}/g"
-      }
-    ],
-    "mirrors": [
-      "https://phishstats.info/phish_score.csv"
-    ]
-  },
-  "benkow_cc": {
-    "_comment": "TODO: Add domains from URLs.",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "perl",
-        "format": "ipv4",
-        "rule": "say $& while /$RE{net}{IPv4}/g"
-      }
-    ],
-    "mirrors": [
-      "https://benkow.cc/export.php"
-    ]
-  },
-  "benkow_rat": {
-    "_comment": "TODO: Add domains from URLs.",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "perl",
-        "format": "ipv4",
-        "rule": "say $& while /$RE{net}{IPv4}/g"
-      }
-    ],
-    "mirrors": [
-      "https://benkow.cc/export_rat.php"
     ]
   }
 }
