@@ -67,7 +67,7 @@
     <tr>
       <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_domain.txt">black_domain.txt</a></td>
       <td>Domain entries</td>
-      <td id="domain-count">9141266</td>
+      <td id="domain-count">9,142,297</td>
       <td id="domain-filesize">200M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_domain.md5">[🔗]</a></td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_domain.sha1">[🔗]</a></td>
@@ -76,8 +76,8 @@
     <tr>
       <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.txt">black_ipv4.txt</a></td>
       <td>IPv4 addresses</td>
-      <td id="ipv4-count">856829</td>
-      <td id="ipv4-filesize">12M</td>
+      <td id="ipv4-count">931,618</td>
+      <td id="ipv4-filesize">13M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.md5">[🔗]</a></td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.sha1">[🔗]</a></td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.sha256">[🔗]</a></td>
@@ -85,8 +85,8 @@
     <tr>
       <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4_cidr.txt">black_ipv4_cidr.txt</a></td>
       <td>IPv4 CIDR blocks</td>
-      <td id="ipv4-cidr-count">28070</td>
-      <td id="ipv4-cidr-filesize">469K</td>
+      <td id="ipv4-cidr-count">28,264</td>
+      <td id="ipv4-cidr-filesize">472K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4_cidr.md5">[🔗]</a></td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4_cidr.sha1">[🔗]</a></td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4_cidr.sha256">[🔗]</a></td>
@@ -94,8 +94,8 @@
     <tr>
       <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.txt">black_ipv6.txt</a></td>
       <td>IPv6 addresses</td>
-      <td id="ipv6-count">6302</td>
-      <td id="ipv6-filesize">205K</td>
+      <td id="ipv6-count">7,695</td>
+      <td id="ipv6-filesize">240K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.md5">[🔗]</a></td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.sha1">[🔗]</a></td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.sha256">[🔗]</a></td>
