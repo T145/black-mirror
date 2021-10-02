@@ -2925,11 +2925,6 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\",\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/){printf \"%s\",a[3]}}}"
-      },
-      {
         "engine": "miller",
         "format": "ipv4",
         "rule": "IP"
@@ -3178,24 +3173,6 @@
       "https://api.cybercure.ai/feed/get_ips?type=list"
     ]
   },
-  "cyber_cure_urls": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\",\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/){printf \"%s\",a[3]}}}"
-      },
-      {
-        "engine": "cat",
-        "format": "ipv4",
-        "rule": "BEGIN{FS=\",\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([0-9]+(\\.|$)){4}/){printf \"%s\",a[3]}}"
-      }
-    ],
-    "mirrors": [
-      "https://api.cybercure.ai/feed/get_url?type=csv"
-    ]
-  },
   "ipsum": {
     "color": "black",
     "filters": [
@@ -3212,11 +3189,6 @@
   "phishstats": {
     "color": "black",
     "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{RS=\"http[s]?:\/\/([[:alnum:]_-]{1,63}.)+[[:alpha:]]+/\"}RT{split(RT,a,\"/\"); print a[3]}"
-      },
       {
         "engine": "perl",
         "format": "ipv4",
@@ -3258,24 +3230,6 @@
     ],
     "mirrors": [
       "https://benkow.cc/export_rat.php"
-    ]
-  },
-  "haruko": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\"</br>\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/){printf \"%s\",a[3]}}}"
-      },
-      {
-        "engine": "gawk",
-        "format": "ipv4",
-        "rule": "BEGIN{FS=\"</br>\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(:|$)/){printf \"%s\",a[3]}}}"
-      }
-    ],
-    "mirrors": [
-      "https://tracker.fumik0.com/api/get-urls"
     ]
   }
 }
