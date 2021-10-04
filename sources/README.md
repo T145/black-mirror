@@ -224,6 +224,8 @@
     *   Last updated in 2020.
 *   [neohosts](https://github.com/neoFelhz/neohosts)
 *   [android-stalkerware](https://github.com/diskurse/android-stalkerware)
+*   [stalkerware-urls](https://github.com/astryzia/stalkerware-urls)
+    *   Presently archived.
 
 ### 🕵🏻 Lamers Unwelcome
 
