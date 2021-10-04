@@ -130,6 +130,7 @@
 *   [mobiletrackers](https://github.com/craiu/mobiletrackers)
 *   [Kaspersky TinyCheck](https://github.com/KasperskyLab/TinyCheck)
 *   [stalkerware-indicators](https://github.com/Te-k/stalkerware-indicators)
+*   [Additional (Undesired) Hosts](https://github.com/DRSDavidSoft/additional-hosts)
 
 ### ⚪ Whitelists
 
