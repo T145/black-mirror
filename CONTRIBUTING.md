@@ -11,9 +11,10 @@ Each listing has the following fields:
     *   **engine**: Designates which program will be used to process the source.
         *   Strictly [a valid engine](https://github.com/T145/black-mirror/blob/master/scripts/create_builds.bash#L38).
     *   **format**: Designates which list to place the generated output into.
-        *   Strictly `domain`, `ipv4`, or `ipv4`.
+        *   Strictly `domain`, `ipv4`, or `ipv6`.
     *   **rule**: Parameters passed to the engine that set how to process the source.
         *   Note that this *very* dependent on the designated engine!
+        *   Be sure the rule is properly escaped.
 *   **mirrors**: String array where each element is a URL where the source text lives.
     *   Multiple mirrors can be designated to speed up downloads.
     *   Note that mirrors must have the same content!
