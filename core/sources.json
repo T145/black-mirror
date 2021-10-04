@@ -3295,5 +3295,31 @@
     "mirrors": [
       "https://raw.githubusercontent.com/zhouhanc/malware-discoverer/master/blocklist.csv"
     ]
+  },
+  "mobiletrackers_list": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/craiu/mobiletrackers/master/list.txt"
+    ]
+  },
+  "mobiletrackers_windows": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/craiu/mobiletrackers/master/windowslist.txt"
+    ]
   }
 }
