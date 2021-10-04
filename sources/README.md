@@ -127,6 +127,7 @@
 *   [Benkow_](https://benkow.cc/)
     *   [Haruko](https://tracker.fumik0.com/)
 *   [malware-discoverer](https://github.com/zhouhanc/malware-discoverer)
+*   [mobiletrackers](https://github.com/craiu/mobiletrackers)
 
 ### ⚪ Whitelists
 
@@ -219,6 +220,7 @@
     *   Takes too long to respond; likely offline.
 *   [ipspamlist](http://www.ipspamlist.com/)
     *   Last updated in 2020.
+*   [neohosts](https://github.com/neoFelhz/neohosts)
 
 ### 🕵🏻 Lamers Unwelcome
 
