@@ -3277,5 +3277,23 @@
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
+  },
+  "malware_discoverer": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "miller",
+        "format": "domain",
+        "rule": "domain"
+      },
+      {
+        "engine": "miller",
+        "format": "ipv4",
+        "rule": "ip"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/zhouhanc/malware-discoverer/master/blocklist.csv"
+    ]
   }
 }
