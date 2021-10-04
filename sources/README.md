@@ -128,7 +128,8 @@
     *   [Haruko](https://tracker.fumik0.com/)
 *   [malware-discoverer](https://github.com/zhouhanc/malware-discoverer)
 *   [mobiletrackers](https://github.com/craiu/mobiletrackers)
-*   [Kaspersky TinyCheck]()
+*   [Kaspersky TinyCheck](https://github.com/KasperskyLab/TinyCheck)
+*   [stalkerware-indicators](https://github.com/Te-k/stalkerware-indicators)
 
 ### ⚪ Whitelists
 

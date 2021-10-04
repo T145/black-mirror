@@ -3334,10 +3334,33 @@
         "engine": "jq",
         "format": "ipv4",
         "rule": ".iocs[] | select(.type == \"cidr\") | .value"
+      },
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".iocs[] | select(.type == \"ip4addr\") | .value"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/KasperskyLab/TinyCheck/main/assets/iocs.json"
+    ]
+  },
+  "stalkerware_indicators": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "domain",
+        "rule": ".iocs[] | select(.type == \"domain\") | .value"
+      },
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".iocs[] | select(.type == \"ip4addr\") | .value"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Te-k/stalkerware-indicators/master/indicators-for-tinycheck.json"
     ]
   }
 }
