@@ -126,6 +126,7 @@
     *   Gets IPs from maltrail
 *   [Benkow_](https://benkow.cc/)
     *   [Haruko](https://tracker.fumik0.com/)
+*   [malware-discoverer](https://github.com/zhouhanc/malware-discoverer)
 
 ### ⚪ Whitelists
 
@@ -219,7 +220,7 @@
 *   [ipspamlist](http://www.ipspamlist.com/)
     *   Last updated in 2020.
 
-# 🕵🏻 Lamers Unwelcome
+### 🕵🏻 Lamers Unwelcome
 
 *   [cybercrime-tracker](https://atm.cybercrime-tracker.net/index.php)
     *   [EMV](https://emv.cybercrime-tracker.net/index.php?x=faq)
