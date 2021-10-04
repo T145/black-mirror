@@ -3321,5 +3321,23 @@
     "mirrors": [
       "https://raw.githubusercontent.com/craiu/mobiletrackers/master/windowslist.txt"
     ]
+  },
+  "tinycheck": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "domain",
+        "rule": ".iocs[] | select(.type == \"domain\") | .value"
+      },
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".iocs[] | select(.type == \"cidr\") | .value"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/KasperskyLab/TinyCheck/main/assets/iocs.json"
+    ]
   }
 }
