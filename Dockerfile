@@ -33,11 +33,23 @@ RUN apt-get -y install bzip2 p7zip-full
 # install text processors
 RUN apt-get -y install gawk ipcalc jq miller moreutils sed
 
+# install perl libraries
+RUN apt-get -y install libtry-tiny-perl libnet-libidn-perl libnet-idn-encode-perl libregexp-common-perl
+
 # install environment dependencies
 RUN apt-get -y install make golang-go default-jre
 
-# install perl libraries
-RUN apt-get -y install libtry-tiny-perl libnet-libidn-perl libnet-idn-encode-perl libregexp-common-perl
+# install project discovery utilities
+# https://github.com/projectdiscovery/httpx
+# https://github.com/projectdiscovery/dnsx
+# https://github.com/projectdiscovery/shuffledns
+# https://github.com/projectdiscovery/proxify
+# https://github.com/projectdiscovery/subfinder
+RUN GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx
+RUN go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
+RUN GO111MODULE=on go get -v github.com/projectdiscovery/shuffledns/cmd/shuffledns
+RUN GO111MODULE=on go get -v github.com/projectdiscovery/proxify/cmd/proxify
+# RUN go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 
 RUN apt-get clean
 # RUN pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint
