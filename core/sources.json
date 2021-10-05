@@ -87,6 +87,71 @@
       "https://urlhaus.abuse.ch/downloads/text/"
     ]
   },
+  "additional_hosts_activation": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/activation.txt"
+    ]
+  },
+  "additional_hosts_ads": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/adservers-and-trackers.txt"
+    ]
+  },
+  "additional_hosts_fake": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/fake-domains.txt"
+    ]
+  },
+  "additional_hosts_iranian": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/unwanted-iranian.txt"
+    ]
+  },
+  "additional_hosts_search": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/search-blacklist.txt"
+    ]
+  },
   "adscore": {
     "color": "black",
     "filters": [
@@ -1713,6 +1778,24 @@
       "https://raw.githubusercontent.com/stamparm/aux/master/maltrail-malware-domains.txt"
     ]
   },
+  "malware_discoverer": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "miller",
+        "format": "domain",
+        "rule": "domain"
+      },
+      {
+        "engine": "miller",
+        "format": "ipv4",
+        "rule": "ip"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/zhouhanc/malware-discoverer/master/blocklist.csv"
+    ]
+  },
   "marktron_fakenews": {
     "color": "black",
     "filters": [
@@ -1751,6 +1834,32 @@
     ],
     "mirrors": [
       "https://mirai.security.gives/data/ip_list.txt"
+    ]
+  },
+  "mobiletrackers_list": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/craiu/mobiletrackers/master/list.txt"
+    ]
+  },
+  "mobiletrackers_windows": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/craiu/mobiletrackers/master/windowslist.txt"
     ]
   },
   "myip_full_blacklist": {
@@ -2861,6 +2970,24 @@
       "https://www.spamhaus.org/drop/edrop.lasso"
     ]
   },
+  "stalkerware_indicators": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "domain",
+        "rule": ".iocs[] | select(.type == \"domain\") | .value"
+      },
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".iocs[] | select(.type == \"ip4addr\") | .value"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Te-k/stalkerware-indicators/master/indicators-for-tinycheck.json"
+    ]
+  },
   "stretchoid": {
     "color": "black",
     "filters": [
@@ -2955,6 +3082,29 @@
     ],
     "mirrors": [
       "https://www.threatsourcing.com/ipall-free.txt"
+    ]
+  },
+  "tinycheck": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "domain",
+        "rule": ".iocs[] | select(.type == \"domain\") | .value"
+      },
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".iocs[] | select(.type == \"cidr\") | .value"
+      },
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".iocs[] | select(.type == \"ip4addr\") | .value"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/KasperskyLab/TinyCheck/main/assets/iocs.json"
     ]
   },
   "tiuxo_porn": {
@@ -3277,156 +3427,6 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ]
-  },
-  "malware_discoverer": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "miller",
-        "format": "domain",
-        "rule": "domain"
-      },
-      {
-        "engine": "miller",
-        "format": "ipv4",
-        "rule": "ip"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/zhouhanc/malware-discoverer/master/blocklist.csv"
-    ]
-  },
-  "mobiletrackers_list": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/craiu/mobiletrackers/master/list.txt"
-    ]
-  },
-  "mobiletrackers_windows": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/craiu/mobiletrackers/master/windowslist.txt"
-    ]
-  },
-  "tinycheck": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "domain",
-        "rule": ".iocs[] | select(.type == \"domain\") | .value"
-      },
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".iocs[] | select(.type == \"cidr\") | .value"
-      },
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".iocs[] | select(.type == \"ip4addr\") | .value"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/KasperskyLab/TinyCheck/main/assets/iocs.json"
-    ]
-  },
-  "stalkerware_indicators": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "domain",
-        "rule": ".iocs[] | select(.type == \"domain\") | .value"
-      },
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".iocs[] | select(.type == \"ip4addr\") | .value"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/Te-k/stalkerware-indicators/master/indicators-for-tinycheck.json"
-    ]
-  },
-  "additional_hosts_ads": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/adservers-and-trackers.txt"
-    ]
-  },
-  "additional_hosts_activation": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/activation.txt"
-    ]
-  },
-  "additional_hosts_fake": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/fake-domains.txt"
-    ]
-  },
-  "additional_hosts_search": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/search-blacklist.txt"
-    ]
-  },
-  "additional_hosts_iranian": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/unwanted-iranian.txt"
     ]
   }
 }
