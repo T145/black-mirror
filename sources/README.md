@@ -136,6 +136,7 @@
     *   [Level 2](https://www.uceprotect.net/en/index.php?m=3&s=4)
     *   [Level 3](https://www.uceprotect.net/en/index.php?m=3&s=5)
     *   [Backscatterer](https://www.backscatterer.org/)
+*   [Exodus Privacy](https://reports.exodus-privacy.eu.org/en/)
 
 ### ⚪ Whitelists
 
