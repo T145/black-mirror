@@ -14,23 +14,6 @@ Home: https://etip.exodus-privacy.eu.org/trackers/all
 
 ---
 
-### UCEPROTECT
-
-Home: https://www.uceprotect.net/en/index.php?m=1&s=0
-
-- [Wget Mirror](http://wget-mirrors.uceprotect.net/)
-- [Rsync Mirror](http://rsync-mirrors.uceprotect.net/)
-
-#### References
-
-- http://www.uceprotect.org/cart00neys/index.html 🤣
-- https://www.uceprotect.net/en/index.php?m=6&s=10 (rsync usage)
-- https://www.uceprotect.net/en/index.php?m=3&s=3 (lvl 1)
-- https://www.uceprotect.net/en/index.php?m=3&s=4 (lvl 2)
-- https://www.uceprotect.net/en/index.php?m=3&s=5 (lvl 3)
-
----
-
 ### Certego Intel
 
 Home: https://twitter.com/Certego_Intel

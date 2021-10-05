@@ -131,6 +131,11 @@
 *   [Kaspersky TinyCheck](https://github.com/KasperskyLab/TinyCheck)
 *   [stalkerware-indicators](https://github.com/Te-k/stalkerware-indicators)
 *   [Additional (Undesired) Hosts](https://github.com/DRSDavidSoft/additional-hosts)
+*   [UCEPROTECT](https://www.uceprotect.net/en/index.php?m=1&s=0)
+    *   [Level 1](https://www.uceprotect.net/en/index.php?m=3&s=3)
+    *   [Level 2](https://www.uceprotect.net/en/index.php?m=3&s=4)
+    *   [Level 3](https://www.uceprotect.net/en/index.php?m=3&s=5)
+    *   [Backscatterer](https://www.backscatterer.org/)
 
 ### ⚪ Whitelists
 

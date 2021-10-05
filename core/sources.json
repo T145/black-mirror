@@ -3428,5 +3428,57 @@
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
+  },
+  "uceprotect_level1": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "$0~/^[^#|$|:|!]/&&$1!~/^127.0.0./"
+      }
+    ],
+    "mirrors": [
+      "http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-1.uceprotect.net.gz"
+    ]
+  },
+  "uceprotect_level2": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "$0~/^[^#|$|:|!]/&&$1!~/^127.0.0./{print $1}"
+      }
+    ],
+    "mirrors": [
+      "http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz"
+    ]
+  },
+  "uceprotect_level3": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "$0~/^[^#|$|:|!]/&&$1!~/^127.0.0./{print $1}"
+      }
+    ],
+    "mirrors": [
+      "http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz"
+    ]
+  },
+  "uceprotect_backscatterer": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "$0~/^[^$|:|!]/&&$1!~/^127.0.0./{print $1}"
+      }
+    ],
+    "mirrors": [
+      "http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz"
+    ]
   }
 }
