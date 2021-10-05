@@ -33,6 +33,7 @@ get_file_contents() {
         # If any archives are added that do not, this line needs to change
         tar -xOzf "$1" --wildcards-match-slash --wildcards '*/domains'
         ;;
+    *.gz) gzip -cd "$1" ;;
     *.zip) zcat "$1" ;;
     *.7z) 7za -y -so e "$1" ;;
     *) cat -s "$1" ;;
@@ -105,7 +106,7 @@ main() {
         jq -r --arg color "$color" 'to_entries[] |
         select(.value.color == $color) |
         {key, mirrors: .value.mirrors} |
-        .extension = (.mirrors[0] | match(".(tar.gz|zip|7z|json)").captures[0].string // "txt") |
+        .extension = (.mirrors[0] | match(".(tar.gz|gz|zip|7z|json)").captures[0].string // "txt") |
         (.mirrors | join("\t")), " out=\(.key).\(.extension)"' core/sources.json |
             aria2c -i- -d "$cache_dir" --conf-path='./configs/aria2.conf'
         set -e
