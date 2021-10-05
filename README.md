@@ -103,6 +103,20 @@
   </tbody>
 </table>
 
+### 🧮 Checksum Evaluation
+
+```
+cat black_domain.txt | sha256sum -c black_domain.checksums --status && echo $?
+```
+A return code of `0` means the check was successful. The specific checksum command can be any of the following:
+- `md5sum`
+- `b2sum`
+- `sha1sum`
+- `sha224sum`
+- `sha256sum`
+- `sha384sum`
+- `sha512sum`
+
 ## 📋 Attributes
 
 1. No comments
