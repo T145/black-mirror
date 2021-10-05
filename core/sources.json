@@ -3480,5 +3480,19 @@
     "mirrors": [
       "http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz"
     ]
+  },
+  "exodus_trackers": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".trackers[].website | split(\"/\")[2]"
+      }
+    ],
+    "mirrors": [
+      "https://etip.exodus-privacy.eu.org/trackers/export",
+      "https://reports.exodus-privacy.eu.org/api/trackers"
+    ]
   }
 }
