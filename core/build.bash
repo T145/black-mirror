@@ -135,9 +135,15 @@ main() {
                         grep -Fxvf "build/white_${format}.txt" "$list" | sponge "$list"
                     fi
 
-                    cat "build/black_${format}.md5" | md5sum
-                    cat "build/black_${format}.sha1" | sha1sum
-                    cat "build/black_${format}.sha256" | sha256sum
+                    checksums="build/black_${format}.checksums"
+
+                    cat "${list}" | md5sum >> "${checksums}"
+                    cat "${list}" | b2sum >> "${checksums}"
+                    cat "${list}" | sha1sum >> "${checksums}"
+                    cat "${list}" | sha224sum >> "${checksums}"
+                    cat "${list}" | sha256sum >> "${checksums}"
+                    cat "${list}" | sha384sum >> "${checksums}"
+                    cat "${list}" | sha512sum >> "${checksums}"
                 fi
             fi
         done
