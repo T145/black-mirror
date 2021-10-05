@@ -25,7 +25,7 @@ RUN apt-get -y upgrade
 RUN apt-get -y install preload
 
 # install download utilities
-RUN apt-get -y install aria2 curl gpg
+RUN apt-get -y install aria2 curl git gpg
 
 # install archive managers
 RUN apt-get -y install bzip2 p7zip-full
