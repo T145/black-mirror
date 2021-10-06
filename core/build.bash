@@ -133,23 +133,23 @@ main() {
       list="build/${color}_${format}.txt"
 
       if test -f "$list"; then
+        checksums="build/${color}_${format}.checksums"
+
         parsort -u -S 99% --parallel=48 -T "$cache_dir" "$list" | sponge "$list"
 
         if [[ "$color" == 'black' ]]; then
           if test -f "build/white_${format}.txt"; then
             grep -Fxvf "build/white_${format}.txt" "$list" | sponge "$list"
           fi
-
-          checksums="build/black_${format}.checksums"
-
-          cat "${list}" | md5sum >>"${checksums}"
-          cat "${list}" | b2sum >>"${checksums}"
-          cat "${list}" | sha1sum >>"${checksums}"
-          cat "${list}" | sha224sum >>"${checksums}"
-          cat "${list}" | sha256sum >>"${checksums}"
-          cat "${list}" | sha384sum >>"${checksums}"
-          cat "${list}" | sha512sum >>"${checksums}"
         fi
+
+        cat "${list}" | md5sum >>"${checksums}"
+        cat "${list}" | b2sum >>"${checksums}"
+        cat "${list}" | sha1sum >>"${checksums}"
+        cat "${list}" | sha224sum >>"${checksums}"
+        cat "${list}" | sha256sum >>"${checksums}"
+        cat "${list}" | sha384sum >>"${checksums}"
+        cat "${list}" | sha512sum >>"${checksums}"
       fi
     done
   done
