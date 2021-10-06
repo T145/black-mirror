@@ -56,7 +56,6 @@
 *   [myip_full_blacklist](https://myip.ms/browse/blacklist)
 *   [myip_webcrawlers](https://myip.ms/browse/web_bots)
 *   [4skinSkywalker Anti Porn](https://github.com/4skinSkywalker/anti-porn-hosts-file)
-*   [EmergingThreats](https://rules.emergingthreats.net/blockrules/)
 *   [ios-trackers](https://github.com/jakejarvis/ios-trackers)
 *   [apple-telemetry](https://github.com/adversarialtools/apple-telemetry)
 *   [ISC Sans](https://isc.sans.edu/)/[DShield](https://www.dshield.org/)
@@ -136,6 +135,7 @@
     *   [Level 3](https://www.uceprotect.net/en/index.php?m=3&s=5)
     *   [Backscatterer](https://www.backscatterer.org/)
 *   [Exodus Privacy](https://reports.exodus-privacy.eu.org/en/)
+*   [DShield](https://www.dshield.org/top10.html)
 
 ### ⚪ Whitelists
 
@@ -168,6 +168,8 @@
         wget https://easylist-downloads.adblockplus.org/fanboy-social.txt -q
         ```
 *   [sebsauvage](https://sebsauvage.net/hosts/hosts)
+*   [EmergingThreats](https://rules.emergingthreats.net/blockrules/)
+    *   Pulls from abuse.ch, spamhaus, and dshield, which are all in use.
 
 ### 🧟 Zombies
 
