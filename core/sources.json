@@ -3364,7 +3364,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/&&$2~/^[^localhost]/{print $2}"
+        "rule": "$0~/^[^#]/&&$2!~/^localhost$/{print $2}"
       }
     ],
     "mirrors": [
