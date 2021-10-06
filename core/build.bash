@@ -57,6 +57,7 @@ parse_file_contents() {
             mlr --mmap --csv --skip-comments --headerless-csv-output cut -f "$2"
         fi
         ;;
+    sed) sed -n "$2" ;;
     perl)
         # https://unix.stackexchange.com/a/566565
         # https://manpages.ubuntu.com/manpages/hirsute/man3/Regexp::Common::net.3pm.html
