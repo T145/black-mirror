@@ -107,6 +107,24 @@ A return code of `0` means the check was successful. The specific checksum comma
 - `sha384sum`
 - `sha512sum`
 
+### 🐙 Fetching GitHub Releases
+
+Recently, GitHub Release artifacts have been appearing with hashes after their names and before their file extensions.
+It's not an issue with the build process, and only happens after being uploaded.
+Why this specifically has been happening is unknown, but here's a temporary workaround.
+
+A command like this will retrieve each file's download URL:
+```
+curl -s https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[].browser_download_url'
+```
+Then pipe the output in a download command of your choice (like `aria2c -i-`) to fetch all the build artifacts.
+
+To select an individual file, a command like this is recommended:
+```
+curl -s https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("black_domain")) | select(.name | endswith(".txt")).browser_download_url'
+```
+The last check is necessary since the first check hits both the build and its checksum file.
+
 ## 📋 Attributes
 
 1. No comments
