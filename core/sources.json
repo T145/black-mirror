@@ -3468,25 +3468,12 @@
       "http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz"
     ]
   },
-  "uceprotect_backscatterer": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "$0~/^[^$|:|!]/&&$1!~/^127.0.0./{print $1}"
-      }
-    ],
-    "mirrors": [
-      "http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz"
-    ]
-  },
   "exodus_trackers": {
     "color": "black",
     "filters": [
       {
         "engine": "jq",
-        "format": "ipv4",
+        "format": "domain",
         "rule": ".trackers[].website | split(\"/\")[2]"
       }
     ],
