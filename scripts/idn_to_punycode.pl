@@ -6,8 +6,8 @@ use Try::Tiny;
 use Net::IDN::Encode 'domain_to_ascii';
 
 while (<>) {
-    try {
-        chomp $_;
-        printf "%s\n",domain_to_ascii $_;
-    }
+  try {
+    chomp $_;
+    printf "%s\n",domain_to_ascii $_;
+  }
 }
