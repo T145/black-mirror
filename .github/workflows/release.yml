@@ -60,13 +60,27 @@ jobs:
           automatic_release_tag: latest
           prerelease: false
           title: All Artifacts
-          files: build/*
+          files: |
+            build/*
 
       - name: Remove Artifacts
         if: always()
         run: |
           rm -rf build/
           # rm -rf imports/
+
+      - name: Update Changelog
+        if: success()
+        uses: heinrichreimer/github-changelog-generator-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # https://renehernandez.io/essays/2020/09/23/automate-changelog-and-releases-creation-in-github/#github-action-gotchas
+          issues: true
+          issuesWoLabels: true
+          pullRequests: true
+          prWoLabels: true
+          unreleased: true
+          #addSections: '{"documentation":{"prefix":"**Documentation:**","labels":["documentation"]}}'
 
       - name: Auto Commit
         if: success()
