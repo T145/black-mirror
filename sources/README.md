@@ -55,7 +55,6 @@
 *   [bruteforceblocker](http://danger.rulez.sk/index.php/bruteforceblocker/)
 *   [myip_full_blacklist](https://myip.ms/browse/blacklist)
 *   [myip_webcrawlers](https://myip.ms/browse/web_bots)
-*   [CyberSaiyanIT](https://github.com/CyberSaiyanIT/InfoSharing)
 *   [4skinSkywalker Anti Porn](https://github.com/4skinSkywalker/anti-porn-hosts-file)
 *   [EmergingThreats](https://rules.emergingthreats.net/blockrules/)
 *   [ios-trackers](https://github.com/jakejarvis/ios-trackers)
@@ -233,6 +232,8 @@
 *   [android-stalkerware](https://github.com/diskurse/android-stalkerware)
 *   [stalkerware-urls](https://github.com/astryzia/stalkerware-urls)
     *   Presently archived.
+*   [CyberSaiyanIT](https://github.com/CyberSaiyanIT/InfoSharing)
+    * PIHOLE feed is empty.
 
 ### 🕵🏻 Lamers Unwelcome
 

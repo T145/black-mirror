@@ -1183,19 +1183,6 @@
       "https://isc.sans.edu/api/threatlist/cybergreen?json"
     ]
   },
-  "cybersaiyan": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "{print tolower($0)}"
-      }
-    ],
-    "mirrors": [
-      "https://infosharing.cybersaiyan.it/feeds/CS-PIHOLE"
-    ]
-  },
   "cyberthreat": {
     "_comment": "The 'urls.txt' downloads at KBs/s, and the 'ips.txt' file is empty.",
     "color": "black",
