@@ -1270,32 +1270,6 @@
       "https://raw.githubusercontent.com/davidonzo/Threat-Intel/master/lists/latestips.txt"
     ]
   },
-  "emergingthreats_block_ips": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/"
-      }
-    ],
-    "mirrors": [
-      "https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt"
-    ]
-  },
-  "emergingthreats_compromised": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "cat",
-        "format": "ipv4",
-        "rule": ""
-      }
-    ],
-    "mirrors": [
-      "https://rules.emergingthreats.net/blockrules/compromised-ips.txt"
-    ]
-  },
   "energized_unblock": {
     "color": "white",
     "filters": [
@@ -3422,6 +3396,19 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
+    ]
+  },
+  "dshield": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "$0~/^[^#]/&&$1!~/^Start$/{printf \"%s/24\n\",$1}"
+      }
+    ],
+    "mirrors": [
+      "https://feeds.dshield.org/block.txt"
     ]
   }
 }
