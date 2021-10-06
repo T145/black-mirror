@@ -65,29 +65,29 @@
     <tr>
       <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_domain.txt">black_domain.txt</a></td>
       <td>Domain entries</td>
-      <td id="domain-count">9,066,732</td>
+      <td id="domain-count">9,066,005</td>
       <td id="domain-filesize">199M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_domain.checksums">[🔗]</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.txt">black_ipv4.txt</a></td>
       <td>IPv4 addresses</td>
-      <td id="ipv4-count">932,804</td>
+      <td id="ipv4-count">931,102</td>
       <td id="ipv4-filesize">13M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.checksums">[🔗]</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4_cidr.txt">black_ipv4_cidr.txt</a></td>
       <td>IPv4 CIDR blocks</td>
-      <td id="ipv4-cidr-count">29,040</td>
-      <td id="ipv4-cidr-filesize">489K</td>
+      <td id="ipv4-cidr-count">29,099</td>
+      <td id="ipv4-cidr-filesize">490K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4_cidr.checksums">[🔗]</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.txt">black_ipv6.txt</a></td>
       <td>IPv6 addresses</td>
-      <td id="ipv6-count">7,765</td>
-      <td id="ipv6-filesize">242K</td>
+      <td id="ipv6-count">7,819</td>
+      <td id="ipv6-filesize">243K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.checksums">[🔗]</a></td>
     </tr>
   </tbody>
