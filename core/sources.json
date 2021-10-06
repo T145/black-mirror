@@ -1354,6 +1354,20 @@
       "https://isc.sans.edu/api/threatlist/erratasec?json"
     ]
   },
+  "exodus_trackers": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "domain",
+        "rule": ".trackers[].website | split(\"/\")[2]"
+      }
+    ],
+    "mirrors": [
+      "https://etip.exodus-privacy.eu.org/trackers/export",
+      "https://reports.exodus-privacy.eu.org/api/trackers"
+    ]
+  },
   "fanboy_antifonts": {
     "color": "black",
     "filters": [
@@ -3427,20 +3441,6 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ]
-  },
-  "exodus_trackers": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "domain",
-        "rule": ".trackers[].website | split(\"/\")[2]"
-      }
-    ],
-    "mirrors": [
-      "https://etip.exodus-privacy.eu.org/trackers/export",
-      "https://reports.exodus-privacy.eu.org/api/trackers"
     ]
   }
 }
