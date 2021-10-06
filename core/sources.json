@@ -953,7 +953,7 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "NR>1{print $3}"
+        "rule": "$1~/^ALL$/{print $3}"
       }
     ],
     "mirrors": [
