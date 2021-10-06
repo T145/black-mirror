@@ -40,6 +40,8 @@ RUN apt-get -y install libtry-tiny-perl libnet-libidn-perl libnet-idn-encode-per
 RUN apt-get -y install make golang-go default-jre
 
 # update the path to make go executables accessible to the system
+# https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-local-programming-environment-on-ubuntu-18-04
+RUN export GOPATH=$HOME/go >> ~/.profile
 RUN export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin >> ~/.profile
 RUN . ~/.profile
 RUN echo $PATH
