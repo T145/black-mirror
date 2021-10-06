@@ -3410,5 +3410,44 @@
     "mirrors": [
       "https://feeds.dshield.org/block.txt"
     ]
+  },
+  "notrack_trackers": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://quidsup.net/notrack/blocklist.php?download=trackers"
+    ]
+  },
+  "notrack_annoyance": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://quidsup.net/notrack/blocklist.php?download=annoyance"
+    ]
+  },
+  "notrack_malware": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://quidsup.net/notrack/blocklist.php?download=malware"
+    ]
   }
 }

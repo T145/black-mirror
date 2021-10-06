@@ -136,6 +136,7 @@
   - [Backscatterer](https://www.backscatterer.org/)
 - [Exodus Privacy](https://reports.exodus-privacy.eu.org/en/)
 - [DShield](https://www.dshield.org/top10.html)
+- [NoTrack](https://quidsup.net/notrack/)
 
 ### ⚪ Whitelists
 
