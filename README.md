@@ -98,7 +98,9 @@
 ```
 cat black_domain.txt | sha256sum -c black_domain.checksums --status && echo $?
 ```
+
 A return code of `0` means the check was successful. The specific checksum command can be any of the following:
+
 - `md5sum`
 - `b2sum`
 - `sha1sum`
@@ -114,16 +116,19 @@ It's not an issue with the build process, and only happens after being uploaded.
 Why this specifically has been happening is unknown, but here are some temporary workaround examples.
 
 #### Get all build artifacts
+
 ```
 curl -s https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[].browser_download_url'
 ```
 
 #### Get a build artifact & its checksum
+
 ```
 curl -s https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("black_domain")).browser_download_url'
 ```
 
 #### Get a single build artifact
+
 ```
 curl -s https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("black_domain")) | select(.name | endswith(".txt")).browser_download_url'
 ```
