@@ -39,6 +39,11 @@ RUN apt-get -y install libtry-tiny-perl libnet-libidn-perl libnet-idn-encode-per
 # install environment dependencies
 RUN apt-get -y install make golang-go default-jre
 
+# update the path to make go executables accessible to the system
+RUN export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin >> ~/.profile
+RUN . ~/.profile
+RUN echo $PATH
+
 # install project discovery utilities
 # https://github.com/projectdiscovery/httpx
 # https://github.com/projectdiscovery/dnsx
