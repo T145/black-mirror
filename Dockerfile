@@ -28,7 +28,7 @@ RUN apt-get -y install preload
 RUN apt-get -y install aria2 curl git gpg
 
 # install archive managers
-RUN apt-get -y install bzip2 p7zip-full
+RUN apt-get -y install gzip p7zip-full
 
 # install text processors
 RUN apt-get -y install gawk ipcalc jq miller moreutils sed
