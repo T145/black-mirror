@@ -33,7 +33,10 @@ get_file_contents() {
         # If any archives are added that do not, this line needs to change
         tar -xOzf "$1" --wildcards-match-slash --wildcards '*/domains'
         ;;
-    *.gz) gzip -cd "$1" ;;
+    *.gz)
+        file "$1"
+        gzip -cd "$1"
+        ;;
     *.zip) zcat "$1" ;;
     *.7z) 7za -y -so e "$1" ;;
     *) cat -s "$1" ;;
