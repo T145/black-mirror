@@ -1,20 +1,15 @@
 {
   "280blocker": {
-    "_comment": "Using the pre-optimized Energized mirror.",
     "color": "black",
     "filters": [
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $2}"
+        "rule": "BEGIN{FS=\"[\\||\\^]\"}$0~/^[^#]/{print $3}"
       }
     ],
     "mirrors": [
-      "https://block.energized.pro/assets/sources/filter/280blocker.txt"
-    ],
-    "variants": [
-      "https://filter.futa.gg/280blocker/280blocker_domain_ag.txt",
-      "https://block.energized.pro/mirror/280blocker_domain_ag.txt"
+      "https://filter.futa.gg/280blocker/280blocker_domain_ag.txt"
     ]
   },
   "360_netlab": {
