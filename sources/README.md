@@ -138,6 +138,7 @@
 - [NoTrack](https://quidsup.net/notrack/)
 - [NoTrack Tracker Radar](https://gitlab.com/quidsup/ntrk-tracker-radar/-/tree/master#ntrk-tracker-radar)
 - [1Hosts Includes](https://github.com/badmojr/1Hosts/tree/master/submit_here)
+- [Disconnect.](https://disconnect.me/)
 
 ### ⚪ Whitelists
 
@@ -251,6 +252,12 @@
 - [DontPushMe](https://github.com/caffeinewriter/DontPushMe)
 - [pfbng](https://github.com/angelics/pfbng)
 - [NanoFilters](https://github.com/NanoAdblocker/NanoFilters)
+- [dnsbl-dfed](https://github.com/dfederlein/dnsbl-dfed)
+- [nopelist](https://github.com/genediazjr/nopelist)
+- old disconnect
+		- [simple_ad](https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt)
+		- [simple_tracking](https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt)
+		- [shavar-prod-lists](https://github.com/mozilla-services/shavar-prod-lists)
 
 ### 🕵🏻 Lamers Unwelcome
 
