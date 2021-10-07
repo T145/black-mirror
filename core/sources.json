@@ -3449,5 +3449,18 @@
     "mirrors": [
       "https://quidsup.net/notrack/blocklist.php?download=malware"
     ]
+  },
+  "notrack_tracker_radar": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.txt"
+    ]
   }
 }
