@@ -3475,5 +3475,19 @@
     "mirrors": [
       "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/exclude_for_all.txt"
     ]
+  },
+  "disconnectme": {
+    "_comment": "The 'services' file has similar domains: https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "domain",
+        "rule": ".entities[] | \"\\(.properties[])\\n\\(.resources[])\""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/disconnectme/disconnect-tracking-protection/master/entities.json"
+    ]
   }
 }
