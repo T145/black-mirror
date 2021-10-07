@@ -3404,7 +3404,7 @@
       {
         "engine": "mawk",
         "format": "ipv4",
-        "rule": "$0~/^[^#]/&&$1!~/^Start$/{printf \"%s/24\n\",$1}"
+        "rule": "$0~/^[^#]/&&$1!~/^Start$/{printf \"%s/24\\n\",$1}"
       }
     ],
     "mirrors": [
