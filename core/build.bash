@@ -34,7 +34,7 @@ get_file_contents() {
     tar -xOzf "$1" --wildcards-match-slash --wildcards '*/domains'
     ;;
   *.gz)
-    file "$1"
+    echo $(file "$1")
     gzip -cd "$1"
     ;;
   *.zip) zcat "$1" ;;
