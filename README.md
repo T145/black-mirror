@@ -7,6 +7,13 @@
   <hr>
   <p>Automatically compiled and maintained malicious domain & IP blacklist.</p>
   <hr>
+		<a href="https://github.com/T145/black-mirror/commits/master.atom">
+			<img src="https://img.shields.io/static/v1?logo=rss&label=rss&message=feed&color=FFA500"
+								alt="release"
+								longdesc="https://github.com/badges/shields/"
+								crossorigin="anonymous"
+								referrerpolicy="no-referrer" />
+		</a>
   <img src="https://badges.pufler.dev/created/T145/black-mirror"
        alt="nonce"
        longdesc="https://pufler.dev/git-badges/"
