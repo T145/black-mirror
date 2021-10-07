@@ -137,6 +137,7 @@
 - [DShield](https://www.dshield.org/top10.html)
 - [NoTrack](https://quidsup.net/notrack/)
 - [NoTrack Tracker Radar](https://gitlab.com/quidsup/ntrk-tracker-radar/-/tree/master#ntrk-tracker-radar)
+- [1Hosts Includes](https://github.com/badmojr/1Hosts/tree/master/submit_here)
 
 ### ⚪ Whitelists
 
@@ -149,6 +150,7 @@
 - [dan_me_uk](https://www.dan.me.uk/)
 - [CoinBlockerWhiteList](https://gitlab.com/ZeroDot1/CoinBlockerLists/-/blob/master/white_list.txt)
 - [ShadowWhisperer's Filter](https://github.com/ShadowWhisperer/BlockLists/tree/master/Whitelists)
+- [1Hosts Excludes](https://github.com/badmojr/1Hosts/tree/master/submit_here)
 
 ### 🥢 Duplicates
 
@@ -238,7 +240,7 @@
 - [CyberSaiyanIT](https://github.com/CyberSaiyanIT/InfoSharing)
   - PIHOLE feed is empty.
 - [h3x](https://tracker.h3x.eu/)
-  - Currently offline.
+  - Feeds are empty.
 
 ### 🕵🏻 Lamers Unwelcome
 

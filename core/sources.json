@@ -3436,5 +3436,44 @@
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
+  },
+  "1hosts_includes": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_all.txt"
+    ]
+  },
+  "1hosts_pro_includes": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_Pro_Xtra_only.txt"
+    ]
+  },
+  "1hosts_excludes": {
+    "color": "white",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/exclude_for_all.txt"
+    ]
   }
 }
