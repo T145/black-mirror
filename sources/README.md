@@ -137,6 +137,7 @@
 - [Exodus Privacy](https://reports.exodus-privacy.eu.org/en/)
 - [DShield](https://www.dshield.org/top10.html)
 - [NoTrack](https://quidsup.net/notrack/)
+- [NoTrack Tracker Radar](https://gitlab.com/quidsup/ntrk-tracker-radar/-/tree/master#ntrk-tracker-radar)
 
 ### ⚪ Whitelists
 
