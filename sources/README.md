@@ -241,6 +241,16 @@
   - PIHOLE feed is empty.
 - [h3x](https://tracker.h3x.eu/)
   - Feeds are empty.
+-	[Minimal-Hosts-Blocker](https://github.com/arcetera/Minimal-Hosts-Blocker)
+- [blacklist-named](https://github.com/tomzuu/blacklist-named)
+		- Does not update automatically.
+- [sophos-xg-block-lists](https://github.com/austinheap/sophos-xg-block-lists)
+- [piholeparser](https://github.com/deathbybandaid/piholeparser)
+- [IsraelList](https://jansal.net/tpl/IsraelList.tpl)
+- [niecko](https://www.niecko.pl/adblock/adblock.txt)
+- [DontPushMe](https://github.com/caffeinewriter/DontPushMe)
+- [pfbng](https://github.com/angelics/pfbng)
+- [NanoFilters](https://github.com/NanoAdblocker/NanoFilters)
 
 ### 🕵🏻 Lamers Unwelcome
 
