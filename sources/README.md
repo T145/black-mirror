@@ -87,7 +87,6 @@
 - [maltrail](https://github.com/stamparm/maltrail#blacklist)
 - [Charles B. Haley](http://charles.the-haleys.org/)
 - [darklist](https://www.darklist.de/)
-- [h3x](https://tracker.h3x.eu/)
 - [Porn Records](https://github.com/porn-records/Porn-Records)
 - [cryptolaemus](https://paste.cryptolaemus.com/)
 - [vxvault](http://vxvault.net/ViriList.php)
@@ -238,6 +237,8 @@
   - Presently archived.
 - [CyberSaiyanIT](https://github.com/CyberSaiyanIT/InfoSharing)
   - PIHOLE feed is empty.
+- [h3x](https://tracker.h3x.eu/)
+  - Currently offline.
 
 ### 🕵🏻 Lamers Unwelcome
 
