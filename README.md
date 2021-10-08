@@ -41,20 +41,11 @@
        referrerpolicy="no-referrer" />
 </div>
 
-## 🥅 Goals
+## 🖋️ [Manifesto](https://github.com/T145/black-mirror/blob/master/MANIFESTO.md)
 
-- Promote privacy
-  - Blacklist all telemetry services and other data harvesting services.
-  - Whitelist all services like Tor, VPNs, and trusted torrenting providers.
-- Promote security
-  - Blacklist known malicious actors, active attackers, sketchy sites, malvertising, etc.
-- Promote sanity
-  - Blacklist advertising sources in general, on both desktop and mobile clients.
-  - Blacklist social media, irreputable news sources, propaganda, etc.
-- Block garbage
-  - Blacklist illegal sites, pornography, untrusted torrenting providers, etc.
-- Be bigger, not bloated
-  - List sources promote growth, minimal redundancy, and modern application.
+Defines the logic behind why a host is permitted or blocked.
+Please report any hosts that are wrongly blocked or sources that do not wholly align in an issue.
+Reference the [contribution guidelines](https://github.com/T145/black-mirror/blob/master/CONTRIBUTING.md#how-to-contribute).
 
 ### ⚓ Hyperlinks
 
@@ -72,29 +63,29 @@
     <tr>
       <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_domain.txt">black_domain.txt</a></td>
       <td>Domain entries</td>
-      <td id="domain-count">9,289,543</td>
-      <td id="domain-filesize">204M</td>
+      <td id="domain-count">8,508,804</td>
+      <td id="domain-filesize">182M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_domain.checksums">[🔗]</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.txt">black_ipv4.txt</a></td>
       <td>IPv4 addresses</td>
-      <td id="ipv4-count">925,827</td>
+      <td id="ipv4-count">919,370</td>
       <td id="ipv4-filesize">13M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.checksums">[🔗]</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4_cidr.txt">black_ipv4_cidr.txt</a></td>
       <td>IPv4 CIDR blocks</td>
-      <td id="ipv4-cidr-count">29,166</td>
+      <td id="ipv4-cidr-count">29,170</td>
       <td id="ipv4-cidr-filesize">491K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4_cidr.checksums">[🔗]</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.txt">black_ipv6.txt</a></td>
       <td>IPv6 addresses</td>
-      <td id="ipv6-count">6,312</td>
-      <td id="ipv6-filesize">206K</td>
+      <td id="ipv6-count">7,839</td>
+      <td id="ipv6-filesize">243K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.checksums">[🔗]</a></td>
     </tr>
   </tbody>
