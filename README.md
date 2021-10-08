@@ -47,6 +47,8 @@ Defines the logic behind why a host is permitted or blocked.
 Please report any hosts that are wrongly blocked or sources that do not wholly align in an issue.
 Reference the [contribution guidelines](https://github.com/T145/black-mirror/blob/master/CONTRIBUTING.md#how-to-contribute).
 
+## 🚚 Deliverables
+
 ### ⚓ Hyperlinks
 
 <table>
