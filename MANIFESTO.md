@@ -1,27 +1,27 @@
 # Black Mirror promotes safety & sanity
 
 “Before you become too entranced with gorgeous gadgets and mesmerizing video displays, let me remind you that information is not knowledge, knowledge is not wisdom, and wisdom is not foresight. Each grows out of the other, and we need them all.”\
-― *Arthur C. Clarke*
+― _Arthur C. Clarke_
 
 General principles are as follows:
 
 - Promote safety
-  - Blacklist illegal sites, pornography, untrusted torrenting providers, etc.
-		- Promote privacy
-				- Blacklist all telemetry services and other data harvesting services.
-				- Whitelist all services like Tor, VPNs, and trusted torrenting providers.
-		- Promote security
-				- Blacklist known malicious actors, active attackers, sketchy sites, malvertising, etc.
+	- Blacklist illegal sites, pornography, untrusted torrenting providers, etc.
+    - Promote privacy
+		- Blacklist all telemetry services and other data harvesting services.
+		- Whitelist all services like Tor, VPNs, and trusted torrenting providers.
+    - Promote security
+		- Blacklist known malicious actors, active attackers, sketchy sites, malvertising, etc.
 - Promote sanity
-  - Blacklist advertising sources in general, on both desktop and mobile clients.
-  - Blacklist social media, irreputable news sources, propaganda, etc.
+	- Blacklist advertising sources in general, on both desktop and mobile clients.
+	- Blacklist social media, irreputable news sources, propaganda, etc.
 - Be bigger, not bloated
-  - List sources promote growth, minimal redundancy, and modern application.
+	- List sources promote growth, minimal redundancy, and modern application.
 
 ## On Spyware/Stalkerware
 
 “There will come a time when it isn't 'They're spying on me through my phone' anymore. Eventually, it will be 'My phone is spying on me'.”\
-― *Philip K. Dick*
+― _Philip K. Dick_
 
 [![Snowden on Spyware](https://res.cloudinary.com/marcomontalbano/image/upload/v1633709643/video_to_markdown/images/youtube--I5WjTTi67BE-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=I5WjTTi67BE "Snowden on Spyware")
 
@@ -32,7 +32,7 @@ These services intrude on privacy, are usually malware, and compromise individua
 ## On Propaganda and Social Media
 
 “Make decency cool again.”\
-― *Andrew Marantz*
+― _Andrew Marantz_
 
 [![Inside the bizarre world of internet trolls and propagandists](https://pi.tedcdn.com/r/s3.amazonaws.com/talkstar-photos/uploads/db5bcc6b-ea54-4c76-a43a-1d0a5b5e5adc/AndrewMarantz_2019-embed.jpg?op=%5E&c=1280%2C720&gravity=t&u%5Br%5D=2&u%5Bs%5D=0.5&u%5Ba%5D=0.8&u%5Bt%5D=0.03&quality=82&w=1280&h=720)](https://www.ted.com/talks/eva_galperin_what_you_need_to_know_about_stalkerware/transcript?language=en&utm_campaign=black_mirror&utm_medium=referral&utm_source=github_com_T145/black-mirror "Inside the bizarre world of internet trolls and propagandists")
 
@@ -48,7 +48,7 @@ Like dealings with religion, platforms that promote "knee-jerk contrarianism" or
 Examples on the latter category include Naziism and abortion.
 
 “True liberty consists only in the power of doing what we ought to will, and in not being constrained to do what we ought not to will.”\
-― *Jonathan Edwards*
+― _Jonathan Edwards_
 
 ### Specific Social Media Websites
 
@@ -93,4 +93,4 @@ Yeah it's blocked.
 
 The real power behind the freedom of speech is the ability to hear many incorrect opinions to quickly deduce those that are correct, or at least reasonable.
 When it comes to blacklisting, it prevents peer speech, not individual or communal speech. Therefore, peer speech freedom is compromised, but not individual or communal freedoms.
-"Freedom of speech" frequently refers individual or communal speech in political forums, and remains untainted.
+"Freedom of speech" frequently refers to individual or communal speech in political forums, and remains untainted.
