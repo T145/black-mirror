@@ -43,7 +43,7 @@ get_file_contents() {
   esac
 }
 
-# params: engine, rule
+# params: engine, rule, key
 parse_file_contents() {
   case $1 in
   cat) cat -s ;;
@@ -65,7 +65,7 @@ parse_file_contents() {
     ;;
   saxon) java -cp bin/SaxonHE10-5J/saxon-he-10.5.jar net.sf.saxon.Query -config:configs/saxon.xml -s:/dev/stdin -qs:"$2" ;;
   *)
-    echo "INVALID ENGINE: ${1}"
+    echo "[INVALID ENGINE] { source: ${3}, element: ${1} }"
     exit 1
     ;;
   esac |
@@ -73,7 +73,7 @@ parse_file_contents() {
     mawk '!seen[$0]++'          # filter duplicates
 }
 
-# params: format, color
+# params: format, color, key
 handle_format_output() {
   case $1 in
   domain) ./scripts/idn_to_punycode.pl >>"build/${2}_${1}.txt" ;;
@@ -83,13 +83,13 @@ handle_format_output() {
       */*) printf "%s\n" "$line" >>"build/${2}_${1}_cidr.txt" ;; # cidr block
       *-*) ipcalc "$line" >>"build/${2}_${1}_cidr.txt" ;;        # deaggregate ip range
       *.*.*.*) printf "%s\n" "$line" >>"build/${2}_${1}.txt" ;;  # ip address
-      *) echo "WARN: This isn't an IPv4 address: ${line}" ;;     # debug if ips are being processed well
+      *) echo "[INVALID IPv4]: { source: ${3}, element: ${line} }" ;;     # debug if ips are being processed well
       esac
     done
     ;;
   ipv6) cat >>"build/${2}_${1}.txt" ;;
   *)
-    echo "INVALID FORMAT: ${1}"
+    echo "[INVALID FORMAT] { source: ${3}, element: ${1} }"
     exit 1
     ;;
   esac
@@ -123,8 +123,8 @@ main() {
 
         if [ -n "$src_list" ]; then
           get_file_contents "$src_list" |
-            parse_file_contents "$engine" "$rule" |
-            handle_format_output "$format" "$color"
+            parse_file_contents "$engine" "$rule" "$key" |
+            handle_format_output "$format" "$color" "$key"
         fi
         # else the download failed and src_list is empty
       done
