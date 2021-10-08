@@ -9,7 +9,7 @@
 - anti_ad
 - games_tracking
 - gaming
-- notracking
+- [notracking](https://github.com/notracking/hosts-blocklists#no-more-ads-tracking-and-other-virtual-garbage)
 - [oisd_full](https://oisd.nl/downloads)
 - [oisd_extra](https://oisd.nl/downloadsXtra)
 - openphish
@@ -115,7 +115,9 @@
 - [Project Honey Pot](https://www.projecthoneypot.org/list_of_ips.php)
 - [viriback](https://tracker.viriback.com/)
 - [PhishStats](https://phishstats.info/)
-- [dandelionsprout/antimalware](https://github.com/DandelionSprout/adfilt/blob/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt)
+- [dandelionsprout](https://github.com/DandelionSprout/adfilt)
+  - antimalware
+		- norwegian
 - [Certego Intel](https://twitter.com/Certego_Intel)
 - [Mirai Tracker](https://mirai.security.gives/)
 - [Cyber Cure](https://www.cybercure.ai/start)
@@ -174,6 +176,8 @@
 - [sebsauvage](https://sebsauvage.net/hosts/hosts)
 - [EmergingThreats](https://rules.emergingthreats.net/blockrules/)
   - Pulls from abuse.ch, spamhaus, and dshield, which are all in use.
+- [mobile-hosts](https://github.com/r-a-y/mobile-hosts)
+- [potentialTrackers](https://github.com/jawz101/potentialTrackers)
 
 ### 🧟 Zombies
 
@@ -227,7 +231,10 @@
 - [keweonDNS](https://forum.xda-developers.com/t/keweondns-now-with-improved-certificate-ios-mac-android.3681139/) [up2date](https://pastebin.com/raw/UP3s7pEB)
 - [deathbybandaid](https://github.com/deathbybandaid/piholeparser/tree/master/Subscribable-Lists/ParsedBlacklists)
 - [Ransomware Overview](https://docs.google.com/spreadsheets/u/1/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g/pubhtml#)
-- [fanboy vietnam](https://fanboy.co.nz/fanboy-vietnam.txt)
+- fanboy
+		- [vietnam](https://fanboy.co.nz/fanboy-vietnam.txt)
+		- [japanese](https://fanboy.co.nz/fanboy-japanese.txt)
+		- [polish](https://fanboy.co.nz/fanboy-polish.txt)
 - [ryanbr](https://github.com/ryanbr/fanboy-adblock)
 - [Princeton Webcensus](https://webtransparency.cs.princeton.edu/webcensus/)
 - [UnrealSecurity](https://github.com/UnrealSecurity/badips)
@@ -258,6 +265,10 @@
 		- [simple_ad](https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt)
 		- [simple_tracking](https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt)
 		- [shavar-prod-lists](https://github.com/mozilla-services/shavar-prod-lists)
+- [ad-wars](https://github.com/jdlingyu/ad-wars)
+- [phishing_hosts](https://github.com/Kurobeats/phishing_hosts)
+- [antipopads](https://github.com/Yhonay/antipopads)
+- [romanian-media-propaganda-adblock-list](https://github.com/Recon/romanian-media-propaganda-adblock-list)
 
 ### 🕵🏻 Lamers Unwelcome
 

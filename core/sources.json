@@ -3489,5 +3489,18 @@
     "mirrors": [
       "https://raw.githubusercontent.com/disconnectme/disconnect-tracking-protection/master/entities.json"
     ]
+  },
+  "dandelionsprout_norwegian": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt"
+    ]
   }
 }
