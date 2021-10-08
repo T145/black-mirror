@@ -178,6 +178,8 @@
   - Pulls from abuse.ch, spamhaus, and dshield, which are all in use.
 - [mobile-hosts](https://github.com/r-a-y/mobile-hosts)
 - [potentialTrackers](https://github.com/jawz101/potentialTrackers)
+- [UsefulLinuxShellScripts](https://github.com/jackrabbit335/UsefulLinuxShellScripts)
+  - Active but references sources from iBlocklist.
 
 ### 🧟 Zombies
 
@@ -269,6 +271,29 @@
 - [phishing_hosts](https://github.com/Kurobeats/phishing_hosts)
 - [antipopads](https://github.com/Yhonay/antipopads)
 - [romanian-media-propaganda-adblock-list](https://github.com/Recon/romanian-media-propaganda-adblock-list)
+- [cosmonotes](https://cosmonote.blogspot.com/2013/09/Download.html)
+  - Mediafire links are still good.
+- [Gift-Card-Killer](https://github.com/TakoYachty/Gift-Card-Killer)
+- [crypto-scams-fr](https://github.com/CryptoFR/crypto-scams-fr)
+- [GetAdmiral](https://github.com/smed79/blacklist)
+- [nolovia](https://github.com/parseword/nolovia)
+  - Active but references many dead sources.
+- [spammerslapper](http://spammerslapper.com/downloads/adblock_include.conf)
+- [Badd-Boyz-Hosts](https://github.com/mitchellkrogza/Badd-Boyz-Hosts)
+- [The-Big-List-of-Hacked-Malware-Web-Sites](https://github.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites)
+- [AdmiraList](https://github.com/jkrejcha/AdmiraList)
+- [dns-zone-blacklist](https://github.com/oznu/dns-zone-blacklist)
+- [List-KR](https://github.com/slang1998/List-KR)
+- [uBlock-Filters-Plus](https://github.com/IDKwhattoputhere/uBlock-Filters-Plus)
+- [uBOPa](https://github.com/nimasaj/uBOPa)
+- [iploggerfilter](https://github.com/piperun/iploggerfilter)
+- [thai-ads-filter](https://github.com/adblock-thai/thai-ads-filter)
+- [jaka's domains](https://github.com/soteria-nou/domain-list)
+- [Cryptojacking-campaign-list](https://github.com/deHakkelaar/Cryptojacking-campaign-list)
+  - Active but draws from inactive Google Sheets.
+  - https://dehakkelaar.nl/lists/
+- [yhosts](https://github.com/vokins/yhosts)
+- [easylistczechandslovak](https://github.com/tomasko126/easylistczechandslovak)
 
 ### 🕵🏻 Lamers Unwelcome
 
