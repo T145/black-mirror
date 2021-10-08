@@ -1,4 +1,43 @@
 {
+  "1hosts_excludes": {
+    "color": "white",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/exclude_for_all.txt"
+    ]
+  },
+  "1hosts_includes": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_all.txt"
+    ]
+  },
+  "1hosts_pro_includes": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_Pro_Xtra_only.txt"
+    ]
+  },
   "280blocker": {
     "color": "black",
     "filters": [
@@ -1229,6 +1268,19 @@
       "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareDomains.txt"
     ]
   },
+  "dandelionsprout_norwegian": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt"
+    ]
+  },
   "darklist": {
     "color": "black",
     "filters": [
@@ -1268,6 +1320,20 @@
     "mirrors": [
       "https://osint.digitalside.it/Threat-Intel/lists/latestips.txt",
       "https://raw.githubusercontent.com/davidonzo/Threat-Intel/master/lists/latestips.txt"
+    ]
+  },
+  "disconnectme": {
+    "_comment": "The 'services' file has similar domains: https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "domain",
+        "rule": ".entities[] | \"\\(.properties[])\\n\\(.resources[])\""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/disconnectme/disconnect-tracking-protection/master/entities.json"
     ]
   },
   "dshield": {
@@ -3435,72 +3501,6 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ]
-  },
-  "1hosts_includes": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_all.txt"
-    ]
-  },
-  "1hosts_pro_includes": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_Pro_Xtra_only.txt"
-    ]
-  },
-  "1hosts_excludes": {
-    "color": "white",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/exclude_for_all.txt"
-    ]
-  },
-  "disconnectme": {
-    "_comment": "The 'services' file has similar domains: https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "domain",
-        "rule": ".entities[] | \"\\(.properties[])\\n\\(.resources[])\""
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/disconnectme/disconnect-tracking-protection/master/entities.json"
-    ]
-  },
-  "dandelionsprout_norwegian": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt"
     ]
   }
 }
