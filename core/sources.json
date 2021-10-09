@@ -1027,6 +1027,19 @@
       "https://raw.githubusercontent.com/Clefspeare13/pornhosts/master/download_here/safesearch/strict/0.0.0.0/hosts"
     ]
   },
+  "cname_trackers": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/master/combined_disguised_trackers_justdomains.txt"
+    ]
+  },
   "coinblockerlists_browser": {
     "color": "black",
     "filters": [
@@ -1336,6 +1349,71 @@
       "https://feeds.dshield.org/block.txt"
     ]
   },
+  "durablenapkin_luminati": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/durablenapkin/block/master/luminati.txt"
+    ]
+  },
+  "durablenapkin_scam": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/hosts.txt"
+    ]
+  },
+  "durablenapkin_streaming": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/durablenapkin/block/master/streaming.txt"
+    ]
+  },
+  "easylist_finnish": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt"
+    ]
+  },
+  "easylist_indonesian": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://easylist-downloads.adblockplus.org/abpindo+easylist.txt"
+    ]
+  },
   "energized_unblock": {
     "color": "white",
     "filters": [
@@ -1494,43 +1572,17 @@
       "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/AmazonFireTV.txt"
     ]
   },
-  "kodopenguin_main": {
+  "frellwits": {
     "color": "black",
     "filters": [
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$1~/^0.0.0.0$/{print $2}"
+        "rule": "$0~/^[^#]/{print $2}"
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Main-Template/hosts"
-    ]
-  },
-  "kodopenguin_gaming": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$1~/^0.0.0.0$/{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Gaming-Full-Template/hosts"
-    ]
-  },
-  "kodopenguin_android": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$1~/^0.0.0.0$/{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Android-Full-Template/hosts"
+      "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt"
     ]
   },
   "geoffrey_frogeye_firstparty": {
@@ -1642,6 +1694,58 @@
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt"
+    ]
+  },
+  "kadhosts": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt"
+    ]
+  },
+  "kodopenguin_android": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$1~/^0.0.0.0$/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Android-Full-Template/hosts"
+    ]
+  },
+  "kodopenguin_gaming": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$1~/^0.0.0.0$/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Gaming-Full-Template/hosts"
+    ]
+  },
+  "kodopenguin_main": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$1~/^0.0.0.0$/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Main-Template/hosts"
     ]
   },
   "kriskintel_covid": {
@@ -1771,6 +1875,19 @@
       "https://www.github.developerdan.com/hosts/lists/tracking-aggressive-extended.txt"
     ]
   },
+  "list_kr": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/List-KR/List-KR/master/filter.txt"
+    ]
+  },
   "mailscanner_bad_phishing": {
     "_comment": "Could use the 'phishing.safe.sites.conf' as a whitelist",
     "color": "black",
@@ -1783,6 +1900,33 @@
     ],
     "mirrors": [
       "http://phishing.mailscanner.info/phishing.bad.sites.conf"
+    ]
+  },
+  "majkiit_hole_cert": {
+    "_comment": "Not quite sure what this is, but it's actively maintained. Judging by a maintainer xxcriticxx's contributions it seems to be a blocklist.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hole_cert_pl.txt"
+    ]
+  },
+  "majkiit_hostfile": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hostfile.txt"
     ]
   },
   "malsilo_domains": {
@@ -1938,6 +2082,19 @@
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/netsystems?json"
+    ]
+  },
+  "nocoin": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt"
     ]
   },
   "not_on_my_shift": {
@@ -2107,6 +2264,32 @@
     ],
     "mirrors": [
       "https://phishing.army/download/phishing_army_blocklist_extended.txt"
+    ]
+  },
+  "phishingdb_domains": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt"
+    ]
+  },
+  "phishingdb_ips": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "ipv4",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-IPs-ACTIVE.txt"
     ]
   },
   "phishstats": {
@@ -2330,98 +2513,6 @@
     ],
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/recyber?json"
-    ]
-  },
-  "easylist_finnish": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt"
-    ]
-  },
-  "easylist_indonesian": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
-      }
-    ],
-    "mirrors": [
-      "https://easylist-downloads.adblockplus.org/abpindo+easylist.txt"
-    ]
-  },
-  "list_kr": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/List-KR/List-KR/master/filter.txt"
-    ]
-  },
-  "kadhosts": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt"
-    ]
-  },
-  "majkiit_hostfile": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hostfile.txt"
-    ]
-  },
-  "majkiit_hole_cert": {
-    "_comment": "Not quite sure what this is, but it's actively maintained. Judging by a maintainer xxcriticxx's contributions it seems to be a blocklist.",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hole_cert_pl.txt"
-    ]
-  },
-  "frellwits": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt"
     ]
   },
   "resecure_clop": {
@@ -3082,6 +3173,19 @@
       "https://raw.githubusercontent.com/Te-k/stalkerware-indicators/master/indicators-for-tinycheck.json"
     ]
   },
+  "stevenblack": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts"
+    ]
+  },
   "stretchoid": {
     "color": "black",
     "filters": [
@@ -3514,110 +3618,6 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ]
-  },
-  "stevenblack": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts"
-    ]
-  },
-  "nocoin": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt"
-    ]
-  },
-  "cname_trackers": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/master/combined_disguised_trackers_justdomains.txt"
-    ]
-  },
-  "durablenapkin_scam": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/hosts.txt"
-    ]
-  },
-  "durablenapkin_luminati": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/durablenapkin/block/master/luminati.txt"
-    ]
-  },
-  "durablenapkin_streaming": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/durablenapkin/block/master/streaming.txt"
-    ]
-  },
-  "phishingdb_domains": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "cat",
-        "format": "domain",
-        "rule": ""
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt"
-    ]
-  },
-  "phishingdb_ips": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "cat",
-        "format": "ipv4",
-        "rule": ""
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-IPs-ACTIVE.txt"
     ]
   }
 }
