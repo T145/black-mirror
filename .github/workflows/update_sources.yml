@@ -1,12 +1,19 @@
-name: Create Release
+name: Update Sources
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0,12 * * *"
+  push:
+    branches:
+      - master
+    paths:
+      - 'core/sources.json'
+  pull_request:
+    branches:
+      - master
+    paths:
+      - 'core/sources.json'
 
 jobs:
-  release:
+  update:
     runs-on: ubuntu-20.04
     container:
       image: ghcr.io/t145/black-mirror:latest
@@ -21,26 +28,8 @@ jobs:
           jq -jr 'to_entries[] | select(.value.color == "black") | .value.mirrors[0] as $url | .value.filters[] | if (.engine == "cat" or .engine == "mawk") then ($url, " ") else empty end' core/sources.json | sed 's/ $/\n/' >sources/sources.pihole
           jq -r 'to_entries[].value.mirrors[]' core/sources.json >sources/sources.txt
         shell: bash
-      - name: Create Builds
-        run: |
-          :> logs/aria2.log
-          chmod 755 -R ./core -R ./scripts
-          ./core/build.bash
-          ./scripts/update_readme.bash
-        shell: bash
-      - name: Publish Release
+      - name: Update Sources
         if: success()
-        uses: marvinpinto/action-automatic-releases@v1.2.1
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: latest
-          prerelease: false
-          title: All Artifacts
-          files: build/*
-      - name: Remove Artifacts
-        if: always()
-        run: rm -rf build/
-      - name: Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4.12.0
         with:
-          commit_message: 🔼 Auto Update
+          commit_message: 📚 Updated Sources
