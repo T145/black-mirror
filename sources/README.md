@@ -5,7 +5,6 @@
 ### ⚫ Blacklists
 
 - [Perflyst](https://github.com/Perflyst/PiHoleBlocklist)
-- andryou
 - anti_ad
 - games_tracking
 - gaming
@@ -117,7 +116,7 @@
 - [PhishStats](https://phishstats.info/)
 - [dandelionsprout](https://github.com/DandelionSprout/adfilt)
   - antimalware
-		- norwegian
+	- norwegian
 - [Certego Intel](https://twitter.com/Certego_Intel)
 - [Mirai Tracker](https://mirai.security.gives/)
 - [Cyber Cure](https://www.cybercure.ai/start)
@@ -141,6 +140,14 @@
 - [NoTrack Tracker Radar](https://gitlab.com/quidsup/ntrk-tracker-radar/-/tree/master#ntrk-tracker-radar)
 - [1Hosts Includes](https://github.com/badmojr/1Hosts/tree/master/submit_here)
 - [Disconnect.](https://disconnect.me/)
+- [StevenBlack](https://github.com/StevenBlack/hosts#sources-of-hosts-data-unified-in-this-variant)
+- [adblock-nocoin-list](https://github.com/hoshsadiq/adblock-nocoin-list)
+- [Adguard](https://github.com/AdguardTeam) *more to come*
+  - [cname-trackers](https://github.com/AdguardTeam/cname-trackers#cname-cloaked-trackers)
+- durablenapkin
+  - [luminati](https://github.com/durablenapkin/block#blocklists)
+  - [streaming](https://github.com/durablenapkin/block#blocklists)
+  - [scam](https://github.com/durablenapkin/scamblocklist#scam-blocklist)
 
 ### ⚪ Whitelists
 
@@ -159,6 +166,7 @@
 
 > Sources that contain duplicate and potentially deprecated data
 
+- [andryou](https://gitlab.com/andryou/block#sources)
 - [adfree](https://adfree-hosts.odiousapps.com/adfree.php)
   - Save as "adfree.gz," and run "gunzip adfree.gz"
 - [canihazprivacy](https://canihazprivacy.com/)
@@ -234,9 +242,9 @@
 - [deathbybandaid](https://github.com/deathbybandaid/piholeparser/tree/master/Subscribable-Lists/ParsedBlacklists)
 - [Ransomware Overview](https://docs.google.com/spreadsheets/u/1/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g/pubhtml#)
 - fanboy
-		- [vietnam](https://fanboy.co.nz/fanboy-vietnam.txt)
-		- [japanese](https://fanboy.co.nz/fanboy-japanese.txt)
-		- [polish](https://fanboy.co.nz/fanboy-polish.txt)
+	- [vietnam](https://fanboy.co.nz/fanboy-vietnam.txt)
+	- [japanese](https://fanboy.co.nz/fanboy-japanese.txt)
+	- [polish](https://fanboy.co.nz/fanboy-polish.txt)
 - [ryanbr](https://github.com/ryanbr/fanboy-adblock)
 - [Princeton Webcensus](https://webtransparency.cs.princeton.edu/webcensus/)
 - [UnrealSecurity](https://github.com/UnrealSecurity/badips)
@@ -264,9 +272,9 @@
 - [dnsbl-dfed](https://github.com/dfederlein/dnsbl-dfed)
 - [nopelist](https://github.com/genediazjr/nopelist)
 - old disconnect
-		- [simple_ad](https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt)
-		- [simple_tracking](https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt)
-		- [shavar-prod-lists](https://github.com/mozilla-services/shavar-prod-lists)
+	- [simple_ad](https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt)
+	- [simple_tracking](https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt)
+	- [shavar-prod-lists](https://github.com/mozilla-services/shavar-prod-lists)
 - [ad-wars](https://github.com/jdlingyu/ad-wars)
 - [phishing_hosts](https://github.com/Kurobeats/phishing_hosts)
 - [antipopads](https://github.com/Yhonay/antipopads)
@@ -294,6 +302,7 @@
   - https://dehakkelaar.nl/lists/
 - [yhosts](https://github.com/vokins/yhosts)
 - [easylistczechandslovak](https://github.com/tomasko126/easylistczechandslovak)
+- [Andrew's Settings](https://gitlab.com/andryou/andrews-settings#andrews-settings-and-config-files)
 
 ### 🕵🏻 Lamers Unwelcome
 
