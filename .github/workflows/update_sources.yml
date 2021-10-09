@@ -1,12 +1,8 @@
 name: Update Sources
 
+# https://github.community/t/trigger-workflow-only-on-pull-request-merge/17359/2
 on:
   push:
-    branches:
-      - master
-    paths:
-      - 'core/sources.json'
-  pull_request:
     branches:
       - master
     paths:
