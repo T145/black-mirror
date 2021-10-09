@@ -42,13 +42,13 @@ RUN apt-get -y install make golang-go default-jre python3-pip
 RUN apt-get clean
 
 # configure python programs
-RUN pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint
+ENV PATH=$PATH:/root/.local/bin
+RUN pip3 install twint
 
 # update the path to make go executables accessible to the system
 # https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-local-programming-environment-on-ubuntu-18-04
 ENV GOPATH=$HOME/go
 ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
-RUN echo $PATH
 
 # install project discovery utilities
 # https://github.com/projectdiscovery/httpx
