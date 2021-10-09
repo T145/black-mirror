@@ -5,8 +5,11 @@
 ### ⚫ Blacklists
 
 - [Perflyst](https://github.com/Perflyst/PiHoleBlocklist)
-- anti_ad
-- games_tracking
+- [anti_ad](https://github.com/privacy-protection-tools/anti-AD#anti-ad)
+- [kodopenguin](https://github.com/KodoPengin/GameIndustry-hosts-Template)
+  - Main-Template
+  - Gaming-Full-Template
+  - Android-Full-Template
 - gaming
 - [notracking](https://github.com/notracking/hosts-blocklists#no-more-ads-tracking-and-other-virtual-garbage)
 - [oisd_full](https://oisd.nl/downloads)

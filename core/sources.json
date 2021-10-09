@@ -1494,8 +1494,7 @@
       "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/AmazonFireTV.txt"
     ]
   },
-  "games_tracking": {
-    "_comment": "Lists IPs in comments that could also be blocked.",
+  "kodopenguin_main": {
     "color": "black",
     "filters": [
       {
@@ -1506,6 +1505,32 @@
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Main-Template/hosts"
+    ]
+  },
+  "kodopenguin_gaming": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$1~/^0.0.0.0$/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Gaming-Full-Template/hosts"
+    ]
+  },
+  "kodopenguin_android": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$1~/^0.0.0.0$/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Android-Full-Template/hosts"
     ]
   },
   "gaming": {
