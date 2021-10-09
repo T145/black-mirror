@@ -17,8 +17,7 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
-      - name: Checkout latest repo version
-        uses: actions/checkout@v2
+      - uses: actions/checkout@master
 
       - name: Set script permissions
         run: chmod 755 -R ./core -R ./scripts
@@ -50,18 +49,7 @@ jobs:
 
       - name: Publish Release
         if: success()
-        uses: marvinpinto/action-automatic-releases@v1
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: latest
-          prerelease: false
-          title: All Artifacts
-          files: |
-            build/*
-
-      - name: Retry Publish Release
-        if: failure()
-        uses: marvinpinto/action-automatic-releases@v1
+        uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           automatic_release_tag: latest
@@ -77,6 +65,6 @@ jobs:
           # rm -rf imports/
 
       - name: Auto Commit
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v4.12.0
         with:
           commit_message: 🔼 Auto Update
