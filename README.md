@@ -47,6 +47,52 @@ Defines the logic behind why a host is permitted or blocked.
 Please report any hosts that are wrongly blocked or sources that do not wholly align in an issue.
 Reference the [contribution guidelines](https://github.com/T145/black-mirror/blob/master/CONTRIBUTING.md#how-to-contribute).
 
+## 📋 Attributes
+
+1. Produced in domain-only, IPv4-only, IPv4-CIDR-only, and IPv6-only builds.
+2. Updates at [0:00 UTC & 12:00 UTC](https://www.timeanddate.com/time/zone/timezone/utc).
+3. No excess or trailing whitespace.
+4. No lingering webscraper garbage.
+5. Lines are terminated with `lf`.
+6. No blank lines.
+7. No comments.
+
+## ⚒️ Usage
+
+#### Desktop OS Hosts File
+
+```bash
+mawk '{print "0.0.0.0 " $0}' black_domain.txt >>hosts
+# mawk '{print ":: " $0}' black_domain.txt >>hosts
+mawk '{print "0.0.0.0 " $0}' black_ipv4.txt >>hosts
+mawk '{print ":: " $0}' black_ipv6.txt >>hosts
+```
+
+#### dnsmasq
+
+Many popular platforms such as OpenWRT, DDWRT, and Pihole use DNSmasq as their choice TCP powerhouse. After inspecting many domain blocklists you'll inevitably run across a list in the `dnsmasq.conf` format. This list doesn't support it because you can use the `addn-hosts` parameter to add hosts in the list.
+Target a file that has the hosts in a format similar to the Desktop OS Hosts File format.
+
+If you're using the `RADVD` daemon, prepend any listed hosts with [`::`](https://stackoverflow.com/questions/40189084/what-is-for-localhost-and-0-0-0-0). Otherwise, even if you have IPv6 support set up, prepend hosts with [`0.0.0.0`](https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001).
+
+This has been tested across all the mentioned platforms using `dig{6}` on a small sample size and had each host null-routed successfully. [DNSmasq's man page](https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html) discusses configuration further, and [DDWRT's ad blocking wiki page](https://wiki.dd-wrt.com/wiki/index.php/Ad_blocking) provides some examples.
+
+##### Amazon EC2 DNS Resolver
+
+Follow [this guide](https://aws.amazon.com/premiumsupport/knowledge-center/dns-resolution-failures-ec2-linux/) to create a DNS server on a Amazon EC2 instance.
+
+#### pihole
+
+If you'd like to update when some sources do or not extract a production build, just use the [single-line list](https://discourse.pi-hole.net/t/how-to-add-blocklists-v5-and-later/32127) [`sources.pihole`](https://github.com/T145/black-mirror/blob/master/sources/sources.pihole). Note that this list only contains Pihole-compatible sources, and not all sources handled by The Blacklist. Some manual configuration may also be required.
+
+#### unbound
+
+Similar to dnsmasq, but requires more manual configuration. Name any products as a \*.conf file. [Then follow Steffinstanly's instructions on how to apply blocklists](https://medium.com/@steffinstanly/unbound-dns-blocking-3567986a5735).
+
+#### personalDNSfilter
+
+Use the domain list.
+
 ## 🚚 Deliverables
 
 ### ⚓ Hyperlinks
@@ -132,51 +178,6 @@ curl -s https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '
 ```
 curl -s https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("black_domain")) | select(.name | endswith(".txt")).browser_download_url'
 ```
-
-## 📋 Attributes
-
-1. No comments
-2. No excess whitespace (trailing, blank lines)
-3. No lingering webscraper garbage
-4. Ending with `lf`
-5. Domain-only, IPv4-only, and IPv6-only variants
-6. Updates at [0:00 UTC](https://www.timeanddate.com/time/zone/timezone/utc)
-
-## ⚒️ Usage
-
-#### Desktop OS Hosts File
-
-```bash
-mawk '{print "0.0.0.0 " $0}' black_domain.txt >>hosts
-# mawk '{print ":: " $0}' black_domain.txt >>hosts
-mawk '{print "0.0.0.0 " $0}' black_ipv4.txt >>hosts
-mawk '{print ":: " $0}' black_ipv6.txt >>hosts
-```
-
-#### dnsmasq
-
-Many popular platforms such as OpenWRT, DDWRT, and Pihole use DNSmasq as their choice TCP powerhouse. After inspecting many domain blocklists you'll inevitably run across a list in the `dnsmasq.conf` format. This list doesn't support it because you can use the `addn-hosts` parameter to add hosts in the list.
-Target a file that has the hosts in a format similar to the Desktop OS Hosts File format.
-
-If you're using the `RADVD` daemon, prepend any listed hosts with [`::`](https://stackoverflow.com/questions/40189084/what-is-for-localhost-and-0-0-0-0). Otherwise, even if you have IPv6 support set up, prepend hosts with [`0.0.0.0`](https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001).
-
-This has been tested across all the mentioned platforms using `dig{6}` on a small sample size and had each host null-routed successfully. [DNSmasq's man page](https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html) discusses configuration further, and [DDWRT's ad blocking wiki page](https://wiki.dd-wrt.com/wiki/index.php/Ad_blocking) provides some examples.
-
-##### Amazon EC2 DNS Resolver
-
-Follow [this guide](https://aws.amazon.com/premiumsupport/knowledge-center/dns-resolution-failures-ec2-linux/) to create a DNS server on a Amazon EC2 instance.
-
-#### pihole
-
-If you'd like to update when some sources do or not extract a production build, just use the [single-line list](https://discourse.pi-hole.net/t/how-to-add-blocklists-v5-and-later/32127) [`sources.pihole`](https://github.com/T145/black-mirror/blob/master/sources/sources.pihole). Note that this list only contains Pihole-compatible sources, and not all sources handled by The Blacklist. Some manual configuration may also be required.
-
-#### unbound
-
-Similar to dnsmasq, but requires more manual configuration. Name any products as a \*.conf file. [Then follow Steffinstanly's instructions on how to apply blocklists](https://medium.com/@steffinstanly/unbound-dns-blocking-3567986a5735).
-
-#### personalDNSfilter
-
-Use the domain list.
 
 ---
 
