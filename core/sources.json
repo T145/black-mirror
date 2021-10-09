@@ -2332,7 +2332,7 @@
       "https://isc.sans.edu/api/threatlist/recyber?json"
     ]
   },
-  "reg_fi": {
+  "easylist_finnish": {
     "color": "black",
     "filters": [
       {
@@ -2345,7 +2345,7 @@
       "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt"
     ]
   },
-  "reg_id": {
+  "easylist_indonesian": {
     "color": "black",
     "filters": [
       {
@@ -2358,7 +2358,7 @@
       "https://easylist-downloads.adblockplus.org/abpindo+easylist.txt"
     ]
   },
-  "reg_kr": {
+  "list_kr": {
     "color": "black",
     "filters": [
       {
@@ -2371,7 +2371,20 @@
       "https://raw.githubusercontent.com/List-KR/List-KR/master/filter.txt"
     ]
   },
-  "reg_pl1": {
+  "kadhosts": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://github.com/PolishFiltersTeam/KADhosts/blob/master/KADomains.txt"
+    ]
+  },
+  "majkiit_hostfile": {
     "color": "black",
     "filters": [
       {
@@ -2381,23 +2394,24 @@
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt"
-    ]
-  },
-  "reg_pl2": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
-      }
-    ],
-    "mirrors": [
       "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hostfile.txt"
     ]
   },
-  "reg_se": {
+  "majkiit_hole_cert": {
+    "_comment": "Not quite sure what this is, but it's actively maintained. Judging by a maintainer xxcriticxx's contributions it seems to be a blocklist.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hole_cert_pl.txt"
+    ]
+  },
+  "frellwits": {
     "color": "black",
     "filters": [
       {
@@ -3333,7 +3347,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": "$0~/^[^#]/"
       }
     ],
     "mirrors": [

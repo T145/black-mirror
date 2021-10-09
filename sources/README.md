@@ -13,17 +13,19 @@
 - [notracking](https://github.com/notracking/hosts-blocklists#no-more-ads-tracking-and-other-virtual-garbage)
 - [oisd_full](https://oisd.nl/downloads)
 - [oisd_extra](https://oisd.nl/downloadsXtra)
-- openphish
-- phishing_army
-- reg_fi
-- reg_id
-- reg_kr
-- reg_pl1
-- reg_pl2
-- reg_se
-- shallalist
-- utcapitole
-- wally3k
+- [openphish](https://openphish.com/index.html)
+- [phishing_army](https://phishing.army/)
+- [easylist_finnish](https://github.com/finnish-easylist-addition/finnish-easylist-addition)
+- [easylist_indonesian](https://github.com/ABPindo/indonesianadblockrules#abpindo)
+- [List-KR](https://github.com/List-KR/List-KR#list-kr-english)
+- [KADhosts](https://github.com/PolishFiltersTeam/KADhosts#kadhosts)
+- [polish-ads-filter](https://github.com/MajkiIT/polish-ads-filter/tree/master/polish-pihole-filters#oprogramowanie-pihole)
+  - hole_cert_pl
+  - hostfile
+- [Frellwits-filter-lists](https://github.com/lassekongo83/Frellwits-filter-lists#frellwits-filter-lists)
+- [shallalist](https://www.shallalist.de/)
+- [ut-capitole](https://dsi.ut-capitole.fr/blacklists/index_en.php)
+- [wally3k](https://v.firebog.net/hosts/)
 - [Energized Xtreme Extension](https://github.com/EnergizedProtection/block#extensions-2)
 - [AnudeepND](https://github.com/anudeepND/blacklist)
 - [WindowsSpyBlocker](https://github.com/crazy-max/WindowsSpyBlocker/tree/master/data/hosts)
