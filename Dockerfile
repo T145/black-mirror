@@ -11,11 +11,11 @@ RUN echo 'Acquire::Languages "none";' >> /etc/apt/apt.conf.d/00aptitude
 # https://github.com/phusion/baseimage-docker/issues/58#issuecomment-47995343
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
-# install apt-utils early so debconf doesn't delay package configuration
-RUN apt-get -y install apt-utils
-
 # use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 RUN apt-get -y update
+
+# install apt-utils early so debconf doesn't delay package configuration
+RUN apt-get -y install apt-utils
 
 # upgrade with proper configurations
 RUN apt-get -y upgrade
