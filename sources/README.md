@@ -10,7 +10,6 @@
   - Main-Template
   - Gaming-Full-Template
   - Android-Full-Template
-- gaming
 - [notracking](https://github.com/notracking/hosts-blocklists#no-more-ads-tracking-and-other-virtual-garbage)
 - [oisd_full](https://oisd.nl/downloads)
 - [oisd_extra](https://oisd.nl/downloadsXtra)
@@ -306,6 +305,7 @@
 - [yhosts](https://github.com/vokins/yhosts)
 - [easylistczechandslovak](https://github.com/tomasko126/easylistczechandslovak)
 - [Andrew's Settings](https://gitlab.com/andryou/andrews-settings#andrews-settings-and-config-files)
+- [dupontjean](https://github.com/dupontjean/pihole-blocklist#pihole-blocklist)
 
 ### 🕵🏻 Lamers Unwelcome
 

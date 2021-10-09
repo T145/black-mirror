@@ -1533,19 +1533,6 @@
       "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Android-Full-Template/hosts"
     ]
   },
-  "gaming": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/dupontjean/pihole-blocklist/master/game.txt"
-    ]
-  },
   "geoffrey_frogeye_firstparty": {
     "_comment": "Has a 'firstparty-only-trackers' list, which is smaller.",
     "color": "black",
