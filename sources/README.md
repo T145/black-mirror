@@ -152,6 +152,8 @@
   - [luminati](https://github.com/durablenapkin/block#blocklists)
   - [streaming](https://github.com/durablenapkin/block#blocklists)
   - [scam](https://github.com/durablenapkin/scamblocklist#scam-blocklist)
+- [Phishing Database](https://github.com/mitchellkrogza/Phishing.Database#phishing-domain-database-)
+  - Active domains & IPs only.
 
 ### ⚪ Whitelists
 
