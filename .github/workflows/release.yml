@@ -26,8 +26,7 @@ jobs:
 
       - name: Sort Sources Alphabetically
         run: |
-          jq -S -M '.' core/sources.json > temp.json
-          mv temp.json core/sources.json
+          jq -SM '.' core/sources.json | sponge core/sources.json
         shell: bash
 
       - name: Convert Sources to Pihole Format
@@ -39,9 +38,7 @@ jobs:
         shell: bash
 
       - name: Reset Aria2 Log
-        run: |
-          rm logs/aria2.log
-          touch logs/aria2.log
+        run: :> logs/aria2.log
         shell: bash
 
       - name: Create Builds
@@ -54,7 +51,7 @@ jobs:
 
       - name: Publish Release
         if: success()
-        uses: marvinpinto/action-automatic-releases@v1.2.1
+        uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           automatic_release_tag: latest
