@@ -110,7 +110,7 @@ main() {
     jq -r --arg color "$color" 'to_entries[] |
         select(.value.color == $color) |
         {key, mirrors: .value.mirrors} |
-        .extension = (.mirrors[0] | match(".(tar.gz|gz|zip|7z|json)").captures[0].string // "txt") |
+        .extension = (.mirrors[0] | match(".(txt|tar.gz|gz|zip|7z|json)").captures[0].string // "txt") |
         (.mirrors | join("\t")), " out=\(.key).\(.extension)"' core/sources.json |
       aria2c -i- -d "$cache_dir" --conf-path='./configs/aria2.conf'
     set -e
