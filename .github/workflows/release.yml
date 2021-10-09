@@ -1,13 +1,12 @@
 name: Create Release
 
 on:
-  #repository_dispatch:
   workflow_dispatch:
   schedule:
     - cron: "0 0,12 * * *"
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-20.04
     container:
       image: ghcr.io/t145/black-mirror:latest
@@ -16,26 +15,18 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@master
-      - name: Set script permissions
-        run: chmod 755 -R ./core -R ./scripts
-        shell: bash
-      - name: Sort Sources Alphabetically
-        run: jq -SM '.' core/sources.json | sponge core/sources.json
-        shell: bash
-      - name: Convert Sources to Pihole Format
-        run: jq -jr 'to_entries[] | select(.value.color == "black") | .value.mirrors[0] as $url | .value.filters[] | if (.engine == "cat" or .engine == "mawk") then ($url, " ") else empty end' core/sources.json | sed 's/ $/\n/' >sources/sources.pihole
-        shell: bash
-      - name: Convert Sources to Text Format
-        run: jq -r 'to_entries[].value.mirrors[]' core/sources.json >sources/sources.txt
-        shell: bash
-      - name: Reset Aria2 Log
-        run: :> logs/aria2.log
+      - name: Convert Sources
+        run: |
+          jq -SM '.' core/sources.json | sponge core/sources.json
+          jq -jr 'to_entries[] | select(.value.color == "black") | .value.mirrors[0] as $url | .value.filters[] | if (.engine == "cat" or .engine == "mawk") then ($url, " ") else empty end' core/sources.json | sed 's/ $/\n/' >sources/sources.pihole
+          jq -r 'to_entries[].value.mirrors[]' core/sources.json >sources/sources.txt
         shell: bash
       - name: Create Builds
-        run: ./core/build.bash
-        shell: bash
-      - name: Update README.md
-        run: ./scripts/update_readme.bash
+        run: |
+          :> logs/aria2.log
+          chmod 755 -R ./core -R ./scripts
+          ./core/build.bash
+          ./scripts/update_readme.bash
         shell: bash
       - name: Publish Release
         if: success()
