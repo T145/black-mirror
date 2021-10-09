@@ -50,7 +50,18 @@ jobs:
 
       - name: Publish Release
         if: success()
-        uses: marvinpinto/action-automatic-releases@latest
+        uses: marvinpinto/action-automatic-releases@v1
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: latest
+          prerelease: false
+          title: All Artifacts
+          files: |
+            build/*
+
+      - name: Retry Publish Release
+        if: failure()
+        uses: marvinpinto/action-automatic-releases@v1
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           automatic_release_tag: latest
@@ -66,7 +77,6 @@ jobs:
           # rm -rf imports/
 
       - name: Auto Commit
-        if: success()
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 🔼 Auto Update
