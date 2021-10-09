@@ -4,7 +4,7 @@ on:
   #repository_dispatch:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0,12 * * *"
 
 jobs:
   create_release:
@@ -25,8 +25,7 @@ jobs:
         shell: bash
 
       - name: Sort Sources Alphabetically
-        run: |
-          jq -SM '.' core/sources.json | sponge core/sources.json
+        run: jq -SM '.' core/sources.json | sponge core/sources.json
         shell: bash
 
       - name: Convert Sources to Pihole Format
