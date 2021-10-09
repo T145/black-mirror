@@ -1,7 +1,7 @@
 FROM ubuntu:21.04
 
 LABEL maintainer="T145" \
-      version="1.1.0" \
+      version="1.2.0" \
       description="Custom Docker Image used to run Black Mirror."
 
 # suppress language-related updates from apt-get to increase download speeds
@@ -37,7 +37,12 @@ RUN apt-get -y install gawk ipcalc jq miller moreutils sed
 RUN apt-get -y install libtry-tiny-perl libnet-libidn-perl libnet-idn-encode-perl libregexp-common-perl
 
 # install environment dependencies
-RUN apt-get -y install make golang-go default-jre
+RUN apt-get -y install make golang-go default-jre python3-pip
+
+RUN apt-get clean
+
+# configure python programs
+RUN pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint
 
 # update the path to make go executables accessible to the system
 # https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-local-programming-environment-on-ubuntu-18-04
@@ -57,9 +62,6 @@ RUN GO111MODULE=on go get -v github.com/projectdiscovery/shuffledns/cmd/shuffled
 RUN GO111MODULE=on go get -v github.com/projectdiscovery/proxify/cmd/proxify
 # RUN go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 
-RUN apt-get clean
-# RUN pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint
 RUN curl -s pi.dk/3/ -o install.sh
-RUN bash install.sh
+RUN bash install.sh && rm -f install.sh
 RUN echo 'will cite' | parallel --citation || true
-RUN rm -f install.sh
