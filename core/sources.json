@@ -3593,5 +3593,31 @@
     "mirrors": [
       "https://raw.githubusercontent.com/durablenapkin/block/master/streaming.txt"
     ]
+  },
+  "phishingdb_domains": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt"
+    ]
+  },
+  "phishingdb_ips": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "ipv4",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-IPs-ACTIVE.txt"
+    ]
   }
 }
