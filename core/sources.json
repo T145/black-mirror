@@ -3605,5 +3605,18 @@
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
+  },
+  "goodbye_ads": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$1~/^0.0.0.0$/&&$2!~/^0.0.0.0$/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt"
+    ]
   }
 }
