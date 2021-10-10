@@ -194,6 +194,7 @@
 - [potentialTrackers](https://github.com/jawz101/potentialTrackers)
 - [UsefulLinuxShellScripts](https://github.com/jackrabbit335/UsefulLinuxShellScripts)
   - Active but references sources from iBlocklist.
+- [hosts.extra](https://github.com/FadeMind/hosts.extras#extra-rules-for-steven-blacks-hosts-project)
 
 ### 🧟 Zombies
 
@@ -310,6 +311,7 @@
 - [easylistczechandslovak](https://github.com/tomasko126/easylistczechandslovak)
 - [Andrew's Settings](https://gitlab.com/andryou/andrews-settings#andrews-settings-and-config-files)
 - [dupontjean](https://github.com/dupontjean/pihole-blocklist#pihole-blocklist)
+- [jmdugan](https://github.com/jmdugan/blocklists)
 
 ### 🕵🏻 Lamers Unwelcome
 
