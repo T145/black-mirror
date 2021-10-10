@@ -16,9 +16,10 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Create Builds
+        # importing will be performed just before building
         run: |
           :> logs/aria2.log
-          chmod 755 -R ./core -R ./scripts
+          chmod 755 -R core/*.bash -R scripts/*.bash -R imports/*.bash -R imports/*.py
           ./core/build.bash
           ./scripts/update_readme.bash
         shell: bash

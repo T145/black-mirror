@@ -19,16 +19,16 @@ curl -s 'https://reports.exodus-privacy.eu.org/api/trackers' |
     gawk '{
         switch ($1) {
         case /^([[:alnum:]_-]{1,63}\.)+[[:alpha:]]+([[:space:]]|$)/:
-            print tolower($1) > "exports/exodus_domains.txt"
+            print tolower($1) > "imports/out/exodus_domains.txt"
             break
         case /^([0-9]{1,3}\.){3}[0-9]{1,3}+(\/|:|$)/:
             sub(/:.*/, "", $1)
-            print $1 > "exports/exodus_ips.txt"
+            print $1 > "imports/out/exodus_ips.txt"
             break
         }
     }'
 
-for list in 'exports/exodus_domains.txt' 'exports/exodus_ips.txt'; do
+for list in 'imports/out/exodus_domains.txt' 'imports/out/exodus_ips.txt'; do
     sort -o "$list" -u -S 90% --parallel=4 "$list"
 done
 
