@@ -172,7 +172,7 @@ Follow [this guide](https://aws.amazon.com/premiumsupport/knowledge-center/dns-r
 
 ### pihole
 
-If you'd like to update when some sources do or not extract a production build, just use the [single-line list](https://discourse.pi-hole.net/t/how-to-add-blocklists-v5-and-later/32127) [`sources.pihole`](https://github.com/T145/black-mirror/blob/master/sources/sources.pihole). Note that this list only contains Pihole-compatible sources, and not all sources handled by The Blacklist. Some manual configuration may also be required.
+If you'd like to update when some sources do or not extract a production build, just use the [single-line list](https://discourse.pi-hole.net/t/how-to-add-blocklists-v5-and-later/32127) [`sources.pihole`](https://github.com/T145/black-mirror/blob/master/exports/sources.pihole). Note that this list only contains Pihole-compatible sources, and not all sources handled by The Blacklist. Some manual configuration may also be required.
 
 ### unbound
 
