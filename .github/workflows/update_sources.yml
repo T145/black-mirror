@@ -21,8 +21,8 @@ jobs:
       - name: Convert Sources
         run: |
           jq -SM '.' core/sources.json | sponge core/sources.json
-          jq -jr 'to_entries[] | select(.value.color == "black") | .value.mirrors[0] as $url | .value.filters[] | if (.engine == "cat" or .engine == "mawk") then ($url, " ") else empty end' core/sources.json | sed 's/ $/\n/' >sources/sources.pihole
-          jq -r 'to_entries[].value.mirrors[]' core/sources.json >sources/sources.txt
+          jq -jr 'to_entries[] | select(.value.color == "black") | .value.mirrors[0] as $url | .value.filters[] | if (.engine == "cat" or .engine == "mawk") then ($url, " ") else empty end' core/sources.json | sed 's/ $/\n/' >exports/sources.pihole
+          jq -r 'to_entries[].value.mirrors[]' core/sources.json >exports/sources.txt
         shell: bash
       - name: Update Sources
         if: success()
