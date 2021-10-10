@@ -154,6 +154,7 @@
   - [scam](https://github.com/durablenapkin/scamblocklist#scam-blocklist)
 - [Phishing Database](https://github.com/mitchellkrogza/Phishing.Database#phishing-domain-database-)
   - Active domains & IPs only.
+- [GoodbyeAds](https://github.com/jerryn70/GoodbyeAds#goodbyeads---wrld-of-ads-free-internet)
 
 ### ⚪ Whitelists
 

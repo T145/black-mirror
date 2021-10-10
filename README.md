@@ -121,9 +121,12 @@ A return code of `0` means the check was successful. The specific checksum comma
 
 ### 🐙 Fetching GitHub Releases
 
-Recently, GitHub Release artifacts have been appearing with hashes after their names and before their file extensions.
-It's not an issue with the build process, and only happens after being uploaded.
-Why this specifically has been happening is unknown, but here are some temporary workaround examples.
+When the release action that uploads the builds artifacts to GitHub encounters an error, it will retry the upload
+and place an MD5 hash between the file's name and extension.
+
+The resulting artifact filename is then something like this: `black_domain-<MD5>.txt`
+
+Below are some workaround examples to fetch artifacts leveraging the GitHub API.
 
 #### Get all build artifacts
 
