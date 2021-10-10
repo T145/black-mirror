@@ -481,20 +481,6 @@
       "https://benkow.cc/export.php"
     ]
   },
-  "benkow_rat": {
-    "_comment": "TODO: Add domains from URLs.",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "perl",
-        "format": "ipv4",
-        "rule": "say $& while /$RE{net}{IPv4}/g"
-      }
-    ],
-    "mirrors": [
-      "https://benkow.cc/export_rat.php"
-    ]
-  },
   "betterfyi": {
     "_comment": "Using the pre-optimized Energized mirror.",
     "color": "black",
