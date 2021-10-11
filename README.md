@@ -132,19 +132,19 @@ Below are some workaround examples to fetch artifacts leveraging the GitHub API.
 #### Get all build artifacts
 
 ```
-curl -s https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[].browser_download_url'
+curl -sH "Accept: application/vnd.github.v3+json" https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[].browser_download_url'
 ```
 
 #### Get a build artifact & its checksum
 
 ```
-curl -s https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("black_domain")).browser_download_url'
+curl -sH "Accept: application/vnd.github.v3+json" https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("black_domain")).browser_download_url'
 ```
 
 #### Get a single build artifact
 
 ```
-curl -s https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("black_domain")) | select(.name | endswith(".txt")).browser_download_url'
+curl -sH "Accept: application/vnd.github.v3+json" https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("black_domain")) | select(.name | endswith(".txt")).browser_download_url'
 ```
 
 ## ⚒️ Usage
