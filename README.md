@@ -39,6 +39,7 @@
        longdesc="https://github.com/badges/shields/"
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
+  <p><br><em>Test your browser's tracking resilience with <a href="https://coveryourtracks.eff.org/">CoverYourTracks</a>!</em></p>
 </div>
 
 ## 🖋️ [Manifesto](https://github.com/T145/black-mirror/blob/master/MANIFESTO.md)
