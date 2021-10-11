@@ -122,10 +122,12 @@ A return code of `0` means the check was successful. The specific checksum comma
 
 ### 🐙 Fetching GitHub Releases
 
-When the release action that uploads the builds artifacts to GitHub encounters an error, it will retry the upload
-and place an MD5 hash between the file's name and extension.
+In case there are issues with the release action, use the following command to download a ZIP archive containing all the build artifacts:
 
-The resulting artifact filename is then something like this: `black_domain-<MD5>.txt`
+```
+curl -sH "Accept: application/vnd.github.v3+json" https://api.github.com/repos/T145/black-mirror/actions/artifacts | jq -r '.artifacts[0].archive_download_url'
+```
+> The archive will expire on GitHub after one day.
 
 Below are some workaround examples to fetch artifacts leveraging the GitHub API.
 
