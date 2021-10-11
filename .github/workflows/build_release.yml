@@ -34,6 +34,14 @@ jobs:
           name: All Artifacts
           tag_name: latest
           fail_on_unmatched_files: true
+      - uses: deka0106/upload-to-dropbox@v2
+        if: always()
+        with:
+          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
+          src: build/*
+          dest: /black-mirror/
+          mode: overwrite
+          multiple: true
       - name: Remove Artifacts
         if: always()
         run: rm -rf build/
