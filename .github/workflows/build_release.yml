@@ -1,3 +1,4 @@
+# https://docs.github.com/en/actions/learn-github-actions/contexts#github-context
 name: Create Release
 
 on:
@@ -28,7 +29,7 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ GITHUB_REPOSITORY }}
+          name: ${{ github.repository }}
           path: build/*
           retention-days: 1
       - name: Publish Release
