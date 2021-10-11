@@ -24,14 +24,6 @@ jobs:
           ./core/build.bash
           ./scripts/update_readme.bash
         shell: bash
-      # https://docs.github.com/en/rest/reference/actions#artifacts
-      - name: Upload Artifacts
-        if: success()
-        uses: actions/upload-artifact@v2
-        with:
-          name: black-mirror
-          path: build/*
-          retention-days: 1
       - name: Publish Release
         if: success()
         uses: softprops/action-gh-release@v1
