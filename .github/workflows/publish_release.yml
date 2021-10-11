@@ -67,6 +67,9 @@ jobs:
           name: All Artifacts
           tag_name: latest
           fail_on_unmatched_files: true
+      - name: Remove Local Artifacts
+        if: always()
+        run: rm -rf build/
   publish_dropbox:
     runs-on: ubuntu-latest
     needs: build_release
@@ -96,3 +99,6 @@ jobs:
           dest: /black-mirror/
           mode: overwrite
           multiple: true
+      - name: Remove Local Artifacts
+        if: always()
+        run: rm -rf build/
