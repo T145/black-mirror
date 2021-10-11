@@ -1,0 +1,98 @@
+# https://docs.github.com/en/actions/learn-github-actions/contexts#github-context
+name: Create Release
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0,12 * * *"
+
+jobs:
+  build_release:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/t145/black-mirror:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@master
+      - name: Create Builds
+        run: |
+          :> logs/aria2.log
+          chmod 755 -R core/*.bash -R scripts/*.bash -R imports/*.bash -R imports/*.py
+          ./core/build.bash
+          ./scripts/update_readme.bash
+        shell: bash
+      - name: Upload Build Artifacts
+        if: success()
+        # https://docs.github.com/en/rest/reference/actions#artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: black-mirror
+          path: build/*
+          retention-days: 1
+      - name: Remove Local Artifacts
+        if: always()
+        run: rm -rf build/
+      - name: Update README Statistics
+        if: success()
+        uses: stefanzweifel/git-auto-commit-action@v4.12.0
+        with:
+          # homage to the python linting utility "black"
+          commit_message: ✨🍰✨
+  publish_github:
+    runs-on: ubuntu-latest
+    needs: build_release
+    steps:
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: black-mirror
+      - name: Create Release & Upload Artifacts
+        if: success()
+        uses: marvinpinto/action-automatic-releases@v1.2.1
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: latest
+          prerelease: false
+          title: All Artifacts
+          files: build/*
+      - name: Retry Artifact Upload
+        if: failure()
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: false
+          prerelease: false
+          files: build/*
+          name: All Artifacts
+          tag_name: latest
+          fail_on_unmatched_files: true
+  publish_dropbox:
+    runs-on: ubuntu-latest
+    needs: build_release
+    steps:
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: black-mirror
+      - name: Upload Checksums to Dropbox
+        uses: deka0106/upload-to-dropbox@v2
+        if: success()
+        with:
+          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
+          src: build/*.checksums
+          dest: /black-mirror/
+          mode: overwrite
+          multiple: true
+      - name: Sleep to Avoid 429 Error
+        run: sleep 5s
+        shell: bash
+      - name: Upload Text Files to Dropbox
+        uses: deka0106/upload-to-dropbox@v2
+        if: success()
+        with:
+          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
+          src: build/*.txt
+          dest: /black-mirror/
+          mode: overwrite
+          multiple: true
