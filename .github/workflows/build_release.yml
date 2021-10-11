@@ -43,18 +43,21 @@ jobs:
           name: All Artifacts
           tag_name: latest
           fail_on_unmatched_files: true
+      - name: Spoonfeed Dropbox a single tarball
+        run: tar cvzf black-mirror.tar.gz build/
+        shell: bash
       - name: Upload to Dropbox
         uses: deka0106/upload-to-dropbox@v2
         if: always()
         with:
           dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-          src: build/*
+          src: black-mirror.tar.gz
           dest: /black-mirror/
           mode: overwrite
           multiple: true
-      - name: Remove Artifacts
+      - name: Remove Local Artifacts
         if: always()
-        run: rm -rf build/
+        run: rm -rf build/ && rm -f black-mirror.tar.gz
       - name: Update README Statistics
         if: success()
         uses: stefanzweifel/git-auto-commit-action@v4.12.0
