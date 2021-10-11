@@ -498,6 +498,9 @@ Use the domain list.
 - [Andrew's Settings](https://gitlab.com/andryou/andrews-settings#andrews-settings-and-config-files)
 - [dupontjean](https://github.com/dupontjean/pihole-blocklist#pihole-blocklist)
 - [jmdugan](https://github.com/jmdugan/blocklists)
+- [void-gr-filters](https://www.void.gr/kargig/void-gr-filters.txt)
+- [pdns-recreator](https://github.com/suuhm/pdns-recreator)
+- [adblock.gardar](https://adblock.gardar.net/)
 
 ### 🕵🏻 Lamers Unwelcome
 
