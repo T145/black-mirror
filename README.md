@@ -122,14 +122,7 @@ A return code of `0` means the check was successful. The specific checksum comma
 
 ### 🐙 Fetching GitHub Releases
 
-In case there are issues with the release action, use the following command to download a ZIP archive containing all the build artifacts:
-
-```
-curl -sH "Accept: application/vnd.github.v3+json" https://api.github.com/repos/T145/black-mirror/actions/artifacts | jq -r '.artifacts[0].archive_download_url'
-```
-> The archive will expire on GitHub after one day.
-
-Below are some workaround examples to fetch artifacts leveraging the GitHub API.
+Provided below are some examples to fetch release artifacts leveraging the GitHub API.
 
 #### Get all build artifacts
 
