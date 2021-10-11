@@ -26,6 +26,15 @@ jobs:
         shell: bash
       - name: Publish Release
         if: success()
+        uses: marvinpinto/action-automatic-releases@v1.2.1
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: latest
+          prerelease: false
+          title: All Artifacts
+          files: build/*
+      - name: Retry Publish Release
+        if: failure()
         uses: softprops/action-gh-release@v1
         with:
           draft: false
@@ -34,7 +43,8 @@ jobs:
           name: All Artifacts
           tag_name: latest
           fail_on_unmatched_files: true
-      - uses: deka0106/upload-to-dropbox@v2
+      - name: Upload to Dropbox
+        uses: deka0106/upload-to-dropbox@v2
         if: always()
         with:
           dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
