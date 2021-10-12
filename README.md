@@ -78,14 +78,14 @@ Reference the [contribution guidelines](https://github.com/T145/black-mirror/blo
     <tr>
       <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_domain.txt">black_domain.txt</a></td>
       <td>Domain entries</td>
-      <td id="domain-count">9,389,342</td>
+      <td id="domain-count">9,389,642</td>
       <td id="domain-filesize">206M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_domain.checksums">[🔗]</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.txt">black_ipv4.txt</a></td>
       <td>IPv4 addresses</td>
-      <td id="ipv4-count">929,309</td>
+      <td id="ipv4-count">929,608</td>
       <td id="ipv4-filesize">13M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.checksums">[🔗]</a></td>
     </tr>
@@ -99,7 +99,7 @@ Reference the [contribution guidelines](https://github.com/T145/black-mirror/blo
     <tr>
       <td><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.txt">black_ipv6.txt</a></td>
       <td>IPv6 addresses</td>
-      <td id="ipv6-count">7,870</td>
+      <td id="ipv6-count">7,872</td>
       <td id="ipv6-filesize">244K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.checksums">[🔗]</a></td>
     </tr>
