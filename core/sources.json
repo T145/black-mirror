@@ -3774,5 +3774,70 @@
     "mirrors": [
       "https://raw.githubusercontent.com/shreyasminocha/shady-hosts/main/hosts"
     ]
+  },
+  "dataplane_vncrfb": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\"|\"}$0~/^[^#]/{gsub(/ /,\"\"); print $3}"
+      }
+    ],
+    "mirrors": [
+      "https://dataplane.org/vncrfb.txt"
+    ]
+  },
+  "dataplane_sipquery": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\"|\"}$0~/^[^#]/{gsub(/ /,\"\"); print $3}"
+      }
+    ],
+    "mirrors": [
+      "https://dataplane.org/sipquery.txt"
+    ]
+  },
+  "dataplane_sipregistration": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\"|\"}$0~/^[^#]/{gsub(/ /,\"\"); print $3}"
+      }
+    ],
+    "mirrors": [
+      "https://dataplane.org/sipregistration.txt"
+    ]
+  },
+  "dataplane_sshpwauth": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\"|\"}$0~/^[^#]/{gsub(/ /,\"\"); print $3}"
+      }
+    ],
+    "mirrors": [
+      "https://dataplane.org/sshpwauth.txt"
+    ]
+  },
+  "dataplane_sipinvitation": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\"|\"}$0~/^[^#]/{gsub(/ /,\"\"); print $3}"
+      }
+    ],
+    "mirrors": [
+      "https://dataplane.org/sipinvitation.txt"
+    ]
   }
 }
