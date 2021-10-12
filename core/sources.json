@@ -3631,5 +3631,96 @@
     "mirrors": [
       "https://raw.githubusercontent.com/gioxx/xfiles/master/siteblock.txt"
     ]
+  },
+  "rpilist_corona_blacklist": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Corona-Blocklist"
+    ]
+  },
+  "rpilist_fake_science": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Fake-Science"
+    ]
+  },
+  "rpilist_ms_office_telemetry": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/MS-Office-Telemetry"
+    ]
+  },
+  "rpilist_phishing_attacks": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Phishing-Angriffe"
+    ]
+  },
+  "rpilist_win10telemetry": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Win10Telemetry"
+    ]
+  },
+  "rpilist_child_protection": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/child-protection"
+    ]
+  },
+  "rpilist_notserious": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/notserious"
+    ]
   }
 }
