@@ -352,6 +352,8 @@ Use the domain list.
   - child-protection
   - notserious
 - [infinitytec](https://github.com/infinitytec/blocklists#infinitytecs-blocklists)
+- [mischosts](https://github.com/llacb47/mischosts)
+  - Only TikTok list; WhiteOps is should be double-checked.
 
 ### ⚪ Whitelists
 
