@@ -1000,19 +1000,6 @@
       "http://www.ciarmy.com/list/ci-badguys.txt"
     ]
   },
-  "clefspeare13_porn": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$1~/^0.0.0.0$/{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/Clefspeare13/pornhosts/master/download_here/safesearch/strict/0.0.0.0/hosts"
-    ]
-  },
   "cname_trackers": {
     "color": "black",
     "filters": [

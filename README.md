@@ -498,6 +498,7 @@ Use the domain list.
 - [void-gr-filters](https://www.void.gr/kargig/void-gr-filters.txt)
 - [pdns-recreator](https://github.com/suuhm/pdns-recreator)
 - [adblock.gardar](https://adblock.gardar.net/)
+- [Clefspeare13](https://github.com/Clefspeare13/pornhosts)
 
 ### 🕵🏻 Lamers Unwelcome
 
