@@ -3761,5 +3761,18 @@
     "mirrors": [
       "https://raw.githubusercontent.com/infinitytec/blocklists/master/scams-and-phishing.txt"
     ]
+  },
+  "tiktok": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/llacb47/mischosts/master/social/tiktok-block"
+    ]
   }
 }
