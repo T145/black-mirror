@@ -127,5 +127,5 @@ jobs:
       - name: Purge Artifacts
         uses: kolpav/purge-artifacts-action@v1
         with:
-          token: $
+          token: ${{ secrets.GITHUB_TOKEN }}
           expire-in: 0
