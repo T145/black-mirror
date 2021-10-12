@@ -31,16 +31,17 @@ ENV GOPATH=$HOME/go
 ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 
 # install project discovery utilities
+# the get paths are where "main.go" lives
 # https://github.com/projectdiscovery/httpx
 # https://github.com/projectdiscovery/dnsx
 # https://github.com/projectdiscovery/shuffledns
 # https://github.com/projectdiscovery/proxify
-# https://github.com/projectdiscovery/subfinder
+# https://github.com/StevenBlack/ghosts
 RUN GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx
 RUN go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
 RUN GO111MODULE=on go get -v github.com/projectdiscovery/shuffledns/cmd/shuffledns
 RUN GO111MODULE=on go get -v github.com/projectdiscovery/proxify/cmd/proxify
-# RUN go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+RUN go get -v github.com/StevenBlack/ghosts
 
 # install the parallel beta that includes parsort
 RUN curl -s pi.dk/3/ -o install.sh
