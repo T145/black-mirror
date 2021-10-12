@@ -3722,5 +3722,44 @@
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
+  },
+  "infinitytec_ads_and_trackers": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/infinitytec/blocklists/master/ads-and-trackers.txt"
+    ]
+  },
+  "infinitytec_medical_pseudoscience": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/infinitytec/blocklists/master/medicalpseudoscience.txt"
+    ]
+  },
+  "infinitytec_scams_and_phishing": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/infinitytec/blocklists/master/scams-and-phishing.txt"
+    ]
   }
 }

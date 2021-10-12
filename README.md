@@ -351,6 +351,7 @@ Use the domain list.
   - Win10Telemetry
   - child-protection
   - notserious
+- [infinitytec](https://github.com/infinitytec/blocklists#infinitytecs-blocklists)
 
 ### ⚪ Whitelists
 
@@ -514,6 +515,8 @@ Use the domain list.
 - [pdns-recreator](https://github.com/suuhm/pdns-recreator)
 - [adblock.gardar](https://adblock.gardar.net/)
 - [Clefspeare13](https://github.com/Clefspeare13/pornhosts)
+  - Taken down by GitHub.
+- [TR-PhishingList](https://github.com/HorusTeknoloji/TR-PhishingList)
 
 ### 🕵🏻 Lamers Unwelcome
 
