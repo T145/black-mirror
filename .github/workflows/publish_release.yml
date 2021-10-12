@@ -120,12 +120,13 @@ jobs:
         with:
           # homage to the python linting utility "black"
           commit_message: ✨🍰✨
-  cleanup_artifacts:
+  delete_workflow_artifacts:
     runs-on: ubuntu-latest
     needs: update_readme
     steps:
-      - name: Purge Artifacts
-        uses: kolpav/purge-artifacts-action@v1
+      - uses: actions/checkout@master
+      - name: Delete Workflow Artifacts
+        uses: jimschubert/delete-artifacts-action@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          expire-in: 0
+          log_level: 'error'
+          min_bytes: '0'
