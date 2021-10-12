@@ -338,6 +338,14 @@ Use the domain list.
   - Active domains & IPs only.
 - [GoodbyeAds](https://github.com/jerryn70/GoodbyeAds#goodbyeads---wrld-of-ads-free-internet)
 - [xfiles](https://github.com/gioxx/xfiles#noads-x-files-xfilesnoadsit)
+- [RPiList](https://github.com/RPiList/specials/tree/master/Blocklisten)
+  - Corona-Blacklist
+  - Fake-Science
+  - MS-Office-Telemetry
+  - Phishing-Angriffe
+  - Win10Telemetry
+  - child-protection
+  - notserious
 
 ### ⚪ Whitelists
 
