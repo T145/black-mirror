@@ -2684,6 +2684,97 @@
       "https://rescure.me/malware/wastedlocker.txt"
     ]
   },
+  "rpilist_child_protection": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/child-protection"
+    ]
+  },
+  "rpilist_corona_blacklist": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Corona-Blocklist"
+    ]
+  },
+  "rpilist_fake_science": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Fake-Science"
+    ]
+  },
+  "rpilist_ms_office_telemetry": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/MS-Office-Telemetry"
+    ]
+  },
+  "rpilist_notserious": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/notserious"
+    ]
+  },
+  "rpilist_phishing_attacks": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Phishing-Angriffe"
+    ]
+  },
+  "rpilist_win10telemetry": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Win10Telemetry"
+    ]
+  },
   "rutgers": {
     "color": "black",
     "filters": [
@@ -3580,32 +3671,6 @@
       "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update_v6.txt"
     ]
   },
-  "yoyo_domains": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "cat",
-        "format": "domain",
-        "rule": ""
-      }
-    ],
-    "mirrors": [
-      "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=nohtml&showintro=0&mimetype=plaintext"
-    ]
-  },
-  "yoyo_ips": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "cat",
-        "format": "ipv4",
-        "rule": ""
-      }
-    ],
-    "mirrors": [
-      "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ]
-  },
   "xfiles_filtri": {
     "color": "black",
     "filters": [
@@ -3632,95 +3697,30 @@
       "https://raw.githubusercontent.com/gioxx/xfiles/master/siteblock.txt"
     ]
   },
-  "rpilist_corona_blacklist": {
+  "yoyo_domains": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Corona-Blocklist"
+      "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=nohtml&showintro=0&mimetype=plaintext"
     ]
   },
-  "rpilist_fake_science": {
+  "yoyo_ips": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "engine": "cat",
+        "format": "ipv4",
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Fake-Science"
-    ]
-  },
-  "rpilist_ms_office_telemetry": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/MS-Office-Telemetry"
-    ]
-  },
-  "rpilist_phishing_attacks": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Phishing-Angriffe"
-    ]
-  },
-  "rpilist_win10telemetry": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Win10Telemetry"
-    ]
-  },
-  "rpilist_child_protection": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/child-protection"
-    ]
-  },
-  "rpilist_notserious": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/notserious"
+      "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
   }
 }
