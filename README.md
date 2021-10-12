@@ -337,6 +337,7 @@ Use the domain list.
 - [Phishing Database](https://github.com/mitchellkrogza/Phishing.Database#phishing-domain-database-)
   - Active domains & IPs only.
 - [GoodbyeAds](https://github.com/jerryn70/GoodbyeAds#goodbyeads---wrld-of-ads-free-internet)
+- [xfiles](https://github.com/gioxx/xfiles#noads-x-files-xfilesnoadsit)
 
 ### ⚪ Whitelists
 
@@ -378,6 +379,7 @@ Use the domain list.
 - [UsefulLinuxShellScripts](https://github.com/jackrabbit335/UsefulLinuxShellScripts)
   - Active but references sources from iBlocklist.
 - [hosts.extra](https://github.com/FadeMind/hosts.extras#extra-rules-for-steven-blacks-hosts-project)
+- [blackbook](https://github.com/stamparm/blackbook)
 
 ### 🧟 Zombies
 
