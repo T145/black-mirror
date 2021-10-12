@@ -353,6 +353,7 @@ Use the domain list.
   - notserious
 - [infinitytec](https://github.com/infinitytec/blocklists#infinitytecs-blocklists)
 - [shady-hosts](https://github.com/shreyasminocha/shady-hosts)
+- [DataPlane](https://dataplane.org/)
 
 ### ⚪ Whitelists
 
