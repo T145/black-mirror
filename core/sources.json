@@ -3398,19 +3398,6 @@
       "https://www.threatsourcing.com/ipall-free.txt"
     ]
   },
-  "tiktok": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/llacb47/mischosts/master/social/tiktok-block"
-    ]
-  },
   "tinycheck": {
     "color": "black",
     "filters": [
@@ -3773,6 +3760,19 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
+    ]
+  },
+  "shady_hosts": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/shreyasminocha/shady-hosts/main/hosts"
     ]
   }
 }

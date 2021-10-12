@@ -352,8 +352,7 @@ Use the domain list.
   - child-protection
   - notserious
 - [infinitytec](https://github.com/infinitytec/blocklists#infinitytecs-blocklists)
-- [mischosts](https://github.com/llacb47/mischosts)
-  - Only TikTok list; WhiteOps is should be double-checked.
+- [shady-hosts](https://github.com/shreyasminocha/shady-hosts)
 
 ### ⚪ Whitelists
 
@@ -396,6 +395,8 @@ Use the domain list.
   - Active but references sources from iBlocklist.
 - [hosts.extra](https://github.com/FadeMind/hosts.extras#extra-rules-for-steven-blacks-hosts-project)
 - [blackbook](https://github.com/stamparm/blackbook)
+- [mischosts](https://github.com/llacb47/mischosts)
+  - Only TikTok list; WhiteOps is should be double-checked.
 
 ### 🧟 Zombies
 
