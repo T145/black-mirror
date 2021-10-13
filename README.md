@@ -149,7 +149,7 @@ curl -sH "Accept: application/vnd.github.v3+json" https://api.github.com/repos/T
 curl -sH "Accept: application/vnd.github.v3+json" https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("black_domain")) | select(.name | endswith(".txt")).browser_download_url'
 ```
 
-## ⚒️ Usage
+## 🛠️ Usage
 
 ### Desktop OS Hosts File
 
@@ -189,7 +189,7 @@ Use the domain list.
 
 > _Please report any redundant sources in an issue!_
 
-### ⚫ Blacklists
+### ⬛ Blacklists
 
 - [Perflyst](https://github.com/Perflyst/PiHoleBlocklist)
 - [anti_ad](https://github.com/privacy-protection-tools/anti-AD#anti-ad)
@@ -307,7 +307,7 @@ Use the domain list.
 - [PhishStats](https://phishstats.info/)
 - [dandelionsprout](https://github.com/DandelionSprout/adfilt)
   - antimalware
-	- norwegian
+  - norwegian
 - [Certego Intel](https://twitter.com/Certego_Intel)
 - [Mirai Tracker](https://mirai.security.gives/)
 - [Cyber Cure](https://www.cybercure.ai/start)
@@ -333,7 +333,7 @@ Use the domain list.
 - [Disconnect.](https://disconnect.me/)
 - [StevenBlack](https://github.com/StevenBlack/hosts#sources-of-hosts-data-unified-in-this-variant)
 - [adblock-nocoin-list](https://github.com/hoshsadiq/adblock-nocoin-list)
-- [Adguard](https://github.com/AdguardTeam) *more to come*
+- [Adguard](https://github.com/AdguardTeam) *(more to come)*
   - [cname-trackers](https://github.com/AdguardTeam/cname-trackers#cname-cloaked-trackers)
 - durablenapkin
   - [luminati](https://github.com/durablenapkin/block#blocklists)
@@ -355,7 +355,7 @@ Use the domain list.
 - [shady-hosts](https://github.com/shreyasminocha/shady-hosts)
 - [DataPlane](https://dataplane.org/)
 
-### ⚪ Whitelists
+### ⬜ Whitelists
 
 - [Energized Unblock](https://github.com/EnergizedProtection/unblock#packs)
 - [AnudeepND False Positives](https://github.com/anudeepND/blacklist/blob/master/miscellaneous/false-positives.txt)
@@ -471,7 +471,7 @@ Use the domain list.
   - Feeds are empty.
 -	[Minimal-Hosts-Blocker](https://github.com/arcetera/Minimal-Hosts-Blocker)
 - [blacklist-named](https://github.com/tomzuu/blacklist-named)
-		- Does not update automatically.
+  - Does not update automatically.
 - [sophos-xg-block-lists](https://github.com/austinheap/sophos-xg-block-lists)
 - [piholeparser](https://github.com/deathbybandaid/piholeparser)
 - [IsraelList](https://jansal.net/tpl/IsraelList.tpl)
