@@ -64,8 +64,7 @@ parse_file_contents() {
     exit 1
     ;;
   esac |
-    mawk '$0!~/^$/{print $0}' | # filter blank lines
-    mawk '!seen[$0]++'          # filter duplicates
+    mawk 'NF && !seen[$0]++' # filter blank lines and duplicates
 }
 
 # params: format, color, key
