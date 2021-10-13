@@ -59,7 +59,6 @@ parse_file_contents() {
     # https://manpages.ubuntu.com/manpages/hirsute/man3/Regexp::Common::net.3pm.html
     perl -MRegexp::Common=net -nE "$2"
     ;;
-  saxon) java -cp bin/SaxonHE10-5J/saxon-he-10.5.jar net.sf.saxon.Query -config:configs/saxon.xml -s:/dev/stdin -qs:"$2" ;;
   *)
     echo "[INVALID ENGINE] { source: ${3}, element: ${1} }"
     exit 1

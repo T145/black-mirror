@@ -2496,13 +2496,13 @@
       "https://raw.githubusercontent.com/porn-records/Porn-Records/master/submit_here/adult.mypdns.cloud/wildcard.list"
     ]
   },
-  "projecthoneypot_last_bad_event_any_ip": {
+  "projecthoneypot_last_bad_event": {
     "color": "black",
     "filters": [
       {
-        "engine": "saxon",
+        "engine": "mawk",
         "format": "ipv4",
-        "rule": "//item/link!substring-after(., '_')"
+        "rule": "BEGIN{FS=\"[<>]\"}NR>14&&/title/{split($3,a,\" | \"); print a[1]}"
       }
     ],
     "mirrors": [
