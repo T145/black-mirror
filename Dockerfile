@@ -20,7 +20,7 @@ RUN apt-get -y install apt-utils
 # upgrade with proper configurations
 RUN apt-get -y upgrade
 
-RUN apt-get -y install aria2 curl default-jre file gawk git golang-go gpg gzip ipcalc jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl make miller moreutils p7zip-full preload python3-pip sed
+RUN apt-get -y install aria2 curl gawk git golang-go gpg gzip ipcalc jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl make miller moreutils p7zip-full preload python3-pip sed
 RUN apt-get clean
 
 ENV PATH=$PATH:/root/.local/bin
