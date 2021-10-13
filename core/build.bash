@@ -139,13 +139,13 @@ main() {
 
           checksums="build/${color}_${format}.checksums"
 
-          cat "${list}" | md5sum >>"${checksums}"
-          cat "${list}" | b2sum >>"${checksums}"
-          cat "${list}" | sha1sum >>"${checksums}"
-          cat "${list}" | sha224sum >>"${checksums}"
-          cat "${list}" | sha256sum >>"${checksums}"
-          cat "${list}" | sha384sum >>"${checksums}"
-          cat "${list}" | sha512sum >>"${checksums}"
+          md5sum >>"$checksums" <"$list"
+          b2sum >>"$checksums" <"$list"
+          sha1sum >>"$checksums" <"$list"
+          sha224sum >>"$checksums" <"$list"
+          sha256sum >>"$checksums" <"$list"
+          sha384sum >>"$checksums" <"$list"
+          sha512sum >>"$checksums" <"$list"
         fi
       fi
     done
