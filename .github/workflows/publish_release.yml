@@ -120,7 +120,7 @@ jobs:
         with:
           # homage to the python linting utility "black"
           commit_message: ✨🍰✨
-  delete_workflow_artifacts:
+  clean_workflow:
     runs-on: ubuntu-latest
     needs: update_readme
     steps:
@@ -130,3 +130,4 @@ jobs:
         with:
           log_level: 'error'
           min_bytes: '0'
+          run_id: ${{ github.run_id }}
