@@ -1,14 +1,14 @@
-name: Feature Request
-description: Request a new feature
-title: "[feature]: "
-labels: ["enhancement"]
+name: Redundant Source
+description: A source in Black Mirror is eclipsed by another
+title: "[redundant]: "
+labels: ["redundant hosts"]
 assignees:
   - T145
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill this out!
+        Thanks for taking the time to identify this issue!
   - type: input
     id: contact
     attributes:
@@ -17,13 +17,20 @@ body:
       placeholder: ex. email@example.com
     validations:
       required: false
-  - type: textarea
-    id: request
+  - type: input
+    id: redundant-sources
     attributes:
-      label: What's your idea?
-      description: Also tell us implementation details if applicable.
-      placeholder: Place details here!
-      value: "This project could really use..."
+      label: Redundant Sources
+      description: List the redundant source key(s) here.
+      placeholder: ex. 280blocker, 360_netlab
+    validations:
+      required: true
+  - type: textarea
+    id: further-details
+    attributes:
+      label: Further Details
+      description: Also tell us any proof as to why the sources are redundant.
+      placeholder: Source A is 95% equal to Source B, and should be removed.
     validations:
       required: true
   - type: checkboxes
