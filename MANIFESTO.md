@@ -6,12 +6,12 @@
 General principles are as follows:
 
 - Promote safety
-	- Blacklist illegal sites, pornography, untrusted torrenting providers, etc.
+	- Actively promotes [GitHub's non-allowance policies](https://docs.github.com/en/github/site-policy/github-community-guidelines#what-is-not-allowed) at-scale where possible.
     - Promote privacy
-		- Blacklist all telemetry services and other data harvesting services.
+		- Blacklist all telemetry services, other data harvesting services, and untrusted torrenting providers.
 		- Whitelist all services like Tor, VPNs, and trusted torrenting providers.
     - Promote security
-		- Blacklist known malicious actors, active attackers, sketchy sites, malvertising, etc.
+		- Blacklist illegal or sketchy sites, known malicious actors, active attackers, malvertising, etc.
 - Promote sanity
 	- Blacklist advertising sources in general, on both desktop and mobile clients.
 	- Blacklist social media, irreputable news sources, propaganda, etc.
