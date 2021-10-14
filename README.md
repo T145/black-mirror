@@ -277,7 +277,6 @@ Use the domain list.
 - [maltrail](https://github.com/stamparm/maltrail#blacklist)
 - [Charles B. Haley](http://charles.the-haleys.org/)
 - [darklist](https://www.darklist.de/)
-- [Porn Records](https://github.com/porn-records/Porn-Records)
 - [cryptolaemus](https://paste.cryptolaemus.com/)
 - [vxvault](http://vxvault.net/ViriList.php)
 - [alienvault](https://status.alienvault.cloud/)
@@ -354,6 +353,7 @@ Use the domain list.
 - [infinitytec](https://github.com/infinitytec/blocklists#infinitytecs-blocklists)
 - [shady-hosts](https://github.com/shreyasminocha/shady-hosts)
 - [DataPlane](https://dataplane.org/)
+- [Clefspeare13](https://tinyurl.com/clefspeare13)
 
 ### ⬜ Whitelists
 
@@ -518,9 +518,12 @@ Use the domain list.
 - [void-gr-filters](https://www.void.gr/kargig/void-gr-filters.txt)
 - [pdns-recreator](https://github.com/suuhm/pdns-recreator)
 - [adblock.gardar](https://adblock.gardar.net/)
-- [Clefspeare13](https://github.com/Clefspeare13/pornhosts)
-  - Taken down by GitHub.
 - [TR-PhishingList](https://github.com/HorusTeknoloji/TR-PhishingList)
+
+#### [GitHub's Dirty Dancing](https://github.com/StevenBlack/hosts/pull/1784)
+
+- Clefspeare13's OG pronhosts
+- Sprillen's Pron Records
 
 ### 🕵🏻 Lamers Unwelcome
 
