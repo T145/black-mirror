@@ -7,6 +7,13 @@
   <hr>
   <p>Automatically compiled and maintained malicious domain & IP blacklist.</p>
   <hr>
+  <a href="https://github.com/humanetech-community/awesome-humane-tech#awesome-humane-tech--">
+    <img src="https://raw.githubusercontent.com/humanetech-community/awesome-humane-tech/main/humane-tech-badge.svg?sanitize=true"
+        alt="humane-tech"
+        longdesc="https://raw.githubusercontent.com/humanetech-community/awesome-humane-tech/main/humane-tech-badge.svg"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+  </a>
   <img src="https://badges.pufler.dev/updated/T145/black-mirror"
        alt="last_updated"
        longdesc="https://pufler.dev/git-badges/"
@@ -19,10 +26,10 @@
        referrerpolicy="no-referrer" />
   <a href="https://github.com/T145/black-mirror/commits/master.atom">
     <img src="https://img.shields.io/static/v1?logo=rss&label=rss&message=feed&color=FFA500"
-              alt="release"
-              longdesc="https://github.com/badges/shields/"
-              crossorigin="anonymous"
-              referrerpolicy="no-referrer" />
+        alt="release"
+        longdesc="https://github.com/badges/shields/"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
   </a>
   <img src="https://img.shields.io/github/workflow/status/T145/black-mirror/Create%20Release/master?label=release&logo=github"
        alt="release"
