@@ -37,11 +37,13 @@ ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 # https://github.com/projectdiscovery/shuffledns
 # https://github.com/projectdiscovery/proxify
 # https://github.com/StevenBlack/ghosts
+# https://github.com/ipinfo/cli#-ipinfo-cli
 RUN GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx
 RUN go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
 RUN GO111MODULE=on go get -v github.com/projectdiscovery/shuffledns/cmd/shuffledns
 RUN GO111MODULE=on go get -v github.com/projectdiscovery/proxify/cmd/proxify
-RUN go get -v github.com/StevenBlack/ghosts
+#RUN go get -v github.com/StevenBlack/ghosts
+RUN go get -v github.com/ipinfo/cli/grepip
 
 # install the parallel beta that includes parsort
 RUN curl -s pi.dk/3/ -o install.sh
