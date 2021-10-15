@@ -29,7 +29,7 @@ General principles are as follows:
 
 These services intrude on privacy, are usually malware, and compromise individual safety. Therefore any known parties are blocked.
 
-## On Propaganda and Social Media
+## On Propaganda
 
 “Make decency cool again.”\
 ― _Andrew Marantz_
@@ -50,22 +50,15 @@ Examples on the latter category include Naziism and abortion.
 “True liberty consists only in the power of doing what we ought to will, and in not being constrained to do what we ought not to will.”\
 ― _Jonathan Edwards_
 
-### Specific Social Media Websites
+## On Social Media
+
+### The Zuckerburg Institute of Virology
 
 #### Facebook
 
 Due to consistent privacy and security concerns, this platform will be blocked.
 
-#### Twitter
-
-Though the cause of most internet drama, this platform is also where many cybersecurity community members communicate and collaborate.
-While it has compromised privacy and serves personalized ads, the platform itself will remain unblocked to promote cybersecurity communities.
-Its trackers and such will be blocked.
-
-#### Reddit
-
-While there are some relatively harmful subreddits, they are not in the majority. Many such subreddits have actually been banned, so this will remain unblocked.
-Its trackers and such will be blocked.
+- [The Facebook Files](https://www.wsj.com/articles/the-facebook-files-11631713039)
 
 #### Instagram
 
@@ -76,16 +69,27 @@ Owned by Facebook, but does not have majority support on issues that would get t
 Owned and heavily monitored by Facebook. Communications may be private between users, but can still be monitored by Facebook.
 It also has a track record of significant security concerns. All services will be blocked.
 
-#### Snapchat
+### Twitter
+
+Though the cause of most internet drama, this platform is also where many cybersecurity community members communicate and collaborate.
+While it has compromised privacy and serves personalized ads, the platform itself will remain unblocked to promote cybersecurity communities.
+Its trackers and such will be blocked.
+
+### Reddit
+
+While there are some relatively harmful subreddits, they are not in the majority. Many such subreddits have actually been banned, so this will remain unblocked.
+Its trackers and such will be blocked.
+
+### Snapchat
 
 Largely supports privacy, even though there are some security concerns. Will remain unblocked.
 
-#### Tumblr
+### Tumblr
 
 After Instagram and Snapchat came up, this platform has become largely marginalized and can typically support insanity under earlier definitions.
 Therefore all services will be blocked.
 
-#### TikTok
+### TikTok
 
 Yeah it's blocked.
 
