@@ -1184,18 +1184,18 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "jq",
         "format": "domain",
-        "rule": "BEGIN{FS=\",\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/){printf a[3]}}}"
+        "rule": ".data.urls[] | split(\"/\")[2] | match(\"[a-z].*\";\"gimx\").string"
       },
       {
-        "engine": "cat",
+        "engine": "jq",
         "format": "ipv4",
-        "rule": "BEGIN{FS=\",\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([0-9]+(\\.|$)){4}/){print a[3]}}"
+        "rule": ".data.urls[] | split(\"/\")[2] | match(\"[0-9].*\";\"gimx\").string | split(\":\")[0]"
       }
     ],
     "mirrors": [
-      "https://api.cybercure.ai/feed/get_url?type=csv"
+      "https://api.cybercure.ai/feed/get_url"
     ]
   },
   "cybercrime_all": {
