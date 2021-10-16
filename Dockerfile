@@ -20,7 +20,7 @@ RUN apt-get -y install apt-utils
 # upgrade with proper configurations
 RUN apt-get -y upgrade
 
-RUN apt-get -y install aria2 curl gawk git golang-go gpg gzip ipcalc jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl make miller moreutils p7zip-full preload python3-pip sed
+RUN apt-get -y install aria2 curl gawk git golang-go grepcidr gpg gzip ipcalc jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl make miller moreutils p7zip-full preload prips python3-pip sed
 RUN apt-get clean
 
 ENV PATH=$PATH:/root/.local/bin
@@ -32,18 +32,9 @@ ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 
 # install project discovery utilities
 # the get paths are where "main.go" lives
-# https://github.com/projectdiscovery/httpx
 # https://github.com/projectdiscovery/dnsx
-# https://github.com/projectdiscovery/shuffledns
-# https://github.com/projectdiscovery/proxify
-# https://github.com/StevenBlack/ghosts
 # https://github.com/ipinfo/cli#-ipinfo-cli
-RUN GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx
 RUN go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
-RUN GO111MODULE=on go get -v github.com/projectdiscovery/shuffledns/cmd/shuffledns
-RUN GO111MODULE=on go get -v github.com/projectdiscovery/proxify/cmd/proxify
-#RUN go get -v github.com/StevenBlack/ghosts
-RUN go get -v github.com/ipinfo/cli/grepip
 
 # install the parallel beta that includes parsort
 RUN curl -s pi.dk/3/ -o install.sh
