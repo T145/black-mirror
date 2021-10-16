@@ -3,6 +3,7 @@
 set +H +o history     # disable history features (helps avoid errors from "!" in strings)
 shopt -u cmdhist      # would be enabled and have no effect otherwise
 shopt -s execfail     # ensure interactive and non-interactive runtime are similar
+shopt -s extglob      # enable extended pattern matching (https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html)
 set -euET -o pipefail # put bash into strict mode & have it give descriptive errors
 umask 055             # change all generated file perms from 755 to 700
 
@@ -74,10 +75,10 @@ handle_format_output() {
   ipv4)
     while IFS= read -r line; do
       case $line in
-      */*) printf "%s\n" "$line" >>"build/${2}_${1}_cidr.txt" ;; # cidr block
-      *-*) ipcalc "$line" >>"build/${2}_${1}_cidr.txt" ;;        # deaggregate ip range
-      *.*.*.*) printf "%s\n" "$line" >>"build/${2}_${1}.txt" ;;  # ip address
-      *) echo "[INVALID IPv4]: { source: ${3}, element: ${line} }" ;;     # debug if ips are being processed well
+      +([[:digit:]]).+([[:digit:]]).+([[:digit:]]).+([[:digit:]])) echo "$line" >>"build/${2}_${1}.txt" ;;
+      +([[:digit:]]).+([[:digit:]]).+([[:digit:]]).+([[:digit:]])/+([[:digit:]])) echo "$line" >>"build/${2}_${1}_cidr.txt" ;;
+      +([[:digit:]]).+([[:digit:]]).+([[:digit:]]).+([[:digit:]])-*) mawk -v range="$line" '{system("ipcalc -nr "range" | tail -n +2")}' >>"build/${2}_${1}_cidr.txt" ;;
+      *) echo "[INVALID IPv4]: { source: ${3}, element: ${line} }" ;;
       esac
     done
     ;;
