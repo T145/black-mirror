@@ -20,11 +20,8 @@ RUN apt-get -y install apt-utils
 # upgrade with proper configurations
 RUN apt-get -y upgrade
 
-RUN apt-get -y install aria2 cpanminus curl gawk git golang-go grepcidr gpg gzip idn2 ipcalc jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl make miller moreutils p7zip-full preload prips python3-pip sed
+RUN apt-get -y install aria2 curl gawk git golang-go grepcidr gpg gzip idn2 ipcalc jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl make miller moreutils p7zip-full preload prips python3-pip sed
 RUN apt-get clean
-
-# https://metacpan.org/pod/PersistentPerl
-RUN cpanm PersistentPerl
 
 ENV PATH=$PATH:/root/.local/bin
 RUN pip3 install twint
