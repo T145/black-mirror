@@ -126,14 +126,14 @@ main() {
       list="build/${color}_${format}.txt"
 
       if test -f "$list"; then
-        LC_ALL=C parsort -u -S 99% --parallel=48 -T "$cache_dir" "$list" | sponge "$list"
+        parsort -u -S 100% --parallel=48 -T "$cache_dir" "$list" | sponge "$list"
 
         if [[ "$color" == 'black' ]]; then
           whitelist="build/white_${format}.txt"
 
-          if test -f "${whitelist}"; then
-            grep -Fxvf "${whitelist}" "$list" | sponge "$list"
-            rm -f "${whitelist}"
+          if test -f "$whitelist"; then
+            grep -Fxvf "$whitelist" "$list" | sponge "$list"
+            rm -f "$whitelist"
           fi
 
           checksums="build/${color}_${format}.checksums"
