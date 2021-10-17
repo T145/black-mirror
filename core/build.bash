@@ -6,8 +6,9 @@ shopt -s execfail     # ensure interactive and non-interactive runtime are simil
 shopt -s extglob      # enable extended pattern matching (https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html)
 set -euET -o pipefail # put bash into strict mode & have it give descriptive errors
 umask 055             # change all generated file perms from 755 to 700
+export LC_ALL=C       # force byte-wise sorting and default langauge output
 
-# fail if there are declared function names matching this program's
+# prevent like function names in the same scope
 declare -Ft get_file_contents &>/dev/null && exit 1
 declare -Ft parse_file_contents &>/dev/null && exit 1
 declare -Ft handle_format_output &>/dev/null && exit 1
@@ -152,3 +153,6 @@ main() {
 
 # https://github.com/koalaman/shellcheck/wiki/SC2218
 main
+
+# reset the locale after processing
+unset LC_ALL
