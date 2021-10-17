@@ -141,19 +141,19 @@ Provided below are some examples to fetch release artifacts leveraging the GitHu
 #### Get all build artifacts
 
 ```
-curl -sH "Accept: application/vnd.github.v3+json" https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[].browser_download_url'
+curl --proto '=https' --tlsv1.3 -H 'Accept: application/vnd.github.v3+json' -sSf https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[].browser_download_url'
 ```
 
 #### Get a build artifact & its checksum
 
 ```
-curl -sH "Accept: application/vnd.github.v3+json" https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("black_domain")).browser_download_url'
+curl --proto '=https' --tlsv1.3 -H 'Accept: application/vnd.github.v3+json' -sSf https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("black_domain")).browser_download_url'
 ```
 
 #### Get a single build artifact
 
 ```
-curl -sH "Accept: application/vnd.github.v3+json" https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("black_domain")) | select(.name | endswith(".txt")).browser_download_url'
+curl --proto '=https' --tlsv1.3 -H 'Accept: application/vnd.github.v3+json' -sSf https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("black_domain")) | select(.name | endswith(".txt")).browser_download_url'
 ```
 
 ## 🛠️ Usage
