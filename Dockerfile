@@ -35,6 +35,7 @@ ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 # https://github.com/projectdiscovery/dnsx
 # https://github.com/ipinfo/cli#-ipinfo-cli
 RUN go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
+RUN go get -v github.com/ipinfo/cli/ipinfo
 
 # install the parallel beta that includes parsort
 RUN curl -s pi.dk/3/ -o install.sh
