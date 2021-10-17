@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#shopt -s extdebug     # or --debugging
+shopt -s extdebug     # or --debugging
 set +H +o history     # disable history features (helps avoid errors from "!" in strings)
 shopt -u cmdhist      # would be enabled and have no effect otherwise
 shopt -s execfail     # ensure interactive and non-interactive runtime are similar
@@ -68,7 +68,7 @@ parse_file_contents() {
 # params: format, color, key
 handle_format_output() {
   case $1 in
-  domain) idn2 >>"build/${2}_${1}.txt" ;;
+  domain) idn2 --debug >>"build/${2}_${1}.txt" ;;
   ipv4)
     while IFS= read -r line; do
       case $line in
