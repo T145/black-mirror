@@ -75,7 +75,7 @@ handle_format_output() {
       case $line in
       +([[:digit:]]).+([[:digit:]]).+([[:digit:]]).+([[:digit:]])) echo "$line" >>"build/${2}_${1}.txt" ;;
       +([[:digit:]]).+([[:digit:]]).+([[:digit:]]).+([[:digit:]])/+([[:digit:]])) echo "$line" >>"build/${2}_${1}_cidr.txt" ;;
-      +([[:digit:]]).+([[:digit:]]).+([[:digit:]]).+([[:digit:]])-*) mawk -v range="$line" '{system("ipcalc -nr "range" | tail -n +2")}' >>"build/${2}_${1}_cidr.txt" ;;
+      +([[:digit:]]).+([[:digit:]]).+([[:digit:]]).+([[:digit:]])-*) ipinfo range2cidr >>"build/${2}_${1}_cidr.txt" ;;
       *) echo "[INVALID IPv4]: { source: ${3}, element: ${line} }" ;;
       esac
     done
