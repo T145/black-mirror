@@ -7,9 +7,6 @@ shopt -s extglob      # enable extended pattern matching (https://www.gnu.org/so
 set -euET -o pipefail # put bash into strict mode & have it give descriptive errors
 umask 055             # change all generated file perms from 755 to 700
 
-# force byte-wise sorting and default langauge output
-export LC_ALL=C
-
 # fail if there are declared function names matching this program's
 declare -Ft get_file_contents &>/dev/null && exit 1
 declare -Ft parse_file_contents &>/dev/null && exit 1
@@ -71,7 +68,7 @@ parse_file_contents() {
 # params: format, color, key
 handle_format_output() {
   case $1 in
-  domain) LC_ALL= idn2 >>"build/${2}_${1}.txt" ;;
+  domain) idn2 >>"build/${2}_${1}.txt" ;;
   ipv4)
     while IFS= read -r line; do
       case $line in
@@ -128,7 +125,7 @@ main() {
       list="build/${color}_${format}.txt"
 
       if test -f "$list"; then
-        parsort -u -S 99% --parallel=48 -T "$cache_dir" "$list" | sponge "$list"
+        LC_ALL=C parsort -u -S 99% --parallel=48 -T "$cache_dir" "$list" | sponge "$list"
 
         if [[ "$color" == 'black' ]]; then
           whitelist="build/white_${format}.txt"
@@ -155,6 +152,3 @@ main() {
 
 # https://github.com/koalaman/shellcheck/wiki/SC2218
 main
-
-# reset the locale after processing
-unset LC_ALL
