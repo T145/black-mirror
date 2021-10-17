@@ -71,7 +71,7 @@ parse_file_contents() {
 # params: format, color, key
 handle_format_output() {
   case $1 in
-  domain) ./scripts/idn_to_punycode.pl >>"build/${2}_${1}.txt" ;;
+  domain) idn2 >>"build/${2}_${1}.txt" ;;
   ipv4)
     while IFS= read -r line; do
       case $line in
