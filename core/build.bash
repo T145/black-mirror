@@ -112,7 +112,7 @@ main() {
         select(.value.color == $color) |
          .key as $k | .value.filters[] | "\($k)#\(.engine)#\(.format)#\(.rule)"' core/sources.json |
       while IFS='#' read -r key engine format rule; do
-        src_list=$(find -P -O3 "$cache_dir" -type f -name "$key*")
+        src_list=$(find -P -O3 "$cache_dir" -type f -name "${key}.*")
 
         if [ -n "$src_list" ]; then
           get_file_contents "$src_list" |
