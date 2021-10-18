@@ -1171,13 +1171,13 @@
     "color": "black",
     "filters": [
       {
-        "engine": "cat",
+        "engine": "jq",
         "format": "ipv4",
-        "rule": ""
+        "rule": ".data.ip[]"
       }
     ],
     "mirrors": [
-      "https://api.cybercure.ai/feed/get_ips?type=list"
+      "https://api.cybercure.ai/feed/get_ips"
     ]
   },
   "cyber_cure_urls": {
@@ -1222,12 +1222,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print tolower($3)}"
+        "rule": "BEGIN{FS=\"/\"}$3~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\/|$)/{print $3}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([0-9]{1,3}\\.){3}[0-9]{1,3}+(\\/|:|$)/{print tolower($3)}"
+        "rule": "BEGIN{FS=\"/\"}$3~/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(\/|:|$)/{split($3,a,\":\"); print a[1]}"
       }
     ],
     "mirrors": [
