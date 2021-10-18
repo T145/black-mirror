@@ -3606,7 +3606,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
