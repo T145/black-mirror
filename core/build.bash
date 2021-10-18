@@ -133,7 +133,6 @@ main() {
 
           if test -f "$whitelist"; then
             grep -Fxvf "$whitelist" "$list" | sponge "$list"
-            rm -f "$whitelist"
           fi
 
           checksums="build/${color}_${format}.checksums"

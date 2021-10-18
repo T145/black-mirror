@@ -5,7 +5,7 @@
        longdesc="https://github.com/T145/black-mirror/master/README.md" />
   <h3>🌓 Reflection | 💿 Redundancy | ✅ Reliability</h3>
   <hr>
-  <p>Automatically compiled and maintained malicious domain & IP blacklist.</p>
+  <p>Automatically maintained malicious host blacklists and false-positive whitelists.</p>
   <hr>
   <a href="https://github.com/humanetech-community/awesome-humane-tech#awesome-humane-tech--">
     <img src="https://raw.githubusercontent.com/humanetech-community/awesome-humane-tech/main/humane-tech-badge.svg?sanitize=true"
@@ -114,6 +114,38 @@ Reference the [contribution guidelines](https://github.com/T145/black-mirror/blo
       <td id="ipv6-filesize">246K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.checksums">[✔️]</a> | <a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.txt">[🔗]</a></td>
       <td align="center"><a href="https://www.dropbox.com/s/a8khiyxulg3wo0x/black_ipv6.checksums?dl=1">[✔️]</a> | <a href="https://www.dropbox.com/s/u7in4jqw9ahwgrj/black_ipv6.txt?dl=1">[🔗]</a></td>
+    </tr>
+    <tr>
+      <td>white_domain</td>
+      <td>Domain entries</td>
+      <td id="domain-count">TODO</td>
+      <td id="domain-filesize">TODO</td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/white_domain.checksums">[✔️]</a> | <a href="https://github.com/T145/black-mirror/releases/download/latest/white_domain.txt">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror">[✔️]</a> | <a href="https://github.com/T145/black-mirror">[🔗]</a></td>
+    </tr>
+    <tr>
+      <td>white_ipv4</td>
+      <td>IPv4 addresses</td>
+      <td id="ipv4-count">TODO</td>
+      <td id="ipv4-filesize">TODO</td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/white_ipv4.checksums">[✔️]</a> | <a href="https://github.com/T145/black-mirror/releases/download/latest/white_ipv4.txt">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror">[✔️]</a> | <a href="https://github.com/T145/black-mirror">[🔗]</a></td>
+    </tr>
+    <tr>
+      <td>white_ipv4_cidr</td>
+      <td>IPv4 CIDR blocks</td>
+      <td id="ipv4-cidr-count">TODO</td>
+      <td id="ipv4-cidr-filesize">TODO</td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/white_ipv4_cidr.checksums">[✔️]</a> | <a href="https://github.com/T145/black-mirror/releases/download/latest/white_ipv4_cidr.txt">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror">[✔️]</a> | <a href="https://github.com/T145/black-mirror">[🔗]</a></td>
+    </tr>
+    <tr>
+      <td>white_ipv6</td>
+      <td>IPv6 addresses</td>
+      <td id="ipv6-count">TODO</td>
+      <td id="ipv6-filesize">TODO</td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/white_ipv6.checksums">[✔️]</a> | <a href="https://github.com/T145/black-mirror/releases/download/latest/white_ipv6.txt">[🔗]</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror">[✔️]</a> | <a href="https://github.com/T145/black-mirror">[🔗]</a></td>
     </tr>
   </tbody>
 </table>
@@ -363,6 +395,8 @@ Use the domain list.
 - [Clefspeare13](https://tinyurl.com/clefspeare13)
 
 ### ⬜ Whitelists
+
+> _Applied to generated blacklists._
 
 - [Energized Unblock](https://github.com/EnergizedProtection/unblock#packs)
 - [AnudeepND False Positives](https://github.com/anudeepND/blacklist/blob/master/miscellaneous/false-positives.txt)
