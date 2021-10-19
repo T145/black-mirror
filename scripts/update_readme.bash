@@ -35,7 +35,8 @@ for color in 'white' 'black'; do
   # Arguments: variable name list
   make_subst_script() {
     for i; do
-      printf 's/\(<td id="%s">\).*\(<\/td>\)/\\1%s\\2/\n' "${i//_/-}" "${!i}"
+      exp="${color}_${i}"
+      printf 's/\(<td id="%s">\).*\(<\/td>\)/\\1%s\\2/\n' "${exp//_/-}" "${!i}"
     done
   }
 
