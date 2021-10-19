@@ -561,6 +561,7 @@ Use the domain list.
 - [pdns-recreator](https://github.com/suuhm/pdns-recreator)
 - [adblock.gardar](https://adblock.gardar.net/)
 - [TR-PhishingList](https://github.com/HorusTeknoloji/TR-PhishingList)
+- [Spam404](https://github.com/Spam404/lists/blob/master/main-blacklist.txt)
 
 #### [GitHub's Dirty Dancing](https://github.com/StevenBlack/hosts/pull/1784)
 
