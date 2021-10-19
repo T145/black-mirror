@@ -92,6 +92,8 @@ main() {
   local cache_dir
   local src_list
   local list
+  local checksums
+  local whitelist
 
   # make the build directory if it doesn't exist
   mkdir -p build/
@@ -125,21 +127,27 @@ main() {
     for format in "${FORMATS[@]}"; do
       list="build/${color}_${format}.txt"
 
-      parsort -u -S 100% --parallel=48 -T "$cache_dir" "$list" | sponge "$list"
+      if test -f "$list"; then
+        checksums="build/${color}_${format}.checksums"
 
-      if [[ "$color" == 'black' ]]; then
-        grep -Fxvf "build/white_${format}.txt" "$list" | sponge "$list"
+        parsort -u -S 100% --parallel=48 -T "$cache_dir" "$list" | sponge "$list"
+
+        if [[ "$color" == 'black' ]]; then
+          whitelist="build/white_${format}.txt"
+
+          if test -f "$whitelist"; then
+            grep -Fxvf "$whitelist" "$list" | sponge "$list"
+          fi
+        fi
+
+        md5sum >>"$checksums" <"$list"
+        b2sum >>"$checksums" <"$list"
+        sha1sum >>"$checksums" <"$list"
+        sha224sum >>"$checksums" <"$list"
+        sha256sum >>"$checksums" <"$list"
+        sha384sum >>"$checksums" <"$list"
+        sha512sum >>"$checksums" <"$list"
       fi
-
-      checksums="build/${color}_${format}.checksums"
-
-      md5sum >>"$checksums" <"$list"
-      b2sum >>"$checksums" <"$list"
-      sha1sum >>"$checksums" <"$list"
-      sha224sum >>"$checksums" <"$list"
-      sha256sum >>"$checksums" <"$list"
-      sha384sum >>"$checksums" <"$list"
-      sha512sum >>"$checksums" <"$list"
     done
   done
 }
