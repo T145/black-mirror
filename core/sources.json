@@ -1261,6 +1261,19 @@
       "https://blocklist.cyberthreatcoalition.org/vetted/domain.txt"
     ]
   },
+  "cymru_bogons": {
+    "color": "white",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "NR>1"
+      }
+    ],
+    "mirrors": [
+      "https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt"
+    ]
+  },
   "dan_me_uk": {
     "color": "white",
     "filters": [
@@ -3799,19 +3812,6 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ]
-  },
-  "cymru_bogons": {
-    "color": "white",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "NR>1"
-      }
-    ],
-    "mirrors": [
-      "https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt"
     ]
   }
 }
