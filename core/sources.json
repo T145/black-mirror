@@ -1222,12 +1222,12 @@
       {
         "engine": "gawk",
         "format": "domain",
-        "rule": "BEGIN{FS=\"/\"}$3~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(/|$)/{print $3}"
+        "rule": "BEGIN{FS=\"/\"}$3~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print $3}"
       },
       {
         "engine": "gawk",
         "format": "ipv4",
-        "rule": "BEGIN{FS=\"/\"}$3~/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(/|:|$)/{split($3,a,\":\"); print a[1]}"
+        "rule": "BEGIN{FS=\"/\"}$3~/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(\\/|:|$)/{split($3,a,\":\"); print a[1]}"
       }
     ],
     "mirrors": [
