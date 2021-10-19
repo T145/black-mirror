@@ -125,27 +125,21 @@ main() {
     for format in "${FORMATS[@]}"; do
       list="build/${color}_${format}.txt"
 
-      if test -f "$list"; then
-        parsort -u -S 100% --parallel=48 -T "$cache_dir" "$list" | sponge "$list"
+      parsort -u -S 100% --parallel=48 -T "$cache_dir" "$list" | sponge "$list"
 
-        if [[ "$color" == 'black' ]]; then
-          whitelist="build/white_${format}.txt"
-
-          if test -f "$whitelist"; then
-            grep -Fxvf "$whitelist" "$list" | sponge "$list"
-          fi
-
-          checksums="build/${color}_${format}.checksums"
-
-          md5sum >>"$checksums" <"$list"
-          b2sum >>"$checksums" <"$list"
-          sha1sum >>"$checksums" <"$list"
-          sha224sum >>"$checksums" <"$list"
-          sha256sum >>"$checksums" <"$list"
-          sha384sum >>"$checksums" <"$list"
-          sha512sum >>"$checksums" <"$list"
-        fi
+      if [[ "$color" == 'black' ]]; then
+        grep -Fxvf "build/white_${format}.txt" "$list" | sponge "$list"
       fi
+
+      checksums="build/${color}_${format}.checksums"
+
+      md5sum >>"$checksums" <"$list"
+      b2sum >>"$checksums" <"$list"
+      sha1sum >>"$checksums" <"$list"
+      sha224sum >>"$checksums" <"$list"
+      sha256sum >>"$checksums" <"$list"
+      sha384sum >>"$checksums" <"$list"
+      sha512sum >>"$checksums" <"$list"
     done
   done
 }
