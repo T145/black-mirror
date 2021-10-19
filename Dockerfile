@@ -34,10 +34,11 @@ ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 # the get paths are where "main.go" lives
 # https://github.com/projectdiscovery/dnsx
 # https://github.com/ipinfo/cli#-ipinfo-cli
+# https://github.com/mholt/archiver#archiver--
 RUN go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
 RUN go get -v github.com/ipinfo/cli/ipinfo
+RUN go get -v github.com/mholt/archiver/cmd/arc
 
 # install the parallel beta that includes parsort
-RUN curl -s pi.dk/3/ -o install.sh
-RUN bash install.sh && rm -f install.sh
+RUN curl --proto '=https' --tlsv1.3 -sSf pi.dk/3/ | bash
 RUN echo 'will cite' | parallel --citation || true
