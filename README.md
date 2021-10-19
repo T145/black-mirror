@@ -396,7 +396,7 @@ Use the domain list.
 
 ### ⬜ Whitelists
 
-> _Applied to generated blacklists._
+> Applied to generated blacklists.
 
 - [Energized Unblock](https://github.com/EnergizedProtection/unblock#packs)
 - [AnudeepND False Positives](https://github.com/anudeepND/blacklist/blob/master/miscellaneous/false-positives.txt)
@@ -408,10 +408,11 @@ Use the domain list.
 - [CoinBlockerWhiteList](https://gitlab.com/ZeroDot1/CoinBlockerLists/-/blob/master/white_list.txt)
 - [ShadowWhisperer's Filter](https://github.com/ShadowWhisperer/BlockLists/tree/master/Whitelists)
 - [1Hosts Excludes](https://github.com/badmojr/1Hosts/tree/master/submit_here)
+- [Team Cymru](https://team-cymru.com/community-services/bogon-reference/bogon-reference-http/)
 
 ### 🥢 Duplicates
 
-> Sources that contain duplicate and potentially deprecated data
+> Sources that contain duplicate and potentially deprecated data.
 
 - [andryou](https://gitlab.com/andryou/block#sources)
 - [adfree](https://adfree-hosts.odiousapps.com/adfree.php)
@@ -442,7 +443,7 @@ Use the domain list.
 
 ### 🧟 Zombies
 
-> Sources that are dead or deprecated and not included but may be [worth mentioning](https://blog.talosintelligence.com/2021/03/domain-dumpster-diving.html)
+> Sources that are dead or deprecated and not included but may be [worth mentioning](https://blog.talosintelligence.com/2021/03/domain-dumpster-diving.html).
 
 - [Squidguard Archive](http://squidguard.mesd.k12.or.us/)
   - Found individually a while back
