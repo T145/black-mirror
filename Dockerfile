@@ -23,6 +23,10 @@ RUN apt-get -y upgrade
 RUN apt-get -y install aria2 curl gawk git golang-go grepcidr gpg gzip idn2 ipcalc jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl make miller moreutils p7zip-full preload prips python3-pip sed
 RUN apt-get clean
 
+RUN curl https://nim-lang.org/choosenim/init.sh -sSf | sed 's/need_tty=yes/need_tty=no/g' | sh
+RUN nimble update
+RUN nimble install nimarchive
+
 ENV PATH=$PATH:/root/.local/bin
 RUN pip3 install twint
 
