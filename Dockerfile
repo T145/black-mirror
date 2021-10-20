@@ -23,6 +23,7 @@ RUN apt-get -y upgrade
 RUN apt-get -y install aria2 curl gawk git golang-go grepcidr gpg gzip idn2 ipcalc jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl make miller moreutils p7zip-full preload prips python3-pip sed
 RUN apt-get clean
 
+ENV PATH=$PATH:/root/.nimble/bin
 RUN curl https://nim-lang.org/choosenim/init.sh -sSf | sed 's/need_tty=yes/need_tty=no/g' | sh
 RUN nimble update
 RUN nimble install nimarchive
@@ -41,7 +42,6 @@ ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 # https://github.com/mholt/archiver#archiver--
 RUN go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
 RUN go get -v github.com/ipinfo/cli/ipinfo
-RUN go get -v github.com/mholt/archiver/cmd/arc
 
 # install the parallel beta that includes parsort
 RUN curl -sSf pi.dk/3/ | bash
