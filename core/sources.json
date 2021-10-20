@@ -864,13 +864,12 @@
     ]
   },
   "botvrij_dst_ip": {
-    "_comment": "Some entries have a '<ip>|<port>' format.",
     "color": "black",
     "filters": [
       {
-        "engine": "cat",
+        "engine": "mawk",
         "format": "ipv4",
-        "rule": ""
+        "rule": "{split($0,a,\"|\"); print a[1]}"
       }
     ],
     "mirrors": [
