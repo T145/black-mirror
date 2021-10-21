@@ -24,7 +24,7 @@ RUN apt-get -y install aria2 curl gawk git golang-go grepcidr gpg gzip idn2 ipca
 RUN apt-get clean
 
 # install R libarchive bindings
-echo 'install.packages("archive", repos="http://cran.us.r-project.org")' | R --vanilla
+RUN echo 'install.packages("archive", repos="http://cran.us.r-project.org")' | R --vanilla
 
 ENV PATH=$PATH:/root/.local/bin
 RUN pip3 install twint
