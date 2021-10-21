@@ -20,13 +20,11 @@ RUN apt-get -y install apt-utils
 # upgrade with proper configurations
 RUN apt-get -y upgrade
 
-RUN apt-get -y install aria2 curl gawk git golang-go grepcidr gpg gzip idn2 ipcalc jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl make miller moreutils p7zip-full preload prips python3-pip sed
+RUN apt-get -y install aria2 curl gawk git golang-go grepcidr gpg gzip idn2 ipcalc jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl make miller moreutils p7zip-full preload prips python3-pip r-base sed
 RUN apt-get clean
 
-ENV PATH=$PATH:/root/.nimble/bin
-RUN curl https://nim-lang.org/choosenim/init.sh -sSf | sed 's/need_tty=yes/need_tty=no/g' | sh
-RUN nimble update
-RUN nimble install nimarchive
+# install R libarchive bindings
+echo 'install.packages("archive", repos="http://cran.us.r-project.org")' | R --vanilla
 
 ENV PATH=$PATH:/root/.local/bin
 RUN pip3 install twint
@@ -39,7 +37,6 @@ ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 # the get paths are where "main.go" lives
 # https://github.com/projectdiscovery/dnsx
 # https://github.com/ipinfo/cli#-ipinfo-cli
-# https://github.com/mholt/archiver#archiver--
 RUN go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
 RUN go get -v github.com/ipinfo/cli/ipinfo
 
