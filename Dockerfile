@@ -25,15 +25,16 @@ RUN apt-get clean
 
 # install libarchive manually since libarchive-dev is at version 3.4.3
 # https://github.com/libarchive/libarchive/wiki/BuildInstructions#using-configure-for-building-from-the-command-line-on-linux-freebsd-solaris-cygwin-aix-interix-mac-os-x-and-other-unix-like-systems
-RUN aria2c https://github.com/libarchive/libarchive/releases/download/v3.5.2/libarchive-3.5.2.tar.gz
-RUN tar xzf libarchive-3.5.2.tar.gz
-RUN cd libarchive-3.5.2
-RUN ./configure
-RUN make
-RUN make check
-RUN make install
-RUN cd ..
-RUN rm libarchive-3.5.2.tar.gz
+# https://www.zhouchun.net/blog/show/439 (run all commands together to prevent spawning subcontainers)
+RUN aria2c https://github.com/libarchive/libarchive/releases/download/v3.5.2/libarchive-3.5.2.tar.gz \
+&& tar xzf libarchive-3.5.2.tar.gz \
+&& cd libarchive-3.5.2 \
+&& ./configure \
+&& make \
+&& make check \
+&& make install \
+&& cd .. \
+&& rm libarchive-3.5.2.tar.gz
 
 # install R libarchive bindings
 # https://github.com/r-lib/archive
