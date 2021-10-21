@@ -1,13 +1,35 @@
 #!/usr/bin/env Rscript
 library(archive)
-options(max.print=1000000)
 
-# TODO: Fix reading from shalla-format tarballs
+argv <- commandArgs()
+argc <- length(argv)
 
-args <- commandArgs()
-fname <- args[6]
-archive <- archive_read(fname)
-lines <- readLines(con=archive)
+if (argc > 5) {
+  fname <- argv[6]
 
-close(archive)
-cat(lines, sep="\n")
+  printFile <- function(conn) {
+    lines <- readLines(conn)
+
+    close(conn)
+    options(max.print=length(lines))
+    cat(lines, sep="\n")
+  }
+
+  if (argc > 6) {
+    files <- argv[7:length(argv)]
+
+    for (fpath in archive(fname)$path) {
+      for (file in files) {
+        if (endsWith(fpath, file)) {
+          printFile(archive_read(fname, fpath))
+        }
+      }
+    }
+  } else {
+    printFile(archive_read(fname))
+  }
+} else {
+  print("Usage: print_archive.R [archive] [files]")
+}
+
+warnings()
