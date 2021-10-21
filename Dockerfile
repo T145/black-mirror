@@ -27,7 +27,7 @@ RUN apt-get clean
 # https://github.com/libarchive/libarchive/wiki/BuildInstructions#using-configure-for-building-from-the-command-line-on-linux-freebsd-solaris-cygwin-aix-interix-mac-os-x-and-other-unix-like-systems
 RUN aria2c https://github.com/libarchive/libarchive/releases/download/v3.5.2/libarchive-3.5.2.tar.gz
 RUN tar xzf libarchive-3.5.2.tar.gz && cd libarchive-3.5.2
-RUN ./configure
+RUN sh configure
 RUN make
 RUN make check
 RUN make install && cd ..
