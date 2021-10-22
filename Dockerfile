@@ -20,26 +20,8 @@ RUN apt-get -y install apt-utils
 # upgrade with proper configurations
 RUN apt-get -y upgrade
 
-RUN apt-get -y install aria2 build-essential curl gawk git golang-go grepcidr gpg gzip idn2 ipcalc jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl make miller moreutils p7zip-full preload prips python3-pip r-base sed
-RUN apt-get clean
-
-# install libarchive manually since libarchive-dev is at version 3.4.3
-# https://github.com/libarchive/libarchive/wiki/BuildInstructions#using-configure-for-building-from-the-command-line-on-linux-freebsd-solaris-cygwin-aix-interix-mac-os-x-and-other-unix-like-systems
-# https://www.zhouchun.net/blog/show/439 (run all commands together to prevent spawning subcontainers)
-RUN aria2c https://github.com/libarchive/libarchive/releases/download/v3.5.2/libarchive-3.5.2.tar.gz \
-&& tar xzf libarchive-3.5.2.tar.gz \
-&& cd libarchive-3.5.2 \
-&& ./configure \
-&& make \
-&& make check \
-&& make install \
-&& cd .. \
-&& rm libarchive-3.5.2.tar.gz
-
-# install R libarchive bindings
-# https://github.com/r-lib/archive
-RUN echo 'install.packages("archive", repos="https://cloud.r-project.org/")' | R --vanilla \
-&& echo 'install.packages("data.table", repos="https://cloud.r-project.org/")' | R --vanilla
+RUN apt-get -y install aria2 build-essential curl gawk git golang-go grepcidr gpg gzip idn2 ipcalc jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl make miller moreutils p7zip-full preload prips python3-pip sed \
+&& apt-get clean
 
 ENV PATH=$PATH:/root/.local/bin
 RUN pip3 install twint
