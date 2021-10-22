@@ -1,14 +1,15 @@
 #!/usr/bin/env Rscript
 library(archive)
+library(data.table)
 
-argv <- commandArgs()
-argc <- length(argv)
+argv = commandArgs()
+argc = length(argv)
 
 if (argc > 5) {
-  fname <- argv[6]
+  fname = argv[6]
 
   printFile <- function(conn) {
-    lines <- readLines(conn)
+    lines = readLines(conn)
 
     close(conn)
     options(max.print=length(lines))
@@ -16,20 +17,16 @@ if (argc > 5) {
   }
 
   if (argc > 6) {
-    files <- argv[7:length(argv)]
-
-    for (fpath in archive(fname)$path) {
-      for (file in files) {
-        if (endsWith(fpath, file)) {
-          printFile(archive_read(fname, fpath))
-        }
-      }
+    matches = grep(paste(argv[7:length(argv)], collapse="|"),
+                   archive(fname)$path, value=TRUE)
+    for (match in matches) {
+      printFile(archive_read(fname, match))
     }
   } else {
     printFile(archive_read(fname))
   }
 } else {
-  print("Usage: print_archive.R [archive] [files]")
+  print("Usage: print_archive.R [ARCHIVE] [FILES...]")
 }
 
 warnings()
