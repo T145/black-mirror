@@ -38,7 +38,8 @@ RUN aria2c https://github.com/libarchive/libarchive/releases/download/v3.5.2/lib
 
 # install R libarchive bindings
 # https://github.com/r-lib/archive
-RUN echo 'install.packages("archive", repos="https://cloud.r-project.org/")' | R --vanilla
+RUN echo 'install.packages("archive", repos="https://cloud.r-project.org/")' | R --vanilla \
+&& echo 'install.packages("data.table", repos="https://cloud.r-project.org/")' | R --vanilla
 
 ENV PATH=$PATH:/root/.local/bin
 RUN pip3 install twint
