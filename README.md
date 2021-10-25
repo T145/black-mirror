@@ -395,6 +395,7 @@ Use the domain list.
 - [shady-hosts](https://github.com/shreyasminocha/shady-hosts)
 - [DataPlane](https://dataplane.org/)
 - [Clefspeare13](https://tinyurl.com/clefspeare13)
+- [C2IntelFeeds](https://github.com/drb-ra/C2IntelFeeds#c2intelfeeds)
 
 ### ⬜ Whitelists
 
