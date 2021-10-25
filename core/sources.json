@@ -3825,5 +3825,18 @@
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
+  },
+  "c2_intel": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "miller",
+        "format": "ipv4",
+        "rule": "#ip"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv"
+    ]
   }
 }
