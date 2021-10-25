@@ -564,6 +564,7 @@ Use the domain list.
 - [adblock.gardar](https://adblock.gardar.net/)
 - [TR-PhishingList](https://github.com/HorusTeknoloji/TR-PhishingList)
 - [Spam404](https://github.com/Spam404/lists/blob/master/main-blacklist.txt)
+- [bgpranking](https://github.com/D4-project/BGP-Ranking/tree/master/bgpranking/config/modules)
 
 #### [GitHub's Dirty Dancing](https://github.com/StevenBlack/hosts/pull/1784)
 
@@ -616,6 +617,15 @@ RUN echo 'install.packages("archive", repos="https://cloud.r-project.org/")' | R
 - https://github.com/bedatadriven/renjin
 - http://www.dartistics.com/fast-r-code.html
 - https://datascienceplus.com/strategies-to-speedup-r-code/
+
+### Need for speed
+
+#### References
+
+- https://fossies.org/linux/parallel/src/parsort
+- https://unix.stackexchange.com/questions/579251/how-to-use-parallel-to-speed-up-sort-for-big-files-fitting-in-ram#579252
+- https://askubuntu.com/questions/1006377/check-the-max-allowed-threads-count-for-sure#1006384
+- https://stackoverflow.com/questions/9066609/fastest-possible-grep
 
 ---
 
