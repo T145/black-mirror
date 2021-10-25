@@ -945,7 +945,7 @@
       "https://www.opendbl.net/lists/bruteforce.list"
     ]
   },
-  "c2_intel": {
+  "c2_intel_ips": {
     "color": "black",
     "filters": [
       {
@@ -3837,6 +3837,19 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
+    ]
+  },
+  "c2_intel_domains": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "miller",
+        "format": "domain",
+        "rule": "#domain"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/domainC2s-30day.csv"
     ]
   }
 }
