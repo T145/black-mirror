@@ -3365,9 +3365,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "cat",
+        "engine": "mawk",
         "format": "domain",
-        "rule": ""
+        "rule": "$0~/^[^#]/"
       }
     ],
     "mirrors": [
