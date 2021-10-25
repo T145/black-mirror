@@ -116,6 +116,24 @@
       "https://threatfox.abuse.ch/downloads/hostfile/"
     ]
   },
+  "abuse_ch_urlhaus": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print $3}"
+      },
+      {
+        "engine": "gawk",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([0-9]{1,3}\\.){3}[0-9]{1,3}+(\\/|:|$)/{sub(/:.*/,\"\",$3); print $3}"
+      }
+    ],
+    "mirrors": [
+      "https://urlhaus.abuse.ch/downloads/text/"
+    ]
+  },
   "additional_hosts_activation": {
     "color": "black",
     "filters": [

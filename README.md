@@ -278,7 +278,7 @@ Use the domain list.
 - [Abuse.ch](https://abuse.ch/#about)
   - feodotracker
   - sslbl
-  - <strike>urlhaus</strike> (503)
+  - urlhaus
   - threatfox (domains only)
 - [360_netlab](https://data.netlab.360.com/)
 - [cybercrime](https://cybercrime-tracker.net/)
