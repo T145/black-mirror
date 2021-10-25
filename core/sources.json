@@ -108,7 +108,7 @@
     "filters": [
       {
         "engine": "mawk",
-        "format": "ipv4",
+        "format": "domain",
         "rule": "$0~/^[^#]/{print $2}"
       }
     ],
