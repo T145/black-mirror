@@ -31,11 +31,6 @@ jobs:
           name: black-mirror
           path: build/*
           retention-days: 1
-      # https://github.com/mikepenz/release-changelog-builder-action
-      - name: Build Changelog
-        uses: mikepenz/release-changelog-builder-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload Modified Documents
         if: success()
         uses: actions/upload-artifact@v2
