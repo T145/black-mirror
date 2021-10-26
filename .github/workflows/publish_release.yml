@@ -31,6 +31,11 @@ jobs:
           name: black-mirror
           path: build/*
           retention-days: 1
+      # https://github.com/thomaseizinger/keep-a-changelog-new-release#keep-a-changelog---new-release
+      - name: Update Changelog
+        uses: thomaseizinger/keep-a-changelog-new-release@v1
+        with:
+          tag: latest
       - name: Upload Modified Documents
         if: success()
         uses: actions/upload-artifact@v2
