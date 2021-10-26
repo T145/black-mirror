@@ -32,10 +32,10 @@ jobs:
           path: build/*
           retention-days: 1
       # https://github.com/thomaseizinger/keep-a-changelog-new-release#keep-a-changelog---new-release
-      - name: Update Changelog
-        uses: thomaseizinger/keep-a-changelog-new-release@v1
-        with:
-          tag: latest
+      #- name: Update Changelog
+      #  uses: thomaseizinger/keep-a-changelog-new-release@v1
+      #  with:
+      #    version: latest
       - name: Upload Modified Documents
         if: success()
         uses: actions/upload-artifact@v2
@@ -44,7 +44,6 @@ jobs:
           path: |
             logs/*
             README.md
-            CHANGELOG.md
           retention-days: 1
       - name: Remove Local Artifacts
         if: always()
