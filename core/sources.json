@@ -2115,7 +2115,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $2}"
+        "rule": "$0~/^[^#]/&&$2~/^[^\\(]/{print $2}"
       }
     ],
     "mirrors": [
