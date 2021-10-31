@@ -251,7 +251,6 @@ Use the domain list.
   - hostfile
 - [Frellwits-filter-lists](https://github.com/lassekongo83/Frellwits-filter-lists#frellwits-filter-lists)
 - [shallalist](https://www.shallalist.de/)
-- [ut-capitole](https://dsi.ut-capitole.fr/blacklists/index_en.php)
 - [wally3k](https://v.firebog.net/hosts/)
 - [Energized Xtreme Extension](https://github.com/EnergizedProtection/block#extensions-2)
 - [AnudeepND](https://github.com/anudeepND/blacklist)
@@ -443,6 +442,8 @@ Use the domain list.
 - [blackbook](https://github.com/stamparm/blackbook)
 - [mischosts](https://github.com/llacb47/mischosts)
   - Only TikTok list; WhiteOps is should be double-checked.
+- [ut-capitole](https://dsi.ut-capitole.fr/blacklists/index_en.php)
+  - Has a lot of deprecated data.
 
 ### 🧟 Zombies
 
