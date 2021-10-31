@@ -3583,24 +3583,6 @@
       "https://isc.sans.edu/api/threatlist/univsydney?json"
     ]
   },
-  "ut_capitole": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{if($1!~/\\.free\\.fr$/){if($1~/^0\\.0\\.0\\.0/){sub(/0.0.0.0/,\"\");print}else{print tolower($1)}}}"
-      },
-      {
-        "engine": "gawk",
-        "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/"
-      }
-    ],
-    "mirrors": [
-      "https://dsi.ut-capitole.fr/blacklists/download/blacklists.tar.gz"
-    ]
-  },
   "viriback": {
     "color": "black",
     "filters": [
