@@ -1,7 +1,8 @@
-FROM ubuntu:21.04
+# use synk's recommended os version
+FROM ubuntu:impish-20211015
 
 LABEL maintainer="T145" \
-      version="2.0.0" \
+      version="2.2.4" \
       description="Custom Docker Image used to run Black Mirror."
 
 # suppress language-related updates from apt-get to increase download speeds
