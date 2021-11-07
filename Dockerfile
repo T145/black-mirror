@@ -20,7 +20,7 @@ RUN apt-get -y install apt-utils \
 && apt-get -y upgrade
 
 RUN apt-get -y install aria2 build-essential curl gawk git golang-go grepcidr gpg gzip idn2 jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl miller moreutils p7zip-full preload python3-pip sed \
-&& apt-get clean
+&& apt-get clean \
 && apt-get -y autoremove
 
 ENV PATH=$PATH:/root/.local/bin
