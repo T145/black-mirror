@@ -2,7 +2,7 @@
 FROM ubuntu:impish-20211015
 
 LABEL maintainer="T145" \
-      version="2.2.4" \
+      version="2.2.8" \
       description="Custom Docker Image used to run Black Mirror."
 
 # suppress language-related updates from apt-get to increase download speeds
@@ -13,16 +13,15 @@ RUN echo 'Acquire::Languages "none";' >> /etc/apt/apt.conf.d/00aptitude
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
 # use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
-RUN apt-get -y update
-
 # install apt-utils early so debconf doesn't delay package configuration
-RUN apt-get -y install apt-utils
-
 # upgrade with proper configurations
-RUN apt-get -y upgrade
+RUN apt-get -y install apt-utils \
+&& apt-get -y update \
+&& apt-get -y upgrade
 
-RUN apt-get -y install aria2 build-essential curl gawk git golang-go grepcidr gpg gzip idn2 ipcalc jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl make miller moreutils p7zip-full preload prips python3-pip sed \
+RUN apt-get -y install aria2 build-essential curl gawk git golang-go grepcidr gpg gzip idn2 jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl miller moreutils p7zip-full preload python3-pip sed \
 && apt-get clean
+&& apt-get -y autoremove
 
 ENV PATH=$PATH:/root/.local/bin
 RUN pip3 install twint
