@@ -36,7 +36,7 @@ RUN virtualenv -p pypy3 pypy \
 && chmod +x ./pypy/bin/activate \
 && . /pypy/bin/activate \
 && pip3 install -U pip wheel \
-&& pip3 install --upgrade --pre pyfunceble-dev \
+&& pip3 install --upgrade --pre pyfunceble-dev
 
 # install twint in base python, otherwise "pandas" will be perma-stuck building in pypy
 RUN pip3 install twint
