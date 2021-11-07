@@ -2,8 +2,8 @@
 FROM ubuntu:impish-20211015
 
 LABEL maintainer="T145" \
-      version="2.2.8" \
-      description="Custom Docker Image used to run Black Mirror."
+      version="2.3.0" \
+      description="Custom Docker Image used to run blacklist projects."
 
 # suppress language-related updates from apt-get to increase download speeds
 RUN echo 'Acquire::Languages "none";' >> /etc/apt/apt.conf.d/00aptitude
@@ -19,16 +19,25 @@ RUN apt-get -y update \
 && apt-get -y install apt-utils \
 && apt-get -y upgrade
 
-RUN apt-get -y install aria2 build-essential curl gawk git golang-go grepcidr gpg gzip idn2 jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl miller moreutils p7zip-full preload python3-pip sed \
-&& apt-get clean \
-&& apt-get -y autoremove
-
+# set python env path
 ENV PATH=$PATH:/root/.local/bin
-RUN pip3 install twint
 
+# set go env path
 # https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-local-programming-environment-on-ubuntu-18-04
 ENV GOPATH=$HOME/go
 ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
+
+RUN apt-get -y install aria2 build-essential curl gawk git golang-go grepcidr gpg gzip idn2 jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl lynx miller moreutils p7zip-full preload pypy3 sed virtualenv \
+&& apt-get clean \
+&& apt-get -y autoremove
+
+# configure pyfunceble and twint with pypy
+RUN virtualenv -p pypy3 pypy \
+&& chmod +x ./pypy/bin/activate \
+&& . /pypy/bin/activate \
+&& pip install -U pip wheel \
+&& pip install --upgrade --pre pyfunceble-dev
+&& pip install twint
 
 # install project discovery utilities
 # the get paths are where "main.go" lives
