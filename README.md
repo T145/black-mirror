@@ -371,7 +371,7 @@ Use the domain list.
 - [Disconnect.](https://disconnect.me/)
 - [StevenBlack](https://github.com/StevenBlack/hosts#sources-of-hosts-data-unified-in-this-variant)
 - [adblock-nocoin-list](https://github.com/hoshsadiq/adblock-nocoin-list)
-- [Adguard](https://github.com/AdguardTeam) *(more to come)*
+- [Adguard](https://github.com/AdguardTeam) _(more to come)_
   - [cname-trackers](https://github.com/AdguardTeam/cname-trackers#cname-cloaked-trackers)
 - durablenapkin
   - [luminati](https://github.com/durablenapkin/block#blocklists)
@@ -394,6 +394,8 @@ Use the domain list.
 - [DataPlane](https://dataplane.org/)
 - [Clefspeare13](https://tinyurl.com/clefspeare13)
 - [C2IntelFeeds](https://github.com/drb-ra/C2IntelFeeds#c2intelfeeds)
+- [joewein](https://www.joewein.net/)
+  - https://www.joewein.net/dl/bl/dom-bl.txt
 
 ### ⬜ Whitelists
 
@@ -443,6 +445,8 @@ Use the domain list.
   - Only TikTok list; WhiteOps is should be double-checked.
 - [ut-capitole](https://dsi.ut-capitole.fr/blacklists/index_en.php)
   - Has a lot of deprecated data.
+- [joewein](https://www.joewein.net/)
+  - https://www.joewein.net/dl/bl/dom-bl-base.txt _(Likely draws from other sources.)_
 
 ### 🧟 Zombies
 
@@ -468,9 +472,6 @@ Use the domain list.
 - [malware-ioc](https://github.com/eset/malware-ioc)
 - [malwaredomains](http://malwaredomains.lehigh.edu/files/)
 - [multiproxy](https://multiproxy.org/)
-- [joewein](https://www.joewein.net/)
-  - https://www.joewein.net/dl/bl/dom-bl-base.txt
-  - https://www.joewein.net/dl/bl/dom-bl.txt
 - [malwaredomainlist](http://www.malwaredomainlist.com/)
 - [malware-traffic-analysis](https://www.malware-traffic-analysis.net/index.html)
 - [nothink](https://www.nothink.org/)
@@ -497,9 +498,9 @@ Use the domain list.
 - [deathbybandaid](https://github.com/deathbybandaid/piholeparser/tree/master/Subscribable-Lists/ParsedBlacklists)
 - [Ransomware Overview](https://docs.google.com/spreadsheets/u/1/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g/pubhtml#)
 - fanboy
-	- [vietnam](https://fanboy.co.nz/fanboy-vietnam.txt)
-	- [japanese](https://fanboy.co.nz/fanboy-japanese.txt)
-	- [polish](https://fanboy.co.nz/fanboy-polish.txt)
+  - [vietnam](https://fanboy.co.nz/fanboy-vietnam.txt)
+  - [japanese](https://fanboy.co.nz/fanboy-japanese.txt)
+  - [polish](https://fanboy.co.nz/fanboy-polish.txt)
 - [ryanbr](https://github.com/ryanbr/fanboy-adblock)
 - [Princeton Webcensus](https://webtransparency.cs.princeton.edu/webcensus/)
 - [UnrealSecurity](https://github.com/UnrealSecurity/badips)
@@ -514,7 +515,7 @@ Use the domain list.
   - PIHOLE feed is empty.
 - [h3x](https://tracker.h3x.eu/)
   - Feeds are empty.
--	[Minimal-Hosts-Blocker](https://github.com/arcetera/Minimal-Hosts-Blocker)
+- [Minimal-Hosts-Blocker](https://github.com/arcetera/Minimal-Hosts-Blocker)
 - [blacklist-named](https://github.com/tomzuu/blacklist-named)
   - Does not update automatically.
 - [sophos-xg-block-lists](https://github.com/austinheap/sophos-xg-block-lists)
@@ -527,9 +528,9 @@ Use the domain list.
 - [dnsbl-dfed](https://github.com/dfederlein/dnsbl-dfed)
 - [nopelist](https://github.com/genediazjr/nopelist)
 - old disconnect
-	- [simple_ad](https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt)
-	- [simple_tracking](https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt)
-	- [shavar-prod-lists](https://github.com/mozilla-services/shavar-prod-lists)
+  - [simple_ad](https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt)
+  - [simple_tracking](https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt)
+  - [shavar-prod-lists](https://github.com/mozilla-services/shavar-prod-lists)
 - [ad-wars](https://github.com/jdlingyu/ad-wars)
 - [phishing_hosts](https://github.com/Kurobeats/phishing_hosts)
 - [antipopads](https://github.com/Yhonay/antipopads)
