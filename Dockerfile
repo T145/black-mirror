@@ -42,11 +42,12 @@ RUN virtualenv -p pypy3 pypy \
 RUN pip3 install twint
 
 # install project discovery utilities
-# the get paths are where "main.go" lives
+# the install paths are where "main.go" lives
+# https://golang.org/doc/go-get-install-deprecation#what-to-use-instead
 # https://github.com/projectdiscovery/dnsx
 # https://github.com/ipinfo/cli#-ipinfo-cli
-RUN go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
-RUN go get -v github.com/ipinfo/cli/ipinfo
+RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest
+RUN go install github.com/ipinfo/cli/ipinfo@latest
 
 # install the parallel beta that includes parsort
 RUN curl -sSf pi.dk/3/ | bash
