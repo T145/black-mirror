@@ -15,8 +15,8 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
 # use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 # install apt-utils early so debconf doesn't delay package configuration
 # upgrade with proper configurations
-RUN apt-get -y install apt-utils \
-&& apt-get -y update \
+RUN apt-get -y update \
+&& apt-get -y install apt-utils \
 && apt-get -y upgrade
 
 RUN apt-get -y install aria2 build-essential curl gawk git golang-go grepcidr gpg gzip idn2 jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl miller moreutils p7zip-full preload python3-pip sed \
