@@ -27,7 +27,7 @@ ENV PATH=$PATH:/root/.local/bin
 ENV GOPATH=$HOME/go
 ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 
-RUN apt-get -y install aria2 build-essential curl gawk git golang-go grepcidr gpg gzip idn2 jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl lynx miller moreutils p7zip-full preload pypy3 sed virtualenv \
+RUN apt-get -y install aria2 build-essential curl gawk git golang-go gpg grepcidr gzip idn2 jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl lynx miller moreutils p7zip-full preload pypy3 sed virtualenv \
 && apt-get clean \
 && apt-get -y autoremove
 
@@ -36,7 +36,7 @@ RUN virtualenv -p pypy3 pypy \
 && chmod +x ./pypy/bin/activate \
 && . /pypy/bin/activate \
 && pip install -U pip wheel \
-&& pip install --upgrade --pre pyfunceble-dev
+&& pip install --upgrade --pre pyfunceble-dev \
 && pip install twint
 
 # install project discovery utilities
