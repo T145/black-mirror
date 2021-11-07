@@ -31,13 +31,15 @@ RUN apt-get -y install aria2 build-essential curl gawk git golang-go gpg grepcid
 && apt-get clean \
 && apt-get -y autoremove
 
-# configure pyfunceble and twint with pypy
+# configure pyfunceble with pypy
 RUN virtualenv -p pypy3 pypy \
 && chmod +x ./pypy/bin/activate \
 && . /pypy/bin/activate \
-&& pip install -U pip wheel \
-&& pip install --upgrade --pre pyfunceble-dev \
-&& pip install twint
+&& pip3 install -U pip wheel \
+&& pip3 install --upgrade --pre pyfunceble-dev \
+
+# install twint in base python, otherwise "pandas" will be perma-stuck building in pypy
+RUN pip3 install twint
 
 # install project discovery utilities
 # the get paths are where "main.go" lives
