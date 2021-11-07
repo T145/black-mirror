@@ -6,6 +6,8 @@ on:
       - master
     paths:
       - "Dockerfile"
+  schedule:
+    - cron: "0 6 * * */3"
 
 jobs:
   build:
