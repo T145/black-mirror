@@ -44,11 +44,20 @@ RUN pip3 install twint
 # install project discovery utilities
 # the install paths are where "main.go" lives
 # https://golang.org/doc/go-get-install-deprecation#what-to-use-instead
-# https://github.com/projectdiscovery/dnsx
-# https://github.com/ipinfo/cli#-ipinfo-cli
-# https://github.com/StevenBlack/ghosts#ghosts
+
+# https://github.com/projectdiscovery/httpx#usage
+RUN go install github.com/projectdiscovery/httpx/cmd/httpx@latest
+
+# https://github.com/projectdiscovery/dnsx#usage
 RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest
+
+# https://github.com/projectdiscovery/mapcidr#usage
+RUN go install github.com/projectdiscovery/mapcidr/cmd/mapcidr@latest
+
+# https://github.com/ipinfo/cli#-ipinfo-cli
 RUN go install github.com/ipinfo/cli/ipinfo@latest
+
+# https://github.com/StevenBlack/ghosts#ghosts
 RUN go install github.com/StevenBlack/ghosts@latest
 
 # install the parallel beta that includes parsort
