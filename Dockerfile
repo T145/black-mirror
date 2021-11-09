@@ -2,7 +2,7 @@
 FROM ubuntu:impish-20211015
 
 LABEL maintainer="T145" \
-      version="2.3.0" \
+      version="2.5.0" \
       description="Custom Docker Image used to run blacklist projects."
 
 # suppress language-related updates from apt-get to increase download speeds
@@ -27,16 +27,9 @@ ENV PATH=$PATH:/root/.local/bin
 ENV GOPATH=$HOME/go
 ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 
-RUN apt-get -y install aria2 build-essential curl gawk git golang-go gpg grepcidr gzip idn2 jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl lynx miller moreutils p7zip-full preload pypy3 sed virtualenv \
+RUN apt-get -y install aria2 build-essential curl gawk git golang-go gpg grepcidr gzip idn2 jq libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtry-tiny-perl lynx miller moreutils nano p7zip-full preload python3-pip sed \
 && apt-get clean \
 && apt-get -y autoremove
-
-# configure pyfunceble with pypy
-RUN virtualenv -p pypy3 pypy \
-&& chmod +x ./pypy/bin/activate \
-&& . /pypy/bin/activate \
-&& pip3 install -U pip wheel \
-&& pip3 install --upgrade --pre pyfunceble-dev
 
 # install twint in base python, otherwise "pandas" will be perma-stuck building in pypy
 RUN pip3 install twint
