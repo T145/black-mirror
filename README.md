@@ -249,7 +249,6 @@ Use the domain list.
   - hole_cert_pl
   - hostfile
 - [Frellwits-filter-lists](https://github.com/lassekongo83/Frellwits-filter-lists#frellwits-filter-lists)
-- [shallalist](https://www.shallalist.de/)
 - [wally3k](https://v.firebog.net/hosts/)
 - [Energized Xtreme Extension](https://github.com/EnergizedProtection/block#extensions-2)
 - [AnudeepND](https://github.com/anudeepND/blacklist)
@@ -447,6 +446,8 @@ Use the domain list.
   - Has a lot of deprecated data.
 - [joewein](https://www.joewein.net/)
   - https://www.joewein.net/dl/bl/dom-bl-base.txt _(Likely draws from other sources.)_
+- [shallalist](https://www.shallalist.de/)
+  - Similar to `ut-capitole`.
 
 ### 🧟 Zombies
 
