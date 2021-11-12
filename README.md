@@ -60,7 +60,7 @@ Reference the [contribution guidelines](https://github.com/T145/black-mirror/blo
 ## 📋 Attributes
 
 1. Produced in domain-only, IPv4-only, IPv4-CIDR-only, and IPv6-only builds.
-2. Updates at [0:00 UTC & 12:00 UTC](https://www.timeanddate.com/time/zone/timezone/utc).
+2. Updates at [1:27 AM & PM UTC](https://www.timeanddate.com/time/zone/timezone/utc).
 3. No excess or trailing whitespace.
 4. No lingering webscraper garbage.
 5. Lines are terminated with `lf`.
