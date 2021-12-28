@@ -3772,5 +3772,41 @@
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
+  },
+  "securityresearch_cif": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $2;print $4}"
+      }
+    ],
+    "mirrors": [
+      "http://security-research.dyndns.org/pub/malware-feeds/ponmocup-infected-domains-CIF-latest.txt"
+    ]
+  },
+  "securityresearch_shadowserver": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "miller",
+        "format": "domain",
+        "rule": "http_host"
+      },
+      {
+        "engine": "miller",
+        "format": "domain",
+        "rule": "redirect_target"
+      },
+      {
+        "engine": "miller",
+        "format": "ipv4",
+        "rule": "ip"
+      }
+    ],
+    "mirrors": [
+      "http://security-research.dyndns.org/pub/malware-feeds/ponmocup-infected-domains-shadowserver.csv"
+    ]
   }
 }
