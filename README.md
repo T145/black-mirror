@@ -394,6 +394,7 @@ Use the domain list.
   - [GitHub's Dirty Dancing](https://github.com/StevenBlack/hosts/pull/1784)
 - [C2IntelFeeds](https://github.com/drb-ra/C2IntelFeeds#c2intelfeeds)
 - [joewein's custom list](https://www.joewein.net/dl/bl/dom-bl.txt)
+- [SecurityResearch](http://security-research.dyndns.org/pub/malware-feeds)
 
 ### ⬜ Whitelists
 
