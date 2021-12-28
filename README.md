@@ -316,7 +316,6 @@ Use the domain list.
 - [Charles B. Haley](http://charles.the-haleys.org/)
 - [darklist](https://www.darklist.de/)
 - [cryptolaemus](https://paste.cryptolaemus.com/)
-- [vxvault](http://vxvault.net/ViriList.php)
 - [alienvault](https://status.alienvault.cloud/)
 - [turris](https://project.turris.cz/greylist-data/legend.txt)
 - [spamhaus](https://www.spamhaus.org/)
@@ -392,9 +391,9 @@ Use the domain list.
 - [shady-hosts](https://github.com/shreyasminocha/shady-hosts)
 - [DataPlane](https://dataplane.org/)
 - [Clefspeare13](https://tinyurl.com/clefspeare13)
+  - [GitHub's Dirty Dancing](https://github.com/StevenBlack/hosts/pull/1784)
 - [C2IntelFeeds](https://github.com/drb-ra/C2IntelFeeds#c2intelfeeds)
-- [joewein](https://www.joewein.net/)
-  - https://www.joewein.net/dl/bl/dom-bl.txt
+- [joewein's custom list](https://www.joewein.net/dl/bl/dom-bl.txt)
 
 ### ⬜ Whitelists
 
@@ -444,8 +443,8 @@ Use the domain list.
   - Only TikTok list; WhiteOps is should be double-checked.
 - [ut-capitole](https://dsi.ut-capitole.fr/blacklists/index_en.php)
   - Has a lot of deprecated data.
-- [joewein](https://www.joewein.net/)
-  - https://www.joewein.net/dl/bl/dom-bl-base.txt _(Likely draws from other sources.)_
+- [joewein's base list](https://www.joewein.net/dl/bl/dom-bl-base.txt)
+  - Likely draws from other sources.
 - [shallalist](https://www.shallalist.de/)
   - Similar to `ut-capitole`.
 
@@ -568,11 +567,8 @@ Use the domain list.
 - [TR-PhishingList](https://github.com/HorusTeknoloji/TR-PhishingList)
 - [Spam404](https://github.com/Spam404/lists/blob/master/main-blacklist.txt)
 - [bgpranking](https://github.com/D4-project/BGP-Ranking/tree/master/bgpranking/config/modules)
-
-#### [GitHub's Dirty Dancing](https://github.com/StevenBlack/hosts/pull/1784)
-
-- Clefspeare13's OG pronhosts
-- Sprillen's Pron Records
+- [vxvault](http://vxvault.net/ViriList.php)
+  - Offline since last check.
 
 ### 🕵🏻 Lamers Unwelcome
 
