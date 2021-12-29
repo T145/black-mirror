@@ -12,9 +12,9 @@ RUN echo 'Acquire::Languages "none";' >> /etc/apt/apt.conf.d/00aptitude
 # https://github.com/phusion/baseimage-docker/issues/58#issuecomment-47995343
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
-# use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
-# install apt-utils early so debconf doesn't delay package configuration
-# upgrade with proper configurations
+# > use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
+# > install apt-utils early so debconf doesn't delay package configuration
+# > upgrade with proper configurations
 RUN apt-get -y update \
 && apt-get -y install apt-utils \
 && apt-get -y upgrade
@@ -34,9 +34,8 @@ RUN apt-get -y install aria2 build-essential curl gawk git golang-go gpg grepcid
 # install twint in base python, otherwise "pandas" will be perma-stuck building in pypy
 RUN pip3 install twint
 
-# install project discovery utilities
-# the install paths are where "main.go" lives
 # https://golang.org/doc/go-get-install-deprecation#what-to-use-instead
+# the install paths are where "main.go" lives
 
 # https://github.com/projectdiscovery/httpx#usage
 RUN go install github.com/projectdiscovery/httpx/cmd/httpx@latest
