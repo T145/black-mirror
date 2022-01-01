@@ -2648,7 +2648,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/{if ($2~/^[^-]) {print $2}}"
+        "rule": "$0~/^[^#]/{if ($2~/^[^-]/) {print $2}}"
       }
     ],
     "mirrors": [
@@ -2687,7 +2687,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/{if ($2~/^[^-]) {print $2}}"
+        "rule": "$0~/^[^#]/{if ($2~/^[^-]/) {print $2}}"
       }
     ],
     "mirrors": [
