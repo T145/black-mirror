@@ -323,6 +323,7 @@ Use the domain list.
 - [botvrij](https://www.botvrij.eu/)
 - [malsilo|raw-data](https://raw-data.gitlab.io/post/feeds/)
 - [The Quantum Ad-List](https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list)
+  - Last updated nearly a year ago and may need to be deprecated, though most hosts seem to be up.
 - [Airelle's Hosts](http://rlwpx.free.fr/WPFF/hosts.htm)
 - [someonewhocares](https://someonewhocares.org/)
 - [280blocker](https://280blocker.net/)
@@ -395,6 +396,11 @@ Use the domain list.
 - [C2IntelFeeds](https://github.com/drb-ra/C2IntelFeeds#c2intelfeeds)
 - [joewein's custom list](https://www.joewein.net/dl/bl/dom-bl.txt)
 - [SecurityResearch](http://security-research.dyndns.org/pub/malware-feeds)
+- [Zonefiles](https://zonefiles.io/compromised-ip-list/)
+- [Sunshine](https://www.sunshine.it/)
+  - [Webradio](http://195.201.227.227/webradio.htm) (Germans know how to party: be nice!)
+- [bjornstar](https://github.com/bjornstar/hosts)
+- [CyberSaiyan](https://github.com/CyberSaiyanIT/InfoSharing)
 
 ### ⬜ Whitelists
 
@@ -408,7 +414,7 @@ Use the domain list.
 - [tor_bulkexitlist](https://check.torproject.org/api/bulk)
 - [dan_me_uk](https://www.dan.me.uk/)
 - [CoinBlockerWhiteList](https://gitlab.com/ZeroDot1/CoinBlockerLists/-/blob/master/white_list.txt)
-- [ShadowWhisperer's Filter](https://github.com/ShadowWhisperer/BlockLists/tree/master/Whitelists)
+- <strike>[ShadowWhisperer's Filter](https://github.com/ShadowWhisperer/BlockLists/tree/master/Whitelists)</strike>
 - [1Hosts Excludes](https://github.com/badmojr/1Hosts/tree/master/submit_here)
 - [Team Cymru](https://team-cymru.com/community-services/bogon-reference/bogon-reference-http/)
 
@@ -456,8 +462,6 @@ Use the domain list.
 - [Squidguard Archive](http://squidguard.mesd.k12.or.us/)
   - Found individually a while back
   - Contains some obvious placeholder/garbage domains
-- [Zonefiles.io](https://zonefiles.io/compromised-ip-list/)
-  - Supposedly up-to-date, but references many offline resources like the legacy abuse.ch domains
 - [BarbBlock](https://github.com/paulgb/BarbBlock/blob/master/blacklists/domain-list.txt)
 - [NSABlocklist](https://github.com/nextdns/metadata/blob/master/privacy/blocklists/nsa-blocklist.json)
 - [Wael](https://www.wael.name/other/best-blocklist/)
@@ -512,8 +516,6 @@ Use the domain list.
 - [android-stalkerware](https://github.com/diskurse/android-stalkerware)
 - [stalkerware-urls](https://github.com/astryzia/stalkerware-urls)
   - Presently archived.
-- [CyberSaiyanIT](https://github.com/CyberSaiyanIT/InfoSharing)
-  - PIHOLE feed is empty.
 - [h3x](https://tracker.h3x.eu/)
   - Feeds are empty.
 - [Minimal-Hosts-Blocker](https://github.com/arcetera/Minimal-Hosts-Blocker)
@@ -570,6 +572,17 @@ Use the domain list.
 - [bgpranking](https://github.com/D4-project/BGP-Ranking/tree/master/bgpranking/config/modules)
 - [vxvault](http://vxvault.net/ViriList.php)
   - Offline since last check.
+- [anti-pr0n](https://github.com/CyanideBrother/anti-pr0n)
+- [Evil Domains](https://github.com/hell-sh/Evil-Domains/tree/master/lists)
+- [AdBlock Rules](https://bitbucket.org/nicktabick/adblock-rules/src/master/)
+- [Clickbait Blocklist](https://github.com/cpeterso/clickbait-blocklist)
+- [Hello, Goodbye](https://github.com/bcye/Hello-Goodbye)
+- [0131 blocklist](https://github.com/austinhuang0131/0131-block-list)
+- [international-list](https://github.com/betterwebleon/international-list)
+- [nothingblock](https://github.com/sayomelu/nothingblock)
+- [Andromeda uBlock](https://github.com/hit3shjain/Andromeda-ublock-list)
+- [uBlock Filters Plus](https://github.com/IDKwhattoputhere/uBlock-Filters-Plus)
+- [I don't care about cookies](https://www.i-dont-care-about-cookies.eu/abp/)
 
 ### 🕵🏻 Lamers Unwelcome
 
