@@ -99,13 +99,13 @@
     "color": "black",
     "filters": [
       {
-        "engine": "miller",
+        "engine": "mawk",
         "format": "ipv4",
-        "rule": 2
+        "rule": "$0~/^[^#]/{printf \"%s\",$1}"
       }
     ],
     "mirrors": [
-      "https://sslbl.abuse.ch/blacklist/sslipblacklist.csv"
+      "https://sslbl.abuse.ch/blacklist/sslipblacklist.txt"
     ]
   },
   "abuse_ch_threatfox": {
