@@ -86,7 +86,7 @@ Reference the [contribution guidelines](https://github.com/T145/black-mirror/blo
     <tr>
       <td>black_domain</td>
       <td>Domain entries</td>
-      <td id="black-domain-count">7,843,766</td>
+      <td id="black-domain-count">7,843,767</td>
       <td id="black-domain-filesize">175M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_domain.checksums">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/black_domain.txt">🔗]</a></td>
       <td align="center"><a href="https://www.dropbox.com/s/r2tx1sll3pr7w5c/black_domain.checksums?dl=1">[✔️</a>,<a href="https://www.dropbox.com/s/20ydwo7v4hvkmqt/black_domain.txt?dl=1">🔗]</a></td>
@@ -94,16 +94,16 @@ Reference the [contribution guidelines](https://github.com/T145/black-mirror/blo
     <tr>
       <td>black_ipv4</td>
       <td>IPv4 addresses</td>
-      <td id="black-ipv4-count">818,596</td>
-      <td id="black-ipv4-filesize">12M</td>
+      <td id="black-ipv4-count">813,181</td>
+      <td id="black-ipv4-filesize">11M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.checksums">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.txt">🔗]</a></td>
       <td align="center"><a href="https://www.dropbox.com/s/h79pqs7v3dtwt0a/black_ipv4.checksums?dl=1">[✔️</a>,<a href="https://www.dropbox.com/s/3cacdmggwgz4qqx/black_ipv4.txt?dl=1">🔗]</a></td>
     </tr>
     <tr>
       <td>black_ipv4_cidr</td>
       <td>IPv4 CIDR blocks</td>
-      <td id="black-ipv4-cidr-count">13,330</td>
-      <td id="black-ipv4-cidr-filesize">221K</td>
+      <td id="black-ipv4-cidr-count">13,350</td>
+      <td id="black-ipv4-cidr-filesize">222K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4_cidr.checksums">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4_cidr.txt">🔗]</a></td>
       <td align="center"><a href="https://www.dropbox.com/s/wvr7dcrxnugygkq/black_ipv4_cidr.checksums?dl=1">[✔️</a>,<a href="https://www.dropbox.com/s/m7c7nwvbfbdxylr/black_ipv4_cidr.txt?dl=1">🔗]</a></td>
     </tr>
