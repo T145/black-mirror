@@ -1,0 +1,236 @@
+{
+  "1hosts_excludes": {
+    "_desc": "https://github.com/badmojr/1Hosts#readme",
+    "_license": "mpl-2.0",
+    "_homepage": "https://github.com/badmojr/1Hosts/tree/master/submit_here",
+    "method": "allow",
+    "content": {
+      "filter": "NONE",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS",
+        "format": "domain"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/exclude_for_all.txt"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "1hosts_includes": {
+    "_desc": "https://github.com/badmojr/1Hosts#readme",
+    "_license": "mpl-2.0",
+    "_homepage": "https://github.com/badmojr/1Hosts/tree/master/submit_here",
+    "method": "block",
+    "content": {
+      "filter": "NONE",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS",
+        "format": "domain"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_all.txt"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "1hosts_pro_includes": {
+    "_desc": "https://github.com/badmojr/1Hosts#readme",
+    "_license": "mpl-2.0",
+    "_homepage": "https://github.com/badmojr/1Hosts/tree/master/submit_here",
+    "method": "block",
+    "content": {
+      "filter": "NONE",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS",
+        "format": "domain"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_Pro_Xtra_only.txt"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "280blocker": {
+    "_desc": "https://280blocker.net/welcome/",
+    "_license": "not-available",
+    "_homepage": "https://280blocker.net",
+    "method": "block",
+    "content": {
+      "filter": "NONE",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "ADGUARD",
+        "format": "domain"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_Pro_Xtra_only.txt"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "360_netlab": {
+    "_desc": "https://data.netlab.360.com/dga/",
+    "_license": "mit",
+    "_homepage": "https://www.netlab.360.com/",
+    "method": "block",
+    "content": {
+      "filter": "NONE",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_SECOND_COLUMN",
+        "format": "domain"
+      }
+    ],
+    "mirrors": [
+      "https://data.netlab.360.com/feeds/dga/dga.txt"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "4skinskywalker": {
+    "_desc": "https://github.com/4skinSkywalker/Anti-Porn-HOSTS-File#readme",
+    "_license": "all-rights-reserved",
+    "_homepage": "https://github.com/4skinSkywalker/Anti-Porn-HOSTS-File/blob/master/HOSTS.txt",
+    "method": "block",
+    "content": {
+      "filter": "NONE",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "domain"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/4skinSkywalker/Anti-Porn-HOSTS-File/master/HOSTS.txt"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "abuse_ch_feodotracker": {
+    "_desc": "https://feodotracker.abuse.ch/blocklist/",
+    "_license": "cc0-1.0",
+    "_homepage": "https://abuse.ch/",
+    "method": "block",
+    "content": {
+      "filter": "NONE",
+      "type": "json"
+    },
+    "formats": [
+      {
+        "filter": "JQ_FEODO_DOMAIN",
+        "format": "domain"
+      },
+      {
+        "filter": "JQ_FEODO_IPV4",
+        "format": "ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.json"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.txt"
+    }
+  },
+  "abuse_ch_sslbl": {
+    "_desc": "https://sslbl.abuse.ch/blacklist/",
+    "_license": "cc0-1.0",
+    "_homepage": "https://abuse.ch/",
+    "method": "block",
+    "content": {
+      "filter": "NONE",
+      "type": "csv"
+    },
+    "formats": [
+      {
+        "filter": "NO_HEADER_SECOND_COLUMN",
+        "format": "ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://sslbl.abuse.ch/blacklist/sslipblacklist.csv"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://sslbl.abuse.ch/blacklist/sslipblacklist.txt"
+    }
+  },
+  "abuse_ch_threatfox": {
+    "_desc": "https://threatfox.abuse.ch/browse/",
+    "_license": "cc0-1.0",
+    "_homepage": "https://abuse.ch/",
+    "method": "block",
+    "content": {
+      "filter": "ZIP",
+      "type": "json"
+    },
+    "formats": [
+      {
+        "filter": "JQ_THREATFOX_DOMAIN",
+        "format": "domain"
+      },
+      {
+        "filter": "JQ_THREATFOX_IPV4",
+        "format": "ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://threatfox.abuse.ch/export/json/full/"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://threatfox.abuse.ch/downloads/hostfile/"
+    }
+  },
+  "abuse_ch_urlhaus": {
+    "_desc": "https://urlhaus.abuse.ch/browse/",
+    "_license": "cc0-1.0",
+    "_homepage": "https://abuse.ch/",
+    "method": "block",
+    "content": {
+      "filter": "ZIP",
+      "type": "csv"
+    },
+    "formats": [
+      {
+        "filter": "JQ_URLHAUS_DOMAIN",
+        "format": "domain"
+      },
+      {
+        "filter": "JQ_URLHAUS_IPV4",
+        "format": "ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://urlhaus.abuse.ch/downloads/csv/"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://urlhaus.abuse.ch/downloads/hostfile/"
+    }
+  }
+}

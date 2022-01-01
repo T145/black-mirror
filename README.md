@@ -583,6 +583,7 @@ Use the domain list.
 - [Andromeda uBlock](https://github.com/hit3shjain/Andromeda-ublock-list)
 - [uBlock Filters Plus](https://github.com/IDKwhattoputhere/uBlock-Filters-Plus)
 - [I don't care about cookies](https://www.i-dont-care-about-cookies.eu/abp/)
+- [Netlab's Mirai Scanner](https://data.netlab.360.com/mirai-scanner/)
 
 ### 🕵🏻 Lamers Unwelcome
 
