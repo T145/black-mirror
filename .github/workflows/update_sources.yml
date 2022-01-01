@@ -23,6 +23,7 @@ jobs:
           jq -SM '.' core/sources.json | sponge core/sources.json
           jq -jr 'to_entries[] | select(.value.color == "black") | .value.mirrors[0] as $url | .value.filters[] | if (.engine == "cat" or .engine == "mawk") then ($url, " ") else empty end' core/sources.json | sed 's/ $/\n/' >exports/sources.pihole
           jq -r 'to_entries[].value.mirrors[]' core/sources.json >exports/sources.txt
+          parsort -u -S 100% --parallel=48 exports/sources.txt | sponge exports/sources.txt
         shell: bash
       - name: Update Sources
         if: success()
