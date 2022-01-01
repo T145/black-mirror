@@ -81,26 +81,31 @@
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "jq",
+        "format": "domain",
+        "rule": ".[] | select(.hostname != null) | .hostname"
+      },
+      {
+        "engine": "jq",
         "format": "ipv4",
-        "rule": "$0~/^[^#]/"
+        "rule": ".[].ip_address"
       }
     ],
     "mirrors": [
-      "https://feodotracker.abuse.ch/downloads/ipblocklist_aggressive.txt"
+      "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.json"
     ]
   },
   "abuse_ch_sslbl": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "miller",
         "format": "ipv4",
-        "rule": "$0~/^[^#]/"
+        "rule": 2
       }
     ],
     "mirrors": [
-      "https://sslbl.abuse.ch/blacklist/sslipblacklist_aggressive.txt"
+      "https://sslbl.abuse.ch/blacklist/sslipblacklist.csv"
     ]
   },
   "abuse_ch_threatfox": {
@@ -199,19 +204,6 @@
       "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/search-blacklist.txt"
     ]
   },
-  "adscore": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".[] | .ipv4"
-      }
-    ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/adscore?json"
-    ]
-  },
   "airelle_hmis": {
     "color": "black",
     "filters": [
@@ -288,19 +280,6 @@
     ],
     "mirrors": [
       "https://reputation.alienvault.com/reputation.data"
-    ]
-  },
-  "alphastrike": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".[] | .ipv4"
-      }
-    ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/alphastrike?json"
     ]
   },
   "android_tracking": {
@@ -424,19 +403,6 @@
       "https://raw.githubusercontent.com/adversarialtools/apple-telemetry/master/blacklist"
     ]
   },
-  "arbor": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".[] | .ipv4"
-      }
-    ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/arbor?json"
-    ]
-  },
   "ayashige": {
     "color": "black",
     "filters": [
@@ -525,6 +491,19 @@
       "https://www.binarydefense.com/banlist.txt"
     ]
   },
+  "bjornstar": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$1~/^0.0.0.0$/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/bjornstar/hosts/master/hosts"
+    ]
+  },
   "blackbird": {
     "color": "black",
     "filters": [
@@ -536,19 +515,6 @@
     ],
     "mirrors": [
       "https://getblackbird.net/blacklist/hosts.txt"
-    ]
-  },
-  "blindferret": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".[] | .ipv4"
-      }
-    ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/blindferret?json"
     ]
   },
   "blockada_ddgtrackerradar": {
@@ -590,7 +556,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -604,7 +570,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -618,7 +584,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -632,7 +598,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -646,7 +612,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -660,7 +626,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -674,7 +640,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -688,7 +654,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -702,7 +668,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -716,7 +682,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -730,7 +696,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -744,7 +710,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -758,7 +724,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -772,7 +738,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -786,7 +752,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -800,7 +766,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -814,7 +780,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -828,7 +794,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -842,7 +808,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/{print $1}"
       }
     ],
     "mirrors": [
@@ -971,19 +937,6 @@
       "https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv"
     ]
   },
-  "censys": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".[] | .ipv4"
-      }
-    ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/censys?json"
-    ]
-  },
   "certego": {
     "color": "black",
     "filters": [
@@ -1008,20 +961,6 @@
     ],
     "mirrors": [
       "http://charles.the-haleys.org/ssh_dico_attack_hdeny_format.php/hostsdeny.txt"
-    ]
-  },
-  "ciarmy": {
-    "_comment": "Produces some unique IPs apart from 'cinsscore'",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".[] | .ipv4"
-      }
-    ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/ciarmy?json"
     ]
   },
   "cinsscore": {
@@ -1234,17 +1173,23 @@
       "https://cybercrime-tracker.net/ccamgate.php"
     ]
   },
-  "cybergreen": {
+  "cybersaiyan": {
+    "_comment": "https://infosharing.cybersaiyan.it/feeds/CS-PIHOLE",
     "color": "black",
     "filters": [
       {
         "engine": "jq",
+        "format": "domain",
+        "rule": ".[] | select(.value.type == \"domain\") | .indicator"
+      },
+      {
+        "engine": "jq",
         "format": "ipv4",
-        "rule": ".[] | .ipv4"
+        "rule": ".[] | select(.value.type == \"IPv4\") | .indicator"
       }
     ],
     "mirrors": [
-      "https://isc.sans.edu/api/threatlist/cybergreen?json"
+      "https://infosharing.cybersaiyan.it/feeds/CS-COMMUNITY-HTTP?v=json&tr=1"
     ]
   },
   "cyberthreat": {
@@ -1543,19 +1488,6 @@
       "https://block.energized.pro/extensions/xtreme/formats/domains.txt"
     ]
   },
-  "erratasec": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".[] | .ipv4"
-      }
-    ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/erratasec?json"
-    ]
-  },
   "exodus_trackers": {
     "color": "black",
     "filters": [
@@ -1799,19 +1731,6 @@
       "https://raw.githubusercontent.com/infinitytec/blocklists/master/scams-and-phishing.txt"
     ]
   },
-  "internetcensus": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".[] | .ipv4"
-      }
-    ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/internetcensus?json"
-    ]
-  },
   "ios_trackers": {
     "color": "black",
     "filters": [
@@ -1825,7 +1744,138 @@
       "https://raw.githubusercontent.com/jakejarvis/ios-trackers/master/blocklist.txt"
     ]
   },
-  "ipip": {
+  "ipsum": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "$0~/^[^#]/{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt"
+    ]
+  },
+  "isc_adscore": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/adscore?json"
+    ]
+  },
+  "isc_alphastrike": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/alphastrike?json"
+    ]
+  },
+  "isc_arbor": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/arbor?json"
+    ]
+  },
+  "isc_blindferret": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/blindferret?json"
+    ]
+  },
+  "isc_censys": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/censys?json"
+    ]
+  },
+  "isc_ciarmy": {
+    "_comment": "Produces some unique IPs apart from 'cinsscore'",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/ciarmy?json"
+    ]
+  },
+  "isc_cybergreen": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/cybergreen?json"
+    ]
+  },
+  "isc_erratasec": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/erratasec?json"
+    ]
+  },
+  "isc_internetcensus": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/internetcensus?json"
+    ]
+  },
+  "isc_ipip": {
     "color": "black",
     "filters": [
       {
@@ -1838,17 +1888,121 @@
       "https://isc.sans.edu/api/threatlist/ipip?json"
     ]
   },
-  "ipsum": {
+  "isc_netsystems": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "jq",
         "format": "ipv4",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ".[] | .ipv4"
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt"
+      "https://isc.sans.edu/api/threatlist/netsystems?json"
+    ]
+  },
+  "isc_onyphe": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/onyphe?json"
+    ]
+  },
+  "isc_rapid7sonar": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/rapid7sonar?json"
+    ]
+  },
+  "isc_recyber": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/recyber?json"
+    ]
+  },
+  "isc_scorecard": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/scorecard?json"
+    ]
+  },
+  "isc_shodan": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/shodan?json"
+    ]
+  },
+  "isc_stretchoid": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/stretchoid?json"
+    ]
+  },
+  "isc_univmichigan": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/univmichigan?json"
+    ]
+  },
+  "isc_univsydney": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "jq",
+        "format": "ipv4",
+        "rule": ".[] | .ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://isc.sans.edu/api/threatlist/univsydney?json"
     ]
   },
   "joewein": {
@@ -2239,19 +2393,6 @@
       "https://myip.ms/files/bots/live_webcrawlers.txt"
     ]
   },
-  "netsystems": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".[] | .ipv4"
-      }
-    ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/netsystems?json"
-    ]
-  },
   "nocoin": {
     "color": "black",
     "filters": [
@@ -2380,19 +2521,6 @@
     ],
     "mirrors": [
       "https://dbl.oisd.nl"
-    ]
-  },
-  "onyphe": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".[] | .ipv4"
-      }
-    ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/onyphe?json"
     ]
   },
   "opendbl_talos": {
@@ -2527,6 +2655,19 @@
       "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual%20lists/The_Quantum_Abuse-List.txt"
     ]
   },
+  "quantum_extreme_youtube_ads": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual%20lists/Extreme%20lists/The_Quantum_Extreme_Youtube_Ad-List.txt"
+    ]
+  },
   "quantum_privacy": {
     "color": "black",
     "filters": [
@@ -2564,32 +2705,6 @@
     ],
     "mirrors": [
       "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual%20lists/The_Quantum_Youtube-Ads-List.txt"
-    ]
-  },
-  "rapid7sonar": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".[] | .ipv4"
-      }
-    ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/rapid7sonar?json"
-    ]
-  },
-  "recyber": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".[] | .ipv4"
-      }
-    ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/recyber?json"
     ]
   },
   "resecure_clop": {
@@ -2781,7 +2896,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/"
       }
     ],
     "mirrors": [
@@ -2794,7 +2909,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/"
       }
     ],
     "mirrors": [
@@ -2807,7 +2922,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/"
       }
     ],
     "mirrors": [
@@ -2820,7 +2935,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/"
       }
     ],
     "mirrors": [
@@ -2833,7 +2948,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/"
       }
     ],
     "mirrors": [
@@ -2846,7 +2961,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/"
       }
     ],
     "mirrors": [
@@ -2859,7 +2974,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#|^-]/"
       }
     ],
     "mirrors": [
@@ -2877,19 +2992,6 @@
     ],
     "mirrors": [
       "https://report.rutgers.edu/DROP/attackers"
-    ]
-  },
-  "scorecard": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".[] | .ipv4"
-      }
-    ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/scorecard?json"
     ]
   },
   "securityresearch_cif": {
@@ -2947,7 +3049,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2960,7 +3062,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2973,7 +3075,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2986,7 +3088,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -2999,7 +3101,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -3012,7 +3114,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -3025,7 +3127,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -3038,7 +3140,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -3051,7 +3153,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -3064,7 +3166,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -3077,7 +3179,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -3090,7 +3192,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -3103,7 +3205,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -3116,7 +3218,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -3129,7 +3231,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -3142,7 +3244,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -3155,7 +3257,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -3168,7 +3270,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -3181,7 +3283,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
@@ -3194,24 +3296,11 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "$0~/^[^#]/{print $1}"
       }
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Tunnels"
-    ]
-  },
-  "shadowwhisperer_whitelist": {
-    "color": "white",
-    "filters": [
-      {
-        "engine": "cat",
-        "format": "domain",
-        "rule": ""
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Whitelists/Filter"
     ]
   },
   "shady_hosts": {
@@ -3225,19 +3314,6 @@
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/shreyasminocha/shady-hosts/main/hosts"
-    ]
-  },
-  "shodan": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".[] | .ipv4"
-      }
-    ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/shodan?json"
     ]
   },
   "sinfonietta_gambling": {
@@ -3385,26 +3461,27 @@
       "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts"
     ]
   },
-  "stretchoid": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".[] | .ipv4"
-      }
-    ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/stretchoid?json"
-    ]
-  },
-  "taz_spam": {
+  "sunshine": {
     "color": "black",
     "filters": [
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/"
+        "rule": "NR>7"
+      }
+    ],
+    "mirrors": [
+      "https://www.sunshine.it/blacklist.txt"
+    ]
+  },
+  "taz_spam": {
+    "_comment": "Assuming all hosts prefixed with hashtags need to be ignored, and that URLs (or what appear to be partial URLs) are still viable.",
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"//\"}$0~/^[^#]/{if ($1~/^(http|\\/)/) {print $2} else {print $1}}"
       }
     ],
     "mirrors": [
@@ -3551,32 +3628,6 @@
       "https://www.turris.cz/greylist-data/greylist-latest.csv"
     ]
   },
-  "univmichigan": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".[] | .ipv4"
-      }
-    ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/univmichigan?json"
-    ]
-  },
-  "univsydney": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".[] | .ipv4"
-      }
-    ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/univsydney?json"
-    ]
-  },
   "viriback": {
     "color": "black",
     "filters": [
@@ -3625,14 +3676,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^127\\.0\\.0\\.1[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
-      },
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}"
+        "rule": "$0~/^[^#]/{if ($1~/^127.0.0.1$/) {print $2} else if ($1!~/^#/) {print $1}}"
       }
     ],
     "mirrors": [
@@ -3807,6 +3853,19 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
+    ]
+  },
+  "zonefiles": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "NR>1"
+      }
+    ],
+    "mirrors": [
+      "https://zonefiles.io/f/compromised/ip/live/"
     ]
   }
 }
