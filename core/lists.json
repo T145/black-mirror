@@ -39,7 +39,10 @@
       "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_all.txt"
     ],
     "checksums": {},
-    "scan": false
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_all.txt"
+    }
   },
   "1hosts_pro_includes": {
     "_desc": "https://github.com/badmojr/1Hosts#readme",
@@ -60,7 +63,10 @@
       "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_Pro_Xtra_only.txt"
     ],
     "checksums": {},
-    "scan": false
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_Pro_Xtra_only.txt"
+    }
   },
   "280blocker": {
     "_desc": "https://280blocker.net/welcome/",
@@ -78,7 +84,7 @@
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_Pro_Xtra_only.txt"
+      "https://filter.futa.gg/280blocker/280blocker_domain_ag.txt"
     ],
     "checksums": {},
     "scan": false
@@ -102,7 +108,10 @@
       "https://data.netlab.360.com/feeds/dga/dga.txt"
     ],
     "checksums": {},
-    "scan": false
+    "scan": false,
+    "variants": {
+      "pihole": "https://data.netlab.360.com/feeds/dga/dga.txt"
+    }
   },
   "4skinskywalker": {
     "_desc": "https://github.com/4skinSkywalker/Anti-Porn-HOSTS-File#readme",
@@ -123,7 +132,10 @@
       "https://raw.githubusercontent.com/4skinSkywalker/Anti-Porn-HOSTS-File/master/HOSTS.txt"
     ],
     "checksums": {},
-    "scan": false
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/4skinSkywalker/Anti-Porn-HOSTS-File/master/HOSTS.txt"
+    }
   },
   "abuse_ch_feodotracker": {
     "_desc": "https://feodotracker.abuse.ch/blocklist/",
@@ -232,5 +244,277 @@
     "variants": {
       "pihole": "https://urlhaus.abuse.ch/downloads/hostfile/"
     }
+  },
+  "additional_hosts_activation": {
+    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+    "_license": "mit",
+    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
+    "method": "block",
+    "content": {
+      "filter": "NONE",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS",
+        "format": "domain"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/activation.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/activation.txt"
+    }
+  },
+  "additional_hosts_ads": {
+    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+    "_license": "mit",
+    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
+    "method": "block",
+    "content": {
+      "filter": "NONE",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS",
+        "format": "domain"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/adservers-and-trackers.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/adservers-and-trackers.txt"
+    }
+  },
+  "additional_hosts_fake": {
+    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+    "_license": "mit",
+    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
+    "method": "block",
+    "content": {
+      "filter": "NONE",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS",
+        "format": "domain"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/fake-domains.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/fake-domains.txt"
+    }
+  },
+  "additional_hosts_search": {
+    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+    "_license": "mit",
+    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
+    "_notes": "Presently raw, but the present filter is maintained to avoid any potential format changes.",
+    "method": "block",
+    "content": {
+      "filter": "NONE",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS",
+        "format": "domain"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/search-blacklist.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/search-blacklist.txt"
+    }
+  },
+  "additional_hosts_iranian_parking": {
+    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+    "_license": "mit",
+    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
+    "method": "block",
+    "content": {
+      "filter": "NONE",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS",
+        "format": "domain"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/parking-iranian.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/parking-iranian.txt"
+    }
+  },
+  "additional_hosts_iranian_unwanted": {
+    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+    "_license": "mit",
+    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
+    "method": "block",
+    "content": {
+      "filter": "NONE",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS",
+        "format": "domain"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/unwanted-iranian.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/unwanted-iranian.txt"
+    }
+  },
+  "airelle_mis": {
+    "_desc": "http://rlwpx.free.fr/WPFF/hosts.htm",
+    "_license": "cc-by-3.0",
+    "_homepage": "http://rlwpx.free.fr/WPFF/hosts.htm",
+    "method": "block",
+    "content": {
+      "filter": "7Z",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "domain"
+      }
+    ],
+    "mirrors": [
+      "http://rlwpx.free.fr/WPFF/hmis.7z"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "airelle_pub": {
+    "_desc": "http://rlwpx.free.fr/WPFF/hosts.htm",
+    "_license": "cc-by-3.0",
+    "_homepage": "http://rlwpx.free.fr/WPFF/hosts.htm",
+    "method": "block",
+    "content": {
+      "filter": "7Z",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "domain"
+      }
+    ],
+    "mirrors": [
+      "http://rlwpx.free.fr/WPFF/hpub.7z"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "airelle_rsk": {
+    "_desc": "http://rlwpx.free.fr/WPFF/hosts.htm",
+    "_license": "cc-by-3.0",
+    "_homepage": "http://rlwpx.free.fr/WPFF/hosts.htm",
+    "method": "block",
+    "content": {
+      "filter": "7Z",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "domain"
+      }
+    ],
+    "mirrors": [
+      "http://rlwpx.free.fr/WPFF/hrsk.7z"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "airelle_sex": {
+    "_desc": "http://rlwpx.free.fr/WPFF/hosts.htm",
+    "_license": "cc-by-3.0",
+    "_homepage": "http://rlwpx.free.fr/WPFF/hosts.htm",
+    "method": "block",
+    "content": {
+      "filter": "7Z",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "domain"
+      }
+    ],
+    "mirrors": [
+      "http://rlwpx.free.fr/WPFF/hsex.7z"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "airelle_trc": {
+    "_desc": "http://rlwpx.free.fr/WPFF/hosts.htm",
+    "_license": "cc-by-3.0",
+    "_homepage": "http://rlwpx.free.fr/WPFF/hosts.htm",
+    "method": "block",
+    "content": {
+      "filter": "7Z",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "domain"
+      }
+    ],
+    "mirrors": [
+      "http://rlwpx.free.fr/WPFF/htrc.7z"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "alienvault": {
+    "_desc": "https://otx.alienvault.com/endpoint-security/welcome",
+    "_license": "not-available",
+    "_homepage": "https://status.alienvault.cloud/",
+    "_notes": "http://data.alienvault.com/feed/binary/Packages",
+    "method": "block",
+    "content": {
+      "filter": "NONE",
+      "type": "text"
+    },
+    "formats": [
+      {
+        "filter": "HASHTAG_DELIMITED_FILE",
+        "format": "ipv4"
+      }
+    ],
+    "mirrors": [
+      "https://reputation.alienvault.com/reputation.data"
+    ],
+    "checksums": {},
+    "scan": false
   }
 }
