@@ -106,13 +106,13 @@ main() {
         select(.value.color == $color) |
         {key, mirrors: .value.mirrors} |
         .extension = (.mirrors[0] | match(".(tar.gz|zip|7z|json)").captures[0].string // "txt") |
-        (.mirrors | join("\t")), " out=\(.key).\(.extension)"' core/sources.json |
+        (.mirrors | join("\t")), " out=\(.key).\(.extension)"' data/sources.json |
       aria2c -i- -d "$cache_dir" --conf-path='./configs/aria2.conf'
     set -e
 
     jq -r --arg color "$color" 'to_entries[] |
         select(.value.color == $color) |
-         .key as $k | .value.filters[] | "\($k)#\(.engine)#\(.format)#\(.rule)"' core/sources.json |
+         .key as $k | .value.filters[] | "\($k)#\(.engine)#\(.format)#\(.rule)"' data/sources.json |
       while IFS='#' read -r key engine format rule; do
         src_list=$(find -P -O3 "$cache_dir" -type f -name "${key}.*")
 
