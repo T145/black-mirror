@@ -19,8 +19,8 @@ jobs:
       - name: Create Builds
         run: |
           :> logs/aria2.log
-          chmod 755 -R core/*.bash -R scripts/* -R imports/*.bash -R imports/*.py
-          ./core/build.bash
+          chmod 755 -R scripts/
+          ./scripts/build_release.bash
           ./scripts/update_readme.bash
         shell: bash
       - name: Upload Build Artifacts
