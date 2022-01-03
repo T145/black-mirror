@@ -24,7 +24,11 @@ cat -s "$LIST" |
             case "$FORMAT_FILTER" in
                 MAWK_WITH_COMMENTS_FIRST_COLUMN) mawk '$0~/^[^#]/{print $1}' ;;
                 MAWK_WITH_COMMENTS_SECOND_COLUMN) mawk '$0~/^[^#]/{print $2}' ;;
-                ADGUARD) mawk '' ;;
+                ADGUARD)
+                    # https://kb.adguard.com/en/general/dns-filtering-syntax
+                    # https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters#examples-1
+                    mawk -F"[|^]" '$0~/^\|/{if ($4~/^$/) {print $3}}'
+                    ;;
                 HOSTS_FILE) ghosts -m -o -p -noheader -stats=false ;;
                 ALIENVAULT) mawk -F# '{print $1}' ;;
             esac
