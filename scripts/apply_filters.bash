@@ -37,6 +37,8 @@ cat -s "$LIST" |
             case "$FORMAT_FILTER" in
                 FEODO_DOMAIN) jq -r '.[] | select(.hostname != null) | .hostname' ;;
                 FEODO_IPV4) jq -r '.[].ip_address' ;;
+                THREATFOX_DOMAIN) jq -r '.[] | .[] | select(.ioc_type == "domain") | .ioc_value' ;;
+                THREATFOX_IPV4) jq -r '.[] | .[] | select(.ioc_type == "ip:port") | .ioc_value | split(":")[0]' ;;
             esac
         ;;
         CSV)
