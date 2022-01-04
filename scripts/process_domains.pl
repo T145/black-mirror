@@ -10,19 +10,21 @@ use Data::Validate::Domain qw(is_domain);
 
 sub main() {
     while (<>) {
-        chomp $_;
+        chomp($_);
 
         # https://perlmaven.com/fatal-errors-in-external-modules
         eval {
             my $domain = try {
-                domain_to_ascii $_;
-            }
+                domain_to_ascii($_);
+            };
 
             last if !defined $domain;
 
-            say $domain if is_domain($domain, {
+            if (is_domain($domain, {
                 domain_allow_underscore => "true"
-            }))
+            })) {
+                say($domain);
+            }
         } or do {
             my $error = $@ || 'Unknown failure';
             warn "Could not parse '$_' - $error";
