@@ -55,6 +55,7 @@
        longdesc="https://github.com/xvello/letsblockit#readme"
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
+  <p><em></a>Explore <a href="https://privacyguides.org/">PrivacyGuides</a> or <a href="https://prism-break.org/en/all/">Prism Break</a> to discover services that respect your privacy!</em></p>
 </div>
 
 ## 🖋️ [Manifesto](https://github.com/T145/black-mirror/blob/master/MANIFESTO.md)
