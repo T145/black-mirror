@@ -18,6 +18,8 @@ readonly CONTENT_TYPE FORMAT_FILTER FORMAT METHOD LIST CACHE
 # content filters will be applied to lists as soon as they're downloaded
 # this way multiple extract operations per format will not be necessary
 
+echo "[INFO] Operating on: ${LIST}"
+
 cat -s "$LIST" |
     case "$CONTENT_TYPE" in
         TEXT)
