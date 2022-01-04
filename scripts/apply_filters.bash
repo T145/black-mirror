@@ -57,4 +57,5 @@ cat -s "$LIST" |
                 URLHAUS_IPV4) mlr --mmap --csv --skip-comments -N put -S '$3 =~ "https?://([0-9][^/|^:]+)"; $IP = "\1"' then cut -f IP then uniq -a ;;
             esac
         ;;
-    esac >> "build/${FORMAT,,}_${METHOD,,}.txt"
+    esac | # filter blank lines and duplicates
+        mawk 'NF && !seen[$0]++' >> "build/${METHOD,,}_${FORMAT,,}.txt"
