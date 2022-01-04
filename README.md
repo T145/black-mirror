@@ -55,7 +55,8 @@
        longdesc="https://github.com/xvello/letsblockit#readme"
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
-  <p><em></a>Explore <a href="https://privacyguides.org/">PrivacyGuides</a> or <a href="https://prism-break.org/en/all/">Prism Break</a> to discover services that respect your privacy!</em></p>
+  <p><em></a>Explore <a href="https://privacyguides.org/">PrivacyGuides</a> and <a href="https://prism-break.org/en/all/">Prism Break</a> to discover services that respect your privacy!</em></p>
+  <p><em></a>Use <a href="https://github.com/iamadamdev/bypass-paywalls-chrome#readme">BypassPaywalls</a> to access restricted and useful information, such as the <a href="https://www.wsj.com/articles/the-facebook-files-11631713039">WSJ's Facebook Files</a>.</em></p>
 </div>
 
 ## 🖋️ [Manifesto](https://github.com/T145/black-mirror/blob/master/MANIFESTO.md)
