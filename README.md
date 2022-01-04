@@ -49,6 +49,11 @@
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
   <p><br><em>Test your browser's tracking resilience with <a href="https://coveryourtracks.eff.org/">CoverYourTracks</a>!</em></p>
+  <p><br><em><a href="https://github.com/xvello/letsblockit/"><img src="https://raw.githubusercontent.com/xvello/letsblockit/main/data/assets/images/logo-small.svg"
+       alt="letsblockit"
+       longdesc="https://github.com/xvello/letsblockit#readme"
+       crossorigin="anonymous"
+       referrerpolicy="no-referrer" /></a>Support <a href="https://letsblock.it/">LetsBlockIt</a> to consolidate and simply uBlock filters!</em></p>
 </div>
 
 ## 🖋️ [Manifesto](https://github.com/T145/black-mirror/blob/master/MANIFESTO.md)
