@@ -32,6 +32,11 @@ cat -s "$LIST" |
                     ;;
                 HOSTS_FILE) ghosts -m -o -p -noheader -stats=false ;;
                 ALIENVAULT) mawk -F# '{print $1}' ;;
+                BENKOW_DOMAIN) perl -M'Data::Validate::Domain qw(is_domain)' -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?"}{-keep}/g) {say $3 if is_domain($3)}' ;;
+                BENKOW_IPV4) perl -MRegexp::Common=net -nE 'say $& while /$RE{net}{IPv4}/g' ;;
+                BENKOW_IPV6) perl -MRegexp::Common=net -nE 'say $& while /$RE{net}{IPv6}/g' ;;
+                EASYLIST) ;; # TODO
+                BLACKBIRD) mawk 'NR>4' ;; # '$0~/^[^;]/'
             esac
         ;;
         JSON)
