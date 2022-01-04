@@ -12,15 +12,16 @@ sub main() {
     while (<>) {
         chomp($_);
 
-        my $line = try {
-            domain_to_ascii($_);
-        };
-
-        last if !defined $line;
-
-        say $line if (is_domain($line, {
+        if (is_domain($_, {
             domain_allow_underscore => "true"
-        }));
+        })) {
+            my $line = try {
+                domain_to_ascii($_);
+            };
+
+            last if !defined $line;
+            say $line;
+        }
     }
 }
 
