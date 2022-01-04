@@ -22,6 +22,7 @@ cat -s "$LIST" |
     case "$CONTENT_TYPE" in
         TEXT)
             case "$FORMAT_FILTER" in
+                NONE) cat -s ;;
                 MAWK_WITH_COMMENTS_FIRST_COLUMN) mawk '$0~/^[^#]/{print $1}' ;;
                 MAWK_WITH_COMMENTS_SECOND_COLUMN) mawk '$0~/^[^#]/{print $2}' ;;
                 ADGUARD)
@@ -39,6 +40,7 @@ cat -s "$LIST" |
                 FEODO_IPV4) jq -r '.[].ip_address' ;;
                 THREATFOX_DOMAIN) jq -r '.[] | .[] | select(.ioc_type == "domain") | .ioc_value' ;;
                 THREATFOX_IPV4) jq -r '.[] | .[] | select(.ioc_type == "ip:port") | .ioc_value | split(":")[0]' ;;
+                AYASHIGE) jq -r '.[].fqdn' ;;
             esac
         ;;
         CSV)

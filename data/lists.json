@@ -10,7 +10,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
@@ -31,7 +31,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
@@ -55,7 +55,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
@@ -87,7 +87,10 @@
       "https://filter.futa.gg/280blocker/280blocker_domain_ag.txt"
     ],
     "checksums": {},
-    "scan": false
+    "scan": false,
+    "variants": {
+      "adguard": "https://filter.futa.gg/280blocker/280blocker_domain_ag.txt"
+    }
   },
   "360_netlab": {
     "_desc": "https://data.netlab.360.com/dga/",
@@ -100,7 +103,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_SECOND_COLUMN",
+        "filter": "MAWK_WITH_COMMENTS_SECOND_COLUMN",
         "format": "DOMAIN"
       }
     ],
@@ -256,7 +259,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
@@ -280,7 +283,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
@@ -304,7 +307,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
@@ -329,7 +332,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
@@ -353,7 +356,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
@@ -377,7 +380,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
@@ -513,6 +516,344 @@
     ],
     "mirrors": [
       "https://reputation.alienvault.com/reputation.data"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "perflyst_android_tracking": {
+    "_desc": "https://github.com/Perflyst/PiHoleBlocklist#readme",
+    "_license": "mit",
+    "_homepage": "https://github.com/Perflyst/PiHoleBlocklist",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt"
+    }
+  },
+  "perflyst_amazon_fire_tv": {
+    "_desc": "https://github.com/Perflyst/PiHoleBlocklist#readme",
+    "_license": "mit",
+    "_homepage": "https://github.com/Perflyst/PiHoleBlocklist",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/AmazonFireTV.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/AmazonFireTV.txt"
+    }
+  },
+  "perflyst_session_replay": {
+    "_desc": "https://github.com/Perflyst/PiHoleBlocklist#readme",
+    "_license": "mit",
+    "_homepage": "https://github.com/Perflyst/PiHoleBlocklist",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SessionReplay.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SessionReplay.txt"
+    }
+  },
+  "perflyst_smart_tv": {
+    "_desc": "https://github.com/Perflyst/PiHoleBlocklist#readme",
+    "_license": "mit",
+    "_homepage": "https://github.com/Perflyst/PiHoleBlocklist",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt",
+      "pihole": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt"
+    }
+  },
+  "anti_ad": {
+    "_desc": "https://github.com/privacy-protection-tools/anti-AD#readme",
+    "_license": "mit",
+    "_homepage": "https://github.com/privacy-protection-tools/anti-AD",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-adguard.txt",
+      "pihole": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt",
+      "easylist": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt",
+      "dnsmasq": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/adblock-for-dnsmasq.conf",
+      "clash": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml",
+      "surge": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt",
+      "surge2": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge2.txt"
+    }
+  },
+  "antisocialengineer": {
+    "_desc": "https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community#readme",
+    "_license": "apache-2.0",
+    "_homepage": "https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community/main/UK-Community.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community/main/UK-Community.txt"
+    }
+  },
+  "anudeep_adservers": {
+    "_desc": "https://github.com/anudeepND/blacklist#readme",
+    "_license": "mit",
+    "_homepage": "https://github.com/anudeepND/blacklist",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt"
+    }
+  },
+  "anudeep_coinminer": {
+    "_desc": "https://github.com/anudeepND/blacklist#readme",
+    "_license": "mit",
+    "_homepage": "https://github.com/anudeepND/blacklist",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt"
+    }
+  },
+  "anudeep_facebook": {
+    "_desc": "https://github.com/anudeepND/blacklist#readme",
+    "_license": "mit",
+    "_homepage": "https://github.com/anudeepND/blacklist",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt"
+    }
+  },
+  "anudeep_whitelist": {
+    "_desc": "https://github.com/anudeepND/whitelist#readme",
+    "_license": "mit",
+    "_homepage": "https://github.com/anudeepND/whitelist",
+    "_notes": "The 'referral-sites' & 'optional-list' have been ignored.",
+    "method": "ALLOW",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
+    }
+  },
+  "apple_telemetry": {
+    "_desc": "https://github.com/adversarialtools/apple-telemetry#readme",
+    "_license": "gpl-3.0",
+    "_homepage": "https://github.com/adversarialtools/apple-telemetry",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/adversarialtools/apple-telemetry/master/blacklist"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/adversarialtools/apple-telemetry/master/blacklist"
+    }
+  },
+  "ayashige": {
+    "_desc": "https://github.com/ninoseki/ayashige#readme",
+    "_license": "mit",
+    "_homepage": "https://github.com/ninoseki/ayashige",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "AYASHIGE",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://ayashige.herokuapp.com/api/v1/domains/"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "azorult_domains": {
+    "_desc": "https://azorult-tracker.net/about",
+    "_license": "mit",
+    "_homepage": "https://azorult-tracker.net/",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://azorult-tracker.net/api/list/domain?format=plain"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://azorult-tracker.net/api/list/domain?format=plain"
+    }
+  },
+  "azorult_ips": {
+    "_desc": "https://azorult-tracker.net/about",
+    "_license": "mit",
+    "_homepage": "https://azorult-tracker.net/",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "IPV4"
+      }
+    ],
+    "mirrors": [
+      "https://azorult-tracker.net/api/list/ip?format=plain"
     ],
     "checksums": {},
     "scan": false
