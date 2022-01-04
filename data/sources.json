@@ -409,11 +409,10 @@
       {
         "engine": "jq",
         "format": "domain",
-        "rule": ".[].domain"
+        "rule": ".[].fqdn"
       }
     ],
     "mirrors": [
-      "https://ayashige.herokuapp.com/feed",
       "https://ayashige.herokuapp.com/api/v1/domains/"
     ]
   },
