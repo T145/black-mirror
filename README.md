@@ -50,11 +50,6 @@
        referrerpolicy="no-referrer" />
   <p><br><em>Test your browser's tracking resilience with <a href="https://coveryourtracks.eff.org/">CoverYourTracks</a>!</em></p>
   <p><em></a>Support <a href="https://letsblock.it/">LetsBlockIt</a> to consolidate and simplify uBlock filters!</em></p>
-  <a href="https://github.com/xvello/letsblockit/"><img src="https://raw.githubusercontent.com/xvello/letsblockit/main/data/assets/images/logo-small.svg"
-       alt="letsblockit"
-       longdesc="https://github.com/xvello/letsblockit#readme"
-       crossorigin="anonymous"
-       referrerpolicy="no-referrer" />
   <p><em></a>Explore <a href="https://privacyguides.org/">PrivacyGuides</a> and <a href="https://prism-break.org/en/all/">Prism Break</a> to discover services that respect your privacy!</em></p>
   <p><em></a>Use <a href="https://github.com/iamadamdev/bypass-paywalls-chrome#readme">BypassPaywalls</a> to access restricted and useful information, such as the <a href="https://www.wsj.com/articles/the-facebook-files-11631713039">WSJ's Facebook Files</a>.</em></p>
 </div>
