@@ -95,19 +95,6 @@
       "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.json"
     ]
   },
-  "abuse_ch_sslbl": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "$0~/^[^#]/{printf \"%s\",$1}"
-      }
-    ],
-    "mirrors": [
-      "https://sslbl.abuse.ch/blacklist/sslipblacklist.txt"
-    ]
-  },
   "abuse_ch_threatfox": {
     "color": "black",
     "filters": [
