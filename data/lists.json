@@ -857,5 +857,131 @@
     ],
     "checksums": {},
     "scan": false
+  },
+  "benkow_cc": {
+    "_desc": "https://benkow.cc/passwords.php",
+    "_license": "not-available",
+    "_homepage": "https://benkow.cc/index.php",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "BENKOW_DOMAIN",
+        "format": "IPV4"
+      },
+      {
+        "filter": "BENKOW_IPV4",
+        "format": "IPV4"
+      },
+      {
+        "filter": "BENKOW_IPV6",
+        "format": "IPV6"
+      }
+    ],
+    "mirrors": [
+      "https://benkow.cc/export.php"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "betterfyi": {
+    "_desc": "https://better.fyi/trackers/",
+    "_license": "agpl-3.0",
+    "_homepage": "https://source.ind.ie/better/better",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "EASYLIST",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://better.fyi/blockerList.txt"
+    ],
+    "checksums": {},
+    "scan": true,
+    "variants": {
+      "easylist": "https://better.fyi/blockerList.txt",
+      "pihole": "https://block.energized.pro/assets/sources/filter/better-fyi-trackers.txt"
+    }
+  },
+  "binarydefense": {
+    "_desc": "https://www.binarydefense.com/cybersecurity-solutions/threat-hunting/",
+    "_license": "all-rights-reserved",
+    "_homepage": "https://www.binarydefense.com/",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "IPV4"
+      }
+    ],
+    "mirrors": [
+      "https://www.binarydefense.com/banlist.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://www.binarydefense.com/banlist.txt"
+    }
+  },
+  "bjornstar": {
+    "_desc": "https://github.com/bjornstar/hosts#readme",
+    "_license": "unlicense",
+    "_homepage": "https://github.com/bjornstar/hosts",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/bjornstar/hosts/master/hosts"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/bjornstar/hosts/master/hosts"
+    }
+  },
+  "blackbird": {
+    "_desc": "https://getblackbird.net/documentation/",
+    "_license": "https://getblackbird.net/documentation/license/",
+    "_homepage": "https://getblackbird.net/",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "BLACKBIRD",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://getblackbird.net/blacklist/hosts.txt"
+    ],
+    "checksums": {},
+    "scan": true,
+    "variants": {
+      "pihole": "https://getblackbird.net/blacklist/hosts.txt"
+    }
   }
 }
