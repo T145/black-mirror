@@ -869,7 +869,7 @@
     },
     "formats": [
       {
-        "filter": "REGEX_DOMAIN",
+        "filter": "URL_REGEX_DOMAIN",
         "format": "IPV4"
       },
       {
@@ -1272,6 +1272,396 @@
     ],
     "mirrors": [
       "http://danger.rulez.sk/projects/bruteforceblocker/blist.php?mindays=7&mincount=1"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "c2_intel_feeds": {
+    "_desc": "https://github.com/drb-ra/C2IntelFeeds#readme",
+    "_license": "cc-by-sa-4.0",
+    "_homepage": "https://github.com/drb-ra/C2IntelFeeds",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "CSV"
+    },
+    "formats": [
+      {
+        "filter": "C2_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "C2_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/domainC2swithURLwithIP-30day-filter-abused.csv"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "c2_intel_vpns": {
+    "_desc": "https://github.com/drb-ra/C2IntelFeeds#readme",
+    "_license": "cc-by-sa-4.0",
+    "_homepage": "https://github.com/drb-ra/C2IntelFeeds",
+    "method": "ALLOW",
+    "content": {
+      "filter": "NONE",
+      "type": "CSV"
+    },
+    "formats": [
+      {
+        "filter": "C2_VPN",
+        "format": "IPV4"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/vpn/NordVPNIPs.csv"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "charles_haley": {
+    "_desc": "http://charles.the-haleys.org/ssh_dictionary_attacks.php",
+    "_license": "not-available",
+    "_homepage": "http://charles.the-haleys.org/",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_DENY",
+        "format": "IPV4"
+      }
+    ],
+    "mirrors": [
+      "http://charles.the-haleys.org/ssh_dico_attack_with_timestamps.php?days=3"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "cinsscore": {
+    "_desc": "https://cinsscore.com/#list",
+    "_license": "not-available",
+    "_homepage": "https://cinsscore.com/",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "IPV4"
+      }
+    ],
+    "mirrors": [
+      "https://cinsscore.com/list/ci-badguys.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://cinsscore.com/list/ci-badguys.txt"
+    }
+  },
+  "cname_trackers": {
+    "_desc": "https://github.com/AdguardTeam/cname-trackers#readme",
+    "_license": "mit",
+    "_homepage": "https://github.com/AdguardTeam/cname-trackers",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/master/combined_disguised_trackers_justdomains.txt"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "coinblockerlists_main": {
+    "_desc": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master#simple-lists-that-can-help-prevent-cryptomining-in-the-browser-or-other-applications",
+    "_license": "agpl-3.0",
+    "_homepage": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/raw/master/list.txt",
+      "https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list.txt",
+      "https://zerodot1.gitlab.io/CoinBlockerLists/list.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://zerodot1.gitlab.io/CoinBlockerLists/list.txt"
+    }
+  },
+  "coinblockerlists_browser": {
+    "_desc": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master#simple-lists-that-can-help-prevent-cryptomining-in-the-browser-or-other-applications",
+    "_license": "agpl-3.0",
+    "_homepage": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/raw/master/list_browser.txt",
+      "https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_browser.txt",
+      "https://zerodot1.gitlab.io/CoinBlockerLists/list_browser.txt"
+    ],
+    "checksums": {},
+    "scan": true,
+    "variants": {
+      "pihole": "https://zerodot1.gitlab.io/CoinBlockerLists/list_browser.txt"
+    }
+  },
+  "coinblockerlists_optional": {
+    "_desc": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master#simple-lists-that-can-help-prevent-cryptomining-in-the-browser-or-other-applications",
+    "_license": "agpl-3.0",
+    "_homepage": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/raw/master/list_optional.txt",
+      "https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt",
+      "https://zerodot1.gitlab.io/CoinBlockerLists/list_optional.txt"
+    ],
+    "checksums": {},
+    "scan": true,
+    "variants": {
+      "pihole": "https://zerodot1.gitlab.io/CoinBlockerLists/list_optional.txt"
+    }
+  },
+  "coinblockerlists_whitelist": {
+    "_desc": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master#simple-lists-that-can-help-prevent-cryptomining-in-the-browser-or-other-applications",
+    "_license": "agpl-3.0",
+    "_homepage": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master",
+    "method": "ALLOW",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/raw/master/white_list.txt",
+      "https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/white_list.txt",
+      "https://zerodot1.gitlab.io/CoinBlockerLists/white_list.txt"
+    ],
+    "checksums": {},
+    "scan": true
+  },
+  "cryptolaemus": {
+    "_desc": "https://paste.cryptolaemus.com/feed.xml",
+    "_license": "not-available",
+    "_homepage": "https://paste.cryptolaemus.com/",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "CRYPTOLAEMUS_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "REGEX_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "mirrors": [
+      "https://paste.cryptolaemus.com/dbucket/"
+    ],
+    "checksums": {},
+    "scan": true
+  },
+  "certego": {
+    "_desc": "https://twitter.com/Certego_Intel",
+    "_license": "not-available",
+    "_homepage": "https://twitter.com/Certego_Intel",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "download": {
+      "utility": "TWINT"
+    },
+    "formats": [
+      {
+        "filter": "CERTEGO_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "CERTEGO_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "mirrors": [
+      "https://twitter.com/Certego_Intel"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "cybersaiyan": {
+    "_desc": "https://github.com/CyberSaiyanIT/InfoSharing#readme",
+    "_license": "all-rights-reserved",
+    "_homepage": "https://github.com/CyberSaiyanIT/InfoSharing",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "CYBERSAIYAN_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "CYBERSAIYAN_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "mirrors": [
+      "https://infosharing.cybersaiyan.it/feeds/CS-COMMUNITY-HTTP?v=json&tr=1"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://infosharing.cybersaiyan.it/feeds/CS-PIHOLE"
+    }
+  },
+  "cyber_cure_ips": {
+    "_desc": "https://docs.cybercure.ai/reference/get_ips",
+    "_license": "not-available",
+    "_homepage": "https://www.cybercure.ai/start",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "CYBER_CURE_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "mirrors": [
+      "http://api.cybercure.ai/feed/get_ips?type=json"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "cyber_cure_urls": {
+    "_desc": "https://docs.cybercure.ai/reference/get_url",
+    "_license": "not-available",
+    "_homepage": "https://www.cybercure.ai/start",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "CYBER_CURE_DOMAIN_URL",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "CYBER_CURE_IPV4_URL",
+        "format": "IPV4"
+      }
+    ],
+    "mirrors": [
+      "http://api.cybercure.ai/feed/get_url?type=json"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "cybercrime_all": {
+    "_desc": "https://cybercrime-tracker.net/tools.php",
+    "_license": "cc0-1.0",
+    "_homepage": "https://cybercrime-tracker.net/",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "SCHEMELESS_URL_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "REGEX_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "mirrors": [
+      "https://cybercrime-tracker.net/all.php"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "cybercrime_ccmgate": {
+    "_desc": "https://cybercrime-tracker.net/tools.php",
+    "_license": "cc0-1.0",
+    "_homepage": "https://cybercrime-tracker.net/",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "URL_REGEX_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "REGEX_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "mirrors": [
+      "https://cybercrime-tracker.net/ccamgate.php"
     ],
     "checksums": {},
     "scan": false
