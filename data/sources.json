@@ -959,8 +959,7 @@
       }
     ],
     "mirrors": [
-      "https://cinsscore.com/list/ci-badguys.txt",
-      "http://www.ciarmy.com/list/ci-badguys.txt"
+      "https://cinsscore.com/list/ci-badguys.txt"
     ]
   },
   "clefspeare13": {
@@ -1059,7 +1058,7 @@
       "https://zerodot1.gitlab.io/CoinBlockerLists/white_list.txt"
     ]
   },
-  "cryptolaemus_dbucket": {
+  "cryptolaemus": {
     "_comment": "All reported domains seem to appear in the dbucket, so use it for domains.",
     "color": "black",
     "filters": [
@@ -1078,20 +1077,6 @@
       "https://paste.cryptolaemus.com/dbucket/"
     ]
   },
-  "cryptolaemus_feed": {
-    "_comment": "Recently reported IPs appear in the feed.",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "ipv4",
-        "rule": "BEGIN{RS=\"([0-9]+\\\\.){3}[0-9]+\"}RT{print RT}"
-      }
-    ],
-    "mirrors": [
-      "https://paste.cryptolaemus.com/feed.xml"
-    ]
-  },
   "cyber_cure_ips": {
     "color": "black",
     "filters": [
@@ -1102,7 +1087,7 @@
       }
     ],
     "mirrors": [
-      "https://api.cybercure.ai/feed/get_ips"
+      "http://api.cybercure.ai/feed/get_ips"
     ]
   },
   "cyber_cure_urls": {
@@ -1120,7 +1105,7 @@
       }
     ],
     "mirrors": [
-      "https://api.cybercure.ai/feed/get_url"
+      "http://api.cybercure.ai/feed/get_url"
     ]
   },
   "cybercrime_all": {
@@ -1176,20 +1161,6 @@
     ],
     "mirrors": [
       "https://infosharing.cybersaiyan.it/feeds/CS-COMMUNITY-HTTP?v=json&tr=1"
-    ]
-  },
-  "cyberthreat": {
-    "_comment": "The 'urls.txt' downloads at KBs/s, and the 'ips.txt' file is empty.",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "NR>1"
-      }
-    ],
-    "mirrors": [
-      "https://blocklist.cyberthreatcoalition.org/vetted/domain.txt"
     ]
   },
   "cymru_bogons": {
