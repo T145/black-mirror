@@ -266,7 +266,6 @@ Use the domain list.
 - [threatcrowd](https://threatcrowd.org/)
 - [antisocialengineer](https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community)
 - [windscribe](https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png)
-- [cyberthreat](https://www.cyberthreatcoalition.org/blocklist)
 - [not_on_my_shift](https://orca.pet/notonmyshift/)
 - [lightswitch05|developerdan](https://github.com/lightswitch05/hosts)
 - [resecure_me](https://rescure.me/feeds.html)
@@ -405,6 +404,7 @@ Use the domain list.
   - [Webradio](http://195.201.227.227/webradio.htm) (Germans know how to party: be nice!)
 - [bjornstar](https://github.com/bjornstar/hosts)
 - [CyberSaiyan](https://github.com/CyberSaiyanIT/InfoSharing)
+- [d3ward](https://github.com/d3ward/toolz#readme)
 
 ### ⬜ Whitelists
 
@@ -421,6 +421,7 @@ Use the domain list.
 - <strike>[ShadowWhisperer's Filter](https://github.com/ShadowWhisperer/BlockLists/tree/master/Whitelists)</strike>
 - [1Hosts Excludes](https://github.com/badmojr/1Hosts/tree/master/submit_here)
 - [Team Cymru](https://team-cymru.com/community-services/bogon-reference/bogon-reference-http/)
+- [C2Intel Nord VPN IPs](https://github.com/drb-ra/C2IntelFeeds#readme)
 
 ### 🥢 Duplicates
 
@@ -588,6 +589,8 @@ Use the domain list.
 - [uBlock Filters Plus](https://github.com/IDKwhattoputhere/uBlock-Filters-Plus)
 - [I don't care about cookies](https://www.i-dont-care-about-cookies.eu/abp/)
 - [Netlab's Mirai Scanner](https://data.netlab.360.com/mirai-scanner/)
+- [cyberthreat](https://www.cyberthreatcoalition.org/blocklist)
+  - Service has ended.
 
 ### 🕵🏻 Lamers Unwelcome
 
