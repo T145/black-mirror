@@ -983,5 +983,31 @@
     "variants": {
       "pihole": "https://getblackbird.net/blacklist/hosts.txt"
     }
+  },
+  "blockada_tracker_radar": {
+    "_desc": "https://github.com/blokadaorg/landing-github-pages/blob/master/scripts/ddg.py",
+    "_license": "all-rights-reserved",
+    "_homepage": "https://blokada.org/",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/ddgtrackerradar/standard/hosts.txt",
+      "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt",
+      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/mirror/v5/ddgtrackerradar/standard/hosts.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt"
+    }
   }
 }
