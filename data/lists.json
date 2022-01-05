@@ -869,15 +869,15 @@
     },
     "formats": [
       {
-        "filter": "BENKOW_DOMAIN",
+        "filter": "REGEX_DOMAIN",
         "format": "IPV4"
       },
       {
-        "filter": "BENKOW_IPV4",
+        "filter": "REGEX_IPV4",
         "format": "IPV4"
       },
       {
-        "filter": "BENKOW_IPV6",
+        "filter": "REGEX_IPV6",
         "format": "IPV6"
       }
     ],
@@ -1009,5 +1009,271 @@
     "variants": {
       "pihole": "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt"
     }
+  },
+  "blocklist_de": {
+    "_desc": "https://www.blocklist.de/en/export.html",
+    "_license": "not-available",
+    "_homepage": "https://www.blocklist.de/en/index.html",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "REGEX_IPV4",
+        "format": "IPV4"
+      },
+      {
+        "filter": "REGEX_IPV6",
+        "format": "IPV6"
+      }
+    ],
+    "mirrors": [
+      "https://lists.blocklist.de/lists/all.txt",
+      "https://www.blocklist.de/downloads/export-ips_all.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt"
+    }
+  },
+  "block_list_project_main": {
+    "_desc": "https://github.com/blocklistproject/Lists#readme",
+    "_license": "unlicense",
+    "_homepage": "https://blocklistproject.github.io/Lists/",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/everything-nl.txt",
+      "https://blocklistproject.github.io/Lists/alt-version/everything-nl.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/blocklistproject/Lists/master/everything.txt",
+      "dnsmasq": "https://raw.githubusercontent.com/blocklistproject/Lists/master/dnsmasq-version/everything-dnsmasq.txt"
+    }
+  },
+  "block_list_project_smart_tv": {
+    "_desc": "https://github.com/blocklistproject/Lists#readme",
+    "_license": "unlicense",
+    "_homepage": "https://blocklistproject.github.io/Lists/",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/smart-tv-nl.txt",
+      "https://blocklistproject.github.io/Lists/alt-version/smart-tv-nl.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/blocklistproject/Lists/master/smart-tv.txt",
+      "dnsmasq": "https://raw.githubusercontent.com/blocklistproject/Lists/master/dnsmasq-version/smart-tv-dnsmasq.txt"
+    }
+  },
+  "block_list_project_whatsapp": {
+    "_desc": "https://github.com/blocklistproject/Lists#readme",
+    "_license": "unlicense",
+    "_homepage": "https://blocklistproject.github.io/Lists/",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/whatsapp-nl.txt",
+      "https://blocklistproject.github.io/Lists/alt-version/whatsapp-nl.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/blocklistproject/Lists/master/whatsapp.txt",
+      "dnsmasq": "https://raw.githubusercontent.com/blocklistproject/Lists/master/dnsmasq-version/whatsapp-dnsmasq.txt"
+    }
+  },
+  "block_list_project_vaping": {
+    "_desc": "https://github.com/blocklistproject/Lists#readme",
+    "_license": "unlicense",
+    "_homepage": "https://blocklistproject.github.io/Lists/",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/vaping-nl.txt",
+      "https://blocklistproject.github.io/Lists/alt-version/vaping-nl.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/blocklistproject/Lists/master/vaping.txt",
+      "dnsmasq": "https://raw.githubusercontent.com/blocklistproject/Lists/master/dnsmasq-version/vaping-dnsmasq.txt"
+    }
+  },
+  "botvrij_covid": {
+    "_desc": "https://www.botvrij.eu/data/",
+    "_license": "not-available",
+    "_homepage": "https://www.botvrij.eu/",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "CSV"
+    },
+    "formats": [
+      {
+        "filter": "BOTVIRJ_COVID",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://www.botvrij.eu/data/blocklist/blocklist_domain.csv"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "botvrij_ioc_domain": {
+    "_desc": "https://www.botvrij.eu/data/",
+    "_license": "not-available",
+    "_homepage": "https://www.botvrij.eu/",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://www.botvrij.eu/data/ioclist.domain.raw"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://www.botvrij.eu/data/ioclist.domain.raw"
+    }
+  },
+  "botvrij_ioc_ip_src": {
+    "_desc": "https://www.botvrij.eu/data/",
+    "_license": "not-available",
+    "_homepage": "https://www.botvrij.eu/",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "BOTVIRJ_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "mirrors": [
+      "https://www.botvrij.eu/data/ioclist.ip-src.raw"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "botvrij_ioc_ip_dst": {
+    "_desc": "https://www.botvrij.eu/data/",
+    "_license": "not-available",
+    "_homepage": "https://www.botvrij.eu/",
+    "_notes": "Skipping the URL list",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "BOTVIRJ_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "mirrors": [
+      "https://www.botvrij.eu/data/ioclist.ip-dst.raw"
+    ],
+    "checksums": {},
+    "scan": false
+  },
+  "d3ward": {
+    "_desc": "https://github.com/d3ward/toolz#readme",
+    "_license": "cc-by-sa-4.0",
+    "_homepage": "https://github.com/d3ward/toolz",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/d3ward/toolz/master/src/d3host.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/d3ward/toolz/master/src/d3host.txt"
+    }
+  },
+  "bruteforceblocker": {
+    "_desc": "https://danger.rulez.sk/index.php/bruteforceblocker/",
+    "_license": "all-rights-reserved",
+    "_homepage": "https://github.com/dgerzo/bruteforceblocker",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "IPV4"
+      }
+    ],
+    "mirrors": [
+      "http://danger.rulez.sk/projects/bruteforceblocker/blist.php?mindays=7&mincount=1"
+    ],
+    "checksums": {},
+    "scan": false
   }
 }
