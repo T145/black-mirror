@@ -24,6 +24,10 @@ readonly CONTENT_TYPE FORMAT_FILTER FORMAT METHOD LIST CACHE
 
 echo "[INFO] Operating on: ${LIST}"
 
+get_domains_from_urls() {
+    perl -M'Data::Validate::Domain qw(is_domain)' -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?"}{-keep}/g) {say $3 if is_domain($3)}'
+}
+
 cat -s "$LIST" |
     case "$CONTENT_TYPE" in
         TEXT)
@@ -38,7 +42,7 @@ cat -s "$LIST" |
                     ;;
                 HOSTS_FILE) ghosts -m -o -p -noheader -stats=false ;;
                 ALIENVAULT) mawk -F# '{print $1}' ;;
-                URL_REGEX_DOMAIN) perl -M'Data::Validate::Domain qw(is_domain)' -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?"}{-keep}/g) {say $3 if is_domain($3)}' ;;
+                URL_REGEX_DOMAIN) get_domains_from_urls ;;
                 URL_REGEX_IPV4) ;; # TODO?
                 REGEX_IPV4) perl -MRegexp::Common=net -nE 'say $& while /$RE{net}{IPv4}/g' ;;
                 REGEX_IPV6) perl -MRegexp::Common=net -nE 'say $& while /$RE{net}{IPv6}/g' ;;
@@ -64,8 +68,6 @@ cat -s "$LIST" |
                 CYBERSAIYAN_DOMAIN) jq -r '.[] | select(.value.type == "domain") | .indicator' ;;
                 CYBERSAIYAN_IPV4) jq -r '.[] | select(.value.type == "IPv4") | .indicator' ;;
                 CYBER_CURE_IPV4) jq -r '.data.ip[]' ;;
-                CYBER_CURE_DOMAIN_URL) ;; # TODO (Work some Miller magic)
-                CYBER_CURE_IPV4_URL) ;; # TODO (Work some Miller magic)
             esac
         ;;
         CSV)
@@ -77,6 +79,7 @@ cat -s "$LIST" |
                 C2_DOMAIN) ;; # TODO
                 C2_IPV4) ;; # TODO
                 C2_VPN) ;; # TODO
+                CYBER_CURE_DOMAIN_URL) tr ',' '\n' | get_domains_from_urls ;;
             esac
         ;;
     esac | # filter blank lines and duplicates
