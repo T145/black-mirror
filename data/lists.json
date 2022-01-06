@@ -1598,20 +1598,16 @@
     "method": "BLOCK",
     "content": {
       "filter": "NONE",
-      "type": "JSON"
+      "type": "CSV"
     },
     "formats": [
       {
         "filter": "CYBER_CURE_DOMAIN_URL",
         "format": "DOMAIN"
-      },
-      {
-        "filter": "CYBER_CURE_IPV4_URL",
-        "format": "IPV4"
       }
     ],
     "mirrors": [
-      "http://api.cybercure.ai/feed/get_url?type=json"
+      "http://api.cybercure.ai/feed/get_url?type=csv"
     ],
     "checksums": {},
     "scan": false
