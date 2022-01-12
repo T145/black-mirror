@@ -28,6 +28,32 @@ get_domains_from_urls() {
     perl -M'Data::Validate::Domain qw(is_domain)' -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?"}{-keep}/g) {say $3 if is_domain($3)}'
 }
 
+get_exodus_content() {
+    # edge cases:
+    # "mns\..*\.aliyuncs\.com" (currently being ignored)
+    # "mst[0-9]*.is.autonavi.com" / "mt[0-9]*.google.cn" (currently being ignored)
+
+    # "network_signature" & "code_signature" currently have invalid domains
+    # https://etip.exodus-privacy.eu.org/trackers/export
+    jq -r '.trackers[] |
+        (.website | split("/")[2])
+        (.network_signature | split ("|")[] | gsub("\\\\"; "") | ltrimstr(".*")),
+        (.code_signature | split("|")[] | rtrimstr(".") | split(".") | reverse | join(".")),
+    | ltrimstr(".")
+    '
+    # gawk '{
+    #     switch ($1) {
+    #     case /^([[:alnum:]_-]{1,63}\.)+[[:alpha:]]+([[:space:]]|$)/:
+    #         print tolower($1) > "imports/out/exodus_domains.txt"
+    #         break
+    #     case /^([0-9]{1,3}\.){3}[0-9]{1,3}+(\/|:|$)/:
+    #         sub(/:.*/, "", $1)
+    #         print $1 > "imports/out/exodus_ips.txt"
+    #         break
+    #     }
+    # }'
+}
+
 cat -s "$LIST" |
     case "$CONTENT_TYPE" in
         TEXT)
