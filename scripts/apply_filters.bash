@@ -82,6 +82,9 @@ cat -s "$LIST" |
                 CYBERCRIME_DOMAIN) mawk -F/ '{print $1}' | perl ./scripts/process_domains.pl ;;
                 #SCHEMELESS_URL_DOMAIN) gawk -F/ '$1~/^([[:alnum:]_-]{1,63}\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}' ;;
                 #SCHEMELESS_URL_IPV4) gawk -F/ '$1~/^([0-9]{1,3}\.){3}[0-9]{1,3}+(:|$)/{split($1,a,":");print a[1]}' ;;
+                REGEX_CIDR) ;; # TODO
+                DATAPLANE_IPV4) mawk -F'|' '$0~/^[^#]/{gsub(/ /,""); print $3}' ;;
+                DSHIELD) mawk '$0~/^[^#]/&&$1!~/^Start$/{printf "%s/%s\n",$1,$3}' ;;
             esac
         ;;
         JSON)
@@ -94,6 +97,7 @@ cat -s "$LIST" |
                 CYBERSAIYAN_DOMAIN) jq -r '.[] | select(.value.type == "domain") | .indicator' ;;
                 CYBERSAIYAN_IPV4) jq -r '.[] | select(.value.type == "IPv4") | .indicator' ;;
                 CYBER_CURE_IPV4) jq -r '.data.ip[]' ;;
+                DISCONNECTME) jq -r '.entities[] | "\(.properties[])\n\(.resources[])"' ;;
             esac
         ;;
         CSV)
