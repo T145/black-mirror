@@ -238,6 +238,10 @@ Use the domain list.
 ### ⬛ Blacklists
 
 - [Perflyst](https://github.com/Perflyst/PiHoleBlocklist)
+  - android-tracking
+  - AmazonFireTV
+  - SessionReplay
+  - SmartTV
 - [anti_ad](https://github.com/privacy-protection-tools/anti-AD#anti-ad)
 - [kodopenguin](https://github.com/KodoPengin/GameIndustry-hosts-Template)
   - Main-Template
