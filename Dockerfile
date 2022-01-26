@@ -2,7 +2,7 @@
 FROM ubuntu:impish-20211015
 
 LABEL maintainer="T145" \
-      version="3.0.0" \
+      version="3.0.1" \
       description="Custom Docker Image used to run blacklist projects."
 
 # suppress language-related updates from apt-get to increase download speeds
@@ -27,7 +27,7 @@ ENV PATH=$PATH:/root/.local/bin
 ENV GOPATH=$HOME/go
 ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 
-RUN apt-get -y install aria2 build-essential curl gawk git golang-go gpg grepcidr gzip idn2 jq libdata-validate-domain-perl libdata-validate-ip-perl libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtext-trim-perl libtry-tiny-perl lynx miller moreutils nano p7zip-full preload python3-pip sed \
+RUN apt-get -y install aria2 bc build-essential curl gawk git golang-go gpg grepcidr gzip idn2 jq libdata-validate-domain-perl libdata-validate-ip-perl libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtext-trim-perl libtry-tiny-perl lynx miller moreutils nano p7zip-full preload python3-pip sed \
 && apt-get clean \
 && apt-get -y autoremove
 
