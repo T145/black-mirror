@@ -79,7 +79,7 @@
     },
     "formats": [
       {
-        "filter": "ADGUARD",
+        "filter": "ADBLOCK",
         "format": "DOMAIN"
       }
     ],
@@ -870,7 +870,7 @@
     "formats": [
       {
         "filter": "URL_REGEX_DOMAIN",
-        "format": "IPV4"
+        "format": "DOMAIN"
       },
       {
         "filter": "REGEX_IPV4",
@@ -898,7 +898,7 @@
     },
     "formats": [
       {
-        "filter": "EASYLIST",
+        "filter": "ADBLOCK",
         "format": "DOMAIN"
       }
     ],
@@ -1992,6 +1992,30 @@
     "scan": false,
     "variants": {
       "adguard": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt"
+    }
+  },
+  "easylist_finnish": {
+    "_desc": "https://github.com/finnish-easylist-addition/finnish-easylist-addition#readme",
+    "_license": "unlicense",
+    "_homepage": "https://github.com/finnish-easylist-addition/finnish-easylist-addition",
+    "method": "BLOCK",
+    "content": {
+      "filter": "NONE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt"
+    ],
+    "checksums": {},
+    "scan": false,
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt"
     }
   }
 }

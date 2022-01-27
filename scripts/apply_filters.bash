@@ -20,7 +20,9 @@ readonly CONTENT_TYPE FORMAT_FILTER FORMAT METHOD LIST CACHE
 # content filters will be applied to lists as soon as they're downloaded
 # this way multiple extract operations per format will not be necessary
 
-# TODO: Sort through Spirillen's mess: https://mypdns.org/my-privacy-dns/porn-records
+# TODO (Add these sources):
+# https://mypdns.org/my-privacy-dns/porn-records
+# https://github.com/ABPindo/indonesianadblockrules/tree/master/src/advert
 
 echo "[INFO] Operating on: ${LIST}"
 
@@ -61,9 +63,8 @@ cat -s "$LIST" |
                 NONE) cat -s ;;
                 MAWK_WITH_COMMENTS_FIRST_COLUMN) mawk '$0~/^[^#]/{print $1}' ;;
                 MAWK_WITH_COMMENTS_SECOND_COLUMN) mawk '$0~/^[^#]/{print $2}' ;;
-                ADGUARD)
-                    # https://kb.adguard.com/en/general/dns-filtering-syntax
-                    # https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters#examples-1
+                ADBLOCK)
+                    # https://github.com/DandelionSprout/adfilt/blob/master/Wiki/SyntaxMeaningsThatAreActuallyHumanReadable.md
                     mawk -F"[|^]" '$0~/^\|/{if ($4~/^$/) {print $3}}'
                     ;;
                 HOSTS_FILE) ghosts -m -o -p -noheader -stats=false ;;
@@ -72,7 +73,6 @@ cat -s "$LIST" |
                 URL_REGEX_IPV4) ;; # TODO?
                 REGEX_IPV4) perl -MRegexp::Common=net -nE 'say $& while /$RE{net}{IPv4}/g' ;;
                 REGEX_IPV6) perl -MRegexp::Common=net -nE 'say $& while /$RE{net}{IPv6}/g' ;;
-                EASYLIST) ;; # TODO
                 BLACKBIRD) mawk 'NR>4' ;; # '$0~/^[^;]/'
                 BOTVIRJ_IPV4) mawk -F'|' '{print $1}' ;;
                 HOSTS_DENY) mawk '$1~/^ALL$/{print $3}' ;;
@@ -98,6 +98,7 @@ cat -s "$LIST" |
                 CYBERSAIYAN_IPV4) jq -r '.[] | select(.value.type == "IPv4") | .indicator' ;;
                 CYBER_CURE_IPV4) jq -r '.data.ip[]' ;;
                 DISCONNECTME) jq -r '.entities[] | "\(.properties[])\n\(.resources[])"' ;;
+                EXODUS_IPV4) get_exodus_content | gawk '/^([0-9]+(\.|:|\/|$)){4}/' ;;
             esac
         ;;
         CSV)
