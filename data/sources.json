@@ -1618,24 +1618,6 @@
       "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt"
     ]
   },
-  "haruko": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\"</br>\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/){printf a[3]}}}"
-      },
-      {
-        "engine": "gawk",
-        "format": "ipv4",
-        "rule": "BEGIN{FS=\"</br>\"}{for(i=1;i<=NF;i++) {split($i,a,\"/\"); if(a[3]~/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(:|$)/){print a[3]}}}"
-      }
-    ],
-    "mirrors": [
-      "https://tracker.fumik0.com/api/get-urls"
-    ]
-  },
   "hipo_universities": {
     "color": "white",
     "filters": [
