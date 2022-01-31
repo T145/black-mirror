@@ -361,7 +361,6 @@ Use the domain list.
 - [IPsum](https://github.com/stamparm/ipsum#about)
   - Gets IPs from maltrail
 - [Benkow\_](https://benkow.cc/)
-  - [Haruko](https://tracker.fumik0.com/)
 - [malware-discoverer](https://github.com/zhouhanc/malware-discoverer)
 - [mobiletrackers](https://github.com/craiu/mobiletrackers)
 - [Kaspersky TinyCheck](https://github.com/KasperskyLab/TinyCheck)
@@ -600,6 +599,8 @@ Use the domain list.
 - [Netlab's Mirai Scanner](https://data.netlab.360.com/mirai-scanner/)
 - [cyberthreat](https://www.cyberthreatcoalition.org/blocklist)
   - Service has ended.
+- [Haruko](https://tracker.fumik0.com/)
+  - Offline since last check.
 
 ### 🕵🏻 Lamers Unwelcome
 
