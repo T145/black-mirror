@@ -536,7 +536,7 @@
       "https://www.blocklist.de/downloads/export-ips_all.txt"
     ]
   },
-  "blp_abuse": {
+  "block_list_project": {
     "color": "black",
     "filters": [
       {
@@ -546,190 +546,8 @@
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/abuse-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/abuse-nl.txt"
-    ]
-  },
-  "blp_ads": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/ads-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/ads-nl.txt"
-    ]
-  },
-  "blp_crypto": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/crypto-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/crypto-nl.txt"
-    ]
-  },
-  "blp_drugs": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/drugs-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/drugs-nl.txt"
-    ]
-  },
-  "blp_facebook": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/facebook-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/facebook-nl.txt"
-    ]
-  },
-  "blp_fraud": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/fraud-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/fraud-nl.txt"
-    ]
-  },
-  "blp_gambling": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/gambling-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/gambling-nl.txt"
-    ]
-  },
-  "blp_malware": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/malware-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/malware-nl.txt"
-    ]
-  },
-  "blp_phishing": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/phishing-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/phishing-nl.txt"
-    ]
-  },
-  "blp_piracy": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/piracy-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/piracy-nl.txt"
-    ]
-  },
-  "blp_porn": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/porn-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/porn-nl.txt"
-    ]
-  },
-  "blp_ransomware": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/ransomware-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/ransomware-nl.txt"
-    ]
-  },
-  "blp_redirect": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/redirect-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/redirect-nl.txt"
-    ]
-  },
-  "blp_scam": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/scam-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/scam-nl.txt"
+      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/everything-nl.txt",
+      "https://blocklistproject.github.io/Lists/alt-version/everything-nl.txt"
     ]
   },
   "blp_smart_tv": {
@@ -746,48 +564,6 @@
       "https://blocklistproject.github.io/Lists/alt-version/smart-tv-nl.txt"
     ]
   },
-  "blp_tiktok": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/tiktok-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/tiktok-nl.txt"
-    ]
-  },
-  "blp_torrent": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/torrent-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/torrent-nl.txt"
-    ]
-  },
-  "blp_tracking": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/tracking-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/tracking-nl.txt"
-    ]
-  },
   "blp_whatsapp": {
     "color": "black",
     "filters": [
@@ -800,6 +576,20 @@
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/whatsapp-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/whatsapp-nl.txt"
+    ]
+  },
+  "blp_vaping": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#|^-]/{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/vaping-nl.txt",
+      "https://blocklistproject.github.io/Lists/alt-version/vaping-nl.txt"
     ]
   },
   "botvrij_blocklist": {
