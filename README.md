@@ -543,9 +543,9 @@ Use the domain list.
 - [NanoFilters](https://github.com/NanoAdblocker/NanoFilters)
 - [dnsbl-dfed](https://github.com/dfederlein/dnsbl-dfed)
 - [nopelist](https://github.com/genediazjr/nopelist)
-- old disconnect
-  - [simple_ad](https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt)
-  - [simple_tracking](https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt)
+- DisconnectMe AWS
+  - [simple_ad](https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt) (Last-Modified: Fri, 31 Jul 2015 19:01:02 GMT)
+  - [simple_tracking](https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt) (Last-Modified: Sat, 01 Feb 2020 02:37:09 GMT)
   - [shavar-prod-lists](https://github.com/mozilla-services/shavar-prod-lists)
 - [ad-wars](https://github.com/jdlingyu/ad-wars)
 - [phishing_hosts](https://github.com/Kurobeats/phishing_hosts)
