@@ -503,6 +503,20 @@
       "https://getblackbird.net/blacklist/hosts.txt"
     ]
   },
+  "block_list_project": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#|^-]/{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/everything-nl.txt",
+      "https://blocklistproject.github.io/Lists/alt-version/everything-nl.txt"
+    ]
+  },
   "blockada_ddgtrackerradar": {
     "color": "black",
     "filters": [
@@ -536,20 +550,6 @@
       "https://www.blocklist.de/downloads/export-ips_all.txt"
     ]
   },
-  "block_list_project": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/everything-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/everything-nl.txt"
-    ]
-  },
   "blp_smart_tv": {
     "color": "black",
     "filters": [
@@ -564,20 +564,6 @@
       "https://blocklistproject.github.io/Lists/alt-version/smart-tv-nl.txt"
     ]
   },
-  "blp_whatsapp": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#|^-]/{print $1}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/whatsapp-nl.txt",
-      "https://blocklistproject.github.io/Lists/alt-version/whatsapp-nl.txt"
-    ]
-  },
   "blp_vaping": {
     "color": "black",
     "filters": [
@@ -590,6 +576,20 @@
     "mirrors": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/vaping-nl.txt",
       "https://blocklistproject.github.io/Lists/alt-version/vaping-nl.txt"
+    ]
+  },
+  "blp_whatsapp": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#|^-]/{print $1}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/blocklistproject/Lists/master/alt-version/whatsapp-nl.txt",
+      "https://blocklistproject.github.io/Lists/alt-version/whatsapp-nl.txt"
     ]
   },
   "botvrij_blocklist": {
