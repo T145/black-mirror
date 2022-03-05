@@ -255,7 +255,7 @@ Use the domain list.
 - [easylist_finnish](https://github.com/finnish-easylist-addition/finnish-easylist-addition)
 - [easylist_indonesian](https://github.com/ABPindo/indonesianadblockrules#abpindo)
 - [List-KR](https://github.com/List-KR/List-KR#list-kr-english)
-- [KADhosts](https://github.com/PolishFiltersTeam/KADhosts#kadhosts)
+- [KADhosts](https://github.com/FiltersHeroes/KADhosts#kadhosts)
 - [polish-ads-filter](https://github.com/MajkiIT/polish-ads-filter/tree/master/polish-pihole-filters#oprogramowanie-pihole)
   - hole_cert_pl
   - hostfile
