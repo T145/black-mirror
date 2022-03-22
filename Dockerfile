@@ -56,5 +56,5 @@ RUN go install github.com/StevenBlack/ghosts@latest
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
 # https://git.savannah.gnu.org/cgit/parallel.git/tree/README
 
-RUN bash ./scripts/parsort_install.bash
+RUN bash ./scripts/parsort_install.bash \
 && echo 'will cite' | parallel --citaion || true
