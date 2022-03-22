@@ -2,7 +2,7 @@
 FROM ubuntu:impish-20211015
 
 LABEL maintainer="T145" \
-      version="3.0.1" \
+      version="3.0.2" \
       description="Custom Docker Image used to run blacklist projects."
 
 # suppress language-related updates from apt-get to increase download speeds
@@ -53,5 +53,8 @@ RUN go install github.com/ipinfo/cli/ipinfo@latest
 RUN go install github.com/StevenBlack/ghosts@latest
 
 # install the parallel beta that includes parsort
-RUN curl -sSf pi.dk/3/ | bash
-RUN echo 'will cite' | parallel --citation || true
+# https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
+# https://git.savannah.gnu.org/cgit/parallel.git/tree/README
+
+RUN bash ./scripts/parsort_install.bash
+&& echo 'will cite' | parallel --citaion || true
