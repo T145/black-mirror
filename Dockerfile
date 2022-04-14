@@ -1,5 +1,5 @@
 # use synk's recommended os version
-FROM ubuntu:impish-20211015
+FROM ubuntu:impish
 
 LABEL maintainer="T145" \
       version="3.0.3" \
