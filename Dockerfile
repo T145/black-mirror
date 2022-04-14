@@ -2,7 +2,7 @@
 FROM ubuntu:impish-20211015
 
 LABEL maintainer="T145" \
-      version="3.0.2" \
+      version="3.0.3" \
       description="Custom Docker Image used to run blacklist projects."
 
 # suppress language-related updates from apt-get to increase download speeds
@@ -34,7 +34,7 @@ RUN apt-get -y install aria2 bc build-essential curl gawk git golang-go gpg grep
 # install the parallel beta that includes parsort
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
 # https://git.savannah.gnu.org/cgit/parallel.git/tree/README
-RUN git clone https://github.com/T145/black-mirror.git && bash black-mirror/scripts/parsort_install.bash
+RUN curl -sSf https://raw.githubusercontent.com/T145/black-mirror/master/scripts/parsort_install.bash | bash
 RUN echo 'will cite' | parallel --citation || true
 
 # install twint in base python, otherwise "pandas" will be perma-stuck building in pypy
