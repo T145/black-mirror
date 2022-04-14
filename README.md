@@ -323,7 +323,6 @@ Use the domain list.
 - [Rutgers University Attack Log](https://www.rutgers.edu/)
 - [threatsourcing](https://www.threatsourcing.com/)
 - [maltrail](https://github.com/stamparm/maltrail#blacklist)
-- [Charles B. Haley](http://charles.the-haleys.org/)
 - [darklist](https://www.darklist.de/)
 - [cryptolaemus](https://paste.cryptolaemus.com/)
 - [alienvault](https://status.alienvault.cloud/)
@@ -600,6 +599,8 @@ Use the domain list.
 - [cyberthreat](https://www.cyberthreatcoalition.org/blocklist)
   - Service has ended.
 - [Haruko](https://tracker.fumik0.com/)
+  - Offline since last check.
+- [Charles B. Haley](http://charles.the-haleys.org/)
   - Offline since last check.
 
 ### 🕵🏻 Lamers Unwelcome

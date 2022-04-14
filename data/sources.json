@@ -726,19 +726,6 @@
       "https://raw.githubusercontent.com/scafroglia93/blocklists/master/blocklists-certego.txt"
     ]
   },
-  "charles_haley": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "$1~/^ALL$/{print $3}"
-      }
-    ],
-    "mirrors": [
-      "http://charles.the-haleys.org/ssh_dico_attack_hdeny_format.php/hostsdeny.txt"
-    ]
-  },
   "cinsscore": {
     "color": "black",
     "filters": [
