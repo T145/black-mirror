@@ -26,7 +26,7 @@ jobs:
       - name: Upload Build Artifacts
         if: success()
         # https://docs.github.com/en/rest/reference/actions#artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: black-mirror
           path: build/*
@@ -38,7 +38,7 @@ jobs:
       #    version: latest
       - name: Upload Modified Documents
         if: success()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: black-docs
           path: |
