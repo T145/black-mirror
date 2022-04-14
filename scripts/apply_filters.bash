@@ -75,7 +75,6 @@ cat -s "$LIST" |
                 REGEX_IPV6) perl -MRegexp::Common=net -nE 'say $& while /$RE{net}{IPv6}/g' ;;
                 BLACKBIRD) mawk 'NR>4' ;; # '$0~/^[^;]/'
                 BOTVIRJ_IPV4) mawk -F'|' '{print $1}' ;;
-                HOSTS_DENY) mawk '$1~/^ALL$/{print $3}' ;;
                 CRYPTOLAEMUS_DOMAIN) perl ./scripts/process_domains.pl ;;
                 CERTEGO_DOMAIN) ;; # TODO
                 CERTEGO_IPV4) ;; # TODO
