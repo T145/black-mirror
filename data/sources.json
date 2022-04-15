@@ -739,20 +739,6 @@
       "https://cinsscore.com/list/ci-badguys.txt"
     ]
   },
-  "clefspeare13": {
-    "_comment": "Does not include the mobile list: the safesearch listings can be ignored.",
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$1~/^0.0.0.0$/{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://mypdns.org/clefspeare13/pornhosts/-/raw/master/download_here/strict/0.0.0.0/hosts?inline=false"
-    ]
-  },
   "cname_trackers": {
     "color": "black",
     "filters": [
@@ -2763,260 +2749,312 @@
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Ads"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Ads"
     ]
   },
   "shadowwhisperer_adult": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Adult"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Adult"
     ]
   },
   "shadowwhisperer_apple": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Apple"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Apple"
     ]
   },
   "shadowwhisperer_bloat": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Bloat"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Bloat"
     ]
   },
   "shadowwhisperer_chat": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Chat"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Chat"
     ]
   },
   "shadowwhisperer_cryptocurrency": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Cryptocurrency"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Cryptocurrency"
     ]
   },
   "shadowwhisperer_dating": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Dating"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Dating"
     ]
   },
   "shadowwhisperer_dynamic": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Dynamic"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Dynamic"
     ]
   },
   "shadowwhisperer_free": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Free"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Free"
     ]
   },
   "shadowwhisperer_junk": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Junk"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Junk"
     ]
   },
   "shadowwhisperer_malware": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Malware"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Malware"
     ]
   },
   "shadowwhisperer_marketing_email": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Marketing-Email"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Marketing-Email"
     ]
   },
   "shadowwhisperer_marketing_web": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Marketing"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Marketing"
     ]
   },
   "shadowwhisperer_microsoft": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Microsoft"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Microsoft"
     ]
   },
   "shadowwhisperer_remote": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Remote"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Remote"
     ]
   },
   "shadowwhisperer_risk": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Risk"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Risk"
     ]
   },
   "shadowwhisperer_scam": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Scam"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Scam"
     ]
   },
   "shadowwhisperer_shock": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Shock"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Shock"
     ]
   },
   "shadowwhisperer_tracking": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Tracking"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Tracking"
     ]
   },
   "shadowwhisperer_tunnels": {
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "cat",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
+        "rule": ""
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Tunnels"
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Tunnels"
+    ]
+  },
+  "shadowwhisperer_wild_ads": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Wild_Ads"
+    ]
+  },
+  "shadowwhisperer_wild_chat": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Wild_Chat"
+    ]
+  },
+  "shadowwhisperer_wild_tracking": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Wild_Tracking"
+    ]
+  },
+  "shadowwhisperer_wild_tunnel": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/RAW/Wild_Tunnel"
     ]
   },
   "shady_hosts": {
