@@ -401,8 +401,6 @@ Use the domain list.
 - [infinitytec](https://github.com/infinitytec/blocklists#infinitytecs-blocklists)
 - [shady-hosts](https://github.com/shreyasminocha/shady-hosts)
 - [DataPlane](https://dataplane.org/)
-- [Clefspeare13](https://tinyurl.com/clefspeare13)
-  - [GitHub's Dirty Dancing](https://github.com/StevenBlack/hosts/pull/1784)
 - [C2IntelFeeds](https://github.com/drb-ra/C2IntelFeeds#c2intelfeeds)
 - [joewein's custom list](https://www.joewein.net/dl/bl/dom-bl.txt)
 - [SecurityResearch](http://security-research.dyndns.org/pub/malware-feeds)
@@ -602,6 +600,8 @@ Use the domain list.
   - Offline since last check.
 - [Charles B. Haley](http://charles.the-haleys.org/)
   - Offline since last check.
+- [Clefspeare13](https://tinyurl.com/clefspeare13)
+  - [GitHub's Dirty Dancing](https://github.com/StevenBlack/hosts/pull/1784)
 
 ### 🕵🏻 Lamers Unwelcome
 
