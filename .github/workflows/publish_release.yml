@@ -15,7 +15,8 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Repo
+        uses: actions/checkout@v3
       - name: Create Builds
         run: |
           :> logs/aria2.log
@@ -137,8 +138,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: [publish_github, publish_dropbox]
     steps:
-      - uses: actions/checkout@v3
-      - name: Download Build Artifacts
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Download Modified Documents
         uses: actions/download-artifact@v3
         with:
           name: black-docs
@@ -151,10 +153,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: update_readme
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Repo
+        uses: actions/checkout@v3
       - name: Delete Workflow Artifacts
         uses: jimschubert/delete-artifacts-action@v1
         with:
-          log_level: 'error'
-          min_bytes: '0'
+          log_level: "error"
+          min_bytes: "0"
           run_id: ${{ github.run_id }}
