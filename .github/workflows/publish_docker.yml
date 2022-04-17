@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Publish to Registry
+      - name: Publish to registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
           name: T145/black-mirror
