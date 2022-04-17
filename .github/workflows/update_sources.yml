@@ -9,7 +9,7 @@ on:
       - "data/sources.json"
 
 jobs:
-  update:
+  export_sources:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/t145/black-mirror:latest
@@ -17,16 +17,35 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v3
-      - name: Convert Sources
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Export Sources
         run: |
           jq -SM '.' data/sources.json | sponge data/sources.json
           jq -jr 'to_entries[] | select(.value.color == "black") | .value.mirrors[0] as $url | .value.filters[] | if (.engine == "cat" or .engine == "mawk") then ($url, " ") else empty end' data/sources.json | sed 's/ $/\n/' >exports/sources.pihole
           jq -r 'to_entries[].value.mirrors[]' data/sources.json >exports/sources.txt
           parsort -u -S 100% --parallel=48 exports/sources.txt | sponge exports/sources.txt
         shell: bash
-      - name: Update Sources
+      - name: Upload Modified Sources
         if: success()
+        uses: actions/upload-artifact@v3
+        with:
+          name: black-sources
+          path: |
+            data/sources.json
+            exports/*
+          retention-days: 1
+  commit_changes:
+    runs-on: ubuntu-latest
+    needs: export_sources
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Download Modified Sources
+        uses: actions/download-artifact@v3
+        with:
+          name: black-sources
+      - name: Update Sources
         uses: stefanzweifel/git-auto-commit-action@v4.14.1
         with:
-          commit_message: 📚 Updated Sources
+          commit_message: ✨🧁✨
