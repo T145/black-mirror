@@ -272,7 +272,7 @@ Use the domain list.
 - [geoffrey_frogeye](https://hostfiles.frogeye.fr/)
 - [threatcrowd](https://threatcrowd.org/)
 - [antisocialengineer](https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community)
-- [windscribe](https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png)
+- <strike>[windscribe](https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png)</strike>
 - [not_on_my_shift](https://orca.pet/notonmyshift/)
 - [lightswitch05|developerdan](https://github.com/lightswitch05/hosts)
 - [resecure_me](https://rescure.me/feeds.html)
