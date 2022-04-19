@@ -404,7 +404,6 @@ Use the domain list.
 - [C2IntelFeeds](https://github.com/drb-ra/C2IntelFeeds#c2intelfeeds)
 - [joewein's custom list](https://www.joewein.net/dl/bl/dom-bl.txt)
 - [SecurityResearch](http://security-research.dyndns.org/pub/malware-feeds)
-- [Zonefiles](https://zonefiles.io/compromised-ip-list/)
 - [Sunshine](https://www.sunshine.it/)
   - [Webradio](http://195.201.227.227/webradio.htm) (Germans know how to party: be nice!)
 - [bjornstar](https://github.com/bjornstar/hosts)
@@ -602,6 +601,8 @@ Use the domain list.
   - Offline since last check.
 - [Clefspeare13](https://tinyurl.com/clefspeare13)
   - [GitHub's Dirty Dancing](https://github.com/StevenBlack/hosts/pull/1784)
+- [Zonefiles](https://zonefiles.io/compromised-ip-list/)
+  - Offline since last check.
 
 ### 🕵🏻 Lamers Unwelcome
 
