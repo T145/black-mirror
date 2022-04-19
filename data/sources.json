@@ -3530,18 +3530,5 @@
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
-  },
-  "zonefiles": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "NR>1"
-      }
-    ],
-    "mirrors": [
-      "https://zonefiles.io/f/compromised/ip/live/"
-    ]
   }
 }
