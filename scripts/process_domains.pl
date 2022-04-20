@@ -19,8 +19,5 @@ while (<>) {
         if (defined($line) && is_domain($line)) {
             say($line);
         }
-    } catch {
-        #warn "[WARN]: Error processing '$_': $@";
-        continue;
     }
 }
