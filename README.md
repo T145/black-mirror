@@ -615,6 +615,27 @@ Use the domain list.
 - [malshare](https://malshare.com/daily/malshare.current.all.txt)
 - [ecrimelabs](https://feeds.ecrimelabs.net/data/metasploit-cve)
 
+## 📦 Big Data Lists
+
+> Typically used by other blacklist projects as whitelists.
+
+List Name | URL
+--- | --- |
+Alexa | https://s3.amazonaws.com/alexa-static/top-1m.csv.zip
+Umbrella | https://downloads.majestic.com/majestic_million.csv
+Statvoo | https://statvoo.com/dl/top-1million-sites.csv.zip
+OpenPageRank | https://www.domcop.com/files/top/top10milliondomains.csv.zip
+Quantcast | https://toplists.net.in.tum.de/archive/quantcast/quantcast-top-sites-2021-06-25_0900_UTC.txt.xz
+Tranco list | https://tranco-list.eu/
+
+## 🌐 IP Block Providers
+
+> Simply provide IP blocks for entire geographic regions.
+
+- [openportstats](http://www.openportstats.com/)
+- [ipdeny](https://www.ipdeny.com/ipblocks/)
+- [IPverse](http://ipverse.net/)
+
 ## 🎶 Notes
 
 ### R Language
