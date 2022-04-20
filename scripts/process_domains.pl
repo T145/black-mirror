@@ -5,8 +5,8 @@ use strict;
 use open ':std', ':encoding(UTF-8)';
 use feature 'say';
 use Try::Tiny;
-use Net::IDN::Encode 'domain_to_ascii';
 use Text::Trim 'trim';
+use Net::IDN::Encode 'domain_to_ascii';
 use Data::Validate::Domain 'is_domain';
 
 while (<>) {
@@ -20,6 +20,7 @@ while (<>) {
             say($line);
         }
     } catch {
-        warn "[WARN]: Error processing '$_': $@";
+        #warn "[WARN]: Error processing '$_': $@";
+        continue;
     }
 }
