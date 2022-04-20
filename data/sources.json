@@ -681,7 +681,7 @@
       }
     ],
     "mirrors": [
-      "http://danger.rulez.sk/projects/bruteforceblocker/blist.php?mindays=7&mincount=1"
+      "https://danger.rulez.sk/projects/bruteforceblocker/blist.php?mindays=7&mincount=1"
     ],
     "variants": [
       "https://www.opendbl.net/lists/bruteforce.list"
@@ -850,7 +850,7 @@
       }
     ],
     "mirrors": [
-      "http://api.cybercure.ai/feed/get_ips"
+      "https://api.cybercure.ai/feed/get_ips"
     ]
   },
   "cyber_cure_urls": {
@@ -868,7 +868,7 @@
       }
     ],
     "mirrors": [
-      "http://api.cybercure.ai/feed/get_url"
+      "https://api.cybercure.ai/feed/get_url"
     ]
   },
   "cybercrime_all": {
@@ -2780,7 +2780,7 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "{print $2;print $4}"
+        "rule": "$0~/^[^#]/{print $2;print $4}"
       }
     ],
     "mirrors": [
@@ -3317,7 +3317,7 @@
       }
     ],
     "mirrors": [
-      "http://taz.net.au/Mail/SpamDomains"
+      "https://taz.net.au/Mail/SpamDomains"
     ]
   },
   "threatcrowd_domains": {
