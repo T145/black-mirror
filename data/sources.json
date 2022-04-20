@@ -2313,6 +2313,19 @@
       "https://phishstats.info/phish_score.csv"
     ]
   },
+  "projecthoneypot_last_comment_spam": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\"[<>]\"}NR>14&&/title/{split($3,a,\" | \"); print a[1]}"
+      }
+    ],
+    "mirrors": [
+      "https://www.projecthoneypot.org/list_of_ips.php?by=19&rss=1"
+    ]
+  },
   "projecthoneypot_last_crawl": {
     "color": "black",
     "filters": [
@@ -2324,6 +2337,32 @@
     ],
     "mirrors": [
       "https://www.projecthoneypot.org/list_of_ips.php?by=4&rss=1"
+    ]
+  },
+  "projecthoneypot_last_dictionary_attack": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\"[<>]\"}NR>14&&/title/{split($3,a,\" | \"); print a[1]}"
+      }
+    ],
+    "mirrors": [
+      "https://www.projecthoneypot.org/list_of_ips.php?by=16&rss=1"
+    ]
+  },
+  "projecthoneypot_last_email_spam": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "ipv4",
+        "rule": "BEGIN{FS=\"[<>]\"}NR>14&&/title/{split($3,a,\" | \"); print a[1]}"
+      }
+    ],
+    "mirrors": [
+      "https://www.projecthoneypot.org/list_of_ips.php?by=13&rss=1"
     ]
   },
   "projecthoneypot_last_harvest": {
@@ -2363,45 +2402,6 @@
     ],
     "mirrors": [
       "https://www.projecthoneypot.org/list_of_ips.php?by=12&rss=1"
-    ]
-  },
-  "projecthoneypot_last_email_spam": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "BEGIN{FS=\"[<>]\"}NR>14&&/title/{split($3,a,\" | \"); print a[1]}"
-      }
-    ],
-    "mirrors": [
-      "https://www.projecthoneypot.org/list_of_ips.php?by=13&rss=1"
-    ]
-  },
-  "projecthoneypot_last_dictionary_attack": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "BEGIN{FS=\"[<>]\"}NR>14&&/title/{split($3,a,\" | \"); print a[1]}"
-      }
-    ],
-    "mirrors": [
-      "https://www.projecthoneypot.org/list_of_ips.php?by=16&rss=1"
-    ]
-  },
-  "projecthoneypot_last_comment_spam": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "BEGIN{FS=\"[<>]\"}NR>14&&/title/{split($3,a,\" | \"); print a[1]}"
-      }
-    ],
-    "mirrors": [
-      "https://www.projecthoneypot.org/list_of_ips.php?by=19&rss=1"
     ]
   },
   "public_dns": {
