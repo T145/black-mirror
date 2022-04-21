@@ -463,6 +463,9 @@ Use the domain list.
   - Likely draws from other sources.
 - [shallalist](https://www.shallalist.de/)
   - Similar to `ut-capitole`.
+- [malware-filter](https://gitlab.com/curben/malware-filter)
+- [AdlistTXTS](https://github.com/CleanMachine1/AdlistTXTS#readme)
+- [socialblocklists](https://github.com/d43m0nhLInt3r/socialblocklists#readme)
 
 ### 🧟 Zombies
 
