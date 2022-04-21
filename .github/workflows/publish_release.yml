@@ -21,8 +21,8 @@ jobs:
         run: |
           :> logs/aria2.log
           chmod 755 -R scripts/
-          ./scripts/build_release.bash
-          ./scripts/update_readme.bash
+          ./scripts/v1/build_release.bash
+          ./scripts/v1/update_readme.bash
         shell: bash
       - name: Upload build artifacts
         if: success()
@@ -33,10 +33,7 @@ jobs:
           path: build/*
           retention-days: 1
       # https://github.com/thomaseizinger/keep-a-changelog-new-release#keep-a-changelog---new-release
-      #- name: Update changelog
-      #  uses: thomaseizinger/keep-a-changelog-new-release@v1
-      #  with:
-      #    version: latest
+      # Update changelog here
       - name: Upload modified documents
         if: success()
         uses: actions/upload-artifact@v3

@@ -69,7 +69,7 @@ parse_file_contents() {
 # params: format, color, key
 handle_format_output() {
   case $1 in
-  domain) perl ./scripts/process_domains.pl >>"build/${2}_${1}.txt" ;;
+  domain) perl ./scripts/v1/process_domains.pl >>"build/${2}_${1}.txt" ;;
   ipv4)
     while IFS= read -r line; do
       case $line in
@@ -106,13 +106,13 @@ main() {
         select(.value.color == $color) |
         {key, mirrors: .value.mirrors} |
         .extension = (.mirrors[0] | match(".(tar.gz|zip|7z|json)").captures[0].string // "txt") |
-        (.mirrors | join("\t")), " out=\(.key).\(.extension)"' data/sources.json |
+        (.mirrors | join("\t")), " out=\(.key).\(.extension)"' data/v1/sources.json |
       aria2c -i- -d "$cache_dir" --conf-path='./configs/aria2.conf'
     set -e
 
     jq -r --arg color "$color" 'to_entries[] |
         select(.value.color == $color) |
-         .key as $k | .value.filters[] | "\($k)#\(.engine)#\(.format)#\(.rule)"' data/sources.json |
+         .key as $k | .value.filters[] | "\($k)#\(.engine)#\(.format)#\(.rule)"' data/v1/sources.json |
       while IFS='#' read -r key engine format rule; do
         src_list=$(find -P -O3 "$cache_dir" -type f -name "${key}.*")
 

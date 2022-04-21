@@ -75,10 +75,10 @@ cat -s "$LIST" |
                 REGEX_IPV6) perl -MRegexp::Common=net -nE 'say $& while /$RE{net}{IPv6}/g' ;;
                 BLACKBIRD) mawk 'NR>4' ;; # '$0~/^[^;]/'
                 BOTVIRJ_IPV4) mawk -F'|' '{print $1}' ;;
-                CRYPTOLAEMUS_DOMAIN) perl ./scripts/process_domains.pl ;;
+                CRYPTOLAEMUS_DOMAIN) perl ./scripts/v1/process_domains.pl ;;
                 CERTEGO_DOMAIN) ;; # TODO
                 CERTEGO_IPV4) ;; # TODO
-                CYBERCRIME_DOMAIN) mawk -F/ '{print $1}' | perl ./scripts/process_domains.pl ;;
+                CYBERCRIME_DOMAIN) mawk -F/ '{print $1}' | perl ./scripts/v1/process_domains.pl ;;
                 #SCHEMELESS_URL_DOMAIN) gawk -F/ '$1~/^([[:alnum:]_-]{1,63}\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}' ;;
                 #SCHEMELESS_URL_IPV4) gawk -F/ '$1~/^([0-9]{1,3}\.){3}[0-9]{1,3}+(:|$)/{split($1,a,":");print a[1]}' ;;
                 REGEX_CIDR) ;; # TODO

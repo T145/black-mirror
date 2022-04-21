@@ -6,7 +6,7 @@ on:
     branches:
       - master
     paths:
-      - "data/sources.json"
+      - "data/v1/sources.json"
 
 jobs:
   export_sources:
@@ -21,9 +21,9 @@ jobs:
         uses: actions/checkout@v3
       - name: Export sources
         run: |
-          jq -SM '.' data/sources.json | sponge data/sources.json
-          jq -jr 'to_entries[] | select(.value.color == "black") | .value.mirrors[0] as $url | .value.filters[] | if (.engine == "cat" or .engine == "mawk") then ($url, " ") else empty end' data/sources.json | sed 's/ $/\n/' >exports/sources.pihole
-          jq -r 'to_entries[].value.mirrors[]' data/sources.json >exports/sources.txt
+          jq -SM '.' data/v1/sources.json | sponge data/v1/sources.json
+          jq -jr 'to_entries[] | select(.value.color == "black") | .value.mirrors[0] as $url | .value.filters[] | if (.engine == "cat" or .engine == "mawk") then ($url, " ") else empty end' data/v1/sources.json | sed 's/ $/\n/' >exports/sources.pihole
+          jq -r 'to_entries[].value.mirrors[]' data/v1/sources.json >exports/sources.txt
           parsort -u -S 100% --parallel=48 exports/sources.txt | sponge exports/sources.txt
         shell: bash
       - name: Upload modified sources
@@ -32,7 +32,7 @@ jobs:
         with:
           name: black-sources
           path: |
-            data/sources.json
+            data/v1/sources.json
             exports/*
           retention-days: 1
   commit_changes:
