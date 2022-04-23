@@ -38,20 +38,6 @@
       "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_Pro_Xtra_only.txt"
     ]
   },
-  "futafilter": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\"[\\||\\^]\"}$0~/^[^#]/{print $3}"
-      }
-    ],
-    "mirrors": [
-      "https://filter.futa.gg/hosts.txt",
-      "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/hosts.txt"
-    ]
-  },
   "360_netlab": {
     "color": "black",
     "filters": [
@@ -1339,6 +1325,20 @@
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt"
+    ]
+  },
+  "futafilter": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"[\\||\\^]\"}$0~/^[^#]/{print $3}"
+      }
+    ],
+    "mirrors": [
+      "https://filter.futa.gg/hosts.txt",
+      "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/hosts.txt"
     ]
   },
   "geoffrey_frogeye_firstparty": {
