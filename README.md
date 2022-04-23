@@ -335,7 +335,7 @@ Use the domain list.
   - Last updated nearly a year ago and may need to be deprecated, though most hosts seem to be up.
 - [Airelle's Hosts](http://rlwpx.free.fr/WPFF/hosts.htm)
 - [someonewhocares](https://someonewhocares.org/)
-- [280blocker](https://280blocker.net/)
+- [FutaFilter](https://github.com/FutaGuard/FutaFilter#readme)
 - [betterfyi](https://better.fyi/)
 - [ayashige](https://github.com/ninoseki/ayashige)
 - [yoyo](https://pgl.yoyo.org/adservers/)
