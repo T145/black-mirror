@@ -3506,19 +3506,6 @@
       "https://v.firebog.net/hosts/static/w3kbl.txt"
     ]
   },
-  "winhelp": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/&&$2!~/^localhost$/{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://winhelp2002.mvps.org/hosts.txt"
-    ]
-  },
   "windscribe_ads": {
     "color": "black",
     "filters": [
@@ -3595,6 +3582,19 @@
     ],
     "mirrors": [
       "https://assets.windscribe.com/custom_blocklists/malware.txt"
+    ]
+  },
+  "winhelp": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/&&$2!~/^localhost$/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://winhelp2002.mvps.org/hosts.txt"
     ]
   },
   "winspy_extra": {
