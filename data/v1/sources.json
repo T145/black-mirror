@@ -279,7 +279,8 @@
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt"
+      "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt",
+      "https://anti-ad.net/domains.txt"
     ]
   },
   "antisocialengineer": {
@@ -3516,6 +3517,84 @@
     ],
     "mirrors": [
       "https://winhelp2002.mvps.org/hosts.txt"
+    ]
+  },
+  "windscribe_ads": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{if ($1~/^127.0.0.1$/) {print $2} else if ($1!~/^#/) {print $1}}"
+      }
+    ],
+    "mirrors": [
+      "https://assets.windscribe.com/custom_blocklists/ads.txt"
+    ]
+  },
+  "windscribe_adult_content": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://assets.windscribe.com/custom_blocklists/porn.txt"
+    ]
+  },
+  "windscribe_clickbait": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://assets.windscribe.com/custom_blocklists/clickbait.txt"
+    ]
+  },
+  "windscribe_gambling": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://assets.windscribe.com/custom_blocklists/gambling.txt"
+    ]
+  },
+  "windscribe_iot_telemetry": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://assets.windscribe.com/custom_blocklists/iot.txt"
+    ]
+  },
+  "windscribe_malware": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://assets.windscribe.com/custom_blocklists/malware.txt"
     ]
   },
   "winspy_extra": {
