@@ -618,7 +618,7 @@ Use the domain list.
 - [malshare](https://malshare.com/daily/malshare.current.all.txt)
 - [ecrimelabs](https://feeds.ecrimelabs.net/data/metasploit-cve)
 
-## 📦 Big Data Lists
+### 📦 Big Data Lists
 
 > Typically used by other blacklist projects as whitelists.
 
@@ -631,13 +631,23 @@ OpenPageRank | https://www.domcop.com/files/top/top10milliondomains.csv.zip
 Quantcast | https://toplists.net.in.tum.de/archive/quantcast/quantcast-top-sites-2021-06-25_0900_UTC.txt.xz
 Tranco list | https://tranco-list.eu/
 
-## 🌐 IP Block Providers
+### 🌐 IP Block Providers
 
 > Simply provide IP blocks for entire geographic regions.
 
 - [openportstats](http://www.openportstats.com/)
 - [ipdeny](https://www.ipdeny.com/ipblocks/)
 - [IPverse](http://ipverse.net/)
+
+## 🎉 Special Thanks
+
+### 🌟 Stargazers
+
+[![Stargazers repo roster for @T145/black-mirror](https://reporoster.com/stars/dark/T145/black-mirror)](https://github.com/T145/black-mirror/stargazers)
+
+### 🍝 Forkers
+
+[![Forkers repo roster for @T145/black-mirror](https://reporoster.com/forks/dark/T145/black-mirror)](https://github.com/T145/black-mirror/network/members)
 
 ## 🎶 Notes
 
