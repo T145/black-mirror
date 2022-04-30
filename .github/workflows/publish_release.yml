@@ -19,10 +19,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Create builds
         run: |
-          :> logs/aria2.log
           chmod 755 -R scripts/
-          ./scripts/v1/build_release.bash
-          ./scripts/v1/update_readme.bash
+          ./scripts/workflow.bash
         shell: bash
       - name: Upload build artifacts
         if: success()
