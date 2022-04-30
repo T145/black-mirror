@@ -1,4 +1,5 @@
 LIST=$1
-readonly LIST
+CACHE=$2
+readonly LIST CACHE
 
 echo "$LIST"
