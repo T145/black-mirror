@@ -50,7 +50,7 @@ main() {
 
         download_lists "$method" "$cache"
 
-        find -P -O3 "$cache" -type f -exec sem -j+0 ./scripts/v2/apply_filters.bash {} \;
+        find -P -O3 "$cache" -type f -exec sem -j+0 ./scripts/v2/apply_filters.bash {} "$DOWNLOADS" \;
         sem --wait
     done
 }
