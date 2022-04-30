@@ -32,6 +32,6 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ghcr.io/${{ github.actor }}/black-mirror:latest
-          cache-from: type=registry,ref=${{ github.actor }}/black-mirror:buildcache
-          cache-to: type=registry,ref=${{ github.actor }}/black-mirror:buildcache,mode=max
+          tags: ghcr.io/t145/black-mirror:latest
+          cache-from: type=registry,ref=t145/black-mirror:buildcache
+          cache-to: type=registry,ref=t145/black-mirror:buildcache,mode=max
