@@ -2,7 +2,7 @@
 
 # params: integer
 add_commas() {
-    echo "$1" | mawk '/^[0-9]+$/{printf "%\047.f\n", $1}'
+    echo "$1" | sed -e :x -e 's/\([0-9][0-9]*\)\([0-9][0-9][0-9]\)/\1,\2/' -e 'tx'
 }
 
 # params: filename
