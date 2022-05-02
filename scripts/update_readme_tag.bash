@@ -1,23 +1,21 @@
 #!/usr/bin/env bash
 
 # params: integer
-add_commas() {
-    echo "$1" | sed -e :x -e 's/\([0-9][0-9]*\)\([0-9][0-9][0-9]\)/\1,\2/' -e 'tx'
+get_line_count() {
+    wc -l <"$1" | sed -e :x -e 's/\([0-9][0-9]*\)\([0-9][0-9][0-9]\)/\1,\2/' -e 'tx'
 }
 
 # params: filename
-get_filesize() {
+get_file_size() {
     stat -c %s "$1" | numfmt --to=iec
 }
 
 # params: filename, tag variable, value
 replace_html_tag() {
-    local base
     local match
     local tag_id
 
-    base=$(basename "$1" .txt)
-    match="${base}_${2:1}"
+    match="$(basename "$1" .txt)_${2:1}"
     tag_id="${match//_/-}"
 
     sed -i -e "$(printf 's/\(<td id="%s">\).*\(<\/td>\)/\\1%s\\2/\n' ${tag_id} ${3})" README.md
@@ -27,8 +25,8 @@ main() {
     local line_count
     local file_size
 
-    line_count=$(add_commas "$(wc -l <"$1")")
-    file_size=$(get_filesize "$1")
+    line_count=$(get_line_count "$1")
+    file_size=$(get_file_size "$1")
 
     replace_html_tag "$1" "\$line_count" "$line_count"
     replace_html_tag "$1" "\$file_size" "$file_size"
