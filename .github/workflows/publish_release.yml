@@ -13,7 +13,7 @@ jobs:
       image: ghcr.io/t145/black-mirror:latest
       credentials:
         username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+        password: ${{ github.token }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -57,7 +57,7 @@ jobs:
       - name: Create GitHub release & upload build artifacts
         uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ github.token }}
           automatic_release_tag: latest
           prerelease: false
           title: All Artifacts
