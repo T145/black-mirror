@@ -47,6 +47,6 @@ jobs:
         with:
           name: black-sources
       - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4.14.1
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: ✨📚✨
