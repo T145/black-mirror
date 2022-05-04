@@ -30,8 +30,11 @@ jobs:
           name: black-mirror
           path: build/*
           retention-days: 1
-      # https://github.com/thomaseizinger/keep-a-changelog-new-release#keep-a-changelog---new-release
-      # Update changelog here
+      - name: Update changelog
+        uses: stefanzweifel/changelog-updater-action@v1
+        with:
+          latest-version: ${{ github.event.release.tag_name }}
+          release-notes: ${{ github.event.release.body }}
       - name: Upload modified documents
         if: success()
         uses: actions/upload-artifact@v3
@@ -40,6 +43,7 @@ jobs:
           path: |
             logs/*
             README.md
+            CHANGELOG.md
           retention-days: 1
       - name: Remove local artifacts
         if: always()
@@ -55,7 +59,7 @@ jobs:
           name: black-mirror
           path: build/
       - name: Create GitHub release & upload build artifacts
-        uses: marvinpinto/action-automatic-releases@v1.2.1
+        uses: marvinpinto/action-automatic-releases@v1
         with:
           repo_token: ${{ github.token }}
           automatic_release_tag: latest
@@ -139,8 +143,8 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: black-docs
-      - name: Update logs & README
-        uses: stefanzweifel/git-auto-commit-action@v4.14.1
+      - name: Update logs, CHANGELOG, and README
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           # homage to the python linting utility "black"
           commit_message: ✨🍰✨
