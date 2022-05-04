@@ -147,12 +147,11 @@ jobs:
   clean_workflow:
     runs-on: ubuntu-latest
     needs: update_readme
+    if: always()
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-      - name: Delete workflow artifacts
-        uses: jimschubert/delete-artifacts-action@v1
-        with:
-          log_level: "error"
-          min_bytes: "0"
-          run_id: ${{ github.run_id }}
+      - name: Delete artifacts by running a webhook
+        env:
+          FOR_WEBHOOKS_SECRET: ${{ secrets.FOR_WEBHOOKS_SECRET }}
+        run: |
+          echo "::add-mask::$FOR_WEBHOOKS_SECRET"
+          curl --verbose --fail --show-error --location --request POST "https://api.github.com/repos/$GITHUB_REPOSITORY/dispatches" --header "Authorization: token $FOR_WEBHOOKS_SECRET" --header 'Content-Type: application/json' --header 'Accept: application/vnd.github.everest-preview+json' --data-raw "{ \"event_type\": \"delete_all_artifacts\", \"client_payload\": {\"parent_runid\": \"$GITHUB_RUN_ID\", \"parent_repo\": \"$GITHUB_REPOSITORY\"} }"
