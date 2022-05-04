@@ -1,24 +1,22 @@
 #!/usr/bin/env bash
 
-# params: integer
+# params: file path
 get_line_count() {
     wc -l <"$1" | sed -e :x -e 's/\([0-9][0-9]*\)\([0-9][0-9][0-9]\)/\1,\2/' -e 'tx'
 }
 
-# params: filename
+# params: file path
 get_file_size() {
     stat -c %s "$1" | numfmt --to=iec
 }
 
-# params: filename, tag variable, value
+# params: file path, tag variable, value
 replace_html_tag() {
-    local match
-    local tag_id
+    local tag_match
 
-    match="$(basename "$1" .txt)_${2:1}"
-    tag_id="${match//_/-}"
+    tag_match="$(basename "$1" .txt)_${2:1}"
 
-    sed -i -e "$(printf 's/\(<td id="%s">\).*\(<\/td>\)/\\1%s\\2/\n' ${tag_id} ${3})" README.md
+    sed -i -e "$(printf 's/\(<td id="%s">\).*\(<\/td>\)/\\1%s\\2/\n' ${tag_match//_/-} ${3})" README.md
 }
 
 main() {
