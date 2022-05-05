@@ -1,0 +1,27 @@
+# https://github.com/stefanzweifel/changelog-updater-action#changelog-updater-action=
+name: "Update Changelog"
+
+on:
+  release:
+    types: [released]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.release.target_commitish }}
+      - name: Update changelog
+        uses: stefanzweifel/changelog-updater-action@v1
+        with:
+          latest-version: ${{ github.event.release.tag_name }}
+          release-notes: ${{ github.event.release.body }}
+      - name: Commit updated CHANGELOG
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          branch: ${{ github.event.release.target_commitish }}
+          # homage to the python linting utility "black"
+          commit_message: ✨🍰✨
+          file_pattern: CHANGELOG.md
