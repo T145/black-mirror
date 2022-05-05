@@ -30,11 +30,6 @@ jobs:
           name: black-mirror
           path: build/*
           retention-days: 1
-      - name: Update changelog
-        uses: stefanzweifel/changelog-updater-action@v1
-        with:
-          latest-version: ${{ github.event.release.tag_name }}
-          release-notes: ${{ github.event.release.body }}
       - name: Upload modified documents
         if: success()
         uses: actions/upload-artifact@v3
@@ -133,7 +128,7 @@ jobs:
       - name: Remove local build artifacts
         if: always()
         run: rm -rf build/
-  update_readme:
+  update_docs:
     runs-on: ubuntu-latest
     needs: [publish_github, publish_dropbox]
     steps:
@@ -143,7 +138,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: black-docs
-      - name: Update logs, CHANGELOG, and README
+      - name: Update logs and README
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           # homage to the python linting utility "black"
