@@ -54,7 +54,7 @@ jobs:
           name: black-mirror
           path: build/
       - name: Create GitHub release & upload build artifacts
-        uses: marvinpinto/action-automatic-releases@v1
+        uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           repo_token: ${{ github.token }}
           automatic_release_tag: latest
