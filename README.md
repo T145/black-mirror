@@ -342,6 +342,7 @@ Use the domain list.
 - [winhelp2002](https://winhelp2002.mvps.org/hosts.htm)
 - [ddgtrackerradar](https://go.blokada.org/ddgtrackerradar)
 - [Exodus trackers](https://etip.exodus-privacy.eu.org/trackers/all)
+- [npc hosts](https://npc.0am.jp/hosts.php)
 - [fanboy](https://secure.fanboy.co.nz/)
 - [CoinBlockerLists](https://zerodot1.gitlab.io/CoinBlockerListsWeb/)
 - [ShadowWhisperer](https://github.com/ShadowWhisperer/BlockLists/)
@@ -604,8 +605,6 @@ Use the domain list.
 - [Clefspeare13](https://tinyurl.com/clefspeare13)
   - [GitHub's Dirty Dancing](https://github.com/StevenBlack/hosts/pull/1784)
 - [Zonefiles](https://zonefiles.io/compromised-ip-list/)
-  - Offline since last check.
-- [npc hosts](https://npc.0am.jp/hosts.php)
   - Offline since last check.
 
 ### 🕵🏻 Lamers Unwelcome
