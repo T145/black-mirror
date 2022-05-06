@@ -2174,6 +2174,159 @@
             ],
             "checksums": {},
             "scan": false
+        },
+        "nicolasforcet": {
+            "_desc": "https://nicolasforcet.com/2019/11/02/meilleures-listes-de-filtrage-dns-pour-pihole-et-autres/",
+            "_license": "not-available",
+            "_homepage": "https://forcet.fr/",
+            "method": "BLOCK",
+            "content": {
+                "filter": "NONE",
+                "type": "TEXT"
+            },
+            "formats": [
+                {
+                    "filter": "MAWK_WITH_COMMENTS_AND_WILDCARDS",
+                    "format": "DOMAIN"
+                }
+            ],
+            "mirrors": [
+                "https://forcet.fr/shared/pihole/Blocklist-Nicolasforcet.txt"
+            ],
+            "checksums": {},
+            "scan": false
+        },
+        "inode_pwn": {
+            "_desc": "not-available",
+            "_license": "not-available",
+            "_homepage": "https://in0de.synology.me/",
+            "method": "BLOCK",
+            "content": {
+                "filter": "NONE",
+                "type": "TEXT"
+            },
+            "formats": [
+                {
+                    "filter": "ADBLOCK",
+                    "format": "DOMAIN"
+                }
+            ],
+            "mirrors": [
+                "https://in0de.synology.me/pwn.txt",
+                "http://in0de.iptime.org/pwn.txt"
+            ],
+            "checksums": {},
+            "scan": false
+        },
+        "inode_own": {
+            "_desc": "not-available",
+            "_license": "not-available",
+            "_homepage": "https://in0de.synology.me/",
+            "method": "BLOCK",
+            "content": {
+                "filter": "NONE",
+                "type": "TEXT"
+            },
+            "formats": [
+                {
+                    "filter": "ADBLOCK",
+                    "format": "DOMAIN"
+                }
+            ],
+            "mirrors": [
+                "https://in0de.synology.me/own.txt",
+                "http://in0de.iptime.org/own.txt"
+            ],
+            "checksums": {},
+            "scan": false
+        },
+        "karball0": {
+            "_desc": "http://karballo.net/adblock/",
+            "_license": "not-available",
+            "_homepage": "http://karballo.net/",
+            "method": "BLOCK",
+            "content": {
+                "filter": "NONE",
+                "type": "TEXT"
+            },
+            "formats": [
+                {
+                    "filter": "ADBLOCK",
+                    "format": "DOMAIN"
+                },
+                {
+                    "filter": "ADBLOCK",
+                    "format": "IPV4"
+                }
+            ],
+            "mirrors": [
+                "http://karballo.net/adblock/karball0-adblock.txt"
+            ],
+            "checksums": {},
+            "scan": false
+        },
+        "madll": {
+            "_desc": "not-available",
+            "_license": "not-available",
+            "_homepage": "http://madll.free.fr/",
+            "method": "BLOCK",
+            "content": {
+                "filter": "NONE",
+                "type": "TEXT"
+            },
+            "formats": [
+                {
+                    "filter": "ADBLOCK",
+                    "format": "DOMAIN"
+                }
+            ],
+            "mirrors": [
+                "http://madll.free.fr/madware/zip/filtres-adblock.txt"
+            ],
+            "checksums": {},
+            "scan": false
+        },
+        "openwrt_dlink_506L": {
+            "_desc": "not-available",
+            "_license": "not-available",
+            "_homepage": "http://netlab.linkpc.net/wiki/",
+            "method": "BLOCK",
+            "content": {
+                "filter": "NONE",
+                "type": "TEXT"
+            },
+            "formats": [
+                {
+                    "filter": "HOSTS_FILE",
+                    "format": "DOMAIN"
+                }
+            ],
+            "mirrors": [
+                "http://netlab.linkpc.net/download/software/entware/opt/etc/hosts"
+            ],
+            "checksums": {},
+            "scan": false
+        },
+        "jp_adblock_v2": {
+            "_desc": "https://qme.mydns.jp/adblock.html",
+            "_license": "cc-by-sa-3.0",
+            "_homepage": "https://code.google.com/archive/p/adblock-plus-japanese-filter/",
+            "method": "BLOCK",
+            "content": {
+                "filter": "NONE",
+                "type": "TEXT"
+            },
+            "formats": [
+                {
+                    "filter": "ADBLOCK",
+                    "format": "DOMAIN"
+                }
+            ],
+            "mirrors": [
+                "https://qme.mydns.jp/data/AdblockV2.txt"
+            ],
+            "checksums": {},
+            "scan": false
         }
     }
 }
