@@ -5,7 +5,7 @@ set -euo pipefail
 main() {
     :> logs/aria2.log
     ./scripts/v1/build_release.bash
-    find -P -O3 ./build/ -type f -name "*.txt" -exec bash ./scripts/update_readme_tag.bash {} \;
+    find -P -O3 ./build/ -type f -name "*.txt" -exec bash ./scripts/github/update_readme_tag.bash {} \;
 }
 
 main
