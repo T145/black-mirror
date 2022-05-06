@@ -10,19 +10,19 @@
 
 The primary goals of this project are as follows:
 
-- Promote safety
-	- Actively promotes [GitHub's non-allowance policies](https://docs.github.com/en/github/site-policy/github-community-guidelines#what-is-not-allowed) at-scale where possible.
-    - Promote privacy
-		- Blacklist all telemetry services, other data harvesting services, and untrusted torrenting providers.
-		- Whitelist all services like Tor, VPNs, and trusted torrenting providers.
-    - Promote security
-		- Blacklist illegal or sketchy sites, known malicious actors, active attackers, malvertising, etc.
-- Promote sanity
-	- Blacklist advertising sources in general, on both desktop and mobile clients.
-	- Blacklist general misinformation, irreputable news sources, propaganda, etc.
-	- Encourage a more family-friendly environment on the larger internet.
-- Be bigger, not bloated
-	- List sources promote growth, minimal redundancy, and modern application.
+- Promote individual safety.
+  - Actively promotes [GitHub's non-allowance policies](https://docs.github.com/en/github/site-policy/github-community-guidelines#what-is-not-allowed) at-scale where possible.
+- Promote individual privacy.
+  - Blacklist all telemetry services, other data harvesting services, and untrusted torrenting providers.
+  - Whitelist all services like Tor, VPNs, and trusted torrenting providers.
+- Promote individual and corporate security.
+  - Blacklist illegal or sketchy sites, known malicious actors, active attackers, malvertising, etc.
+- Promote sanity across social forums.
+  - Blacklist advertising sources in general, on both desktop and mobile clients.
+  - Blacklist general misinformation, irreputable news sources, propaganda, etc.
+  - Encourage a more family-friendly environment on the larger internet.
+- Use list sources that promote growth, minimal redundancy, and modern application.
+- [Acknowledge technological harm, and do what can be done in this scope to prevent it.](https://ledger.humanetech.com/)
 
 “Before you become too entranced with gorgeous gadgets and mesmerizing video displays, let me remind you that information is not knowledge, knowledge is not wisdom, and wisdom is not foresight. Each grows out of the other, and we need them all.”\
 ― _Arthur C. Clarke_
