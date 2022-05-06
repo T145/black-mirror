@@ -20,7 +20,7 @@ jobs:
       - name: Create builds
         run: |
           chmod 755 -R scripts/
-          ./scripts/workflow.bash
+          ./scripts/github/workflow.bash
         shell: bash
       - name: Upload build artifacts
         if: success()
