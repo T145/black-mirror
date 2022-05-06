@@ -2188,6 +2188,19 @@
       "https://raw.githubusercontent.com/notracking/hosts-blocklists/master/dnscrypt-proxy/dnscrypt-proxy.blacklist.txt"
     ]
   },
+  "npc_hosts": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "BEGIN{OFS=\"\\n\"}$0~/^[^#]/{$1=\"\"; printf \"%s\",$0}"
+      }
+    ],
+    "mirrors": [
+      "http://npc.0am.jp/hosts.php?dl=1"
+    ]
+  },
   "oisd_extra": {
     "color": "black",
     "filters": [
