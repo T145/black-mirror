@@ -134,6 +134,10 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+      - name: Update changelog
+        uses: stefanzweifel/changelog-updater-action@v1
+        with:
+          latest-version: latest
       - name: Download modified documents
         uses: actions/download-artifact@v3
         with:
