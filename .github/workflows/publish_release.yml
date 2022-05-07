@@ -38,7 +38,6 @@ jobs:
           path: |
             logs/*
             README.md
-            CHANGELOG.md
           retention-days: 1
       - name: Remove local artifacts
         if: always()
@@ -53,7 +52,7 @@ jobs:
         with:
           name: black-mirror
           path: build/
-      - name: Create GitHub release & upload build artifacts
+      - name: Create GitHub release and upload build artifacts
         uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           repo_token: ${{ github.token }}
@@ -134,10 +133,6 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-      - name: Update changelog
-        uses: stefanzweifel/changelog-updater-action@v1
-        with:
-          latest-version: latest
       - name: Download modified documents
         uses: actions/download-artifact@v3
         with:
