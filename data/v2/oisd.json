@@ -2327,6 +2327,180 @@
             ],
             "checksums": {},
             "scan": false
+        },
+        "miriquidi_block": {
+            "_desc": "https://github.com/miriquidi/dns-block-lists#readme",
+            "_license": "all-rights-reserved",
+            "_homepage": "https://fussle.de/",
+            "method": "BLOCK",
+            "content": {
+                "filter": "NONE",
+                "type": "TEXT"
+            },
+            "formats": [
+                {
+                    "filter": "NONE",
+                    "format": "DOMAIN"
+                }
+            ],
+            "mirrors": [
+                "https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/block.txt",
+                "https://fussle.de/block.txt"
+            ],
+            "checksums": {},
+            "scan": false
+        },
+        "miriquidi_fritz": {
+            "_desc": "https://github.com/miriquidi/dns-block-lists#readme",
+            "_license": "all-rights-reserved",
+            "_homepage": "https://fussle.de/",
+            "method": "BLOCK",
+            "content": {
+                "filter": "NONE",
+                "type": "TEXT"
+            },
+            "formats": [
+                {
+                    "filter": "NONE",
+                    "format": "DOMAIN"
+                }
+            ],
+            "mirrors": [
+                "https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/fb-block.txt",
+                "https://fussle.de/fb-block.txt"
+            ],
+            "checksums": {},
+            "scan": false
+        },
+        "miriquidi_social": {
+            "_desc": "https://github.com/miriquidi/dns-block-lists#readme",
+            "_license": "all-rights-reserved",
+            "_homepage": "https://fussle.de/",
+            "method": "BLOCK",
+            "content": {
+                "filter": "NONE",
+                "type": "TEXT"
+            },
+            "formats": [
+                {
+                    "filter": "NONE",
+                    "format": "DOMAIN"
+                }
+            ],
+            "mirrors": [
+                "https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/social.txt",
+                "https://fussle.de/social.txt"
+            ],
+            "checksums": {},
+            "scan": false
+        },
+        "makopi": {
+            "_desc": "https://www.sgv417.jp/~makopi/RaspberryPi/",
+            "_license": "not-available",
+            "_homepage": "https://www.sgv417.jp/~makopi/RaspberryPi/",
+            "method": "BLOCK",
+            "content": {
+                "filter": "NONE",
+                "type": "TEXT"
+            },
+            "formats": [
+                {
+                    "filter": "NONE",
+                    "format": "DOMAIN"
+                }
+            ],
+            "mirrors": [
+                "https://www.sgv417.jp/~makopi/RaspberryPi/block.txt"
+            ],
+            "checksums": {},
+            "scan": false
+        },
+        "thedumbterminal": {
+            "_desc": "not-available",
+            "_license": "not-available",
+            "_homepage": "https://thedumbterminal.co.uk/",
+            "method": "BLOCK",
+            "content": {
+                "filter": "NONE",
+                "type": "TEXT"
+            },
+            "formats": [
+                {
+                    "filter": "NONE",
+                    "format": "DOMAIN"
+                }
+            ],
+            "mirrors": [
+                "https://thedumbterminal.co.uk/files/services/squidblockedsites/blocked.txt"
+            ],
+            "checksums": {},
+            "scan": false
+        },
+        "zoso_rolist1": {
+            "_desc": "https://zoso.ro/rolist/",
+            "_license": "not-available",
+            "_homepage": "https://zoso.ro/goodies/",
+            "method": "BLOCK",
+            "content": {
+                "filter": "NONE",
+                "type": "TEXT"
+            },
+            "formats": [
+                {
+                    "filter": "NONE",
+                    "format": "DOMAIN"
+                }
+            ],
+            "mirrors": [
+                "https://zoso.ro/pages/rolist.txt"
+            ],
+            "checksums": {},
+            "scan": false
+        },
+        "zoso_rolist2": {
+            "_desc": "https://zoso.ro/rolist/",
+            "_license": "not-available",
+            "_homepage": "https://zoso.ro/goodies/",
+            "method": "BLOCK",
+            "content": {
+                "filter": "NONE",
+                "type": "TEXT"
+            },
+            "formats": [
+                {
+                    "filter": "NONE",
+                    "format": "DOMAIN"
+                }
+            ],
+            "mirrors": [
+                "https://zoso.ro/pages/rolist2.txt"
+            ],
+            "checksums": {},
+            "scan": false
+        },
+        "zitstif": {
+            "_desc": "http://zitstif.no-ip.org/?cat=1037",
+            "_license": "not-available",
+            "_homepage": "http://zitstif.no-ip.org/",
+            "method": "BLOCK",
+            "content": {
+                "filter": "NONE",
+                "type": "TEXT"
+            },
+            "formats": [
+                {
+                    "filter": "NONE",
+                    "format": "IPV4"
+                }
+            ],
+            "mirrors": [
+                "http://zitstif.com/badips.txt",
+                "http://zitstif.no-ip.org/badips.txt"
+            ],
+            "checksums": {
+                "sha256": "http://zitstif.com/badipsHash.txt"
+            },
+            "scan": false
         }
     }
 }

@@ -606,6 +606,7 @@ Use the domain list.
   - [GitHub's Dirty Dancing](https://github.com/StevenBlack/hosts/pull/1784)
 - [Zonefiles](https://zonefiles.io/compromised-ip-list/)
   - Offline since last check.
+- [justdomains](https://github.com/justdomains/blocklists)
 
 ### 🕵🏻 Lamers Unwelcome
 
