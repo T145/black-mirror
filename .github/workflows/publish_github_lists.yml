@@ -29,6 +29,7 @@ jobs:
         env:
           STEPS_CONTEXT: ${{ toJson(steps) }}
         run: echo "$STEPS_CONTEXT"
+        shell: bash
 
       - name: Update changelog
         if: steps.build.outputs.status == 'success'
@@ -53,6 +54,7 @@ jobs:
       - name: Remove local artifacts
         if: always()
         run: rm -rf build/
+        shell: bash
 
       - name: Update the README, CHANGELOG, logs, and stored version
         if: success()
