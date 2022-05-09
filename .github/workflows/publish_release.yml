@@ -18,9 +18,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: Create builds
-        run: |
-          chmod 755 -R scripts/
-          ./scripts/github/workflow.bash
+        run: ./scripts/github/workflow.bash
         shell: bash
       - name: Upload build artifacts
         if: success()
