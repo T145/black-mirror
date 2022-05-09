@@ -1,0 +1,62 @@
+name: Publish Lists to GitHub
+
+on:
+  schedule:
+    - cron: "27 1,13 * * *"
+
+jobs:
+  github:
+    runs-on: ubuntu-latest
+
+    container:
+      image: ghcr.io/t145/black-mirror:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ github.token }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Generate lists
+        id: build
+        run: ./scripts/github/workflow.bash
+        shell: bash
+
+      - name: Dump build context
+        env:
+          STEPS_CONTEXT: ${{ toJson(steps) }}
+        run: echo "$STEPS_CONTEXT"
+
+      - name: Update changelog
+        if: steps.build.outputs.status == 'success'
+        id: cz
+        uses: commitizen-tools/commitizen-action@master
+        with:
+          github_token: ${{ github.token }}
+          commit: false
+
+      - name: Create GitHub release
+        if: steps.build.outputs.status == 'success'
+        id: release
+        uses: marvinpinto/action-automatic-releases@v1.2.1
+        with:
+          # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow
+          repo_token: ${{ secrets.FOR_WEBHOOKS }}
+          automatic_release_tag: ${{ steps.cz.outputs.version }}
+          prerelease: false
+          title: All Artifacts
+          files: build/*
+
+      - name: Remove local artifacts
+        if: always()
+        run: rm -rf build/
+
+      - name: Update the README, CHANGELOG, logs, and stored version
+        if: success()
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # homage to the python linting utility "black"
+          commit_message: ✨🍰✨
