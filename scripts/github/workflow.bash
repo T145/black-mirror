@@ -10,7 +10,9 @@ main() {
     ./scripts/v1/build_release.bash
     [[ "$?" = 0 ]] && result='success' || result='failure'
 
-    find -P -O3 ./build/ -type f -name "*.txt" -exec ./scripts/github/update_readme_tag.bash {} \;
+    if [[ "$result" == 'success' ]]; then
+        find -P -O3 ./build/ -type f -name "*.txt" -exec ./scripts/github/update_readme_tag.bash {} \;
+    fi
 
     # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#outputs-for-composite-actions=
     # https://help.github.com/en/articles/development-tools-for-github-actions#set-an-output-parameter-set-output
