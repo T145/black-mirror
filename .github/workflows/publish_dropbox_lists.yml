@@ -16,13 +16,11 @@ jobs:
         run: mkdir -p build/
 
       - name: Download release assets
-        uses: dsaltares/fetch-gh-release-asset@master
+        uses: robinraju/release-downloader@v1.3
         with:
-          repo: 'T145/black-mirror'
-          regex: true
-          file: "/(.*?)(\\bchecksums\\b|\\btxt\\b)/g"
-          target: 'build/'
-          token: ${{ github.token }}
+          repository: "T145/black-mirror"
+          latest: true
+          fileName: "*"
 
       - name: Upload blacklist checksums
         uses: deka0106/upload-to-dropbox@v2
