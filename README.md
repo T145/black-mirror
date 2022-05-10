@@ -409,6 +409,18 @@ Use the domain list.
 - [bjornstar](https://github.com/bjornstar/hosts)
 - [CyberSaiyan](https://github.com/CyberSaiyanIT/InfoSharing)
 - [d3ward](https://github.com/d3ward/toolz#readme)
+- [Cybo1927](https://github.com/Cybo1927/Hosts)
+- [Th3M3](https://github.com/Th3M3/blocklists)
+  - malware
+
+#### TODO
+
+- [Esox-Lucius](https://github.com/Esox-Lucius/PiHoleblocklists)
+  - AZORult
+  - AgentTesla
+  - Amadey
+  - Andromeda
+  - AsyncRAT
 
 ### ⬜ Whitelists
 
@@ -466,6 +478,7 @@ Use the domain list.
 - [malware-filter](https://gitlab.com/curben/malware-filter)
 - [AdlistTXTS](https://github.com/CleanMachine1/AdlistTXTS#readme)
 - [socialblocklists](https://github.com/d43m0nhLInt3r/socialblocklists#readme)
+- [Bon-Appetit](https://github.com/Bon-Appetit/porn-domains)
 
 ### 🧟 Zombies
 
@@ -607,6 +620,17 @@ Use the domain list.
 - [Zonefiles](https://zonefiles.io/compromised-ip-list/)
   - Offline since last check.
 - [justdomains](https://github.com/justdomains/blocklists)
+- [black-domains](https://github.com/ADsecu/black-domains)
+- [ADios!](https://github.com/AlexRabbit/ADios)
+- [Amdr0meda](https://github.com/Amdr0meda/Blocklist_Pi_Hole)
+- [BlockNews](https://github.com/MarByteBeep/BlockNews)
+- [pihole-regex](https://github.com/PebbleOG/pihole-regex)
+- [Phentora](https://github.com/Phentora/AdguardPersonalList)
+- [SteamScamSites](https://github.com/PoorPocketsMcNewHold/SteamScamSites)
+- [fakerando-domains](https://github.com/SoftCreatR/fakerando-domains)
+- [teleme7ry](https://github.com/Strappazzon/teleme7ry)
+- [XionKzn](https://github.com/XionKzn/PiHole-Lists)
+  - Needs more investigation
 
 ### 🕵🏻 Lamers Unwelcome
 
