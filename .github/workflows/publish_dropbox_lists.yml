@@ -20,7 +20,7 @@ jobs:
         with:
           repo: 'T145/black-mirror'
           regex: true
-          file: "/(.*?)(\bchecksums\b|\btxt\b)/g"
+          file: "/(.*?)(\\bchecksums\\b|\\btxt\\b)/g"
           target: 'build/'
           token: ${{ github.token }}
 
