@@ -38,7 +38,7 @@ RUN curl -sSf https://raw.githubusercontent.com/T145/black-mirror/master/scripts
 RUN echo 'will cite' | parallel --citation || true
 
 # install twint in base python, otherwise "pandas" will be perma-stuck building in pypy
-RUN pip3 install Commitizen twint
+RUN pip3 install commitizen twint
 
 # https://golang.org/doc/go-get-install-deprecation#what-to-use-instead
 # the install paths are where "main.go" lives
