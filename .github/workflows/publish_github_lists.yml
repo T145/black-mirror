@@ -45,7 +45,7 @@ jobs:
         uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow
-          repo_token: ${{ secrets.FOR_WEBHOOKS }}
+          repo_token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
           automatic_release_tag: ${{ steps.cz.outputs.version }}
           prerelease: false
           title: All Artifacts
