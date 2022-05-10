@@ -6,9 +6,3 @@ repos:
       - files: "*.bash"
     repo: https://github.com/koalaman/shellcheck-precommit
     rev: v0.8.0
-  - hooks:
-      - id: commitizen
-        stages:
-          - commit-msg
-    repo: https://github.com/commitizen-tools/commitizen
-    rev: master
