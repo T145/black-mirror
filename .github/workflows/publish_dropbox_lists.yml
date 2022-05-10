@@ -11,21 +11,15 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
+      - name: Generate output directory
+        run: mkdir -p build/
+
       - name: Download checksum assets
         uses: dsaltares/fetch-gh-release-asset@master
         with:
           repo: 'T145/black-mirror'
           regex: true
           file: "*\\.checksums"
-          target: 'build/'
-          token: ${{ github.token }}
-
-      - name: Download text assets
-        uses: dsaltares/fetch-gh-release-asset@master
-        with:
-          repo: 'T145/black-mirror'
-          regex: true
-          file: "*\\.txt"
           target: 'build/'
           token: ${{ github.token }}
 
@@ -42,24 +36,29 @@ jobs:
         run: sleep 5s
         shell: bash
 
-      - name: Upload blacklists
-        uses: deka0106/upload-to-dropbox@v2
-        with:
-          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-          src: build/black_*.txt
-          dest: /black-mirror/
-          mode: overwrite
-          multiple: true
-
-      - name: Sleep to avoid 429 error
-        run: sleep 5s
-        shell: bash
-
       - name: Upload whitelist checksums
         uses: deka0106/upload-to-dropbox@v2
         with:
           dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
           src: build/white_*.checksums
+          dest: /black-mirror/
+          mode: overwrite
+          multiple: true
+
+      - name: Download text assets
+        uses: dsaltares/fetch-gh-release-asset@master
+        with:
+          repo: 'T145/black-mirror'
+          regex: true
+          file: "*\\.txt"
+          target: 'build/'
+          token: ${{ github.token }}
+
+      - name: Upload blacklists
+        uses: deka0106/upload-to-dropbox@v2
+        with:
+          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
+          src: build/black_*.txt
           dest: /black-mirror/
           mode: overwrite
           multiple: true
