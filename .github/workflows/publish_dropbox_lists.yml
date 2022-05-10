@@ -1,6 +1,7 @@
 name: Publish Lists to Dropbox
 
 on:
+  workflow_dispatch:
   release:
     types: [released]
 
@@ -14,12 +15,12 @@ jobs:
       - name: Generate output directory
         run: mkdir -p build/
 
-      - name: Download checksum assets
+      - name: Download release assets
         uses: dsaltares/fetch-gh-release-asset@master
         with:
           repo: 'T145/black-mirror'
           regex: true
-          file: "*\\.checksums"
+          file: "/(.*?)(\bchecksums\b|\btxt\b)/g"
           target: 'build/'
           token: ${{ github.token }}
 
@@ -44,15 +45,6 @@ jobs:
           dest: /black-mirror/
           mode: overwrite
           multiple: true
-
-      - name: Download text assets
-        uses: dsaltares/fetch-gh-release-asset@master
-        with:
-          repo: 'T145/black-mirror'
-          regex: true
-          file: "*\\.txt"
-          target: 'build/'
-          token: ${{ github.token }}
 
       - name: Upload blacklists
         uses: deka0106/upload-to-dropbox@v2
