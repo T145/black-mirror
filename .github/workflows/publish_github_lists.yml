@@ -36,14 +36,6 @@ jobs:
         run: echo "$STEPS_CONTEXT"
         shell: bash
 
-      - name: Update changelog
-        if: steps.build.outputs.status == 'success'
-        id: cz
-        uses: commitizen-tools/commitizen-action@master
-        with:
-          github_token: ${{ github.token }}
-          commit: false
-
       - name: Create GitHub release
         if: steps.build.outputs.status == 'success'
         id: release
@@ -51,10 +43,25 @@ jobs:
         with:
           # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow
           repo_token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
-          automatic_release_tag: ${{ steps.cz.outputs.version }}
+          automatic_release_tag: latest
           prerelease: false
           title: All Artifacts
           files: build/*
+
+      - name: Get release data
+        id: release_data
+        uses: KevinRohn/github-full-release-data@v2
+        with:
+          repository: "T145/black-mirror"
+          token: ${{ github.token }}
+          version: latest
+          body-markdown-file-path: build/body.md
+
+      - name: Update changelog
+        uses: stefanzweifel/changelog-updater-action@v1
+        with:
+          latest-version: latest
+          release-notes: ${{ steps.release_data.outputs.body }}
 
       - name: Remove local artifacts
         if: always()
