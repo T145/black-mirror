@@ -21,7 +21,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Make repo directory commitable
+      - name: Make the repo directory safe
         run: git config --global --add safe.directory /__w/black-mirror/black-mirror
         shell: bash
 
@@ -38,7 +38,6 @@ jobs:
 
       - name: Create GitHub release
         if: steps.build.outputs.status == 'success'
-        id: release
         uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow
@@ -49,6 +48,7 @@ jobs:
           files: build/*
 
       - name: Get release data
+        if: steps.build.outputs.status == 'success'
         id: release_data
         uses: KevinRohn/github-full-release-data@v2
         with:
@@ -68,7 +68,7 @@ jobs:
         run: rm -rf build/
         shell: bash
 
-      - name: Update the README, CHANGELOG, logs, and stored version
+      - name: Update the README, CHANGELOG, and logs
         if: success()
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
