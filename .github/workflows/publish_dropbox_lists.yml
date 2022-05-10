@@ -11,13 +11,21 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Download release assets
+      - name: Download checksum assets
         uses: dsaltares/fetch-gh-release-asset@master
         with:
           repo: 'T145/black-mirror'
-          #version: 'tags/v4.0.0' # Automatically fetches the "latest" tag!
           regex: true
-          file: "*.*"
+          file: "*\\.checksums"
+          target: 'build/'
+          token: ${{ github.token }}
+
+      - name: Download text assets
+        uses: dsaltares/fetch-gh-release-asset@master
+        with:
+          repo: 'T145/black-mirror'
+          regex: true
+          file: "*\\.txt"
           target: 'build/'
           token: ${{ github.token }}
 

@@ -20,6 +20,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+        run: git config --global --add safe.directory /__w/black-mirror/black-mirror
+        shell: bash
 
       - name: Generate lists
         id: build
