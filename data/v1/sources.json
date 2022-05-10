@@ -3610,5 +3610,31 @@
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
+  },
+  "cybo1927": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Cybo1927/Hosts/master/DNS%20Hosts"
+    ]
+  },
+  "th3m3": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Th3M3/blocklists/master/malware.list"
+    ]
   }
 }
