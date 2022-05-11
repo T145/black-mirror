@@ -50,7 +50,7 @@ jobs:
       - name: Get release data
         if: steps.build.outputs.status == 'success'
         id: release_data
-        uses: KevinRohn/github-full-release-data@v2
+        uses: KevinRohn/github-full-release-data@v2.0.0
         with:
           repository: "T145/black-mirror"
           token: ${{ github.token }}
