@@ -242,7 +242,7 @@ Use the domain list.
   - AmazonFireTV
   - SessionReplay
   - SmartTV
-- [anti_ad](https://github.com/privacy-protection-tools/anti-AD#anti-ad)
+- [anti-AD](https://github.com/privacy-protection-tools/anti-AD#anti-ad)
 - [kodopenguin](https://github.com/KodoPengin/GameIndustry-hosts-Template)
   - Main-Template
   - Gaming-Full-Template
@@ -426,10 +426,23 @@ Use the domain list.
 - [LittleCordines](https://github.com/LittleCordines/pfsense-hosts-file)
 - [noplaylist](https://github.com/allendema/noplaylist)
 - [CombinedPrivacyBlockLists](https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/master/NoFormatting/BlacklistedDomains.txt)
+- [no-qanon](https://github.com/rimu/no-qanon)
 
 #### TODO
 
 - [Yuki2718](https://github.com/Yuki2718/adblock)
+- [Mochi Filter](https://github.com/eEIi0A5L/adblock_filter/blob/master/mochi_filter.txt)
+- [hemiipatu](https://github.com/hemiipatu/PiHoleBlocklists/tree/master/blocklists)
+  - Needs further investigation.
+- [herrbischoff](https://git.herrbischoff.com/trackers/about/)
+  - All lists are used.
+  - [Support female hygiene in Zanzibar](https://git.herrbischoff.com/trackers/about/#women-empowerment-in-zanzibar)!
+- [Chong Lua Dao](https://chongluadao.vn/)
+  - [Blacklist](https://api.chongluadao.vn/v1/blacklist)
+  - [Whitelist](https://api.chongluadao.vn/v1/whitelist)
+- [migueldemoura](https://github.com/migueldemoura/ublock-umatrix-rulesets)
+- nextdns
+  - [cname-cloaking-blocklist](https://github.com/nextdns/cname-cloaking-blocklist) ?
 
 ### ⬜ Whitelists
 
@@ -447,6 +460,7 @@ Use the domain list.
 - [1Hosts Excludes](https://github.com/badmojr/1Hosts/tree/master/submit_here)
 - [Team Cymru](https://team-cymru.com/community-services/bogon-reference/bogon-reference-http/)
 - [C2Intel Nord VPN IPs](https://github.com/drb-ra/C2IntelFeeds#readme)
+- [nextdns/bypass-methods](https://github.com/nextdns/metadata/blob/master/parentalcontrol/bypass-methods)
 
 ### 🥢 Duplicates
 
@@ -495,6 +509,14 @@ Use the domain list.
   - [go2engineering](https://github.com/go2engineering/pihole-blocklists)
 - [RooneyMcNibNug](https://github.com/RooneyMcNibNug/pihole-stuff/blob/master/adlists_config.txt)
 - [stevejenkins](https://github.com/stevejenkins/my-pihole-lists)
+- [ftprivacy](https://github.com/ftpmorph/ftprivacy)
+- [sophos-xg-block-lists](https://github.com/austinheap/sophos-xg-block-lists)
+- [justdomains](https://github.com/justdomains/blocklists)
+- [mhhakim](https://github.com/mhhakim/pihole-blocklist)
+- [blockconvert](https://github.com/mkb2091/blockconvert/blob/master/filterlists.csv)
+- [neodevhost](https://github.com/neodevpro/neodevhost)
+- [ookangzheng](https://github.com/ookangzheng/dbl-oisd-nl)
+  - OISD mirroring project.
 
 ### 🧟 Zombies
 
@@ -562,7 +584,6 @@ Use the domain list.
 - [Minimal-Hosts-Blocker](https://github.com/arcetera/Minimal-Hosts-Blocker)
 - [blacklist-named](https://github.com/tomzuu/blacklist-named)
   - Does not update automatically.
-- [sophos-xg-block-lists](https://github.com/austinheap/sophos-xg-block-lists)
 - [piholeparser](https://github.com/deathbybandaid/piholeparser)
 - [IsraelList](https://jansal.net/tpl/IsraelList.tpl)
 - [niecko](https://www.niecko.pl/adblock/adblock.txt)
@@ -635,12 +656,14 @@ Use the domain list.
   - [GitHub's Dirty Dancing](https://github.com/StevenBlack/hosts/pull/1784)
 - [Zonefiles](https://zonefiles.io/compromised-ip-list/)
   - Offline since last check.
-- [justdomains](https://github.com/justdomains/blocklists)
 - [black-domains](https://github.com/ADsecu/black-domains)
 - [ADios!](https://github.com/AlexRabbit/ADios)
 - [Amdr0meda](https://github.com/Amdr0meda/Blocklist_Pi_Hole)
 - [BlockNews](https://github.com/MarByteBeep/BlockNews)
-- [pihole-regex](https://github.com/PebbleOG/pihole-regex)
+- PiHole Regex
+  - [mmotti](https://github.com/mmotti/pihole-regex)
+  - [PebbleOG](https://github.com/PebbleOG/pihole-regex)
+  - [revolveruk30](https://github.com/revolveruk30/pihole-regex)
 - [Phentora](https://github.com/Phentora/AdguardPersonalList)
 - [SteamScamSites](https://github.com/PoorPocketsMcNewHold/SteamScamSites)
 - [fakerando-domains](https://github.com/SoftCreatR/fakerando-domains)
@@ -658,6 +681,25 @@ Use the domain list.
 - [TonyRL](https://github.com/TonyRL/blocklist)
 - [pfbng](https://github.com/angelics/pfbng)
 - [anthony-wang](https://github.com/anthony-wang/PiHoleBlocklist)
+- [CB-Malicious-Domains](https://github.com/cb-software/CB-Malicious-Domains)
+- [cloudsvrtech](https://github.com/cloudsvrtech?tab=repositories)
+  - [pfsense_porn_famous](https://github.com/cloudsvrtech/pfsense_porn_famous)
+  - [pfsense_ips_custom_blocklist](https://github.com/cloudsvrtech/pfsense_ips_custom_blocklist)
+  - [pfsense_ips_youtube](https://github.com/cloudsvrtech/pfsense_ips_youtube)
+  - [pfsense_ips_instagram](https://github.com/cloudsvrtech/pfsense_ips_instagram)
+  - [pfsense_ips_facebook](https://github.com/cloudsvrtech/pfsense_ips_facebook)
+  - [pfsense_ips_miscSocialMedia](https://github.com/cloudsvrtech/pfsense_ips_miscSocialMedia)
+- [ProtectorHosts](https://github.com/furkun/ProtectorHosts)
+- [adblock-nsa](https://github.com/gasull/adblock-nsa)
+- [magento-malware-scanner](https://github.com/gwillem/magento-malware-scanner)
+- [gyli](https://github.com/gyli/Blocklist)
+- [kboghdady](https://github.com/kboghdady/youTube_ads_4_pi-hole)
+- [covid-domains](https://github.com/merkleID/covid-domains)
+- [semalt-blocker](https://github.com/nabble/semalt-blocker)
+- nextdns
+  - [piracy-blocklists](https://github.com/nextdns/piracy-blocklists)
+- [LeeCh-List](https://github.com/pureexe/LeeCh-List)
+- [antifa-n](https://github.com/antifa-n/pihole)
 
 ### 🕵🏻 Lamers Unwelcome
 
