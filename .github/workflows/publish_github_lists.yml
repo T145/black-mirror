@@ -38,14 +38,16 @@ jobs:
 
       - name: Create GitHub release
         if: steps.build.outputs.status == 'success'
-        uses: marvinpinto/action-automatic-releases@v1.2.1
+        uses: softprops/action-gh-release@v1
         with:
           # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow
-          repo_token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
-          automatic_release_tag: latest
+          token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
+          draft: false
           prerelease: false
-          title: All Artifacts
           files: build/*
+          name: All Artifacts
+          tag_name: latest
+          fail_on_unmatched_files: true
 
       - name: Get release data
         if: steps.build.outputs.status == 'success'
