@@ -809,6 +809,19 @@
       "https://zerodot1.gitlab.io/CoinBlockerLists/white_list.txt"
     ]
   },
+  "combindprivacyblocklists": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/master/NoFormatting/BlacklistedDomains.txt"
+    ]
+  },
   "cryptolaemus": {
     "_comment": "All reported domains seem to appear in the dbucket, so use it for domains.",
     "color": "black",
@@ -2199,6 +2212,19 @@
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt"
+    ]
+  },
+  "noplaylist": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$1~/^0.0.0.0$/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/allendema/noplaylist/main/NoPlayList.txt"
     ]
   },
   "not_on_my_shift": {
@@ -3765,32 +3791,6 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ]
-  },
-  "noplaylist": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$1~/^0.0.0.0$/{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/allendema/noplaylist/main/NoPlayList.txt"
-    ]
-  },
-  "combindprivacyblocklists": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "cat",
-        "format": "domain",
-        "rule": ""
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/master/NoFormatting/BlacklistedDomains.txt"
     ]
   }
 }
