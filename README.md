@@ -443,6 +443,10 @@ Use the domain list.
 - [migueldemoura](https://github.com/migueldemoura/ublock-umatrix-rulesets)
 - nextdns
   - [cname-cloaking-blocklist](https://github.com/nextdns/cname-cloaking-blocklist) ?
+- [uAssets](https://github.com/uBlockOrigin/uAssets)
+- [jaka's domains](https://github.com/soteria-nou/domain-list)
+- [stonecrusher](https://github.com/stonecrusher/filterlists-pihole/blob/master/watchlist-internet-ph.txt)
+- [tg12](https://github.com/tg12/pihole-phishtank-list/blob/master/list/phish_domains.txt) ? (check to see if phishtank is elsewhere)
 
 ### ⬜ Whitelists
 
@@ -517,6 +521,9 @@ Use the domain list.
 - [neodevhost](https://github.com/neodevpro/neodevhost)
 - [ookangzheng](https://github.com/ookangzheng/dbl-oisd-nl)
   - OISD mirroring project.
+- [smashblock](https://github.com/smashah/smashblock)
+- [hblock](https://github.com/hectorm/hblock/blob/master/SOURCES.md)
+- [hl2guide](https://raw.githubusercontent.com/hl2guide/Filterlist-for-AdGuard-or-PiHole/master/filter_list_URLs.txt)
 
 ### 🧟 Zombies
 
@@ -617,7 +624,6 @@ Use the domain list.
 - [uBOPa](https://github.com/nimasaj/uBOPa)
 - [iploggerfilter](https://github.com/piperun/iploggerfilter)
 - [thai-ads-filter](https://github.com/adblock-thai/thai-ads-filter)
-- [jaka's domains](https://github.com/soteria-nou/domain-list)
 - [Cryptojacking-campaign-list](https://github.com/deHakkelaar/Cryptojacking-campaign-list)
   - Active but draws from inactive Google Sheets.
   - https://dehakkelaar.nl/lists/
@@ -700,6 +706,12 @@ Use the domain list.
   - [piracy-blocklists](https://github.com/nextdns/piracy-blocklists)
 - [LeeCh-List](https://github.com/pureexe/LeeCh-List)
 - [antifa-n](https://github.com/antifa-n/pihole)
+- [phased-array](https://github.com/rto/phased-array)
+- [fluffy-blocklist](https://github.com/sk-cat/fluffy-blocklist)
+- [covid-iocs](https://github.com/sophoslabs/covid-iocs)
+- [twcau](https://github.com/twcau/AdblockRules)
+- [AdblockListABP](https://github.com/w13d/adblockListABP-PiHole)
+- [xlimit91](https://github.com/xlimit91/xlimit91-block-list)
 
 ### 🕵🏻 Lamers Unwelcome
 
