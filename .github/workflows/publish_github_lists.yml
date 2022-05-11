@@ -32,6 +32,16 @@ jobs:
         run: echo "$STEPS_CONTEXT"
         shell: bash
 
+      - name: Remove old release assets
+        if: steps.build.outputs.status == 'success'
+        uses: mknejp/delete-release-assets@v1
+        with:
+          token: ${{ github.token }}
+          tag: latest
+          assets: |
+            *.txt
+            *.checksums
+
       - name: Create GitHub release
         if: steps.build.outputs.status == 'success'
         uses: softprops/action-gh-release@v1
