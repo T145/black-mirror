@@ -412,15 +412,18 @@ Use the domain list.
 - [Cybo1927](https://github.com/Cybo1927/Hosts)
 - [Th3M3](https://github.com/Th3M3/blocklists)
   - malware
-
-#### TODO
-
+- [Tenzin Gyatso Creations](https://tgc.cloud/downloads/)
+- [Orthrus](https://github.com/marcusminus/Orthrus-BlockList)
+- [youtube_ad_blocklist](https://github.com/Ewpratten/youtube_ad_blocklist)
 - [Esox-Lucius](https://github.com/Esox-Lucius/PiHoleblocklists)
   - AZORult
   - AgentTesla
   - Amadey
   - Andromeda
   - AsyncRAT
+- [schakal](https://schakal.ru/hosts/alive_hosts.txt)
+  - Confirmed to be active.
+- [LittleCordines](https://github.com/LittleCordines/pfsense-hosts-file)
 
 ### ⬜ Whitelists
 
@@ -479,6 +482,12 @@ Use the domain list.
 - [AdlistTXTS](https://github.com/CleanMachine1/AdlistTXTS#readme)
 - [socialblocklists](https://github.com/d43m0nhLInt3r/socialblocklists#readme)
 - [Bon-Appetit](https://github.com/Bon-Appetit/porn-domains)
+  - [alexsannikov](https://github.com/alexsannikov/adguardhome-filters) [(?)](https://github.com/pq6p41fgt6k/potential-octo-parakeet)
+  - [CastleAds](https://github.com/Castle67/CastleAds)
+  - [emiliodallatorre](https://github.com/emiliodallatorre/adult-hosts-list)
+  - [foopsss](https://github.com/foopsss/hosts)
+  - [go2engineering](https://github.com/go2engineering/pihole-blocklists)
+- [RooneyMcNibNug](https://github.com/RooneyMcNibNug/pihole-stuff/blob/master/adlists_config.txt)
 
 ### 🧟 Zombies
 
@@ -631,6 +640,14 @@ Use the domain list.
 - [teleme7ry](https://github.com/Strappazzon/teleme7ry)
 - [XionKzn](https://github.com/XionKzn/PiHole-Lists)
   - Needs more investigation
+- [youtubeadsblacklist](https://github.com/anudeepND/youtubeadsblacklist)
+- [Bon-Appetit](https://github.com/Bon-Appetit/porn-domains)
+  - [brijrajparmar27](https://github.com/brijrajparmar27/host-sources)
+  - [EdmondN1](https://github.com/EdmondN1/MyPiHoleLists)
+  - [bad-websites](https://github.com/elbkr/bad-websites)
+  - [moose84](https://github.com/moose84/list)
+  - [nizekun](https://github.com/nizekun/adguardhome-blocklist)
+  - [PedroJuan91](https://github.com/PedroJuan91/porn-list)
 
 ### 🕵🏻 Lamers Unwelcome
 
