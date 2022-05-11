@@ -51,11 +51,6 @@ jobs:
         if: steps.build.outputs.status == 'success'
         id: release_data
         uses: KevinRohn/github-full-release-data@v2.0.0
-        with:
-          repository: "T145/black-mirror"
-          token: ${{ github.token }}
-          version: latest
-          body-markdown-file-path: build/body.md
 
       - name: Update changelog
         uses: stefanzweifel/changelog-updater-action@v1
