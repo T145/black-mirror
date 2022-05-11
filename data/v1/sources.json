@@ -3792,5 +3792,31 @@
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
+  },
+  "nextdns_bypass_methods": {
+    "color": "white",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$0~/^[^#]/"
+      }
+    ],
+    "mirrors": [
+      "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
+    ]
+  },
+  "no_qanon": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/rimu/no-qanon/master/etc_hosts.txt"
+    ]
   }
 }
