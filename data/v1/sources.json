@@ -3636,5 +3636,135 @@
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
+  },
+  "tgc": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$1~/^0.0.0.0$/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://tgc.cloud/downloads/hosts.alive.txt"
+    ]
+  },
+  "orthrus": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "NR>3"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/marcusminus/Orthrus-BlockList/master/domains.txt"
+    ]
+  },
+  "youtube_ad_blocklist": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Ewpratten/youtube_ad_blocklist/master/blocklist.txt"
+    ]
+  },
+  "esox_lucius_azorult": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{if ($1~/^0.0.0.0$/){print $2}else{if ($0~/^[^#]/){print $1}}}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/AZORult%20-%20Malware%20Domain%20Feed%20V2"
+    ]
+  },
+  "esox_lucius_agenttesla": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{if ($1~/^0.0.0.0$/){print $2}else{if ($0~/^[^#]/){print $1}}}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/AgentTesla%20-%20Malware%20Domain%20Feed%20V2"
+    ]
+  },
+  "esox_lucius_amadey": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{if ($1~/^0.0.0.0$/){print $2}else{if ($0~/^[^#]/){print $1}}}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/Amadey%20-%20Malware%20Domain%20Feed%20V2"
+    ]
+  },
+  "esox_lucius_andromeda": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{if ($1~/^0.0.0.0$/){print $2}else{if ($0~/^[^#]/){print $1}}}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/Andromeda%20-%20Malware%20Domain%20Feed%20V2"
+    ]
+  },
+  "esox_lucius_asyncrat": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "{if ($1~/^0.0.0.0$/){print $2}else{if ($0~/^[^#]/){print $1}}}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/AsyncRAT%20-%20Malware%20Domain%20Feed%20V2"
+    ]
+  },
+  "schakal": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$1~/^0.0.0.0$/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://schakal.ru/hosts/alive_hosts.txt"
+    ]
+  },
+  "littlecordines": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$1~/^0.0.0.0$/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/LittleCordines/pfsense-hosts-file/master/GeneralBlocklists"
+    ]
   }
 }
