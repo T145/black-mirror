@@ -424,6 +424,12 @@ Use the domain list.
 - [schakal](https://schakal.ru/hosts/alive_hosts.txt)
   - Confirmed to be active.
 - [LittleCordines](https://github.com/LittleCordines/pfsense-hosts-file)
+- [noplaylist](https://github.com/allendema/noplaylist)
+- [CombinedPrivacyBlockLists](https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/master/NoFormatting/BlacklistedDomains.txt)
+
+#### TODO
+
+- [Yuki2718](https://github.com/Yuki2718/adblock)
 
 ### ⬜ Whitelists
 
@@ -488,6 +494,7 @@ Use the domain list.
   - [foopsss](https://github.com/foopsss/hosts)
   - [go2engineering](https://github.com/go2engineering/pihole-blocklists)
 - [RooneyMcNibNug](https://github.com/RooneyMcNibNug/pihole-stuff/blob/master/adlists_config.txt)
+- [stevejenkins](https://github.com/stevejenkins/my-pihole-lists)
 
 ### 🧟 Zombies
 
@@ -648,6 +655,9 @@ Use the domain list.
   - [moose84](https://github.com/moose84/list)
   - [nizekun](https://github.com/nizekun/adguardhome-blocklist)
   - [PedroJuan91](https://github.com/PedroJuan91/porn-list)
+- [TonyRL](https://github.com/TonyRL/blocklist)
+- [pfbng](https://github.com/angelics/pfbng)
+- [anthony-wang](https://github.com/anthony-wang/PiHoleBlocklist)
 
 ### 🕵🏻 Lamers Unwelcome
 
