@@ -3766,5 +3766,31 @@
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
+  },
+  "noplaylist": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$1~/^0.0.0.0$/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/allendema/noplaylist/main/NoPlayList.txt"
+    ]
+  },
+  "combindprivacyblocklists": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/master/NoFormatting/BlacklistedDomains.txt"
+    ]
   }
 }
