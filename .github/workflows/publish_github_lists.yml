@@ -21,10 +21,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Make the repo directory safe
-        run: git config --global --add safe.directory /__w/black-mirror/black-mirror
-        shell: bash
-
       - name: Generate lists
         id: build
         run: ./scripts/github/workflow.bash

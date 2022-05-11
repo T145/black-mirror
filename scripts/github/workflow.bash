@@ -5,6 +5,7 @@ set -euo pipefail
 main() {
     local result
 
+    git config --global --add safe.directory /__w/black-mirror/black-mirror
     :> logs/aria2.log
 
     ./scripts/v1/build_release.bash
