@@ -11,15 +11,13 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Generate output directory
-        run: mkdir -p build/
-
       - name: Download release assets
         uses: robinraju/release-downloader@v1.3
         with:
           repository: "T145/black-mirror"
           latest: true
           fileName: "*"
+          out-file-path: "build"
 
       - name: Upload blacklist checksums
         uses: deka0106/upload-to-dropbox@v2
