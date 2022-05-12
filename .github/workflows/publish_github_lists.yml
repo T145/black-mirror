@@ -1,7 +1,6 @@
 name: Publish Lists to GitHub
 
 on:
-  workflow_dispatch:
   schedule:
     - cron: "27 1,13 * * *"
 
@@ -66,9 +65,6 @@ jobs:
         with:
           latest-version: latest
           release-notes: ${{ fromJSON(steps.release_data.outputs.body) }}
-
-      - name: Show CHANGELOG content
-        run: cat CHANGELOG.md
 
       - name: Remove local artifacts
         if: always()
