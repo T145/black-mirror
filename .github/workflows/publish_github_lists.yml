@@ -67,6 +67,9 @@ jobs:
           latest-version: latest
           release-notes: ${{ fromJSON(steps.release_data.outputs.body) }}
 
+      - name: Show CHANGELOG content
+        run: cat CHANGELOG.md
+
       - name: Remove local artifacts
         if: always()
         run: rm -rf build/
