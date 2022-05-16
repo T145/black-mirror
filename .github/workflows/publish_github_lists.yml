@@ -52,19 +52,22 @@ jobs:
           title: All Artifacts
           files: build/*
 
-      - name: Get release data
-        if: steps.build.outputs.status == 'success'
-        id: release_data
-        uses: KevinRohn/github-full-release-data@v2.0.1
-        with:
-          token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
+      # - name: Get release data
+      #   if: steps.build.outputs.status == 'success'
+      #   id: release_data
+      #   uses: KevinRohn/github-full-release-data@v2.0.1
+      #   with:
+      #     token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
 
       - name: Update changelog
         if: steps.build.outputs.status == 'success'
-        uses: stefanzweifel/changelog-updater-action@v1
+        uses: thomaseizinger/keep-a-changelog-new-release@v1
         with:
-          latest-version: latest
-          release-notes: ${{ fromJSON(steps.release_data.outputs.body) }}
+          tag: latest
+      #   uses: stefanzweifel/changelog-updater-action@v1
+      #   with:
+      #     latest-version: latest
+      #     release-notes: ${{ fromJSON(steps.release_data.outputs.body) }}
 
       - name: Remove local artifacts
         if: always()
