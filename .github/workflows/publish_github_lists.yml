@@ -55,7 +55,7 @@ jobs:
       - name: Get release data
         if: steps.build.outputs.status == 'success'
         id: release_data
-        uses: KevinRohn/github-full-release-data@v2.0.0
+        uses: KevinRohn/github-full-release-data@v2.0.1
         with:
           token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
 
