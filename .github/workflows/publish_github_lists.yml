@@ -59,17 +59,11 @@ jobs:
           title: All Artifacts
           files: build/*
 
-      - name: Update changelog
-        if: steps.build.outputs.status == 'success'
-        run: echo -n '## ' && date +"%b %d, %Y" && git log --oneline "${{ steps.old_release.outputs.target_commitish }}..$(git log -n 1 --pretty=format:%H --)" >> CHANGELOG.md
+      - name: Add finishing touches
+        run: ./scripts/github/cleanup.bash ${{ steps.build.outputs.status }} ${{ steps.old_release.outputs.target_commitish }}
         shell: bash
 
-      - name: Remove local artifacts
-        if: always()
-        run: rm -rf build/
-        shell: bash
-
-      - name: Update the README, CHANGELOG, and logs
+      - name: Commit updated documents
         if: success()
         uses: stefanzweifel/git-auto-commit-action@v4
         with:

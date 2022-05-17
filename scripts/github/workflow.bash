@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -euo pipefail
 
 # Handles everything involved in GitHub CI processing
 main() {
