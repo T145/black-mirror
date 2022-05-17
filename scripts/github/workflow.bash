@@ -5,7 +5,7 @@ main() {
     local result
 
     git config --global --add safe.directory /__w/black-mirror/black-mirror
-    :> logs/aria2.log
+    : >logs/aria2.log
 
     ./scripts/v1/build_release.bash
     [[ "$?" = 0 ]] && result='success' || result='failure'

@@ -5,7 +5,7 @@ main() {
 
         latest_commit=$(git log -n 1 --pretty=format:%H --)
 
-        echo -n '## ' && date +"%d-%m-%Y %T" && git log --oneline "${2}..${latest_commit}" >> CHANGELOG.md
+        echo -n '## ' && date +"%d-%m-%Y %T" && git log --oneline "${2}..${latest_commit}" >>CHANGELOG.md
     fi
 
     rm -rf build/
