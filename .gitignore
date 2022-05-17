@@ -1,7 +1,6 @@
 .DS_Store
-
-# Ensure build artifacts are ignored
 build/
 
-# Don't ignore the text-format sources file
-!sources/sources.txt
+# Keep any list changes
+!data/*
+!exports/*
