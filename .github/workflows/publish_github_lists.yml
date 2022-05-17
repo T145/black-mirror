@@ -31,6 +31,13 @@ jobs:
         run: echo "$STEPS_CONTEXT"
         shell: bash
 
+      - name: Get old release data
+        if: steps.build.outputs.status == 'success'
+        id: old_release
+        uses: KevinRohn/github-full-release-data@v2.0.1
+        with:
+          token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
+
       - name: Remove old release assets
         if: steps.build.outputs.status == 'success'
         uses: mknejp/delete-release-assets@v1
@@ -52,22 +59,10 @@ jobs:
           title: All Artifacts
           files: build/*
 
-      # - name: Get release data
-      #   if: steps.build.outputs.status == 'success'
-      #   id: release_data
-      #   uses: KevinRohn/github-full-release-data@v2.0.1
-      #   with:
-      #     token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
-
       - name: Update changelog
         if: steps.build.outputs.status == 'success'
-        uses: thomaseizinger/keep-a-changelog-new-release@v1.3.0
-        with:
-          tag: latest
-      #   uses: stefanzweifel/changelog-updater-action@v1
-      #   with:
-      #     latest-version: latest
-      #     release-notes: ${{ fromJSON(steps.release_data.outputs.body) }}
+        run: echo -n '## ' && date +"%b %d, %Y" && git log --oneline "${{ steps.old_release.outputs.target_commitish }}..$(git log -n 1 --pretty=format:%H --)" >> CHANGELOG.md
+        shell: bash
 
       - name: Remove local artifacts
         if: always()
