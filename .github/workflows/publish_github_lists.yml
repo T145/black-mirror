@@ -61,7 +61,7 @@ jobs:
 
       - name: Update changelog
         if: steps.build.outputs.status == 'success'
-        uses: thomaseizinger/keep-a-changelog-new-release@v1
+        uses: thomaseizinger/keep-a-changelog-new-release@v1.3.0
         with:
           tag: latest
       #   uses: stefanzweifel/changelog-updater-action@v1
