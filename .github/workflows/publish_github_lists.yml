@@ -60,6 +60,7 @@ jobs:
           files: build/*
 
       - name: Add finishing touches
+        if: always()
         run: ./scripts/github/cleanup.bash ${{ steps.build.outputs.status }} ${{ steps.old_release.outputs.target_commitish }}
         shell: bash
 
