@@ -59,13 +59,18 @@ jobs:
           title: All Artifacts
           files: build/*
 
-      - name: Add finishing touches
+      - name: Update changelog
+        if: steps.build.outputs.status == 'success' && steps.old_release.outputs.target_commitish != null
+        run: echo -n '## ' && date +"%d-%m-%Y %T" && git log --oneline "${{ steps.old_release.outputs.target_commitish }}..$(git log -n 1 --pretty=format:%H --)" >>CHANGELOG.md
+        shell: bash
+
+      - name: Remove build artifacts
         if: always()
-        run: ./scripts/github/cleanup.bash ${{ steps.build.outputs.status }} ${{ steps.old_release.outputs.target_commitish }}
+        run: rm -rf build/
         shell: bash
 
       - name: Commit updated documents
-        if: success()
+        if: steps.build.outputs.status == 'success'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           # homage to the python linting utility "black"
