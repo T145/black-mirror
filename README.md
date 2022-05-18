@@ -427,6 +427,7 @@ Use the domain list.
 - [noplaylist](https://github.com/allendema/noplaylist)
 - [CombinedPrivacyBlockLists](https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/master/NoFormatting/BlacklistedDomains.txt)
 - [no-qanon](https://github.com/rimu/no-qanon)
+- [hexxium](https://github.com/HexxiumCreations/threat-list)
 
 #### TODO
 
@@ -562,7 +563,6 @@ Use the domain list.
 - [malc0de](http://malc0de.com/bl/)
   - **_MALC0DE'S RSS FEED CONTAINS SHADE RANSOMWARE! YOU HAVE BEEN WARNED._**
 - [cameleon](https://sysctl.org/cameleon/)
-- [hexxium](https://github.com/HexxiumCreations/threat-list)
 - [malfeed](https://github.com/eSentire/malfeed/)
 - [carl.net](https://carl.net/spam/access.txt)
   - `last-modified: Sun, 01 Sep 2002 16:05:00 GMT`

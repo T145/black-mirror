@@ -3818,5 +3818,19 @@
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ]
+  },
+  "hexxium": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/HexxiumCreations/threat-list/gh-pages/domainsonly",
+      "https://hexxiumcreations.github.io/threat-list/domainsonly"
+    ]
   }
 }
