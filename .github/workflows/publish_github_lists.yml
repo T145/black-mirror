@@ -1,6 +1,7 @@
 name: Publish Lists to GitHub
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "27 1,13 * * *"
 
