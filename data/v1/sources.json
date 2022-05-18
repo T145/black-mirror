@@ -714,6 +714,19 @@
       "https://raw.githubusercontent.com/scafroglia93/blocklists/master/blocklists-certego.txt"
     ]
   },
+  "chrisjudk": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$1~/^0.0.0.0$/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/chrisjudk/hosts/master/hosts"
+    ]
+  },
   "cinsscore": {
     "color": "black",
     "filters": [
@@ -1472,6 +1485,20 @@
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt"
+    ]
+  },
+  "hexxium": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/HexxiumCreations/threat-list/gh-pages/domainsonly",
+      "https://hexxiumcreations.github.io/threat-list/domainsonly"
     ]
   },
   "hipo_universities": {
@@ -3405,6 +3432,45 @@
       "https://someonewhocares.org/hosts/zero/hosts"
     ]
   },
+  "soteria_ads": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/soteria-nou/domain-list/master/ads.txt"
+    ]
+  },
+  "soteria_analytics": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/soteria-nou/domain-list/master/analytics.txt"
+    ]
+  },
+  "soteria_enrichments": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "cat",
+        "format": "domain",
+        "rule": ""
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/soteria-nou/domain-list/master/enrichments.txt"
+    ]
+  },
   "spamhaus_drop": {
     "color": "black",
     "filters": [
@@ -3817,72 +3883,6 @@
     ],
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ]
-  },
-  "hexxium": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "cat",
-        "format": "domain",
-        "rule": ""
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/HexxiumCreations/threat-list/gh-pages/domainsonly",
-      "https://hexxiumcreations.github.io/threat-list/domainsonly"
-    ]
-  },
-  "chrisjudk": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$1~/^0.0.0.0$/{print $2}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/chrisjudk/hosts/master/hosts"
-    ]
-  },
-  "soteria_ads": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "cat",
-        "format": "domain",
-        "rule": ""
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/soteria-nou/domain-list/master/ads.txt"
-    ]
-  },
-  "soteria_analytics": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "cat",
-        "format": "domain",
-        "rule": ""
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/soteria-nou/domain-list/master/analytics.txt"
-    ]
-  },
-  "soteria_enrichments": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "cat",
-        "format": "domain",
-        "rule": ""
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/soteria-nou/domain-list/master/enrichments.txt"
     ]
   }
 }
