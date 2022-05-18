@@ -26,9 +26,9 @@ jobs:
         shell: bash
 
       - name: Get latest commit from previous release
-        if: steps.build.outputs.status == 'success'
         id: old_release
         run: ./scripts/github/get_oldest_commit.bash
+        shell: bash
 
       - name: Dump output context
         env:
