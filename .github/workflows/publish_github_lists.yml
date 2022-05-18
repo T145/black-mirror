@@ -25,19 +25,18 @@ jobs:
         run: ./scripts/github/workflow.bash
         shell: bash
 
-      - name: Dump build context
+      - name: Get latest commit from previous release
+        if: steps.build.outputs.status == 'success'
+        id: old_release
+        run: ./scripts/github/get_oldest_commit.bash
+
+      - name: Dump output context
         env:
           STEPS_CONTEXT: ${{ toJson(steps) }}
         run: echo "$STEPS_CONTEXT"
         shell: bash
 
-      - name: Get old release data
-        if: steps.build.outputs.status == 'success'
-        id: old_release
-        uses: KevinRohn/github-full-release-data@v2.0.1
-        with:
-          token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
-
+      # This prevents asset upload collisions later, which result in asset names that include hashes.
       - name: Remove old release assets
         if: steps.build.outputs.status == 'success'
         uses: mknejp/delete-release-assets@v1
@@ -60,8 +59,11 @@ jobs:
           files: build/*
 
       - name: Update changelog
-        if: steps.build.outputs.status == 'success' && steps.old_release.outputs.target_commitish != null
-        run: echo -n '## ' && date +"%d-%m-%Y %T" && git log --oneline "${{ steps.old_release.outputs.target_commitish }}..$(git log -n 1 --pretty=format:%H --)" >>CHANGELOG.md
+        if: steps.build.outputs.status == 'success' && steps.old_release.conclusion == 'success'
+        run: |
+          echo -n '## ' >>CHANGELOG.md
+          date +"%d-%m-%Y %T" >>CHANGELOG.md
+          git log --oneline "${{ steps.old_release.outputs.latest_commit }}..$(git log -n 1 --pretty=format:%H --)" >>CHANGELOG.md
         shell: bash
 
       - name: Remove build artifacts
