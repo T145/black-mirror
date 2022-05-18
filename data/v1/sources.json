@@ -3832,5 +3832,18 @@
       "https://raw.githubusercontent.com/HexxiumCreations/threat-list/gh-pages/domainsonly",
       "https://hexxiumcreations.github.io/threat-list/domainsonly"
     ]
+  },
+  "chrisjudk": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "mawk",
+        "format": "domain",
+        "rule": "$1~/^0.0.0.0$/{print $2}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/chrisjudk/hosts/master/hosts"
+    ]
   }
 }
