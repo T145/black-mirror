@@ -429,6 +429,10 @@ Use the domain list.
 - [no-qanon](https://github.com/rimu/no-qanon)
 - [hexxium](https://github.com/HexxiumCreations/threat-list)
 - [chrisjudk](https://github.com/chrisjudk/hosts)
+- [Soteria nou](https://github.com/soteria-nou/domain-list)
+  - ads
+  - analytics
+  - enrichments
 
 #### TODO
 
@@ -446,7 +450,6 @@ Use the domain list.
 - nextdns
   - [cname-cloaking-blocklist](https://github.com/nextdns/cname-cloaking-blocklist) ?
 - [uAssets](https://github.com/uBlockOrigin/uAssets)
-- [jaka's domains](https://github.com/soteria-nou/domain-list)
 - [stonecrusher](https://github.com/stonecrusher/filterlists-pihole/blob/master/watchlist-internet-ph.txt)
 - [tg12](https://github.com/tg12/pihole-phishtank-list/blob/master/list/phish_domains.txt) ? (check to see if phishtank is elsewhere)
 
