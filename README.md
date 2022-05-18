@@ -428,6 +428,7 @@ Use the domain list.
 - [CombinedPrivacyBlockLists](https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/master/NoFormatting/BlacklistedDomains.txt)
 - [no-qanon](https://github.com/rimu/no-qanon)
 - [hexxium](https://github.com/HexxiumCreations/threat-list)
+- [chrisjudk](https://github.com/chrisjudk/hosts)
 
 #### TODO
 
@@ -448,7 +449,6 @@ Use the domain list.
 - [jaka's domains](https://github.com/soteria-nou/domain-list)
 - [stonecrusher](https://github.com/stonecrusher/filterlists-pihole/blob/master/watchlist-internet-ph.txt)
 - [tg12](https://github.com/tg12/pihole-phishtank-list/blob/master/list/phish_domains.txt) ? (check to see if phishtank is elsewhere)
-- [chrisjudk](https://github.com/chrisjudk/hosts)
 
 ### ⬜ Whitelists
 
