@@ -26,11 +26,6 @@ jobs:
         run: ./scripts/github/workflow.bash
         shell: bash
 
-      - name: Get latest commit from previous release
-        id: old_release
-        run: ./scripts/github/get_oldest_commit.bash
-        shell: bash
-
       - name: Dump output context
         env:
           STEPS_CONTEXT: ${{ toJson(steps) }}
@@ -59,12 +54,19 @@ jobs:
           title: All Artifacts
           files: build/*
 
+      - name: Get release data
+        if: steps.build.outputs.status == 'success'
+        id: release_data
+        uses: KevinRohn/github-full-release-data@v2.0.1
+        with:
+          token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
+
       - name: Update changelog
-        if: steps.build.outputs.status == 'success' && steps.old_release.conclusion == 'success'
+        if: steps.build.outputs.status == 'success' && steps.release_data.outputs.body != null
         run: |
           echo -n '## ' >>CHANGELOG.md
           date +"%d-%m-%Y %T" >>CHANGELOG.md
-          git log --oneline "${{ steps.old_release.outputs.latest_commit }}..$(git log -n 1 --pretty=format:%H --)" >>CHANGELOG.md
+          echo "${{ fromJSON(steps.release_data.outputs.body) }}" | sed 1d >>CHANGELOG.md
         shell: bash
 
       - name: Remove build artifacts
