@@ -452,6 +452,8 @@ Use the domain list.
 - [uAssets](https://github.com/uBlockOrigin/uAssets)
 - [stonecrusher](https://github.com/stonecrusher/filterlists-pihole/blob/master/watchlist-internet-ph.txt)
 - [tg12](https://github.com/tg12/pihole-phishtank-list/blob/master/list/phish_domains.txt) ? (check to see if phishtank is elsewhere)
+- [vxvault](http://vxvault.net/URL_List.php)
+- [pop3gropers](https://home.nuug.no/~peter/pop3gropers.txt)
 
 ### ⬜ Whitelists
 
@@ -642,8 +644,6 @@ Use the domain list.
 - [TR-PhishingList](https://github.com/HorusTeknoloji/TR-PhishingList)
 - [Spam404](https://github.com/Spam404/lists/blob/master/main-blacklist.txt)
 - [bgpranking](https://github.com/D4-project/BGP-Ranking/tree/master/bgpranking/config/modules)
-- [vxvault](http://vxvault.net/ViriList.php)
-  - Offline since last check.
 - [anti-pr0n](https://github.com/CyanideBrother/anti-pr0n)
 - [Evil Domains](https://github.com/hell-sh/Evil-Domains/tree/master/lists)
 - [AdBlock Rules](https://bitbucket.org/nicktabick/adblock-rules/src/master/)
@@ -727,6 +727,8 @@ Use the domain list.
 - [manalyzer](https://manalyzer.org/)
 - [malshare](https://malshare.com/daily/malshare.current.all.txt)
 - [ecrimelabs](https://feeds.ecrimelabs.net/data/metasploit-cve)
+- [malarchive](https://github.com/raw-data/malarchive)
+- [Metasploit CVEs](https://feeds.ecrimelabs.net/data/metasploit-cve)
 
 ### 📦 Big Data Lists
 
