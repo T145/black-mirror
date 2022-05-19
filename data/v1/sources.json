@@ -1953,9 +1953,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+        "rule": "$1~/^0.0.0.0$/{print $2}"
       }
     ],
     "mirrors": [
@@ -1967,9 +1967,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+        "rule": "$1~/^0.0.0.0$/{print $2}"
       }
     ],
     "mirrors": [
@@ -1981,9 +1981,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+        "rule": "$1~/^0.0.0.0$/{print $2}"
       }
     ],
     "mirrors": [
@@ -1995,9 +1995,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+        "rule": "$1~/^0.0.0.0$/{print $2}"
       }
     ],
     "mirrors": [
@@ -2009,9 +2009,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "gawk",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "/^0\\.0\\.0\\.0[[:space:]]+([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($2)}"
+        "rule": "$1~/^0.0.0.0$/{print $2}"
       }
     ],
     "mirrors": [
