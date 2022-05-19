@@ -364,7 +364,12 @@ Use the domain list.
 - [mobiletrackers](https://github.com/craiu/mobiletrackers)
 - [Kaspersky TinyCheck](https://github.com/KasperskyLab/TinyCheck)
 - [stalkerware-indicators](https://github.com/Te-k/stalkerware-indicators)
-- [Additional (Undesired) Hosts](https://github.com/DRSDavidSoft/additional-hosts)
+- [Additional (Undesired) Hosts](https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist)
+  - activation
+  - adservers-and-trackers
+  - fake-domains
+  - search-blacklist
+  - unwanted-iranian
 - [UCEPROTECT](https://www.uceprotect.net/en/index.php?m=1&s=0)
   - [Level 1](https://www.uceprotect.net/en/index.php?m=3&s=3)
   - [Level 2](https://www.uceprotect.net/en/index.php?m=3&s=4)
@@ -451,9 +456,15 @@ Use the domain list.
   - [cname-cloaking-blocklist](https://github.com/nextdns/cname-cloaking-blocklist) ?
 - [uAssets](https://github.com/uBlockOrigin/uAssets)
 - [stonecrusher](https://github.com/stonecrusher/filterlists-pihole/blob/master/watchlist-internet-ph.txt)
-- [tg12](https://github.com/tg12/pihole-phishtank-list/blob/master/list/phish_domains.txt) ? (check to see if phishtank is elsewhere)
 - [vxvault](http://vxvault.net/URL_List.php)
 - [pop3gropers](https://home.nuug.no/~peter/pop3gropers.txt)
+- [blacklist-named](https://github.com/tomzuu/blacklist-named)
+- [ad-wars](https://github.com/jdlingyu/ad-wars)
+- [miriquidi](https://github.com/miriquidi/dns-block-lists)
+- [phishtank](https://data.phishtank.com/data/online-valid.csv)
+  - Mirror: [tg12](https://github.com/tg12/pihole-phishtank-list)
+- [turk-adlist](https://github.com/bkrucarci/turk-adlist)
+- [ad-hosts](https://github.com/ilpl/ad-hosts)
 
 ### ⬜ Whitelists
 
@@ -472,6 +483,10 @@ Use the domain list.
 - [Team Cymru](https://team-cymru.com/community-services/bogon-reference/bogon-reference-http/)
 - [C2Intel Nord VPN IPs](https://github.com/drb-ra/C2IntelFeeds#readme)
 - [nextdns/bypass-methods](https://github.com/nextdns/metadata/blob/master/parentalcontrol/bypass-methods)
+- [Additional (Undesired) Hosts](https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist)
+  - duckduckgo
+  - github
+  - root
 
 ### 🥢 Duplicates
 
@@ -595,8 +610,6 @@ Use the domain list.
 - [h3x](https://tracker.h3x.eu/)
   - Feeds are empty.
 - [Minimal-Hosts-Blocker](https://github.com/arcetera/Minimal-Hosts-Blocker)
-- [blacklist-named](https://github.com/tomzuu/blacklist-named)
-  - Does not update automatically.
 - [piholeparser](https://github.com/deathbybandaid/piholeparser)
 - [IsraelList](https://jansal.net/tpl/IsraelList.tpl)
 - [niecko](https://www.niecko.pl/adblock/adblock.txt)
@@ -609,7 +622,6 @@ Use the domain list.
   - [simple_ad](https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt) (Last-Modified: Fri, 31 Jul 2015 19:01:02 GMT)
   - [simple_tracking](https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt) (Last-Modified: Sat, 01 Feb 2020 02:37:09 GMT)
   - [shavar-prod-lists](https://github.com/mozilla-services/shavar-prod-lists)
-- [ad-wars](https://github.com/jdlingyu/ad-wars)
 - [phishing_hosts](https://github.com/Kurobeats/phishing_hosts)
 - [antipopads](https://github.com/Yhonay/antipopads)
 - [romanian-media-propaganda-adblock-list](https://github.com/Recon/romanian-media-propaganda-adblock-list)
