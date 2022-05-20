@@ -465,6 +465,10 @@ Use the domain list.
   - Mirror: [tg12](https://github.com/tg12/pihole-phishtank-list)
 - [turk-adlist](https://github.com/bkrucarci/turk-adlist)
 - [ad-hosts](https://github.com/ilpl/ad-hosts)
+- [SNAFU](https://github.com/RooneyMcNibNug/pihole-stuff/blob/master/SNAFU.txt)
+- [trackerslist](https://github.com/ngosang/trackerslist)
+  - blacklist
+- [dohservers](https://github.com/oneoffdallas/dohservers)
 
 ### ⬜ Whitelists
 
@@ -487,6 +491,14 @@ Use the domain list.
   - duckduckgo
   - github
   - root
+
+#### TODO
+
+- [trackerslist](https://github.com/ngosang/trackerslist)
+  - trackers_all
+  - trackers_all_ws
+  - trackers_all_ip
+- [newtrackon](https://newtrackon.com/api/stable)
 
 ### 🥢 Duplicates
 
@@ -533,7 +545,6 @@ Use the domain list.
   - [emiliodallatorre](https://github.com/emiliodallatorre/adult-hosts-list)
   - [foopsss](https://github.com/foopsss/hosts)
   - [go2engineering](https://github.com/go2engineering/pihole-blocklists)
-- [RooneyMcNibNug](https://github.com/RooneyMcNibNug/pihole-stuff/blob/master/adlists_config.txt)
 - [stevejenkins](https://github.com/stevejenkins/my-pihole-lists)
 - [ftprivacy](https://github.com/ftpmorph/ftprivacy)
 - [sophos-xg-block-lists](https://github.com/austinheap/sophos-xg-block-lists)
@@ -728,6 +739,8 @@ Use the domain list.
 - [twcau](https://github.com/twcau/AdblockRules)
 - [AdblockListABP](https://github.com/w13d/adblockListABP-PiHole)
 - [xlimit91](https://github.com/xlimit91/xlimit91-block-list)
+- [china-cdn-domain-whitelist](https://github.com/mawenjian/china-cdn-domain-whitelist)
+- [TheGreatWall](https://github.com/Sekhan/TheGreatWall)
 
 ### 🕵🏻 Lamers Unwelcome
 
