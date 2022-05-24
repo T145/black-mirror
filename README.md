@@ -93,7 +93,7 @@ Reference the [contribution guidelines](https://github.com/T145/black-mirror/blo
     <tr>
       <td>black_domain</td>
       <td>Domain entries</td>
-      <td id="black-domain-line-count">7,339,460</td>
+      <td id="black-domain-line-count">7,341,080</td>
       <td id="black-domain-file-size">165M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_domain.checksums">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/black_domain.txt">🔗]</a></td>
       <td align="center"><a href="https://www.dropbox.com/s/r2tx1sll3pr7w5c/black_domain.checksums?dl=1">[✔️</a>,<a href="https://www.dropbox.com/s/20ydwo7v4hvkmqt/black_domain.txt?dl=1">🔗]</a></td>
@@ -101,7 +101,7 @@ Reference the [contribution guidelines](https://github.com/T145/black-mirror/blo
     <tr>
       <td>black_ipv4</td>
       <td>IPv4 addresses</td>
-      <td id="black-ipv4-line-count">748,002</td>
+      <td id="black-ipv4-line-count">749,481</td>
       <td id="black-ipv4-file-size">11M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.checksums">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4.txt">🔗]</a></td>
       <td align="center"><a href="https://www.dropbox.com/s/h79pqs7v3dtwt0a/black_ipv4.checksums?dl=1">[✔️</a>,<a href="https://www.dropbox.com/s/3cacdmggwgz4qqx/black_ipv4.txt?dl=1">🔗]</a></td>
@@ -109,16 +109,16 @@ Reference the [contribution guidelines](https://github.com/T145/black-mirror/blo
     <tr>
       <td>black_ipv4_cidr</td>
       <td>IPv4 CIDR blocks</td>
-      <td id="black-ipv4-cidr-line-count">27,513</td>
-      <td id="black-ipv4-cidr-file-size">461K</td>
+      <td id="black-ipv4-cidr-line-count">27,568</td>
+      <td id="black-ipv4-cidr-file-size">462K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4_cidr.checksums">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv4_cidr.txt">🔗]</a></td>
       <td align="center"><a href="https://www.dropbox.com/s/wvr7dcrxnugygkq/black_ipv4_cidr.checksums?dl=1">[✔️</a>,<a href="https://www.dropbox.com/s/m7c7nwvbfbdxylr/black_ipv4_cidr.txt?dl=1">🔗]</a></td>
     </tr>
     <tr>
       <td>black_ipv6</td>
       <td>IPv6 addresses</td>
-      <td id="black-ipv6-line-count">10,025</td>
-      <td id="black-ipv6-file-size">304K</td>
+      <td id="black-ipv6-line-count">9,984</td>
+      <td id="black-ipv6-file-size">303K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.checksums">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/black_ipv6.txt">🔗]</a></td>
       <td align="center"><a href="https://www.dropbox.com/s/a8khiyxulg3wo0x/black_ipv6.checksums?dl=1">[✔️</a>,<a href="https://www.dropbox.com/s/u7in4jqw9ahwgrj/black_ipv6.txt?dl=1">🔗]</a></td>
     </tr>
@@ -133,7 +133,7 @@ Reference the [contribution guidelines](https://github.com/T145/black-mirror/blo
     <tr>
       <td>white_ipv4</td>
       <td>IPv4 addresses</td>
-      <td id="white-ipv4-line-count">12,188</td>
+      <td id="white-ipv4-line-count">12,162</td>
       <td id="white-ipv4-file-size">168K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/white_ipv4.checksums">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/white_ipv4.txt">🔗]</a></td>
       <td align="center"><a href="https://www.dropbox.com/s/q7nfoh0h0c9py3w/white_ipv4.checksums?dl=1">[✔️</a>,<a href="https://www.dropbox.com/s/x3y9kmb8epv5q9h/white_ipv4.txt?dl=1">🔗]</a></td>
@@ -149,7 +149,7 @@ Reference the [contribution guidelines](https://github.com/T145/black-mirror/blo
     <tr>
       <td>white_ipv6</td>
       <td>IPv6 addresses</td>
-      <td id="white-ipv6-line-count">2,858</td>
+      <td id="white-ipv6-line-count">2,846</td>
       <td id="white-ipv6-file-size">109K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/white_ipv6.checksums">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/white_ipv6.txt">🔗]</a></td>
       <td align="center"><a href="https://www.dropbox.com/s/r0dma5vrh6wepic/white_ipv6.checksums?dl=1">[✔️</a>,<a href="https://www.dropbox.com/s/my8orylj72utzzs/white_ipv6.txt?dl=1">🔗]</a></td>
