@@ -62,7 +62,7 @@ jobs:
           token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
 
       - name: Update changelog
-        if: steps.build.outputs.status == 'success' && steps.release_data.outputs.body != null
+        if: steps.build.outputs.status == 'success' && steps.release_data.outputs.body != 'null'
         run: |
           echo -n '## ' >>CHANGELOG.md
           date +"%d-%m-%Y %T" >>CHANGELOG.md
