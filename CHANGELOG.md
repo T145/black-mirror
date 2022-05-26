@@ -32,3 +32,6 @@
 ## 26-05-2022 02:18:10
 - bc23473: ✨🍰✨ (T145)
 - 51eecae: Minor cleanup from changelog updating (T145)
+## 26-05-2022 13:48:11
+- 93fd125: ✨🍰✨ (T145)
+- 51d3d69: More list documentation (T145)
