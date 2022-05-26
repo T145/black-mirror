@@ -469,6 +469,9 @@ Use the domain list.
 - [trackerslist](https://github.com/ngosang/trackerslist)
   - blacklist
 - [dohservers](https://github.com/oneoffdallas/dohservers)
+- [CruzIT](https://www.cruzit.com/wbl.php)
+- [DroneBL](https://dronebl.org/docs/howtouse) ?
+- [Free Email Provider Domains](https://gist.github.com/tbrianjones/5992856)
 
 ### ⬜ Whitelists
 
@@ -499,6 +502,7 @@ Use the domain list.
   - trackers_all_ws
   - trackers_all_ip
 - [newtrackon](https://newtrackon.com/api/stable)
+- [CIDR Report](https://www.cidr-report.org/bogons/freespace-prefix.txt)
 
 ### 🥢 Duplicates
 
@@ -755,6 +759,13 @@ Use the domain list.
 - [malarchive](https://github.com/raw-data/malarchive)
 - [Metasploit CVEs](https://feeds.ecrimelabs.net/data/metasploit-cve)
 
+### Interesting Oddities
+
+- https://www.chaosreigns.com/
+- https://vpn.hidemyass.com/vpn-config/
+- http://www.textfiles.com/programming/
+- https://www.rhyolite.com//anti-spam/you-might-be.html
+
 ### 📦 Big Data Lists
 
 > Typically used by other blacklist projects as whitelists.
@@ -830,6 +841,13 @@ RUN echo 'install.packages("archive", repos="https://cloud.r-project.org/")' | R
 - https://unix.stackexchange.com/questions/579251/how-to-use-parallel-to-speed-up-sort-for-big-files-fitting-in-ram#579252
 - https://askubuntu.com/questions/1006377/check-the-max-allowed-threads-count-for-sure#1006384
 - https://stackoverflow.com/questions/9066609/fastest-possible-grep
+
+### List References
+
+- https://www.covert.io/threat-intelligence/
+- https://filterlists.com/
+- https://firebog.net/
+- https://grimore.org/assets/databases/blocklist-ipsets
 
 ---
 
