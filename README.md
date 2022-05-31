@@ -25,25 +25,25 @@
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
   <a href="https://github.com/T145/black-mirror/commits/master.atom">
-    <img src="https://img.shields.io/static/v1?logo=rss&label=rss&message=feed&color=FFA500"
+    <img src="https://img.shields.io/static/v1?logo=rss&label=RSS&message=feed&color=FFA500"
         alt="release"
         longdesc="https://github.com/badges/shields/"
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
   </a>
-  <img src="https://img.shields.io/github/workflow/status/T145/black-mirror/Create%20Release/master?label=release&logo=github"
+  <img src="https://img.shields.io/github/workflow/status/T145/black-mirror/Create%20Release/master?label=Release&logo=github"
        alt="release"
        longdesc="https://github.com/badges/shields/"
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
   <a href="https://www.dropbox.com/sh/lg4i0sjexubhcz6/AABO35HOVeK7Z0VHXN9MTp_ya?dl=0">
-    <img src="https://img.shields.io/static/v1?logo=dropbox&label=dropbox&message=builds&color=0061FF"
+    <img src="https://img.shields.io/static/v1?logo=dropbox&label=Dropbox&message=builds&color=0061FF"
         alt="release"
         longdesc="https://github.com/badges/shields/"
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
   </a>
-  <img src="https://img.shields.io/github/workflow/status/T145/black-mirror/Update%20Docker%20Image/master?color=%232496ED&label=docker&logo=docker"
+  <img src="https://img.shields.io/github/workflow/status/T145/black-mirror/Update%20Docker%20Image/master?color=%232496ED&label=Docker&logo=docker"
        alt="docker"
        longdesc="https://github.com/badges/shields/"
        crossorigin="anonymous"
