@@ -52,6 +52,8 @@
 
 ## 🛡️ Privacy Protectors
 
+> Good causes that help secure your digital life.
+
 - Test your browser's tracking resilience with [CoverYourTracks](https://coveryourtracks.eff.org/)!
 - Support [LetsBlockIt](https://letsblock.it/) to consolidate and simplify uBlock filters!
 - Explore [PrivacyGuides](https://privacyguides.org/) and [Prism Break](https://prism-break.org/en/all/) to discover services that respect your privacy!
@@ -63,6 +65,7 @@
 Defines the logic behind why a host is permitted or blocked.
 Please report any hosts that are wrongly blocked or sources that do not wholly align in an issue.
 Reference the [contribution guidelines](https://github.com/T145/black-mirror/blob/master/CONTRIBUTING.md#how-to-contribute).
+Free thought exchange is encouraged, so feel free to open discussions about any points.
 
 ## 📋 Attributes
 
@@ -444,7 +447,6 @@ Use the domain list.
 - [Yuki2718](https://github.com/Yuki2718/adblock)
 - [Mochi Filter](https://github.com/eEIi0A5L/adblock_filter/blob/master/mochi_filter.txt)
 - [hemiipatu](https://github.com/hemiipatu/PiHoleBlocklists/tree/master/blocklists)
-  - Needs further investigation.
 - [herrbischoff](https://git.herrbischoff.com/trackers/about/)
   - All lists are used.
   - [Support female hygiene in Zanzibar](https://git.herrbischoff.com/trackers/about/#women-empowerment-in-zanzibar)!
