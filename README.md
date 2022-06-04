@@ -474,6 +474,7 @@ Use the domain list.
 - [CruzIT](https://www.cruzit.com/wbl.php)
 - [DroneBL](https://dronebl.org/docs/howtouse) ?
 - [Free Email Provider Domains](https://gist.github.com/tbrianjones/5992856)
+- [Search Engine Spam Blocklist](https://github.com/no-cmyk/Search-Engine-Spam-Blocklist)
 
 ### ⬜ Whitelists
 
