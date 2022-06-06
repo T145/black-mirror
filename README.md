@@ -475,6 +475,7 @@ Use the domain list.
 - [DroneBL](https://dronebl.org/docs/howtouse) ?
 - [Free Email Provider Domains](https://gist.github.com/tbrianjones/5992856)
 - [Search Engine Spam Blocklist](https://github.com/no-cmyk/Search-Engine-Spam-Blocklist)
+- [anti-axelspringer-hosts](https://github.com/autinerd/anti-axelspringer-hosts#anti-axel-springer-hosts-file)
 
 ### ⬜ Whitelists
 
