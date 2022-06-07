@@ -320,6 +320,29 @@
       "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/adservers-and-trackers.txt"
     }
   },
+  "additional_hosts_duckduckgo": {
+    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
+    "_license": "mit",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/duckduckgo.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
   "additional_hosts_fake": {
     "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
     "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
@@ -345,6 +368,29 @@
     "variants": {
       "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/fake-domains.txt"
     }
+  },
+  "additional_hosts_github": {
+    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
+    "_license": "mit",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/duckduckgo.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
   },
   "additional_hosts_iranian_parking": {
     "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
@@ -397,6 +443,29 @@
     "variants": {
       "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/unwanted-iranian.txt"
     }
+  },
+  "additional_hosts_root": {
+    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
+    "_license": "mit",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/root.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
   },
   "additional_hosts_search": {
     "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
@@ -1232,6 +1301,32 @@
     "scan": false,
     "topic": "SECURITY"
   },
+  "botvrij_ioc_url": {
+    "_desc": "https://www.botvrij.eu/data/",
+    "_homepage": "https://www.botvrij.eu/",
+    "_license": "not-available",
+    "_notes": "Some entries do NOT start w/ http(s)!",
+    "checksums": {
+      "md5": "https://www.botvrij.eu/data/ioclist.url.raw.md5"
+    },
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.botvrij.eu/data/ioclist.url.raw"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
   "botvrij_misp_ip_dst": {
     "_desc": "https://www.botvrij.eu/data/",
     "_homepage": "https://www.botvrij.eu/",
@@ -1256,32 +1351,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://www.botvrij.eu/data/misp.text_ip-dst.ADMIN.txt"
-    ],
-    "scan": false,
-    "topic": "SECURITY"
-  },
-  "botvrij_ioc_url": {
-    "_desc": "https://www.botvrij.eu/data/",
-    "_homepage": "https://www.botvrij.eu/",
-    "_license": "not-available",
-    "_notes": "Some entries do NOT start w/ http(s)!",
-    "checksums": {
-      "md5": "https://www.botvrij.eu/data/ioclist.url.raw.md5"
-    },
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "method": "BLOCK",
-    "mirrors": [
-      "https://www.botvrij.eu/data/ioclist.url.raw"
     ],
     "scan": false,
     "topic": "SECURITY"
@@ -1878,33 +1947,6 @@
     "scan": false,
     "topic": "SECURITY"
   },
-  "darklist": {
-    "_desc": "https://www.darklist.de/",
-    "_homepage": "https://www.darklist.de/",
-    "_license": "not-available",
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "REGEX_IPV4",
-        "format": "IPV4"
-      },
-      {
-        "filter": "REGEX_CIDR",
-        "format": "CIDR"
-      }
-    ],
-    "method": "BLOCK",
-    "mirrors": [
-      "https://www.darklist.de/raw.php"
-    ],
-    "scan": false,
-    "topic": "SECURITY"
-  },
   "dandelion_antimalware": {
     "_desc": "https://github.com/DandelionSprout/adfilt#readme=",
     "_homepage": "https://github.com/DandelionSprout/adfilt",
@@ -1960,6 +2002,33 @@
     "variants": {
       "adguard": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt"
     }
+  },
+  "darklist": {
+    "_desc": "https://www.darklist.de/",
+    "_homepage": "https://www.darklist.de/",
+    "_license": "not-available",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "REGEX_IPV4",
+        "format": "IPV4"
+      },
+      {
+        "filter": "REGEX_CIDR",
+        "format": "CIDR"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.darklist.de/raw.php"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
   },
   "dataplane_sipinvitation": {
     "_desc": "https://dataplane.org/signals.html",
@@ -2343,8 +2412,8 @@
     "topic": "SECURITY",
     "variants": {
       "adguard": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/aghome_adult.txt",
-      "pihole": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/domain_adult.txt",
-      "dnsmasq": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/dnsmasq_adult.txt"
+      "dnsmasq": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/dnsmasq_adult.txt",
+      "pihole": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/domain_adult.txt"
     }
   },
   "energized_unblock": {
@@ -2636,74 +2705,5 @@
       "adguard": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt",
       "pihole": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt"
     }
-  },
-  "additional_hosts_duckduckgo": {
-    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
-    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
-    "_license": "mit",
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
-        "format": "DOMAIN"
-      }
-    ],
-    "method": "ALLOW",
-    "mirrors": [
-      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/duckduckgo.txt"
-    ],
-    "scan": false,
-    "topic": "SECURITY"
-  },
-  "additional_hosts_github": {
-    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
-    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
-    "_license": "mit",
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
-        "format": "DOMAIN"
-      }
-    ],
-    "method": "ALLOW",
-    "mirrors": [
-      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/duckduckgo.txt"
-    ],
-    "scan": false,
-    "topic": "SECURITY"
-  },
-  "additional_hosts_root": {
-    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
-    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
-    "_license": "mit",
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
-        "format": "DOMAIN"
-      }
-    ],
-    "method": "ALLOW",
-    "mirrors": [
-      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/root.txt"
-    ],
-    "scan": false,
-    "topic": "SECURITY"
   }
 }
