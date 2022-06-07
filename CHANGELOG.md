@@ -80,3 +80,9 @@
 - 59dae14: ✨🍰✨ (T145)
 - e44cf1a: Now using more privacy-sensitive DNS providers (T145)
 - 6b31ba1: Documented @autinerd's list (T145)
+## 07-06-2022 13:57:14
+- f1124de: ✨🍰✨ (T145)
+- 7c79d3d: Begin V2 transition (T145)
+- 091cddb: Fixed list updating (T145)
+- cef83f8: Allow manual list updates (T145)
+- 4c26880: ✨📚✨ (T145)
