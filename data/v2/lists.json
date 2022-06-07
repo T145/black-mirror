@@ -723,10 +723,7 @@
       "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
     ],
     "scan": false,
-    "topic": "SECURITY",
-    "variants": {
-      "pihole": "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
-    }
+    "topic": "SECURITY"
   },
   "apple_telemetry": {
     "_desc": "https://github.com/adversarialtools/apple-telemetry#readme",
@@ -1160,7 +1157,9 @@
     "_desc": "https://www.botvrij.eu/data/",
     "_homepage": "https://www.botvrij.eu/",
     "_license": "not-available",
-    "checksums": {},
+    "checksums": {
+      "md5": "https://www.botvrij.eu/data/ioclist.domain.raw.md5"
+    },
     "content": {
       "filter": "NONE",
       "retriever": "ARIA2",
@@ -1187,7 +1186,9 @@
     "_homepage": "https://www.botvrij.eu/",
     "_license": "not-available",
     "_notes": "Skipping the URL list",
-    "checksums": {},
+    "checksums": {
+      "md5": "https://www.botvrij.eu/data/ioclist.ip-dst.raw.md5"
+    },
     "content": {
       "filter": "NONE",
       "retriever": "ARIA2",
@@ -1210,7 +1211,9 @@
     "_desc": "https://www.botvrij.eu/data/",
     "_homepage": "https://www.botvrij.eu/",
     "_license": "not-available",
-    "checksums": {},
+    "checksums": {
+      "md5": "https://www.botvrij.eu/data/ioclist.ip-src.raw.md5"
+    },
     "content": {
       "filter": "NONE",
       "retriever": "ARIA2",
@@ -1225,6 +1228,60 @@
     "method": "BLOCK",
     "mirrors": [
       "https://www.botvrij.eu/data/ioclist.ip-src.raw"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
+  "botvrij_misp_ip_dst": {
+    "_desc": "https://www.botvrij.eu/data/",
+    "_homepage": "https://www.botvrij.eu/",
+    "_license": "not-available",
+    "_notes": "Skipping the URL list",
+    "checksums": {
+      "md5": "https://www.botvrij.eu/data/misp.md5.ADMIN.txt",
+      "sha1": "https://www.botvrij.eu/data/misp.sha1.ADMIN.txt",
+      "sha256": "https://www.botvrij.eu/data/misp.sha256.ADMIN.txt"
+    },
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "BOTVIRJ_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.botvrij.eu/data/misp.text_ip-dst.ADMIN.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
+  "botvrij_ioc_url": {
+    "_desc": "https://www.botvrij.eu/data/",
+    "_homepage": "https://www.botvrij.eu/",
+    "_license": "not-available",
+    "_notes": "Some entries do NOT start w/ http(s)!",
+    "checksums": {
+      "md5": "https://www.botvrij.eu/data/ioclist.url.raw.md5"
+    },
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.botvrij.eu/data/ioclist.url.raw"
     ],
     "scan": false,
     "topic": "SECURITY"
@@ -1328,6 +1385,32 @@
     ],
     "scan": false,
     "topic": "SECURITY"
+  },
+  "chrisjudk": {
+    "_desc": "https://github.com/chrisjudk/hosts#hosts=",
+    "_homepage": "https://github.com/chrisjudk/hosts",
+    "_license": "mit",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "CSV"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/chrisjudk/hosts/master/hosts"
+    ],
+    "scan": false,
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/chrisjudk/hosts/master/hosts"
+    }
   },
   "cinsscore": {
     "_desc": "https://cinsscore.com/#list",
@@ -1487,6 +1570,32 @@
     "scan": true,
     "topic": "SECURITY"
   },
+  "combindprivacyblocklists": {
+    "_desc": "https://github.com/bongochong/CombinedPrivacyBlockLists#combined-privacy-block-lists",
+    "_homepage": "https://github.com/bongochong/CombinedPrivacyBlockLists",
+    "_license": "cpal-1.0",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/master/NoFormatting/BlacklistedDomains.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/master/NoFormatting/BlacklistedDomains.txt"
+    }
+  },
   "cryptolaemus": {
     "_desc": "https://paste.cryptolaemus.com/feed.xml",
     "_homepage": "https://paste.cryptolaemus.com/",
@@ -1644,6 +1753,78 @@
       "pihole": "https://infosharing.cybersaiyan.it/feeds/CS-PIHOLE"
     }
   },
+  "cybo1927": {
+    "_desc": "https://github.com/Cybo1927/Hosts#available-lists-and-folders=",
+    "_homepage": "https://github.com/Cybo1927/Hosts",
+    "_license": "unlicense",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADGUARD",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Cybo1927/Hosts/master/DNS%20Hosts"
+    ],
+    "scan": false,
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/Cybo1927/Hosts/master/DNS%20Hosts"
+    }
+  },
+  "cymru_ipv4_bogons": {
+    "_desc": "https://team-cymru.com/community-services/bogon-reference/",
+    "_homepage": "https://team-cymru.com/community-services/bogon-reference/bogon-reference-http/",
+    "_license": "all-rights-reserved",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "CYMRU",
+        "format": "IPV4"
+      }
+    ],
+    "method": "ALLOW",
+    "mirrors": [
+      "https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
+  "cymru_ipv6_bogons": {
+    "_desc": "https://team-cymru.com/community-services/bogon-reference/",
+    "_homepage": "https://team-cymru.com/community-services/bogon-reference/bogon-reference-http/",
+    "_license": "all-rights-reserved",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "CYMRU",
+        "format": "IPV6"
+      }
+    ],
+    "method": "ALLOW",
+    "mirrors": [
+      "https://www.team-cymru.org/Services/Bogons/fullbogons-ipv6.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
   "d3ward": {
     "_desc": "https://github.com/d3ward/toolz#readme",
     "_homepage": "https://github.com/d3ward/toolz",
@@ -1724,6 +1905,62 @@
     "scan": false,
     "topic": "SECURITY"
   },
+  "dandelion_antimalware": {
+    "_desc": "https://github.com/DandelionSprout/adfilt#readme=",
+    "_homepage": "https://github.com/DandelionSprout/adfilt",
+    "_license": "https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "DANDELION_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "DANDELION_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareDomains.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareDomains.txt"
+    }
+  },
+  "dandelionsprout_norwegian": {
+    "_desc": "https://github.com/DandelionSprout/adfilt#readme=",
+    "_homepage": "https://github.com/DandelionSprout/adfilt",
+    "_license": "https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "DANDELION_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt"
+    }
+  },
   "dataplane_sipinvitation": {
     "_desc": "https://dataplane.org/signals.html",
     "_homepage": "https://dataplane.org/",
@@ -1743,6 +1980,29 @@
     "method": "BLOCK",
     "mirrors": [
       "https://dataplane.org/sipinvitation.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
+  "dataplane_sipquery": {
+    "_desc": "https://dataplane.org/signals.html",
+    "_homepage": "https://dataplane.org/",
+    "_license": "all-rights-reserved",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "DATAPLANE_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://dataplane.org/sipquery.txt"
     ],
     "scan": false,
     "topic": "SECURITY"
@@ -2058,6 +2318,220 @@
       "adguard": "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt"
     }
   },
+  "easylist_indonesian": {
+    "_desc": "https://github.com/ABPindo/indonesianadblockrules#abpindo=",
+    "_homepage": "https://github.com/ABPindo/indonesianadblockrules",
+    "_license": "https://github.com/ABPindo/indonesianadblockrules/blob/master/subscriptions/LICENSE",
+    "_notes": "https://github.com/ABPindo/indonesianadblockrules/issues/336",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/domain_adult.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/aghome_adult.txt",
+      "pihole": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/domain_adult.txt",
+      "dnsmasq": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/dnsmasq_adult.txt"
+    }
+  },
+  "energized_unblock": {
+    "_desc": "https://github.com/EnergizedProtection/unblock#energized-protection---unblock-=",
+    "_homepage": "https://github.com/EnergizedProtection/unblock",
+    "_license": "mit",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/EnergizedProtection/unblock/master/basic/formats/domains.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
+  "energized_xtreme": {
+    "_desc": "https://github.com/EnergizedProtection/block#extensions=",
+    "_homepage": "https://github.com/EnergizedProtection/block",
+    "_license": "mit",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://block.energized.pro/extensions/xtreme/formats/domains.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
+  "esox_lucius_agenttesla": {
+    "_desc": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
+    "_homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
+    "_license": "cc0-1.0",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ESOX_LUCIUS",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/AgentTesla%20-%20Malware%20Domain%20Feed%20V2"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
+  "esox_lucius_amadey": {
+    "_desc": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
+    "_homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
+    "_license": "cc0-1.0",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ESOX_LUCIUS",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/Amadey%20-%20Malware%20Domain%20Feed%20V2"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
+  "esox_lucius_andromeda": {
+    "_desc": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
+    "_homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
+    "_license": "cc0-1.0",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ESOX_LUCIUS",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/Andromeda%20-%20Malware%20Domain%20Feed%20V2"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
+  "esox_lucius_asyncrat": {
+    "_desc": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
+    "_homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
+    "_license": "cc0-1.0",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ESOX_LUCIUS",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/AsyncRAT%20-%20Malware%20Domain%20Feed%20V2"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
+  "esox_lucius_azorult": {
+    "_desc": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
+    "_homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
+    "_license": "cc0-1.0",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ESOX_LUCIUS",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/AZORult%20-%20Malware%20Domain%20Feed%20V2"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
+  "exodus_trackers": {
+    "_desc": "https://etip.exodus-privacy.eu.org/",
+    "_homepage": "https://exodus-privacy.eu.org/en/",
+    "_license": "cc0-1.0",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "EXODUS",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://etip.exodus-privacy.eu.org/trackers/export",
+      "https://reports.exodus-privacy.eu.org/api/trackers"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
   "perflyst_amazon_fire_tv": {
     "_desc": "https://github.com/Perflyst/PiHoleBlocklist#readme",
     "_homepage": "https://github.com/Perflyst/PiHoleBlocklist",
@@ -2162,5 +2636,74 @@
       "adguard": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt",
       "pihole": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt"
     }
+  },
+  "additional_hosts_duckduckgo": {
+    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
+    "_license": "mit",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/duckduckgo.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
+  "additional_hosts_github": {
+    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
+    "_license": "mit",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/duckduckgo.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
+  "additional_hosts_root": {
+    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
+    "_license": "mit",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/root.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
   }
 }
