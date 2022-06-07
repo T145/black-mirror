@@ -24,9 +24,9 @@ jobs:
 
       - name: Export sources
         run: |
-          jq -SM '.' data/v2/sources.json | sponge data/v2/sources.json
+          jq -SM '.' data/v2/list.json | sponge data/v2/list.json
           jq -jr 'to_entries[] | select(.value.method == "BLOCK" and .value.variants.pihole != null) | (.value.variants.pihole, " ")' | sed 's/ $/\n/' >exports/sources.pihole
-          jq -r 'to_entries[].value.mirrors[]' data/v2/sources.json >exports/sources.txt
+          jq -r 'to_entries[].value.mirrors[]' data/v2/list.json >exports/sources.txt
           parsort -u -S 100% --parallel=48 exports/sources.txt | sponge exports/sources.txt
         shell: bash
 
