@@ -86,3 +86,8 @@
 - 091cddb: Fixed list updating (T145)
 - cef83f8: Allow manual list updates (T145)
 - 4c26880: ✨📚✨ (T145)
+## 08-06-2022 02:18:16
+- c2a9938: ✨🍰✨ (T145)
+- 777110a: Added a codeowners file (T145)
+- 7f93fde: Finished porting Es & missing entries (T145)
+- 8636402: ✨📚✨ (T145)
