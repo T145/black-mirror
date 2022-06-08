@@ -91,3 +91,8 @@
 - 777110a: Added a codeowners file (T145)
 - 7f93fde: Finished porting Es & missing entries (T145)
 - 8636402: ✨📚✨ (T145)
+## 08-06-2022 13:49:07
+- 90eb113: ✨🍰✨ (T145)
+- 6e72d39: More source documentation (T145)
+- 870fe1a: Helps to target the list (T145)
+- 6ab7679: ✨📚✨ (T145)
