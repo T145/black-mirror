@@ -446,7 +446,7 @@ Use the domain list.
 
 - [Yuki2718](https://github.com/Yuki2718/adblock)
 - [Mochi Filter](https://github.com/eEIi0A5L/adblock_filter/blob/master/mochi_filter.txt)
-- [hemiipatu](https://github.com/hemiipatu/PiHoleBlocklists/tree/master/blocklists)
+- [hemiipatu](https://github.com/hemiipatu/PiHoleBlocklists/tree/master/blocklists) ?
 - [herrbischoff](https://git.herrbischoff.com/trackers/about/)
   - All lists are used.
   - [Support female hygiene in Zanzibar](https://git.herrbischoff.com/trackers/about/#women-empowerment-in-zanzibar)!
@@ -476,6 +476,20 @@ Use the domain list.
 - [Free Email Provider Domains](https://gist.github.com/tbrianjones/5992856)
 - [Search Engine Spam Blocklist](https://github.com/no-cmyk/Search-Engine-Spam-Blocklist)
 - [anti-axelspringer-hosts](https://github.com/autinerd/anti-axelspringer-hosts#anti-axel-springer-hosts-file)
+- [wh0ami](https://codeberg.org/wh0ami/pihole-lists)
+- [Artists Against 419](https://db.aa419.org/fakebankslist.php)
+- [Okean Spam ChinaCIDR](https://www.okean.com/chinacidr.txt)
+- [perso](https://perso.pw/blocklist.txt)
+- [Lunar Blocklist](https://blocklist.palemoon.org/ABL/lunar-blocklist.txt)
+- [Luke's Blocklist](https://github.com/lwojcik/lukes-pihole-blocklist)
+- [RJM Blocklist](https://www.rjmblocklist.com/)
+  - badips
+  - webattack
+- [Ugly Email Trackers](https://github.com/OneClickLab/ugly-email-trackers)
+  - [Leave Me Alone](https://github.com/leavemealone-app/email-trackers)
+- [interactivefriends](http://interactivefriends.co.uk/blocklist.txt)
+  - Seems to be against gambling.
+- [JoshWho](https://ddosblocklist.joshwho.net/)
 
 ### ⬜ Whitelists
 
@@ -507,6 +521,8 @@ Use the domain list.
   - trackers_all_ip
 - [newtrackon](https://newtrackon.com/api/stable)
 - [CIDR Report](https://www.cidr-report.org/bogons/freespace-prefix.txt)
+- [zapret info nxdomain](https://github.com/zapret-info/z-i)
+  - Websites initially blocked by the Russian government that are offline now.
 
 ### 🥢 Duplicates
 
@@ -749,6 +765,23 @@ Use the domain list.
 - [xlimit91](https://github.com/xlimit91/xlimit91-block-list)
 - [china-cdn-domain-whitelist](https://github.com/mawenjian/china-cdn-domain-whitelist)
 - [TheGreatWall](https://github.com/Sekhan/TheGreatWall)
+- [Flyn Computing](https://www.flyn.org/CDX/2017-dns-blacklist.txt)
+- [appelboor](https://www.appelboor.com/dump/)
+- [blocklist.googlepages](https://sites.google.com/site/blocklist/)
+- [Prebake](https://github.com/liamja/Prebake)
+- [IDKwhattoputhere](https://github.com/IDKwhattoputhere/uBlock-Filters-Plus)
+- [lumeninterius](https://s3.amazonaws.com/www.lumeninterius.com/ublocklist/blocklist.txt)
+  - Last-Modified: Wed, 14 Jun 2017 00:51:26 GMT
+- [technoy](https://www.technoy.de/lists/blocklist.txt)
+- [FMSF 2](https://nmtrung.com/fmsf-2/)
+- [NoAdDNS](https://noaddns.com/)
+  - The list link just downloads the update script.
+- [wolfsrealm](https://github.com/wolfsrealm/AdBlockLists)
+- [FearrMe](https://github.com/FearrMe/pihole)
+- [ElCap1tan](https://github.com/ElCap1tan/PiHole-Parsed-Filter-Lists)
+- [GATmyIT](https://github.com/GATmyIT/pihole-lists)
+- [Rafaelrico77](https://github.com/Rafaelrico77/piholeyt)
+- [imkarthikk](https://github.com/imkarthikk/pihole-facebook)
 
 ### 🕵🏻 Lamers Unwelcome
 
@@ -759,9 +792,8 @@ Use the domain list.
 - [malpedia](https://malpedia.caad.fkie.fraunhofer.de/)
 - [manalyzer](https://manalyzer.org/)
 - [malshare](https://malshare.com/daily/malshare.current.all.txt)
-- [ecrimelabs](https://feeds.ecrimelabs.net/data/metasploit-cve)
-- [malarchive](https://github.com/raw-data/malarchive)
 - [Metasploit CVEs](https://feeds.ecrimelabs.net/data/metasploit-cve)
+- [malarchive](https://github.com/raw-data/malarchive)
 
 ### Interesting Oddities
 
@@ -852,6 +884,7 @@ RUN echo 'install.packages("archive", repos="https://cloud.r-project.org/")' | R
 - https://filterlists.com/
 - https://firebog.net/
 - https://grimore.org/assets/databases/blocklist-ipsets
+- https://users.cs.northwestern.edu/~jesse/course/cs214-fa19/lec/21-bloom/bloom.txt
 
 ---
 
