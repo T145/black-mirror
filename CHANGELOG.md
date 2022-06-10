@@ -100,3 +100,8 @@
 - 7f6fa43: ✨🍰✨ (T145)
 ## 09-06-2022 13:47:31
 - 0ecb6bc: ✨🍰✨ (T145)
+## 10-06-2022 02:19:15
+- 0702b14: ✨🍰✨ (T145)
+- 9120956: Stopped using Cloudflare (T145)
+- e2e5d6e: Minor manifesto changes (T145)
+- 1a1aec4: Minor v2 list update (T145)
