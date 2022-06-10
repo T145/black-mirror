@@ -63,9 +63,11 @@
 
 ## 🖋️ [Manifesto](https://github.com/T145/black-mirror/blob/master/MANIFESTO.md)
 
+> Please report any hosts that are wrongly blocked or sources that do not wholly align in an issue.
+
 Defines the logic behind why a host is permitted or blocked.
-Please report any hosts that are wrongly blocked or sources that do not wholly align in an issue.
-Reference the [contribution guidelines](https://github.com/T145/black-mirror/blob/master/CONTRIBUTING.md#how-to-contribute).
+It has been written to reflect common ideologies across the blacklisting community and those specific to this project.
+Some views may not be shared by the authors, which is why it speaks from the `Black Mirror` person.
 Free thought exchange is encouraged, so feel free to open discussions about any points.
 
 ## 📋 Attributes

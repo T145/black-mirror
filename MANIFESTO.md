@@ -24,6 +24,11 @@ The primary goals of this project are as follows:
 - Use list sources that promote growth, minimal redundancy, and modern application.
 - [Acknowledge technological harm, and do what can be done in this scope to prevent it.](https://ledger.humanetech.com/)
 
+`Black Mirror` aims to support reasonable thought exchange by blocking hosts that would discourge or harm it.
+While this is censorship inherent to every blacklist, irresponsible censorship is *not* supported by this project.
+Because speech freedom is encourged, so too is feedback and constructive criticism.
+The real power behind the freedom of speech is the ability to hear many opinions to quickly deduce those that are correct or reasonable.
+
 “Before you become too entranced with gorgeous gadgets and mesmerizing video displays, let me remind you that information is not knowledge, knowledge is not wisdom, and wisdom is not foresight. Each grows out of the other, and we need them all.”\
 ― _Arthur C. Clarke_
 
@@ -64,12 +69,11 @@ Internet "rabbit holes" and sites that primarily feature "knee-jerk contrarianis
 
 Regarding religion and sciences, `Black Mirror` takes an agnostic position on matters regarding how the universe began or where lacking sufficient historical data produces inconclusive results.
 This means a source will not be blocked specifically if it promotes athiesm or a popular religion.
-However, on matters where sufficient information is available to make an educated conclusion, opposing views (i.e. "knee-jerk contrarianism") featured on sites as a majority opinion (>= 51%) will result in their host being blocked. To take this same reasoning into a non-religious context and provide a practical example, because we have conclusive evidence on the fact that the Earth is round from the time of Eratosthenes, sites that feature contradictory viewpoints as an opinion majority get blocked.
+However, on matters where sufficient information is available to make an educated conclusion, opposing views (i.e. "knee-jerk contrarianism") featured on sites as a majority opinion (> 50%) will result in their host being blocked. To take this same reasoning into a non-religious context and provide a practical example, because we have conclusive evidence on the fact that the Earth is round from the time of Eratosthenes, sites that feature contradictory viewpoints as an opinion majority get blocked.
 
 Regarding politics, `Black Mirror` takes a non-radical Libertarian perspective.
 A source will not be blocked specifically if it promotes a non-radical left or right political perspective.
 Like dealings with religion, platforms that promote "knee-jerk contrarianism" or philosophy that significantly breaches individual safety as an opinion majority will be blocked.
-Examples on the latter category include Naziism and abortion.
 
 “True liberty consists only in the power of doing what we ought to will, and in not being constrained to do what we ought not to will.”\
 ― _Jonathan Edwards_
@@ -119,9 +123,3 @@ Therefore all services will be blocked.
 ### TikTok
 
 Due its moderation lacking in categories that would classify as not promoting sanity under earlier definitions, it will be blocked.
-
-## Doesn't any blacklisting intrude on speech freedom?
-
-The real power behind the freedom of speech is the ability to hear many incorrect opinions to quickly deduce those that are correct or reasonable.
-When it comes to blacklisting, it prevents peer speech, not individual or communal speech. Therefore, peer speech freedom is compromised, but not individual or communal freedoms.
-"Freedom of speech" frequently refers to individual or communal speech in political forums, and remains untainted.
