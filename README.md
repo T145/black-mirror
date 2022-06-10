@@ -67,8 +67,9 @@
 
 Defines the logic behind why a host is permitted or blocked.
 It has been written to reflect common ideologies across the blacklisting community and those specific to this project.
-Some views may not be shared by the authors, which is why it speaks from the `Black Mirror` person.
-Free thought exchange is encouraged, so feel free to open discussions about any points.
+
+Complete author bias reflection is not intended, which is why it speaks from the `Black Mirror` person.
+Free thought exchange is encouraged, so feel free to open discussions about any points!
 
 ## 📋 Attributes
 

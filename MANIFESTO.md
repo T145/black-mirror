@@ -4,7 +4,6 @@
   - [On Spyware/Stalkerware](#on-spywarestalkerware)
   - [On Propaganda](#on-propaganda)
   - [On Social Media](#on-social-media)
-  - [Doesn't any blacklisting intrude on speech freedom?](#doesnt-any-blacklisting-intrude-on-speech-freedom)
 
 # Black Mirror
 
