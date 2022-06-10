@@ -493,6 +493,9 @@ Use the domain list.
 - [interactivefriends](http://interactivefriends.co.uk/blocklist.txt)
   - Seems to be against gambling.
 - [JoshWho](https://ddosblocklist.joshwho.net/)
+- [mhhakim](https://github.com/mhhakim/pihole-blocklist) ?
+  - custom-blacklist
+  - custom-porn-blacklist
 
 ### ⬜ Whitelists
 
@@ -515,6 +518,9 @@ Use the domain list.
   - duckduckgo
   - github
   - root
+- [mhhakim](https://github.com/mhhakim/pihole-blocklist) ?
+  - custom-whitelist
+  - custom-porn-whitelist
 
 #### TODO
 
@@ -576,7 +582,6 @@ Use the domain list.
 - [ftprivacy](https://github.com/ftpmorph/ftprivacy)
 - [sophos-xg-block-lists](https://github.com/austinheap/sophos-xg-block-lists)
 - [justdomains](https://github.com/justdomains/blocklists)
-- [mhhakim](https://github.com/mhhakim/pihole-blocklist)
 - [blockconvert](https://github.com/mkb2091/blockconvert/blob/master/filterlists.csv)
 - [neodevhost](https://github.com/neodevpro/neodevhost)
 - [ookangzheng](https://github.com/ookangzheng/dbl-oisd-nl)
