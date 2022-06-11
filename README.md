@@ -5,7 +5,7 @@
        longdesc="https://github.com/T145/black-mirror/master/README.md" />
   <h3>🌓 Reflection | 💿 Redundancy | ✅ Reliability</h3>
   <hr>
-  <p>Automatically maintained malicious host blacklists and false-positive whitelists.</p>
+  <p>Blacklists and whitelists that aim to promote security, safety, and sanity across the internet!</p>
   <hr>
   <a href="https://github.com/humanetech-community/awesome-humane-tech#awesome-humane-tech--">
     <img src="https://raw.githubusercontent.com/humanetech-community/awesome-humane-tech/main/humane-tech-badge.svg?sanitize=true"
