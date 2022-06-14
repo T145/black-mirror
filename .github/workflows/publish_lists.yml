@@ -1,0 +1,209 @@
+name: Publish Lists
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "27 1,13 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: ghcr.io/t145/black-mirror:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ github.token }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Generate lists
+        id: build
+        run: ./scripts/github/workflow.bash
+        shell: bash
+
+      - name: Dump output context
+        env:
+          STEPS_CONTEXT: ${{ toJson(steps) }}
+        run: echo "$STEPS_CONTEXT"
+        shell: bash
+
+      # https://github.com/actions/upload-artifact#maintaining-file-permissions-and-case-sensitive-files=
+      - name: Archive lists
+        if: steps.build.outputs.status == 'success'
+        run: tar -cvf lists.tar build/
+        shell: bash
+
+      - name: Cache lists
+        if: steps.build.outputs.status == 'success'
+        uses: actions/upload-artifact@v3
+        with:
+          name: lists
+          path: lists.tar
+          if-no-files-found: error
+          retention-days: 1
+
+      - name: Cache documents
+        if: steps.build.outputs.status == 'success'
+        uses: actions/upload-artifact@v3
+        with:
+          name: docs
+          path: |
+            logs/*
+            README.md
+          if-no-files-found: error
+          retention-days: 1
+
+      - name: Remove lists
+        if: always()
+        run: rm -rf build/
+        shell: bash
+
+  publish_github:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      # https://github.com/actions/download-artifact#limitations=
+      - name: Fetch lists
+        uses: actions/download-artifact@v3
+        with:
+          name: lists
+          path: lists.tar
+
+      - name: Extract lists
+        run: |
+          tar -xvf lists.tar
+          rm -f lists.tar
+        shell: bash
+
+      - name: Create GitHub release
+        uses: marvinpinto/action-automatic-releases@v1.2.1
+        with:
+          # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow
+          repo_token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
+          automatic_release_tag: latest
+          prerelease: false
+          title: All Artifacts
+          files: build/*
+
+      - name: Sleep to avoid more errors
+        if: failure()
+        run: sleep 5s
+        shell: bash
+
+      - name: Retry build artifact upload
+        if: failure()
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: false
+          prerelease: false
+          files: build/*
+          name: All Artifacts
+          tag_name: latest
+          fail_on_unmatched_files: true
+
+      - name: Remove lists
+        if: always()
+        run: rm -rf build/
+        shell: bash
+
+  publish_dropbox:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      # https://github.com/actions/download-artifact#limitations=
+      - name: Fetch lists
+        uses: actions/download-artifact@v3
+        with:
+          name: lists
+          path: lists.tar
+
+      - name: Extract lists
+        run: |
+          tar -xvf lists.tar
+          rm -f lists.tar
+        shell: bash
+
+      - name: Upload blacklists
+        uses: deka0106/upload-to-dropbox@v2
+        with:
+          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
+          src: |
+            build/black*.txt
+            build/black*.checksums
+          dest: /black-mirror/
+          mode: overwrite
+          multiple: true
+          mute: true
+
+      - name: Sleep to avoid 429 error
+        run: sleep 5s
+        shell: bash
+
+      - name: Upload whitelists
+        uses: deka0106/upload-to-dropbox@v2
+        with:
+          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
+          src: |
+            build/white*.txt
+            build/white*.checksums
+          dest: /black-mirror/
+          mode: overwrite
+          multiple: true
+          mute: true
+
+      - name: Remove lists
+        if: always()
+        run: rm -rf build/
+        shell: bash
+
+  update_docs:
+    runs-on: ubuntu-latest
+    needs: [publish_github, publish_dropbox]
+
+    container:
+      image: ghcr.io/t145/black-mirror:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ github.token }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Get changelog content
+        id: release_data
+        uses: KevinRohn/github-full-release-data@v2.0.2
+        with:
+          token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
+
+      - name: Update changelog
+        if: steps.release_data.outputs.body != 'null'
+        run: |
+          echo -n '## ' >>CHANGELOG.md
+          date +"%d-%m-%Y %T" >>CHANGELOG.md
+          echo "${{ fromJSON(steps.release_data.outputs.body) }}" | sed 1d >>CHANGELOG.md
+        shell: bash
+
+      - name: Fetch documents
+        uses: actions/download-artifact@v3
+        with:
+          name: docs
+
+      - name: Update documents
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # homage to the python linting utility "black"
+          commit_message: ✨🍰✨
