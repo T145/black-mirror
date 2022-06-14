@@ -123,3 +123,7 @@
 - 2a08308: ✨🍰✨ (T145)
 - 9542d42: Added tarball and zipball links (T145)
 ## 14-06-2022 02:19:52
+## 14-06-2022 13:46:15
+- 0e39ec4: ✨🍰✨ (T145)
+- 892cb1a: Documented metalhead (T145)
+- c83bd88: Fixed companion project listing (T145)
