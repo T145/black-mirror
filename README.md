@@ -63,11 +63,12 @@
 
 ## 💕 Companion Projects
 
-> Projects that strongly leverage Black Mirror's content
+> Great projects that leverage Black Mirror's content!
 
 </br>
 <a href="https://github.com/T145/metalhead"><img src="https://github.com/T145/metalhead/raw/master/.github/images/logo.jpg" width=220px height=60px></a>  
-<a href="https://github.com/T145/metalhead#readme="><b>metalhead</b></a> - _NXDOMAIN scanner against Black Mirror's lists_
+
+<i>NXDOMAIN scanner against Black Mirror's lists</i>
 </br>
 
 ## 🖋️ [Manifesto](https://github.com/T145/black-mirror/blob/master/MANIFESTO.md)
