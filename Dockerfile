@@ -28,7 +28,7 @@ RUN apt-get -y update && apt-get -y install apt-utils && apt-get -y upgrade && a
       libdata-validate-domain-perl libdata-validate-ip-perl libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtext-trim-perl libtry-tiny-perl \
       lynx miller moreutils nano p7zip-full preload python3-pip sed \
       && apt-get clean \
-      && apt-get -y autoremove
+      && apt-get -y autoremove \
       && rm -rf /var/lib/apt/lists/*
 
 # install the parallel beta that includes parsort
