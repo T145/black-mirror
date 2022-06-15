@@ -512,6 +512,10 @@ Use the domain list.
 - [mhhakim](https://github.com/mhhakim/pihole-blocklist) ?
   - custom-blacklist
   - custom-porn-blacklist
+- [TR-CERT](https://www.usom.gov.tr/url-list.txt)
+  - Reference: [usom-blacklist](https://github.com/fuatboluk/usom-blacklist)
+- [MiscellaneousFactory](https://github.com/MiscellaneousFactory/AdBlockList/blob/master/autocheck.sh)
+  - INVESTIGATE FURTHER
 
 ### ⬜ Whitelists
 
@@ -585,6 +589,7 @@ Use the domain list.
   - Likely draws from other sources.
 - [shallalist](https://www.shallalist.de/)
   - Similar to `ut-capitole`.
+  - [cbuijs](https://github.com/cbuijs/shallalist)
 - [malware-filter](https://gitlab.com/curben/malware-filter)
 - [AdlistTXTS](https://github.com/CleanMachine1/AdlistTXTS#readme)
 - [socialblocklists](https://github.com/d43m0nhLInt3r/socialblocklists#readme)
@@ -714,6 +719,7 @@ Use the domain list.
 - [adblock.gardar](https://adblock.gardar.net/)
 - [TR-PhishingList](https://github.com/HorusTeknoloji/TR-PhishingList)
 - [Spam404](https://github.com/Spam404/lists/blob/master/main-blacklist.txt)
+  - [Dawsey21](https://github.com/Dawsey21/Lists)
 - [bgpranking](https://github.com/D4-project/BGP-Ranking/tree/master/bgpranking/config/modules)
 - [anti-pr0n](https://github.com/CyanideBrother/anti-pr0n)
 - [Evil Domains](https://github.com/hell-sh/Evil-Domains/tree/master/lists)
@@ -806,6 +812,9 @@ Use the domain list.
 - [GATmyIT](https://github.com/GATmyIT/pihole-lists)
 - [Rafaelrico77](https://github.com/Rafaelrico77/piholeyt)
 - [imkarthikk](https://github.com/imkarthikk/pihole-facebook)
+- [BlockYouX](https://ceadd.ca/blockyoux.txt)
+- [BlockWindows](https://github.com/WindowsLies/BlockWindows)
+- [hpthreatresearch](https://github.com/hpthreatresearch/iocs)
 
 ### 🕵🏻 Lamers Unwelcome
 
