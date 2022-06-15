@@ -127,3 +127,6 @@
 - 0e39ec4: ✨🍰✨ (T145)
 - 892cb1a: Documented metalhead (T145)
 - c83bd88: Fixed companion project listing (T145)
+## 15-06-2022 13:48:39
+- 98460b9: Fixed auto commits (T145)
+- 558a185: The Charles came back (T145)
