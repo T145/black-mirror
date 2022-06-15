@@ -516,6 +516,7 @@ Use the domain list.
   - Reference: [usom-blacklist](https://github.com/fuatboluk/usom-blacklist)
 - [MiscellaneousFactory](https://github.com/MiscellaneousFactory/AdBlockList/blob/master/autocheck.sh)
   - INVESTIGATE FURTHER
+- [Charles B. Haley](http://charles.the-haleys.org/ssh_dico_attack_with_timestamps.php?days=7)
 
 ### ⬜ Whitelists
 
@@ -736,8 +737,6 @@ Use the domain list.
 - [cyberthreat](https://www.cyberthreatcoalition.org/blocklist)
   - Service has ended.
 - [Haruko](https://tracker.fumik0.com/)
-  - Offline since last check.
-- [Charles B. Haley](http://charles.the-haleys.org/)
   - Offline since last check.
 - [Clefspeare13](https://tinyurl.com/clefspeare13)
   - [GitHub's Dirty Dancing](https://github.com/StevenBlack/hosts/pull/1784)
