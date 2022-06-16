@@ -28,7 +28,6 @@ RUN apt-get -y update && apt-get -y install apt-utils && apt-get -y upgrade && a
       aria2 bc build-essential curl gawk git golang-go gpg grepcidr gzip idn2 jq \
       libdata-validate-domain-perl libdata-validate-ip-perl libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtext-trim-perl libtry-tiny-perl \
       lynx miller moreutils nano p7zip-full preload python3-pip sed \
-      e2fsprogs=1.46.5-2ubuntu1.1  \
       && apt-get clean autoclean \
       && apt-get -y autoremove \
       && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
