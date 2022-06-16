@@ -40,10 +40,9 @@ RUN curl -sSf https://raw.githubusercontent.com/T145/black-mirror/master/scripts
       && echo 'will cite' | parallel --citation || true
 
 # install twint in base python, otherwise "pandas" will be perma-stuck building in pypy
-RUN pip3 install --no-cache-dir --upgrade wheel \
-      && pip3 install --no-cache-dir --upgrade setuptools \
-      && pip3 install --no-cache-dir gensim \
-      && pip3 install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@v2.1.21#egg=twint
+# RUN pip3 install --no-cache-dir --upgrade wheel \
+#       && pip3 install --no-cache-dir gensim \
+#       && pip3 install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@v2.1.21#egg=twint
 
 # https://golang.org/doc/go-get-install-deprecation#what-to-use-instead
 # the install paths are where "main.go" lives
