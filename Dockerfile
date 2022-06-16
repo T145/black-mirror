@@ -1,8 +1,8 @@
-# use synk's recommended os version
-FROM ubuntu:impish
+# use snyk's recommended os version
+FROM ubuntu:latest
 
 LABEL maintainer="T145" \
-      version="3.1.0" \
+      version="3.2.2" \
       description="Custom Docker Image used to run blacklist projects."
 
 # suppress language-related updates from apt-get to increase download speeds and configure debconf to be non-interactive
@@ -21,12 +21,14 @@ ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 # > use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 # > install apt-utils early so debconf doesn't delay package configuration
 # > upgrade with proper configurations
+# > perform security patches last
 # https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#run
 # https://docs.docker.com/engine/reference/builder/#from
 RUN apt-get -y update && apt-get -y install apt-utils && apt-get -y upgrade && apt-get install -y --no-install-recommends \
       aria2 bc build-essential curl gawk git golang-go gpg grepcidr gzip idn2 jq \
       libdata-validate-domain-perl libdata-validate-ip-perl libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtext-trim-perl libtry-tiny-perl \
       lynx miller moreutils nano p7zip-full preload python3-pip sed \
+      e2fsprogs=1.46.3-1ubuntu3.1 \
       && apt-get clean \
       && apt-get -y autoremove \
       && rm -rf /var/lib/apt/lists/*
