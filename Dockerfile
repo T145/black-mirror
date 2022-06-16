@@ -31,7 +31,7 @@ RUN apt-get -y update && apt-get -y install apt-utils && apt-get -y upgrade && a
       e2fsprogs=1.46.5-2ubuntu1.1  \
       && apt-get clean autoclean \
       && apt-get -y autoremove \
-      && rm -rf /var/lib/apt/lists/*
+      && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # install the parallel beta that includes parsort
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
@@ -40,7 +40,10 @@ RUN curl -sSf https://raw.githubusercontent.com/T145/black-mirror/master/scripts
       && echo 'will cite' | parallel --citation || true
 
 # install twint in base python, otherwise "pandas" will be perma-stuck building in pypy
-RUN pip3 install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@v2.1.21#egg=twint
+RUN pip3 install --no-cache-dir --upgrade wheel \
+      && pip3 install --no-cache-dir --upgrade setuptools \
+      && pip3 install --no-cache-dir gensim \
+      && pip3 install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@v2.1.21#egg=twint
 
 # https://golang.org/doc/go-get-install-deprecation#what-to-use-instead
 # the install paths are where "main.go" lives
