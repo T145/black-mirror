@@ -544,6 +544,7 @@ Use the domain list.
 - [mhhakim](https://github.com/mhhakim/pihole-blocklist) ?
   - custom-whitelist
   - custom-porn-whitelist
+- [metalhead](https://github.com/T145/metalhead)
 
 #### TODO
 
