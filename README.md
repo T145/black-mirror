@@ -517,6 +517,8 @@ Use the domain list.
 - [MiscellaneousFactory](https://github.com/MiscellaneousFactory/AdBlockList/blob/master/autocheck.sh)
   - INVESTIGATE FURTHER
 - [Charles B. Haley](http://charles.the-haleys.org/ssh_dico_attack_with_timestamps.php?days=7)
+- [antipopads:reborn](https://github.com/AdroitAdorKhan/antipopads-re#antipopadsreborn=)
+- [HaGeZi/Zelo](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/personal.txt)
 
 ### ⬜ Whitelists
 
@@ -611,6 +613,7 @@ Use the domain list.
 - [smashblock](https://github.com/smashah/smashblock)
 - [hblock](https://github.com/hectorm/hblock/blob/master/SOURCES.md)
 - [hl2guide](https://raw.githubusercontent.com/hl2guide/Filterlist-for-AdGuard-or-PiHole/master/filter_list_URLs.txt)
+- [dns-blocklists](https://github.com/hagezi/dns-blocklists)
 
 ### 🧟 Zombies
 
