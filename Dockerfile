@@ -48,6 +48,6 @@ RUN pip3 install --no-cache-dir twint
 # https://github.com/ipinfo/cli#-ipinfo-cli
 # https://github.com/StevenBlack/ghosts#ghosts
 RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
-      # && go install github.com/projectdiscovery/httpx/cmd/httpx@latest \
+      && go install github.com/projectdiscovery/httpx/cmd/httpx@latest \
       && go install github.com/ipinfo/cli/ipinfo@latest
       # && go install github.com/StevenBlack/ghosts@latest
