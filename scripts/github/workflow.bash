@@ -12,6 +12,9 @@ main() {
 
     if [[ "$result" == 'success' ]]; then
         find -P -O3 ./build/ -type f -name "*.txt" -exec ./scripts/github/update_readme_tag.bash {} \;
+    else
+        echo "$@" >&2
+        exit 1
     fi
 
     # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#outputs-for-composite-actions=
