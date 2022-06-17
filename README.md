@@ -818,6 +818,13 @@ Use the domain list.
 - [BlockYouX](https://ceadd.ca/blockyoux.txt)
 - [BlockWindows](https://github.com/WindowsLies/BlockWindows)
 - [hpthreatresearch](https://github.com/hpthreatresearch/iocs)
+- [murdoch_blocklist](https://github.com/suodrazah/murdoch_blocklist)
+- pirat28
+  - [IHateTracker](https://github.com/pirat28/IHateTracker)
+  - [IHateSPAMList](https://github.com/pirat28/IHateSPAMList)
+  - [IHateURLshort](https://github.com/pirat28/IHateURLshort)
+- [labs_campaigns](https://github.com/guardicore/labs_campaigns)
+- [KitsapCreator](https://github.com/KitsapCreator/pihole-blocklists)
 
 ### 🕵🏻 Lamers Unwelcome
 
