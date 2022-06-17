@@ -24,10 +24,11 @@ ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 # > perform security patches last
 # https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#run
 # https://docs.docker.com/engine/reference/builder/#from
+# https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory#21530768
 RUN apt-get -y update && apt-get -y install apt-utils && apt-get -y upgrade && apt-get install -y --no-install-recommends \
       aria2 bc build-essential curl gawk git golang-go gpg grepcidr gzip idn2 jq \
       libdata-validate-domain-perl libdata-validate-ip-perl libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtext-trim-perl libtry-tiny-perl \
-      lynx miller moreutils nano p7zip-full preload python3-pip sed \
+      lynx miller moreutils nano p7zip-full preload python3-dev python3-pip sed \
       e2fsprogs=1.46.5-2ubuntu1.1  \
       && apt-get clean autoclean \
       && apt-get -y autoremove \
@@ -40,9 +41,7 @@ RUN curl -sSf https://raw.githubusercontent.com/T145/black-mirror/master/scripts
       && echo 'will cite' | parallel --citation || true
 
 # install twint in base python, otherwise "pandas" will be perma-stuck building in pypy
-# RUN pip3 install --no-cache-dir --upgrade wheel \
-#       && pip3 install --no-cache-dir gensim \
-#       && pip3 install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@v2.1.21#egg=twint
+RUN pip3 install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@v2.1.21#egg=twint
 
 # https://golang.org/doc/go-get-install-deprecation#what-to-use-instead
 # the install paths are where "main.go" lives
