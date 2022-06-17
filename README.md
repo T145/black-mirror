@@ -68,7 +68,7 @@
 > Great projects that leverage Black Mirror's content!
 
 </br>
-<a href="https://github.com/T145/metalhead"><img src="https://github.com/T145/metalhead/raw/master/.github/images/logo.jpg" width=220px height=60px></a>  
+<a href="https://github.com/T145/metalhead"><img src="https://github.com/T145/metalhead/raw/master/.github/images/logo.jpg" width=220px height=60px></a>
 
 <i>NXDOMAIN scanner against Black Mirror's lists</i>
 </br>
@@ -233,7 +233,7 @@ mawk '{print ":: " $0}' black_ipv6.txt >>hosts
 ### dnsmasq
 
 Many popular platforms such as OpenWRT, DDWRT, and Pihole use DNSmasq as their choice TCP powerhouse. After inspecting many domain blocklists you'll inevitably run across a list in the `dnsmasq.conf` format. This list doesn't support it because you can use the `addn-hosts` parameter to add hosts in the list.
-Target a file that has the hosts in a format similar to the Desktop OS Hosts File format.
+Target a file that has the hosts in a format similar to the `Desktop OS Hosts File format`.
 
 If you're using the `RADVD` daemon, prepend any listed hosts with [`::`](https://stackoverflow.com/questions/40189084/what-is-for-localhost-and-0-0-0-0). Otherwise, even if you have IPv6 support set up, prepend hosts with [`0.0.0.0`](https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001).
 
@@ -254,6 +254,10 @@ Similar to dnsmasq, but requires more manual configuration. Name any products as
 ### personalDNSfilter
 
 Use the domain list.
+
+### adguard
+
+Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/master/exports/sources.adguard) list or the domain list.
 
 ## 📚 Sources
 
@@ -851,14 +855,14 @@ Use the domain list.
 
 > Typically used by other blacklist projects as whitelists.
 
-List Name | URL
---- | --- |
-Alexa | https://s3.amazonaws.com/alexa-static/top-1m.csv.zip
-Umbrella | https://downloads.majestic.com/majestic_million.csv
-Statvoo | https://statvoo.com/dl/top-1million-sites.csv.zip
-OpenPageRank | https://www.domcop.com/files/top/top10milliondomains.csv.zip
-Quantcast | https://toplists.net.in.tum.de/archive/quantcast/quantcast-top-sites-2021-06-25_0900_UTC.txt.xz
-Tranco list | https://tranco-list.eu/
+| List Name    | URL                                                                                             |
+| ------------ | ----------------------------------------------------------------------------------------------- |
+| Alexa        | https://s3.amazonaws.com/alexa-static/top-1m.csv.zip                                            |
+| Umbrella     | https://downloads.majestic.com/majestic_million.csv                                             |
+| Statvoo      | https://statvoo.com/dl/top-1million-sites.csv.zip                                               |
+| OpenPageRank | https://www.domcop.com/files/top/top10milliondomains.csv.zip                                    |
+| Quantcast    | https://toplists.net.in.tum.de/archive/quantcast/quantcast-top-sites-2021-06-25_0900_UTC.txt.xz |
+| Tranco list  | https://tranco-list.eu/                                                                         |
 
 ### 🌐 IP Block Providers
 
