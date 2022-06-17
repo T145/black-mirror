@@ -2601,6 +2601,225 @@
     "scan": false,
     "topic": "SECURITY"
   },
+  "fanboy_antifonts": {
+    "_desc": "https://fanboy.co.nz/filters.html",
+    "_homepage": "https://github.com/ryanbr/fanboy-adblock",
+    "_license": "cc-by-3.0",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://secure.fanboy.co.nz/fanboy-antifonts.txt",
+      "https://fanboy.co.nz/fanboy-antifonts.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://secure.fanboy.co.nz/fanboy-antifonts.txt"
+    }
+  },
+  "fanboy_cookiemonster": {
+    "_desc": "https://fanboy.co.nz/filters.html",
+    "_homepage": "https://github.com/ryanbr/fanboy-adblock",
+    "_license": "cc-by-3.0",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+      "https://fanboy.co.nz/fanboy-cookiemonster.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+      "pihole": "https://block.energized.pro/assets/sources/filter/fanboy-cookiemonster.txt"
+    }
+  },
+  "fanboy_indian": {
+    "_desc": "https://fanboy.co.nz/filters.html",
+    "_homepage": "https://github.com/ryanbr/fanboy-adblock",
+    "_license": "cc-by-3.0",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://secure.fanboy.co.nz/fanboy-indian.txt",
+      "https://fanboy.co.nz/fanboy-indian.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://secure.fanboy.co.nz/fanboy-indian.txt",
+      "pihole": "https://block.energized.pro/assets/sources/filter/fanboy-indian.txt"
+    }
+  },
+  "fanboy_ultimate": {
+    "_desc": "https://fanboy.co.nz/filters.html",
+    "_homepage": "https://github.com/ryanbr/fanboy-adblock",
+    "_license": "cc-by-3.0",
+    "_notes": "The 'anti-facebook' list is covered by other Facebook hate.",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://secure.fanboy.co.nz/r/fanboy-ultimate.txt",
+      "https://fanboy.co.nz/r/fanboy-ultimate.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://secure.fanboy.co.nz/r/fanboy-ultimate.txt",
+      "pihole": "https://block.energized.pro/assets/sources/filter/fanboy-ultimate.txt"
+    }
+  },
+  "filtri_dns": {
+    "_desc": "https://filtri-dns.ga/",
+    "_homepage": "https://filtri-dns.ga/",
+    "_license": "cc-by-sa-4.0",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://filtri-dns.ga/filtri.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://filtri-dns.ga/filtri.txt"
+    }
+  },
+  "firehol_level4": {
+    "_desc": "https://iplists.firehol.org/",
+    "_homepage": "https://github.com/firehol/blocklist-ipsets",
+    "_license": "all-rights-reserved",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level4.netset"
+    ],
+    "scan": false,
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level4.netset"
+    }
+  },
+  "frellwits": {
+    "_desc": "https://github.com/lassekongo83/Frellwits-filter-lists#frellwits-filter-lists",
+    "_homepage": "https://github.com/lassekongo83/Frellwits-filter-lists",
+    "_license": "gpl-3.0",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY",
+    "variants": {
+      "easylist": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
+      "pihole": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt"
+    }
+  },
+  "futafilter": {
+    "_desc": "https://github.com/FutaGuard/FutaFilter#futafilter=",
+    "_homepage": "https://github.com/FutaGuard/FutaFilter",
+    "_license": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/LICENSE",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://filter.futa.gg/hosts.txt",
+      "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/hosts.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY",
+    "variants": {
+      "easylist": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/filter.txt",
+      "adguard": "https://filter.futa.gg/hosts.txt"
+    }
+  },
   "perflyst_amazon_fire_tv": {
     "_desc": "https://github.com/Perflyst/PiHoleBlocklist#readme",
     "_homepage": "https://github.com/Perflyst/PiHoleBlocklist",
