@@ -31,7 +31,7 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
   </a>
-  <img src="https://img.shields.io/github/workflow/status/T145/black-mirror/Create%20Release/master?label=Release&logo=github"
+  <img src="https://img.shields.io/github/workflow/status/T145/black-mirror/Publish%20Lists/master?label=Release&logo=github"
        alt="release"
        longdesc="https://github.com/badges/shields/"
        crossorigin="anonymous"
@@ -43,11 +43,13 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
   </a>
-  <img src="https://img.shields.io/github/workflow/status/T145/black-mirror/Update%20Docker%20Image/master?color=%232496ED&label=Docker&logo=docker"
-       alt="docker"
-       longdesc="https://github.com/badges/shields/"
-       crossorigin="anonymous"
-       referrerpolicy="no-referrer" />
+  <a href="https://github.com/T145/black-mirror/pkgs/container/black-mirror">
+    <img src="https://img.shields.io/github/workflow/status/T145/black-mirror/Publish%20Docker%20Image/master?color=%232496ED&label=Docker&logo=docker"
+        alt="docker"
+        longdesc="https://github.com/badges/shields/"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+  </a>
 </div>
 
 ## 🛡️ Privacy Protectors
