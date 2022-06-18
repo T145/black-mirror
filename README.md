@@ -596,7 +596,7 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [ut-capitole](https://dsi.ut-capitole.fr/blacklists/index_en.php)
   - Has a lot of deprecated data.
 - [joewein's base list](https://www.joewein.net/dl/bl/dom-bl-base.txt)
-  - Infrequently updated and impossible to update daily.
+  - Infrequently updated and impossible to update frequently.
 - [shallalist](https://www.shallalist.de/)
   - Similar to `ut-capitole`.
   - [cbuijs](https://github.com/cbuijs/shallalist)

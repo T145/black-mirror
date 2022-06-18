@@ -181,7 +181,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Make the working tree clean
+      - name: Make the working tree safe
         run: git config --global --add safe.directory /__w/black-mirror/black-mirror
         shell: bash
 
