@@ -3622,32 +3622,6 @@
       "pihole": "https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/KADhole.txt"
     }
   },
-  "kodopenguin_android": {
-    "_desc": "https://hosts.gameindustry.eu/",
-    "_homepage": "https://github.com/KodoPengin/GameIndustry-hosts-Template",
-    "_license": "https://gameindustry.eu/de/lizenz/",
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Android-Full-Template/hosts"
-    ],
-    "scan": false,
-    "topic": "SECURITY",
-    "variants": {
-      "pihole": "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Android-Full-Template/hosts"
-    }
-  },
   "kodopenguin_amazon_firestick": {
     "_desc": "https://hosts.gameindustry.eu/",
     "_homepage": "https://github.com/KodoPengin/GameIndustry-hosts-Template",
@@ -3672,6 +3646,32 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Amazon-FireStick/hosts"
+    }
+  },
+  "kodopenguin_android": {
+    "_desc": "https://hosts.gameindustry.eu/",
+    "_homepage": "https://github.com/KodoPengin/GameIndustry-hosts-Template",
+    "_license": "https://gameindustry.eu/de/lizenz/",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Android-Full-Template/hosts"
+    ],
+    "scan": false,
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Android-Full-Template/hosts"
     }
   },
   "kodopenguin_gaming": {
@@ -3752,6 +3752,33 @@
       "pihole": "https://kriskintel.com/feeds/ktip_covid_domains.txt"
     }
   },
+  "kriskintel_log4j": {
+    "_desc": "https://kriskintel.com/",
+    "_homepage": "https://kriskintel.com/",
+    "_license": "cc-by-sa-4.0",
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "KRISK_IOC_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "KRISK_IOC_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "method": "BLOCK",
+    "mirrors": [
+      "https://kriskintel.com/feeds/ktip_log4j_feeds.txt"
+    ],
+    "scan": false,
+    "topic": "SECURITY"
+  },
   "kriskintel_malicious_domains": {
     "_desc": "https://kriskintel.com/",
     "_homepage": "https://kriskintel.com/",
@@ -3827,33 +3854,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://kriskintel.com/feeds/ktip_ransomware_feeds.txt"
-    ],
-    "scan": false,
-    "topic": "SECURITY"
-  },
-  "kriskintel_log4j": {
-    "_desc": "https://kriskintel.com/",
-    "_homepage": "https://kriskintel.com/",
-    "_license": "cc-by-sa-4.0",
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "KRISK_IOC_DOMAIN",
-        "format": "DOMAIN"
-      },
-      {
-        "filter": "KRISK_IOC_IPV4",
-        "format": "IPV4"
-      }
-    ],
-    "method": "BLOCK",
-    "mirrors": [
-      "https://kriskintel.com/feeds/ktip_log4j_feeds.txt"
     ],
     "scan": false,
     "topic": "SECURITY"
