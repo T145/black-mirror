@@ -471,7 +471,6 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 
 - [Yuki2718](https://github.com/Yuki2718/adblock)
 - [Mochi Filter](https://github.com/eEIi0A5L/adblock_filter/blob/master/mochi_filter.txt)
-- [hemiipatu](https://github.com/hemiipatu/PiHoleBlocklists/tree/master/blocklists) ?
 - [herrbischoff](https://git.herrbischoff.com/trackers/about/)
   - All lists are used.
   - [Support female hygiene in Zanzibar](https://git.herrbischoff.com/trackers/about/#women-empowerment-in-zanzibar)!
@@ -515,7 +514,7 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [interactivefriends](http://interactivefriends.co.uk/blocklist.txt)
   - Seems to be against gambling.
 - [JoshWho](https://ddosblocklist.joshwho.net/)
-- [mhhakim](https://github.com/mhhakim/pihole-blocklist) ?
+- [mhhakim](https://github.com/mhhakim/pihole-blocklist)
   - custom-blacklist
   - custom-porn-blacklist
 - [TR-CERT](https://www.usom.gov.tr/url-list.txt)
@@ -547,8 +546,7 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
   - duckduckgo
   - github
   - root
-- [mhhakim](https://github.com/mhhakim/pihole-blocklist) ?
-  - custom-whitelist
+- [mhhakim](https://github.com/mhhakim/pihole-blocklist)
   - custom-porn-whitelist
 - [metalhead](https://github.com/T145/metalhead)
 
@@ -621,6 +619,7 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [hblock](https://github.com/hectorm/hblock/blob/master/SOURCES.md)
 - [hl2guide](https://raw.githubusercontent.com/hl2guide/Filterlist-for-AdGuard-or-PiHole/master/filter_list_URLs.txt)
 - [dns-blocklists](https://github.com/hagezi/dns-blocklists)
+- [hemiipatu](https://github.com/hemiipatu/PiHoleBlocklists/tree/master/blocklists)
 
 ### 🧟 Zombies
 
