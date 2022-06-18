@@ -152,3 +152,11 @@
 - 8e246f0: ✨📚✨ (T145)
 - 5f284dd: Reverted some Docker changes to hopefully fix runtime errors (T145)
 - 0a64597: Echo errors and exit if building failed (T145)
+## 18-06-2022 02:18:17
+- 42f9068: ✨🍰✨ (T145)
+- 3cd7683: Print from stderr, not to it (T145)
+- 2bfc896: Updated badges to target the correct workflows (T145)
+- a2c3f67: Add an Adguard list export (T145)
+- ad77a09: ✨📚✨ (T145)
+- ddde59e: Ported more sources: up to Kodopenguin (T145)
+- 6202585: ✨📚✨ (T145)
