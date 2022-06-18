@@ -466,6 +466,14 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
   - ads
   - analytics
   - enrichments
+- [bestpika](https://github.com/bestpika/abp)
+  - cf
+  - hosts
+  - yui
+- [cjxlist](https://github.com/cjx82630/cjxlist)
+  - cjx-annoyance
+  - cjx-ublock ?
+  - cjxlist
 
 #### TODO
 
@@ -830,6 +838,7 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
   - [IHateURLshort](https://github.com/pirat28/IHateURLshort)
 - [labs_campaigns](https://github.com/guardicore/labs_campaigns)
 - [KitsapCreator](https://github.com/KitsapCreator/pihole-blocklists)
+- [uBlockProtector](https://github.com/jspenguin2017/uBlockProtector)
 
 ### 🕵🏻 Lamers Unwelcome
 
