@@ -869,6 +869,9 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [Licolnlee](https://github.com/Licolnlee/AdBlockList)
 - [Amazefcc233](https://github.com/Amazefcc233/no-ads-hosts)
 - [extstars](https://files.extstars.com/hosts/)
+- [4in6](http://www.4in6.net/legacy/AdBlock.txt)
+  - Last-Modified: Fri, 30 Oct 2020 22:09:46 GMT
+  - [Threatfeeds](https://threatfeeds.4in6.net/api/deleteme?list=doorknockers)
 
 ### 🕵🏻 Lamers Unwelcome
 
