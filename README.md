@@ -482,14 +482,6 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
   - ads
   - analytics
   - enrichments
-- [bestpika](https://github.com/bestpika/abp)
-  - cf
-  - hosts
-  - yui
-- [cjxlist](https://github.com/cjx82630/cjxlist)
-  - cjx-annoyance
-  - cjx-ublock ?
-  - cjxlist
 
 #### TODO
 
@@ -543,11 +535,23 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
   - custom-porn-blacklist
 - [TR-CERT](https://www.usom.gov.tr/url-list.txt)
   - Reference: [usom-blacklist](https://github.com/fuatboluk/usom-blacklist)
-- [MiscellaneousFactory](https://github.com/MiscellaneousFactory/AdBlockList/blob/master/autocheck.sh)
-  - INVESTIGATE FURTHER
 - [Charles B. Haley](http://charles.the-haleys.org/ssh_dico_attack_with_timestamps.php?days=7)
 - [antipopads:reborn](https://github.com/AdroitAdorKhan/antipopads-re#antipopadsreborn=)
 - [HaGeZi/Zelo](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/personal.txt)
+- [bestpika](https://github.com/bestpika/abp)
+  - cf
+  - hosts
+  - yui
+- [cjxlist](https://github.com/cjx82630/cjxlist)
+  - cjx-annoyance
+  - cjx-ublock ?
+  - cjxlist
+- [YousList](https://github.com/yous/YousList)
+- [xiaobeita](https://github.com/rentianyu/Ad-set-hosts/tree/master/xiaobeita)
+- [VeleSila/yhosts](https://github.com/VeleSila/yhosts)
+- [ilpl](https://github.com/ilpl/ad-hosts)
+- [Cats-Team](https://github.com/Cats-Team/AdRules)
+  - [Mirror](https://cats-team.coding.net/p/adguard/d/AdRules/git/raw/main/ad-domains.txt)
 
 ### ⬜ Whitelists
 
@@ -644,6 +648,10 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [hl2guide](https://raw.githubusercontent.com/hl2guide/Filterlist-for-AdGuard-or-PiHole/master/filter_list_URLs.txt)
 - [dns-blocklists](https://github.com/hagezi/dns-blocklists)
 - [hemiipatu](https://github.com/hemiipatu/PiHoleBlocklists/tree/master/blocklists)
+- [1024_hosts](https://github.com/Goooler/1024_hosts)
+- [MiscellaneousFactory](https://github.com/MiscellaneousFactory/AdBlockList/blob/master/autocheck.sh)
+- [rentianyu](https://github.com/rentianyu/Ad-set-hosts/blob/master/update.sh)
+- [GitHub520](https://github.com/521xueweihan/GitHub520)
 
 ### 🧟 Zombies
 
@@ -855,6 +863,12 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [labs_campaigns](https://github.com/guardicore/labs_campaigns)
 - [KitsapCreator](https://github.com/KitsapCreator/pihole-blocklists)
 - [uBlockProtector](https://github.com/jspenguin2017/uBlockProtector)
+- [tekintian](https://github.com/tekintian/hosts_ads_block)
+- [E7KMbb](https://github.com/E7KMbb/AD-hosts/tree/master/system/etc)
+- [blackhosts](https://github.com/easonjim/blackhosts)
+- [Licolnlee](https://github.com/Licolnlee/AdBlockList)
+- [Amazefcc233](https://github.com/Amazefcc233/no-ads-hosts)
+- [extstars](https://files.extstars.com/hosts/)
 
 ### 🕵🏻 Lamers Unwelcome
 
