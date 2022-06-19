@@ -24,38 +24,48 @@
        longdesc="https://pufler.dev/git-badges/"
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
-  <img src="https://img.shields.io/static/v1?logo=rss&label=RSS&message=feed&color=FFA500&link=https://github.com/T145/black-mirror/commits/master.atom"
-      alt="release"
-      longdesc="https://github.com/badges/shields/"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
-  <img src="https://img.shields.io/github/workflow/status/T145/black-mirror/Publish%20Lists/master?label=Release&logo=github&link=https://github.com/T145/black-mirror/actions"
+  <a href="https://github.com/T145/black-mirror/commits/master.atom">
+    <img src="https://img.shields.io/static/v1?logo=rss&label=RSS&message=feed&color=FFA500"
+        alt="release"
+        longdesc="https://github.com/badges/shields/"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+  </a>
+  <img src="https://img.shields.io/github/workflow/status/T145/black-mirror/Publish%20Lists/master?label=Release&logo=github"
        alt="release"
        longdesc="https://github.com/badges/shields/"
        crossorigin="anonymous"
        referrerpolicy="no-referrer" />
-  <img src="https://img.shields.io/static/v1?logo=dropbox&label=Dropbox&message=builds&color=0061FF&link=https://www.dropbox.com/sh/lg4i0sjexubhcz6/AABO35HOVeK7Z0VHXN9MTp_ya?dl=0"
-      alt="release"
-      longdesc="https://github.com/badges/shields/"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
-  <img src="https://img.shields.io/github/workflow/status/T145/black-mirror/Publish%20Docker%20Image/master?color=%232496ED&label=Docker&logo=docker&link=https://github.com/T145/black-mirror/pkgs/container/black-mirror"
-      alt="docker"
-      longdesc="https://github.com/badges/shields/"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
+  <a href="https://www.dropbox.com/sh/lg4i0sjexubhcz6/AABO35HOVeK7Z0VHXN9MTp_ya?dl=0">
+    <img src="https://img.shields.io/static/v1?logo=dropbox&label=Dropbox&message=builds&color=0061FF"
+        alt="release"
+        longdesc="https://github.com/badges/shields/"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+  </a>
+  <a href="https://github.com/T145/black-mirror/pkgs/container/black-mirror">
+    <img src="https://img.shields.io/github/workflow/status/T145/black-mirror/Publish%20Docker%20Image/master?color=%232496ED&label=Docker&logo=docker"
+        alt="docker"
+        longdesc="https://github.com/badges/shields/"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+  </a>
 </div>
 <div align="center">
-  <img src="https://img.shields.io/static/v1?logo=ublockOrigin&label=uBlock&message=subscribe&color=800000&link=https://ublockorigin.com/&link=https://raw.githubusercontent.com/T145/black-mirror/master/exports/sources.adguard"
-      alt="ublock"
-      longdesc="https://github.com/badges/shields/"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
-  <img src="https://img.shields.io/static/v1?logo=pihole&label=Pi-Hole&message=subscribe&color=96060C&link=https://pi-hole.net/&link=https://raw.githubusercontent.com/T145/black-mirror/master/exports/sources.pihole"
-      alt="pihole"
-      longdesc="https://github.com/badges/shields/"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
+  <a href="https://raw.githubusercontent.com/T145/black-mirror/master/exports/sources.adguard">
+    <img src="https://img.shields.io/static/v1?logo=ublockOrigin&label=uBlock&message=subscribe&color=800000"
+        alt="docker"
+        longdesc="https://github.com/badges/shields/"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+  </a>
+  <a href="https://raw.githubusercontent.com/T145/black-mirror/master/exports/sources.pihole">
+    <img src="https://img.shields.io/static/v1?logo=pihole&label=Pi-Hole&message=subscribe&color=96060C"
+        alt="pihole"
+        longdesc="https://github.com/badges/shields/"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+  </a>
 </div>
 
 ## 🛡️ Privacy Protectors
