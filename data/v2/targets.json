@@ -13,19 +13,47 @@
     },
     "mirror": "https://raw.githubusercontent.com/badmojr/1Hosts/master/-data/lists/assets.txt"
   },
-  "stevenblack": {
+  "oisd_full": {
     "metadata": {
-      "title": "StevenBlack",
-      "homepage": "https://github.com/StevenBlack/hosts",
-      "description": "https://github.com/StevenBlack/hosts#unified-hosts-file-with-base-extensions=",
-      "license": "mit"
+      "title": "OISD Full",
+      "homepage": "https://oisd.nl/",
+      "description": "https://oisd.nl/includedlists",
+      "license": "not-available"
     },
     "content": {
-      "filter": "STEVENBLACK",
+      "filter": "OISD",
       "retriever": "ARIA2",
-      "type": "JSON"
+      "type": "TEXT"
     },
-    "mirror": "https://raw.githubusercontent.com/StevenBlack/hosts/master/readmeData.json"
+    "mirror": "https://oisd.nl/includedlists/full/0"
+  },
+  "oisd_nsfw": {
+    "metadata": {
+      "title": "OISD NSFW",
+      "homepage": "https://oisd.nl/",
+      "description": "https://oisd.nl/includedlists",
+      "license": "not-available"
+    },
+    "content": {
+      "filter": "OISD",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "mirror": "https://oisd.nl/includedlists/nsfw"
+  },
+  "oisd_whitelist": {
+    "metadata": {
+      "title": "OISD Whitelist",
+      "homepage": "https://oisd.nl/",
+      "description": "https://oisd.nl/includedlists",
+      "license": "not-available"
+    },
+    "content": {
+      "filter": "OISD",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "mirror": "https://oisd.nl/includedlists/whitelists"
   },
   "energized": {
     "metadata": {
