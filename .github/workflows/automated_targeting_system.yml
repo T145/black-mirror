@@ -18,15 +18,12 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
       - name: Generate lists
-        id: build
         run: ./scripts/github/automated_targeting_system.bash
         shell: bash
 
-      - name: Update documents
+      - name: Update targets
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: ✨🎯✨
