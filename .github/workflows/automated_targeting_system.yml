@@ -1,0 +1,32 @@
+﻿name: Publish Docker Image
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 7 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: ghcr.io/t145/black-mirror:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ github.token }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Generate lists
+        id: build
+        run: ./scripts/github/automated_targeting_system.bash
+        shell: bash
+
+      - name: Update documents
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: ✨🎯✨

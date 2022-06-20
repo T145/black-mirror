@@ -1,0 +1,128 @@
+{
+  "1hosts": {
+    "metadata": {
+      "title": "1Hosts",
+      "homepage": "https://o0.pages.dev/",
+      "description": "https://github.com/badmojr/1Hosts#readme=",
+      "license": "mpl-2.0"
+    },
+    "content": {
+      "filter": "1HOSTS",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "mirror": "https://raw.githubusercontent.com/badmojr/1Hosts/master/-data/lists/assets.txt"
+  },
+  "oisd_full": {
+    "metadata": {
+      "title": "OISD Full",
+      "homepage": "https://oisd.nl/",
+      "description": "https://oisd.nl/includedlists",
+      "license": "not-available"
+    },
+    "content": {
+      "filter": "OISD",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "mirror": "https://oisd.nl/includedlists/full/0"
+  },
+  "oisd_nsfw": {
+    "metadata": {
+      "title": "OISD NSFW",
+      "homepage": "https://oisd.nl/",
+      "description": "https://oisd.nl/includedlists",
+      "license": "not-available"
+    },
+    "content": {
+      "filter": "OISD",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "mirror": "https://oisd.nl/includedlists/nsfw"
+  },
+  "oisd_whitelist": {
+    "metadata": {
+      "title": "OISD Whitelist",
+      "homepage": "https://oisd.nl/",
+      "description": "https://oisd.nl/includedlists",
+      "license": "not-available"
+    },
+    "content": {
+      "filter": "OISD",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "mirror": "https://oisd.nl/includedlists/whitelists"
+  },
+  "stevenblack": {
+    "metadata": {
+      "title": "StevenBlack",
+      "homepage": "https://github.com/StevenBlack/hosts",
+      "description": "https://github.com/StevenBlack/hosts#unified-hosts-file-with-base-extensions=",
+      "license": "mit"
+    },
+    "content": {
+      "filter": "STEVENBLACK",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "mirror": "https://raw.githubusercontent.com/StevenBlack/hosts/master/readmeData.json"
+  },
+  "energized": {
+    "metadata": {
+      "title": "Energized Protection",
+      "homepage": "https://github.com/EnergizedProtection/block",
+      "description": "https://github.com/EnergizedProtection/block#energized-protection---block-=",
+      "license": "mit"
+    },
+    "content": {
+      "filter": "ENERGIZED",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "mirror": "https://raw.githubusercontent.com/EnergizedProtection/block/master/assets/sources/sources.json"
+  },
+  "hl2guide": {
+    "metadata": {
+      "title": "Hl2Guide's Filterlist",
+      "homepage": "https://github.com/hl2guide/Filterlist-for-AdGuard-or-PiHole",
+      "description": "https://github.com/hl2guide/Filterlist-for-AdGuard-or-PiHole#filterlist-for-adguard-or-pi-hole-=",
+      "license": "mit"
+    },
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "mirror": "https://raw.githubusercontent.com/hl2guide/Filterlist-for-AdGuard-or-PiHole/master/filter_list_URLs.txt"
+  },
+  "sheriff53": {
+    "metadata": {
+      "title": "Sheriff53 Third-Party List",
+      "homepage": "https://notabug.org/phronimon/Sheriff53#sheriff53",
+      "description": "https://notabug.org/phronimon/ListsRegistry/#listsregistry",
+      "license": "mit"
+    },
+    "content": {
+      "filter": "SHERIFF53",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "mirror": "https://notabug.org/phronimon/ListsRegistry/raw/master/assests/third_party.json"
+  },
+  "dnsforfamily": {
+    "metadata": {
+      "title": "DNS For Family",
+      "homepage": "https://dnsforfamily.com/",
+      "description": "https://dnsforfamily.com/",
+      "license": "not-available"
+    },
+    "content": {
+      "filter": "DNSFORFAMILY",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "mirror": "https://dnsforfamily.com/Public/blacklist.txt"
+  }
+}
