@@ -25,34 +25,12 @@ jobs:
 
       - name: Export sources
         run: |
+          git config --global --add safe.directory /__w/black-mirror/black-mirror
           jq -SM '.' data/v2/lists.json | sponge data/v2/lists.json
           jq -jr 'to_entries[] | select(.value.method == "BLOCK" and .value.variants.pihole != null) | (.value.variants.pihole, " ")' data/v2/lists.json | sed 's/ $/\n/' >exports/sources.pihole
           jq -jr 'to_entries[] | select(.value.method == "BLOCK" and .value.variants.adguard != null) | ("!#include ", .value.variants.adguard, "\n")' data/v2/lists.json >exports/sources.adguard
-          jq -r 'to_entries[].value.mirrors[]' data/v2/lists.json >exports/sources.txt
-          parsort -u -S 100% --parallel=48 exports/sources.txt | sponge exports/sources.txt
+          jq -r 'to_entries[].value.mirrors[]' data/v2/lists.json | parsort -u -S 100% --parallel=48 | sponge exports/sources.txt
         shell: bash
-
-      - name: Upload modified sources
-        if: success()
-        uses: actions/upload-artifact@v3
-        with:
-          name: lists
-          path: |
-            data/v2/lists.json
-            exports/*
-          retention-days: 1
-
-  commit_changes:
-    runs-on: ubuntu-latest
-    needs: export_sources
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Download modified Sources
-        uses: actions/download-artifact@v3
-        with:
-          name: lists
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
