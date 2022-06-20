@@ -39,6 +39,7 @@ apply_filter() {
 main() {
   git config --global --add safe.directory /__w/black-mirror/black-mirror
   mkdir -p target/
+  jq -SM '.' data/v2/targets.json | sponge data/v2/targets.json
 
   jq -r 'to_entries[] | (.value.mirror), " out=\(.key).txt"' data/v2/targets.json |
     (set +e && aria2c -i- -d "$CACHE" --conf-path='./configs/aria2.conf' && set -e) || set -e
@@ -50,7 +51,7 @@ main() {
       list="${CACHE}/${key}.txt"
 
       if [ -n "$list" ]; then
-        cat "$list" | apply_filter "$filter" >"target/${key}.txt"
+        cat "$list" | apply_filter "$filter" | sponge "target/${key}.txt"
       fi
     done
 }
