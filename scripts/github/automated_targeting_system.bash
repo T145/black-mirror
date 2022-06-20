@@ -32,7 +32,7 @@ apply_filter() {
   esac |
     mawk 'NF && !seen[$0]++' | # filter blank lines and duplicates
     httpx -r configs/resolvers.txt -silent -t 200000 |
-    parsort -u -S 100% --parallel=200000 -T "$CACHE" |
+    parsort -u -S 100% --parallel=100000 -T "$CACHE" |
     grep -Fxvf exports/sources.txt -
 }
 
@@ -41,16 +41,16 @@ main() {
   mkdir -p target/
 
   jq -r 'to_entries[] | (.value.mirror), " out=\(.key).txt"' data/v2/targets.json |
-    (set +e && aria2c -i- -d target/ --conf-path='./configs/aria2.conf' && set -e) || set -e
+    (set +e && aria2c -i- -d "$CACHE" --conf-path='./configs/aria2.conf' && set -e) || set -e
 
   local list
 
   jq -r 'to_entries[] | "\(.key)#\(.value.content.filter)"' data/v2/targets.json |
     while IFS='#' read -r key filter; do
-      list="target/${key}.txt"
+      list="${CACHE}/${key}.txt"
 
       if [ -n "$list" ]; then
-        cat "$list" | apply_filter "$filter" >"$list"
+        cat "$list" | apply_filter "$filter" >"target/${key}.txt"
       fi
     done
 }
