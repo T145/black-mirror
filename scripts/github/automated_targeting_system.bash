@@ -16,10 +16,10 @@ trap 'rm -rf "$CACHE"' EXIT || exit 1
 
 apply_filter() {
   case "$1" in
-  OISD)
-    set +e && xmllint --html --xpath '//html//body//main//a/text()' - 2>/dev/null && set -e |
-      mawk '$0~/^http/{gsub("&amp;","&", $0); print $0}'
-    ;;
+  # OISD)
+  #   set +e && xmllint --html --xpath '//html//body//main//a/text()' - 2>/dev/null && set -e |
+  #     mawk '$0~/^http/{gsub("&amp;","&", $0); print $0}'
+  #   ;;
   1HOSTS) mawk '$0~/^[^#]/' ;;
   STEVENBLACK) jq -r 'to_entries[] | .value.sourcesdata[].url' ;;
   ENERGIZED) jq -r '.sources[].url' ;;
