@@ -21,7 +21,7 @@ apply_filter() {
       mawk '$0~/^http/{gsub("&amp;","&", $0); print $0}'
     ;;
   1HOSTS) mawk '$0~/^[^#]/' ;;
-  # STEVENBLACK) jq -r 'to_entries[] | .value.sourcesdata[].url' ;;
+  STEVENBLACK) jq -r 'to_entries[] | .value.sourcesdata[].url' ;;
   ENERGIZED) jq -r '.sources[].url' ;;
   SHERIFF53) jq -r '.[] | "\(.url[])", "\(select(.mirror) | .mirror[])"' ;;
   DNSFORFAMILY) mawk '$0~/^[^#]/{split($2,a,"\|\|\|\|\|"); print a[1]}' ;;
