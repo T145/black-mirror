@@ -2,7 +2,7 @@
 FROM ubuntu:impish
 
 LABEL maintainer="T145" \
-      version="3.2.4" \
+      version="3.2.5" \
       description="Custom Docker Image used to run blacklist projects."
 
 # suppress language-related updates from apt-get to increase download speeds and configure debconf to be non-interactive
@@ -28,7 +28,7 @@ ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 RUN apt-get -y update && apt-get -y install apt-utils && apt-get -y upgrade && apt-get install -y --no-install-recommends \
       aria2 bc build-essential curl gawk git golang-go gpg grepcidr gzip idn2 jq \
       libdata-validate-domain-perl libdata-validate-ip-perl libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtext-trim-perl libtry-tiny-perl \
-      lynx miller moreutils nano p7zip-full preload python3-dev python3-pip sed \
+      lynx miller moreutils nano p7zip-full preload python3-dev python3-pip sed xmllint \
       && apt-get clean autoclean \
       && apt-get -y autoremove \
       && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

@@ -552,6 +552,7 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [ilpl](https://github.com/ilpl/ad-hosts)
 - [Cats-Team](https://github.com/Cats-Team/AdRules)
   - [Mirror](https://cats-team.coding.net/p/adguard/d/AdRules/git/raw/main/ad-domains.txt)
+- [DNS For Family](https://dnsforfamily.com/Public/customBlacklist.txt)
 
 ### ⬜ Whitelists
 
@@ -588,6 +589,9 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [CIDR Report](https://www.cidr-report.org/bogons/freespace-prefix.txt)
 - [zapret info nxdomain](https://github.com/zapret-info/z-i)
   - Websites initially blocked by the Russian government that are offline now.
+- notracking
+  - [domains.dead](https://raw.githubusercontent.com/notracking/hosts-blocklists-scripts/master/domains.dead.txt)
+  - [hostnames.dead](https://raw.githubusercontent.com/notracking/hosts-blocklists-scripts/master/hostnames.dead.txt)
 
 ### 🥢 Duplicates
 
