@@ -16,6 +16,7 @@ trap 'rm -rf "$CACHE"' EXIT || exit 1
 
 apply_filter() {
   case "$1" in
+  NONE) cat -s ;;
   OISD)
     pandoc -f html -t plain |
       mawk '$0~/^http/'
@@ -25,6 +26,7 @@ apply_filter() {
   ENERGIZED) jq -r '.sources[].url' ;;
   SHERIFF53) jq -r '.[] | "\(.url[])", "\(select(.mirror) | .mirror[])"' ;;
   DNSFORFAMILY) mawk '$0~/^[^#]/{split($2,a,"\|\|\|\|\|"); print a[1]}' ;;
+  ARAPURAYIL) jq -r '.sources[].url' ;;
   *)
     echo "[INVALID FILTER]: ${1}"
     exit 1
