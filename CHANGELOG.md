@@ -197,3 +197,9 @@
 - cca8711: Hopefully fixed OISD targeting (T145)
 - 80f4d70: ✨🎯✨ (T145)
 - 4b56773: Optimized list updates (T145)
+## 21-06-2022 02:19:40
+- bc5b7fa: ✨🍰✨ (T145)
+- e3fc5cf: Target dnsforfamily (T145)
+- 436d250: ✨🎯✨ (T145)
+- 2bf87c5: Added other targets & @arapurayil's lists (T145)
+- bbb527d: ✨🎯✨ (T145)
