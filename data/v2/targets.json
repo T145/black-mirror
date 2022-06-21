@@ -13,6 +13,20 @@
     },
     "mirror": "https://raw.githubusercontent.com/badmojr/1Hosts/master/-data/lists/assets.txt"
   },
+  "dnsforfamily": {
+    "content": {
+      "filter": "DNSFORFAMILY",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "metadata": {
+      "description": "https://dnsforfamily.com/",
+      "homepage": "https://dnsforfamily.com/",
+      "license": "not-available",
+      "title": "DNS For Family"
+    },
+    "mirror": "https://dnsforfamily.com/Public/blacklist.txt"
+  },
   "oisd_full": {
     "content": {
       "filter": "OISD",
@@ -54,19 +68,5 @@
       "title": "OISD Whitelist"
     },
     "mirror": "https://oisd.nl/includedlists/whitelists"
-  },
-  "dnsforfamily": {
-    "metadata": {
-      "title": "DNS For Family",
-      "homepage": "https://dnsforfamily.com/",
-      "description": "https://dnsforfamily.com/",
-      "license": "not-available"
-    },
-    "content": {
-      "filter": "DNSFORFAMILY",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "mirror": "https://dnsforfamily.com/Public/blacklist.txt"
   }
 }
