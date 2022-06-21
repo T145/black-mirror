@@ -32,7 +32,10 @@ apply_filter() {
     exit 1
     ;;
   esac |
-    mawk 'NF && !seen[$0]++' | # filter blank lines and duplicates
+    # Format github.com/*/raw/* URLs as raw.githubusercontent.com, b/c they aren't technically mirrors and just redirect back to raw.githubusercontent.com anyway.
+    # Any github.com/*/archive/* URLs are ignored, since single lists are used over an entire repository.
+    mawk 'BEGIN{FS=OFS="/"}{if ($3~/^github.com/&&$6~/^raw$/){$3="raw.githubusercontent.com"; for(i=1;i<=NF;++i) if (i!=6) {printf("%s%s",$i,(i==NF)?"\n":OFS)}}}' |
+    mawk 'NF && !seen[$0]++' | # Filter blank lines and duplicates!
     httpx -r configs/resolvers.txt -silent -t 200000 |
     parsort -u -S 100% --parallel=100000 -T "$CACHE" |
     grep -Fxvf exports/sources.txt -
