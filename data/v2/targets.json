@@ -54,5 +54,19 @@
       "title": "OISD Whitelist"
     },
     "mirror": "https://oisd.nl/includedlists/whitelists"
+  },
+  "dnsforfamily": {
+    "metadata": {
+      "title": "DNS For Family",
+      "homepage": "https://dnsforfamily.com/",
+      "description": "https://dnsforfamily.com/",
+      "license": "not-available"
+    },
+    "content": {
+      "filter": "DNSFORFAMILY",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "mirror": "https://dnsforfamily.com/Public/blacklist.txt"
   }
 }
