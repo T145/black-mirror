@@ -203,3 +203,12 @@
 - 436d250: ✨🎯✨ (T145)
 - 2bf87c5: Added other targets & @arapurayil's lists (T145)
 - bbb527d: ✨🎯✨ (T145)
+## 21-06-2022 13:53:53
+- 3964694: ✨🍰✨ (T145)
+- 0b92a9f: Added some mirrors (T145)
+- d902f8d: ✨📚✨ (T145)
+- 99ea999: Properly formatted target mirrors from github.com (T145)
+- e482431: Fixed raw github url conversion (T145)
+- 493c6bf: Moved ATS to the V2 endpoint (T145)
+- f821b09: Set executable permissions (T145)
+- 8a7933e: ✨🎯✨ (T145)
