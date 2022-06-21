@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Generate lists
-        run: ./scripts/github/automated_targeting_system.bash
+        run: ./scripts/v2/automated_targeting_system.bash
         shell: bash
 
       - name: Update targets
