@@ -2,7 +2,7 @@
 FROM ubuntu:impish
 
 LABEL maintainer="T145" \
-      version="3.2.5" \
+      version="3.3.0" \
       description="Custom Docker Image used to run blacklist projects."
 
 # suppress language-related updates from apt-get to increase download speeds and configure debconf to be non-interactive
@@ -55,5 +55,5 @@ RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
       # && go install github.com/StevenBlack/ghosts@latest
 
 # https://github.com/lycheeverse/lychee#cargo=
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | bash \
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | bash -y \
       && cargo install lychee
