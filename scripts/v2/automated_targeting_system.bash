@@ -36,7 +36,7 @@ apply_filter() {
     # Any github.com/*/archive/* URLs are ignored, since single lists are used over an entire repository.
     mawk 'BEGIN{FS=OFS="/"}{if($3~/^github.com/){if($6~/^raw$/){$3="raw.githubusercontent.com";for(i=1;i<=NF;++i)if(i!=6){printf("%s%s",$i,(i==NF)?"\n":OFS)}}}else{if($3~/^rawcdn.githack.com$/){$3="raw.githubusercontent.com";print}else{print}}}' |
     mawk 'NF && !seen[$0]++' | # Filter blank lines and duplicates!
-    httpx -r configs/resolvers.txt -silent -t 200000 |
+    #httpx -r configs/resolvers.txt -silent -t 200000 |
     parsort -u -S 100% --parallel=100000 -T "$CACHE" |
     grep -Fxvf exports/sources.txt -
 }
@@ -59,6 +59,8 @@ main() {
         cat "$list" | apply_filter "$filter" | sponge "target/${key}.txt"
       fi
     done
+
+  lychee --no-progress --verbose -o target/OFFLINE.md target/*.txt
 }
 
 main
