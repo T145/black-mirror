@@ -55,5 +55,6 @@ RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
       # && go install github.com/StevenBlack/ghosts@latest
 
 # https://github.com/lycheeverse/lychee#cargo=
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | bash -y \
+# https://stackoverflow.com/a/57251636
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y \
       && cargo install lychee
