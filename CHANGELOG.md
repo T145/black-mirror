@@ -215,3 +215,18 @@
 ## 22-06-2022 02:20:12
 - e89060a: ✨🍰✨ (T145)
 - 4cdbd70: Have the ATS replace githack CDN URLs (T145)
+## 22-06-2022 13:49:46
+- 55051a1: ✨🍰✨ (T145)
+- 2308be4: Use Lychee to check list sources (T145)
+- 043c821: Fixed the Lychee status filename (T145)
+- 7f327c9: Run rustup uninteractively (T145)
+- e6c4233: Actually install rustup unattended (T145)
+- 7956904: Ensure Cargo is known in the current scope (T145)
+- 5f97b2d: Final fix (T145)
+- a029a6c: B/c of course there's no source command :) (T145)
+- 95d28f9: Set the Rust path earlier in the build (T145)
+- dd96535: Better Rust path definition (T145)
+- 3159132: Stage Lychee install (T145)
+- 573e8d1: Of course now it doesn't complain about a slash (T145)
+- 9473ed8: Use the available Lychee release over building it (T145)
+- fdff535: Allow manual Docker building (T145)
