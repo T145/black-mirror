@@ -19,7 +19,7 @@ ENV GOPATH=$HOME/go
 ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 
 # set rust env path
-ENV PATH=$PATH:/root/.cargo/bin
+ENV PATH=$PATH:$HOME/.cargo/bin
 
 # > use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 # > install apt-utils early so debconf doesn't delay package configuration
