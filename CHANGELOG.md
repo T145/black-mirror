@@ -212,3 +212,6 @@
 - 493c6bf: Moved ATS to the V2 endpoint (T145)
 - f821b09: Set executable permissions (T145)
 - 8a7933e: ✨🎯✨ (T145)
+## 22-06-2022 02:20:12
+- e89060a: ✨🍰✨ (T145)
+- 4cdbd70: Have the ATS replace githack CDN URLs (T145)
