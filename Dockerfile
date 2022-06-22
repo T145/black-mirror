@@ -18,9 +18,6 @@ ENV PATH=$PATH:/root/.local/bin
 ENV GOPATH=$HOME/go
 ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 
-# set rust env path
-ENV PATH=$PATH:$HOME/.cargo/bin
-
 # > use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 # > install apt-utils early so debconf doesn't delay package configuration
 # > upgrade with proper configurations
@@ -60,4 +57,9 @@ RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
 # https://github.com/lycheeverse/lychee#cargo=
 # https://stackoverflow.com/a/57251636
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y \
-      && cargo install lychee
+
+# set rust env path
+# directly from `.cargo/env`
+ENV PATH="$HOME/.cargo/bin:$PATH"
+
+RUN cargo install lychee
