@@ -2,7 +2,7 @@
 FROM ubuntu:impish
 
 LABEL maintainer="T145" \
-      version="3.3.2" \
+      version="3.3.3" \
       description="Custom Docker Image used to run blacklist projects."
 
 # suppress language-related updates from apt-get to increase download speeds and configure debconf to be non-interactive
@@ -17,6 +17,10 @@ ENV PATH=$PATH:/root/.local/bin
 # https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-local-programming-environment-on-ubuntu-18-04
 ENV GOPATH=$HOME/go
 ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
+
+# set rust env path
+# directly from `.cargo/env`
+# ENV PATH="$HOME/.cargo/bin:$PATH"
 
 # > use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 # > install apt-utils early so debconf doesn't delay package configuration
@@ -56,10 +60,11 @@ RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
 
 # https://github.com/lycheeverse/lychee#cargo=
 # https://stackoverflow.com/a/57251636
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+# RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y \
+#       && ./root/.cargo/bin/cargo install lychee
 
-# set rust env path
-# directly from `.cargo/env`
-ENV PATH="$HOME/.cargo/bin:$PATH"
-
-RUN cargo install lychee
+# https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L31=
+RUN curl -LO 'https://github.com/lycheeverse/lychee/releases/download/v0.10.0/lychee-v0.10.0-x86_64-unknown-linux-gnu.tar.gz' \
+      && tar -xvzf lychee-v0.10.0-x86_64-unknown-linux-gnu.tar.gz \
+      && chmod 755 lychee \
+      && mv lychee /usr/local/bin/lychee
