@@ -57,5 +57,5 @@ RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
 # https://github.com/lycheeverse/lychee#cargo=
 # https://stackoverflow.com/a/57251636
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y \
-      && source $HOME/.cargo/env
+      && source $HOME/.cargo/env \
       && cargo install lychee
