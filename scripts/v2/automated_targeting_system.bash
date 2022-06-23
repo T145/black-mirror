@@ -60,7 +60,7 @@ main() {
       fi
     done
 
-  lychee --no-progress --verbose -o target/STATUS.md target/*.txt
+  lychee --no-progress --verbose -o target/STATUS.md target/*.txt || true
 }
 
 main
