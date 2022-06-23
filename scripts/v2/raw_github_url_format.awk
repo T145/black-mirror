@@ -13,12 +13,10 @@ BEGIN {
         if (i != 6)
           printf("%s%s", $i, (i == NF) ? "\n" : OFS)
     }
+  } else if ($3~/^rawcdn.githack.com$/) {
+    $3 = "raw.githubusercontent.com";
+    print
   } else {
-    if ($3~/^rawcdn.githack.com$/) {
-      $3 = "raw.githubusercontent.com";
-      print
-    } else {
-      print
-    }
+    print
   }
 }
