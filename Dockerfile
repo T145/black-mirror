@@ -18,7 +18,10 @@ FROM rust:latest AS rust
 # https://blog.mozilla.org/nnethercote/2020/09/08/how-to-speed-up-the-rust-compiler-one-last-time/
 ENV RUSTFLAGS="-C target-cpu=native"
 
-RUN cargo install lychee
+# https://github.com/lycheeverse/lychee#readme=
+RUN cargo install lychee \
+      # https://github.com/BurntSushi/ripgrep#ripgrep-rg=
+      && cargo install ripgrep
 
 # production image using snyk's recommended os version
 FROM ubuntu:impish

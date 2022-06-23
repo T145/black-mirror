@@ -38,7 +38,7 @@ apply_filter() {
     mawk 'NF && !seen[$0]++' | # Filter blank lines and duplicates!
     #httpx -r configs/resolvers.txt -silent -t 200000 |
     parsort -u -S 100% --parallel=100000 -T "$CACHE" |
-    grep -Fxvf exports/sources.txt -
+    rg -NFxvf exports/sources.txt -
 }
 
 main() {

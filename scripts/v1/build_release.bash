@@ -136,7 +136,7 @@ main() {
           whitelist="build/white_${format}.txt"
 
           if test -f "$whitelist"; then
-            grep -Fxvf "$whitelist" "$list" | sponge "$list"
+            rg -NFxvf "$whitelist" "$list" | sponge "$list"
           fi
         fi
 

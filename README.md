@@ -970,7 +970,6 @@ RUN echo 'install.packages("archive", repos="https://cloud.r-project.org/")' | R
 - https://fossies.org/linux/parallel/src/parsort
 - https://unix.stackexchange.com/questions/579251/how-to-use-parallel-to-speed-up-sort-for-big-files-fitting-in-ram#579252
 - https://askubuntu.com/questions/1006377/check-the-max-allowed-threads-count-for-sure#1006384
-- https://stackoverflow.com/questions/9066609/fastest-possible-grep
 
 ### List References
 
