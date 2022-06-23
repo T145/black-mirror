@@ -230,3 +230,6 @@
 - 573e8d1: Of course now it doesn't complain about a slash (T145)
 - 9473ed8: Use the available Lychee release over building it (T145)
 - fdff535: Allow manual Docker building (T145)
+## 23-06-2022 02:18:46
+- 2b18df7: ✨🍰✨ (T145)
+- 989ea40: Configured a multi-staged build (T145)
