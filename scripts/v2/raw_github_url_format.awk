@@ -1,4 +1,4 @@
-#!/usr/bin/awk
+#!/usr/bin/mawk -f
 
 BEGIN {
   FS=OFS="/"
