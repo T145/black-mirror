@@ -60,7 +60,7 @@ main() {
       fi
     done
 
-  lychee --no-progress --verbose -o exports/target-status.txt target/*.txt || true
+  lychee -c configs/lychee.toml target/*.txt || true
 }
 
 main
