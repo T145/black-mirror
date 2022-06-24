@@ -19,9 +19,7 @@ FROM rust:latest AS rust
 ENV RUSTFLAGS="-C target-cpu=native"
 
 # https://github.com/lycheeverse/lychee#readme=
-RUN cargo install lychee \
-      # https://github.com/BurntSushi/ripgrep#ripgrep-rg=
-      && cargo install ripgrep
+RUN cargo install lychee
 
 # production image using snyk's recommended os version
 FROM ubuntu:impish

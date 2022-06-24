@@ -37,8 +37,8 @@ apply_filter() {
     ./scripts/v2/raw_github_url_format.awk |
     mawk 'NF && !seen[$0]++' | # Filter blank lines and duplicates!
     #httpx -r configs/resolvers.txt -silent -t 200000 |
-    parsort -u -S 100% --parallel=100000 -T "$CACHE" |
-    rg -NFxvf exports/sources.txt -
+    parsort -u -S 100% --parallel=200000 -T "$CACHE" |
+    grep -Fxvf exports/sources.txt -
 }
 
 main() {

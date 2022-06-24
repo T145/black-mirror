@@ -929,40 +929,6 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 
 ## 🎶 Notes
 
-### R Language
-
-#### Docker installs
-
-```dockerfile
-RUN apt-get -y install r-base
-
-# install libarchive manually since libarchive-dev is at version 3.4.3
-# https://github.com/libarchive/libarchive/wiki/BuildInstructions#using-configure-for-building-from-the-command-line-on-linux-freebsd-solaris-cygwin-aix-interix-mac-os-x-and-other-unix-like-systems
-# https://www.zhouchun.net/blog/show/439 (run all commands together to prevent spawning subcontainers)
-RUN aria2c https://github.com/libarchive/libarchive/releases/download/v3.5.2/libarchive-3.5.2.tar.gz \
-&& tar xzf libarchive-3.5.2.tar.gz \
-&& cd libarchive-3.5.2 \
-&& ./configure \
-&& make \
-&& make check \
-&& make install \
-&& cd .. \
-&& rm libarchive-3.5.2.tar.gz
-
-# install R libarchive bindings
-# https://github.com/r-lib/archive
-RUN echo 'install.packages("archive", repos="https://cloud.r-project.org/")' | R --vanilla \
-&& echo 'install.packages("data.table", repos="https://cloud.r-project.org/")' | R --vanilla
-```
-
-#### Boosting speeds
-
-- http://adv-r.had.co.nz/Performance.html
-- http://www.pqr-project.org/
-- https://github.com/bedatadriven/renjin
-- http://www.dartistics.com/fast-r-code.html
-- https://datascienceplus.com/strategies-to-speedup-r-code/
-
 ### Need for speed
 
 #### References
@@ -970,6 +936,7 @@ RUN echo 'install.packages("archive", repos="https://cloud.r-project.org/")' | R
 - https://fossies.org/linux/parallel/src/parsort
 - https://unix.stackexchange.com/questions/579251/how-to-use-parallel-to-speed-up-sort-for-big-files-fitting-in-ram#579252
 - https://askubuntu.com/questions/1006377/check-the-max-allowed-threads-count-for-sure#1006384
+- https://stackoverflow.com/questions/9066609/fastest-possible-grep
 
 ### List References
 
