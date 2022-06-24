@@ -136,7 +136,8 @@ main() {
           whitelist="build/white_${format}.txt"
 
           if test -f "$whitelist"; then
-            grep -Fxvf "$whitelist" "$list" | sponge "$list"
+            # https://github.com/BurntSushi/ripgrep/issues/362#issuecomment-355848324
+            rg --regex-size-limit 200M --dfa-size-limit 1G -NFxvf "$whitelist" "$list" | sponge "$list"
           fi
         fi
 
