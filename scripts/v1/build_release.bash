@@ -137,7 +137,8 @@ main() {
 
           if test -f "$whitelist"; then
             # https://github.com/BurntSushi/ripgrep/issues/362#issuecomment-355848324
-            grep -Fxvf "$whitelist" "$list" | sponge "$list"
+            # https://manpages.debian.org/unstable/parallel/parallel.1.en.html
+            parallel --pipe -k -j100% grep -Fxvf "$whitelist" "$list" | sponge "$list"
           fi
         fi
 
