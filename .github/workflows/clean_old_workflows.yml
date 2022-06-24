@@ -6,15 +6,14 @@ on:
     - cron: "0 0 * * *"
 
 jobs:
-  build:
+  clean:
     runs-on: ubuntu-latest
 
     steps:
       - name: Delete workflow runs
-        uses: MajorScruffy/delete-workflow-runs
-        id: delete-workflow-runs
+        uses: MajorScruffy/delete-old-workflow-runs@v0.1.0
         with:
           repository: T145/black-mirror
           older-than-seconds: 86400 # remove all workflow runs older than 1 day
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
