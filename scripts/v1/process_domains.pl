@@ -9,27 +9,15 @@ use Text::Trim 'trim';
 use Net::IDN::Encode 'domain_to_ascii';
 use Data::Validate::Domain 'is_domain';
 
-# Written as a modulino: See Chapter 17 in "Mastering Perl". Executes main() if
-#   run as script, otherwise, if the file is imported from the test scripts,
-#   main() is not run.
-main() unless caller;
+while (<>) {
+  chomp($_);
+  trim($_);
 
-sub main {
-  while (<>) {
-    my $line = parse_line( $_ );
-    last if !defined $line;
-    say $line;
+  try {
+    my $line = domain_to_ascii($_);
+
+    if (defined($line) && is_domain($line)) {
+      say($line);
+    }
   }
-}
-
-sub parse_line {
-  my ($line) = @_;
-
-  chomp $line;
-  trim $line;
-
-  my $result = try {
-    domain_to_ascii( $line );
-  };
-  return $result;
 }

@@ -34,7 +34,7 @@ apply_filter() {
   esac |
     # Format github.com/*/raw/* and rawcdn.githack.com URLs as raw.githubusercontent.com, b/c they aren't technically mirrors and redirect to raw.githubusercontent.com.
     # Any github.com/*/archive/* URLs are ignored, since single lists are used over an entire repository.
-    ./raw_github_url_format.awk |
+    ./scripts/v2/raw_github_url_format.awk |
     mawk 'NF && !seen[$0]++' | # Filter blank lines and duplicates!
     #httpx -r configs/resolvers.txt -silent -t 200000 |
     parsort -u -S 100% --parallel=100000 -T "$CACHE" |
