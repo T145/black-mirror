@@ -249,3 +249,5 @@
 - 13e0f40: Fixed building: need to boost ripgrep's line limit (T145)
 - 1807bdc: Boosted ripgrep's size limits (T145)
 - edf0b0f: Revert grep changes (T145)
+## 25-06-2022 05:46:34
+- 62e3645: Reverted grep changes on the original script (T145)
