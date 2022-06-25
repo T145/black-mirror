@@ -10,41 +10,25 @@ FROM golang:1.17 AS go
 RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
     && go install github.com/projectdiscovery/httpx/cmd/httpx@latest \
     && go install github.com/ipinfo/cli/ipinfo@latest
-    # && go install github.com/StevenBlack/ghosts@latest
-
-FROM rust:latest AS rust
-
-# https://vfoley.xyz/rust-compilation-tip/
-# https://blog.mozilla.org/nnethercote/2020/09/08/how-to-speed-up-the-rust-compiler-one-last-time/
-ENV RUSTFLAGS="-C target-cpu=native"
-
-# https://github.com/lycheeverse/lychee#readme=
-RUN cargo install lychee
+    && go install github.com/StevenBlack/ghosts@latest
 
 # production image using snyk's recommended os version
 FROM ubuntu:impish
 
 LABEL maintainer="T145" \
-      version="4.0.0" \
+      version="4.1.0" \
       description="Custom Docker Image used to run blacklist projects."
 
 # https://docs.docker.com/develop/develop-images/multistage-build/
 COPY --from=go /usr/local/go/ /usr/local/
 COPY --from=go /go/ /go/
-COPY --from=rust /usr/local/cargo/ /usr/local/
-# COPY --from=rust /usr/local/rustup/ /usr/local/
 
 # set go env path
 # https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-local-programming-environment-on-ubuntu-18-04
 ENV GOPATH=/go
 ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
-# set rust env path
-ENV PATH=/usr/local/cargo/bin:$PATH
 # set python env path
 ENV PATH=$PATH:/root/.local/bin
-
-# Copying from the latest Docker image should mean `rustup` doesn't need to be copied and executed.
-# RUN rustup update
 
 # suppress language-related updates from apt-get to increase download speeds and configure debconf to be non-interactive
 # https://github.com/phusion/baseimage-docker/issues/58#issuecomment-47995343
@@ -76,3 +60,9 @@ RUN curl -sSf https://raw.githubusercontent.com/T145/black-mirror/master/scripts
 
 # install twint in base python, otherwise "pandas" will be perma-stuck building in pypy
 RUN pip3 install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@v2.1.21#egg=twint
+
+# https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L31=
+RUN curl -LO 'https://github.com/lycheeverse/lychee/releases/download/v0.10.0/lychee-v0.10.0-x86_64-unknown-linux-gnu.tar.gz' \
+      && tar -xvzf lychee-v0.10.0-x86_64-unknown-linux-gnu.tar.gz \
+      && chmod 755 lychee \
+      && mv lychee /usr/local/bin/lychee
