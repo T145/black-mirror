@@ -138,11 +138,22 @@ jobs:
           dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
           src: |
             build/black*.txt
-            build/black*.checksums
           dest: /black-mirror/
           mode: overwrite
           multiple: true
-          mute: true
+
+      - name: Sleep to avoid 429 error
+        run: sleep 5s
+        shell: bash
+
+      - name: Upload blacklist checksums
+        uses: deka0106/upload-to-dropbox@v2
+        with:
+          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
+          src: build/black*.checksums
+          dest: /black-mirror/
+          mode: overwrite
+          multiple: true
 
       - name: Sleep to avoid 429 error
         run: sleep 5s
@@ -152,13 +163,23 @@ jobs:
         uses: deka0106/upload-to-dropbox@v2
         with:
           dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-          src: |
-            build/white*.txt
-            build/white*.checksums
+          src: build/white*.txt
           dest: /black-mirror/
           mode: overwrite
           multiple: true
-          mute: true
+
+      - name: Sleep to avoid 429 error
+        run: sleep 5s
+        shell: bash
+
+      - name: Upload whitelist checksums
+        uses: deka0106/upload-to-dropbox@v2
+        with:
+          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
+          src: build/white*.checksums
+          dest: /black-mirror/
+          mode: overwrite
+          multiple: true
 
       - name: Remove lists
         if: always()
