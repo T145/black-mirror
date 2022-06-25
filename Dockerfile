@@ -9,7 +9,7 @@ FROM golang:1.17 AS go
 # https://github.com/StevenBlack/ghosts#ghosts
 RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
     && go install github.com/projectdiscovery/httpx/cmd/httpx@latest \
-    && go install github.com/ipinfo/cli/ipinfo@latest
+    && go install github.com/ipinfo/cli/ipinfo@latest \
     && go install github.com/StevenBlack/ghosts@latest
 
 # production image using snyk's recommended os version
@@ -45,9 +45,10 @@ RUN apt-get -y update \
       # upgrade with proper configurations
       && apt-get -y upgrade \
       && apt-get install -y --no-install-recommends \
-      aria2 bc build-essential curl gawk git golang-go gpg grepcidr gzip idn2 jq \
-      libdata-validate-domain-perl libdata-validate-ip-perl libnet-idn-encode-perl libnet-libidn-perl libregexp-common-perl libtext-trim-perl libtry-tiny-perl \
-      lynx miller moreutils nano p7zip-full pandoc pkg-config preload python3-dev python3-pip sed \
+      aria2 bc build-essential curl gawk git gpg gzip jq \
+      libdata-validate-domain-perl libdata-validate-ip-perl libnet-idn-encode-perl \
+      libnet-libidn-perl libregexp-common-perl libtext-trim-perl libtry-tiny-perl \
+      miller moreutils nano p7zip-full pandoc preload python3-dev python3-pip sed \
       && apt-get clean autoclean \
       && apt-get -y autoremove \
       && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
