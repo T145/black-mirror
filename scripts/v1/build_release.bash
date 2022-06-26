@@ -130,7 +130,7 @@ main() {
       if test -f "$list"; then
         checksums="build/${color}_${format}.checksums"
 
-        parsort -bfiu -S 100% --parallel=100000 -o "$list" -T "$cache_dir" "$list"
+        parsort -bfiu -S 100% --parallel=100000 -T "$cache_dir" "$list" | sponge "$list"
 
         if [[ "$color" == 'black' ]]; then
           whitelist="build/white_${format}.txt"

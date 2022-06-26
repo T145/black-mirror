@@ -76,6 +76,7 @@ main() {
             # rescan the blacklist using the nxlist as a hosts file to optimize searching
             # put any online hosts into the blacklist and remove them from the nxlist
             if test -f "$nxlist"; then
+              # TODO: Export JSON from dnsX and use jq to pull out domains & ips
               dnsx -r ./configs/resolvers.txt -l "$nxlist" -o "$TMP" -c 200000 -silent -rcode noerror,servfail,refused 1>/dev/null
               dnsx -r ./configs/resolvers.txt -hf "$nxlist" -l "$list" -o "$nxlist" -c 200000 -silent -rcode nxdomain 1>/dev/null
               merge_lists "$list" "$TMP"
