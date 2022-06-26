@@ -91,22 +91,6 @@ jobs:
           title: All Artifacts
           files: build/*
 
-      - name: Sleep to avoid more errors
-        if: failure()
-        run: sleep 5s
-        shell: bash
-
-      - name: Retry build artifact upload
-        if: failure()
-        uses: softprops/action-gh-release@v1
-        with:
-          draft: false
-          prerelease: false
-          files: build/*
-          name: All Artifacts
-          tag_name: latest
-          fail_on_unmatched_files: true
-
       - name: Remove lists
         if: always()
         run: rm -rf build/
@@ -132,53 +116,12 @@ jobs:
           rm -f lists.tar
         shell: bash
 
-      - name: Upload blacklists
-        uses: deka0106/upload-to-dropbox@v2
+      - name: Upload to Dropbox
+        uses: nagata-yoshiteru/deploy-to-dropbox@master
         with:
-          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-          src: build/black*.txt
-          dest: /black-mirror/
-          mode: overwrite
-          multiple: true
-
-      - name: Sleep to avoid 429 error
-        run: sleep 5s
-        shell: bash
-
-      - name: Upload blacklist checksums
-        uses: deka0106/upload-to-dropbox@v2
-        with:
-          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-          src: build/black*.checksums
-          dest: /black-mirror/
-          mode: overwrite
-          multiple: true
-
-      - name: Sleep to avoid 429 error
-        run: sleep 5s
-        shell: bash
-
-      - name: Upload whitelists
-        uses: deka0106/upload-to-dropbox@v2
-        with:
-          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-          src: build/white*.txt
-          dest: /black-mirror/
-          mode: overwrite
-          multiple: true
-
-      - name: Sleep to avoid 429 error
-        run: sleep 5s
-        shell: bash
-
-      - name: Upload whitelist checksums
-        uses: deka0106/upload-to-dropbox@v2
-        with:
-          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-          src: build/white*.checksums
-          dest: /black-mirror/
-          mode: overwrite
-          multiple: true
+          DROPBOX_ACCESS_TOKEN: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
+          GLOB: build/*
+          FILE_WRITE_MODE: overwrite
 
       - name: Remove lists
         if: always()
