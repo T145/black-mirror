@@ -27,6 +27,8 @@ apply_filter() {
   SHERIFF53) jq -r '.[] | "\(.url[])", "\(select(.mirror) | .mirror[])"' ;;
   DNSFORFAMILY) mawk '$0~/^[^#]/{split($2,a,"\|\|\|\|\|"); print a[1]}' ;;
   ARAPURAYIL) jq -r '.sources[].url' ;;
+  HBLOCK) mawk '$0~/^\[source\-/{print $2}' ;;
+  BLOCKCONVERT) mlr --mmap --csv --skip-comments cut -f url ;;
   *)
     echo "[INVALID FILTER]: ${1}"
     exit 1
