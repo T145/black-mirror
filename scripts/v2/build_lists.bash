@@ -28,7 +28,7 @@ trap 'rm -rf "$DOWNLOADS" && rm -rf "$TMP"' EXIT || exit 1
 
 # params: file path
 sorted() {
-  parsort -u -S 100% --parallel=100000 -o "$1" -T "$DOWNLOADS" "$1"
+  parsort -bfiu -S 100% --parallel=200000 -T "$DOWNLOADS" "$1" | sponge "$1"
 }
 
 # merge list 2 into list 1
@@ -73,16 +73,16 @@ main() {
           if [[ "$format" != "$FORMAT_CIDR" ]]; then
 
             # if the nxlist is present, then rescan it to see if any hosts are online
-            # rescan the blacklist using the nxlist as a hosts file to optimize searching
             # put any online hosts into the blacklist and remove them from the nxlist
+            # rescan the blacklist using the nxlist as a hosts file to optimize searching
             if test -f "$nxlist"; then
               # TODO: Export JSON from dnsX and use jq to pull out domains & ips
               dnsx -r ./configs/resolvers.txt -l "$nxlist" -o "$TMP" -c 200000 -silent -rcode noerror,servfail,refused 1>/dev/null
-              dnsx -r ./configs/resolvers.txt -hf "$nxlist" -l "$list" -o "$nxlist" -c 200000 -silent -rcode nxdomain 1>/dev/null
               merge_lists "$list" "$TMP"
               #comm "$nxlist" "$TMP" -23 | sponge "$nxlist"
               # nxlist should be small enough that parallel isn't needed
-              grep -Fxvf "$TMP" "$nxlist" | sponge "$nxlist"
+              grep -Fxvf "$TMP" "$nxlist" >"$nxlist"
+              dnsx -r ./configs/resolvers.txt -hf "$nxlist" -l "$list" -o "$nxlist" -c 200000 -silent -rcode nxdomain 1>/dev/null
               : >"$TMP"
             else
               sorted "$list"
@@ -94,19 +94,19 @@ main() {
             # can also do more advanced CIDR operations here
             sorted "$list"
           fi
+        else
+          # apply the whitelist to the blacklist
+          blacklist="build/BLOCK_${format}.txt"
+
+          # merge the nxlist and whitelist
+          merge_lists "$list" "$nxlist"
+
+          # https://askubuntu.com/a/562352
+          # this will send each line into the temp file as it's processed instead of keeping it in memory
+          mawk 'NF && !seen[$0]++' "$blacklist" | parallel --pipe -k -j+0 grep --line-buffered -Fxvf "$list" - >>"$TMP"
+          cp "$TMP" "$blacklist"
+          : >"$TMP"
         fi
-      else
-        # apply the whitelist to the blacklist
-        blacklist="build/BLOCK_${format}.txt"
-
-        # merge the nxlist and whitelist
-        merge_lists "$list" "$nxlist"
-
-        # https://askubuntu.com/a/562352
-        # this will send each line into the temp file as it's processed instead of keeping it in memory
-        mawk 'NF && !seen[$0]++' "$blacklist" | parallel --pipe -k -j+0 grep --line-buffered -Fxvf "$list" - >>"$TMP"
-        cp "$TMP" "$blacklist"
-        : >"$TMP"
       fi
     done
   done
