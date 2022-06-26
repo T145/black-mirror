@@ -116,11 +116,22 @@ jobs:
           rm -f lists.tar
         shell: bash
 
-      - name: Upload to Dropbox
+      - name: Upload blacklists
         uses: nagata-yoshiteru/deploy-to-dropbox@master
         with:
           DROPBOX_ACCESS_TOKEN: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-          GLOB: build/*
+          GLOB: build/black_*
+          FILE_WRITE_MODE: overwrite
+
+      - name: Sleep to avoid 429 error
+        run: sleep 5s
+        shell: bash
+
+      - name: Upload whitelists
+        uses: nagata-yoshiteru/deploy-to-dropbox@master
+        with:
+          DROPBOX_ACCESS_TOKEN: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
+          GLOB: build/white_*
           FILE_WRITE_MODE: overwrite
 
       - name: Remove lists
