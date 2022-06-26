@@ -64,7 +64,7 @@ main() {
 
   lychee --exclude-mail -nEf Json -o exports/target-status.json -T 200 -t 10 -r 0 -u 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0' target/*.txt 1>/dev/null || true
 
-  jq -r '.fail_map | to_entries[] | .key as $k | .value[] | select(.status | startswith("Failed:")) | "\($k)#\(.url)"' status.json |
+  jq -r '.fail_map | to_entries[] | .key as $k | .value[] | select(.status | startswith("Failed:")) | "\($k)#\(.url)"' exports/target-status.json |
     while IFS='#' read -r target url; do
       grep -Fxvf "$url" "$target" | sponge "$target"
       #sed -ie "/${url}/d" "$target"
