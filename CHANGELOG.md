@@ -256,3 +256,10 @@
 - 417b68e: Manually install Lychee again to reduce the layer size (T145)
 - c16ec08: Removed some unused packages (T145)
 - b39528b: ✨🎯✨ (T145)
+## 26-06-2022 03:38:26
+- f273416: ✨🍰✨ (T145)
+- d4d6293: Let parsort handle list output (T145)
+- 415c770: Built the V2 filter infrastructure (T145)
+- 6f8e3d0: Prepared V2 list generation (T145)
+- 6ae8abd: Added sort options to make it even faster (T145)
+- 3a81479: Maybe parsort doesn't support -o? (T145)
