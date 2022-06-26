@@ -27,16 +27,16 @@ main() {
       case "$FILTER" in
       NONE) cat -s ;;
       esac
-    ;;
+      ;;
     JSON)
       case "$FILTER" in
       esac
-    ;;
+      ;;
     CSV)
       case "$FILTER" in
       esac
-    ;;
-  esac | mawk 'NF && !seen[$0]++'
+      ;;
+    esac | mawk 'NF && !seen[$0]++'
   >>"build/${METHOD,,}_${FORMAT,,}.txt"
 }
 
