@@ -20,22 +20,22 @@ jobs:
         uses: Mattraks/delete-workflow-runs@v2
         with:
           keep_minimum_runs: 0
-          delete_workflow_by_state_pattern: deleted
+          delete_workflow_pattern: 'Publish Lists to GitHub'
 
-      - name: Remove disabled workflow runs
+      - name: Remove deleted workflow runs
         uses: Mattraks/delete-workflow-runs@v2
         with:
           keep_minimum_runs: 0
-          delete_workflow_by_state_pattern: disabled_manually
+          delete_workflow_pattern: 'Publish Lists to Dropbox'
 
-      - name: Remove forked workflow runs
+      - name: Remove deleted workflow runs
         uses: Mattraks/delete-workflow-runs@v2
         with:
           keep_minimum_runs: 0
-          delete_workflow_by_state_pattern: disabled_fork
+          delete_workflow_pattern: 'Create Release'
 
-      - name: Remove inactive workflow runs
+      - name: Remove deleted workflow runs
         uses: Mattraks/delete-workflow-runs@v2
         with:
           keep_minimum_runs: 0
-          delete_workflow_by_state_pattern: disabled_inactivity
+          delete_workflow_pattern: 'Update the Blacklist'
