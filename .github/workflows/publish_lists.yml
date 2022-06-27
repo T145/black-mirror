@@ -58,7 +58,7 @@ jobs:
 
       - name: Remove lists
         if: always()
-        run: rm -rf build/
+        run: rm -rf build/ && rm -f lists.tar
         shell: bash
 
   publish_github:
@@ -171,7 +171,7 @@ jobs:
 
   update_docs:
     runs-on: ubuntu-latest
-    needs: [publish_github, publish_dropbox]
+    needs: publish_github
 
     container:
       image: ghcr.io/t145/black-mirror:latest
