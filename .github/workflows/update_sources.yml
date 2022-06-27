@@ -29,7 +29,9 @@ jobs:
           jq -SM '.' data/v2/lists.json | sponge data/v2/lists.json
           jq -jr 'to_entries[] | select(.value.method == "BLOCK" and .value.variants.pihole != null) | (.value.variants.pihole, " ")' data/v2/lists.json | sed 's/ $/\n/' >exports/sources.pihole
           jq -jr 'to_entries[] | select(.value.method == "BLOCK" and .value.variants.adguard != null) | ("!#include ", .value.variants.adguard, "\n")' data/v2/lists.json >exports/sources.adguard
-          jq -r 'to_entries[].value.mirrors[]' data/v2/lists.json | parsort -u -S 100% --parallel=48 | sponge exports/sources.txt
+          jq -r 'to_entries[].value.mirrors[]' data/v2/lists.json | sponge exports/sources.txt
+          jq -r 'to_entries[] | select(.value.variants != null) | .value.variants | to_entries[].url' data/v2/lists.json >>exports/sources.txt
+          parsort -bfiu -S 100% --parallel=200 exports/sources.txt | sponge exports/sources.txt
         shell: bash
 
       - name: Commit changes
