@@ -21,11 +21,6 @@ jobs:
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
       - name: Remove ancient workflow runs
-        uses: MajorScruffy/delete-old-workflow-runs@v0.1.0
+        uses: otto-contentfactory/purge-workflow-runs@v1
         with:
-          repository: T145/black-mirror
-          created-before: ${{ steps.date.outputs.date }}
-          maximum-workflow-runs-to-keep: 0
-          status: completed
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ github.token }}
