@@ -66,8 +66,7 @@ main() {
 
   jq -r '.fail_map | to_entries[] | .key as $k | .value[] | select(.status | startswith("Failed:")) | "\($k)#\(.url)"' exports/target-status.json |
     while IFS='#' read -r target url; do
-      grep -Fxvf "$url" "$target" | sponge "$target"
-      #sed -ie "/${url}/d" "$target"
+      echo "$url" | comm "$target" - -23 >"$target"
     done
 }
 
