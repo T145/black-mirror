@@ -4,6 +4,7 @@
        alt="logo"
        longdesc="https://github.com/T145/black-mirror/master/README.md" />
   <h3>🌓 Reflection | 💿 Redundancy | ✅ Reliability</h3>
+  <sub>Made with 💖 by <a href="https://github.com/T145" target="_blank">T145</a>!</sub>
   <hr>
   <p>Blacklists and whitelists that aim to promote security, safety, and sanity across the internet!</p>
   <hr>
@@ -945,10 +946,3 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - https://firebog.net/
 - https://grimore.org/assets/databases/blocklist-ipsets
 - https://users.cs.northwestern.edu/~jesse/course/cs214-fa19/lec/21-bloom/bloom.txt
-
----
-
-<div align="center">
-  <h2>Together we'll make a better internet!</h2>
-  <sub>A project by <a href="https://github.com/T145" target="_blank">T145</a> made with 💖<pub>
-</div>
