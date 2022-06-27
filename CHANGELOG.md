@@ -263,3 +263,8 @@
 - 6f8e3d0: Prepared V2 list generation (T145)
 - 6ae8abd: Added sort options to make it even faster (T145)
 - 3a81479: Maybe parsort doesn't support -o? (T145)
+## 27-06-2022 02:17:47
+- bd0ea17: Reverted Dropbox action changes (T145)
+- 97320c2: Configured ATS to remove proper dead hosts (T145)
+- 60c676c: Fixed the target status file (T145)
+- af6c55b: Fixed workflow job requirements (T145)
