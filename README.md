@@ -4,7 +4,6 @@
        alt="logo"
        longdesc="https://github.com/T145/black-mirror/master/README.md" />
   <h3>🌓 Reflection | 💿 Redundancy | ✅ Reliability</h3>
-  <sub>Made with 💖 by <a href="https://github.com/T145" target="_blank">T145</a>!</sub>
   <hr>
   <p>Blacklists and whitelists that aim to promote security, safety, and sanity across the internet!</p>
   <hr>
@@ -67,6 +66,7 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
   </a>
+  <sub>Made with 💖 by <a href="https://github.com/T145" target="_blank">T145</a>!</sub>
 </div>
 
 ## 🛡️ Privacy Protectors
@@ -74,6 +74,7 @@
 > Good causes that help secure your digital life.
 
 - [Stop using Cloudflare!](https://framagit.org/dCF/deCloudflare/-/tree/master)
+  - Browser addons: <a href="https://addons.mozilla.org/en-GB/firefox/addon/stopcloudflare/"><img src="https://www.vectorlogo.zone/logos/firefox/firefox-icon.svg" width=20px height=20px></a> <a href="https://git.disroot.org/dCF/deCloudflare/raw/branch/master/addons/releases/bcma.crx"><img src="https://www.vectorlogo.zone/logos/google_chrome/google_chrome-icon.svg" width=20px height=20px></a>
 - Test your browser's tracking resilience with [CoverYourTracks](https://coveryourtracks.eff.org/)!
 - Support [LetsBlockIt](https://letsblock.it/) to consolidate and simplify uBlock filters!
 - Explore [PrivacyGuides](https://privacyguides.org/) and [Prism Break](https://prism-break.org/en/all/) to discover services that respect your privacy!
