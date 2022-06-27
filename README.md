@@ -66,6 +66,8 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
   </a>
+</div>
+<div align="center">
   <sub>Made with 💖 by <a href="https://github.com/T145" target="_blank">T145</a>!</sub>
 </div>
 
