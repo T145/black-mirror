@@ -40,7 +40,7 @@ apply_filter() {
     mawk 'NF && !seen[$0]++' | # Filter blank lines and duplicates!
     #httpx -r configs/resolvers.txt -silent -t 200000 |
     parsort -u -S 100% --parallel=200000 -T "$CACHE" |
-    parallel --pipe -k -j100% grep -Fxvf exports/sources.txt -
+    grep -Fxvf exports/sources.txt -
 }
 
 main() {
@@ -64,7 +64,7 @@ main() {
 
   lychee --exclude-mail -nEf Json -o exports/target-status.json -T 200 -t 10 -r 0 -u 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0' target/*.txt 1>/dev/null || true
 
-  jq -r '.fail_map | to_entries[] | .key as $k | .value[] | select(.status | startswith("Failed:")) | "\($k)#\(.url)"' exports/target-status.json |
+  jq -r '.fail_map | to_entries[] | .key as $k | .value[] | select(.status | startswith("Failed:") or startswith("Cached:")) | "\($k)#\(.url)"' exports/target-status.json |
     while IFS='#' read -r target url; do
       echo "$url" | comm "$target" - -23 >"$target"
     done
