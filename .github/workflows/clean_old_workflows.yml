@@ -16,26 +16,16 @@ jobs:
           retain_days: 1
           keep_minimum_runs: 2
 
-      - name: Remove deleted workflow runs
-        uses: Mattraks/delete-workflow-runs@v2
-        with:
-          keep_minimum_runs: 0
-          delete_workflow_pattern: 'Publish Lists to GitHub'
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
-      - name: Remove deleted workflow runs
-        uses: Mattraks/delete-workflow-runs@v2
+      - name: Remove ancient workflow runs
+        uses: MajorScruffy/delete-old-workflow-runs@v0.1.0
         with:
-          keep_minimum_runs: 0
-          delete_workflow_pattern: 'Publish Lists to Dropbox'
-
-      - name: Remove deleted workflow runs
-        uses: Mattraks/delete-workflow-runs@v2
-        with:
-          keep_minimum_runs: 0
-          delete_workflow_pattern: 'Create Release'
-
-      - name: Remove deleted workflow runs
-        uses: Mattraks/delete-workflow-runs@v2
-        with:
-          keep_minimum_runs: 0
-          delete_workflow_pattern: 'Update the Blacklist'
+          repository: T145/black-mirror
+          created-before: ${{ steps.date.outputs.date }}
+          maximum-workflow-runs-to-keep: 0
+          status: completed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
