@@ -1,4 +1,4 @@
-﻿name: Clean Old Workflows
+name: Clean Old Workflows
 
 on:
   workflow_dispatch:
@@ -10,8 +10,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Delete old workflow runs
+      - name: Remove expired workflow runs
         uses: Mattraks/delete-workflow-runs@v2
         with:
           retain_days: 1
           keep_minimum_runs: 2
+
+      - name: Remove deleted workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          keep_minimum_runs: 0
+          delete_workflow_by_state_pattern: deleted
+
+      - name: Remove disabled workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          keep_minimum_runs: 0
+          delete_workflow_by_state_pattern: disabled_manually
+
+      - name: Remove forked workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          keep_minimum_runs: 0
+          delete_workflow_by_state_pattern: disabled_fork
+
+      - name: Remove inactive workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          keep_minimum_runs: 0
+          delete_workflow_by_state_pattern: disabled_inactivity
