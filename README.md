@@ -557,6 +557,8 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [Cats-Team](https://github.com/Cats-Team/AdRules)
   - [Mirror](https://cats-team.coding.net/p/adguard/d/AdRules/git/raw/main/ad-domains.txt)
 - [DNS For Family](https://dnsforfamily.com/Public/customBlacklist.txt)
+- [XIU2](https://github.com/XIU2/TrackersListCollection)
+  - blacklist
 
 ### ⬜ Whitelists
 
@@ -596,6 +598,10 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - notracking
   - [domains.dead](https://raw.githubusercontent.com/notracking/hosts-blocklists-scripts/master/domains.dead.txt)
   - [hostnames.dead](https://raw.githubusercontent.com/notracking/hosts-blocklists-scripts/master/hostnames.dead.txt)
+- [XIU2](https://github.com/XIU2/TrackersListCollection)
+  - best lists
+- [quindecim](https://github.com/quindecim/block)
+  - [domains-allowlist](https://github.com/quindecim/block/blob/master/config/domains-allowlist.txt)
 
 ### 🥢 Duplicates
 
