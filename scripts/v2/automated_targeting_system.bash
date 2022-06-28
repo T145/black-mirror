@@ -69,7 +69,7 @@ main() {
 
   jq -r '.fail_map | to_entries[] | .key as $k | .value[] | select(.status | startswith("Failed:") or startswith("Cached:")) | "\($k)#\(.url)"' "$status" |
     while IFS='#' read -r target url; do
-      echo "$url" | comm "$target" - -23 | sponge "$target"
+      echo "$url" | grep -Fxvf - "$target" | sponge "$target"
     done
 }
 
