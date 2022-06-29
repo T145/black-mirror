@@ -1,8 +1,5 @@
 {
   "1hosts_excludes": {
-    "_desc": "https://github.com/badmojr/1Hosts#readme",
-    "_homepage": "https://github.com/badmojr/1Hosts/tree/master/submit_here",
-    "_license": "mpl-2.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -20,12 +17,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/exclude_for_all.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/badmojr/1Hosts#readme",
+      "homepage": "https://github.com/badmojr/1Hosts/tree/master/submit_here",
+      "license": "mpl-2.0"
+    }
   },
   "1hosts_includes": {
-    "_desc": "https://github.com/badmojr/1Hosts#readme",
-    "_homepage": "https://github.com/badmojr/1Hosts/tree/master/submit_here",
-    "_license": "mpl-2.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -46,12 +45,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_all.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/badmojr/1Hosts#readme",
+      "homepage": "https://github.com/badmojr/1Hosts/tree/master/submit_here",
+      "license": "mpl-2.0"
     }
   },
   "1hosts_pro_includes": {
-    "_desc": "https://github.com/badmojr/1Hosts#readme",
-    "_homepage": "https://github.com/badmojr/1Hosts/tree/master/submit_here",
-    "_license": "mpl-2.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -72,12 +73,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_Pro_Xtra_only.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/badmojr/1Hosts#readme",
+      "homepage": "https://github.com/badmojr/1Hosts/tree/master/submit_here",
+      "license": "mpl-2.0"
     }
   },
   "280blocker": {
-    "_desc": "https://280blocker.net/welcome/",
-    "_homepage": "https://280blocker.net",
-    "_license": "not-available",
     "archive": false,
     "checksums": {},
     "content": {
@@ -99,12 +102,14 @@
     "topic": "SECURITY",
     "variants": {
       "adguard": "https://filter.futa.gg/280blocker/280blocker_domain_ag.txt"
+    },
+    "metadata": {
+      "description": "https://280blocker.net/welcome/",
+      "homepage": "https://280blocker.net",
+      "license": "not-available"
     }
   },
   "360_netlab": {
-    "_desc": "https://data.netlab.360.com/dga/",
-    "_homepage": "https://www.netlab.360.com/",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -125,12 +130,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://data.netlab.360.com/feeds/dga/dga.txt"
+    },
+    "metadata": {
+      "description": "https://data.netlab.360.com/dga/",
+      "homepage": "https://www.netlab.360.com/",
+      "license": "mit"
     }
   },
   "4skinskywalker": {
-    "_desc": "https://github.com/4skinSkywalker/Anti-Porn-HOSTS-File#readme",
-    "_homepage": "https://github.com/4skinSkywalker/Anti-Porn-HOSTS-File/blob/master/HOSTS.txt",
-    "_license": "all-rights-reserved",
     "archive": false,
     "checksums": {},
     "content": {
@@ -151,12 +158,14 @@
     "topic": "SANITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/4skinSkywalker/Anti-Porn-HOSTS-File/master/HOSTS.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/4skinSkywalker/Anti-Porn-HOSTS-File#readme",
+      "homepage": "https://github.com/4skinSkywalker/Anti-Porn-HOSTS-File/blob/master/HOSTS.txt",
+      "license": "all-rights-reserved"
     }
   },
   "abuse_ch_feodotracker": {
-    "_desc": "https://feodotracker.abuse.ch/blocklist/",
-    "_homepage": "https://abuse.ch/",
-    "_license": "cc0-1.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -181,12 +190,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.txt"
+    },
+    "metadata": {
+      "description": "https://feodotracker.abuse.ch/blocklist/",
+      "homepage": "https://abuse.ch/",
+      "license": "cc0-1.0"
     }
   },
   "abuse_ch_sslbl": {
-    "_desc": "https://sslbl.abuse.ch/blacklist/",
-    "_homepage": "https://abuse.ch/",
-    "_license": "cc0-1.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -207,12 +218,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://sslbl.abuse.ch/blacklist/sslipblacklist.txt"
+    },
+    "metadata": {
+      "description": "https://sslbl.abuse.ch/blacklist/",
+      "homepage": "https://abuse.ch/",
+      "license": "cc0-1.0"
     }
   },
   "abuse_ch_threatfox": {
-    "_desc": "https://threatfox.abuse.ch/browse/",
-    "_homepage": "https://abuse.ch/",
-    "_license": "cc0-1.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -237,12 +250,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://threatfox.abuse.ch/downloads/hostfile/"
+    },
+    "metadata": {
+      "description": "https://threatfox.abuse.ch/browse/",
+      "homepage": "https://abuse.ch/",
+      "license": "cc0-1.0"
     }
   },
   "abuse_ch_urlhaus": {
-    "_desc": "https://urlhaus.abuse.ch/browse/",
-    "_homepage": "https://abuse.ch/",
-    "_license": "cc0-1.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -267,12 +282,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://urlhaus.abuse.ch/downloads/hostfile/"
+    },
+    "metadata": {
+      "description": "https://urlhaus.abuse.ch/browse/",
+      "homepage": "https://abuse.ch/",
+      "license": "cc0-1.0"
     }
   },
   "additional_hosts_activation": {
-    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
-    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -293,12 +310,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/activation.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+      "homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
+      "license": "mit"
     }
   },
   "additional_hosts_ads": {
-    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
-    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -319,12 +338,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/adservers-and-trackers.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+      "homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
+      "license": "mit"
     }
   },
   "additional_hosts_duckduckgo": {
-    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
-    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -342,12 +363,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/duckduckgo.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+      "homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
+      "license": "mit"
+    }
   },
   "additional_hosts_fake": {
-    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
-    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -368,12 +391,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/fake-domains.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+      "homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
+      "license": "mit"
     }
   },
   "additional_hosts_github": {
-    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
-    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -391,12 +416,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/duckduckgo.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+      "homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
+      "license": "mit"
+    }
   },
   "additional_hosts_iranian_parking": {
-    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
-    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -417,12 +444,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/parking-iranian.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+      "homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
+      "license": "mit"
     }
   },
   "additional_hosts_iranian_unwanted": {
-    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
-    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -443,12 +472,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/unwanted-iranian.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+      "homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
+      "license": "mit"
     }
   },
   "additional_hosts_root": {
-    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
-    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -466,12 +497,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/root.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+      "homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
+      "license": "mit"
+    }
   },
   "additional_hosts_search": {
-    "_desc": "https://github.com/DRSDavidSoft/additional-hosts#readme",
-    "_homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
-    "_license": "mit",
     "_notes": "Presently raw, but the present filter is maintained to avoid any potential format changes.",
     "archive": false,
     "checksums": {},
@@ -493,12 +526,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/search-blacklist.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+      "homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist",
+      "license": "mit"
     }
   },
   "airelle_mis": {
-    "_desc": "http://rlwpx.free.fr/WPFF/hosts.htm",
-    "_homepage": "http://rlwpx.free.fr/WPFF/hosts.htm",
-    "_license": "cc-by-3.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -516,12 +551,14 @@
     "mirrors": [
       "http://rlwpx.free.fr/WPFF/hmis.7z"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "http://rlwpx.free.fr/WPFF/hosts.htm",
+      "homepage": "http://rlwpx.free.fr/WPFF/hosts.htm",
+      "license": "cc-by-3.0"
+    }
   },
   "airelle_pub": {
-    "_desc": "http://rlwpx.free.fr/WPFF/hosts.htm",
-    "_homepage": "http://rlwpx.free.fr/WPFF/hosts.htm",
-    "_license": "cc-by-3.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -539,12 +576,14 @@
     "mirrors": [
       "http://rlwpx.free.fr/WPFF/hpub.7z"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "http://rlwpx.free.fr/WPFF/hosts.htm",
+      "homepage": "http://rlwpx.free.fr/WPFF/hosts.htm",
+      "license": "cc-by-3.0"
+    }
   },
   "airelle_rsk": {
-    "_desc": "http://rlwpx.free.fr/WPFF/hosts.htm",
-    "_homepage": "http://rlwpx.free.fr/WPFF/hosts.htm",
-    "_license": "cc-by-3.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -562,12 +601,14 @@
     "mirrors": [
       "http://rlwpx.free.fr/WPFF/hrsk.7z"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "http://rlwpx.free.fr/WPFF/hosts.htm",
+      "homepage": "http://rlwpx.free.fr/WPFF/hosts.htm",
+      "license": "cc-by-3.0"
+    }
   },
   "airelle_sex": {
-    "_desc": "http://rlwpx.free.fr/WPFF/hosts.htm",
-    "_homepage": "http://rlwpx.free.fr/WPFF/hosts.htm",
-    "_license": "cc-by-3.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -585,12 +626,14 @@
     "mirrors": [
       "http://rlwpx.free.fr/WPFF/hsex.7z"
     ],
-    "topic": "SANITY"
+    "topic": "SANITY",
+    "metadata": {
+      "description": "http://rlwpx.free.fr/WPFF/hosts.htm",
+      "homepage": "http://rlwpx.free.fr/WPFF/hosts.htm",
+      "license": "cc-by-3.0"
+    }
   },
   "airelle_trc": {
-    "_desc": "http://rlwpx.free.fr/WPFF/hosts.htm",
-    "_homepage": "http://rlwpx.free.fr/WPFF/hosts.htm",
-    "_license": "cc-by-3.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -608,12 +651,14 @@
     "mirrors": [
       "http://rlwpx.free.fr/WPFF/htrc.7z"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "http://rlwpx.free.fr/WPFF/hosts.htm",
+      "homepage": "http://rlwpx.free.fr/WPFF/hosts.htm",
+      "license": "cc-by-3.0"
+    }
   },
   "alienvault": {
-    "_desc": "https://otx.alienvault.com/endpoint-security/welcome",
-    "_homepage": "https://status.alienvault.cloud/",
-    "_license": "not-available",
     "_notes": "http://data.alienvault.com/feed/binary/Packages",
     "archive": false,
     "checksums": {},
@@ -632,12 +677,14 @@
     "mirrors": [
       "https://reputation.alienvault.com/reputation.data"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://otx.alienvault.com/endpoint-security/welcome",
+      "homepage": "https://status.alienvault.cloud/",
+      "license": "not-available"
+    }
   },
   "anti_ad": {
-    "_desc": "https://github.com/privacy-protection-tools/anti-AD#readme",
-    "_homepage": "https://github.com/privacy-protection-tools/anti-AD",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -665,12 +712,14 @@
       "pihole": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt",
       "surge": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt",
       "surge2": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge2.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/privacy-protection-tools/anti-AD#readme",
+      "homepage": "https://github.com/privacy-protection-tools/anti-AD",
+      "license": "mit"
     }
   },
   "antisocialengineer": {
-    "_desc": "https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community#readme",
-    "_homepage": "https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community",
-    "_license": "apache-2.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -691,12 +740,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community/main/UK-Community.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community#readme",
+      "homepage": "https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community",
+      "license": "apache-2.0"
     }
   },
   "anudeep_adservers": {
-    "_desc": "https://github.com/anudeepND/blacklist#readme",
-    "_homepage": "https://github.com/anudeepND/blacklist",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -717,12 +768,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/anudeepND/blacklist#readme",
+      "homepage": "https://github.com/anudeepND/blacklist",
+      "license": "mit"
     }
   },
   "anudeep_coinminer": {
-    "_desc": "https://github.com/anudeepND/blacklist#readme",
-    "_homepage": "https://github.com/anudeepND/blacklist",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -743,12 +796,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/anudeepND/blacklist#readme",
+      "homepage": "https://github.com/anudeepND/blacklist",
+      "license": "mit"
     }
   },
   "anudeep_facebook": {
-    "_desc": "https://github.com/anudeepND/blacklist#readme",
-    "_homepage": "https://github.com/anudeepND/blacklist",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -769,12 +824,14 @@
     "topic": "SANITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/anudeepND/blacklist#readme",
+      "homepage": "https://github.com/anudeepND/blacklist",
+      "license": "mit"
     }
   },
   "anudeep_whitelist": {
-    "_desc": "https://github.com/anudeepND/whitelist#readme",
-    "_homepage": "https://github.com/anudeepND/whitelist",
-    "_license": "mit",
     "_notes": "The 'referral-sites' & 'optional-list' have been ignored.",
     "archive": false,
     "checksums": {},
@@ -793,12 +850,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/anudeepND/whitelist#readme",
+      "homepage": "https://github.com/anudeepND/whitelist",
+      "license": "mit"
+    }
   },
   "apple_telemetry": {
-    "_desc": "https://github.com/adversarialtools/apple-telemetry#readme",
-    "_homepage": "https://github.com/adversarialtools/apple-telemetry",
-    "_license": "gpl-3.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -819,12 +878,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/adversarialtools/apple-telemetry/master/blacklist"
+    },
+    "metadata": {
+      "description": "https://github.com/adversarialtools/apple-telemetry#readme",
+      "homepage": "https://github.com/adversarialtools/apple-telemetry",
+      "license": "gpl-3.0"
     }
   },
   "ayashige": {
-    "_desc": "https://github.com/ninoseki/ayashige#readme",
-    "_homepage": "https://github.com/ninoseki/ayashige",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -842,12 +903,14 @@
     "mirrors": [
       "https://ayashige.herokuapp.com/api/v1/domains/"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/ninoseki/ayashige#readme",
+      "homepage": "https://github.com/ninoseki/ayashige",
+      "license": "mit"
+    }
   },
   "azorult_domains": {
-    "_desc": "https://azorult-tracker.net/about",
-    "_homepage": "https://azorult-tracker.net/",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -868,12 +931,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://azorult-tracker.net/api/list/domain?format=plain"
+    },
+    "metadata": {
+      "description": "https://azorult-tracker.net/about",
+      "homepage": "https://azorult-tracker.net/",
+      "license": "mit"
     }
   },
   "azorult_ips": {
-    "_desc": "https://azorult-tracker.net/about",
-    "_homepage": "https://azorult-tracker.net/",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -891,12 +956,14 @@
     "mirrors": [
       "https://azorult-tracker.net/api/list/ip?format=plain"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://azorult-tracker.net/about",
+      "homepage": "https://azorult-tracker.net/",
+      "license": "mit"
+    }
   },
   "benkow_cc": {
-    "_desc": "https://benkow.cc/passwords.php",
-    "_homepage": "https://benkow.cc/index.php",
-    "_license": "not-available",
     "archive": false,
     "checksums": {},
     "content": {
@@ -922,12 +989,14 @@
     "mirrors": [
       "https://benkow.cc/export.php"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://benkow.cc/passwords.php",
+      "homepage": "https://benkow.cc/index.php",
+      "license": "not-available"
+    }
   },
   "betterfyi": {
-    "_desc": "https://better.fyi/trackers/",
-    "_homepage": "https://source.ind.ie/better/better",
-    "_license": "agpl-3.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -949,12 +1018,14 @@
     "variants": {
       "easylist": "https://better.fyi/blockerList.txt",
       "pihole": "https://block.energized.pro/assets/sources/filter/better-fyi-trackers.txt"
+    },
+    "metadata": {
+      "description": "https://better.fyi/trackers/",
+      "homepage": "https://source.ind.ie/better/better",
+      "license": "agpl-3.0"
     }
   },
   "binarydefense": {
-    "_desc": "https://www.binarydefense.com/cybersecurity-solutions/threat-hunting/",
-    "_homepage": "https://www.binarydefense.com/",
-    "_license": "all-rights-reserved",
     "archive": false,
     "checksums": {},
     "content": {
@@ -975,12 +1046,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://www.binarydefense.com/banlist.txt"
+    },
+    "metadata": {
+      "description": "https://www.binarydefense.com/cybersecurity-solutions/threat-hunting/",
+      "homepage": "https://www.binarydefense.com/",
+      "license": "all-rights-reserved"
     }
   },
   "bjornstar": {
-    "_desc": "https://github.com/bjornstar/hosts#readme",
-    "_homepage": "https://github.com/bjornstar/hosts",
-    "_license": "unlicense",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1001,12 +1074,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/bjornstar/hosts/master/hosts"
+    },
+    "metadata": {
+      "description": "https://github.com/bjornstar/hosts#readme",
+      "homepage": "https://github.com/bjornstar/hosts",
+      "license": "unlicense"
     }
   },
   "blackbird": {
-    "_desc": "https://getblackbird.net/documentation/",
-    "_homepage": "https://getblackbird.net/",
-    "_license": "https://getblackbird.net/documentation/license/",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1027,12 +1102,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://getblackbird.net/blacklist/hosts.txt"
+    },
+    "metadata": {
+      "description": "https://getblackbird.net/documentation/",
+      "homepage": "https://getblackbird.net/",
+      "license": "https://getblackbird.net/documentation/license/"
     }
   },
   "block_list_project_main": {
-    "_desc": "https://github.com/blocklistproject/Lists#readme",
-    "_homepage": "https://blocklistproject.github.io/Lists/",
-    "_license": "unlicense",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1055,12 +1132,14 @@
     "variants": {
       "dnsmasq": "https://raw.githubusercontent.com/blocklistproject/Lists/master/dnsmasq-version/everything-dnsmasq.txt",
       "pihole": "https://raw.githubusercontent.com/blocklistproject/Lists/master/everything.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/blocklistproject/Lists#readme",
+      "homepage": "https://blocklistproject.github.io/Lists/",
+      "license": "unlicense"
     }
   },
   "block_list_project_smart_tv": {
-    "_desc": "https://github.com/blocklistproject/Lists#readme",
-    "_homepage": "https://blocklistproject.github.io/Lists/",
-    "_license": "unlicense",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1083,12 +1162,14 @@
     "variants": {
       "dnsmasq": "https://raw.githubusercontent.com/blocklistproject/Lists/master/dnsmasq-version/smart-tv-dnsmasq.txt",
       "pihole": "https://raw.githubusercontent.com/blocklistproject/Lists/master/smart-tv.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/blocklistproject/Lists#readme",
+      "homepage": "https://blocklistproject.github.io/Lists/",
+      "license": "unlicense"
     }
   },
   "block_list_project_vaping": {
-    "_desc": "https://github.com/blocklistproject/Lists#readme",
-    "_homepage": "https://blocklistproject.github.io/Lists/",
-    "_license": "unlicense",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1111,12 +1192,14 @@
     "variants": {
       "dnsmasq": "https://raw.githubusercontent.com/blocklistproject/Lists/master/dnsmasq-version/vaping-dnsmasq.txt",
       "pihole": "https://raw.githubusercontent.com/blocklistproject/Lists/master/vaping.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/blocklistproject/Lists#readme",
+      "homepage": "https://blocklistproject.github.io/Lists/",
+      "license": "unlicense"
     }
   },
   "block_list_project_whatsapp": {
-    "_desc": "https://github.com/blocklistproject/Lists#readme",
-    "_homepage": "https://blocklistproject.github.io/Lists/",
-    "_license": "unlicense",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1139,12 +1222,14 @@
     "variants": {
       "dnsmasq": "https://raw.githubusercontent.com/blocklistproject/Lists/master/dnsmasq-version/whatsapp-dnsmasq.txt",
       "pihole": "https://raw.githubusercontent.com/blocklistproject/Lists/master/whatsapp.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/blocklistproject/Lists#readme",
+      "homepage": "https://blocklistproject.github.io/Lists/",
+      "license": "unlicense"
     }
   },
   "blockada_tracker_radar": {
-    "_desc": "https://github.com/blokadaorg/landing-github-pages/blob/master/scripts/ddg.py",
-    "_homepage": "https://blokada.org/",
-    "_license": "all-rights-reserved",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1167,12 +1252,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/blokadaorg/landing-github-pages/blob/master/scripts/ddg.py",
+      "homepage": "https://blokada.org/",
+      "license": "all-rights-reserved"
     }
   },
   "blocklist_de": {
-    "_desc": "https://www.blocklist.de/en/export.html",
-    "_homepage": "https://www.blocklist.de/en/index.html",
-    "_license": "not-available",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1198,12 +1285,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt"
+    },
+    "metadata": {
+      "description": "https://www.blocklist.de/en/export.html",
+      "homepage": "https://www.blocklist.de/en/index.html",
+      "license": "not-available"
     }
   },
   "botvrij_covid": {
-    "_desc": "https://www.botvrij.eu/data/",
-    "_homepage": "https://www.botvrij.eu/",
-    "_license": "not-available",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1221,12 +1310,14 @@
     "mirrors": [
       "https://www.botvrij.eu/data/blocklist/blocklist_domain.csv"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://www.botvrij.eu/data/",
+      "homepage": "https://www.botvrij.eu/",
+      "license": "not-available"
+    }
   },
   "botvrij_ioc_domain": {
-    "_desc": "https://www.botvrij.eu/data/",
-    "_homepage": "https://www.botvrij.eu/",
-    "_license": "not-available",
     "archive": false,
     "checksums": {
       "md5": "https://www.botvrij.eu/data/ioclist.domain.raw.md5"
@@ -1249,12 +1340,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://www.botvrij.eu/data/ioclist.domain.raw"
+    },
+    "metadata": {
+      "description": "https://www.botvrij.eu/data/",
+      "homepage": "https://www.botvrij.eu/",
+      "license": "not-available"
     }
   },
   "botvrij_ioc_ip_dst": {
-    "_desc": "https://www.botvrij.eu/data/",
-    "_homepage": "https://www.botvrij.eu/",
-    "_license": "not-available",
     "_notes": "Skipping the URL list",
     "archive": false,
     "checksums": {
@@ -1275,12 +1368,14 @@
     "mirrors": [
       "https://www.botvrij.eu/data/ioclist.ip-dst.raw"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://www.botvrij.eu/data/",
+      "homepage": "https://www.botvrij.eu/",
+      "license": "not-available"
+    }
   },
   "botvrij_ioc_ip_src": {
-    "_desc": "https://www.botvrij.eu/data/",
-    "_homepage": "https://www.botvrij.eu/",
-    "_license": "not-available",
     "archive": false,
     "checksums": {
       "md5": "https://www.botvrij.eu/data/ioclist.ip-src.raw.md5"
@@ -1300,12 +1395,14 @@
     "mirrors": [
       "https://www.botvrij.eu/data/ioclist.ip-src.raw"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://www.botvrij.eu/data/",
+      "homepage": "https://www.botvrij.eu/",
+      "license": "not-available"
+    }
   },
   "botvrij_ioc_url": {
-    "_desc": "https://www.botvrij.eu/data/",
-    "_homepage": "https://www.botvrij.eu/",
-    "_license": "not-available",
     "_notes": "Some entries do NOT start w/ http(s)!",
     "archive": false,
     "checksums": {
@@ -1326,12 +1423,14 @@
     "mirrors": [
       "https://www.botvrij.eu/data/ioclist.url.raw"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://www.botvrij.eu/data/",
+      "homepage": "https://www.botvrij.eu/",
+      "license": "not-available"
+    }
   },
   "botvrij_misp_ip_dst": {
-    "_desc": "https://www.botvrij.eu/data/",
-    "_homepage": "https://www.botvrij.eu/",
-    "_license": "not-available",
     "_notes": "Skipping the URL list",
     "archive": false,
     "checksums": {
@@ -1354,12 +1453,14 @@
     "mirrors": [
       "https://www.botvrij.eu/data/misp.text_ip-dst.ADMIN.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://www.botvrij.eu/data/",
+      "homepage": "https://www.botvrij.eu/",
+      "license": "not-available"
+    }
   },
   "bruteforceblocker": {
-    "_desc": "https://danger.rulez.sk/index.php/bruteforceblocker/",
-    "_homepage": "https://github.com/dgerzo/bruteforceblocker",
-    "_license": "all-rights-reserved",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1377,12 +1478,14 @@
     "mirrors": [
       "http://danger.rulez.sk/projects/bruteforceblocker/blist.php?mindays=7&mincount=1"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://danger.rulez.sk/index.php/bruteforceblocker/",
+      "homepage": "https://github.com/dgerzo/bruteforceblocker",
+      "license": "all-rights-reserved"
+    }
   },
   "c2_intel_feeds": {
-    "_desc": "https://github.com/drb-ra/C2IntelFeeds#readme",
-    "_homepage": "https://github.com/drb-ra/C2IntelFeeds",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1404,12 +1507,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/domainC2swithURLwithIP-30day-filter-abused.csv"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/drb-ra/C2IntelFeeds#readme",
+      "homepage": "https://github.com/drb-ra/C2IntelFeeds",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "c2_intel_vpns": {
-    "_desc": "https://github.com/drb-ra/C2IntelFeeds#readme",
-    "_homepage": "https://github.com/drb-ra/C2IntelFeeds",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1427,12 +1532,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/vpn/NordVPNIPs.csv"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/drb-ra/C2IntelFeeds#readme",
+      "homepage": "https://github.com/drb-ra/C2IntelFeeds",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "certego": {
-    "_desc": "https://twitter.com/Certego_Intel",
-    "_homepage": "https://twitter.com/Certego_Intel",
-    "_license": "not-available",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1454,12 +1561,14 @@
     "mirrors": [
       "https://twitter.com/Certego_Intel"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://twitter.com/Certego_Intel",
+      "homepage": "https://twitter.com/Certego_Intel",
+      "license": "not-available"
+    }
   },
   "chrisjudk": {
-    "_desc": "https://github.com/chrisjudk/hosts#hosts=",
-    "_homepage": "https://github.com/chrisjudk/hosts",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1480,12 +1589,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/chrisjudk/hosts/master/hosts"
+    },
+    "metadata": {
+      "description": "https://github.com/chrisjudk/hosts#hosts=",
+      "homepage": "https://github.com/chrisjudk/hosts",
+      "license": "mit"
     }
   },
   "cinsscore": {
-    "_desc": "https://cinsscore.com/#list",
-    "_homepage": "https://cinsscore.com/",
-    "_license": "not-available",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1506,12 +1617,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://cinsscore.com/list/ci-badguys.txt"
+    },
+    "metadata": {
+      "description": "https://cinsscore.com/#list",
+      "homepage": "https://cinsscore.com/",
+      "license": "not-available"
     }
   },
   "cname_trackers": {
-    "_desc": "https://github.com/AdguardTeam/cname-trackers#readme",
-    "_homepage": "https://github.com/AdguardTeam/cname-trackers",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1529,12 +1642,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/master/combined_disguised_trackers_justdomains.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/AdguardTeam/cname-trackers#readme",
+      "homepage": "https://github.com/AdguardTeam/cname-trackers",
+      "license": "mit"
+    }
   },
   "coinblockerlists_browser": {
-    "_desc": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master#simple-lists-that-can-help-prevent-cryptomining-in-the-browser-or-other-applications",
-    "_homepage": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master",
-    "_license": "agpl-3.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1557,12 +1672,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://zerodot1.gitlab.io/CoinBlockerLists/list_browser.txt"
+    },
+    "metadata": {
+      "description": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master#simple-lists-that-can-help-prevent-cryptomining-in-the-browser-or-other-applications",
+      "homepage": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master",
+      "license": "agpl-3.0"
     }
   },
   "coinblockerlists_main": {
-    "_desc": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master#simple-lists-that-can-help-prevent-cryptomining-in-the-browser-or-other-applications",
-    "_homepage": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master",
-    "_license": "agpl-3.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1585,12 +1702,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://zerodot1.gitlab.io/CoinBlockerLists/list.txt"
+    },
+    "metadata": {
+      "description": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master#simple-lists-that-can-help-prevent-cryptomining-in-the-browser-or-other-applications",
+      "homepage": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master",
+      "license": "agpl-3.0"
     }
   },
   "coinblockerlists_optional": {
-    "_desc": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master#simple-lists-that-can-help-prevent-cryptomining-in-the-browser-or-other-applications",
-    "_homepage": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master",
-    "_license": "agpl-3.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1613,12 +1732,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://zerodot1.gitlab.io/CoinBlockerLists/list_optional.txt"
+    },
+    "metadata": {
+      "description": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master#simple-lists-that-can-help-prevent-cryptomining-in-the-browser-or-other-applications",
+      "homepage": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master",
+      "license": "agpl-3.0"
     }
   },
   "coinblockerlists_whitelist": {
-    "_desc": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master#simple-lists-that-can-help-prevent-cryptomining-in-the-browser-or-other-applications",
-    "_homepage": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master",
-    "_license": "agpl-3.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1638,12 +1759,14 @@
       "https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/white_list.txt",
       "https://zerodot1.gitlab.io/CoinBlockerLists/white_list.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master#simple-lists-that-can-help-prevent-cryptomining-in-the-browser-or-other-applications",
+      "homepage": "https://gitlab.com/ZeroDot1/CoinBlockerLists/-/tree/master",
+      "license": "agpl-3.0"
+    }
   },
   "combindprivacyblocklists": {
-    "_desc": "https://github.com/bongochong/CombinedPrivacyBlockLists#combined-privacy-block-lists",
-    "_homepage": "https://github.com/bongochong/CombinedPrivacyBlockLists",
-    "_license": "cpal-1.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1664,12 +1787,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/master/NoFormatting/BlacklistedDomains.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/bongochong/CombinedPrivacyBlockLists#combined-privacy-block-lists",
+      "homepage": "https://github.com/bongochong/CombinedPrivacyBlockLists",
+      "license": "cpal-1.0"
     }
   },
   "cryptolaemus": {
-    "_desc": "https://paste.cryptolaemus.com/feed.xml",
-    "_homepage": "https://paste.cryptolaemus.com/",
-    "_license": "not-available",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1691,12 +1816,14 @@
     "mirrors": [
       "https://paste.cryptolaemus.com/dbucket/"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://paste.cryptolaemus.com/feed.xml",
+      "homepage": "https://paste.cryptolaemus.com/",
+      "license": "not-available"
+    }
   },
   "cyber_cure_ips": {
-    "_desc": "https://docs.cybercure.ai/reference/get_ips",
-    "_homepage": "https://www.cybercure.ai/start",
-    "_license": "not-available",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1714,12 +1841,14 @@
     "mirrors": [
       "http://api.cybercure.ai/feed/get_ips?type=json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://docs.cybercure.ai/reference/get_ips",
+      "homepage": "https://www.cybercure.ai/start",
+      "license": "not-available"
+    }
   },
   "cyber_cure_urls": {
-    "_desc": "https://docs.cybercure.ai/reference/get_url",
-    "_homepage": "https://www.cybercure.ai/start",
-    "_license": "not-available",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1737,12 +1866,14 @@
     "mirrors": [
       "http://api.cybercure.ai/feed/get_url?type=csv"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://docs.cybercure.ai/reference/get_url",
+      "homepage": "https://www.cybercure.ai/start",
+      "license": "not-available"
+    }
   },
   "cybercrime_all": {
-    "_desc": "https://cybercrime-tracker.net/tools.php",
-    "_homepage": "https://cybercrime-tracker.net/",
-    "_license": "cc0-1.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1764,12 +1895,14 @@
     "mirrors": [
       "https://cybercrime-tracker.net/all.php"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://cybercrime-tracker.net/tools.php",
+      "homepage": "https://cybercrime-tracker.net/",
+      "license": "cc0-1.0"
+    }
   },
   "cybercrime_ccmgate": {
-    "_desc": "https://cybercrime-tracker.net/tools.php",
-    "_homepage": "https://cybercrime-tracker.net/",
-    "_license": "cc0-1.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1791,12 +1924,14 @@
     "mirrors": [
       "https://cybercrime-tracker.net/ccamgate.php"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://cybercrime-tracker.net/tools.php",
+      "homepage": "https://cybercrime-tracker.net/",
+      "license": "cc0-1.0"
+    }
   },
   "cybersaiyan": {
-    "_desc": "https://github.com/CyberSaiyanIT/InfoSharing#readme",
-    "_homepage": "https://github.com/CyberSaiyanIT/InfoSharing",
-    "_license": "all-rights-reserved",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1821,12 +1956,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://infosharing.cybersaiyan.it/feeds/CS-PIHOLE"
+    },
+    "metadata": {
+      "description": "https://github.com/CyberSaiyanIT/InfoSharing#readme",
+      "homepage": "https://github.com/CyberSaiyanIT/InfoSharing",
+      "license": "all-rights-reserved"
     }
   },
   "cybo1927": {
-    "_desc": "https://github.com/Cybo1927/Hosts#available-lists-and-folders=",
-    "_homepage": "https://github.com/Cybo1927/Hosts",
-    "_license": "unlicense",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1847,12 +1984,14 @@
     "topic": "SECURITY",
     "variants": {
       "adguard": "https://raw.githubusercontent.com/Cybo1927/Hosts/master/DNS%20Hosts"
+    },
+    "metadata": {
+      "description": "https://github.com/Cybo1927/Hosts#available-lists-and-folders=",
+      "homepage": "https://github.com/Cybo1927/Hosts",
+      "license": "unlicense"
     }
   },
   "cymru_ipv4_bogons": {
-    "_desc": "https://team-cymru.com/community-services/bogon-reference/",
-    "_homepage": "https://team-cymru.com/community-services/bogon-reference/bogon-reference-http/",
-    "_license": "all-rights-reserved",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1870,12 +2009,14 @@
     "mirrors": [
       "https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://team-cymru.com/community-services/bogon-reference/",
+      "homepage": "https://team-cymru.com/community-services/bogon-reference/bogon-reference-http/",
+      "license": "all-rights-reserved"
+    }
   },
   "cymru_ipv6_bogons": {
-    "_desc": "https://team-cymru.com/community-services/bogon-reference/",
-    "_homepage": "https://team-cymru.com/community-services/bogon-reference/bogon-reference-http/",
-    "_license": "all-rights-reserved",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1893,12 +2034,14 @@
     "mirrors": [
       "https://www.team-cymru.org/Services/Bogons/fullbogons-ipv6.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://team-cymru.com/community-services/bogon-reference/",
+      "homepage": "https://team-cymru.com/community-services/bogon-reference/bogon-reference-http/",
+      "license": "all-rights-reserved"
+    }
   },
   "d3ward": {
-    "_desc": "https://github.com/d3ward/toolz#readme",
-    "_homepage": "https://github.com/d3ward/toolz",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1919,12 +2062,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/d3ward/toolz/master/src/d3host.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/d3ward/toolz#readme",
+      "homepage": "https://github.com/d3ward/toolz",
+      "license": "cc-by-sa-4.0"
     }
   },
   "dan_me_uk": {
-    "_desc": "https://www.dan.me.uk/",
-    "_homepage": "https://www.dan.me.uk/",
-    "_license": "all-rights-reserved",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1946,12 +2091,14 @@
     "mirrors": [
       "https://www.dan.me.uk/torlist/"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://www.dan.me.uk/",
+      "homepage": "https://www.dan.me.uk/",
+      "license": "all-rights-reserved"
+    }
   },
   "dandelion_antimalware": {
-    "_desc": "https://github.com/DandelionSprout/adfilt#readme=",
-    "_homepage": "https://github.com/DandelionSprout/adfilt",
-    "_license": "https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md",
     "archive": false,
     "checksums": {},
     "content": {
@@ -1976,12 +2123,14 @@
     "topic": "SECURITY",
     "variants": {
       "adguard": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareDomains.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/DandelionSprout/adfilt#readme=",
+      "homepage": "https://github.com/DandelionSprout/adfilt",
+      "license": "https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md"
     }
   },
   "dandelionsprout_norwegian": {
-    "_desc": "https://github.com/DandelionSprout/adfilt#readme=",
-    "_homepage": "https://github.com/DandelionSprout/adfilt",
-    "_license": "https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2002,12 +2151,14 @@
     "topic": "SECURITY",
     "variants": {
       "adguard": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/DandelionSprout/adfilt#readme=",
+      "homepage": "https://github.com/DandelionSprout/adfilt",
+      "license": "https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md"
     }
   },
   "darklist": {
-    "_desc": "https://www.darklist.de/",
-    "_homepage": "https://www.darklist.de/",
-    "_license": "not-available",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2029,12 +2180,14 @@
     "mirrors": [
       "https://www.darklist.de/raw.php"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://www.darklist.de/",
+      "homepage": "https://www.darklist.de/",
+      "license": "not-available"
+    }
   },
   "dataplane_sipinvitation": {
-    "_desc": "https://dataplane.org/signals.html",
-    "_homepage": "https://dataplane.org/",
-    "_license": "all-rights-reserved",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2052,12 +2205,14 @@
     "mirrors": [
       "https://dataplane.org/sipinvitation.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://dataplane.org/signals.html",
+      "homepage": "https://dataplane.org/",
+      "license": "all-rights-reserved"
+    }
   },
   "dataplane_sipquery": {
-    "_desc": "https://dataplane.org/signals.html",
-    "_homepage": "https://dataplane.org/",
-    "_license": "all-rights-reserved",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2075,12 +2230,14 @@
     "mirrors": [
       "https://dataplane.org/sipquery.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://dataplane.org/signals.html",
+      "homepage": "https://dataplane.org/",
+      "license": "all-rights-reserved"
+    }
   },
   "dataplane_sipregistration": {
-    "_desc": "https://dataplane.org/signals.html",
-    "_homepage": "https://dataplane.org/",
-    "_license": "all-rights-reserved",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2098,12 +2255,14 @@
     "mirrors": [
       "https://dataplane.org/sipregistration.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://dataplane.org/signals.html",
+      "homepage": "https://dataplane.org/",
+      "license": "all-rights-reserved"
+    }
   },
   "dataplane_sshpwauth": {
-    "_desc": "https://dataplane.org/signals.html",
-    "_homepage": "https://dataplane.org/",
-    "_license": "all-rights-reserved",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2121,12 +2280,14 @@
     "mirrors": [
       "https://dataplane.org/sshpwauth.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://dataplane.org/signals.html",
+      "homepage": "https://dataplane.org/",
+      "license": "all-rights-reserved"
+    }
   },
   "dataplane_vncrfb": {
-    "_desc": "https://dataplane.org/signals.html",
-    "_homepage": "https://dataplane.org/",
-    "_license": "all-rights-reserved",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2144,12 +2305,14 @@
     "mirrors": [
       "https://dataplane.org/vncrfb.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://dataplane.org/signals.html",
+      "homepage": "https://dataplane.org/",
+      "license": "all-rights-reserved"
+    }
   },
   "digitalside_domains": {
-    "_desc": "https://github.com/davidonzo/Threat-Intel#readme",
-    "_homepage": "https://github.com/davidonzo/Threat-Intel",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2171,12 +2334,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://osint.digitalside.it/Threat-Intel/lists/latestdomains.piHole.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/davidonzo/Threat-Intel#readme",
+      "homepage": "https://github.com/davidonzo/Threat-Intel",
+      "license": "mit"
     }
   },
   "digitalside_ips": {
-    "_desc": "https://github.com/davidonzo/Threat-Intel#readme",
-    "_homepage": "https://github.com/davidonzo/Threat-Intel",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2195,12 +2360,14 @@
       "https://osint.digitalside.it/Threat-Intel/lists/latestips.txt",
       "https://raw.githubusercontent.com/davidonzo/Threat-Intel/master/lists/latestips.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/davidonzo/Threat-Intel#readme",
+      "homepage": "https://github.com/davidonzo/Threat-Intel",
+      "license": "mit"
+    }
   },
   "disconnectme": {
-    "_desc": "https://github.com/disconnectme/disconnect-tracking-protection#readme",
-    "_homepage": "https://disconnect.me/",
-    "_license": "cc-by-sa-4.0",
     "_notes": "The 'services' file has similar domains: https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json",
     "archive": false,
     "checksums": {},
@@ -2219,12 +2386,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/disconnectme/disconnect-tracking-protection/master/entities.json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/disconnectme/disconnect-tracking-protection#readme",
+      "homepage": "https://disconnect.me/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "dshield": {
-    "_desc": "https://dshield.org/sources.html",
-    "_homepage": "https://dshield.org/",
-    "_license": "not-available",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2242,12 +2411,14 @@
     "mirrors": [
       "https://feeds.dshield.org/block.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://dshield.org/sources.html",
+      "homepage": "https://dshield.org/",
+      "license": "not-available"
+    }
   },
   "durablenapkin_avast": {
-    "_desc": "https://github.com/durablenapkin/block#readme",
-    "_homepage": "https://github.com/durablenapkin/block",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2265,12 +2436,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/durablenapkin/block/master/avast.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/durablenapkin/block#readme",
+      "homepage": "https://github.com/durablenapkin/block",
+      "license": "mit"
+    }
   },
   "durablenapkin_luminati": {
-    "_desc": "https://github.com/durablenapkin/block#readme",
-    "_homepage": "https://github.com/durablenapkin/block",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2288,12 +2461,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/durablenapkin/block/master/luminati.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/durablenapkin/block#readme",
+      "homepage": "https://github.com/durablenapkin/block",
+      "license": "mit"
+    }
   },
   "durablenapkin_scams": {
-    "_desc": "https://github.com/durablenapkin/scamblocklist#readme",
-    "_homepage": "https://github.com/durablenapkin/scamblocklist",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2314,12 +2489,14 @@
     "topic": "SECURITY",
     "variants": {
       "adguard": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/durablenapkin/scamblocklist#readme",
+      "homepage": "https://github.com/durablenapkin/scamblocklist",
+      "license": "mit"
     }
   },
   "durablenapkin_streaming": {
-    "_desc": "https://github.com/durablenapkin/block#readme",
-    "_homepage": "https://github.com/durablenapkin/block",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2337,12 +2514,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/durablenapkin/block/master/streaming.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/durablenapkin/block#readme",
+      "homepage": "https://github.com/durablenapkin/block",
+      "license": "mit"
+    }
   },
   "durablenapkin_tvstream": {
-    "_desc": "https://github.com/durablenapkin/block#readme",
-    "_homepage": "https://github.com/durablenapkin/block",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2360,12 +2539,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/durablenapkin/block/master/tvstream.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/durablenapkin/block#readme",
+      "homepage": "https://github.com/durablenapkin/block",
+      "license": "mit"
+    }
   },
   "easylist_finnish": {
-    "_desc": "https://github.com/finnish-easylist-addition/finnish-easylist-addition#readme",
-    "_homepage": "https://github.com/finnish-easylist-addition/finnish-easylist-addition",
-    "_license": "unlicense",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2386,12 +2567,14 @@
     "topic": "SECURITY",
     "variants": {
       "adguard": "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/finnish-easylist-addition/finnish-easylist-addition#readme",
+      "homepage": "https://github.com/finnish-easylist-addition/finnish-easylist-addition",
+      "license": "unlicense"
     }
   },
   "easylist_indonesian": {
-    "_desc": "https://github.com/ABPindo/indonesianadblockrules#abpindo=",
-    "_homepage": "https://github.com/ABPindo/indonesianadblockrules",
-    "_license": "https://github.com/ABPindo/indonesianadblockrules/blob/master/subscriptions/LICENSE",
     "_notes": "https://github.com/ABPindo/indonesianadblockrules/issues/336",
     "archive": false,
     "checksums": {},
@@ -2415,12 +2598,14 @@
       "adguard": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/aghome_adult.txt",
       "dnsmasq": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/dnsmasq_adult.txt",
       "pihole": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/domain_adult.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/ABPindo/indonesianadblockrules#abpindo=",
+      "homepage": "https://github.com/ABPindo/indonesianadblockrules",
+      "license": "https://github.com/ABPindo/indonesianadblockrules/blob/master/subscriptions/LICENSE"
     }
   },
   "energized_unblock": {
-    "_desc": "https://github.com/EnergizedProtection/unblock#energized-protection---unblock-=",
-    "_homepage": "https://github.com/EnergizedProtection/unblock",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2438,12 +2623,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/EnergizedProtection/unblock/master/basic/formats/domains.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/EnergizedProtection/unblock#energized-protection---unblock-=",
+      "homepage": "https://github.com/EnergizedProtection/unblock",
+      "license": "mit"
+    }
   },
   "energized_xtreme": {
-    "_desc": "https://github.com/EnergizedProtection/block#extensions=",
-    "_homepage": "https://github.com/EnergizedProtection/block",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2461,12 +2648,14 @@
     "mirrors": [
       "https://block.energized.pro/extensions/xtreme/formats/domains.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/EnergizedProtection/block#extensions=",
+      "homepage": "https://github.com/EnergizedProtection/block",
+      "license": "mit"
+    }
   },
   "esox_lucius_agenttesla": {
-    "_desc": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
-    "_homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
-    "_license": "cc0-1.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2484,12 +2673,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/AgentTesla%20-%20Malware%20Domain%20Feed%20V2"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
+      "homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
+      "license": "cc0-1.0"
+    }
   },
   "esox_lucius_amadey": {
-    "_desc": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
-    "_homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
-    "_license": "cc0-1.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2507,12 +2698,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/Amadey%20-%20Malware%20Domain%20Feed%20V2"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
+      "homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
+      "license": "cc0-1.0"
+    }
   },
   "esox_lucius_andromeda": {
-    "_desc": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
-    "_homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
-    "_license": "cc0-1.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2530,12 +2723,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/Andromeda%20-%20Malware%20Domain%20Feed%20V2"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
+      "homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
+      "license": "cc0-1.0"
+    }
   },
   "esox_lucius_asyncrat": {
-    "_desc": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
-    "_homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
-    "_license": "cc0-1.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2553,12 +2748,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/AsyncRAT%20-%20Malware%20Domain%20Feed%20V2"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
+      "homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
+      "license": "cc0-1.0"
+    }
   },
   "esox_lucius_azorult": {
-    "_desc": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
-    "_homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
-    "_license": "cc0-1.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2576,12 +2773,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/AZORult%20-%20Malware%20Domain%20Feed%20V2"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
+      "homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
+      "license": "cc0-1.0"
+    }
   },
   "exodus_trackers": {
-    "_desc": "https://etip.exodus-privacy.eu.org/",
-    "_homepage": "https://exodus-privacy.eu.org/en/",
-    "_license": "all-rights-reserved",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2600,12 +2799,14 @@
       "https://etip.exodus-privacy.eu.org/trackers/export",
       "https://reports.exodus-privacy.eu.org/api/trackers"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://etip.exodus-privacy.eu.org/",
+      "homepage": "https://exodus-privacy.eu.org/en/",
+      "license": "all-rights-reserved"
+    }
   },
   "fanboy_antifonts": {
-    "_desc": "https://fanboy.co.nz/filters.html",
-    "_homepage": "https://github.com/ryanbr/fanboy-adblock",
-    "_license": "cc-by-3.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2627,12 +2828,14 @@
     "topic": "SECURITY",
     "variants": {
       "adguard": "https://secure.fanboy.co.nz/fanboy-antifonts.txt"
+    },
+    "metadata": {
+      "description": "https://fanboy.co.nz/filters.html",
+      "homepage": "https://github.com/ryanbr/fanboy-adblock",
+      "license": "cc-by-3.0"
     }
   },
   "fanboy_cookiemonster": {
-    "_desc": "https://fanboy.co.nz/filters.html",
-    "_homepage": "https://github.com/ryanbr/fanboy-adblock",
-    "_license": "cc-by-3.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2655,12 +2858,14 @@
     "variants": {
       "adguard": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
       "pihole": "https://block.energized.pro/assets/sources/filter/fanboy-cookiemonster.txt"
+    },
+    "metadata": {
+      "description": "https://fanboy.co.nz/filters.html",
+      "homepage": "https://github.com/ryanbr/fanboy-adblock",
+      "license": "cc-by-3.0"
     }
   },
   "fanboy_indian": {
-    "_desc": "https://fanboy.co.nz/filters.html",
-    "_homepage": "https://github.com/ryanbr/fanboy-adblock",
-    "_license": "cc-by-3.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2683,12 +2888,14 @@
     "variants": {
       "adguard": "https://secure.fanboy.co.nz/fanboy-indian.txt",
       "pihole": "https://block.energized.pro/assets/sources/filter/fanboy-indian.txt"
+    },
+    "metadata": {
+      "description": "https://fanboy.co.nz/filters.html",
+      "homepage": "https://github.com/ryanbr/fanboy-adblock",
+      "license": "cc-by-3.0"
     }
   },
   "fanboy_ultimate": {
-    "_desc": "https://fanboy.co.nz/filters.html",
-    "_homepage": "https://github.com/ryanbr/fanboy-adblock",
-    "_license": "cc-by-3.0",
     "_notes": "The 'anti-facebook' list is covered by other Facebook hate.",
     "archive": false,
     "checksums": {},
@@ -2712,12 +2919,14 @@
     "variants": {
       "adguard": "https://secure.fanboy.co.nz/r/fanboy-ultimate.txt",
       "pihole": "https://block.energized.pro/assets/sources/filter/fanboy-ultimate.txt"
+    },
+    "metadata": {
+      "description": "https://fanboy.co.nz/filters.html",
+      "homepage": "https://github.com/ryanbr/fanboy-adblock",
+      "license": "cc-by-3.0"
     }
   },
   "filtri_dns": {
-    "_desc": "https://filtri-dns.ga/",
-    "_homepage": "https://filtri-dns.ga/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2738,12 +2947,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://filtri-dns.ga/filtri.txt"
+    },
+    "metadata": {
+      "description": "https://filtri-dns.ga/",
+      "homepage": "https://filtri-dns.ga/",
+      "license": "cc-by-sa-4.0"
     }
   },
   "firehol_level4": {
-    "_desc": "https://iplists.firehol.org/",
-    "_homepage": "https://github.com/firehol/blocklist-ipsets",
-    "_license": "all-rights-reserved",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2764,12 +2975,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level4.netset"
+    },
+    "metadata": {
+      "description": "https://iplists.firehol.org/",
+      "homepage": "https://github.com/firehol/blocklist-ipsets",
+      "license": "all-rights-reserved"
     }
   },
   "frellwits": {
-    "_desc": "https://github.com/lassekongo83/Frellwits-filter-lists#frellwits-filter-lists",
-    "_homepage": "https://github.com/lassekongo83/Frellwits-filter-lists",
-    "_license": "gpl-3.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2791,12 +3004,14 @@
     "variants": {
       "easylist": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
       "pihole": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/lassekongo83/Frellwits-filter-lists#frellwits-filter-lists",
+      "homepage": "https://github.com/lassekongo83/Frellwits-filter-lists",
+      "license": "gpl-3.0"
     }
   },
   "futafilter_hosts": {
-    "_desc": "https://github.com/FutaGuard/FutaFilter#futafilter=",
-    "_homepage": "https://github.com/FutaGuard/FutaFilter",
-    "_license": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/LICENSE",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2819,12 +3034,14 @@
     "variants": {
       "adguard": "https://filter.futa.gg/hosts.txt",
       "easylist": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/filter.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/FutaGuard/FutaFilter#futafilter=",
+      "homepage": "https://github.com/FutaGuard/FutaFilter",
+      "license": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/LICENSE"
     }
   },
   "futafilter_nofarm_hosts": {
-    "_desc": "https://github.com/FutaGuard/FutaFilter#futafilter=",
-    "_homepage": "https://github.com/FutaGuard/FutaFilter",
-    "_license": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/LICENSE",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2846,12 +3063,14 @@
     "topic": "SECURITY",
     "variants": {
       "adguard": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/nofarm_hosts.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/FutaGuard/FutaFilter#futafilter=",
+      "homepage": "https://github.com/FutaGuard/FutaFilter",
+      "license": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/LICENSE"
     }
   },
   "geoffrey_frogeye_firstparty": {
-    "_desc": "https://hostfiles.frogeye.fr/",
-    "_homepage": "https://hostfiles.frogeye.fr/",
-    "_license": "not-available",
     "_notes": "Has a 'firstparty-only-trackers' list, which is smaller.",
     "archive": false,
     "checksums": {},
@@ -2873,12 +3092,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://hostfiles.frogeye.fr/firstparty-trackers.txt"
+    },
+    "metadata": {
+      "description": "https://hostfiles.frogeye.fr/",
+      "homepage": "https://hostfiles.frogeye.fr/",
+      "license": "not-available"
     }
   },
   "geoffrey_frogeye_multiparty": {
-    "_desc": "https://hostfiles.frogeye.fr/",
-    "_homepage": "https://hostfiles.frogeye.fr/",
-    "_license": "not-available",
     "_notes": "Has a 'multiparty-only-trackers' list, which is smaller.",
     "archive": false,
     "checksums": {},
@@ -2900,12 +3121,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://hostfiles.frogeye.fr/multiparty-trackers.txt"
+    },
+    "metadata": {
+      "description": "https://hostfiles.frogeye.fr/",
+      "homepage": "https://hostfiles.frogeye.fr/",
+      "license": "not-available"
     }
   },
   "goodbye_ads": {
-    "_desc": "https://github.com/jerryn70/GoodbyeAds#goodbyeads---wrld-of-ads-free-internet",
-    "_homepage": "https://github.com/jerryn70/GoodbyeAds",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2926,12 +3149,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/jerryn70/GoodbyeAds#goodbyeads---wrld-of-ads-free-internet",
+      "homepage": "https://github.com/jerryn70/GoodbyeAds",
+      "license": "mit"
     }
   },
   "hexxium": {
-    "_desc": "https://hexxiumcreations.com/projects/malicious-domain-blocking/",
-    "_homepage": "https://github.com/HexxiumCreations/threat-list",
-    "_license": "all-rights-reserved",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2954,12 +3179,14 @@
     "variants": {
       "adguard": "https://raw.githubusercontent.com/HexxiumCreations/threat-list/gh-pages/hexxiumthreatlist.txt",
       "pihole": "https://raw.githubusercontent.com/HexxiumCreations/threat-list/gh-pages/hosts.txt"
+    },
+    "metadata": {
+      "description": "https://hexxiumcreations.com/projects/malicious-domain-blocking/",
+      "homepage": "https://github.com/HexxiumCreations/threat-list",
+      "license": "all-rights-reserved"
     }
   },
   "hipo_universities": {
-    "_desc": "https://github.com/Hipo/university-domains-list#university-domains-and-names-data-list--api=",
-    "_homepage": "https://github.com/Hipo/university-domains-list",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -2977,12 +3204,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/Hipo/university-domains-list#university-domains-and-names-data-list--api=",
+      "homepage": "https://github.com/Hipo/university-domains-list",
+      "license": "mit"
+    }
   },
   "infinitytec_ads_and_trackers": {
-    "_desc": "https://github.com/infinitytec/blocklists#infinitytecs-blocklists",
-    "_homepage": "https://github.com/infinitytec/blocklists",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3004,12 +3233,14 @@
     "variants": {
       "easylist": "https://raw.githubusercontent.com/infinitytec/blocklists/master/adfilters.txt",
       "pihole": "https://raw.githubusercontent.com/infinitytec/blocklists/master/ads-and-trackers.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/infinitytec/blocklists#infinitytecs-blocklists",
+      "homepage": "https://github.com/infinitytec/blocklists",
+      "license": "mit"
     }
   },
   "infinitytec_medical_pseudoscience": {
-    "_desc": "https://github.com/infinitytec/blocklists#infinitytecs-blocklists",
-    "_homepage": "https://github.com/infinitytec/blocklists",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3031,12 +3262,14 @@
     "variants": {
       "easylist": "https://raw.githubusercontent.com/infinitytec/blocklists/master/annoyances.txt",
       "pihole": "https://raw.githubusercontent.com/infinitytec/blocklists/master/medicalpseudoscience.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/infinitytec/blocklists#infinitytecs-blocklists",
+      "homepage": "https://github.com/infinitytec/blocklists",
+      "license": "mit"
     }
   },
   "infinitytec_multi_level_marketing": {
-    "_desc": "https://github.com/infinitytec/blocklists#infinitytecs-blocklists",
-    "_homepage": "https://github.com/infinitytec/blocklists",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3057,12 +3290,14 @@
     "topic": "SANITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/infinitytec/blocklists/master/mlm.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/infinitytec/blocklists#infinitytecs-blocklists",
+      "homepage": "https://github.com/infinitytec/blocklists",
+      "license": "mit"
     }
   },
   "infinitytec_scams_and_phishing": {
-    "_desc": "https://github.com/infinitytec/blocklists#infinitytecs-blocklists",
-    "_homepage": "https://github.com/infinitytec/blocklists",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3083,12 +3318,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/infinitytec/blocklists/master/scams-and-phishing.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/infinitytec/blocklists#infinitytecs-blocklists",
+      "homepage": "https://github.com/infinitytec/blocklists",
+      "license": "mit"
     }
   },
   "ios_trackers": {
-    "_desc": "https://github.com/jakejarvis/ios-trackers#ios-tracker-blocklist=",
-    "_homepage": "https://github.com/jakejarvis/ios-trackers",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3110,12 +3347,14 @@
     "variants": {
       "adguard": "https://raw.githubusercontent.com/jakejarvis/ios-trackers/master/adguard.txt",
       "pihole": "https://raw.githubusercontent.com/jakejarvis/ios-trackers/master/blocklist.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/jakejarvis/ios-trackers#ios-tracker-blocklist=",
+      "homepage": "https://github.com/jakejarvis/ios-trackers",
+      "license": "mit"
     }
   },
   "ipsum": {
-    "_desc": "https://github.com/stamparm/ipsum#about=",
-    "_homepage": "https://github.com/stamparm/ipsum",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3133,12 +3372,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/stamparm/ipsum#about=",
+      "homepage": "https://github.com/stamparm/ipsum",
+      "license": "mit"
+    }
   },
   "isc_adscore": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3156,12 +3397,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/adscore?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_alphastrike": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3179,12 +3422,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/alphastrike?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_arbor": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3202,12 +3447,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/arbor?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_blindferret": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3225,12 +3472,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/blindferret?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_censys": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3248,12 +3497,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/censys?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_ciarmy": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3271,12 +3522,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/ciarmy?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_cybergreen": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3294,12 +3547,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/cybergreen?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_erratasec": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3317,12 +3572,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/erratasec?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_internetcensus": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3340,12 +3597,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/internetcensus?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_ipip": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3363,12 +3622,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/ipip?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_netsystems": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3386,12 +3647,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/netsystems?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_onyphe": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3409,12 +3672,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/onyphe?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_rapid7sonar": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3432,12 +3697,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/rapid7sonar?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_recyber": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3455,12 +3722,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/recyber?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_scorecard": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3478,12 +3747,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/scorecard?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_shodan": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3501,12 +3772,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/shodan?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_stretchoid": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3524,12 +3797,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/stretchoid?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_univmichigan": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3547,12 +3822,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/univmichigan?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "isc_univsydney": {
-    "_desc": "https://isc.sans.edu/threatfeed.html",
-    "_homepage": "https://isc.sans.edu/api/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3570,12 +3847,14 @@
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/univsydney?json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "joewein": {
-    "_desc": "https://joewein.net/spam/bl-text.htm",
-    "_homepage": "https://joewein.net/",
-    "_license": "not-available",
     "archive": false,
     "checksums": {
       "md5": "https://joewein.net/dl/bl/dom-bl.txt.md5"
@@ -3596,12 +3875,14 @@
       "https://www.joewein.net/dl/bl/dom-bl.txt",
       "https://joewein.net/dl/bl/dom-bl.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://joewein.net/spam/bl-text.htm",
+      "homepage": "https://joewein.net/",
+      "license": "not-available"
+    }
   },
   "kadhosts": {
-    "_desc": "https://kadantiscam.netlify.app/",
-    "_homepage": "https://github.com/FiltersHeroes/KADhosts",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3622,12 +3903,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/KADhole.txt"
+    },
+    "metadata": {
+      "description": "https://kadantiscam.netlify.app/",
+      "homepage": "https://github.com/FiltersHeroes/KADhosts",
+      "license": "cc-by-sa-4.0"
     }
   },
   "kodopenguin_amazon_firestick": {
-    "_desc": "https://hosts.gameindustry.eu/",
-    "_homepage": "https://github.com/KodoPengin/GameIndustry-hosts-Template",
-    "_license": "https://gameindustry.eu/de/lizenz/",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3648,12 +3931,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Amazon-FireStick/hosts"
+    },
+    "metadata": {
+      "description": "https://hosts.gameindustry.eu/",
+      "homepage": "https://github.com/KodoPengin/GameIndustry-hosts-Template",
+      "license": "https://gameindustry.eu/de/lizenz/"
     }
   },
   "kodopenguin_android": {
-    "_desc": "https://hosts.gameindustry.eu/",
-    "_homepage": "https://github.com/KodoPengin/GameIndustry-hosts-Template",
-    "_license": "https://gameindustry.eu/de/lizenz/",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3674,12 +3959,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Android-Full-Template/hosts"
+    },
+    "metadata": {
+      "description": "https://hosts.gameindustry.eu/",
+      "homepage": "https://github.com/KodoPengin/GameIndustry-hosts-Template",
+      "license": "https://gameindustry.eu/de/lizenz/"
     }
   },
   "kodopenguin_gaming": {
-    "_desc": "https://hosts.gameindustry.eu/",
-    "_homepage": "https://github.com/KodoPengin/GameIndustry-hosts-Template",
-    "_license": "https://gameindustry.eu/de/lizenz/",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3700,12 +3987,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Gaming-Full-Template/hosts"
+    },
+    "metadata": {
+      "description": "https://hosts.gameindustry.eu/",
+      "homepage": "https://github.com/KodoPengin/GameIndustry-hosts-Template",
+      "license": "https://gameindustry.eu/de/lizenz/"
     }
   },
   "kodopenguin_main": {
-    "_desc": "https://hosts.gameindustry.eu/",
-    "_homepage": "https://github.com/KodoPengin/GameIndustry-hosts-Template",
-    "_license": "https://gameindustry.eu/de/lizenz/",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3726,12 +4015,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Main-Template/hosts"
+    },
+    "metadata": {
+      "description": "https://hosts.gameindustry.eu/",
+      "homepage": "https://github.com/KodoPengin/GameIndustry-hosts-Template",
+      "license": "https://gameindustry.eu/de/lizenz/"
     }
   },
   "kriskintel_covid": {
-    "_desc": "https://kriskintel.com/",
-    "_homepage": "https://kriskintel.com/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3752,12 +4043,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://kriskintel.com/feeds/ktip_covid_domains.txt"
+    },
+    "metadata": {
+      "description": "https://kriskintel.com/",
+      "homepage": "https://kriskintel.com/",
+      "license": "cc-by-sa-4.0"
     }
   },
   "kriskintel_log4j": {
-    "_desc": "https://kriskintel.com/",
-    "_homepage": "https://kriskintel.com/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3779,12 +4072,14 @@
     "mirrors": [
       "https://kriskintel.com/feeds/ktip_log4j_feeds.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://kriskintel.com/",
+      "homepage": "https://kriskintel.com/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "kriskintel_malicious_domains": {
-    "_desc": "https://kriskintel.com/",
-    "_homepage": "https://kriskintel.com/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3805,12 +4100,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://kriskintel.com/feeds/ktip_malicious_domains.txt"
+    },
+    "metadata": {
+      "description": "https://kriskintel.com/",
+      "homepage": "https://kriskintel.com/",
+      "license": "cc-by-sa-4.0"
     }
   },
   "kriskintel_malicious_ips": {
-    "_desc": "https://kriskintel.com/",
-    "_homepage": "https://kriskintel.com/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3831,12 +4128,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://kriskintel.com/feeds/ktip_malicious_Ips.txt"
+    },
+    "metadata": {
+      "description": "https://kriskintel.com/",
+      "homepage": "https://kriskintel.com/",
+      "license": "cc-by-sa-4.0"
     }
   },
   "kriskintel_ransomware": {
-    "_desc": "https://kriskintel.com/",
-    "_homepage": "https://kriskintel.com/",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3858,12 +4157,14 @@
     "mirrors": [
       "https://kriskintel.com/feeds/ktip_ransomware_feeds.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://kriskintel.com/",
+      "homepage": "https://kriskintel.com/",
+      "license": "cc-by-sa-4.0"
+    }
   },
   "lightswitch_ads_and_tracking": {
-    "_desc": "https://www.github.developerdan.com/hosts/",
-    "_homepage": "https://github.com/lightswitch05/hosts",
-    "_license": "apache-2.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3885,12 +4186,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/ads-and-tracking-extended.txt"
+    },
+    "metadata": {
+      "description": "https://www.github.developerdan.com/hosts/",
+      "homepage": "https://github.com/lightswitch05/hosts",
+      "license": "apache-2.0"
     }
   },
   "lightswitch_amp_hosts": {
-    "_desc": "https://www.github.developerdan.com/hosts/",
-    "_homepage": "https://github.com/lightswitch05/hosts",
-    "_license": "apache-2.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3912,12 +4215,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/amp-hosts-extended.txt"
+    },
+    "metadata": {
+      "description": "https://www.github.developerdan.com/hosts/",
+      "homepage": "https://github.com/lightswitch05/hosts",
+      "license": "apache-2.0"
     }
   },
   "lightswitch_dating": {
-    "_desc": "https://www.github.developerdan.com/hosts/",
-    "_homepage": "https://github.com/lightswitch05/hosts",
-    "_license": "apache-2.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3939,12 +4244,14 @@
     "topic": "SANITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/dating-services-extended.txt"
+    },
+    "metadata": {
+      "description": "https://www.github.developerdan.com/hosts/",
+      "homepage": "https://github.com/lightswitch05/hosts",
+      "license": "apache-2.0"
     }
   },
   "lightswitch_facebook": {
-    "_desc": "https://www.github.developerdan.com/hosts/",
-    "_homepage": "https://github.com/lightswitch05/hosts",
-    "_license": "apache-2.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3966,12 +4273,14 @@
     "topic": "SANITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/facebook-extended.txt"
+    },
+    "metadata": {
+      "description": "https://www.github.developerdan.com/hosts/",
+      "homepage": "https://github.com/lightswitch05/hosts",
+      "license": "apache-2.0"
     }
   },
   "lightswitch_hate_and_junk": {
-    "_desc": "https://www.github.developerdan.com/hosts/",
-    "_homepage": "https://github.com/lightswitch05/hosts",
-    "_license": "apache-2.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -3993,12 +4302,14 @@
     "topic": "SANITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/hate-and-junk-extended.txt"
+    },
+    "metadata": {
+      "description": "https://www.github.developerdan.com/hosts/",
+      "homepage": "https://github.com/lightswitch05/hosts",
+      "license": "apache-2.0"
     }
   },
   "lightswitch_tracking_aggressive": {
-    "_desc": "https://www.github.developerdan.com/hosts/",
-    "_homepage": "https://github.com/lightswitch05/hosts",
-    "_license": "apache-2.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -4020,12 +4331,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/tracking-aggressive-extended.txt"
+    },
+    "metadata": {
+      "description": "https://www.github.developerdan.com/hosts/",
+      "homepage": "https://github.com/lightswitch05/hosts",
+      "license": "apache-2.0"
     }
   },
   "list_kr_adservice": {
-    "_desc": "https://github.com/List-KR/List-KR#list-kr",
-    "_homepage": "https://github.com/List-KR/List-KR",
-    "_license": "gpl-3.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -4046,12 +4359,14 @@
     "topic": "SECURITY",
     "variants": {
       "adguard": "https://raw.githubusercontent.com/List-KR/List-KR/master/filter.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/List-KR/List-KR#list-kr",
+      "homepage": "https://github.com/List-KR/List-KR",
+      "license": "gpl-3.0"
     }
   },
   "list_kr_firstparty_adservice": {
-    "_desc": "https://github.com/List-KR/List-KR#list-kr",
-    "_homepage": "https://github.com/List-KR/List-KR",
-    "_license": "gpl-3.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -4069,12 +4384,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/List-KR/List-KR/master/filters-share/adservice_firstparty.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/List-KR/List-KR#list-kr",
+      "homepage": "https://github.com/List-KR/List-KR",
+      "license": "gpl-3.0"
+    }
   },
   "littlecordines_general": {
-    "_desc": "https://github.com/LittleCordines/pfsense-hosts-file/#readme=",
-    "_homepage": "https://github.com/LittleCordines/pfsense-hosts-file/",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -4095,12 +4412,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/LittleCordines/pfsense-hosts-file/master/GeneralBlocklists"
+    },
+    "metadata": {
+      "description": "https://github.com/LittleCordines/pfsense-hosts-file/#readme=",
+      "homepage": "https://github.com/LittleCordines/pfsense-hosts-file/",
+      "license": "mit"
     }
   },
   "littlecordines_porn": {
-    "_desc": "https://github.com/LittleCordines/pfsense-hosts-file/#readme=",
-    "_homepage": "https://github.com/LittleCordines/pfsense-hosts-file/",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -4121,12 +4440,14 @@
     "topic": "SANITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/LittleCordines/pfsense-hosts-file/master/PornBlocklists"
+    },
+    "metadata": {
+      "description": "https://github.com/LittleCordines/pfsense-hosts-file/#readme=",
+      "homepage": "https://github.com/LittleCordines/pfsense-hosts-file/",
+      "license": "mit"
     }
   },
   "mailscanner_bad_phishing": {
-    "_desc": "https://www.mailborder.com/products/hosted-email-spam-filter/",
-    "_homepage": "https://www.mailborder.com/",
-    "_license": "not-available",
     "_notes": "Could use 'phishing.safe.sites.conf' as a whitelist.",
     "archive": false,
     "checksums": {},
@@ -4148,12 +4469,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "http://phishing.mailscanner.info/phishing.bad.sites.conf"
+    },
+    "metadata": {
+      "description": "https://www.mailborder.com/products/hosted-email-spam-filter/",
+      "homepage": "https://www.mailborder.com/",
+      "license": "not-available"
     }
   },
   "majkiit_hole_cert": {
-    "_desc": "https://majkiit.github.io/polish-ads-filter/docs/",
-    "_homepage": "https://github.com/MajkiIT/polish-ads-filter",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -4174,12 +4497,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hole_cert_pl.txt"
+    },
+    "metadata": {
+      "description": "https://majkiit.github.io/polish-ads-filter/docs/",
+      "homepage": "https://github.com/MajkiIT/polish-ads-filter",
+      "license": "cc-by-sa-4.0"
     }
   },
   "majkiit_hostfile": {
-    "_desc": "https://majkiit.github.io/polish-ads-filter/docs/",
-    "_homepage": "https://github.com/MajkiIT/polish-ads-filter",
-    "_license": "cc-by-sa-4.0",
     "archive": false,
     "checksums": {},
     "content": {
@@ -4200,12 +4525,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hole_cert_pl.txt"
+    },
+    "metadata": {
+      "description": "https://majkiit.github.io/polish-ads-filter/docs/",
+      "homepage": "https://github.com/MajkiIT/polish-ads-filter",
+      "license": "cc-by-sa-4.0"
     }
   },
   "malsilo": {
-    "_desc": "https://raw-data.gitlab.io/post/malsilo_2.0/",
-    "_homepage": "https://raw-data.gitlab.io/post/malsilo_2.0/",
-    "_license": "not-available",
     "archive": false,
     "checksums": {},
     "content": {
@@ -4227,12 +4554,14 @@
     "mirrors": [
       "https://malsilo.gitlab.io/feeds/dumps/master-feed.json"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://raw-data.gitlab.io/post/malsilo_2.0/",
+      "homepage": "https://raw-data.gitlab.io/post/malsilo_2.0/",
+      "license": "not-available"
+    }
   },
   "maltrail_domains": {
-    "_desc": "https://github.com/stamparm/MalTrail#introduction=",
-    "_homepage": "https://github.com/stamparm/MalTrail",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -4253,12 +4582,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/stamparm/aux/master/maltrail-malware-domains.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/stamparm/MalTrail#introduction=",
+      "homepage": "https://github.com/stamparm/MalTrail",
+      "license": "mit"
     }
   },
   "maltrail_ips": {
-    "_desc": "https://github.com/stamparm/MalTrail#introduction=",
-    "_homepage": "https://github.com/stamparm/MalTrail",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -4276,12 +4607,14 @@
     "mirrors": [
       "https://raw.githubusercontent.com/stamparm/aux/master/fetch-some-list.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "metadata": {
+      "description": "https://github.com/stamparm/MalTrail#introduction=",
+      "homepage": "https://github.com/stamparm/MalTrail",
+      "license": "mit"
+    }
   },
   "perflyst_amazon_fire_tv": {
-    "_desc": "https://github.com/Perflyst/PiHoleBlocklist#readme",
-    "_homepage": "https://github.com/Perflyst/PiHoleBlocklist",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -4302,12 +4635,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/AmazonFireTV.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/Perflyst/PiHoleBlocklist#readme",
+      "homepage": "https://github.com/Perflyst/PiHoleBlocklist",
+      "license": "mit"
     }
   },
   "perflyst_android_tracking": {
-    "_desc": "https://github.com/Perflyst/PiHoleBlocklist#readme",
-    "_homepage": "https://github.com/Perflyst/PiHoleBlocklist",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -4328,12 +4663,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/Perflyst/PiHoleBlocklist#readme",
+      "homepage": "https://github.com/Perflyst/PiHoleBlocklist",
+      "license": "mit"
     }
   },
   "perflyst_session_replay": {
-    "_desc": "https://github.com/Perflyst/PiHoleBlocklist#readme",
-    "_homepage": "https://github.com/Perflyst/PiHoleBlocklist",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -4354,12 +4691,14 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SessionReplay.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/Perflyst/PiHoleBlocklist#readme",
+      "homepage": "https://github.com/Perflyst/PiHoleBlocklist",
+      "license": "mit"
     }
   },
   "perflyst_smart_tv": {
-    "_desc": "https://github.com/Perflyst/PiHoleBlocklist#readme",
-    "_homepage": "https://github.com/Perflyst/PiHoleBlocklist",
-    "_license": "mit",
     "archive": false,
     "checksums": {},
     "content": {
@@ -4381,6 +4720,11 @@
     "variants": {
       "adguard": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt",
       "pihole": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt"
+    },
+    "metadata": {
+      "description": "https://github.com/Perflyst/PiHoleBlocklist#readme",
+      "homepage": "https://github.com/Perflyst/PiHoleBlocklist",
+      "license": "mit"
     }
   }
 }
