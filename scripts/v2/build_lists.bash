@@ -57,16 +57,16 @@ main() {
       (set +e && aria2c -i- -d "$cache" --conf-path='./configs/aria2.conf' && set -e) || set -e
 
     jq -r --arg method "$method" 'to_entries[] |
-      select(.value.method == $method) | .key as $k | .value.formats[] |
-      "\($k)#\(.filter)#\(.format)#\(.content.type)"' data/v2/lists.json |
-      while IFS='#' read -r key filter format content_type; do
-        find -P -O3 "$cache" -type f -exec sem -j+0 ./scripts/v2/apply_filters.bash {} "$key" "$method" "$filter" "$format" "$content_type" "$DOWNLOADS" \;
+      select(.value.method == $method) | $k as key | .value.formats[] |
+      "\($k)#\(.content.filter)#\(.content.type)#\(.filter)#\(.format)"' data/v2/lists.json |
+      while IFS='#' read -r key content_filter content_type list_filter format; do
+        find -P -O3 "$cache" -type f -exec sem -j+0 ./scripts/v2/apply_filters.bash {} "$key" "$content_filter" "$content_type" "$method" "$list_filter" "$format" "$DOWNLOADS" \;
         sem --wait
       done
 
     for format in "${FORMATS[@]}"; do
       list="build/${method}_${format}.txt"
-      nxlist="dist/ALLOW_NX${format}.txt"
+      nxlist="dist/NX${format}.txt"
 
       if test -f "$list"; then
         if [[ "$method" == "$METHOD_BLOCK" ]]; then
@@ -102,8 +102,8 @@ main() {
           merge_lists "$list" "$nxlist"
 
           # https://askubuntu.com/a/562352
-          # this will send each line into the temp file as it's processed instead of keeping it in memory
-          mawk 'NF && !seen[$0]++' "$blacklist" | parallel --pipe -k -j+0 grep --line-buffered -Fxvf "$list" - >>"$TMP"
+          # send each line into the temp file as it's processed instead of keeping it in memory
+          parallel --pipe -k -j+0 grep --line-buffered -Fxvf "$list" - <"$blacklist" >>"$TMP"
           cp "$TMP" "$blacklist"
           : >"$TMP"
         fi
