@@ -4614,6 +4614,303 @@
     ],
     "topic": "SECURITY"
   },
+  "malware_discoverer": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "CSV"
+    },
+    "formats": [
+      {
+        "filter": "MALWARE_DISCOVERER_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "MALWARE_DISCOVERER_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/zhouhanc/malware-discoverer#readme",
+      "homepage": "https://github.com/zhouhanc/malware-discoverer",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/zhouhanc/malware-discoverer/master/blocklist.csv"
+    ],
+    "topic": "SECURITY"
+  },
+  "marktron_fakenews": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/marktron/fakenews#readme",
+      "homepage": "https://github.com/marktron/fakenews",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/marktron/fakenews/master/fakenews"
+    ],
+    "topic": "SANITY"
+  },
+  "metalhead": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/T145/metalhead#readme",
+      "homepage": "https://github.com/T145/metalhead",
+      "license": "agpl-3.0"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/T145/metalhead/master/dist/black_nxdomain.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "mirai_tracker": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_FIRST_COLUMN",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://mirai.security.gives/how_it_works.php",
+      "homepage": "https://mirai.security.gives/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://mirai.security.gives/data/ip_list.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "mobiletrackers_list": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/craiu/mobiletrackers#readme",
+      "homepage": "https://github.com/craiu/mobiletrackers",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/craiu/mobiletrackers/master/list.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "mobiletrackers_windows": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/craiu/mobiletrackers#readme",
+      "homepage": "https://github.com/craiu/mobiletrackers",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/craiu/mobiletrackers/master/windowslist.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "myip_full_blacklist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MYIP_IPV4",
+        "format": "IPV4"
+      },
+      {
+        "filter": "MYIP_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "MYIP_IPV6",
+        "format": "IPV6"
+      }
+    ],
+    "metadata": {
+      "description": "https://myip.ms/browse/blacklist/Blacklist_IP_Blacklist_IP_Addresses_Live_Database_Real-time",
+      "homepage": "https://myip.ms/",
+      "license": "all-rights-reserved",
+      "notes": "The second col contains host information, which can be either the first col or a domain"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://myip.ms/files/blacklist/general/full_blacklist_database.zip"
+    ],
+    "topic": "SECURITY"
+  },
+  "myip_webcrawlers": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_FIRST_COLUMN",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://myip.ms/browse/blacklist/Blacklist_IP_Blacklist_IP_Addresses_Live_Database_Real-time",
+      "homepage": "https://myip.ms/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://myip.ms/files/blacklist/general/full_blacklist_database.zip"
+    ],
+    "topic": "SECURITY"
+  },
+  "nextdns_bypass_methods": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/metadata#readme=",
+      "homepage": "https://github.com/nextdns/metadata/tree/master/parentalcontrol",
+      "license": "all-rights-reserved"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/metadata/master/parentalcontrol/bypass-methods"
+    ],
+    "topic": "SECURITY"
+  },
+  "no_qanon": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/rimu/no-qanon#readme",
+      "homepage": "https://github.com/rimu/no-qanon",
+      "license": "https://raw.githubusercontent.com/rimu/no-qanon/master/LICENSE.txt"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/rimu/no-qanon/master/etc_hosts.txt"
+    ],
+    "topic": "SANITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/rimu/no-qanon/master/etc_hosts.txt",
+      "adguard": "https://raw.githubusercontent.com/rimu/no-qanon/master/adblock.txt",
+      "dnsmasq": "https://raw.githubusercontent.com/rimu/no-qanon/master/dnsmasq_hosts.txt"
+    }
+  },
+  "nocoin": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/hoshsadiq/adblock-nocoin-list#readme=",
+      "homepage": "https://github.com/hoshsadiq/adblock-nocoin-list",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt",
+      "adguard": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt"
+    }
+  },
   "perflyst_amazon_fire_tv": {
     "archive": false,
     "checksums": {},
