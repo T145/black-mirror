@@ -66,6 +66,7 @@ main() {
   status='exports/target-status.json'
 
   lychee --exclude-mail -nEf Json -o "$status" -T 200 -t 10 -r 0 -u 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0' target/*.txt 1>/dev/null || true
+  jq -SM '.' "$status" | sponge "$status"
 
   jq -r '.fail_map | to_entries[] | .key as $k | .value[] | select(.status | startswith("Failed:") or startswith("Cached:")) | "\($k)#\(.url)"' "$status" |
     while IFS='#' read -r target url; do
