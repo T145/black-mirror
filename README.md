@@ -14,16 +14,13 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
   </a>
-  <img src="https://badges.pufler.dev/updated/T145/black-mirror"
-       alt="last_updated"
-       longdesc="https://pufler.dev/git-badges/"
-       crossorigin="anonymous"
-       referrerpolicy="no-referrer" />
-  <img src="https://badges.pufler.dev/visits/T145/black-mirror"
-       alt="visits"
-       longdesc="https://pufler.dev/git-badges/"
-       crossorigin="anonymous"
-       referrerpolicy="no-referrer" />
+  <a href="https://visitorbadge.io/status?path=T145%2Fblack-mirror">
+    <img src="https://api.visitorbadge.io/api/visitors?path=T145%2Fblack-mirror&label=Visits&countColor=%237B1E7A&style=flat"
+        alt="visits"
+        longdesc="https://www.visitorbadge.io/"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+  </a>
   <a href="https://github.com/T145/black-mirror/commits/master.atom">
     <img src="https://img.shields.io/static/v1?logo=rss&label=RSS&message=feed&color=FFA500"
         alt="release"
