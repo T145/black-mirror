@@ -15,7 +15,7 @@
         referrerpolicy="no-referrer" />
   </a>
   <a href="https://visitorbadge.io/status?path=T145%2Fblack-mirror">
-    <img src="https://api.visitorbadge.io/api/visitors?path=T145%2Fblack-mirror&label=Visits&countColor=%237B1E7A&style=flat"
+    <img src="https://api.visitorbadge.io/api/visitors?path=T145%2Fblack-mirror&label=Visits&countColor=%237B1E7A&style=flat&labelStyle=none"
         alt="visits"
         longdesc="https://www.visitorbadge.io/"
         crossorigin="anonymous"
