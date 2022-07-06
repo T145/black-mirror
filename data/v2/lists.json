@@ -3128,7 +3128,7 @@
       "pihole": "https://hostfiles.frogeye.fr/multiparty-trackers.txt"
     }
   },
-  "goodbye_ads": {
+  "goodbye_ads_core": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -3149,11 +3149,151 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt"
+      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Core/GoodbyeAds-Database.txt"
     ],
     "topic": "SECURITY",
     "variants": {
-      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt"
+      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Core/GoodbyeAds-Database.txt"
+    }
+  },
+  "goodbye_ads_leeco": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/jerryn70/GoodbyeAds#package-sources=",
+      "homepage": "https://github.com/jerryn70/GoodbyeAds",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-LeEco-Extension.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-LeEco-Extension.txt"
+    }
+  },
+  "goodbye_ads_xiaomi": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/jerryn70/GoodbyeAds#package-sources=",
+      "homepage": "https://github.com/jerryn70/GoodbyeAds",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Xiaomi-Extension.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Xiaomi-Extension.txt"
+    }
+  },
+  "goodbye_ads_youtube": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/jerryn70/GoodbyeAds#package-sources=",
+      "homepage": "https://github.com/jerryn70/GoodbyeAds",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-YouTube-AdBlock.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-YouTube-AdBlock.txt"
+    }
+  },
+  "goodbye_ads_samsung": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/jerryn70/GoodbyeAds#package-sources=",
+      "homepage": "https://github.com/jerryn70/GoodbyeAds",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Samsung-AdBlock.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Samsung-AdBlock.txt"
+    }
+  },
+  "goodbye_ads_spotify": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/jerryn70/GoodbyeAds#package-sources=",
+      "homepage": "https://github.com/jerryn70/GoodbyeAds",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Spotify-AdBlock.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Spotify-AdBlock.txt"
     }
   },
   "hexxium": {
@@ -4910,6 +5050,208 @@
       "adguard": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt",
       "pihole": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt"
     }
+  },
+  "noplaylist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/allendema/noplaylist#readme=",
+      "homepage": "https://github.com/allendema/noplaylist",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/allendema/noplaylist/main/NoPlayList.txt",
+      "https://codeberg.org/allendema/NoPlayList/raw/branch/main/NoPlayList.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/allendema/noplaylist/main/NoPlayList.txt"
+    }
+  },
+  "not_on_my_shift": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/allendema/noplaylist#readme=",
+      "homepage": "https://orca.pet/notonmyshift/",
+      "license": "https://orca.pet/#license"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://orca.pet/notonmyshift/domains.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://orca.pet/notonmyshift/abp.txt",
+      "pihole": "https://orca.pet/notonmyshift/hosts.txt"
+    }
+  },
+  "notrack_annoyance": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://quidsup.net/notrack/blocklist.php",
+      "homepage": "https://quidsup.net/notrack/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://quidsup.net/notrack/blocklist.php?download=annoyancedomains",
+      "https://gitlab.com/quidsup/notrack-annoyance-blocklist/-/raw/master/annoyance.list"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://quidsup.net/notrack/blocklist.php?download=annoyanceunix",
+      "pihole": "https://quidsup.net/notrack/blocklist.php?download=annoyance"
+    }
+  },
+  "notrack_malware": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://quidsup.net/notrack/blocklist.php",
+      "homepage": "https://quidsup.net/notrack/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://quidsup.net/notrack/blocklist.php?download=malwaredomains",
+      "https://gitlab.com/quidsup/notrack-blocklists/-/raw/master/malware.list"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://quidsup.net/notrack/blocklist.php?download=malwareunix",
+      "pihole": "https://quidsup.net/notrack/blocklist.php?download=malware"
+    }
+  },
+  "notrack_trackers": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://quidsup.net/notrack/blocklist.php",
+      "homepage": "https://quidsup.net/notrack/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://quidsup.net/notrack/blocklist.php?download=trackersdomains",
+      "https://gitlab.com/quidsup/notrack-blocklists/-/raw/master/trackers.list"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://quidsup.net/notrack/blocklist.php?download=trackersunix",
+      "pihole": "https://quidsup.net/notrack/blocklist.php?download=trackers"
+    }
+  },
+  "notrack_tracker_radar": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://quidsup.net/notrack/blocklist.php",
+      "homepage": "https://quidsup.net/notrack/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.hosts",
+      "pihole": "https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.hosts"
+    }
+  },
+  "npc_hosts": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_HOSTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "http://npc.0am.jp/hosts.php",
+      "homepage": "http://npc.0am.jp/",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "http://npc.0am.jp/hosts.php?dl=1"
+    ],
+    "topic": "SECURITY"
   },
   "perflyst_amazon_fire_tv": {
     "archive": false,
