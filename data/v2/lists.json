@@ -3184,62 +3184,6 @@
       "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-LeEco-Extension.txt"
     }
   },
-  "goodbye_ads_xiaomi": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/jerryn70/GoodbyeAds#package-sources=",
-      "homepage": "https://github.com/jerryn70/GoodbyeAds",
-      "license": "mit"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Xiaomi-Extension.txt"
-    ],
-    "topic": "SECURITY",
-    "variants": {
-      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Xiaomi-Extension.txt"
-    }
-  },
-  "goodbye_ads_youtube": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/jerryn70/GoodbyeAds#package-sources=",
-      "homepage": "https://github.com/jerryn70/GoodbyeAds",
-      "license": "mit"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-YouTube-AdBlock.txt"
-    ],
-    "topic": "SECURITY",
-    "variants": {
-      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-YouTube-AdBlock.txt"
-    }
-  },
   "goodbye_ads_samsung": {
     "archive": false,
     "checksums": {},
@@ -3294,6 +3238,62 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Spotify-AdBlock.txt"
+    }
+  },
+  "goodbye_ads_xiaomi": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/jerryn70/GoodbyeAds#package-sources=",
+      "homepage": "https://github.com/jerryn70/GoodbyeAds",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Xiaomi-Extension.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Xiaomi-Extension.txt"
+    }
+  },
+  "goodbye_ads_youtube": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/jerryn70/GoodbyeAds#package-sources=",
+      "homepage": "https://github.com/jerryn70/GoodbyeAds",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-YouTube-AdBlock.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-YouTube-AdBlock.txt"
     }
   },
   "hexxium": {
@@ -5169,6 +5169,35 @@
       "pihole": "https://quidsup.net/notrack/blocklist.php?download=malware"
     }
   },
+  "notrack_tracker_radar": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://quidsup.net/notrack/blocklist.php",
+      "homepage": "https://quidsup.net/notrack/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.hosts",
+      "pihole": "https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.hosts"
+    }
+  },
   "notrack_trackers": {
     "archive": false,
     "checksums": {},
@@ -5197,35 +5226,6 @@
     "variants": {
       "adguard": "https://quidsup.net/notrack/blocklist.php?download=trackersunix",
       "pihole": "https://quidsup.net/notrack/blocklist.php?download=trackers"
-    }
-  },
-  "notrack_tracker_radar": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "MAWK_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://quidsup.net/notrack/blocklist.php",
-      "homepage": "https://quidsup.net/notrack/",
-      "license": "gpl-3.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.txt"
-    ],
-    "topic": "SECURITY",
-    "variants": {
-      "adguard": "https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.hosts",
-      "pihole": "https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.hosts"
     }
   },
   "npc_hosts": {
