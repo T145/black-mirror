@@ -556,6 +556,8 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [DNS For Family](https://dnsforfamily.com/Public/customBlacklist.txt)
 - [XIU2](https://github.com/XIU2/TrackersListCollection)
   - blacklist
+- [blockconvert](https://github.com/mkb2091/blockconvert)
+  - [blocklist](https://github.com/mkb2091/blockconvert/blob/master/internal/blocklist.txt)
 
 ### ⬜ Whitelists
 
