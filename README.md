@@ -665,6 +665,8 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [MiscellaneousFactory](https://github.com/MiscellaneousFactory/AdBlockList/blob/master/autocheck.sh)
 - [rentianyu](https://github.com/rentianyu/Ad-set-hosts/blob/master/update.sh)
 - [GitHub520](https://github.com/521xueweihan/GitHub520)
+- [Matty Roberts Threat List](https://www.matthewroberts.io/threatlist.html)
+  - Used lists [here](https://github.com/bluerogue/threatlist/blob/master/src/main/java/io/matthewroberts/threatlist/service/ThreatAggregationServiceImpl.java#L32).
 
 ### 🧟 Zombies
 
