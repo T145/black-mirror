@@ -558,6 +558,9 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
   - blacklist
 - [blockconvert](https://github.com/mkb2091/blockconvert)
   - [blocklist](https://github.com/mkb2091/blockconvert/blob/master/internal/blocklist.txt)
+- [CleanTalk](https://cleantalk.org/help/iptables-connect)
+- [UA Blocklist](https://blocklist.net.ua/providers/)
+- [BotScout](https://botscout.com/last_caught_cache.htm)
 
 ### ⬜ Whitelists
 
@@ -942,8 +945,6 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 
 ### Need for speed
 
-#### References
-
 - https://fossies.org/linux/parallel/src/parsort
 - https://unix.stackexchange.com/questions/579251/how-to-use-parallel-to-speed-up-sort-for-big-files-fitting-in-ram#579252
 - https://askubuntu.com/questions/1006377/check-the-max-allowed-threads-count-for-sure#1006384
@@ -956,3 +957,4 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - https://firebog.net/
 - https://grimore.org/assets/databases/blocklist-ipsets
 - https://users.cs.northwestern.edu/~jesse/course/cs214-fa19/lec/21-bloom/bloom.txt
+- https://gist.github.com/jedisct1/c7548d814de2dd661f033d9cb18a0006
