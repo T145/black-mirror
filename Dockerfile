@@ -13,7 +13,7 @@ RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
     && go install github.com/StevenBlack/ghosts@latest
 
 # production image using snyk's recommended os version
-FROM ubuntu:impish
+FROM ubuntu:latest
 
 LABEL maintainer="T145" \
       version="4.1.0" \
