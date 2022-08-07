@@ -623,9 +623,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "miller",
+        "engine": "mawk",
         "format": "domain",
-        "rule": "value"
+        "rule": "BEGIN{FS=\",\"}NR>1{print $1}"
       }
     ],
     "mirrors": [
@@ -714,30 +714,22 @@
       "https://www.opendbl.net/lists/bruteforce.list"
     ]
   },
-  "c2_intel_domains": {
+  "c2_intel_feeds": {
     "color": "black",
     "filters": [
       {
         "engine": "miller",
         "format": "domain",
         "rule": "#domain"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/domainC2s-30day.csv"
-    ]
-  },
-  "c2_intel_ips": {
-    "color": "black",
-    "filters": [
+      },
       {
         "engine": "miller",
         "format": "ipv4",
-        "rule": "#ip"
+        "rule": "ip"
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv"
+      "https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/domainC2swithURLwithIP-30day.csv"
     ]
   },
   "certego": {
