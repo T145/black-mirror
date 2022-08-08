@@ -3667,37 +3667,6 @@
       "https://threatcrowd.org/feeds/ips.txt"
     ]
   },
-  "threatsourcing_dns_names": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "/^([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+([[:space:]]|$)/"
-      },
-      {
-        "engine": "gawk",
-        "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(:|$)/{sub(/:.*/,\"\",$0); print $0}"
-      }
-    ],
-    "mirrors": [
-      "https://www.threatsourcing.com/dnall-free.txt"
-    ]
-  },
-  "threatsourcing_malicious_ips": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "cat",
-        "format": "ipv4",
-        "rule": ""
-      }
-    ],
-    "mirrors": [
-      "https://www.threatsourcing.com/ipall-free.txt"
-    ]
-  },
   "tinycheck": {
     "color": "black",
     "filters": [

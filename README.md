@@ -366,7 +366,6 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
   - [univsydney](https://www.sydney.edu.au/)
 - [cinsscore](https://cinsscore.com/#list)
 - [Rutgers University Attack Log](https://www.rutgers.edu/)
-- [threatsourcing](https://www.threatsourcing.com/)
 - [maltrail](https://github.com/stamparm/maltrail#blacklist)
 - [darklist](https://www.darklist.de/)
 - [cryptolaemus](https://paste.cryptolaemus.com/)
@@ -670,6 +669,7 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [GitHub520](https://github.com/521xueweihan/GitHub520)
 - [Matty Roberts Threat List](https://www.matthewroberts.io/threatlist.html)
   - Used lists [here](https://github.com/bluerogue/threatlist/blob/master/src/main/java/io/matthewroberts/threatlist/service/ThreatAggregationServiceImpl.java#L32).
+- [StrictBlockPAllebone](https://github.com/pallebone/StrictBlockPAllebone)
 
 ### 🧟 Zombies
 
@@ -890,6 +890,9 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [4in6](http://www.4in6.net/legacy/AdBlock.txt)
   - Last-Modified: Fri, 30 Oct 2020 22:09:46 GMT
   - [Threatfeeds](https://threatfeeds.4in6.net/api/deleteme?list=doorknockers)
+- [threatsourcing](https://www.threatsourcing.com/)
+  - dnall-free
+  - ipall-free
 
 ### 🕵🏻 Lamers Unwelcome
 
@@ -903,7 +906,7 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [Metasploit CVEs](https://feeds.ecrimelabs.net/data/metasploit-cve)
 - [malarchive](https://github.com/raw-data/malarchive)
 
-### Interesting Oddities
+### 🃏 Interesting Oddities
 
 - https://www.chaosreigns.com/
 - https://vpn.hidemyass.com/vpn-config/
