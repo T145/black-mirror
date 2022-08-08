@@ -746,3 +746,11 @@
 - e8e61b3: Documented CleanTalk, UA Blocklist, and BotScout (T145)
 ## 06-08-2022 13:42:31
 - 58c2f2f: ✨🍰✨ (T145)
+## 08-08-2022 00:39:21
+- Dockerfile to reduce vulnerabilities [#97](https://github.com/T145/black-mirror/pull/97) ([snyk-bot](https://github.com/T145/black-mirror/commit/3f8bdb3caa9ebef8034fcb7e88111e20380acc31))
+
+## Commits
+- 7f7eeec: ✨🍰✨ (T145)
+- 31aa365: ✨🎯✨ (T145)
+- d267355: Fixed Miller build errors (T145)
+- 72935da: Patched Turris and other CSV sources (T145)
