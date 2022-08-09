@@ -762,3 +762,7 @@
 ## 09-08-2022 02:16:37
 - 0e4f311: ✨🍰✨ (T145)
 - a64d8b1: Deprecated ThreatSourcing (T145)
+## 09-08-2022 13:50:35
+- b48b045: ✨🍰✨ (T145)
+- 2ba2d44: Create the Twitter feed retriever (T145)
+- 6882e89: ✨🎯✨ (T145)
