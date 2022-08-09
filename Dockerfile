@@ -16,7 +16,7 @@ RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
 FROM ubuntu:latest
 
 LABEL maintainer="T145" \
-      version="4.1.0" \
+      version="4.2.0" \
       description="Custom Docker Image used to run blacklist projects."
 
 # https://docs.docker.com/develop/develop-images/multistage-build/
@@ -45,7 +45,7 @@ RUN apt-get -y update \
       # upgrade with proper configurations
       && apt-get -y upgrade \
       && apt-get install -y --no-install-recommends \
-      aria2 bc build-essential curl gawk git gpg gzip jq \
+      aria2 bc build-essential curl gawk git gpg gzip iprange jq \
       libdata-validate-domain-perl libdata-validate-ip-perl libnet-idn-encode-perl \
       libnet-libidn-perl libregexp-common-perl libtext-trim-perl libtry-tiny-perl \
       miller moreutils nano p7zip-full pandoc preload python3-dev python3-pip sed \
