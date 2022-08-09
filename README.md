@@ -407,7 +407,7 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [malware-discoverer](https://github.com/zhouhanc/malware-discoverer)
 - [mobiletrackers](https://github.com/craiu/mobiletrackers)
 - [Kaspersky TinyCheck](https://github.com/KasperskyLab/TinyCheck)
-- [stalkerware-indicators](https://github.com/Te-k/stalkerware-indicators)
+- [stalkerware-indicators](https://github.com/AssoEchap/stalkerware-indicators)
 - [Additional (Undesired) Hosts](https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/blacklist)
   - activation
   - adservers-and-trackers
