@@ -49,14 +49,14 @@
   </a>
 </div>
 <div align="center">
-  <a href="https://raw.githubusercontent.com/T145/black-mirror/master/exports/sources.adguard">
+  <a href="https://raw.githubusercontent.com/T145/black-mirror/master/dist/sources.adguard">
     <img src="https://img.shields.io/static/v1?logo=ublockOrigin&label=uBlock&message=subscribe&color=800000"
         alt="docker"
         longdesc="https://github.com/badges/shields/"
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
   </a>
-  <a href="https://raw.githubusercontent.com/T145/black-mirror/master/exports/sources.pihole">
+  <a href="https://raw.githubusercontent.com/T145/black-mirror/master/dist/sources.pihole">
     <img src="https://img.shields.io/static/v1?logo=pihole&label=Pi-Hole&message=subscribe&color=96060C"
         alt="pihole"
         longdesc="https://github.com/badges/shields/"
@@ -262,7 +262,7 @@ Follow [this guide](https://aws.amazon.com/premiumsupport/knowledge-center/dns-r
 
 ### pihole
 
-If you'd like to update when some sources do or not extract a production build, just use the [single-line list](https://discourse.pi-hole.net/t/how-to-add-blocklists-v5-and-later/32127) [`sources.pihole`](https://github.com/T145/black-mirror/blob/master/exports/sources.pihole). Note that this list only contains Pihole-compatible sources, and not every handled source. Some manual configuration may also be required.
+If you'd like to update when some sources do or not extract a production build, just use the [single-line list](https://discourse.pi-hole.net/t/how-to-add-blocklists-v5-and-later/32127) [`sources.pihole`](https://github.com/T145/black-mirror/blob/master/dist/sources.pihole). Note that this list only contains Pihole-compatible sources, and not every handled source. Some manual configuration may also be required.
 
 ### unbound
 
@@ -274,7 +274,7 @@ Use the domain list.
 
 ### adguard
 
-Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/master/exports/sources.adguard) list or the domain list.
+Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/master/dist/sources.adguard) list or the domain list.
 
 ## 📚 Sources
 

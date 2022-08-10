@@ -40,7 +40,7 @@ apply_filter() {
     mawk 'NF && !seen[$0]++' | # Filter blank lines and duplicates!
     #httpx -r configs/resolvers.txt -silent -t 200000 |
     parsort -bfiu -S 100% --parallel=200000 -T "$CACHE" |
-    parallel --pipe -k -j100% grep -Fxvf exports/sources.txt -
+    parallel --pipe -k -j100% grep -Fxvf dist/sources.txt -
 }
 
 main() {
@@ -58,12 +58,12 @@ main() {
       list="${CACHE}/${key}.txt"
 
       if [ -n "$list" ]; then
-        cat "$list" | apply_filter "$filter" | sponge "target/${key}.txt"
+        cat "$list" | apply_filter "$filter" | sponge "dist/ats/${key}.txt"
       fi
     done
 
   local status
-  status='exports/target-status.json'
+  status='dist/ats/target-status.json'
 
   lychee --exclude-mail -nEf Json -o "$status" -T 200 -t 10 -r 0 -u 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0' target/*.txt 1>/dev/null || true
   jq -SM '.' "$status" | sponge "$status"
