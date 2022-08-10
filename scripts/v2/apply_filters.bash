@@ -51,7 +51,6 @@ main() {
   local CONTENT_TYPE
   local METHOD
   local LIST_FILTER
-  local CACHE
 
   LIST="$1"
   KEY="$2"
@@ -59,15 +58,14 @@ main() {
   CONTENT_TYPE="$4"
   METHOD="$5"
   LIST_FILTER="$6"
-  CACHE="$7"
 
-  readonly LIST KEY CONTENT_FILTER METHOD LIST_FILTER CACHE
+  readonly LIST KEY CONTENT_FILTER METHOD LIST_FILTER
 
   echo "[INFO] Operating on: ${LIST}"
 
   apply_content_filter "$LIST" "$CONTENT_FILTER" |
-    apply_filter "$CONTENT_TYPE" "$FILTER" |
+    apply_filter "$CONTENT_TYPE" "$LIST_FILTER" |
     validate_output "$FORMAT" "$METHOD" "$KEY"
 }
 
-main "$1" "$2" "$3" "$4" "$5" "$6" "$7"
+main "$1" "$2" "$3" "$4" "$5" "$6"

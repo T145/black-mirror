@@ -57,7 +57,7 @@ main() {
       list="${CACHE}/${key}.txt"
 
       if [ -n "$list" ]; then
-        cat "$list" | apply_filter "$filter" | sponge "dist/ats/${key}.txt"
+        apply_filter "$filter" <"$list" | sponge "dist/ats/${key}.txt"
       fi
     done
 

@@ -1,0 +1,17 @@
+{
+  "name": "black-mirror",
+  "version": "4.2.0",
+  "description": "Blacklists and whitelists that aim to promote security, safety, and sanity across the internet!",
+  "repository": "https://github.com/T145/black-mirror.git",
+  "author": "T145",
+  "license": "AGPL-3.0",
+  "private": true,
+  "scripts": {
+    "lint": "run-script-os",
+    "lint:darwin:linux": "git ls-files '*.bash' -z | xargs -0 --no-run-if-empty shellcheck",
+    "lint:windows": "for /f %f in ('git ls-files \"*.bash\"') do shellcheck %f"
+  },
+  "devDependencies": {
+    "run-script-os": "^1.1.6"
+  }
+}

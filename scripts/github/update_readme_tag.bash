@@ -16,7 +16,7 @@ replace_html_tag() {
 
     tag_match="$(basename "$1" .txt)_${2:1}"
 
-    sed -i -e "$(printf 's/\(<td id="%s">\).*\(<\/td>\)/\\1%s\\2/\n' ${tag_match//_/-} ${3})" README.md
+    sed -i -e "$(printf 's/\(<td id="%s">\).*\(<\/td>\)/\\1%s\\2/\n' "${tag_match//_/-}" "${3}")" README.md
 }
 
 main() {

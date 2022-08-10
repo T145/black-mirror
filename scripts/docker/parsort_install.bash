@@ -1,30 +1,24 @@
 #!/usr/bin/env bash
 
-true <<'EOF'
-<p>
-     This script downloads the latest version of GNU Parallel, checks
-     the signature and installs it.
+#      This script downloads the latest version of GNU Parallel, checks
+#      the signature and installs it.
 
-<p>  It first tries to install it globally.
-<br> If that fails, it does a personal installation.
-<br> If that fails, it copies to $HOME/bin
+# It first tries to install it globally.
+# If that fails, it does a personal installation.
+# If that fails, it copies to $HOME/bin
 
-<p>  You can download and run the script directly by:
+# You can download and run the script directly by:
 
-<p>  $ (wget -O - pi.dk/3 || lynx -source pi.dk/3 ||
-	curl pi.dk/3/ || fetch -o - http://pi.dk/3) > install.sh
-<br> $ sha1sum install.sh | grep 12345678
-<br> $ md5sum install.sh
-<br> $ sha512sum install.sh
+# $ (wget -O - pi.dk/3 || lynx -source pi.dk/3 ||
+# 	curl pi.dk/3/ || fetch -o - http://pi.dk/3) > install.sh
+# $ sha1sum install.sh | grep 12345678
+# $ md5sum install.sh
+# $ sha512sum install.sh
 
-<p>  Check the sums from https://gnu.org/s/parallel/checksums
-<br> Then run:
+# Check the sums from https://gnu.org/s/parallel/checksums
+# Then run:
 
-<p>  $ bash install.sh
-
-
-<br><br><br><br>
-EOF
+# $ bash install.sh
 
 # SPDX-FileCopyrightText: 2013-2021 Ole Tange, http://ole.tange.dk and Free Software and Foundation, Inc.
 #
@@ -118,7 +112,7 @@ run() {
 		echo "This means that if the code has been changed by criminals, you will not discover that!"
 		echo
 		echo "Continue anyway? (y/n)"
-		read YN </dev/tty
+		read -r YN </dev/tty
 		if test "$YN" = "n"; then
 			# Stop
 			exit 2

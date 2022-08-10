@@ -34,7 +34,7 @@ sorted() {
 # merge list 2 into list 1
 # params: list 1, list 2
 merge_lists() {
-  cat "$1" "$2" >"$1"
+  cat "$1" "$2" | sponge "$1"
   sorted "$1"
 }
 
@@ -68,7 +68,7 @@ main() {
       select(.value.method == $method) | $k as key | .value.formats[] |
       "\($k)#\(.content.filter)#\(.content.type)#\(.filter)#\(.format)"' data/v2/lists.json |
       while IFS='#' read -r key content_filter content_type list_filter format; do
-        find -P -O3 "$cache" -type f -exec sem -j+0 ./scripts/v2/apply_filters.bash {} "$key" "$content_filter" "$content_type" "$method" "$list_filter" "$format" "$DOWNLOADS" \;
+        find -P -O3 "$cache" -type f -exec sem -j+0 ./scripts/v2/apply_filters.bash {} "$key" "$content_filter" "$content_type" "$method" "$list_filter" "$format" \;
         sem --wait
       done
 
@@ -87,7 +87,7 @@ main() {
               # TODO: Export JSON from dnsX and use jq to pull out domains & ips
               dnsx -r ./configs/resolvers.txt -l "$nxlist" -o "$TMP" -c 200000 -silent -rcode noerror,servfail,refused 1>/dev/null
               # remove online hosts from the nxlist
-              grep -Fxvf "$TMP" "$nxlist" >"$nxlist"
+              grep -Fxvf "$TMP" "$nxlist" | sponge "$nxlist"
               dnsx -r ./configs/resolvers.txt -hf "$nxlist" -l "$list" -o "$nxlist" -c 200000 -silent -rcode nxdomain 1>/dev/null
               merge_lists "$list" "$TMP"
               #comm "$nxlist" "$TMP" -23 | sponge "$nxlist"

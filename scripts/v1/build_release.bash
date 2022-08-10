@@ -139,13 +139,15 @@ main() {
           fi
         fi
 
-        md5sum >>"$checksums" <"$list"
-        b2sum >>"$checksums" <"$list"
-        sha1sum >>"$checksums" <"$list"
-        sha224sum >>"$checksums" <"$list"
-        sha256sum >>"$checksums" <"$list"
-        sha384sum >>"$checksums" <"$list"
-        sha512sum >>"$checksums" <"$list"
+        {
+          md5sum
+          b2sum
+          sha1sum
+          sha224sum
+          sha256sum
+          sha384sum
+          sha512sum
+        } <"$list" >>"$checksums"
       fi
     done
   done
