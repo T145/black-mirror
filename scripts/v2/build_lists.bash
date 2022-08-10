@@ -10,7 +10,7 @@ umask 055             # change all generated file perms from 755 to 700
 export LC_ALL=C       # force byte-wise sorting and default langauge output
 
 DOWNLOADS=$(mktemp -d)
-TMP=$(mktemp)
+TMP=$(mktemp --tempdir "$DOWNLOADS")
 METHOD_ALLOW='ALLOW'
 METHOD_BLOCK='BLOCK'
 FORMAT_DOMAIN='DOMAIN'
@@ -24,7 +24,7 @@ FORMATS=("$FORMAT_DOMAIN" "$FORMAT_IPV4" "$FORMAT_CIDR" "$FORMAT_IPV6")
 readonly -a METHODS
 readonly -a FORMATS
 
-trap 'rm -rf "$DOWNLOADS" && rm -rf "$TMP"' EXIT || exit 1
+trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 
 # params: file path
 sorted() {
@@ -50,11 +50,19 @@ main() {
     cache="${DOWNLOADS}/${method}"
 
     jq -r --arg method "$method" 'to_entries[] |
-      select(.value.method == $method) |
+      select(.content.retriever == "ARIA2" and .value.method == $method) |
       {key, mirrors: .value.mirrors} |
       .ext = (.mirrors[0] | match(".(tar.gz|zip|7z|json)").captures[0].string // "txt") |
       (.mirrors | join("\t")), " out=\(.key).\(.ext)"' data/v2/lists.json |
       (set +e && aria2c -i- -d "$cache" --conf-path='./configs/aria2.conf' && set -e) || set -e
+
+    jq -r --arg method "$method" 'to_entries[] |
+      select(.content.retriever == "TWINT" and .value.method == $method) |
+      {key, mirror: .value.mirrors[0]} |
+      "\(.key)#\(.mirror)"' data/v2/lists.json |
+      while IFS='#' read -r key mirror; do
+        ./scripts/v2/fetch_twitter_feed.py "$cache" "$key" "$mirror"
+      done
 
     jq -r --arg method "$method" 'to_entries[] |
       select(.value.method == $method) | $k as key | .value.formats[] |
@@ -78,11 +86,11 @@ main() {
             if test -f "$nxlist"; then
               # TODO: Export JSON from dnsX and use jq to pull out domains & ips
               dnsx -r ./configs/resolvers.txt -l "$nxlist" -o "$TMP" -c 200000 -silent -rcode noerror,servfail,refused 1>/dev/null
-              merge_lists "$list" "$TMP"
-              #comm "$nxlist" "$TMP" -23 | sponge "$nxlist"
-              # nxlist should be small enough that parallel isn't needed
+              # remove online hosts from the nxlist
               grep -Fxvf "$TMP" "$nxlist" >"$nxlist"
               dnsx -r ./configs/resolvers.txt -hf "$nxlist" -l "$list" -o "$nxlist" -c 200000 -silent -rcode nxdomain 1>/dev/null
+              merge_lists "$list" "$TMP"
+              #comm "$nxlist" "$TMP" -23 | sponge "$nxlist"
               : >"$TMP"
             else
               sorted "$list"

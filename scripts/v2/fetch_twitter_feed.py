@@ -14,22 +14,22 @@ if (sys.version_info < (3, 0)):
     print(" ========================================")
     print(" Try again: python3 /path/to/"+sys.argv[0])
     print(" ################# ERROR ################")
-    exit(0)
+    sys.exit(0)
 
 from ast import literal_eval
 from csv import DictReader
 import twint
-import os
+from os import remove
 from urllib.parse import urlparse
 
 def file_output(path: str, name: str, extension: str) -> str:
     return '{}/{}.{}'.format(path, name, extension)
 
 def get_path(url: str) -> str:
-    return os.path.split(urlparse(url).path)[1]
+    #return os.path.split(urlparse(url).path)[1]
+    return url[1:len(url)]
 
-# params: cache, key/filename, twitter url
-def main(argc: int, argv) -> int:
+def main(argc: int, argv: List[str]) -> int:
     store = file_output(argv[1], argv[2], 'csv')
     config = twint.Config()
     config.Username = get_path(argv[3])
@@ -48,8 +48,10 @@ def main(argc: int, argv) -> int:
                 with open(file_output(argv[1], argv[2], 'txt'), 'a') as result:
                     result.write(f"{get_path(url)}\n")
 
-    os.remove(store)
+    remove(store)
+    return 0
 
+# params: cache, key/filename, twitter url
 if __name__ == '__main__':
     args = sys.argv
     sys.exit(main(len(args), args))

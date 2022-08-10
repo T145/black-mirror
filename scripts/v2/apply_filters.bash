@@ -36,7 +36,7 @@ validate_output() {
   DOMAIN) perl ./scripts/v1/process_domains.pl 2>/dev/null ;;
   IPV4) ;;
   IPV6) ;;
-  CIDR) ;;
+  CIDR) validate_output 'IPV4' "$2" "$3" ;;
   *)
     echo "[INVALID FORMAT] { source: ${3}, format: ${1} }"
     exit 1
