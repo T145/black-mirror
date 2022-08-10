@@ -766,3 +766,8 @@
 - b48b045: ✨🍰✨ (T145)
 - 2ba2d44: Create the Twitter feed retriever (T145)
 - 6882e89: ✨🎯✨ (T145)
+## 10-08-2022 02:14:22
+- 4fb72f9: ✨🍰✨ (T145)
+- 2c7e39f: Update stalkerware repository URL (tek) [#98](https://github.com/T145/black-mirror/pull/98)
+- af0b7be: Updated Stalkerware Indicators source (T145)
+- 1f3b731: Added the iprange utility (T145)
