@@ -1,6 +1,5 @@
 # https://oxsecurity.github.io/megalinter/configuration/
 ---
-
 APPLY_FIXES: all
 SHOW_ELAPSED_TIME: true
 FILEIO_REPORTER: false
@@ -17,25 +16,21 @@ ENABLE:
   - DOCKERFILE
   - EDITORCONFIG
   - JSON
-  # - MARKDOWN
+  - MARKDOWN
   - PERL
   - PYTHON
   - REPOSITORY
   - YAML
 
-DISABLE:
-  - COPYPASTE
-  - SPELL
-
 DISABLE_LINTERS:
-  - "PYTHON_PYLINT" # entirely redundant and unnecessary python checks
+  - "MARKDOWN_MARKDOWN_LINK_CHECK" # passed on last checks, and is rather lengthy to scan (~500s)
+  - "PYTHON_PYLINT" # presently broken in megalinter v6
   - "REPOSITORY_CHECKOV" # currently unable to perform a security scan, and other reports are similar to hadolint
   - "REPOSITORY_SECRETLINT" # made redundant by gitleaks, which provides very detailed information
   - "REPOSITORY_GITLEAKS" # takes a very long time to process
   - "REPOSITORY_DEVSKIM" # a bit unstable atm
   - "REPOSITORY_TRIVY" # TODO: configure to only scan the Dockerfile
-
-PYTHON_PYLINT_ARGUMENTS: "--fail-under=0 --fail-on=E"
+  - "REPOSITORY_SYFT" # generating an unused bill of materials is not necessary
 
 YAML_YAMLLINT_FILTER_REGEX_EXCLUDE: (pnpm-lock.yaml)
 
