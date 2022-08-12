@@ -1,5 +1,6 @@
 # https://oxsecurity.github.io/megalinter/configuration/
 ---
+
 APPLY_FIXES: all
 SHOW_ELAPSED_TIME: true
 FILEIO_REPORTER: false
@@ -37,3 +38,9 @@ DISABLE_LINTERS:
 PYTHON_PYLINT_ARGUMENTS: "--fail-under=0 --fail-on=E"
 
 YAML_YAMLLINT_FILTER_REGEX_EXCLUDE: (pnpm-lock.yaml)
+
+# remove lingering docker containers when done
+POST_COMMANDS:
+  - command: docker system prune -f
+    cwd: "workspace"
+    continue_if_failed: true
