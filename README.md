@@ -14,13 +14,6 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
   </a>
-  <a href="https://visitorbadge.io/status?path=T145%2Fblack-mirror">
-    <img src="https://api.visitorbadge.io/api/visitors?path=T145%2Fblack-mirror&label=Visits&countColor=%237B1E7A&style=flat&labelStyle=none"
-        alt="visits"
-        longdesc="https://www.visitorbadge.io/"
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer" />
-  </a>
   <a href="https://github.com/T145/black-mirror/commits/master.atom">
     <img src="https://img.shields.io/static/v1?logo=rss&label=RSS&message=feed&color=FFA500"
         alt="release"
@@ -44,6 +37,29 @@
     <img src="https://img.shields.io/github/workflow/status/T145/black-mirror/Publish%20Docker%20Image/master?color=%232496ED&label=Docker&logo=docker"
         alt="docker"
         longdesc="https://github.com/badges/shields/"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+  </a>
+</div>
+<div align="center">
+  <a href="https://github.com/T145/black-mirror">
+    <img src="https://img.shields.io/github/repo-size/T145/black-mirror?logo=adblock&style=flat"
+        alt="repo-size"
+        longdesc="https://shields.io/"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+  </a>
+  <a href="https://github.com/T145/black-mirror">
+    <img src="https://img.shields.io/github/commit-activity/w/T145/black-mirror?logo=adblock&style=flat"
+        alt="commit-activity"
+        longdesc="https://shields.io/"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+  </a>
+  <a href="https://hits.seeyoufarm.com/#history">
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FT145%2Fblack-mirror&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Traffic+%28Daily%2FTotal%29&edge_flat=false"
+        alt="traffic"
+        longdesc="https://hits.seeyoufarm.com"
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
   </a>
