@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 
 import sys
+from ast import literal_eval
+from csv import DictReader
+from os import remove
+from typing import List
 
-sys.dont_write_bytecode = True
+import twint
 
 if sys.version_info < (3, 0):
     print(" ################# ERROR ################")
@@ -21,12 +25,7 @@ if sys.version_info < (3, 0):
     print(" ################# ERROR ################")
     sys.exit(0)
 
-from ast import literal_eval
-from csv import DictReader
-from os import remove
-from typing import List
-
-import twint
+sys.dont_write_bytecode = True
 
 
 def file_output(path: str, name: str, extension: str) -> str:

@@ -1,7 +1,7 @@
-﻿name: Automated Targeting System
+﻿---
+name: Automated Targeting System
 
 on:
-  workflow_dispatch:
   schedule:
     - cron: "0 7 * * *"
   push:

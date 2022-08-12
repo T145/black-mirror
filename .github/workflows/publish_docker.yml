@@ -1,3 +1,4 @@
+---
 # https://docs.docker.com/ci-cd/github-actions/
 name: Publish Docker Image
 
@@ -7,7 +8,6 @@ on:
       - master
     paths:
       - "Dockerfile"
-  workflow_dispatch:
 
 jobs:
   build:

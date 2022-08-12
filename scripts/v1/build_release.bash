@@ -140,14 +140,14 @@ main() {
 				fi
 
 				{
-					md5sum;
-					b2sum;
-					sha1sum;
-					sha224sum;
-					sha256sum;
-					sha384sum;
-					sha512sum;
-				} <"$list" >>"$checksums"
+					md5sum <"$list"
+					b2sum <"$list"
+					sha1sum <"$list"
+					sha224sum <"$list"
+					sha256sum <"$list"
+					sha384sum <"$list"
+					sha512sum <"$list"
+				} >>"$checksums"
 			fi
 		done
 	done

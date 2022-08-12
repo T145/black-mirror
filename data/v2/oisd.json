@@ -1,8 +1,1874 @@
 {
   "_desc": "https://oisd.nl/faq",
   "_homepage": "https://oisd.nl/includedlists/full",
-  "title": "OISD",
   "sources": {
+    "abvpn_ads": {
+      "_desc": "https://github.com/abpvn/abpvn#readme",
+      "_homepage": "https://abpvn.com/",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/src/abpvn_ad_domain.txt"
+      ],
+      "scan": false
+    },
+    "abvpn_adult": {
+      "_desc": "https://github.com/abpvn/abpvn#readme",
+      "_homepage": "https://abpvn.com/",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/src/abpvn_adult.txt"
+      ],
+      "scan": false
+    },
+    "abvpn_general": {
+      "_desc": "https://github.com/abpvn/abpvn#readme",
+      "_homepage": "https://abpvn.com/",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/src/abpvn_general.txt"
+      ],
+      "scan": false
+    },
+    "abvpn_whitelist": {
+      "_desc": "https://github.com/abpvn/abpvn#readme",
+      "_homepage": "https://abpvn.com/",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "ALLOW",
+      "mirrors": [
+        "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/src/abpvn_whitelist.txt"
+      ],
+      "scan": false
+    },
+    "adaway": {
+      "_desc": "https://github.com/AdAway/AdAway#readme",
+      "_homepage": "https://adaway.org/",
+      "_license": "cc-by-sa-4.0",
+      "_notes": "https://adaway.herokuapp.com/hosts",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "HOSTS_FILE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
+        "https://adaway.org/hosts.txt"
+      ],
+      "scan": false
+    },
+    "adblock_czech": {
+      "_desc": "https://adblock.vsevjednom.cz/",
+      "_homepage": "https://vsevjednom.cz/",
+      "_license": "not-available",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": ["https://adblock.vsevjednom.cz/adblock.txt"],
+      "scan": false
+    },
+    "adblock_estonian": {
+      "_desc": "https://adblock.ee/",
+      "_homepage": "https://adblock.ee/",
+      "_license": "cc0-1.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": ["https://adblock.ee/list.php"],
+      "scan": false
+    },
+    "adbrothers": {
+      "_desc": "not-available",
+      "_homepage": "https://adbrothers.nl/",
+      "_license": "not-available",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "NONE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": ["https://adbrothers.nl/blacklist.txt"],
+      "scan": false
+    },
+    "adguard_chinese_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/ChineseFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/ChineseFilter/sections/adservers.txt"
+      ],
+      "scan": false
+    },
+    "adguard_chinese_firstparty_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/ChineseFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/ChineseFilter/sections/adservers_firstparty.txt"
+      ],
+      "scan": false
+    },
+    "adguard_dutch_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/DutchFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/DutchFilter/sections/adservers.txt"
+      ],
+      "scan": false
+    },
+    "adguard_dutch_firstparty_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/DutchFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/DutchFilter/sections/adservers_firstparty.txt"
+      ],
+      "scan": false
+    },
+    "adguard_english_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/EnglishFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/adservers.txt"
+      ],
+      "scan": false
+    },
+    "adguard_english_cryptominers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/EnglishFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/cryptominers.txt"
+      ],
+      "scan": false
+    },
+    "adguard_english_firstparty_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/EnglishFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/adservers_firstparty.txt"
+      ],
+      "scan": false
+    },
+    "adguard_french_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/FrenchFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/FrenchFilter/sections/adservers.txt"
+      ],
+      "scan": false
+    },
+    "adguard_french_firstparty_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/FrenchFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/FrenchFilter/sections/adservers_firstparty.txt"
+      ],
+      "scan": false
+    },
+    "adguard_german_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/GermanFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/GermanFilter/sections/adservers.txt"
+      ],
+      "scan": false
+    },
+    "adguard_german_firstparty_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/GermanFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/GermanFilter/sections/adservers_firstparty.txt"
+      ],
+      "scan": false
+    },
+    "adguard_japanese_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/JapaneseFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/JapaneseFilter/sections/adservers.txt"
+      ],
+      "scan": false
+    },
+    "adguard_mobile_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/MobileFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt"
+      ],
+      "scan": false
+    },
+    "adguard_russian_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/RussianFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/RussianFilter/sections/adservers.txt"
+      ],
+      "scan": false
+    },
+    "adguard_russian_firstparty_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/RussianFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/RussianFilter/sections/adservers_firstparty.txt"
+      ],
+      "scan": false
+    },
+    "adguard_safari_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/SafariFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SafariFilter/sections/lost_rules.txt"
+      ],
+      "scan": false
+    },
+    "adguard_social_trackers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/SocialFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SocialFilter/sections/social_trackers.txt"
+      ],
+      "scan": false
+    },
+    "adguard_spanish_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/SpanishFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpanishFilter/sections/adservers.txt"
+      ],
+      "scan": false
+    },
+    "adguard_spyware_firstparty_tracking_servers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/SpywareFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/tracking_servers_firstparty.txt"
+      ],
+      "scan": false
+    },
+    "adguard_spyware_mobile": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/SpywareFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/mobile.txt"
+      ],
+      "scan": false
+    },
+    "adguard_spyware_tracking_servers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/SpywareFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/tracking_servers.txt"
+      ],
+      "scan": false
+    },
+    "adguard_turkish_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/TurkishFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/TurkishFilter/sections/adservers.txt"
+      ],
+      "scan": false
+    },
+    "adguard_turkish_firstparty_adservers": {
+      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
+      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/TurkishFilter/sections",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/TurkishFilter/sections/adservers_firstparty.txt"
+      ],
+      "scan": false
+    },
+    "air_ads": {
+      "_desc": "https://airvpn.org/api/dns_lists/",
+      "_homepage": "https://airvpn.org/",
+      "_license": "not-available",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "NONE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://airvpn.org/api/dns_lists/?code=air_ads&style=domains"
+      ],
+      "scan": false
+    },
+    "air_anti_icann": {
+      "_desc": "https://airvpn.org/api/dns_lists/",
+      "_homepage": "https://airvpn.org/",
+      "_license": "not-available",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "NONE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://airvpn.org/api/dns_lists/?code=air_gambling&style=domains"
+      ],
+      "scan": false
+    },
+    "air_crytpojacking": {
+      "_desc": "https://airvpn.org/api/dns_lists/",
+      "_homepage": "https://airvpn.org/",
+      "_license": "not-available",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "NONE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://airvpn.org/api/dns_lists/?code=air_crytpojacking&style=domains"
+      ],
+      "scan": false
+    },
+    "air_dating": {
+      "_desc": "https://airvpn.org/api/dns_lists/",
+      "_homepage": "https://airvpn.org/",
+      "_license": "not-available",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "NONE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://airvpn.org/api/dns_lists/?code=air_dating&style=domains"
+      ],
+      "scan": false
+    },
+    "air_gambling": {
+      "_desc": "https://airvpn.org/api/dns_lists/",
+      "_homepage": "https://airvpn.org/",
+      "_license": "not-available",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "NONE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://airvpn.org/api/dns_lists/?code=air_gambling&style=domains"
+      ],
+      "scan": false
+    },
+    "air_malware": {
+      "_desc": "https://airvpn.org/api/dns_lists/",
+      "_homepage": "https://airvpn.org/",
+      "_license": "not-available",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "NONE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://airvpn.org/api/dns_lists/?code=air_malware&style=domains"
+      ],
+      "scan": false
+    },
+    "air_porn": {
+      "_desc": "https://airvpn.org/api/dns_lists/",
+      "_homepage": "https://airvpn.org/",
+      "_license": "not-available",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "NONE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://airvpn.org/api/dns_lists/?code=air_porn&style=domains"
+      ],
+      "scan": false
+    },
+    "ajnasz": {
+      "_desc": "not-available",
+      "_homepage": "https://ajnasz.hu/",
+      "_license": "not-available",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": ["https://ajnasz.hu/adblock/recent"],
+      "scan": false
+    },
+    "arapurayil_main": {
+      "_desc": "https://github.com/arapurayil/aBL/tree/main/core",
+      "_homepage": "https://abl.arapurayil.com/",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://abl.arapurayil.com/core/main_filter.txt",
+        "https://raw.githubusercontent.com/arapurayil/aBL/main/core/main_filter.txt"
+      ],
+      "scan": false
+    },
+    "arapurayil_nsfw": {
+      "_desc": "https://github.com/arapurayil/aBL/tree/main/core",
+      "_homepage": "https://abl.arapurayil.com/",
+      "_license": "gpl-3.0",
+      "_notes": "Empty as of last check, but could have content added.",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://abl.arapurayil.com/core/nsfw_filter.txt",
+        "https://raw.githubusercontent.com/arapurayil/aBL/main/core/nsfw_filter.txt"
+      ],
+      "scan": false
+    },
+    "arapurayil_social": {
+      "_desc": "https://github.com/arapurayil/aBL/tree/main/core",
+      "_homepage": "https://abl.arapurayil.com/",
+      "_license": "gpl-3.0",
+      "_notes": "Empty as of last check, but could have content added.",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://abl.arapurayil.com/core/social_filter.txt",
+        "https://raw.githubusercontent.com/arapurayil/aBL/main/core/social_filter.txt"
+      ],
+      "scan": false
+    },
+    "arktiv": {
+      "_desc": "https://arktiv.site/blocklists/",
+      "_homepage": "https://arktiv.site/",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "HOSTS_FILE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": ["https://arktiv.site/blocklists/distasteful.txt"],
+      "scan": false
+    },
+    "easylist_adservers": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_adservers.txt"
+      ],
+      "scan": false
+    },
+    "easylist_adult_adservers": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_adult/adult_adservers.txt"
+      ],
+      "scan": false
+    },
+    "easylist_adult_allowlist": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "ALLOW",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_adult/adult_allowlist.txt"
+      ],
+      "scan": false
+    },
+    "easylist_adult_popup_thirdparty": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_adult/adult_thirdparty_popup.txt"
+      ],
+      "scan": false
+    },
+    "easylist_adult_popups": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_adult/adult_adservers_popup.txt"
+      ],
+      "scan": false
+    },
+    "easylist_adult_specific_block": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_adult/adult_specific_block.txt"
+      ],
+      "scan": false
+    },
+    "easylist_adult_specific_popup_block": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_adult/adult_specific_block_popup.txt"
+      ],
+      "scan": false
+    },
+    "easylist_adult_thirdparty": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_adult/adult_thirdparty.txt"
+      ],
+      "scan": false
+    },
+    "easylist_allowlist": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "ALLOW",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_allowlist.txt"
+      ],
+      "scan": false
+    },
+    "easylist_anti_cv": {
+      "_desc": "https://github.com/abp-filters/abp-filters-anti-cv#readme",
+      "_homepage": "https://easylist.to/",
+      "_license": "gpl-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt"
+      ],
+      "scan": false
+    },
+    "easylist_antiadblockfilters": {
+      "_desc": "https://github.com/easylist/antiadblockfilters/tree/master/antiadblockfilters",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "_notes": "Appears to be a combination of the sources listed in the description.",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt"
+      ],
+      "scan": false
+    },
+    "easylist_cookie_block": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_cookie/easylist_cookie_specific_block.txt"
+      ],
+      "scan": false
+    },
+    "easylist_cookie_thirdparty_block": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_cookie/easylist_cookie_thirdparty.txt"
+      ],
+      "scan": false
+    },
+    "easylist_dimensions_allowlist": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "ALLOW",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_allowlist_dimensions.txt"
+      ],
+      "scan": false
+    },
+    "easylist_easyprivacy_allowlist": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "ALLOW",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_allowlist.txt"
+      ],
+      "scan": false
+    },
+    "easylist_easyprivacy_cname_block": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_specific_cname.txt"
+      ],
+      "scan": false
+    },
+    "easylist_easyprivacy_international_allowlist": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "ALLOW",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_allowlist_international.txt"
+      ],
+      "scan": false
+    },
+    "easylist_easyprivacy_international_block": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_specific_international.txt"
+      ],
+      "scan": false
+    },
+    "easylist_easyprivacy_international_thirdparty": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_thirdparty_international.txt"
+      ],
+      "scan": false
+    },
+    "easylist_easyprivacy_international_tracking": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_trackingservers_international.txt"
+      ],
+      "scan": false
+    },
+    "easylist_easyprivacy_specific_block": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_specific.txt"
+      ],
+      "scan": false
+    },
+    "easylist_easyprivacy_thirdparty": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_thirdparty.txt"
+      ],
+      "scan": false
+    },
+    "easylist_easyprivacy_tracking": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_trackingservers.txt"
+      ],
+      "scan": false
+    },
+    "easylist_fanboy_annoyance_allowlist": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "ALLOW",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_annoyance_allowlist.txt"
+      ],
+      "scan": false
+    },
+    "easylist_fanboy_annoyance_block": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_annoyance_specific_block.txt"
+      ],
+      "scan": false
+    },
+    "easylist_fanboy_annoyance_international": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_annoyance_international.txt"
+      ],
+      "scan": false
+    },
+    "easylist_fanboy_annoyance_thirdparty": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_annoyance_thirdparty.txt"
+      ],
+      "scan": false
+    },
+    "easylist_fanboy_newsletter_allowlist": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "ALLOW",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_newsletter_allowlist.txt"
+      ],
+      "scan": false
+    },
+    "easylist_fanboy_newsletter_block": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_newsletter_specific_block.txt"
+      ],
+      "scan": false
+    },
+    "easylist_fanboy_newsletter_international": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_newsletter_international_block.txt"
+      ],
+      "scan": false
+    },
+    "easylist_fanboy_newsletter_thirdparty": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_newsletter_thirdparty.txt"
+      ],
+      "scan": false
+    },
+    "easylist_fanboy_notifications_allowlist": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "ALLOW",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_notifications_allowlist.txt"
+      ],
+      "scan": false
+    },
+    "easylist_fanboy_notifications_block": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_notifications_specific_block.txt"
+      ],
+      "scan": false
+    },
+    "easylist_fanboy_notifications_thirdparty": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_notifications_thirdparty.txt"
+      ],
+      "scan": false
+    },
+    "easylist_fanboy_social_international": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_social_international.txt"
+      ],
+      "scan": false
+    },
+    "easylist_fanboy_social_specific": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_social_specific_block.txt"
+      ],
+      "scan": false
+    },
+    "easylist_fanboy_social_thirdparty": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_social_thirdparty.txt"
+      ],
+      "scan": false
+    },
+    "easylist_fanboy_sounds_thirdparty": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_sounds_thirdparty.txt"
+      ],
+      "scan": false
+    },
+    "easylist_general_allowlist": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "ALLOW",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_allowlist_general_hide.txt"
+      ],
+      "scan": false
+    },
+    "easylist_general_block": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_general_block.txt"
+      ],
+      "scan": false
+    },
+    "easylist_general_hide": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_general_hide.txt"
+      ],
+      "scan": false
+    },
+    "easylist_popup_adservers": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_adservers_popup.txt"
+      ],
+      "scan": false
+    },
+    "easylist_popup_allowlist": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "ALLOW",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_allowlist_popup.txt"
+      ],
+      "scan": false
+    },
+    "easylist_popup_thirdparty": {
+      "_desc": "https://github.com/easylist/easylist#easylist",
+      "_homepage": "https://easylist.to/",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_thirdparty_popup.txt"
+      ],
+      "scan": false
+    },
+    "kowith337_aggressive_leftover": {
+      "_desc": "https://github.com/kowith337/PersonalFilterListCollection#readme",
+      "_homepage": "https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_leftover_aggressive.txt",
+      "_license": "cc-by-sa-4.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "HOSTS_FILE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/kowith337/PersonalFilterListCollection/master/hosts/hosts_leftover_aggressive.txt"
+      ],
+      "scan": false
+    },
+    "kowith337_badbait": {
+      "_desc": "https://github.com/kowith337/PersonalFilterListCollection#readme",
+      "_homepage": "https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_badbait_th.txt",
+      "_license": "cc-by-sa-4.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "HOSTS_FILE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/kowith337/PersonalFilterListCollection/master/hosts/hosts_badbait_th.txt"
+      ],
+      "scan": false
+    },
     "mahakala": {
       "_desc": "https://adblock.mahakala.is",
       "_license": "not-available",
@@ -22,11 +1888,73 @@
       "checksums": {},
       "scan": false
     },
-    "adaway": {
-      "_desc": "https://github.com/AdAway/AdAway#readme",
+    "kowith337_facebook": {
+      "_desc": "https://github.com/kowith337/PersonalFilterListCollection#readme",
+      "_homepage": "https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_facebook0.txt",
       "_license": "cc-by-sa-4.0",
-      "_homepage": "https://adaway.org/",
-      "_notes": "https://adaway.herokuapp.com/hosts",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "HOSTS_FILE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/kowith337/PersonalFilterListCollection/master/hosts/hosts_facebook0.txt"
+      ],
+      "scan": false
+    },
+    "kowith337_google_adservice": {
+      "_desc": "https://github.com/kowith337/PersonalFilterListCollection#readme",
+      "_homepage": "https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_google_adservice_id.txt",
+      "_license": "cc-by-sa-4.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "HOSTS_FILE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/kowith337/PersonalFilterListCollection/master/hosts/hosts_google_adservice_id.txt"
+      ],
+      "scan": false
+    },
+    "kowith337_thaiconsenthosts": {
+      "_desc": "https://github.com/kowith337/ThaiConsentHosts#readme",
+      "_homepage": "https://github.com/kowith337/ThaiConsentHosts/blob/master/ThaiConsentHosts.txt",
+      "_license": "cc-by-sa-4.0",
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "method": "BLOCK",
+      "formats": [
+        {
+          "filter": "HOSTS_FILE",
+          "format": "DOMAIN"
+        }
+      ],
+      "mirrors": [
+        "https://raw.githubusercontent.com/kowith337/ThaiConsentHosts/master/ThaiConsentHosts.txt"
+      ],
+      "checksums": {},
+      "scan": false
+    },
+    "logroid": {
+      "_desc": "https://github.com/logroid/adaway-hosts#readme",
+      "_homepage": "https://github.com/logroid/adaway-hosts/blob/master/hosts.txt",
+      "_license": "all-rights-reserved",
       "method": "BLOCK",
       "content": {
         "filter": "NONE",
@@ -39,112 +1967,8 @@
         }
       ],
       "mirrors": [
-        "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
-        "https://adaway.org/hosts.txt"
+        "https://raw.githubusercontent.com/logroid/adaway-hosts/master/hosts.txt"
       ],
-      "checksums": {},
-      "scan": false
-    },
-    "abvpn_whitelist": {
-      "_desc": "https://github.com/abpvn/abpvn#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://abpvn.com/",
-      "method": "ALLOW",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/src/abpvn_whitelist.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "abvpn_ads": {
-      "_desc": "https://github.com/abpvn/abpvn#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://abpvn.com/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/src/abpvn_ad_domain.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "abvpn_adult": {
-      "_desc": "https://github.com/abpvn/abpvn#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://abpvn.com/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/src/abpvn_adult.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "abvpn_general": {
-      "_desc": "https://github.com/abpvn/abpvn#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://abpvn.com/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/src/abpvn_general.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "rublacklist_spam": {
-      "_desc": "http://adlock.dinis.ru/",
-      "_license": "not-available",
-      "_homepage": "https://dinis.ru/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "MAWK_NO_COMMENTS",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": ["http://adlock.dinis.ru/adlist.txt"],
       "checksums": {},
       "scan": false
     },
@@ -168,10 +1992,10 @@
       "checksums": {},
       "scan": false
     },
-    "logroid": {
-      "_desc": "https://github.com/logroid/adaway-hosts#readme",
-      "_license": "all-rights-reserved",
-      "_homepage": "https://github.com/logroid/adaway-hosts/blob/master/hosts.txt",
+    "rublacklist_spam": {
+      "_desc": "http://adlock.dinis.ru/",
+      "_license": "not-available",
+      "_homepage": "https://dinis.ru/",
       "method": "BLOCK",
       "content": {
         "filter": "NONE",
@@ -179,105 +2003,19 @@
       },
       "formats": [
         {
-          "filter": "HOSTS_FILE",
+          "filter": "MAWK_NO_COMMENTS",
           "format": "DOMAIN"
         }
       ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/logroid/adaway-hosts/master/hosts.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "kowith337_thaiconsenthosts": {
-      "_desc": "https://github.com/kowith337/ThaiConsentHosts#readme",
-      "_license": "cc-by-sa-4.0",
-      "_homepage": "https://github.com/kowith337/ThaiConsentHosts/blob/master/ThaiConsentHosts.txt",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "HOSTS_FILE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/kowith337/ThaiConsentHosts/master/ThaiConsentHosts.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "kowith337_badbait": {
-      "_desc": "https://github.com/kowith337/PersonalFilterListCollection#readme",
-      "_license": "cc-by-sa-4.0",
-      "_homepage": "https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_badbait_th.txt",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "HOSTS_FILE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/kowith337/PersonalFilterListCollection/master/hosts/hosts_badbait_th.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "kowith337_facebook": {
-      "_desc": "https://github.com/kowith337/PersonalFilterListCollection#readme",
-      "_license": "cc-by-sa-4.0",
-      "_homepage": "https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_facebook0.txt",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "HOSTS_FILE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/kowith337/PersonalFilterListCollection/master/hosts/hosts_facebook0.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "kowith337_google_adservice": {
-      "_desc": "https://github.com/kowith337/PersonalFilterListCollection#readme",
-      "_license": "cc-by-sa-4.0",
-      "_homepage": "https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_google_adservice_id.txt",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "HOSTS_FILE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/kowith337/PersonalFilterListCollection/master/hosts/hosts_google_adservice_id.txt"
-      ],
+      "mirrors": ["http://adlock.dinis.ru/adlist.txt"],
       "checksums": {},
       "scan": false
     },
     "kowith337_google_hotword": {
       "_desc": "https://github.com/kowith337/PersonalFilterListCollection#readme",
-      "_license": "cc-by-sa-4.0",
       "_homepage": "https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_google_hotword.txt",
-      "method": "BLOCK",
+      "_license": "cc-by-sa-4.0",
+      "checksums": {},
       "content": {
         "filter": "NONE",
         "type": "TEXT"
@@ -288,17 +2026,17 @@
           "format": "DOMAIN"
         }
       ],
+      "method": "BLOCK",
       "mirrors": [
         "https://raw.githubusercontent.com/kowith337/PersonalFilterListCollection/master/hosts/hosts_google_hotword.txt"
       ],
-      "checksums": {},
       "scan": false
     },
     "kowith337_leftover": {
       "_desc": "https://github.com/kowith337/PersonalFilterListCollection#readme",
-      "_license": "cc-by-sa-4.0",
       "_homepage": "https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_leftover.txt",
-      "method": "BLOCK",
+      "_license": "cc-by-sa-4.0",
+      "checksums": {},
       "content": {
         "filter": "NONE",
         "type": "TEXT"
@@ -309,38 +2047,17 @@
           "format": "DOMAIN"
         }
       ],
+      "method": "BLOCK",
       "mirrors": [
         "https://raw.githubusercontent.com/kowith337/PersonalFilterListCollection/master/hosts/hosts_leftover.txt"
       ],
-      "checksums": {},
-      "scan": false
-    },
-    "kowith337_aggressive_leftover": {
-      "_desc": "https://github.com/kowith337/PersonalFilterListCollection#readme",
-      "_license": "cc-by-sa-4.0",
-      "_homepage": "https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_leftover_aggressive.txt",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "HOSTS_FILE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/kowith337/PersonalFilterListCollection/master/hosts/hosts_leftover_aggressive.txt"
-      ],
-      "checksums": {},
       "scan": false
     },
     "kowith337_naver_line_ads": {
       "_desc": "https://github.com/kowith337/PersonalFilterListCollection#readme",
-      "_license": "cc-by-sa-4.0",
       "_homepage": "https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_naver_line_ads.txt",
-      "method": "BLOCK",
+      "_license": "cc-by-sa-4.0",
+      "checksums": {},
       "content": {
         "filter": "NONE",
         "type": "TEXT"
@@ -351,275 +2068,17 @@
           "format": "DOMAIN"
         }
       ],
+      "method": "BLOCK",
       "mirrors": [
         "https://raw.githubusercontent.com/kowith337/PersonalFilterListCollection/master/hosts/hosts_naver_line_ads.txt"
       ],
-      "checksums": {},
-      "scan": false
-    },
-    "arapurayil_main": {
-      "_desc": "https://github.com/arapurayil/aBL/tree/main/core",
-      "_license": "gpl-3.0",
-      "_homepage": "https://abl.arapurayil.com/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://abl.arapurayil.com/core/main_filter.txt",
-        "https://raw.githubusercontent.com/arapurayil/aBL/main/core/main_filter.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "arapurayil_nsfw": {
-      "_desc": "https://github.com/arapurayil/aBL/tree/main/core",
-      "_license": "gpl-3.0",
-      "_homepage": "https://abl.arapurayil.com/",
-      "_notes": "Empty as of last check, but could have content added.",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://abl.arapurayil.com/core/nsfw_filter.txt",
-        "https://raw.githubusercontent.com/arapurayil/aBL/main/core/nsfw_filter.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "arapurayil_social": {
-      "_desc": "https://github.com/arapurayil/aBL/tree/main/core",
-      "_license": "gpl-3.0",
-      "_homepage": "https://abl.arapurayil.com/",
-      "_notes": "Empty as of last check, but could have content added.",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://abl.arapurayil.com/core/social_filter.txt",
-        "https://raw.githubusercontent.com/arapurayil/aBL/main/core/social_filter.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_antiadblockfilters": {
-      "_desc": "https://github.com/easylist/antiadblockfilters/tree/master/antiadblockfilters",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "_notes": "Appears to be a combination of the sources listed in the description.",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_adservers": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_adservers.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_popup_adservers": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_adservers_popup.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_allowlist": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "ALLOW",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_allowlist.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_dimensions_allowlist": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "ALLOW",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_allowlist_dimensions.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_general_allowlist": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "ALLOW",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_allowlist_general_hide.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_popup_allowlist": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "ALLOW",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_allowlist_popup.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_general_block": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_general_block.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_general_hide": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_general_hide.txt"
-      ],
-      "checksums": {},
       "scan": false
     },
     "easylist_specific_block": {
       "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
       "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
       "content": {
         "filter": "NONE",
         "type": "TEXT"
@@ -630,17 +2089,17 @@
           "format": "DOMAIN"
         }
       ],
+      "method": "BLOCK",
       "mirrors": [
         "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_specific_block.txt"
       ],
-      "checksums": {},
       "scan": false
     },
     "easylist_specific_popup_block": {
       "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
       "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
       "content": {
         "filter": "NONE",
         "type": "TEXT"
@@ -651,17 +2110,17 @@
           "format": "DOMAIN"
         }
       ],
+      "method": "BLOCK",
       "mirrors": [
         "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_specific_block_popup.txt"
       ],
-      "checksums": {},
       "scan": false
     },
     "easylist_thirdparty": {
       "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
       "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
+      "_license": "https://easylist.to/pages/licence.html",
+      "checksums": {},
       "content": {
         "filter": "NONE",
         "type": "TEXT"
@@ -672,1477 +2131,17 @@
           "format": "DOMAIN"
         }
       ],
+      "method": "BLOCK",
       "mirrors": [
         "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_thirdparty.txt"
       ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_popup_thirdparty": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_thirdparty_popup.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_adult_adservers": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_adult/adult_adservers.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_adult_popups": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_adult/adult_adservers_popup.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_adult_allowlist": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "ALLOW",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_adult/adult_allowlist.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_adult_specific_block": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_adult/adult_specific_block.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_adult_specific_popup_block": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_adult/adult_specific_block_popup.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_adult_thirdparty": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_adult/adult_thirdparty.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_adult_popup_thirdparty": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_adult/adult_thirdparty_popup.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_easyprivacy_allowlist": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "ALLOW",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_allowlist.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_easyprivacy_international_allowlist": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "ALLOW",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_allowlist_international.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_easyprivacy_specific_block": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_specific.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_easyprivacy_cname_block": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_specific_cname.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_easyprivacy_international_block": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_specific_international.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_easyprivacy_thirdparty": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_thirdparty.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_easyprivacy_international_thirdparty": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_thirdparty_international.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_easyprivacy_tracking": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_trackingservers.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_easyprivacy_international_tracking": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_trackingservers_international.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_fanboy_social_thirdparty": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_social_thirdparty.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_fanboy_sounds_thirdparty": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_sounds_thirdparty.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_fanboy_social_specific": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_social_specific_block.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_fanboy_social_international": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_social_international.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_fanboy_notifications_thirdparty": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_notifications_thirdparty.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_fanboy_notifications_block": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_notifications_specific_block.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_fanboy_notifications_allowlist": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "ALLOW",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_notifications_allowlist.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_fanboy_newsletter_thirdparty": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_newsletter_thirdparty.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_fanboy_newsletter_block": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_newsletter_specific_block.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_fanboy_newsletter_international": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_newsletter_international_block.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_fanboy_newsletter_allowlist": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "ALLOW",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_newsletter_allowlist.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_fanboy_annoyance_thirdparty": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_annoyance_thirdparty.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_fanboy_annoyance_block": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_annoyance_specific_block.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_fanboy_annoyance_international": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_annoyance_international.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_fanboy_annoyance_allowlist": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "ALLOW",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_annoyance_allowlist.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_anti_cv": {
-      "_desc": "https://github.com/abp-filters/abp-filters-anti-cv#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_cookie_block": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_cookie/easylist_cookie_specific_block.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "easylist_cookie_thirdparty_block": {
-      "_desc": "https://github.com/easylist/easylist#easylist",
-      "_license": "https://easylist.to/pages/licence.html",
-      "_homepage": "https://easylist.to/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/easylist/easylist/master/easylist_cookie/easylist_cookie_thirdparty.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adblock_estonian": {
-      "_desc": "https://adblock.ee/",
-      "_license": "cc0-1.0",
-      "_homepage": "https://adblock.ee/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": ["https://adblock.ee/list.php"],
-      "checksums": {},
-      "scan": false
-    },
-    "adblock_czech": {
-      "_desc": "https://adblock.vsevjednom.cz/",
-      "_license": "not-available",
-      "_homepage": "https://vsevjednom.cz/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": ["https://adblock.vsevjednom.cz/adblock.txt"],
-      "checksums": {},
-      "scan": false
-    },
-    "adbrothers": {
-      "_desc": "not-available",
-      "_license": "not-available",
-      "_homepage": "https://adbrothers.nl/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": ["https://adbrothers.nl/blacklist.txt"],
-      "checksums": {},
-      "scan": false
-    },
-    "air_ads": {
-      "_desc": "https://airvpn.org/api/dns_lists/",
-      "_license": "not-available",
-      "_homepage": "https://airvpn.org/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://airvpn.org/api/dns_lists/?code=air_ads&style=domains"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "air_porn": {
-      "_desc": "https://airvpn.org/api/dns_lists/",
-      "_license": "not-available",
-      "_homepage": "https://airvpn.org/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://airvpn.org/api/dns_lists/?code=air_porn&style=domains"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "air_dating": {
-      "_desc": "https://airvpn.org/api/dns_lists/",
-      "_license": "not-available",
-      "_homepage": "https://airvpn.org/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://airvpn.org/api/dns_lists/?code=air_dating&style=domains"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "air_malware": {
-      "_desc": "https://airvpn.org/api/dns_lists/",
-      "_license": "not-available",
-      "_homepage": "https://airvpn.org/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://airvpn.org/api/dns_lists/?code=air_malware&style=domains"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "air_gambling": {
-      "_desc": "https://airvpn.org/api/dns_lists/",
-      "_license": "not-available",
-      "_homepage": "https://airvpn.org/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://airvpn.org/api/dns_lists/?code=air_gambling&style=domains"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "air_anti_icann": {
-      "_desc": "https://airvpn.org/api/dns_lists/",
-      "_license": "not-available",
-      "_homepage": "https://airvpn.org/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://airvpn.org/api/dns_lists/?code=air_gambling&style=domains"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "air_crytpojacking": {
-      "_desc": "https://airvpn.org/api/dns_lists/",
-      "_license": "not-available",
-      "_homepage": "https://airvpn.org/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://airvpn.org/api/dns_lists/?code=air_crytpojacking&style=domains"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "ajnasz": {
-      "_desc": "not-available",
-      "_license": "not-available",
-      "_homepage": "https://ajnasz.hu/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": ["https://ajnasz.hu/adblock/recent"],
-      "checksums": {},
-      "scan": false
-    },
-    "arktiv": {
-      "_desc": "https://arktiv.site/blocklists/",
-      "_license": "gpl-3.0",
-      "_homepage": "https://arktiv.site/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "HOSTS_FILE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": ["https://arktiv.site/blocklists/distasteful.txt"],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_russian_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/RussianFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/RussianFilter/sections/adservers.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_russian_firstparty_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/RussianFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/RussianFilter/sections/adservers_firstparty.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_chinese_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/ChineseFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/ChineseFilter/sections/adservers.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_chinese_firstparty_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/ChineseFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/ChineseFilter/sections/adservers_firstparty.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_dutch_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/DutchFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/DutchFilter/sections/adservers.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_dutch_firstparty_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/DutchFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/DutchFilter/sections/adservers_firstparty.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_english_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/EnglishFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/adservers.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_english_firstparty_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/EnglishFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/adservers_firstparty.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_english_cryptominers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/EnglishFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/cryptominers.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_french_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/FrenchFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/FrenchFilter/sections/adservers.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_french_firstparty_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/FrenchFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/FrenchFilter/sections/adservers_firstparty.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_german_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/GermanFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/GermanFilter/sections/adservers.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_german_firstparty_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/GermanFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/GermanFilter/sections/adservers_firstparty.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_japanese_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/JapaneseFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/JapaneseFilter/sections/adservers.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_mobile_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/MobileFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_social_trackers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/SocialFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SocialFilter/sections/social_trackers.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_spanish_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/SpanishFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpanishFilter/sections/adservers.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_spyware_mobile": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/SpywareFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/mobile.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_spyware_tracking_servers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/SpywareFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/tracking_servers.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_spyware_firstparty_tracking_servers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/SpywareFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/tracking_servers_firstparty.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_turkish_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/TurkishFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/TurkishFilter/sections/adservers.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_turkish_firstparty_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/TurkishFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/TurkishFilter/sections/adservers_firstparty.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "adguard_safari_adservers": {
-      "_desc": "https://github.com/AdguardTeam/AdguardFilters#readme",
-      "_license": "gpl-3.0",
-      "_homepage": "https://github.com/AdguardTeam/AdguardFilters/tree/master/SafariFilter/sections",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SafariFilter/sections/lost_rules.txt"
-      ],
-      "checksums": {},
       "scan": false
     },
     "fanboy_enhancedstats": {
       "_desc": "https://github.com/ryanbr/fanboy-adblock",
-      "_license": "all-rights-reserved",
       "_homepage": "https://github.com/ryanbr/fanboy-adblock",
-      "method": "BLOCK",
+      "_license": "all-rights-reserved",
+      "checksums": {},
       "content": {
         "filter": "NONE",
         "type": "TEXT"
@@ -2153,60 +2152,17 @@
           "format": "DOMAIN"
         }
       ],
+      "method": "BLOCK",
       "mirrors": [
         "https://raw.githubusercontent.com/ryanbr/fanboy-adblock/master/enhancedstats-addon.txt"
       ],
-      "checksums": {},
-      "scan": false
-    },
-    "nicolasforcet": {
-      "_desc": "https://nicolasforcet.com/2019/11/02/meilleures-listes-de-filtrage-dns-pour-pihole-et-autres/",
-      "_license": "not-available",
-      "_homepage": "https://forcet.fr/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "MAWK_WITH_COMMENTS_AND_WILDCARDS",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://forcet.fr/shared/pihole/Blocklist-Nicolasforcet.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "inode_pwn": {
-      "_desc": "not-available",
-      "_license": "not-available",
-      "_homepage": "https://in0de.synology.me/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://in0de.synology.me/pwn.txt",
-        "http://in0de.iptime.org/pwn.txt"
-      ],
-      "checksums": {},
       "scan": false
     },
     "inode_own": {
       "_desc": "not-available",
-      "_license": "not-available",
       "_homepage": "https://in0de.synology.me/",
-      "method": "BLOCK",
+      "_license": "not-available",
+      "checksums": {},
       "content": {
         "filter": "NONE",
         "type": "TEXT"
@@ -2217,18 +2173,59 @@
           "format": "DOMAIN"
         }
       ],
+      "method": "BLOCK",
       "mirrors": [
         "https://in0de.synology.me/own.txt",
         "http://in0de.iptime.org/own.txt"
       ],
+      "scan": false
+    },
+    "inode_pwn": {
+      "_desc": "not-available",
+      "_homepage": "https://in0de.synology.me/",
+      "_license": "not-available",
       "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://in0de.synology.me/pwn.txt",
+        "http://in0de.iptime.org/pwn.txt"
+      ],
+      "scan": false
+    },
+    "jp_adblock_v2": {
+      "_desc": "https://qme.mydns.jp/adblock.html",
+      "_homepage": "https://code.google.com/archive/p/adblock-plus-japanese-filter/",
+      "_license": "cc-by-sa-3.0",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "ADBLOCK",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": ["https://qme.mydns.jp/data/AdblockV2.txt"],
       "scan": false
     },
     "karball0": {
       "_desc": "http://karballo.net/adblock/",
-      "_license": "not-available",
       "_homepage": "http://karballo.net/",
-      "method": "BLOCK",
+      "_license": "not-available",
+      "checksums": {},
       "content": {
         "filter": "NONE",
         "type": "TEXT"
@@ -2243,15 +2240,15 @@
           "format": "IPV4"
         }
       ],
+      "method": "BLOCK",
       "mirrors": ["http://karballo.net/adblock/karball0-adblock.txt"],
-      "checksums": {},
       "scan": false
     },
     "madll": {
       "_desc": "not-available",
-      "_license": "not-available",
       "_homepage": "http://madll.free.fr/",
-      "method": "BLOCK",
+      "_license": "not-available",
+      "checksums": {},
       "content": {
         "filter": "NONE",
         "type": "TEXT"
@@ -2262,15 +2259,121 @@
           "format": "DOMAIN"
         }
       ],
+      "method": "BLOCK",
       "mirrors": ["http://madll.free.fr/madware/zip/filtres-adblock.txt"],
+      "scan": false
+    },
+    "makopi": {
+      "_desc": "https://www.sgv417.jp/~makopi/RaspberryPi/",
+      "_homepage": "https://www.sgv417.jp/~makopi/RaspberryPi/",
+      "_license": "not-available",
       "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "NONE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": ["https://www.sgv417.jp/~makopi/RaspberryPi/block.txt"],
+      "scan": false
+    },
+    "miriquidi_block": {
+      "_desc": "https://github.com/miriquidi/dns-block-lists#readme",
+      "_homepage": "https://fussle.de/",
+      "_license": "all-rights-reserved",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "NONE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/block.txt",
+        "https://fussle.de/block.txt"
+      ],
+      "scan": false
+    },
+    "miriquidi_fritz": {
+      "_desc": "https://github.com/miriquidi/dns-block-lists#readme",
+      "_homepage": "https://fussle.de/",
+      "_license": "all-rights-reserved",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "NONE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/fb-block.txt",
+        "https://fussle.de/fb-block.txt"
+      ],
+      "scan": false
+    },
+    "miriquidi_social": {
+      "_desc": "https://github.com/miriquidi/dns-block-lists#readme",
+      "_homepage": "https://fussle.de/",
+      "_license": "all-rights-reserved",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "NONE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/social.txt",
+        "https://fussle.de/social.txt"
+      ],
+      "scan": false
+    },
+    "nicolasforcet": {
+      "_desc": "https://nicolasforcet.com/2019/11/02/meilleures-listes-de-filtrage-dns-pour-pihole-et-autres/",
+      "_homepage": "https://forcet.fr/",
+      "_license": "not-available",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "MAWK_WITH_COMMENTS_AND_WILDCARDS",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": [
+        "https://forcet.fr/shared/pihole/Blocklist-Nicolasforcet.txt"
+      ],
       "scan": false
     },
     "openwrt_dlink_506L": {
       "_desc": "not-available",
-      "_license": "not-available",
       "_homepage": "http://netlab.linkpc.net/wiki/",
-      "method": "BLOCK",
+      "_license": "not-available",
+      "checksums": {},
       "content": {
         "filter": "NONE",
         "type": "TEXT"
@@ -2281,121 +2384,17 @@
           "format": "DOMAIN"
         }
       ],
+      "method": "BLOCK",
       "mirrors": [
         "http://netlab.linkpc.net/download/software/entware/opt/etc/hosts"
       ],
-      "checksums": {},
-      "scan": false
-    },
-    "jp_adblock_v2": {
-      "_desc": "https://qme.mydns.jp/adblock.html",
-      "_license": "cc-by-sa-3.0",
-      "_homepage": "https://code.google.com/archive/p/adblock-plus-japanese-filter/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "ADBLOCK",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": ["https://qme.mydns.jp/data/AdblockV2.txt"],
-      "checksums": {},
-      "scan": false
-    },
-    "miriquidi_block": {
-      "_desc": "https://github.com/miriquidi/dns-block-lists#readme",
-      "_license": "all-rights-reserved",
-      "_homepage": "https://fussle.de/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/block.txt",
-        "https://fussle.de/block.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "miriquidi_fritz": {
-      "_desc": "https://github.com/miriquidi/dns-block-lists#readme",
-      "_license": "all-rights-reserved",
-      "_homepage": "https://fussle.de/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/fb-block.txt",
-        "https://fussle.de/fb-block.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "miriquidi_social": {
-      "_desc": "https://github.com/miriquidi/dns-block-lists#readme",
-      "_license": "all-rights-reserved",
-      "_homepage": "https://fussle.de/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": [
-        "https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/social.txt",
-        "https://fussle.de/social.txt"
-      ],
-      "checksums": {},
-      "scan": false
-    },
-    "makopi": {
-      "_desc": "https://www.sgv417.jp/~makopi/RaspberryPi/",
-      "_license": "not-available",
-      "_homepage": "https://www.sgv417.jp/~makopi/RaspberryPi/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": ["https://www.sgv417.jp/~makopi/RaspberryPi/block.txt"],
-      "checksums": {},
       "scan": false
     },
     "thedumbterminal": {
       "_desc": "not-available",
-      "_license": "not-available",
       "_homepage": "https://thedumbterminal.co.uk/",
-      "method": "BLOCK",
+      "_license": "not-available",
+      "checksums": {},
       "content": {
         "filter": "NONE",
         "type": "TEXT"
@@ -2406,55 +2405,19 @@
           "format": "DOMAIN"
         }
       ],
+      "method": "BLOCK",
       "mirrors": [
         "https://thedumbterminal.co.uk/files/services/squidblockedsites/blocked.txt"
       ],
-      "checksums": {},
-      "scan": false
-    },
-    "zoso_rolist1": {
-      "_desc": "https://zoso.ro/rolist/",
-      "_license": "not-available",
-      "_homepage": "https://zoso.ro/goodies/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": ["https://zoso.ro/pages/rolist.txt"],
-      "checksums": {},
-      "scan": false
-    },
-    "zoso_rolist2": {
-      "_desc": "https://zoso.ro/rolist/",
-      "_license": "not-available",
-      "_homepage": "https://zoso.ro/goodies/",
-      "method": "BLOCK",
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "mirrors": ["https://zoso.ro/pages/rolist2.txt"],
-      "checksums": {},
       "scan": false
     },
     "zitstif": {
       "_desc": "http://zitstif.no-ip.org/?cat=1037",
-      "_license": "not-available",
       "_homepage": "http://zitstif.no-ip.org/",
-      "method": "BLOCK",
+      "_license": "not-available",
+      "checksums": {
+        "sha256": "http://zitstif.com/badipsHash.txt"
+      },
       "content": {
         "filter": "NONE",
         "type": "TEXT"
@@ -2465,14 +2428,51 @@
           "format": "IPV4"
         }
       ],
+      "method": "BLOCK",
       "mirrors": [
         "http://zitstif.com/badips.txt",
         "http://zitstif.no-ip.org/badips.txt"
       ],
-      "checksums": {
-        "sha256": "http://zitstif.com/badipsHash.txt"
+      "scan": false
+    },
+    "zoso_rolist1": {
+      "_desc": "https://zoso.ro/rolist/",
+      "_homepage": "https://zoso.ro/goodies/",
+      "_license": "not-available",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
       },
+      "formats": [
+        {
+          "filter": "NONE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": ["https://zoso.ro/pages/rolist.txt"],
+      "scan": false
+    },
+    "zoso_rolist2": {
+      "_desc": "https://zoso.ro/rolist/",
+      "_homepage": "https://zoso.ro/goodies/",
+      "_license": "not-available",
+      "checksums": {},
+      "content": {
+        "filter": "NONE",
+        "type": "TEXT"
+      },
+      "formats": [
+        {
+          "filter": "NONE",
+          "format": "DOMAIN"
+        }
+      ],
+      "method": "BLOCK",
+      "mirrors": ["https://zoso.ro/pages/rolist2.txt"],
       "scan": false
     }
-  }
+  },
+  "title": "OISD"
 }

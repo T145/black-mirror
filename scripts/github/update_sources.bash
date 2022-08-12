@@ -7,7 +7,6 @@ main() {
 	sources='dist/sources.txt'
 
 	git config --global --add safe.directory /__w/black-mirror/black-mirror
-	jq -SM '.' "$1" | sponge "$1"
 
 	case $(dirname "$1" | mawk -F/ '{print $2}') in
 	v1)
