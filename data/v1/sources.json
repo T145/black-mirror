@@ -47,9 +47,7 @@
         "rule": "$0~/^[^#]/{print $2}"
       }
     ],
-    "mirrors": [
-      "https://data.netlab.360.com/feeds/dga/dga.txt"
-    ]
+    "mirrors": ["https://data.netlab.360.com/feeds/dga/dga.txt"]
   },
   "4skinskywalker_anti_porn": {
     "color": "black",
@@ -91,9 +89,7 @@
         "rule": "$0~/^[^#]/{print $2}"
       }
     ],
-    "mirrors": [
-      "https://threatfox.abuse.ch/downloads/hostfile/"
-    ]
+    "mirrors": ["https://threatfox.abuse.ch/downloads/hostfile/"]
   },
   "abuse_ch_urlhaus": {
     "color": "black",
@@ -109,9 +105,7 @@
         "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([0-9]{1,3}\\.){3}[0-9]{1,3}+(\\/|:|$)/{sub(/:.*/,\"\",$3); print $3}"
       }
     ],
-    "mirrors": [
-      "https://urlhaus.abuse.ch/downloads/text/"
-    ]
+    "mirrors": ["https://urlhaus.abuse.ch/downloads/text/"]
   },
   "additional_hosts_activation": {
     "color": "black",
@@ -226,9 +220,7 @@
         "rule": "$0~/^[^#]/&&$2!~/^localhost$/{print $2}"
       }
     ],
-    "mirrors": [
-      "http://rlwpx.free.fr/WPFF/hmis.7z"
-    ]
+    "mirrors": ["http://rlwpx.free.fr/WPFF/hmis.7z"]
   },
   "airelle_hpub": {
     "color": "black",
@@ -239,9 +231,7 @@
         "rule": "$0~/^[^#]/&&$2!~/^localhost$/{print $2}"
       }
     ],
-    "mirrors": [
-      "http://rlwpx.free.fr/WPFF/hpub.7z"
-    ]
+    "mirrors": ["http://rlwpx.free.fr/WPFF/hpub.7z"]
   },
   "airelle_hrsk": {
     "color": "black",
@@ -252,9 +242,7 @@
         "rule": "$0~/^[^#]/&&$2!~/^localhost$/{print $2}"
       }
     ],
-    "mirrors": [
-      "http://rlwpx.free.fr/WPFF/hrsk.7z"
-    ]
+    "mirrors": ["http://rlwpx.free.fr/WPFF/hrsk.7z"]
   },
   "airelle_hsex": {
     "color": "black",
@@ -265,9 +253,7 @@
         "rule": "$0~/^[^#]/&&$2!~/^localhost$/{print $2}"
       }
     ],
-    "mirrors": [
-      "http://rlwpx.free.fr/WPFF/hsex.7z"
-    ]
+    "mirrors": ["http://rlwpx.free.fr/WPFF/hsex.7z"]
   },
   "airelle_htrc": {
     "color": "black",
@@ -278,9 +264,7 @@
         "rule": "$0~/^[^#]/&&$2!~/^localhost$/{print $2}"
       }
     ],
-    "mirrors": [
-      "http://rlwpx.free.fr/WPFF/htrc.7z"
-    ]
+    "mirrors": ["http://rlwpx.free.fr/WPFF/htrc.7z"]
   },
   "alienvault": {
     "color": "black",
@@ -291,9 +275,7 @@
         "rule": "BEGIN{FS=\"#\"}{print $1}"
       }
     ],
-    "mirrors": [
-      "https://reputation.alienvault.com/reputation.data"
-    ]
+    "mirrors": ["https://reputation.alienvault.com/reputation.data"]
   },
   "android_tracking": {
     "color": "black",
@@ -426,9 +408,7 @@
         "rule": ".[].fqdn"
       }
     ],
-    "mirrors": [
-      "https://ayashige.herokuapp.com/api/v1/domains/"
-    ]
+    "mirrors": ["https://ayashige.herokuapp.com/api/v1/domains/"]
   },
   "azorult_domains": {
     "color": "black",
@@ -439,9 +419,7 @@
         "rule": ""
       }
     ],
-    "mirrors": [
-      "https://azorult-tracker.net/api/list/domain?format=plain"
-    ],
+    "mirrors": ["https://azorult-tracker.net/api/list/domain?format=plain"],
     "variants": [
       "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/AZORult%20-%20Malware%20Domain%20Feed%20V2"
     ]
@@ -455,9 +433,7 @@
         "rule": ""
       }
     ],
-    "mirrors": [
-      "https://azorult-tracker.net/api/list/ip?format=plain"
-    ]
+    "mirrors": ["https://azorult-tracker.net/api/list/ip?format=plain"]
   },
   "benkow_cc": {
     "_comment": "TODO: Add domains from URLs.",
@@ -469,9 +445,7 @@
         "rule": "say $& while /$RE{net}{IPv4}/g"
       }
     ],
-    "mirrors": [
-      "https://benkow.cc/export.php"
-    ]
+    "mirrors": ["https://benkow.cc/export.php"]
   },
   "betterfyi": {
     "_comment": "Using the pre-optimized Energized mirror.",
@@ -500,9 +474,7 @@
         "rule": "$0~/^[^#]/"
       }
     ],
-    "mirrors": [
-      "https://www.binarydefense.com/banlist.txt"
-    ]
+    "mirrors": ["https://www.binarydefense.com/banlist.txt"]
   },
   "bjornstar": {
     "color": "black",
@@ -526,9 +498,7 @@
         "rule": "$0~/^[^;]/"
       }
     ],
-    "mirrors": [
-      "https://getblackbird.net/blacklist/hosts.txt"
-    ]
+    "mirrors": ["https://getblackbird.net/blacklist/hosts.txt"]
   },
   "block_list_project": {
     "color": "black",
@@ -628,9 +598,7 @@
         "rule": "BEGIN{FS=\",\"}NR>1{print $1}"
       }
     ],
-    "mirrors": [
-      "https://www.botvrij.eu/data/blocklist/blocklist_full.csv"
-    ]
+    "mirrors": ["https://www.botvrij.eu/data/blocklist/blocklist_full.csv"]
   },
   "botvrij_domain": {
     "color": "black",
@@ -641,9 +609,7 @@
         "rule": ""
       }
     ],
-    "mirrors": [
-      "https://www.botvrij.eu/data/ioclist.domain.raw"
-    ]
+    "mirrors": ["https://www.botvrij.eu/data/ioclist.domain.raw"]
   },
   "botvrij_dst_ip": {
     "color": "black",
@@ -654,9 +620,7 @@
         "rule": "{split($0,a,\"|\"); print a[1]}"
       }
     ],
-    "mirrors": [
-      "https://www.botvrij.eu/data/ioclist.ip-dst.raw"
-    ]
+    "mirrors": ["https://www.botvrij.eu/data/ioclist.ip-dst.raw"]
   },
   "botvrij_hostname": {
     "color": "black",
@@ -667,9 +631,7 @@
         "rule": ""
       }
     ],
-    "mirrors": [
-      "https://www.botvrij.eu/data/ioclist.hostname.raw"
-    ]
+    "mirrors": ["https://www.botvrij.eu/data/ioclist.hostname.raw"]
   },
   "botvrij_misp": {
     "color": "black",
@@ -680,9 +642,7 @@
         "rule": ""
       }
     ],
-    "mirrors": [
-      "https://www.botvrij.eu/data/misp.text_ip-dst.ADMIN.txt"
-    ]
+    "mirrors": ["https://www.botvrij.eu/data/misp.text_ip-dst.ADMIN.txt"]
   },
   "botvrij_url": {
     "_comment": "Some entries do NOT start w/ http[s]?",
@@ -694,9 +654,7 @@
         "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print tolower($3)}"
       }
     ],
-    "mirrors": [
-      "https://www.botvrij.eu/data/ioclist.url.raw"
-    ]
+    "mirrors": ["https://www.botvrij.eu/data/ioclist.url.raw"]
   },
   "bruteforceblocker": {
     "color": "black",
@@ -710,9 +668,7 @@
     "mirrors": [
       "https://danger.rulez.sk/projects/bruteforceblocker/blist.php?mindays=7&mincount=1"
     ],
-    "variants": [
-      "https://www.opendbl.net/lists/bruteforce.list"
-    ]
+    "variants": ["https://www.opendbl.net/lists/bruteforce.list"]
   },
   "c2_intel_feeds": {
     "color": "black",
@@ -767,9 +723,7 @@
         "rule": ""
       }
     ],
-    "mirrors": [
-      "https://cinsscore.com/list/ci-badguys.txt"
-    ]
+    "mirrors": ["https://cinsscore.com/list/ci-badguys.txt"]
   },
   "cname_trackers": {
     "color": "black",
@@ -881,9 +835,7 @@
         "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(:|$)/"
       }
     ],
-    "mirrors": [
-      "https://paste.cryptolaemus.com/dbucket/"
-    ]
+    "mirrors": ["https://paste.cryptolaemus.com/dbucket/"]
   },
   "cyber_cure_ips": {
     "color": "black",
@@ -894,9 +846,7 @@
         "rule": ".data.ip[]"
       }
     ],
-    "mirrors": [
-      "https://api.cybercure.ai/feed/get_ips"
-    ]
+    "mirrors": ["https://api.cybercure.ai/feed/get_ips"]
   },
   "cyber_cure_urls": {
     "color": "black",
@@ -912,9 +862,7 @@
         "rule": ".data.urls[] | split(\"/\")[2] | match(\"[0-9].*\";\"gimx\").string | split(\":\")[0]"
       }
     ],
-    "mirrors": [
-      "https://api.cybercure.ai/feed/get_url"
-    ]
+    "mirrors": ["https://api.cybercure.ai/feed/get_url"]
   },
   "cybercrime_all": {
     "color": "black",
@@ -930,9 +878,7 @@
         "rule": "BEGIN{FS=\"/\"}$1~/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(:|$)/{split($1,a,\":\");print a[1]}"
       }
     ],
-    "mirrors": [
-      "https://cybercrime-tracker.net/all.php"
-    ]
+    "mirrors": ["https://cybercrime-tracker.net/all.php"]
   },
   "cybercrime_ccamgate": {
     "color": "black",
@@ -948,9 +894,7 @@
         "rule": "BEGIN{FS=\"/\"}$3~/^([0-9]{1,3}\\.){3}[0-9]{1,3}+(\\/|:|$)/{split($3,a,\":\"); print a[1]}"
       }
     ],
-    "mirrors": [
-      "https://cybercrime-tracker.net/ccamgate.php"
-    ]
+    "mirrors": ["https://cybercrime-tracker.net/ccamgate.php"]
   },
   "cybersaiyan": {
     "_comment": "https://infosharing.cybersaiyan.it/feeds/CS-PIHOLE",
@@ -1011,9 +955,7 @@
         "rule": "/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/"
       }
     ],
-    "mirrors": [
-      "https://www.dan.me.uk/torlist/"
-    ]
+    "mirrors": ["https://www.dan.me.uk/torlist/"]
   },
   "dandelion_antimalware": {
     "_comment": "Contains IPv4 and IPv6 addresses, but since they're volatile and the list is manually updated, they'll be ignored.",
@@ -1051,9 +993,7 @@
         "rule": "NR>3"
       }
     ],
-    "mirrors": [
-      "https://www.darklist.de/raw.php"
-    ]
+    "mirrors": ["https://www.darklist.de/raw.php"]
   },
   "dataplane_sipinvitation": {
     "color": "black",
@@ -1064,9 +1004,7 @@
         "rule": "BEGIN{FS=\"|\"}$0~/^[^#]/{gsub(/ /,\"\"); print $3}"
       }
     ],
-    "mirrors": [
-      "https://dataplane.org/sipinvitation.txt"
-    ]
+    "mirrors": ["https://dataplane.org/sipinvitation.txt"]
   },
   "dataplane_sipquery": {
     "color": "black",
@@ -1077,9 +1015,7 @@
         "rule": "BEGIN{FS=\"|\"}$0~/^[^#]/{gsub(/ /,\"\"); print $3}"
       }
     ],
-    "mirrors": [
-      "https://dataplane.org/sipquery.txt"
-    ]
+    "mirrors": ["https://dataplane.org/sipquery.txt"]
   },
   "dataplane_sipregistration": {
     "color": "black",
@@ -1090,9 +1026,7 @@
         "rule": "BEGIN{FS=\"|\"}$0~/^[^#]/{gsub(/ /,\"\"); print $3}"
       }
     ],
-    "mirrors": [
-      "https://dataplane.org/sipregistration.txt"
-    ]
+    "mirrors": ["https://dataplane.org/sipregistration.txt"]
   },
   "dataplane_sshpwauth": {
     "color": "black",
@@ -1103,9 +1037,7 @@
         "rule": "BEGIN{FS=\"|\"}$0~/^[^#]/{gsub(/ /,\"\"); print $3}"
       }
     ],
-    "mirrors": [
-      "https://dataplane.org/sshpwauth.txt"
-    ]
+    "mirrors": ["https://dataplane.org/sshpwauth.txt"]
   },
   "dataplane_vncrfb": {
     "color": "black",
@@ -1116,9 +1048,7 @@
         "rule": "BEGIN{FS=\"|\"}$0~/^[^#]/{gsub(/ /,\"\"); print $3}"
       }
     ],
-    "mirrors": [
-      "https://dataplane.org/vncrfb.txt"
-    ]
+    "mirrors": ["https://dataplane.org/vncrfb.txt"]
   },
   "digitalside_domains": {
     "color": "black",
@@ -1171,9 +1101,7 @@
         "rule": "$0~/^[^#]/&&$1!~/^Start$/{printf \"%s/%s\\n\",$1,$3}"
       }
     ],
-    "mirrors": [
-      "https://feeds.dshield.org/block.txt"
-    ]
+    "mirrors": ["https://feeds.dshield.org/block.txt"]
   },
   "durablenapkin_luminati": {
     "color": "black",
@@ -1420,9 +1348,7 @@
         "rule": "$0~/^[^#|+]/{print $2}"
       }
     ],
-    "mirrors": [
-      "https://filtri-dns.ga/filtri.txt"
-    ]
+    "mirrors": ["https://filtri-dns.ga/filtri.txt"]
   },
   "firehol_level4": {
     "color": "black",
@@ -1487,9 +1413,7 @@
         "rule": ""
       }
     ],
-    "mirrors": [
-      "https://hostfiles.frogeye.fr/firstparty-trackers.txt"
-    ]
+    "mirrors": ["https://hostfiles.frogeye.fr/firstparty-trackers.txt"]
   },
   "geoffrey_frogeye_multiparty": {
     "_comment": "Has a 'multiparty-only-trackers' list, which is smaller.",
@@ -1501,9 +1425,7 @@
         "rule": ""
       }
     ],
-    "mirrors": [
-      "https://hostfiles.frogeye.fr/multiparty-trackers.txt"
-    ]
+    "mirrors": ["https://hostfiles.frogeye.fr/multiparty-trackers.txt"]
   },
   "goodbye_ads": {
     "color": "black",
@@ -1619,9 +1541,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/adscore?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/adscore?json"]
   },
   "isc_alphastrike": {
     "color": "black",
@@ -1632,9 +1552,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/alphastrike?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/alphastrike?json"]
   },
   "isc_arbor": {
     "color": "black",
@@ -1645,9 +1563,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/arbor?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/arbor?json"]
   },
   "isc_blindferret": {
     "color": "black",
@@ -1658,9 +1574,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/blindferret?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/blindferret?json"]
   },
   "isc_censys": {
     "color": "black",
@@ -1671,9 +1585,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/censys?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/censys?json"]
   },
   "isc_ciarmy": {
     "_comment": "Produces some unique IPs apart from 'cinsscore'",
@@ -1685,9 +1597,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/ciarmy?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/ciarmy?json"]
   },
   "isc_cybergreen": {
     "color": "black",
@@ -1698,9 +1608,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/cybergreen?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/cybergreen?json"]
   },
   "isc_erratasec": {
     "color": "black",
@@ -1711,9 +1619,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/erratasec?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/erratasec?json"]
   },
   "isc_internetcensus": {
     "color": "black",
@@ -1724,9 +1630,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/internetcensus?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/internetcensus?json"]
   },
   "isc_ipip": {
     "color": "black",
@@ -1737,9 +1641,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/ipip?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/ipip?json"]
   },
   "isc_netsystems": {
     "color": "black",
@@ -1750,9 +1652,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/netsystems?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/netsystems?json"]
   },
   "isc_onyphe": {
     "color": "black",
@@ -1763,9 +1663,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/onyphe?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/onyphe?json"]
   },
   "isc_rapid7sonar": {
     "color": "black",
@@ -1776,9 +1674,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/rapid7sonar?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/rapid7sonar?json"]
   },
   "isc_recyber": {
     "color": "black",
@@ -1789,9 +1685,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/recyber?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/recyber?json"]
   },
   "isc_scorecard": {
     "color": "black",
@@ -1802,9 +1696,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/scorecard?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/scorecard?json"]
   },
   "isc_shodan": {
     "color": "black",
@@ -1815,9 +1707,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/shodan?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/shodan?json"]
   },
   "isc_stretchoid": {
     "color": "black",
@@ -1828,9 +1718,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/stretchoid?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/stretchoid?json"]
   },
   "isc_univmichigan": {
     "color": "black",
@@ -1841,9 +1729,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/univmichigan?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/univmichigan?json"]
   },
   "isc_univsydney": {
     "color": "black",
@@ -1854,9 +1740,7 @@
         "rule": ".[] | .ipv4"
       }
     ],
-    "mirrors": [
-      "https://isc.sans.edu/api/threatlist/univsydney?json"
-    ]
+    "mirrors": ["https://isc.sans.edu/api/threatlist/univsydney?json"]
   },
   "joewein": {
     "color": "black",
@@ -1867,9 +1751,7 @@
         "rule": ""
       }
     ],
-    "mirrors": [
-      "https://www.joewein.net/dl/bl/dom-bl.txt"
-    ]
+    "mirrors": ["https://www.joewein.net/dl/bl/dom-bl.txt"]
   },
   "kadhosts": {
     "color": "black",
@@ -1932,9 +1814,7 @@
         "rule": "$0~/^[^#]/{print $1}"
       }
     ],
-    "mirrors": [
-      "https://kriskintel.com/feeds/ktip_covid_domains.txt"
-    ]
+    "mirrors": ["https://kriskintel.com/feeds/ktip_covid_domains.txt"]
   },
   "kriskintel_domains": {
     "color": "black",
@@ -1945,9 +1825,7 @@
         "rule": "$0~/^[^#]/{print $1}"
       }
     ],
-    "mirrors": [
-      "https://kriskintel.com/feeds/ktip_malicious_domains.txt"
-    ]
+    "mirrors": ["https://kriskintel.com/feeds/ktip_malicious_domains.txt"]
   },
   "kriskintel_ips": {
     "color": "black",
@@ -1958,9 +1836,7 @@
         "rule": "$0~/^[^#]/{print $1}"
       }
     ],
-    "mirrors": [
-      "https://kriskintel.com/feeds/ktip_malicious_Ips.txt"
-    ]
+    "mirrors": ["https://kriskintel.com/feeds/ktip_malicious_Ips.txt"]
   },
   "kriskintel_ransomware": {
     "color": "black",
@@ -1976,9 +1852,7 @@
         "rule": "/# IP Address #/{ f = 1; next } /# Domain Name #/{ f = 0 } f"
       }
     ],
-    "mirrors": [
-      "https://kriskintel.com/feeds/ktip_ransomware_feeds.txt"
-    ]
+    "mirrors": ["https://kriskintel.com/feeds/ktip_ransomware_feeds.txt"]
   },
   "lightswitch_ads_and_tracking": {
     "color": "black",
@@ -2086,9 +1960,7 @@
         "rule": "NR>5"
       }
     ],
-    "mirrors": [
-      "http://phishing.mailscanner.info/phishing.bad.sites.conf"
-    ]
+    "mirrors": ["http://phishing.mailscanner.info/phishing.bad.sites.conf"]
   },
   "majkiit_hole_cert": {
     "_comment": "Not quite sure what this is, but it's actively maintained. Judging by a maintainer xxcriticxx's contributions it seems to be a blocklist.",
@@ -2127,9 +1999,7 @@
         "rule": 3
       }
     ],
-    "mirrors": [
-      "https://malsilo.gitlab.io/feeds/dumps/domain_list.txt"
-    ]
+    "mirrors": ["https://malsilo.gitlab.io/feeds/dumps/domain_list.txt"]
   },
   "maltrail": {
     "color": "black",
@@ -2211,9 +2081,7 @@
         "rule": "$0~/^[^#]/"
       }
     ],
-    "mirrors": [
-      "https://mirai.security.gives/data/ip_list.txt"
-    ]
+    "mirrors": ["https://mirai.security.gives/data/ip_list.txt"]
   },
   "mobiletrackers_list": {
     "color": "black",
@@ -2268,9 +2136,7 @@
         "rule": "$0~/^[^#]/"
       }
     ],
-    "mirrors": [
-      "https://myip.ms/files/bots/live_webcrawlers.txt"
-    ]
+    "mirrors": ["https://myip.ms/files/bots/live_webcrawlers.txt"]
   },
   "nextdns_bypass_methods": {
     "color": "white",
@@ -2334,9 +2200,7 @@
         "rule": "$0~/^[^#]/{print $2}"
       }
     ],
-    "mirrors": [
-      "https://orca.pet/notonmyshift/hosts.txt"
-    ]
+    "mirrors": ["https://orca.pet/notonmyshift/hosts.txt"]
   },
   "notrack_annoyance": {
     "color": "black",
@@ -2347,9 +2211,7 @@
         "rule": "$0~/^[^#]/{print $1}"
       }
     ],
-    "mirrors": [
-      "https://quidsup.net/notrack/blocklist.php?download=annoyance"
-    ]
+    "mirrors": ["https://quidsup.net/notrack/blocklist.php?download=annoyance"]
   },
   "notrack_malware": {
     "color": "black",
@@ -2360,9 +2222,7 @@
         "rule": "$0~/^[^#]/{print $1}"
       }
     ],
-    "mirrors": [
-      "https://quidsup.net/notrack/blocklist.php?download=malware"
-    ]
+    "mirrors": ["https://quidsup.net/notrack/blocklist.php?download=malware"]
   },
   "notrack_tracker_radar": {
     "color": "black",
@@ -2386,9 +2246,7 @@
         "rule": "$0~/^[^#]/{print $1}"
       }
     ],
-    "mirrors": [
-      "https://quidsup.net/notrack/blocklist.php?download=trackers"
-    ]
+    "mirrors": ["https://quidsup.net/notrack/blocklist.php?download=trackers"]
   },
   "notracking": {
     "color": "black",
@@ -2412,9 +2270,7 @@
         "rule": "BEGIN{OFS=\"\\n\"}$0~/^[^#]/{$1=\"\"; printf \"%s\",$0}"
       }
     ],
-    "mirrors": [
-      "http://npc.0am.jp/hosts.php?dl=1"
-    ]
+    "mirrors": ["http://npc.0am.jp/hosts.php?dl=1"]
   },
   "oisd_extra": {
     "color": "black",
@@ -2425,9 +2281,7 @@
         "rule": "NR>13"
       }
     ],
-    "mirrors": [
-      "https://dbl.oisd.nl/extra/"
-    ]
+    "mirrors": ["https://dbl.oisd.nl/extra/"]
   },
   "oisd_full": {
     "color": "black",
@@ -2438,9 +2292,7 @@
         "rule": "NR>13"
       }
     ],
-    "mirrors": [
-      "https://dbl.oisd.nl"
-    ]
+    "mirrors": ["https://dbl.oisd.nl"]
   },
   "opendbl_talos": {
     "color": "black",
@@ -2451,9 +2303,7 @@
         "rule": "NR>1"
       }
     ],
-    "mirrors": [
-      "https://www.opendbl.net/lists/talos.list"
-    ]
+    "mirrors": ["https://www.opendbl.net/lists/talos.list"]
   },
   "openphish_feed": {
     "color": "black",
@@ -2464,9 +2314,7 @@
         "rule": "BEGIN{FS=\"/\"}/^http[s]?:\\/\\/([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+(\\/|$)/{print tolower($3)}"
       }
     ],
-    "mirrors": [
-      "https://openphish.com/feed.txt"
-    ]
+    "mirrors": ["https://openphish.com/feed.txt"]
   },
   "orthrus": {
     "color": "black",
@@ -2539,9 +2387,7 @@
         "rule": "say $& while /$RE{net}{IPv6}/g"
       }
     ],
-    "mirrors": [
-      "https://phishstats.info/phish_score.csv"
-    ]
+    "mirrors": ["https://phishstats.info/phish_score.csv"]
   },
   "projecthoneypot_last_comment_spam": {
     "color": "black",
@@ -2552,9 +2398,7 @@
         "rule": "BEGIN{FS=\"[<>]\"}NR>14&&/title/{split($3,a,\" | \"); print a[1]}"
       }
     ],
-    "mirrors": [
-      "https://www.projecthoneypot.org/list_of_ips.php?by=19&rss=1"
-    ]
+    "mirrors": ["https://www.projecthoneypot.org/list_of_ips.php?by=19&rss=1"]
   },
   "projecthoneypot_last_crawl": {
     "color": "black",
@@ -2565,9 +2409,7 @@
         "rule": "BEGIN{FS=\"[<>]\"}NR>14&&/title/{split($3,a,\" | \"); print a[1]}"
       }
     ],
-    "mirrors": [
-      "https://www.projecthoneypot.org/list_of_ips.php?by=4&rss=1"
-    ]
+    "mirrors": ["https://www.projecthoneypot.org/list_of_ips.php?by=4&rss=1"]
   },
   "projecthoneypot_last_dictionary_attack": {
     "color": "black",
@@ -2578,9 +2420,7 @@
         "rule": "BEGIN{FS=\"[<>]\"}NR>14&&/title/{split($3,a,\" | \"); print a[1]}"
       }
     ],
-    "mirrors": [
-      "https://www.projecthoneypot.org/list_of_ips.php?by=16&rss=1"
-    ]
+    "mirrors": ["https://www.projecthoneypot.org/list_of_ips.php?by=16&rss=1"]
   },
   "projecthoneypot_last_email_spam": {
     "color": "black",
@@ -2591,9 +2431,7 @@
         "rule": "BEGIN{FS=\"[<>]\"}NR>14&&/title/{split($3,a,\" | \"); print a[1]}"
       }
     ],
-    "mirrors": [
-      "https://www.projecthoneypot.org/list_of_ips.php?by=13&rss=1"
-    ]
+    "mirrors": ["https://www.projecthoneypot.org/list_of_ips.php?by=13&rss=1"]
   },
   "projecthoneypot_last_harvest": {
     "color": "black",
@@ -2604,9 +2442,7 @@
         "rule": "BEGIN{FS=\"[<>]\"}NR>14&&/title/{split($3,a,\" | \"); print a[1]}"
       }
     ],
-    "mirrors": [
-      "https://www.projecthoneypot.org/list_of_ips.php?by=7&rss=1"
-    ]
+    "mirrors": ["https://www.projecthoneypot.org/list_of_ips.php?by=7&rss=1"]
   },
   "projecthoneypot_last_harvest_spam_yield": {
     "color": "black",
@@ -2617,9 +2453,7 @@
         "rule": "BEGIN{FS=\"[<>]\"}NR>14&&/title/{split($3,a,\" | \"); print a[1]}"
       }
     ],
-    "mirrors": [
-      "https://www.projecthoneypot.org/list_of_ips.php?by=10&rss=1"
-    ]
+    "mirrors": ["https://www.projecthoneypot.org/list_of_ips.php?by=10&rss=1"]
   },
   "projecthoneypot_total_harvest_spam_yield": {
     "color": "black",
@@ -2630,9 +2464,7 @@
         "rule": "BEGIN{FS=\"[<>]\"}NR>14&&/title/{split($3,a,\" | \"); print a[1]}"
       }
     ],
-    "mirrors": [
-      "https://www.projecthoneypot.org/list_of_ips.php?by=12&rss=1"
-    ]
+    "mirrors": ["https://www.projecthoneypot.org/list_of_ips.php?by=12&rss=1"]
   },
   "public_dns": {
     "color": "white",
@@ -2648,9 +2480,7 @@
         "rule": "/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/"
       }
     ],
-    "mirrors": [
-      "https://public-dns.info/nameservers.txt"
-    ]
+    "mirrors": ["https://public-dns.info/nameservers.txt"]
   },
   "quantum_abuse": {
     "color": "black",
@@ -2731,9 +2561,7 @@
         "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/"
       }
     ],
-    "mirrors": [
-      "https://rescure.me/malware/clop.txt"
-    ]
+    "mirrors": ["https://rescure.me/malware/clop.txt"]
   },
   "resecure_covid": {
     "color": "black",
@@ -2744,9 +2572,7 @@
         "rule": "$0~/^[^ #]/"
       }
     ],
-    "mirrors": [
-      "https://rescure.me/covid.txt"
-    ]
+    "mirrors": ["https://rescure.me/covid.txt"]
   },
   "resecure_domain_blacklist": {
     "color": "black",
@@ -2757,9 +2583,7 @@
         "rule": "$0~/^[^ #]/"
       }
     ],
-    "mirrors": [
-      "https://rescure.me/rescure_domain_blacklist.txt"
-    ]
+    "mirrors": ["https://rescure.me/rescure_domain_blacklist.txt"]
   },
   "resecure_ekans": {
     "color": "black",
@@ -2775,9 +2599,7 @@
         "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/"
       }
     ],
-    "mirrors": [
-      "https://rescure.me/malware/ekans.txt"
-    ]
+    "mirrors": ["https://rescure.me/malware/ekans.txt"]
   },
   "resecure_ip_blacklist": {
     "color": "black",
@@ -2788,9 +2610,7 @@
         "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/"
       }
     ],
-    "mirrors": [
-      "https://rescure.me/rescure_blacklist.txt"
-    ]
+    "mirrors": ["https://rescure.me/rescure_blacklist.txt"]
   },
   "resecure_maze": {
     "color": "black",
@@ -2806,9 +2626,7 @@
         "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/"
       }
     ],
-    "mirrors": [
-      "https://rescure.me/malware/maze.txt"
-    ]
+    "mirrors": ["https://rescure.me/malware/maze.txt"]
   },
   "resecure_netwalker": {
     "color": "black",
@@ -2824,9 +2642,7 @@
         "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/"
       }
     ],
-    "mirrors": [
-      "https://rescure.me/malware/netwalker.txt"
-    ]
+    "mirrors": ["https://rescure.me/malware/netwalker.txt"]
   },
   "resecure_ryuk": {
     "color": "black",
@@ -2842,9 +2658,7 @@
         "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/"
       }
     ],
-    "mirrors": [
-      "https://rescure.me/malware/ryuk.txt"
-    ]
+    "mirrors": ["https://rescure.me/malware/ryuk.txt"]
   },
   "resecure_sobinokibi": {
     "color": "black",
@@ -2860,9 +2674,7 @@
         "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/"
       }
     ],
-    "mirrors": [
-      "https://rescure.me/malware/sodinokibi.txt"
-    ]
+    "mirrors": ["https://rescure.me/malware/sodinokibi.txt"]
   },
   "resecure_try2cry": {
     "color": "black",
@@ -2878,9 +2690,7 @@
         "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/"
       }
     ],
-    "mirrors": [
-      "https://rescure.me/malware/try2cry.txt"
-    ]
+    "mirrors": ["https://rescure.me/malware/try2cry.txt"]
   },
   "resecure_wastedlocker": {
     "color": "black",
@@ -2896,9 +2706,7 @@
         "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/"
       }
     ],
-    "mirrors": [
-      "https://rescure.me/malware/wastedlocker.txt"
-    ]
+    "mirrors": ["https://rescure.me/malware/wastedlocker.txt"]
   },
   "rpilist_child_protection": {
     "color": "black",
@@ -3000,9 +2808,7 @@
         "rule": ""
       }
     ],
-    "mirrors": [
-      "https://report.rutgers.edu/DROP/attackers"
-    ]
+    "mirrors": ["https://report.rutgers.edu/DROP/attackers"]
   },
   "schakal": {
     "color": "black",
@@ -3013,9 +2819,7 @@
         "rule": "$1~/^0.0.0.0$/{print $2}"
       }
     ],
-    "mirrors": [
-      "https://schakal.ru/hosts/alive_hosts.txt"
-    ]
+    "mirrors": ["https://schakal.ru/hosts/alive_hosts.txt"]
   },
   "securityresearch_cif": {
     "color": "black",
@@ -3473,9 +3277,7 @@
         "rule": "$0~/^[^#]/&&$1~/^0.0.0.0$/{print $2}"
       }
     ],
-    "mirrors": [
-      "https://someonewhocares.org/hosts/zero/hosts"
-    ]
+    "mirrors": ["https://someonewhocares.org/hosts/zero/hosts"]
   },
   "soteria_ads": {
     "color": "black",
@@ -3584,9 +3386,7 @@
         "rule": "NR>7"
       }
     ],
-    "mirrors": [
-      "https://www.sunshine.it/blacklist.txt"
-    ]
+    "mirrors": ["https://www.sunshine.it/blacklist.txt"]
   },
   "taz_spam": {
     "_comment": "Assuming all hosts prefixed with hashtags need to be ignored, and that URLs (or what appear to be partial URLs) are still viable.",
@@ -3598,9 +3398,7 @@
         "rule": "BEGIN{FS=\"//\"}$0~/^[^#]/{if ($1~/^(http|\\/)/) {print $2} else {print $1}}"
       }
     ],
-    "mirrors": [
-      "http://taz.net.au/Mail/SpamDomains"
-    ]
+    "mirrors": ["http://taz.net.au/Mail/SpamDomains"]
   },
   "tgc": {
     "color": "black",
@@ -3611,9 +3409,7 @@
         "rule": "$1~/^0.0.0.0$/{print $2}"
       }
     ],
-    "mirrors": [
-      "https://tgc.cloud/downloads/hosts.alive.txt"
-    ]
+    "mirrors": ["https://tgc.cloud/downloads/hosts.alive.txt"]
   },
   "th3m3": {
     "color": "black",
@@ -3637,9 +3433,7 @@
         "rule": "{print tolower($1)}"
       }
     ],
-    "mirrors": [
-      "https://threatcrowd.org/feeds/domains.txt"
-    ]
+    "mirrors": ["https://threatcrowd.org/feeds/domains.txt"]
   },
   "threatcrowd_inc": {
     "color": "black",
@@ -3650,9 +3444,7 @@
         "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/"
       }
     ],
-    "mirrors": [
-      "https://threatcrowd.org/inc/blacklist.txt"
-    ]
+    "mirrors": ["https://threatcrowd.org/inc/blacklist.txt"]
   },
   "threatcrowd_ips": {
     "color": "black",
@@ -3663,9 +3455,7 @@
         "rule": ""
       }
     ],
-    "mirrors": [
-      "https://threatcrowd.org/feeds/ips.txt"
-    ]
+    "mirrors": ["https://threatcrowd.org/feeds/ips.txt"]
   },
   "tinycheck": {
     "color": "black",
@@ -3713,9 +3503,7 @@
         "rule": ""
       }
     ],
-    "mirrors": [
-      "https://check.torproject.org/torbulkexitlist"
-    ]
+    "mirrors": ["https://check.torproject.org/torbulkexitlist"]
   },
   "turris": {
     "color": "black",
@@ -3744,9 +3532,7 @@
         "rule": "IP"
       }
     ],
-    "mirrors": [
-      "https://tracker.viriback.com/dump.php"
-    ]
+    "mirrors": ["https://tracker.viriback.com/dump.php"]
   },
   "voipbl": {
     "color": "black",
@@ -3757,9 +3543,7 @@
         "rule": "NR>1"
       }
     ],
-    "mirrors": [
-      "https://voipbl.org/update"
-    ]
+    "mirrors": ["https://voipbl.org/update"]
   },
   "wally3k": {
     "color": "black",
@@ -3770,9 +3554,7 @@
         "rule": "$0~/^[^#]/{print $1}"
       }
     ],
-    "mirrors": [
-      "https://v.firebog.net/hosts/static/w3kbl.txt"
-    ]
+    "mirrors": ["https://v.firebog.net/hosts/static/w3kbl.txt"]
   },
   "winhelp": {
     "color": "black",
@@ -3783,9 +3565,7 @@
         "rule": "$0~/^[^#]/&&$2!~/^localhost$/{print $2}"
       }
     ],
-    "mirrors": [
-      "https://winhelp2002.mvps.org/hosts.txt"
-    ]
+    "mirrors": ["https://winhelp2002.mvps.org/hosts.txt"]
   },
   "winspy_extra": {
     "color": "black",

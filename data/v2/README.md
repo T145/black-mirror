@@ -105,7 +105,7 @@
 - [orbitum](https://extupdate.orbitum.com/adblock/ad_servers.txt)
   - Last-Modified: Mon, 24 Oct 2016 13:29:47 GMT
   - Appears to have a modern app that may have active lists somewhere.
-  - https://orbitum.com/
+  - <https://orbitum.com/>
 - [fblan](http://fblan.de/postfix/hosts.txt)
   - Last-Modified: Fri, 14 Dec 2012 21:49:00 GMT
 - [easytimetv](http://file1.easytimetv.com/out_Adblock.conf)
@@ -120,7 +120,7 @@
 - [adhell](https://github.com/adhell/adhell.github.io)
 - [getlives](https://getlives.com/files/hosts.txt)
   - Encourge the Twitch Streamer to bring it back?
-  - https://www.twitch.tv/syrsly
+  - <https://www.twitch.tv/syrsly>
 - [ayucat](http://git.sourceforge.jp/view?p=ayucat-list/ayucat-list.git;a=blob_plain;f=ayucat-list.txt)
   - [GitHub](https://github.com/ayucat)
 - [ipfiles](https://hosts.ipfiles.com/)

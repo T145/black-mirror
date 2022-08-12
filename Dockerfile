@@ -41,7 +41,7 @@ RUN echo 'Acquire::Languages "none";' >> /etc/apt/apt.conf.d/00aptitude \
 # use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 RUN apt-get -y update \
       # install apt-utils early so debconf doesn't delay package configuration
-      && apt-get -y install apt-utils \
+      && apt-get -y --no-install-recommends install apt-utils \
       # upgrade with proper configurations
       && apt-get -y upgrade \
       && apt-get install -y --no-install-recommends \

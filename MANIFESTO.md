@@ -29,7 +29,7 @@ Because speech freedom is encourged, so too is feedback and constructive critici
 The real power behind the freedom of speech is the ability to hear many opinions to quickly deduce those that are correct or reasonable.
 
 “Before you become too entranced with gorgeous gadgets and mesmerizing video displays, let me remind you that information is not knowledge, knowledge is not wisdom, and wisdom is not foresight. Each grows out of the other, and we need them all.”\
-― _Arthur C. Clarke_
+― *Arthur C. Clarke*
 
 ## On Spyware/Stalkerware
 
@@ -51,7 +51,7 @@ The real power behind the freedom of speech is the ability to hear many opinions
 These services intrude on privacy, are usually malware, and compromise individual safety. Therefore any known parties are blocked.
 
 “There will come a time when it isn't 'They're spying on me through my phone' anymore. Eventually, it will be 'My phone is spying on me'.”\
-― _Philip K. Dick_
+― *Philip K. Dick*
 
 ## On Propaganda
 
@@ -75,10 +75,10 @@ A source will not be blocked specifically if it promotes a non-radical left or r
 Like dealings with religion, platforms that promote "knee-jerk contrarianism" or philosophy that significantly breaches individual safety as an opinion majority will be blocked.
 
 “True liberty consists only in the power of doing what we ought to will, and in not being constrained to do what we ought not to will.”\
-― _Jonathan Edwards_
+― *Jonathan Edwards*
 
 “Make decency cool again.”\
-― _Andrew Marantz_
+― *Andrew Marantz*
 
 ## On Social Media
 

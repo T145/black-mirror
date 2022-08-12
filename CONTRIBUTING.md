@@ -5,19 +5,19 @@
 Black Mirror works by taking blacklist or whitelist listings from `data/v1/sources.json`.
 Each listing has the following fields:
 
-*   **color**: Designates whether this source is applied to a blacklist or whitelist.
-    *   Strictly `black` or `white`.
-*   **filters**: Object array where each element object, or filter, strictly has the following fields:
-    *   **engine**: Designates which program will be used to process the source.
-        *   Strictly [a valid engine](https://github.com/T145/black-mirror/blob/master/scripts/create_builds.bash#L38).
-    *   **format**: Designates which list to place the generated output into.
-        *   Strictly `domain`, `ipv4`, or `ipv6`.
-    *   **rule**: Parameters passed to the engine that set how to process the source.
-        *   Note that this *very* dependent on the designated engine!
-        *   Be sure the rule is properly escaped.
-*   **mirrors**: String array where each element is a URL where the source text lives.
-    *   Multiple mirrors can be designated to speed up downloads.
-    *   Note that mirrors must have the same content!
+* **color**: Designates whether this source is applied to a blacklist or whitelist.
+  * Strictly `black` or `white`.
+* **filters**: Object array where each element object, or filter, strictly has the following fields:
+  * **engine**: Designates which program will be used to process the source.
+    * Strictly [a valid engine](https://github.com/T145/black-mirror/blob/master/scripts/v1/build_release.bash#L42).
+  * **format**: Designates which list to place the generated output into.
+    * Strictly `domain`, `ipv4`, or `ipv6`.
+  * **rule**: Parameters passed to the engine that set how to process the source.
+    * Note that this *very* dependent on the designated engine!
+    * Be sure the rule is properly escaped.
+* **mirrors**: String array where each element is a URL where the source text lives.
+  * Multiple mirrors can be designated to speed up downloads.
+  * Note that mirrors must have the same content!
 
 Now go make a Pull Request with a new entry in `data/v1/sources.json`!
 Don't worry about the other "sources" files or where to place the entry:

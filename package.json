@@ -6,12 +6,8 @@
   "author": "T145",
   "license": "AGPL-3.0",
   "private": true,
-  "scripts": {
-    "lint": "run-script-os",
-    "lint:darwin:linux": "git ls-files '*.bash' -z | xargs -0 --no-run-if-empty shellcheck",
-    "lint:windows": "for /f %f in ('git ls-files \"*.bash\"') do shellcheck %f"
-  },
   "devDependencies": {
-    "run-script-os": "^1.1.6"
+    "glob": "^7.1.6",
+    "mega-linter-runner": "^6.3.0"
   }
 }

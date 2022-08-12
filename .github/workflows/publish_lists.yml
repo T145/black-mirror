@@ -198,9 +198,11 @@ jobs:
       - name: Update changelog
         if: steps.release_data.outputs.body != 'null'
         run: |
-          echo -n '## ' >>CHANGELOG.md
-          date +"%d-%m-%Y %T" >>CHANGELOG.md
-          echo "${{ fromJSON(steps.release_data.outputs.body) }}" | sed 1d >>CHANGELOG.md
+          {
+            echo -n '## ';
+            date +"%d-%m-%Y %T";
+            echo "${{ fromJSON(steps.release_data.outputs.body) }}" | sed 1d;
+          } >>CHANGELOG.md
         shell: bash
 
       - name: Fetch documents

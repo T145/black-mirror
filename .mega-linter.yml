@@ -1,0 +1,24 @@
+# Configuration file for MegaLinter
+# See all available variables at https://oxsecurity.github.io/megalinter/configuration/ and in linters documentation
+
+APPLY_FIXES: all # all, none, or list of linter keys
+ENABLE: # If you use ENABLE variable, all other languages/formats/tooling-formats will be disabled by default
+  - ACTION
+  - BASH
+  - DOCKERFILE
+  - EDITORCONFIG
+  - JSON
+  - MARKDOWN
+  - PERL
+  - PYTHON
+  - YAML
+DISABLE:
+  - COPYPASTE # Uncomment to disable checks of excessive copy-pastes
+  - SPELL # Comment to enable checks of spelling mistakes
+DISABLE_LINTERS:
+  - "PYTHON_PYLINT" # entirely redundant and unnecessary python checks
+  - "REPOSITORY_CHECKOV" # currently unable to perform a security scan, and other reports are similar to hadolint
+SHOW_ELAPSED_TIME: true
+FILEIO_REPORTER: false
+# DISABLE_ERRORS: true # Uncomment if you want MegaLinter to detect errors but not block CI to pass
+# UPDATED_SOURCES_REPORTER: false

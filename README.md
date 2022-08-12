@@ -768,7 +768,7 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [thai-ads-filter](https://github.com/adblock-thai/thai-ads-filter)
 - [Cryptojacking-campaign-list](https://github.com/deHakkelaar/Cryptojacking-campaign-list)
   - Active but draws from inactive Google Sheets.
-  - https://dehakkelaar.nl/lists/
+  - <https://dehakkelaar.nl/lists/>
 - [yhosts](https://github.com/vokins/yhosts)
 - [easylistczechandslovak](https://github.com/tomasko126/easylistczechandslovak)
 - [Andrew's Settings](https://gitlab.com/andryou/andrews-settings#andrews-settings-and-config-files)
@@ -908,23 +908,23 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 
 ### 🃏 Interesting Oddities
 
-- https://www.chaosreigns.com/
-- https://vpn.hidemyass.com/vpn-config/
-- http://www.textfiles.com/programming/
-- https://www.rhyolite.com//anti-spam/you-might-be.html
+- <https://www.chaosreigns.com/>
+- <https://vpn.hidemyass.com/vpn-config/>
+- <http://www.textfiles.com/programming/>
+- <https://www.rhyolite.com//anti-spam/you-might-be.html>
 
 ### 📦 Big Data Lists
 
 > Typically used by other blacklist projects as whitelists.
 
-| List Name    | URL                                                                                             |
-| ------------ | ----------------------------------------------------------------------------------------------- |
-| Alexa        | https://s3.amazonaws.com/alexa-static/top-1m.csv.zip                                            |
-| Umbrella     | https://downloads.majestic.com/majestic_million.csv                                             |
-| Statvoo      | https://statvoo.com/dl/top-1million-sites.csv.zip                                               |
-| OpenPageRank | https://www.domcop.com/files/top/top10milliondomains.csv.zip                                    |
-| Quantcast    | https://toplists.net.in.tum.de/archive/quantcast/quantcast-top-sites-2021-06-25_0900_UTC.txt.xz |
-| Tranco list  | https://tranco-list.eu/                                                                         |
+| List Name    | URL                                                                                               |
+|--------------|---------------------------------------------------------------------------------------------------|
+| Alexa        | <https://s3.amazonaws.com/alexa-static/top-1m.csv.zip>                                            |
+| Umbrella     | <https://downloads.majestic.com/majestic_million.csv>                                             |
+| Statvoo      | <https://statvoo.com/dl/top-1million-sites.csv.zip>                                               |
+| OpenPageRank | <https://www.domcop.com/files/top/top10milliondomains.csv.zip>                                    |
+| Quantcast    | <https://toplists.net.in.tum.de/archive/quantcast/quantcast-top-sites-2021-06-25_0900_UTC.txt.xz> |
+| Tranco list  | <https://tranco-list.eu/>                                                                         |
 
 ### 🌐 IP Block Providers
 
@@ -948,16 +948,16 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 
 ### Need for speed
 
-- https://fossies.org/linux/parallel/src/parsort
-- https://unix.stackexchange.com/questions/579251/how-to-use-parallel-to-speed-up-sort-for-big-files-fitting-in-ram#579252
-- https://askubuntu.com/questions/1006377/check-the-max-allowed-threads-count-for-sure#1006384
-- https://stackoverflow.com/questions/9066609/fastest-possible-grep
+- <https://fossies.org/linux/parallel/src/parsort>
+- <https://unix.stackexchange.com/questions/579251/how-to-use-parallel-to-speed-up-sort-for-big-files-fitting-in-ram#579252>
+- <https://askubuntu.com/questions/1006377/check-the-max-allowed-threads-count-for-sure#1006384>
+- <https://stackoverflow.com/questions/9066609/fastest-possible-grep>
 
 ### List References
 
-- https://www.covert.io/threat-intelligence/
-- https://filterlists.com/
-- https://firebog.net/
-- https://grimore.org/assets/databases/blocklist-ipsets
-- https://users.cs.northwestern.edu/~jesse/course/cs214-fa19/lec/21-bloom/bloom.txt
-- https://gist.github.com/jedisct1/c7548d814de2dd661f033d9cb18a0006
+- <https://www.covert.io/threat-intelligence/>
+- <https://filterlists.com/>
+- <https://firebog.net/>
+- <https://grimore.org/assets/databases/blocklist-ipsets>
+- <https://users.cs.northwestern.edu/~jesse/course/cs214-fa19/lec/21-bloom/bloom.txt>
+- <https://gist.github.com/jedisct1/c7548d814de2dd661f033d9cb18a0006>
