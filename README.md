@@ -43,14 +43,14 @@
 </div>
 <div align="center">
   <a href="https://github.com/T145/black-mirror">
-    <img src="https://img.shields.io/github/repo-size/T145/black-mirror?logo=adblock&style=flat"
+    <img src="https://img.shields.io/github/repo-size/T145/black-mirror?logo=adblock&style=flat&label=Repo%20Size"
         alt="repo-size"
         longdesc="https://shields.io/"
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
   </a>
   <a href="https://github.com/T145/black-mirror">
-    <img src="https://img.shields.io/github/commit-activity/w/T145/black-mirror?logo=adblock&style=flat"
+    <img src="https://img.shields.io/github/commit-activity/w/T145/black-mirror?logo=adblock&style=flat&label=Commit%20Activity"
         alt="commit-activity"
         longdesc="https://shields.io/"
         crossorigin="anonymous"
