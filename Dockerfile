@@ -22,10 +22,6 @@ LABEL maintainer="T145" \
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN useradd -ms /bin/bash garry
-USER garry
-WORKDIR /home/garry
-
 # https://docs.docker.com/develop/develop-images/multistage-build/
 COPY --from=go /usr/local/go/ /usr/local/
 COPY --from=go /go/ /go/
@@ -77,3 +73,7 @@ RUN curl -LO 'https://github.com/lycheeverse/lychee/releases/download/v0.10.0/ly
       && tar -xvzf lychee-v0.10.0-x86_64-unknown-linux-gnu.tar.gz \
       && chmod 755 lychee \
       && mv lychee /usr/local/bin/lychee
+
+# RUN useradd -ms /bin/bash garry
+# USER garry
+# WORKDIR /home/garry
