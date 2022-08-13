@@ -12,12 +12,16 @@ RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
     && go install github.com/ipinfo/cli/ipinfo@latest \
     && go install github.com/StevenBlack/ghosts@latest
 
-# production image using snyk's recommended os version
-FROM ubuntu:latest
+# https://hub.docker.com/_/ubuntu/
+# alias: 22.04, jammy-20220801, jammy, latest, rolling
+FROM ubuntu:jammy
 
 LABEL maintainer="T145" \
       version="4.2.0" \
       description="Custom Docker Image used to run blacklist projects."
+
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+USER docker
 
 # https://docs.docker.com/develop/develop-images/multistage-build/
 COPY --from=go /usr/local/go/ /usr/local/
@@ -38,20 +42,23 @@ RUN echo 'Acquire::Languages "none";' >> /etc/apt/apt.conf.d/00aptitude \
 # https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#run
 # https://docs.docker.com/engine/reference/builder/#from
 # https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory#21530768
+# https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
 # use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
+# install apt-utils early so debconf doesn't delay package configuration
 RUN apt-get -y update \
-      # install apt-utils early so debconf doesn't delay package configuration
       && apt-get -y --no-install-recommends install apt-utils \
-      # upgrade with proper configurations
       && apt-get -y upgrade \
       && apt-get install -y --no-install-recommends \
       aria2 bc build-essential curl gawk git gpg gzip iprange jq \
       libdata-validate-domain-perl libdata-validate-ip-perl libnet-idn-encode-perl \
       libnet-libidn-perl libregexp-common-perl libtext-trim-perl libtry-tiny-perl \
-      miller moreutils nano p7zip-full pandoc preload python3-dev python3-pip sed \
+      locales miller moreutils nano p7zip-full pandoc preload python3-dev python3-pip sed \
       && apt-get clean autoclean \
       && apt-get -y autoremove \
-      && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+      && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+      && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+
+ENV LANG en_US.utf8
 
 # install the parallel beta that includes parsort
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
