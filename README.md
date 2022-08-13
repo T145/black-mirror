@@ -909,6 +909,8 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [threatsourcing](https://www.threatsourcing.com/)
   - dnall-free
   - ipall-free
+- [coinhive-block](https://github.com/Marfjeh/coinhive-block)
+- [AnotherUnifiedBlockList](https://github.com/songxiaosen/AnotherUnifiedBlockList)
 
 ### 🕵🏻 Lamers Unwelcome
 
