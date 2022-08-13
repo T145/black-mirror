@@ -797,3 +797,9 @@
 - e0ca196: Updated badges (hopefully for the last time) (T145)
 - 4de6834: Fixed badge labels (T145)
 - e1733ce: Fine-tuned more linting (T145)
+## 13-08-2022 13:44:35
+- 8b74665: ✨🍰✨ (T145)
+- 32ba346: Fixed some Docker configuration (T145)
+- c7a97f3: Properly configured the Docker user (T145)
+- 4bc2a9f: Handle user management later (T145)
+- 34112f2: ✨🎯✨ (T145)
