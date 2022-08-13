@@ -21,7 +21,10 @@ LABEL maintainer="T145" \
       description="Custom Docker Image used to run blacklist projects."
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-USER docker
+
+RUN useradd -ms /bin/bash garry
+USER garry
+WORKDIR /home/garry
 
 # https://docs.docker.com/develop/develop-images/multistage-build/
 COPY --from=go /usr/local/go/ /usr/local/
