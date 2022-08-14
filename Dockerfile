@@ -21,15 +21,28 @@ LABEL maintainer="T145" \
       description="Custom Docker Image used to run blacklist projects."
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+# fullstop to avoid lingering connections, data leaks, etc.
+STOPSIGNAL SIGKILL
 
 # https://docs.docker.com/develop/develop-images/multistage-build/
+# can apply --chmod=755 to set all directory permissions if needed
 COPY --from=go /usr/local/go/ /usr/local/
 COPY --from=go /go/ /go/
 
 # set go env path
 # https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-local-programming-environment-on-ubuntu-18-04
+# https://stackoverflow.com/questions/68693154/package-is-not-in-goroot
 ENV GOPATH=/go
 ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
+RUN go env -w GO111MODULE=off
+
+# verify all go packages are working
+# --interval=DURATION (default: 30s)
+# --timeout=DURATION (default: 30s)
+# --start-period=DURATION (default: 0s)
+# --retries=N (default: 3)
+HEALTHCHECK --retries=0 CMD ipinfo -h && dnsx --help && httpx --help && ghosts -h
+
 # set python env path
 ENV PATH=$PATH:/root/.local/bin
 
