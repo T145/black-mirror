@@ -576,6 +576,8 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [CleanTalk](https://cleantalk.org/help/iptables-connect)
 - [UA Blocklist](https://blocklist.net.ua/providers/)
 - [BotScout](https://botscout.com/last_caught_cache.htm)
+- [CryptoScamDB](https://github.com/CryptoScamDB)
+  - [blacklist](https://api.cryptoscamdb.org/v1/blacklist)
 
 ### ⬜ Whitelists
 
@@ -619,6 +621,8 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
   - best lists
 - [quindecim](https://github.com/quindecim/block)
   - [domains-allowlist](https://github.com/quindecim/block/blob/master/config/domains-allowlist.txt)
+- [CryptoScamDB](https://github.com/CryptoScamDB)
+  - [blacklist](https://api.cryptoscamdb.org/v1/whitelist)
 
 ### 🥢 Duplicates
 
