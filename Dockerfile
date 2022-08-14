@@ -41,7 +41,7 @@ RUN go env -w GO111MODULE=off
 # --timeout=DURATION (default: 30s)
 # --start-period=DURATION (default: 0s)
 # --retries=N (default: 3)
-HEALTHCHECK --retries=0 CMD ipinfo -h && dnsx --help && httpx --help && ghosts -h
+HEALTHCHECK --retries=1 CMD ipinfo -h && dnsx --help && httpx --help && ghosts -h
 
 # set python env path
 ENV PATH=$PATH:/root/.local/bin
