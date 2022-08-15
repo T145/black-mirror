@@ -36,13 +36,6 @@ ENV GOPATH=/go
 ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 RUN go env -w GO111MODULE=off
 
-# verify all go packages are working
-# --interval=DURATION (default: 30s)
-# --timeout=DURATION (default: 30s)
-# --start-period=DURATION (default: 0s)
-# --retries=N (default: 3)
-HEALTHCHECK --retries=1 CMD ipinfo -h && dnsx --help && httpx --help && ghosts -h
-
 # just in case
 ENV NODE_ENV=production LYCHEE_VERSION=v0.10.0
 
@@ -67,7 +60,7 @@ RUN apt-get -y update \
       locales miller moreutils nano p7zip-full pandoc preload python3-dev python3-pip sed \
       && apt-get clean autoclean \
       && apt-get -y autoremove \
-      && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+      && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
       && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 
 ENV LANG en_US.utf8
@@ -88,9 +81,6 @@ RUN curl -LO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_V
       && mv lychee /usr/local/bin/lychee \
       && rm -f lychee-*.tar.gz
 
-# verify lychee is working
-HEALTHCHECK --retries=1 CMD lychee --help
-
 # install the parallel beta that includes parsort
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
 # https://git.savannah.gnu.org/cgit/parallel.git/tree/README
@@ -98,11 +88,11 @@ RUN curl -sSf https://raw.githubusercontent.com/T145/black-mirror/master/scripts
       && echo 'will cite' | parallel --citation || true \
       && rm -f parallel-*.tar.*
 
-# verify the parallel beta is working
-HEALTHCHECK --retries=1 CMD parsort --help
-
-# final checkup to verify general package and configuration stability
-HEALTHCHECK --retries=1 CMD debsums -sa
+# --interval=DURATION (default: 30s)
+# --timeout=DURATION (default: 30s)
+# --start-period=DURATION (default: 0s)
+# --retries=N (default: 3)
+HEALTHCHECK --retries=1 CMD ipinfo -h && dnsx --help && httpx --help && ghosts -h && lychee --help && parsort --help && debsums -sa
 
 # RUN useradd -ms /bin/bash garry
 # USER garry
