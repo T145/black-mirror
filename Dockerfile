@@ -98,7 +98,7 @@ HEALTHCHECK --retries=1 CMD lychee --help
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
 # https://git.savannah.gnu.org/cgit/parallel.git/tree/README
 RUN curl -sSf https://raw.githubusercontent.com/T145/black-mirror/master/scripts/docker/parsort_install.bash | bash \
-      && echo 'will cite' | parallel --citation || true
+      && echo 'will cite' | parallel --citation || true \
       && rm -f parallel-*.tar.*
 
 # verify the parallel beta is working
