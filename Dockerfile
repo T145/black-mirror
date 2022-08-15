@@ -50,28 +50,31 @@ RUN echo 'Acquire::Languages "none";' >> /etc/apt/apt.conf.d/00aptitude \
 # https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
 # use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 # install apt-utils early so debconf doesn't delay package configuration
+# The following works, but lists the repository as insecure and uses a deprecated utility.
+# RUN echo 'deb https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu/ jammy main' >>/etc/apt/sources.list \
+#      && apt-key adv --keyserver keyserver.ubuntu.com/ --recv-keys BA6932366A755776
 RUN apt-get -y update \
       && apt-get -y --no-install-recommends install apt-utils \
       && apt-get -y upgrade \
       && apt-get install -y --no-install-recommends \
-      aria2 bc build-essential curl debsums gawk git gpg gzip iprange jq \
+      aria2 bc build-essential curl debsums gawk git gpg gpg-agent gzip iprange jq \
       libdata-validate-domain-perl libdata-validate-ip-perl libnet-idn-encode-perl \
       libnet-libidn-perl libregexp-common-perl libtext-trim-perl libtry-tiny-perl \
-      locales miller moreutils nano p7zip-full pandoc preload python3-dev python3-pip sed \
+      locales miller moreutils nano p7zip-full pandoc preload sed software-properties-common \
+      && apt-get install -y --no-install-recommends --reinstall ca-certificates \
+      && add-apt-repository ppa:deadsnakes/ppa \
+      && apt-get install -y --no-install-recommends python3.8 python3.8-distutils python3-pip \
       && apt-get clean autoclean \
-      && apt-get -y autoremove \
       && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
       && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 
 ENV LANG en_US.utf8
 
 # configure python packages
-# https://github.com/twintproject/twint-docker/blob/master/dockerfiles/latest/Dockerfile#L17
-# ARG TWINT_VERSION=v2.1.21
-# could potentially fit this in an intermediate docker image
 ENV PATH=$PATH:/root/.local/bin
-#RUN pip3 install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@v2.1.21#egg=twint
-RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 10
+# old twint version: git+https://github.com/twintproject/twint.git@v2.1.21#egg=twint
+RUN python3.8 -m pip install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@origin/master#egg=twint
+#RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.8 10
 
 # install lychee
 # https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L31=
@@ -92,7 +95,10 @@ RUN curl -sSf https://raw.githubusercontent.com/T145/black-mirror/master/scripts
 # --timeout=DURATION (default: 30s)
 # --start-period=DURATION (default: 0s)
 # --retries=N (default: 3)
-HEALTHCHECK --retries=1 CMD ipinfo -h && dnsx --help && httpx --help && ghosts -h && lychee --help && parsort --help && debsums -sa
+HEALTHCHECK --retries=1 CMD ipinfo -h && dnsx --help && httpx --help && ghosts -h && twint -h && lychee --help && parsort --help && debsums -sa
+
+#EXPOSE 80/tcp
+#EXPOSE 443/tcp
 
 # RUN useradd -ms /bin/bash garry
 # USER garry
