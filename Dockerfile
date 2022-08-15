@@ -17,7 +17,7 @@ RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
 FROM ubuntu:jammy
 
 LABEL maintainer="T145" \
-      version="4.6.2" \
+      version="4.6.9" \
       description="Custom Docker Image used to run blacklist projects."
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -50,20 +50,44 @@ RUN echo 'Acquire::Languages "none";' >> /etc/apt/apt.conf.d/00aptitude \
 # https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
 # use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 # install apt-utils early so debconf doesn't delay package configuration
-# The following works, but lists the repository as insecure and uses a deprecated utility.
-# RUN echo 'deb https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu/ jammy main' >>/etc/apt/sources.list \
-#      && apt-key adv --keyserver keyserver.ubuntu.com/ --recv-keys BA6932366A755776
 RUN apt-get -y update \
-      && apt-get -y --no-install-recommends install apt-utils \
+      && apt-get -y --no-install-recommends install apt-utils=2.4.7 \
       && apt-get -y upgrade \
       && apt-get install -y --no-install-recommends \
-      aria2 bc build-essential curl debsums gawk git gpg gpg-agent gzip iprange jq \
-      libdata-validate-domain-perl libdata-validate-ip-perl libnet-idn-encode-perl \
-      libnet-libidn-perl libregexp-common-perl libtext-trim-perl libtry-tiny-perl \
-      locales miller moreutils nano p7zip-full pandoc preload sed software-properties-common \
-      && apt-get install -y --no-install-recommends --reinstall ca-certificates \
+      apt-show-versions=0.22.13 \
+      aria2=1.36.0-1 \
+      bc=1.07.1-3build1 \
+      curl=7.81.0-1ubuntu1.3 \
+      debsums=3.0.2 \
+      gawk=1:5.1.0-1build3 \
+      git=1:2.34.1-1ubuntu1.4 \
+      gpg=2.2.27-3ubuntu2.1 \
+      gpg-agent=2.2.27-3ubuntu2.1 \
+      gzip=1.10-4ubuntu4 \
+      iprange=1.0.4+ds-2 \
+      jq=1.6-2.1ubuntu3 \
+      libdata-validate-domain-perl=0.10-1.1 \
+      libdata-validate-ip-perl=0.30-1 \
+      libnet-idn-encode-perl=2.500-2build1 \
+      libnet-libidn-perl=0.12.ds-3build6 \
+      libregexp-common-perl=2017060201-1 \
+      libtext-trim-perl=1.04-1 \
+      libtry-tiny-perl=0.31-1 \
+      locales=2.35-0ubuntu3.1 \
+      miller=6.0.0-1 \
+      moreutils=0.66-1 \
+      nano=6.2-1 \
+      p7zip-full=16.02+dfsg-8 \
+      pandoc=2.9.2.1-3ubuntu2 \
+      preload=0.6.4-5 \
+      sed=4.8-1ubuntu2 \
+      software-properties-common=0.99.22.3 \
+      && apt-get install -y --no-install-recommends --reinstall ca-certificates=* \
       && add-apt-repository ppa:deadsnakes/ppa \
-      && apt-get install -y --no-install-recommends python3.8 python3.8-distutils python3-pip \
+      && apt-get install -y --no-install-recommends \
+      python3.8=3.8.13-1+jammy1 \
+      python3.8-distutils=3.8.13-1+jammy1 \
+      python3-pip=22.0.2+dfsg-1 \
       && apt-get clean autoclean \
       && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
       && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
@@ -72,9 +96,8 @@ ENV LANG en_US.utf8
 
 # configure python packages
 ENV PATH=$PATH:/root/.local/bin
-# old twint version: git+https://github.com/twintproject/twint.git@v2.1.21#egg=twint
 RUN python3.8 -m pip install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@origin/master#egg=twint
-#RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.8 10
+#      && update-alternatives --install /usr/bin/python python /usr/bin/python3.8 10
 
 # install lychee
 # https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L31=
@@ -97,9 +120,10 @@ RUN curl -sSf https://raw.githubusercontent.com/T145/black-mirror/master/scripts
 # --retries=N (default: 3)
 HEALTHCHECK --retries=1 CMD ipinfo -h && dnsx --help && httpx --help && ghosts -h && twint -h && lychee --help && parsort --help && debsums -sa
 
-#EXPOSE 80/tcp
-#EXPOSE 443/tcp
-
 # RUN useradd -ms /bin/bash garry
 # USER garry
 # WORKDIR /home/garry
+
+#EXPOSE 80 443
+#ENTRYPOINT ["executable"]
+#CMD ["param1","param2"] # passes params to ENTRYPOINT
