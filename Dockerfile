@@ -88,7 +88,7 @@ RUN apt-get clean autoclean \
 RUN curl -LO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_VERSION}/lychee-${LYCHEE_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
       && tar -xvzf lychee-*.tar.gz \
       && chmod 755 lychee \
-      && mv lychee /usr/local/bin/lychee
+      && mv lychee /usr/local/bin/lychee \
       && rm -f lychee-*.tar.gz
 
 # verify lychee is working
