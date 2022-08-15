@@ -17,7 +17,7 @@ RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
 FROM ubuntu:jammy
 
 LABEL maintainer="T145" \
-      version="4.2.0" \
+      version="4.6.2" \
       description="Custom Docker Image used to run blacklist projects."
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -43,8 +43,8 @@ RUN go env -w GO111MODULE=off
 # --retries=N (default: 3)
 HEALTHCHECK --retries=1 CMD ipinfo -h && dnsx --help && httpx --help && ghosts -h
 
-# set python env path
-ENV PATH=$PATH:/root/.local/bin
+# just in case
+ENV NODE_ENV=production LYCHEE_VERSION=v0.10.0
 
 # suppress language-related updates from apt-get to increase download speeds and configure debconf to be non-interactive
 # https://github.com/phusion/baseimage-docker/issues/58#issuecomment-47995343
@@ -61,31 +61,51 @@ RUN apt-get -y update \
       && apt-get -y --no-install-recommends install apt-utils \
       && apt-get -y upgrade \
       && apt-get install -y --no-install-recommends \
-      aria2 bc build-essential curl gawk git gpg gzip iprange jq \
+      aria2 bc build-essential curl debsums gawk git gpg gzip iprange jq \
       libdata-validate-domain-perl libdata-validate-ip-perl libnet-idn-encode-perl \
       libnet-libidn-perl libregexp-common-perl libtext-trim-perl libtry-tiny-perl \
-      locales miller moreutils nano p7zip-full pandoc preload python3-dev python3-pip sed \
-      && apt-get clean autoclean \
-      && apt-get -y autoremove \
-      && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-      && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+      locales miller moreutils nano p7zip-full pandoc preload python3-dev python3-pip sed
 
+# define locale
+RUN localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 ENV LANG en_US.utf8
+
+# configure python packages
+# https://github.com/twintproject/twint-docker/blob/master/dockerfiles/latest/Dockerfile#L17
+# ARG TWINT_VERSION=v2.1.21
+# could potentially fit this in an intermediate docker image
+ENV PATH=$PATH:/root/.local/bin
+RUN pip3 install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@v2.1.21#egg=twint \
+      && update-alternatives --install /usr/bin/python python /usr/bin/python3 10
+
+# perform cleanup
+RUN apt-get clean autoclean \
+      && apt-get -y autoremove \
+      && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# install lychee
+# https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L31=
+RUN curl -LO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_VERSION}/lychee-${LYCHEE_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
+      && tar -xvzf lychee-*.tar.gz \
+      && chmod 755 lychee \
+      && mv lychee /usr/local/bin/lychee
+      && rm -f lychee-*.tar.gz
+
+# verify lychee is working
+HEALTHCHECK --retries=1 CMD lychee --help
 
 # install the parallel beta that includes parsort
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
 # https://git.savannah.gnu.org/cgit/parallel.git/tree/README
 RUN curl -sSf https://raw.githubusercontent.com/T145/black-mirror/master/scripts/docker/parsort_install.bash | bash \
       && echo 'will cite' | parallel --citation || true
+      && rm -f parallel-*.tar.*
 
-# install twint in base python, otherwise "pandas" will be perma-stuck building in pypy
-RUN pip3 install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@v2.1.21#egg=twint
+# verify the parallel beta is working
+HEALTHCHECK --retries=1 CMD parsort --help
 
-# https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L31=
-RUN curl -LO 'https://github.com/lycheeverse/lychee/releases/download/v0.10.0/lychee-v0.10.0-x86_64-unknown-linux-gnu.tar.gz' \
-      && tar -xvzf lychee-v0.10.0-x86_64-unknown-linux-gnu.tar.gz \
-      && chmod 755 lychee \
-      && mv lychee /usr/local/bin/lychee
+# final checkup to verify general package and configuration stability
+HEALTHCHECK --retries=1 CMD debsums -sa
 
 # RUN useradd -ms /bin/bash garry
 # USER garry
