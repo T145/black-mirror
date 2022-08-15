@@ -64,10 +64,12 @@ RUN apt-get -y update \
       aria2 bc build-essential curl debsums gawk git gpg gzip iprange jq \
       libdata-validate-domain-perl libdata-validate-ip-perl libnet-idn-encode-perl \
       libnet-libidn-perl libregexp-common-perl libtext-trim-perl libtry-tiny-perl \
-      locales miller moreutils nano p7zip-full pandoc preload python3-dev python3-pip sed
+      locales miller moreutils nano p7zip-full pandoc preload python3-dev python3-pip sed \
+      && apt-get clean autoclean \
+      && apt-get -y autoremove \
+      && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+      && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 
-# define locale
-RUN localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 ENV LANG en_US.utf8
 
 # configure python packages
@@ -75,13 +77,8 @@ ENV LANG en_US.utf8
 # ARG TWINT_VERSION=v2.1.21
 # could potentially fit this in an intermediate docker image
 ENV PATH=$PATH:/root/.local/bin
-RUN pip3 install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@v2.1.21#egg=twint \
-      && update-alternatives --install /usr/bin/python python /usr/bin/python3 10
-
-# perform cleanup
-RUN apt-get clean autoclean \
-      && apt-get -y autoremove \
-      && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+#RUN pip3 install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@v2.1.21#egg=twint
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 
 # install lychee
 # https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L31=
