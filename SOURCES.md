@@ -1,8 +1,8 @@
-## 📚 Sources
+# 📚 Sources
 
 > _Please report any redundant sources in an issue!_
 
-### ⬛ Blacklists
+## ⬛ Blacklists
 
 - [Perflyst](https://github.com/Perflyst/PiHoleBlocklist)
   - android-tracking
@@ -205,7 +205,7 @@
   - analytics
   - enrichments
 
-#### Add to blacklist
+### Add to blacklist
 
 - [Yuki2718](https://github.com/Yuki2718/adblock)
 - [Mochi Filter](https://github.com/eEIi0A5L/adblock_filter/blob/master/mochi_filter.txt)
@@ -285,7 +285,7 @@
 - [CryptoScamDB](https://github.com/CryptoScamDB)
   - [blacklist](https://api.cryptoscamdb.org/v1/blacklist)
 
-### ⬜ Whitelists
+## ⬜ Whitelists
 
 > Applied to generated blacklists.
 
@@ -310,7 +310,7 @@
   - custom-porn-whitelist
 - [metalhead](https://github.com/T145/metalhead)
 
-#### Add to whitelist
+### Add to whitelist
 
 - [trackerslist](https://github.com/ngosang/trackerslist)
   - trackers_all
@@ -330,7 +330,7 @@
 - [CryptoScamDB](https://github.com/CryptoScamDB)
   - [whitelist](https://api.cryptoscamdb.org/v1/whitelist)
 
-### 🥢 Duplicates
+## 🥢 Duplicates
 
 > Sources that contain duplicate and potentially deprecated data.
 
@@ -397,7 +397,7 @@
   - Used lists [here](https://github.com/bluerogue/threatlist/blob/master/src/main/java/io/matthewroberts/threatlist/service/ThreatAggregationServiceImpl.java#L32).
 - [StrictBlockPAllebone](https://github.com/pallebone/StrictBlockPAllebone)
 
-### 🧟 Zombies
+## 🧟 Zombies
 
 > Sources that are dead or deprecated and not included but may be [worth mentioning](https://blog.talosintelligence.com/2021/03/domain-dumpster-diving.html).
 
