@@ -262,16 +262,8 @@ docker container run -it --rm -h black-mirror ghcr.io/t145/black-mirror
 
 For a persistant container, use something like what's given below:
 
-### POSIX
-
 ```
-docker start black-mirror && docker exec -it black-mirror fish && docker stop black-mirror
-```
-
-### Windows
-
-```
-docker start black-mirror; docker exec -it black-mirror fish; docker stop black-mirror
+docker container run -it --name black-mirror -h black-mirror black-mirror
 ```
 
 ## 🛠️ List Usage

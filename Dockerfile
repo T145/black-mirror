@@ -17,7 +17,7 @@ RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
 FROM ubuntu:jammy
 
 LABEL maintainer="T145" \
-      version="4.7.2" \
+      version="4.7.4" \
       description="Custom Docker Image used to run blacklist projects."
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -57,6 +57,7 @@ RUN apt-get -y update \
       apt-show-versions=0.22.13 \
       aria2=1.36.0-1 \
       bc=1.07.1-3build1 \
+      build-essential=12.9ubuntu3 \
       curl=7.81.0-1ubuntu1.3 \
       debsums=3.0.2 \
       gawk=1:5.1.0-1build3 \
@@ -115,6 +116,9 @@ RUN curl -LO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_V
 RUN curl -sSf https://raw.githubusercontent.com/T145/black-mirror/master/scripts/docker/parsort_install.bash | bash \
       && echo 'will cite' | parallel --citation || true \
       && rm -f parallel-*.tar.*
+
+# Uninstall compilation utilities after their use
+RUN apt-get purge -y build-essential && apt-get autoremove -y && apt-get clean -y
 
 # --interval=DURATION (default: 30s)
 # --timeout=DURATION (default: 30s)
