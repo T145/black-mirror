@@ -252,7 +252,29 @@ curl --proto '=https' --tlsv1.3 -H 'Accept: application/vnd.github.v3+json' -sSf
 curl --proto '=https' --tlsv1.3 -H 'Accept: application/vnd.github.v3+json' -sSf https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("black_domain")) | select(.name | endswith(".txt")).browser_download_url'
 ```
 
-## 🛠️ Usage
+## 🐋 Docker Usage
+
+To provide a temporary container to experiment with `Black Mirror` scripts and the CLI utilities it uses, run the following:
+
+```
+docker container run -it --rm -h black-mirror ghcr.io/t145/black-mirror
+```
+
+For a persistant container, use something like what's given below:
+
+### POSIX
+
+```
+docker start black-mirror && docker exec -it black-mirror fish && docker stop black-mirror
+```
+
+### Windows
+
+```
+docker start black-mirror; docker exec -it black-mirror fish; docker stop black-mirror
+```
+
+## 🛠️ List Usage
 
 ### Desktop OS Hosts File
 
