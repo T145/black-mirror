@@ -1,8 +1,8 @@
-## OISD
+# OISD
 
 *Note: Any lists covered in Black Mirror or are offline are not listed.*
 
-### 🥢 Duplicates
+## 🥢 Duplicates
 
 > Sources that contain duplicate and potentially deprecated data.
 
@@ -53,7 +53,7 @@
 - [sspakrac](https://www.sspakrac.hr/blokiraniurl/hosts.txt)
   - Ancient `WinHelp` version.
 
-### 🧟 Zombies
+## 🧟 Zombies
 
 > Sources that are dead or deprecated and not included but may be [worth mentioning](https://blog.talosintelligence.com/2021/03/domain-dumpster-diving.html).
 

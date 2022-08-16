@@ -1,10 +1,3 @@
-# Table of contents
-
-- [Black Mirror](#black-mirror)
-  - [On Spyware/Stalkerware](#on-spywarestalkerware)
-  - [On Propaganda](#on-propaganda)
-  - [On Social Media](#on-social-media)
-
 # Black Mirror
 
 The primary goals of this project are as follows:
@@ -30,6 +23,13 @@ The real power behind the freedom of speech is the ability to hear many opinions
 
 “Before you become too entranced with gorgeous gadgets and mesmerizing video displays, let me remind you that information is not knowledge, knowledge is not wisdom, and wisdom is not foresight. Each grows out of the other, and we need them all.”\
 ― *Arthur C. Clarke*
+
+## Table of contents
+
+- [Black Mirror](#black-mirror)
+  - [On Spyware/Stalkerware](#on-spywarestalkerware)
+  - [On Propaganda](#on-propaganda)
+  - [On Social Media](#on-social-media)
 
 ## On Spyware/Stalkerware
 
@@ -67,11 +67,15 @@ These services intrude on privacy, are usually malware, and compromise individua
 Internet "rabbit holes" and sites that primarily feature "knee-jerk contrarianism" do not promote sanity, and therefore are blocked.
 
 Regarding religion and sciences, `Black Mirror` takes an agnostic position on matters regarding how the universe began or where lacking sufficient historical data produces inconclusive results.
-This means a source will not be blocked specifically if it promotes athiesm or a popular religion.
-However, on matters where sufficient information is available to make an educated conclusion, opposing views (i.e. "knee-jerk contrarianism") featured on sites as a majority opinion (> 50%) will result in their host being blocked. To take this same reasoning into a non-religious context and provide a practical example, because we have conclusive evidence on the fact that the Earth is round from the time of Eratosthenes, sites that feature contradictory viewpoints as an opinion majority get blocked.
+This means a source will not be specifically blocked for promoting a popular viewpoint, such as athiesm, a religion, alternative sciences, etc.
+However, on matters where sufficient information is available to make an educated conclusion,
+"knee-jerk contrarian" views featured on sites as a majority opinion (> 50%)
+will result in their host(s) being blocked. To take this same reasoning into a non-religious context
+and provide a practical example, because we have conclusive evidence on the fact that the Earth is round
+from the time of Eratosthenes, sites that feature contradictory viewpoints as an opinion majority get blocked.
 
 Regarding politics, `Black Mirror` takes a non-radical Libertarian perspective.
-A source will not be blocked specifically if it promotes a non-radical left or right political perspective.
+A source will not be specifically blocked for promoting a popular viewpoint, such as a non-radical left or right political perspective.
 Like dealings with religion, platforms that promote "knee-jerk contrarianism" or philosophy that significantly breaches individual safety as an opinion majority will be blocked.
 
 “True liberty consists only in the power of doing what we ought to will, and in not being constrained to do what we ought not to will.”\

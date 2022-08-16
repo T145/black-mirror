@@ -216,7 +216,7 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
 
 ### 🧮 Checksum Evaluation
 
-```
+```bash
 cat black_domain.txt | sha256sum -c black_domain.checksums --status && echo $?
 ```
 
@@ -236,19 +236,19 @@ Provided below are some examples to fetch release artifacts leveraging the GitHu
 
 #### Get all build artifacts
 
-```
+```bash
 curl --proto '=https' --tlsv1.3 -H 'Accept: application/vnd.github.v3+json' -sSf https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[].browser_download_url'
 ```
 
 #### Get a build artifact & its checksum
 
-```
+```bash
 curl --proto '=https' --tlsv1.3 -H 'Accept: application/vnd.github.v3+json' -sSf https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("black_domain")).browser_download_url'
 ```
 
 #### Get a single build artifact
 
-```
+```bash
 curl --proto '=https' --tlsv1.3 -H 'Accept: application/vnd.github.v3+json' -sSf https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("black_domain")) | select(.name | endswith(".txt")).browser_download_url'
 ```
 
@@ -256,19 +256,19 @@ curl --proto '=https' --tlsv1.3 -H 'Accept: application/vnd.github.v3+json' -sSf
 
 To provide a temporary container to experiment with `Black Mirror` scripts and the CLI utilities it uses, run the following:
 
-```
+```bash
 docker container run -it --rm -h black-mirror ghcr.io/t145/black-mirror
 ```
 
 For a persistant container, use something like what's given below:
 
-```
-docker container run -it --name black-mirror -h black-mirror black-mirror
+```bash
+docker container run -it --name black-mirror -h black-mirror ghcr.io/t145/black-mirror
 ```
 
 ## 🛠️ List Usage
 
-### Desktop OS Hosts File
+### Hosts File
 
 ```bash
 mawk '{print "0.0.0.0 " $0}' black_domain.txt >>hosts
@@ -277,10 +277,10 @@ mawk '{print "0.0.0.0 " $0}' black_ipv4.txt >>hosts
 mawk '{print ":: " $0}' black_ipv6.txt >>hosts
 ```
 
-### dnsmasq
+### [Dnsmasq](https://dnsmasq.org/)
 
-Many popular platforms such as OpenWRT, DDWRT, and Pihole use DNSmasq as their choice TCP powerhouse. After inspecting many domain blocklists you'll inevitably run across a list in the `dnsmasq.conf` format. This list doesn't support it because you can use the `addn-hosts` parameter to add hosts in the list.
-Target a file that has the hosts in a format similar to the `Desktop OS Hosts File format`.
+Many popular platforms such as OpenWRT, DDWRT, and Pi-hole use Dnsmasq as their choice TCP powerhouse. After inspecting many domain blocklists you'll inevitably run across a list in the `dnsmasq.conf` format. This list doesn't support it because you can use the `addn-hosts` parameter to add hosts in the list.
+Target a file that has the hosts in a format similar to the **Hosts File** format.
 
 If you're using the `RADVD` daemon, prepend any listed hosts with [`::`](https://stackoverflow.com/questions/40189084/what-is-for-localhost-and-0-0-0-0). Otherwise, even if you have IPv6 support set up, prepend hosts with [`0.0.0.0`](https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001).
 
@@ -288,21 +288,22 @@ This has been tested across all the mentioned platforms using `dig{6}` on a smal
 
 #### Amazon EC2 DNS Resolver
 
-Follow [this guide](https://aws.amazon.com/premiumsupport/knowledge-center/dns-resolution-failures-ec2-linux/) to create a DNS server on a Amazon EC2 instance.
+Follow [this guide](https://aws.amazon.com/premiumsupport/knowledge-center/dns-resolution-failures-ec2-linux/) to create a DNS server on an Amazon EC2 instance.
 
-### pihole
+### [Pi-hole](https://pi-hole.net/)
 
-If you'd like to update when some sources do or not extract a production build, just use the [single-line list](https://discourse.pi-hole.net/t/how-to-add-blocklists-v5-and-later/32127) [`sources.pihole`](https://github.com/T145/black-mirror/blob/master/dist/sources.pihole). Note that this list only contains Pihole-compatible sources, and not every handled source. Some manual configuration may also be required.
+If you'd like to update when some sources do or not extract a production build, just use the [single-line list](https://discourse.pi-hole.net/t/how-to-add-blocklists-v5-and-later/32127) [`sources.pihole`](https://github.com/T145/black-mirror/blob/master/dist/sources.pihole).
+Note that this list only contains Pihole-compatible sources, and not every handled source. Some manual configuration may also be required.
 
-### unbound
+### [unbound](https://nlnetlabs.nl/projects/unbound/about/)
 
 Similar to dnsmasq, but requires more manual configuration. Name any products as a \*.conf file. [Then follow Steffinstanly's instructions on how to apply blocklists](https://medium.com/@steffinstanly/unbound-dns-blocking-3567986a5735).
 
-### personalDNSfilter
+### [personalDNSfilter](https://github.com/IngoZenz/personaldnsfilter)
 
 Use the domain list.
 
-### adguard
+### [Adguard](https://adguard.com/en/welcome.html)
 
 Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/master/dist/sources.adguard) list or the domain list.
 
@@ -513,7 +514,7 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
   - analytics
   - enrichments
 
-#### TODO
+#### Add to blacklist
 
 - [Yuki2718](https://github.com/Yuki2718/adblock)
 - [Mochi Filter](https://github.com/eEIi0A5L/adblock_filter/blob/master/mochi_filter.txt)
@@ -618,7 +619,7 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
   - custom-porn-whitelist
 - [metalhead](https://github.com/T145/metalhead)
 
-#### TODO
+#### Add to whitelist
 
 - [trackerslist](https://github.com/ngosang/trackerslist)
   - trackers_all
@@ -636,7 +637,7 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 - [quindecim](https://github.com/quindecim/block)
   - [domains-allowlist](https://github.com/quindecim/block/blob/master/config/domains-allowlist.txt)
 - [CryptoScamDB](https://github.com/CryptoScamDB)
-  - [blacklist](https://api.cryptoscamdb.org/v1/whitelist)
+  - [whitelist](https://api.cryptoscamdb.org/v1/whitelist)
 
 ### 🥢 Duplicates
 
