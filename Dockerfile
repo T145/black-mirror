@@ -25,7 +25,8 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 STOPSIGNAL SIGKILL
 
 # https://docs.docker.com/develop/develop-images/multistage-build/
-# can apply --chmod=755 to set all directory permissions if needed
+# can apply --chmod=755 if needed
+# can apply --chown=garryhost:garryhost to restrict access
 COPY --from=go /usr/local/go/ /usr/local/
 COPY --from=go /go/ /go/
 
@@ -37,7 +38,7 @@ ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 RUN go env -w GO111MODULE=off
 
 # just in case
-ENV NODE_ENV=production LYCHEE_VERSION=v0.10.0
+ENV NODE_ENV=production LYCHEE_VERSION=v0.10.0 RESOLUTION_BIT_DEPTH=1600x900x16
 
 # suppress language-related updates from apt-get to increase download speeds and configure debconf to be non-interactive
 # https://github.com/phusion/baseimage-docker/issues/58#issuecomment-47995343
@@ -91,7 +92,7 @@ RUN apt-get -y update \
       python3-pip=22.0.2+dfsg-1 \
       && apt-add-repository ppa:fish-shell/release-3 \
       && apt-get install -y --no-install-recommends fish=3.5.1-1~jammy \
-      && apt-get clean autoclean \
+      #&& apt-get clean autoclean \
       && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
       && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 
@@ -99,8 +100,8 @@ ENV LANG en_US.utf8
 
 # configure python packages
 ENV PATH=$PATH:/root/.local/bin
-RUN python3.8 -m pip install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@origin/master#egg=twint
-#      && update-alternatives --install /usr/bin/python python /usr/bin/python3.8 10
+RUN python3.8 -m pip install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@origin/master#egg=twint \
+      && update-alternatives --install /usr/bin/python python /usr/bin/python3.8 10
 
 # install lychee
 # https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L31=
@@ -118,22 +119,26 @@ RUN curl -sSf https://raw.githubusercontent.com/T145/black-mirror/master/scripts
       && rm -f parallel-*.tar.*
 
 # Uninstall compilation utilities after their use
-RUN apt-get purge -y build-essential && apt-get autoremove -y && apt-get clean -y
+RUN apt-get purge -y build-essential && apt-get clean -y && apt-get autoremove -y
+
+# configure the fish shell environment
+RUN ["fish", "--command", "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"]
+#SHELL ["fish", "--command"]
+#ENV SHELL=/usr/bin/fish
+
+RUN chsh -s /usr/bin/fish \
+      && useradd --user-group --system --no-log-init --create-home --shell /usr/bin/fish garryhost
+USER garryhost
+WORKDIR /home/garryhost
+
+ENTRYPOINT ["fish"]
+#CMD ["param1","param2"] # passes params to ENTRYPOINT
+
+#COPY --chown=garryhost:garryhost data/ ./black-mirror/data/
+#COPY --chown=garryhost:garryhost scripts/ ./black-mirror/scripts/
 
 # --interval=DURATION (default: 30s)
 # --timeout=DURATION (default: 30s)
 # --start-period=DURATION (default: 0s)
 # --retries=N (default: 3)
 HEALTHCHECK --retries=1 CMD ipinfo -h && dnsx --help && httpx --help && ghosts -h && twint -h && lychee --help && parsort --help && debsums -sa
-
-# RUN useradd -ms /bin/bash garry
-# USER garry
-# WORKDIR /home/garry
-
-# configure the fish shell environment
-RUN ["fish", "--command", "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"]
-#SHELL ["fish", "--command"]
-#RUN chsh -s /usr/bin/fish
-#ENV SHELL /usr/bin/fish
-ENTRYPOINT ["fish"]
-#CMD ["param1","param2"] # passes params to ENTRYPOINT
