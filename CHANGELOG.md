@@ -815,3 +815,18 @@
 ## 15-08-2022 13:50:02
 - 83ba555: Fixed Twint runtime (T145)
 - 44e632f: ✨🎯✨ (T145)
+## 17-08-2022 02:17:11
+- **docker**: Locked in package versions ([T145](https://github.com/T145/black-mirror/commit/cec907daace91cabdb4c87325ec4adf849a498aa))
+
+## Documentation
+- **fix**: Added development documentation ([T145](https://github.com/T145/black-mirror/commit/87b7d04c4bb1b27f12eb5e2da78822ebc4626347))
+- **fix**: Satisfied MarkdownLint again ([T145](https://github.com/T145/black-mirror/commit/85849e7c060307f289a8faefe3d4774f2f29c211))
+
+## Chores
+- **node**: Updated packages ([T145](https://github.com/T145/black-mirror/commit/5f76c3397b893f401eedec46202c09c89560a991))
+
+## Commits
+- 96e2917: ✨🍰✨ (T145)
+- **feat**: Configured the Fish shell ([T145](https://github.com/T145/black-mirror/commit/7eb97b6d31af587425b5ccaf1f4d57a15c5cd1d2))
+- **fix**: Repaired parsort ([T145](https://github.com/T145/black-mirror/commit/c5b14fd55fa7f6968ed94079037fc67deae8728e))
+- **fix**: Satisfied MarkdownLint ([T145](https://github.com/T145/black-mirror/commit/254cb3ba81a71fd01220f8b149b625c0f81a7e45))
