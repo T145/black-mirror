@@ -329,6 +329,7 @@
   - [domains-allowlist](https://github.com/quindecim/block/blob/master/config/domains-allowlist.txt)
 - [CryptoScamDB](https://github.com/CryptoScamDB)
   - [whitelist](https://api.cryptoscamdb.org/v1/whitelist)
+- [SecureDrop](https://securedrop.org/api/v1/directory/)
 
 ## 🥢 Duplicates
 
