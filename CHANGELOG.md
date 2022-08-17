@@ -830,3 +830,6 @@
 - **feat**: Configured the Fish shell ([T145](https://github.com/T145/black-mirror/commit/7eb97b6d31af587425b5ccaf1f4d57a15c5cd1d2))
 - **fix**: Repaired parsort ([T145](https://github.com/T145/black-mirror/commit/c5b14fd55fa7f6968ed94079037fc67deae8728e))
 - **fix**: Satisfied MarkdownLint ([T145](https://github.com/T145/black-mirror/commit/254cb3ba81a71fd01220f8b149b625c0f81a7e45))
+## 17-08-2022 13:53:13
+- ae2ed14: ✨🍰✨ (T145)
+- 557a0ce: ✨🎯✨ (T145)
