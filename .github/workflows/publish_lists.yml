@@ -6,43 +6,40 @@ on:
     - cron: "27 1,13 * * *"
   workflow_dispatch:
 
-# env:
-#   GITHUB_WORKSPACE: '/home/garryhost/'
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
 
     container:
       image: ghcr.io/t145/black-mirror:latest
       credentials:
         username: ${{ github.actor }}
         password: ${{ github.token }}
-      #options: --user root
+      options: --user root
 
     steps:
       - name: Checkout repo
-        run: |
-          git clone https://github.com/T145/black-mirror.git --recursive
-          cd /black-mirror/
-        shell: bash
+        uses: actions/checkout@v3
+        with:
+          submodules: true
 
       - name: Generate lists
         id: build
         run: ./scripts/github/workflow.bash
-        shell: bash
+
 
       - name: Dump output context
         env:
           STEPS_CONTEXT: ${{ toJson(steps) }}
         run: echo "$STEPS_CONTEXT"
-        shell: bash
 
       # https://github.com/actions/upload-artifact#maintaining-file-permissions-and-case-sensitive-files=
       - name: Archive lists
         if: steps.build.outputs.status == 'success'
         run: tar -cvf lists.tar build/
-        shell: bash
 
       - name: Cache lists
         if: steps.build.outputs.status == 'success'
@@ -67,7 +64,6 @@ jobs:
       - name: Remove lists
         if: always()
         run: rm -rf build/ && rm -f lists.tar
-        shell: bash
 
   publish_github:
     runs-on: ubuntu-latest
@@ -87,7 +83,6 @@ jobs:
         run: |
           tar -xvf lists.tar
           rm -f lists.tar
-        shell: bash
 
       - name: Create GitHub release
         uses: marvinpinto/action-automatic-releases@v1.2.1
@@ -102,7 +97,6 @@ jobs:
       - name: Remove lists
         if: always()
         run: rm -rf build/
-        shell: bash
 
   publish_dropbox:
     runs-on: ubuntu-latest
@@ -122,7 +116,6 @@ jobs:
         run: |
           tar -xvf lists.tar
           rm -f lists.tar
-        shell: bash
 
       - name: Upload blacklists
         uses: deka0106/upload-to-dropbox@v2
@@ -135,7 +128,6 @@ jobs:
 
       - name: Sleep to avoid 429 error
         run: sleep 5s
-        shell: bash
 
       - name: Upload blacklist checksums
         uses: deka0106/upload-to-dropbox@v2
@@ -148,7 +140,6 @@ jobs:
 
       - name: Sleep to avoid 429 error
         run: sleep 5s
-        shell: bash
 
       - name: Upload whitelists
         uses: deka0106/upload-to-dropbox@v2
@@ -161,7 +152,6 @@ jobs:
 
       - name: Sleep to avoid 429 error
         run: sleep 5s
-        shell: bash
 
       - name: Upload whitelist checksums
         uses: deka0106/upload-to-dropbox@v2
@@ -175,7 +165,6 @@ jobs:
       - name: Remove lists
         if: always()
         run: rm -rf build/
-        shell: bash
 
   update_docs:
     runs-on: ubuntu-latest
@@ -195,7 +184,6 @@ jobs:
 
       - name: Make the working tree safe
         run: git config --global --add safe.directory /__w/black-mirror/black-mirror
-        shell: bash
 
       - name: Get changelog content
         id: release_data
@@ -211,7 +199,6 @@ jobs:
             date +"%d-%m-%Y %T";
             echo "${{ fromJSON(steps.release_data.outputs.body) }}" | sed 1d;
           } >>CHANGELOG.md
-        shell: bash
 
       - name: Fetch documents
         uses: actions/download-artifact@v3

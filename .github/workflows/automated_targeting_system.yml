@@ -11,29 +11,28 @@ on:
       - "data/v2/targets.json"
   workflow_dispatch:
 
-# env:
-#   GITHUB_WORKSPACE: '/home/garryhost/'
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
 
     container:
       image: ghcr.io/t145/black-mirror:latest
       credentials:
         username: ${{ github.actor }}
         password: ${{ github.token }}
+      options: --user root
 
     steps:
       - name: Checkout repo
-        run: |
-          git clone https://github.com/T145/black-mirror.git --recursive
-          cd /black-mirror/
-        shell: bash
+        uses: actions/checkout@v3
+        with:
+          submodules: true
 
       - name: Generate lists
         run: ./scripts/v2/automated_targeting_system.bash
-        shell: bash
 
       - name: Update targets
         uses: stefanzweifel/git-auto-commit-action@v4
