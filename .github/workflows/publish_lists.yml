@@ -24,7 +24,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
-          #path: '/home/garryhost/'
+          path: '/home/garryhost/'
           submodules: true
 
       - name: Generate lists
