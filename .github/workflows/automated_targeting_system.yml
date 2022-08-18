@@ -9,6 +9,7 @@ on:
       - master
     paths:
       - "data/v2/targets.json"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -23,6 +24,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          path: '/home/garryhost/'
 
       - name: Generate lists
         run: ./scripts/v2/automated_targeting_system.bash

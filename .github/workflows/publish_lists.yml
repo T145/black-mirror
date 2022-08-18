@@ -4,6 +4,7 @@ name: Publish Lists
 on:
   schedule:
     - cron: "27 1,13 * * *"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -14,10 +15,14 @@ jobs:
       credentials:
         username: ${{ github.actor }}
         password: ${{ github.token }}
+      #options: --user root
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          path: '/home/garryhost/'
+          submodules: true
 
       - name: Generate lists
         id: build
