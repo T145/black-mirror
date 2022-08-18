@@ -11,6 +11,9 @@ on:
       - "data/v2/targets.json"
   workflow_dispatch:
 
+env:
+  GITHUB_WORKSPACE: '/home/garryhost/'
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,8 +27,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-        with:
-          path: '/home/garryhost/'
+        # with:
+        #   path: '/home/garryhost/'
 
       - name: Generate lists
         run: ./scripts/v2/automated_targeting_system.bash
