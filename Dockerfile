@@ -17,7 +17,7 @@ RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
 FROM ubuntu:jammy
 
 LABEL maintainer="T145" \
-      version="4.8.0" \
+      version="4.8.3" \
       description="Custom Docker Image used to run blacklist projects."
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -105,9 +105,12 @@ ENV PATH=$PATH:/root/.local/bin
 RUN python3.8 -m pip install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@origin/master#egg=twint \
       && update-alternatives --install /usr/bin/python python /usr/bin/python3.8 10
 
+COPY configs/aria2.conf /configs/
+RUN mkdir -p logs && touch logs/aria2.log
+
 # install lychee
 # https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L31=
-RUN curl -LO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_VERSION}/lychee-${LYCHEE_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
+RUN aria2c --conf-path='./configs/aria2.conf' "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_VERSION}/lychee-${LYCHEE_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
       && tar -xvzf lychee-*.tar.gz \
       && chmod 755 lychee \
       && mv lychee /usr/local/bin/lychee \
@@ -116,18 +119,27 @@ RUN curl -LO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_V
 # install the parallel beta that includes parsort
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
 # https://git.savannah.gnu.org/cgit/parallel.git/tree/README
-RUN curl -sSf https://raw.githubusercontent.com/T145/black-mirror/master/scripts/docker/parsort_install.bash | bash \
+# https://www.gnu.org/software/parallel/checksums/
+RUN aria2c --conf-path='./configs/aria2.conf' http://pi.dk/3 -o install.sh \
+      && sha1sum install.sh | grep 12345678883c667e01eed62f975ad28b6d50e22a \
+      && md5sum install.sh | grep cc21b4c943fd03e93ae1ae49e28573c0 \
+      && sha512sum install.sh | grep 79945d9d250b42a42067bb0099da012ec113b49a54e705f86d51e784ebced224fdff3f52ca588d64e75f603361bd543fd631f5922f87ceb2ab0341496df84a35 \
+      && bash install.sh \
       && echo 'will cite' | parallel --citation || true \
+      && rm -f install.sh \
       && rm -f parallel-*.tar.*
-
-# Uninstall compilation utilities after their use
-RUN apt-get purge -y build-essential \
-      && apt-get autoremove -y
 
 # configure the fish shell environment
 RUN ["fish", "--command", "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"]
 #SHELL ["fish", "--command"]
 #ENV SHELL=/usr/bin/fish
+
+# Uninstall compilation utilities, configs, & logs after their use
+# 'curl' is needed by the parallel installer
+RUN apt-get purge -y build-essential curl \
+      && apt-get autoremove -y \
+      && rm -rf configs/ \
+      && rm -rf logs/
 
 RUN chsh -s /usr/bin/fish \
       && useradd --user-group --system --no-log-init --create-home --shell /usr/bin/fish garryhost
