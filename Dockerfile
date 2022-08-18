@@ -17,12 +17,13 @@ RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
 FROM ubuntu:jammy
 
 LABEL maintainer="T145" \
-      version="4.7.4" \
+      version="4.8.0" \
       description="Custom Docker Image used to run blacklist projects."
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # fullstop to avoid lingering connections, data leaks, etc.
 STOPSIGNAL SIGKILL
+COPY configs/modprobe.d/99disable.conf /etc/modprobe.d/
 
 # https://docs.docker.com/develop/develop-images/multistage-build/
 # can apply --chmod=755 if needed
@@ -92,11 +93,12 @@ RUN apt-get -y update \
       python3-pip=22.0.2+dfsg-1 \
       && apt-add-repository ppa:fish-shell/release-3 \
       && apt-get install -y --no-install-recommends fish=3.5.1-1~jammy \
-      #&& apt-get clean autoclean \
+      && apt-get autoremove -y \
+      && apt-get clean \
       && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
       && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 
-ENV LANG en_US.utf8
+ENV LANG=en_US.utf8
 
 # configure python packages
 ENV PATH=$PATH:/root/.local/bin
@@ -119,7 +121,8 @@ RUN curl -sSf https://raw.githubusercontent.com/T145/black-mirror/master/scripts
       && rm -f parallel-*.tar.*
 
 # Uninstall compilation utilities after their use
-RUN apt-get purge -y build-essential && apt-get clean -y && apt-get autoremove -y
+RUN apt-get purge -y build-essential \
+      && apt-get autoremove -y
 
 # configure the fish shell environment
 RUN ["fish", "--command", "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"]
@@ -142,3 +145,6 @@ ENTRYPOINT ["fish"]
 # --start-period=DURATION (default: 0s)
 # --retries=N (default: 3)
 HEALTHCHECK --retries=1 CMD ipinfo -h && dnsx --help && httpx --help && ghosts -h && twint -h && lychee --help && parsort --help && debsums -sa
+
+# To build and run with elevated permissions
+# https://stackoverflow.com/questions/48098671/build-with-docker-and-privileged
