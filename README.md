@@ -65,6 +65,9 @@
   </a>
 </div>
 <div align="center">
+  <a href="https://bestpractices.coreinfrastructure.org/projects/6372">
+    <img src="https://bestpractices.coreinfrastructure.org/projects/6372/badge">
+  </a>
   <a href="https://raw.githubusercontent.com/T145/black-mirror/master/dist/sources.adguard">
     <img src="https://img.shields.io/static/v1?logo=ublockOrigin&label=uBlock&message=subscribe&color=800000"
         alt="docker"
