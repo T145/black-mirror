@@ -1,6 +1,8 @@
 ---
 name: Publish Lists
 
+# https://github.com/actions/runner-images/blob/main/images/linux/Ubuntu2204-Readme.md
+
 on:
   schedule:
     - cron: "27 1,13 * * *"
@@ -8,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     defaults:
       run:
         shell: bash
@@ -29,7 +31,6 @@ jobs:
       - name: Generate lists
         id: build
         run: ./scripts/github/workflow.bash
-
 
       - name: Dump output context
         env:
@@ -66,8 +67,11 @@ jobs:
         run: rm -rf build/ && rm -f lists.tar
 
   publish_github:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: build
+    defaults:
+      run:
+        shell: bash
 
     steps:
       - name: Checkout repo
@@ -99,8 +103,11 @@ jobs:
         run: rm -rf build/
 
   publish_dropbox:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: build
+    defaults:
+      run:
+        shell: bash
 
     steps:
       - name: Checkout repo
@@ -167,14 +174,11 @@ jobs:
         run: rm -rf build/
 
   update_docs:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: publish_github
-
-    container:
-      image: ghcr.io/t145/black-mirror:latest
-      credentials:
-        username: ${{ github.actor }}
-        password: ${{ github.token }}
+    defaults:
+      run:
+        shell: bash
 
     steps:
       - name: Checkout repo
@@ -197,7 +201,7 @@ jobs:
           {
             echo -n '## ';
             date +"%d-%m-%Y %T";
-            echo "${{ fromJSON(steps.release_data.outputs.body) }}" | sed 1d;
+            echo "${{ fromJSON(steps.release_data.outputs.body) }}" | tail -n +2;
           } >>CHANGELOG.md
 
       - name: Fetch documents

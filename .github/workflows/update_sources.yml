@@ -11,13 +11,17 @@ on:
 
 jobs:
   export_sources:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        shell: bash
 
     container:
       image: ghcr.io/t145/black-mirror:latest
       credentials:
         username: ${{ github.actor }}
         password: ${{ github.token }}
+      options: --user root
 
     steps:
       - name: Checkout repo
@@ -25,7 +29,6 @@ jobs:
 
       - name: Update sources
         run: ./scripts/github/update_sources.bash 'data/v2/lists.json'
-        shell: bash
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
