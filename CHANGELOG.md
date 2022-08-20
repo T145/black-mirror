@@ -833,3 +833,8 @@
 ## 17-08-2022 13:53:13
 - ae2ed14: ✨🍰✨ (T145)
 - 557a0ce: ✨🎯✨ (T145)
+## 20-08-2022 02:18:34
+- **actions**: Added MegaLinter action for PRs ([T145](https://github.com/T145/black-mirror/commit/60f56a18c6db33f0f095e87b5eea1d98d8998feb))
+
+## Bug Fixes
+- **actions**: Repaired action runtime ([T145](https://github.com/T145/black-mirror/commit/68c0a47c0480092bb77c3a1e86e0ab8173b824e0))
