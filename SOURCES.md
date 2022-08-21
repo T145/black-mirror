@@ -284,6 +284,14 @@
 - [BotScout](https://botscout.com/last_caught_cache.htm)
 - [CryptoScamDB](https://github.com/CryptoScamDB)
   - [blacklist](https://api.cryptoscamdb.org/v1/blacklist)
+- [Critical Path Security](https://github.com/CriticalPathSecurity/Zeek-Intelligence-Feeds)
+  - [cps-*](https://www.criticalpathsecurity.com/critical-path-security-provides-threat-intelligence-feeds-for-credible-ransomware-threat-against-u-s-hospitals/)
+  - [illuminate](https://www.criticalpathsecurity.com/services/managed-zeek-ids/zeek-intelligence-network/)
+  - Because the [Georgia Tech PREDICT](https://www.reddit.com/r/netsec/comments/3e7p8s/georgia_tech_releases_no_cost_malware_dns_data/) data feed [appears to be offline](https://predict.org/), an active version seems to be walled behind [IMPACT](https://www.impactcybertrust.org/dataset_view?idDataset=520), and the "predict_intel" list is labeled "CPS-PREDICT,"
+  the data in the feed is not likely to be pulled from Georgia Tech continously but updated and maintined by CPS.
+  - The `*_ip` lists and `ragnar` list will be ignored due to IP volatility.
+  - `Amnesty_NSO_Domains` is documented as coming from a CPS source.
+  - [Mirrors over here.](https://github.com/CriticalPathSecurity/Public-Intelligence-Feeds)
 
 ## ⬜ Whitelists
 
