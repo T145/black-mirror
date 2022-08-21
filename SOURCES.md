@@ -37,7 +37,6 @@
 - [FireHOL Level 4](https://github.com/firehol/blocklist-ipsets)
 - [blocklist_de](https://www.blocklist.de/en/index.html)
 - [geoffrey_frogeye](https://hostfiles.frogeye.fr/)
-- [threatcrowd](https://threatcrowd.org/)
 - [antisocialengineer](https://github.com/TheAntiSocialEngineer/AntiSocial-BlockList-UK-Community)
 - [Windscribe](https://controld.com/static/e08e8c03918a7abb574c2884a5a177f3/a45dc/filters-tablet%402x.png)
 - [not_on_my_shift](https://orca.pet/notonmyshift/)
@@ -630,3 +629,8 @@
   - ipall-free
 - [coinhive-block](https://github.com/Marfjeh/coinhive-block)
 - [AnotherUnifiedBlockList](https://github.com/songxiaosen/AnotherUnifiedBlockList)
+- [threatcrowd](https://threatcrowd.org/)
+  - Behind the Great Cloudwall
+  - [domains](https://threatcrowd.org/feeds/domains.txt)
+  - [ips](https://threatcrowd.org/feeds/ips.txt)
+  - [blacklist](https://threatcrowd.org/inc/blacklist.txt)

@@ -3424,39 +3424,6 @@
       "https://raw.githubusercontent.com/Th3M3/blocklists/master/malware.list"
     ]
   },
-  "threatcrowd_domains": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "{print tolower($1)}"
-      }
-    ],
-    "mirrors": ["https://threatcrowd.org/feeds/domains.txt"]
-  },
-  "threatcrowd_inc": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "ipv4",
-        "rule": "/^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$/"
-      }
-    ],
-    "mirrors": ["https://threatcrowd.org/inc/blacklist.txt"]
-  },
-  "threatcrowd_ips": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "cat",
-        "format": "ipv4",
-        "rule": ""
-      }
-    ],
-    "mirrors": ["https://threatcrowd.org/feeds/ips.txt"]
-  },
   "tinycheck": {
     "color": "black",
     "filters": [
