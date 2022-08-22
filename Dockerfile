@@ -101,8 +101,8 @@ RUN apt-get -y update \
 ENV LANG=en_US.utf8
 
 # configure python packages
-ENV PATH=$PATH:/root/.local/bin
-RUN python3.8 -m pip install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@origin/master#egg=twint \
+ENV PATH=$PATH:/root/.local/bin PIP_NO_CACHE_DIR='true'
+RUN python3.8 -m pip install --upgrade -e git+https://github.com/twintproject/twint.git@origin/master#egg=twint \
       && update-alternatives --install /usr/bin/python python /usr/bin/python3.8 10
 
 COPY configs/aria2.conf /configs/
