@@ -291,6 +291,7 @@
   - The `*_ip` lists and `ragnar` list will be ignored due to IP volatility.
   - `Amnesty_NSO_Domains` is documented as coming from a CPS source.
   - [Mirrors over here.](https://github.com/CriticalPathSecurity/Public-Intelligence-Feeds)
+- [InQuest](https://labs.inquest.net/api/iocdb/list)
 
 ## ⬜ Whitelists
 
