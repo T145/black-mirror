@@ -856,3 +856,12 @@
 ## 22-08-2022 02:17:25
 - 7ab2692: ✨🍰✨ (T145)
 - 3d7b128: Documented @InQuest (T145)
+## 22-08-2022 13:49:06
+- **docker**: Set Pip to not cache globally ([T145](https://github.com/T145/black-mirror/commit/d69ebb9f32a46c60e365a83b51fd38c1fb7d49da))
+
+## Chores
+- **node**: Updated packages & fixed initial linting ([T145](https://github.com/T145/black-mirror/commit/707474c300b31dfd3fb35e404ba529df7bb156b1))
+
+## Commits
+- c022389: ✨🍰✨ (T145)
+- 5a1b33c: ✨🎯✨ (T145)
