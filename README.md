@@ -314,6 +314,7 @@ Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/maste
 
 Install Docker, [PNPM](https://pnpm.io/installation), and NodeJS. These can usually be installed with a popular package manager.
 The specific Node version used in this project is provided in `.node-version`, but any version over `16` should work.
+With Docker running in the background, execute `pnpm lint` to debug any changes.
 
 ## 🎉 Special Thanks
 

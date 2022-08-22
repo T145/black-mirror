@@ -1,15 +1,15 @@
 lockfileVersion: 5.4
 
 specifiers:
-  glob: ^7.1.6
-  mega-linter-runner: ^6.3.0
+  glob: ^8.0.3
+  mega-linter-runner: ^6.6.0
   npm-check-updates: ^16.0.5
   run-script-os: ^1.1.6
   sort-package-json: ^1.57.0
 
 devDependencies:
-  glob: 7.2.3
-  mega-linter-runner: 6.3.0_glob@7.2.3
+  glob: 8.0.3
+  mega-linter-runner: 6.6.0_glob@8.0.3
   npm-check-updates: 16.0.5
   run-script-os: 1.1.6
   sort-package-json: 1.57.0
@@ -2007,7 +2007,7 @@ packages:
       is-glob: 4.0.3
     dev: true
 
-  /glob-promise/4.2.2_glob@7.2.3:
+  /glob-promise/4.2.2_glob@8.0.3:
     resolution:
       {
         integrity: sha512-xcUzJ8NWN5bktoTIX7eOclO1Npxd/dyVqUJxlLIDasT4C7KZyqlPIwkdJ0Ypiy3p2ZKahTjK4M9uC3sNSfNMzw==,
@@ -2017,7 +2017,7 @@ packages:
       glob: ^7.1.6
     dependencies:
       "@types/glob": 7.2.0
-      glob: 7.2.3
+      glob: 8.0.3
     dev: true
 
   /glob/7.2.3:
@@ -2995,17 +2995,17 @@ packages:
       - supports-color
     dev: true
 
-  /mega-linter-runner/6.3.0_glob@7.2.3:
+  /mega-linter-runner/6.6.0_glob@8.0.3:
     resolution:
       {
-        integrity: sha512-klYUp3GkgoqXzXu2pb+q8AtK63PeSyo5y8r4c8r5eEYDHWQgyLX6wHQgb6U/V8JsWoms7M6lUwSkFMwgj7SXXw==,
+        integrity: sha512-Zh53idRgYQ8NLIj+l2k9rycbJR68jIwUiDrHibSFs++FXvvgr8pLpLuiFnFvByDxEEpeWXGqchToW1r6jgKGQg==,
       }
     hasBin: true
     dependencies:
       chalk: 4.1.2
       find-package-json: 1.2.0
       fs-extra: 10.1.0
-      glob-promise: 4.2.2_glob@7.2.3
+      glob-promise: 4.2.2_glob@8.0.3
       open: 8.4.0
       optionator: 0.9.1
       prompts: 2.4.2

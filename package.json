@@ -8,13 +8,13 @@
   "author": "T145",
   "scripts": {
     "clean-logs": "run-script-os",
-    "clean-logs:darwin:linux": "rm -rf megalinter-reports",
-    "clean-logs:win32": "rmdir megalinter-reports /s /q",
+    "clean-logs:darwin:linux": "[ -d megalinter-reports/ ] && rm -rf megalinter-reports",
+    "clean-logs:win32": "if exist megalinter-reports rmdir megalinter-reports /s /q",
     "lint": "pnpm clean-logs && pnpm mega-linter-runner && pnpm sort-package-json"
   },
   "devDependencies": {
     "glob": "^8.0.3",
-    "mega-linter-runner": "^6.5.0",
+    "mega-linter-runner": "^6.6.0",
     "npm-check-updates": "^16.0.5",
     "run-script-os": "^1.1.6",
     "sort-package-json": "^1.57.0"
