@@ -17,26 +17,15 @@ RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
 FROM ubuntu:jammy
 
 LABEL maintainer="T145" \
-      version="4.8.3" \
+      version="4.8.4" \
       description="Custom Docker Image used to run blacklist projects."
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # fullstop to avoid lingering connections, data leaks, etc.
 STOPSIGNAL SIGKILL
+
 COPY configs/modprobe.d/99disable.conf /etc/modprobe.d/
-
-# https://docs.docker.com/develop/develop-images/multistage-build/
-# can apply --chmod=755 if needed
-# can apply --chown=garryhost:garryhost to restrict access
-COPY --from=go /usr/local/go/ /usr/local/
-COPY --from=go /go/ /go/
-
-# set go env path
-# https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-local-programming-environment-on-ubuntu-18-04
-# https://stackoverflow.com/questions/68693154/package-is-not-in-goroot
-ENV GOPATH=/go
-ENV PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
-RUN go env -w GO111MODULE=off
+COPY --from=go /go/bin/ /usr/local/bin/
 
 # just in case
 ENV NODE_ENV=production LYCHEE_VERSION=v0.10.0 RESOLUTION_BIT_DEPTH=1600x900x16
@@ -126,8 +115,7 @@ RUN aria2c --conf-path='./configs/aria2.conf' http://pi.dk/3 -o install.sh \
       && sha512sum install.sh | grep 79945d9d250b42a42067bb0099da012ec113b49a54e705f86d51e784ebced224fdff3f52ca588d64e75f603361bd543fd631f5922f87ceb2ab0341496df84a35 \
       && bash install.sh \
       && echo 'will cite' | parallel --citation || true \
-      && rm -f install.sh \
-      && rm -f parallel-*.tar.*
+      && rm -f install.sh parallel-*.tar.*
 
 # configure the fish shell environment
 RUN ["fish", "--command", "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"]
