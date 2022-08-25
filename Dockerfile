@@ -47,18 +47,23 @@ ENV NODE_ENV=production LYCHEE_VERSION=v0.10.0 RESOLUTION_BIT_DEPTH=1600x900x16
 # https://github.com/ParrotSec/docker-images/blob/master/core/lts-amd64/Dockerfile#L6
 # https://www.parrotsec.org/docs/apparmor.html
 # rkhunter: https://unix.stackexchange.com/questions/562560/invalid-web-cmd-configuration-option-relative-pathname-bin-false
+# https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile
+# https://gitlab.com/kalilinux/build-scripts/kali-docker/-/blob/master/build-rootfs.sh
 COPY configs/etc/ /etc/
 COPY --from=go /go/bin/ /usr/local/bin/
 COPY --from=parallel /usr/local/bin/ /usr/local/bin/
 
 # https://github.com/phusion/baseimage-docker/issues/58#issuecomment-47995343
 # https://unix.stackexchange.com/questions/416815/force-non-interactive-dpkg-configure-when-using-apt-get-install
-# https://gitlab.com/kalilinux/build-scripts/kali-docker/-/blob/master/build-rootfs.sh
+# https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L78
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections \
-    && echo 'DPkg::options { "--force-confdef"; };' >>/etc/apt/apt.conf
-    #&& echo "Acquire::Retries \"4\";" >/etc/apt/apt.conf.d/99retry-on-error \
-    #&& echo 'Acquire::Languages "none";' >>/etc/apt/apt.conf.d/00aptitude \
+    && echo 'DPkg::options { "--force-confdef"; };' >>/etc/apt/apt.conf \
+    && mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 
+# https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#run
+# https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory#21530768
+# https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
+# use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 RUN	apt-get -y update \
 	&& apt-get -y upgrade \
     && apt-get -y install --no-install-recommends \
@@ -80,6 +85,7 @@ RUN	apt-get -y update \
     libregexp-common-perl=2017060201-1 \
     libtext-trim-perl=1.04-1 \
     libtry-tiny-perl=0.30-1 \
+    locales=2.31-13+deb11u3 \
     miller=5.10.0-1 \
     moreutils=0.65-1 \
     p7zip-full=16.02+dfsg-8 \
@@ -88,17 +94,19 @@ RUN	apt-get -y update \
     python3-pip=20.3.4-4+deb11u1 \
     rkhunter=1.4.6-9 \
     && apt-get install -y --no-install-recommends --reinstall ca-certificates=* \
-	&& apt-get -y autoremove \
+    && apt-get -y autoremove \
     && apt-get -y clean \
-	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && rm -f /var/cache/ldconfig/aux-cache \
-    && find /var/log -depth -type f -print0 | xargs -0 truncate -s 0
+    && find /var/log -depth -type f -print0 | xargs -0 truncate -s 0 \
+    && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+
+ENV LANG=en_US.utf8
 
 RUN rkhunter --update || true; \
     echo 'will cite' | parallel --citation || true; \
     # https://github.com/debuerreotype/debuerreotype/pull/32
     rmdir /run/mount 2>/dev/null || :;
-    #gawk -i inplace '{if($1~/^UMASK$/){$2="027";print $1,$2;}else{print}}' /etc/login.defs;
 
 #RUN python3 -m pip install --no-cache-dir --upgrade -e git+https://github.com/twintproject/twint.git@origin/master#egg=twint
 
@@ -120,4 +128,4 @@ VOLUME [ "/home", "/tmp", "/var" ]
 # twint, tor, privoxy
 #EXPOSE 3000 9050 9051 8118
 
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "ipinfo -h && dnsx --help && httpx --help && ghosts -h && twint -h && lychee --help && parsort --help && debsums -sa" ]
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "ipinfo -h && dnsx --help && httpx --help && ghosts -h && lychee --help && parsort --help && debsums -sa" ]
