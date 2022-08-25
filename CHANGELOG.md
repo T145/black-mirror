@@ -880,3 +880,14 @@
 
 ## Commits
 - b741242: ✨🍰✨ (T145)
+## 25-08-2022 20:41:14
+- **docker**: Converted image to Parrot OS ([T145](https://github.com/T145/black-mirror/commit/c28ca29f129950e63aad01a4aad32a41108c4bcf))
+
+## Bug Fixes
+- **docker**: Restored lang settings ([T145](https://github.com/T145/black-mirror/commit/9427ac32a7ebd5725124788b8722c3f4aace5897))
+- **sources**: Fixed Turris processing ([T145](https://github.com/T145/black-mirror/commit/77f490b6b88e59a0ee9b5ce91d2a3fc2fb7bd1df))
+- **sources**: Fixed Viriback processing ([T145](https://github.com/T145/black-mirror/commit/4ba93a6aed6cc3c0570f0cd399082e470580b7e8))
+
+## Commits
+- 0cde172: ✨🍰✨ (T145)
+- aa7932d: ✨🎯✨ (T145)
