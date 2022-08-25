@@ -48,7 +48,7 @@ parse_file_contents() {
 	mlr_mode_one) mlr --mmap --csv --skip-comments --headerless-csv-output cut -f "$2" ;;
 	mlr_mode_two) mlr --mmap --csv --skip-comments -N cut -f "$2" ;;
 	mlr_mode_three) mlr --mmap --csv --headerless-csv-output cut -f "$2" ;;
-	mlr_mode_four) mlr --mmap --csv --skip-comments -N put -S "${2} =~ \"https?://([a-z][^/|^:]+)\"; \$ENTRY = \"\1\"" then cut -f ENTRY then uniq -a ;;
+	mlr_mode_four) mlr --mmap --csv --skip-comments -N put -S "\$${2} =~ \"https?://([a-z][^/|^:]+)\"; \$ENTRY = \"\1\"" then cut -f ENTRY then uniq -a ;;
 	sed) sed -n "$2" ;;
 	perl)
 		# https://unix.stackexchange.com/a/566565
