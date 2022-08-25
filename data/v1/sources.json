@@ -3476,9 +3476,9 @@
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "mlr_mode_one",
         "format": "ipv4",
-        "rule": "BEGIN{FS=\",\"}NR>1{print $1}"
+        "rule": "Address"
       }
     ],
     "mirrors": [

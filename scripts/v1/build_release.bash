@@ -114,6 +114,7 @@ main() {
 				src_list=$(find -P -O3 "$cache_dir" -type f -name "${key}.*")
 
 				if [ -n "$src_list" ]; then
+					echo "[INFO] Evaluating ${color}list ${key}"
 					get_file_contents "$src_list" |
 						parse_file_contents "$engine" "$rule" "$key" |
 						handle_format_output "$format" "$color" "$key"
