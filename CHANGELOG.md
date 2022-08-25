@@ -875,3 +875,8 @@
 ## 24-08-2022 13:48:44
 - 81a7d07: ✨🍰✨ (T145)
 - 23ea436: ✨🎯✨ (T145)
+## 25-08-2022 02:18:36
+- **docker**: Simplified Go setup ([T145](https://github.com/T145/black-mirror/commit/68638b8eb4e410e0bfdac1edd91da55adb584130))
+
+## Commits
+- b741242: ✨🍰✨ (T145)
