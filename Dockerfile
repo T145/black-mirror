@@ -64,8 +64,8 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
 # https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory#21530768
 # https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
 # use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
-RUN	apt-get -y update \
-	&& apt-get -y upgrade \
+RUN apt-get -y update \
+    && apt-get -y upgrade \
     && apt-get -y install --no-install-recommends \
     #apt-show-versions # use dpkg -l (L) instead since ASV doesn't like GZ packages
     aria2=1.35.0-3 \
@@ -117,8 +117,8 @@ RUN curl -sLO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_
     && rm -f lychee-*.tar.gz
 
 # https://cisofy.com/lynis/controls/HRDN-7222/
-RUN chown 0:0 "$(whereis -b as | mawk '{print $2}')" \
-    && chown 0:0 "$(whereis -b gcc | mawk '{print $2}')"
+RUN chown 0:0 "$(whereis -b as | mawk '{printf \"%s\", $2}')" \
+    && chown 0:0 "$(whereis -b gcc | mawk '{printf \"%s\", $2}')"
 
 ENTRYPOINT [ "bash" ]
 
