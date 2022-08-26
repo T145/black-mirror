@@ -6,7 +6,7 @@
 // difficulty in doing this. Therefore caches are cleared using post-install
 // hooks and config parameters.
 DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };
-Apt::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };
+//Apt::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };
 Dir::Cache::pkgcache "";
 Dir::Cache::srcpkgcache "";
 

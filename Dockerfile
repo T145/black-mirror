@@ -52,7 +52,8 @@ COPY --from=go /go/bin/ /usr/local/bin/
 COPY --from=parallel /usr/local/bin/ /usr/local/bin/
 
 # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L26
-RUN printf '%s\n%s' '#!/bin/sh', 'exit 101' >/usr/sbin/policy-rc.d \
+RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
+    && echo 'exit 101' >>/usr/sbin/policy-rc.d \
     && chmod +x /usr/sbin/policy-rc.d \
     # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L33
     && dpkg-divert --local --rename --add /sbin/initctl \
@@ -111,7 +112,7 @@ RUN rkhunter --update || true; \
     # https://github.com/debuerreotype/debuerreotype/pull/32
     rmdir /run/mount 2>/dev/null || :;
 
-RUN python3 -m pip install --no-cache-dir --upgrade -e git+https://github.com/JustAnotherArchivist/snscrape.git@origin/master#egg=snscrape
+RUN python3 -m pip install --no-cache-dir --upgrade -e git+https://github.com/JustAnotherArchivist/snscrape.git
 
 # https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L39
 RUN curl -sLO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_VERSION}/lychee-${LYCHEE_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
@@ -120,8 +121,8 @@ RUN curl -sLO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_
     && rm -f lychee-*.tar.gz
 
 # https://cisofy.com/lynis/controls/HRDN-7222/
-RUN chown 0:0 "$(whereis -b as | mawk '{printf \"%s\", $2}')" \
-    && chown 0:0 "$(whereis -b gcc | mawk '{printf \"%s\", $2}')"
+RUN chown 0:0 "$(whereis -b as | mawk '{printf "%s", $2}')" \
+    && chown 0:0 "$(whereis -b gcc | mawk '{printf "%s", $2}')"
 
 ENTRYPOINT [ "bash" ]
 
