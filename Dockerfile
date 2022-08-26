@@ -14,7 +14,7 @@ RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
 
 # https://hub.docker.com/_/ubuntu/
 # alias: 22.04, jammy-20220801, jammy, latest, rolling
-FROM ubuntu:jammy as parallel
+FROM ubuntu:jammy as utils
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -24,6 +24,7 @@ RUN apt-get -y update \
     build-essential=12.9ubuntu3 \
     curl=7.81.0-1ubuntu1.3 \
     gpg=2.2.27-3ubuntu2.1 \
+    && apt-get install -y --no-install-recommends --reinstall ca-certificates=* \
     && rm -rf /var/lib/apt/lists/*
 
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
@@ -35,6 +36,12 @@ RUN curl pi.dk/3/ -o install.sh \
     && sha512sum install.sh | grep 79945d9d250b42a42067bb0099da012ec113b49a54e705f86d51e784ebced224fdff3f52ca588d64e75f603361bd543fd631f5922f87ceb2ab0341496df84a35 \
     && bash install.sh
 
+ENV LYCHEE_VERSION=v0.10.0
+
+# https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L39
+RUN curl -sLO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_VERSION}/lychee-${LYCHEE_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
+    && tar -xvzf lychee-*.tar.gz -C /usr/local/bin/
+
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
       version="5.0.0" \
@@ -42,14 +49,14 @@ LABEL maintainer="T145" \
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 STOPSIGNAL SIGKILL
-ENV NODE_ENV=production LYCHEE_VERSION=v0.10.0 RESOLUTION_BIT_DEPTH=1600x900x16
+ENV NODE_ENV=production RESOLUTION_BIT_DEPTH=1600x900x16
 
 # https://github.com/ParrotSec/docker-images/blob/master/core/lts-amd64/Dockerfile#L6
 # https://www.parrotsec.org/docs/apparmor.html
 # rkhunter: https://unix.stackexchange.com/questions/562560/invalid-web-cmd-configuration-option-relative-pathname-bin-false
 COPY configs/etc/ /etc/
 COPY --from=go /go/bin/ /usr/local/bin/
-COPY --from=parallel /usr/local/bin/ /usr/local/bin/
+COPY --from=utils /usr/local/bin/ /usr/local/bin/
 
 # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L26
 RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
@@ -112,13 +119,7 @@ RUN rkhunter --update || true; \
     # https://github.com/debuerreotype/debuerreotype/pull/32
     rmdir /run/mount 2>/dev/null || :;
 
-RUN python3 -m pip install --no-cache-dir --upgrade -e git+https://github.com/JustAnotherArchivist/snscrape.git
-
-# https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L39
-RUN curl -sLO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_VERSION}/lychee-${LYCHEE_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
-    && tar -xvzf lychee-*.tar.gz \
-    && mv lychee /usr/local/bin/lychee \
-    && rm -f lychee-*.tar.gz
+RUN python3 -m pip install --no-cache-dir --upgrade -e git+https://github.com/JustAnotherArchivist/snscrape.git#egg=snscrape
 
 # https://cisofy.com/lynis/controls/HRDN-7222/
 RUN chown 0:0 "$(whereis -b as | mawk '{printf "%s", $2}')" \
