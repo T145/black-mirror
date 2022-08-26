@@ -47,18 +47,21 @@ ENV NODE_ENV=production LYCHEE_VERSION=v0.10.0 RESOLUTION_BIT_DEPTH=1600x900x16
 # https://github.com/ParrotSec/docker-images/blob/master/core/lts-amd64/Dockerfile#L6
 # https://www.parrotsec.org/docs/apparmor.html
 # rkhunter: https://unix.stackexchange.com/questions/562560/invalid-web-cmd-configuration-option-relative-pathname-bin-false
-# https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile
-# https://gitlab.com/kalilinux/build-scripts/kali-docker/-/blob/master/build-rootfs.sh
 COPY configs/etc/ /etc/
 COPY --from=go /go/bin/ /usr/local/bin/
 COPY --from=parallel /usr/local/bin/ /usr/local/bin/
 
-# https://github.com/phusion/baseimage-docker/issues/58#issuecomment-47995343
-# https://unix.stackexchange.com/questions/416815/force-non-interactive-dpkg-configure-when-using-apt-get-install
-# https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L78
-RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections \
-    && echo 'DPkg::options { "--force-confdef"; };' >>/etc/apt/apt.conf \
-    && mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
+# https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L26
+RUN printf '%s\n%s' '#!/bin/sh', 'exit 101' >/usr/sbin/policy-rc.d \
+    && chmod +x /usr/sbin/policy-rc.d \
+    # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L33
+    && dpkg-divert --local --rename --add /sbin/initctl \
+    && cp -a /usr/sbin/policy-rc.d /sbin/initctl \
+    && sed -i 's/^exit.*/exit 0/' /sbin/initctl \
+    # https://github.com/phusion/baseimage-docker/issues/58#issuecomment-47995343
+    && echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections \
+    # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L78
+    && mkdir -p /run/systemd && echo 'docker' >/run/systemd/container
 
 # https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#run
 # https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory#21530768
