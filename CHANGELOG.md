@@ -896,3 +896,14 @@
 ## 26-08-2022 13:46:12
 - d578bc9: ✨🍰✨ (T145)
 - bf74f0d: ✨🎯✨ (T145)
+## 27-08-2022 02:18:37
+- **docker**: Replaced TWINT w/ snscrape ([T145](https://github.com/T145/black-mirror/commit/7a580f96be36fcc62fbc7f8bc7ae21dc9609a682))
+
+## Bug Fixes
+- **docker**: Fixed root assignments ([T145](https://github.com/T145/black-mirror/commit/41642fcb94467cfcdb845a596ec29ea80fb16a8a))
+- **docker**: Compressed apt configs ([T145](https://github.com/T145/black-mirror/commit/fe8bbaf012a466f52f73d2f31818601adb65d98c))
+- **docker**: Fixed building & runtime ([T145](https://github.com/T145/black-mirror/commit/f651f2ea29f97f3c831258ad04eed9b19ace6cc3))
+- **docker**: Moved Lychee to prebuild layer ([T145](https://github.com/T145/black-mirror/commit/e3a2b6cf84b6e313788c1306be35939a6dc06c66))
+
+## Commits
+- 8f5f4dd: ✨🍰✨ (T145)
