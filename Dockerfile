@@ -34,17 +34,24 @@ RUN curl pi.dk/3/ -o install.sh \
     && sha1sum install.sh | grep 12345678883c667e01eed62f975ad28b6d50e22a \
     && md5sum install.sh | grep cc21b4c943fd03e93ae1ae49e28573c0 \
     && sha512sum install.sh | grep 79945d9d250b42a42067bb0099da012ec113b49a54e705f86d51e784ebced224fdff3f52ca588d64e75f603361bd543fd631f5922f87ceb2ab0341496df84a35 \
-    && bash install.sh
+    && bash install.sh \
+    && rm -f /usr/local/bin/env_*
 
-ENV LYCHEE_VERSION=v0.10.0
+ENV LYCHEE_VERSION=v0.10.0 PANDOC_VERSION=2.19.2
 
 # https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L39
 RUN curl -sLO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_VERSION}/lychee-${LYCHEE_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
     && tar -xvzf lychee-*.tar.gz -C /usr/local/bin/
 
+# https://github.com/jgm/pandoc/blob/master/INSTALL.md#linux
+# final install is ~80MB vs ~155MB via apt
+RUN curl -sLO "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz" \
+    && tar -xvzf pandoc-*.tar.gz --strip-components 1 -C /usr/local/ \
+    && rm -f /usr/local/bin/pandoc-server
+
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.0.0" \
+      version="5.1.2" \
       description="Custom Docker Image used to run blacklist projects."
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -100,7 +107,7 @@ RUN apt-get -y update \
     miller=5.10.0-1 \
     moreutils=0.65-1 \
     p7zip-full=16.02+dfsg-8 \
-    pandoc=2.9.2.1-1+b1 \
+    #pandoc=2.9.2.1-1+b1 \ # ~155MB binary!
     preload=0.6.4-5+b1 \
     python3-pip=20.3.4-4+deb11u1 \
     rkhunter=1.4.6-9 \
