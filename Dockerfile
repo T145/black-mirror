@@ -3,14 +3,14 @@ FROM golang:1.17 AS go
 # https://golang.org/doc/go-get-install-deprecation#what-to-use-instead
 # the install paths are where "main.go" lives
 
-# https://github.com/projectdiscovery/httpx#usage
 # https://github.com/projectdiscovery/dnsx#usage
-# https://github.com/ipinfo/cli#-ipinfo-cli
-# https://github.com/StevenBlack/ghosts#ghosts
-RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest \
-    && go install github.com/projectdiscovery/httpx/cmd/httpx@latest \
-    && go install github.com/ipinfo/cli/ipinfo@latest \
-    && go install github.com/StevenBlack/ghosts@latest
+RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@v1.1.0 \
+    # https://github.com/projectdiscovery/httpx#usage
+    && go install github.com/projectdiscovery/httpx/cmd/httpx@v1.2.4 \
+    # https://github.com/ipinfo/cli#-ipinfo-cli
+    && go install github.com/ipinfo/cli/ipinfo@ipinfo-2.9.0 \
+    # https://github.com/StevenBlack/ghosts#ghosts
+    && go install github.com/StevenBlack/ghosts@v0.2.2
 
 # https://hub.docker.com/_/ubuntu/
 # alias: 22.04, jammy-20220801, jammy, latest, rolling
@@ -76,7 +76,7 @@ RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
 # https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
 # use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 RUN apt-get -y update \
-    && apt-get -y upgrade \
+    && apt-get -y upgrade --with-new-pkgs \
     && apt-get -y install --no-install-recommends \
     #apt-show-versions # use dpkg -l (L) instead since ASV doesn't like GZ packages
     aria2=1.35.0-3 \
@@ -105,7 +105,8 @@ RUN apt-get -y update \
     python3-pip=20.3.4-4+deb11u1 \
     rkhunter=1.4.6-9 \
     && apt-get install -y --no-install-recommends --reinstall ca-certificates=* \
-    && apt-get -y autoremove \
+    #&& apt-get -y autoremove \
+    && apt-get -y purge --auto-remove \
     && apt-get -y clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && rm -f /var/cache/ldconfig/aux-cache \
@@ -114,12 +115,13 @@ RUN apt-get -y update \
 
 ENV LANG=en_US.utf8
 
-RUN rkhunter --update || true; \
-    echo 'will cite' | parallel --citation || true; \
+RUN rkhunter --update || :; \
+    echo 'will cite' | parallel --citation || :; \
     # https://github.com/debuerreotype/debuerreotype/pull/32
     rmdir /run/mount 2>/dev/null || :;
 
-RUN python3 -m pip install --no-cache-dir --upgrade -e git+https://github.com/JustAnotherArchivist/snscrape.git#egg=snscrape
+RUN python3 -m pip install --no-cache-dir --upgrade -e git+https://github.com/JustAnotherArchivist/snscrape.git#egg=snscrape; \
+    py3clean -v ./usr/lib/python3.9 ./usr/share/python3;
 
 # https://cisofy.com/lynis/controls/HRDN-7222/
 RUN chown 0:0 "$(whereis -b as | mawk '{printf "%s", $2}')" \
@@ -133,4 +135,4 @@ VOLUME [ "/home", "/tmp", "/var" ]
 # twint, tor, privoxy
 #EXPOSE 3000 9050 9051 8118
 
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "ipinfo -h && dnsx --help && httpx --help && ghosts -h && lychee --help && parsort --help && debsums -sa" ]
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "ipinfo -h && dnsx --help && httpx --help && ghosts -h && lychee --help && parsort --help" ]
