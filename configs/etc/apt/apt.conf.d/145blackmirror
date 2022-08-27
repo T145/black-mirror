@@ -6,12 +6,15 @@
 // difficulty in doing this. Therefore caches are cleared using post-install
 // hooks and config parameters.
 DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };
-//Apt::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };
+//APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };
 Dir::Cache::pkgcache "";
 Dir::Cache::srcpkgcache "";
 
-// Package translation files are unnecessary, so prevent their installation.
-Apt::AutoRemove::SuggestsImportant "false";
+// Prevent extra package installation.
+// https://www.linuxquestions.org/questions/debian-26/how-to-configure-apt-get-to-install-suggested-packages-169746/
+APT::Install-Recommends "false";
+APT::Install-Suggests "false";
+APT::AutoRemove::SuggestsImportant "false";
 
 // Ensure apt package lists are compressed to save space.
 Acquire::GzipIndexes "true";
