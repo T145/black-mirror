@@ -910,3 +910,11 @@
 ## 27-08-2022 13:43:48
 - 83f1568: ✨🍰✨ (T145)
 - 300f23c: ✨🎯✨ (T145)
+## 28-08-2022 02:22:33
+- **docker**: Bonus APT configuration ([T145](https://github.com/T145/black-mirror/commit/26b8d888e78bcea17b0fa7478d59488a8b1562da))
+
+## Bug Fixes
+- **docker**: Upgraded all pkgs ([T145](https://github.com/T145/black-mirror/commit/71e512e78b66ab4f718a9443e62e5475bcb0f40e))
+
+## Commits
+- cfb0573: ✨🍰✨ (T145)
