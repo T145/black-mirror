@@ -267,6 +267,12 @@ For a persistant container, use something like what's given below:
 docker container run -it --name black-mirror -h black-mirror ghcr.io/t145/black-mirror
 ```
 
+Before using `rkhunter`, be sure to run:
+
+```bash
+rkhunter --update
+```
+
 ## 🛠️ List Usage
 
 ### Hosts File

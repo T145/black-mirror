@@ -41,22 +41,21 @@ ENV LYCHEE_VERSION=v0.10.0 PANDOC_VERSION=2.19.2
 
 # https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L39
 RUN curl -sLO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_VERSION}/lychee-${LYCHEE_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
-    && tar -xvzf lychee-*.tar.gz -C /usr/local/bin/
-
-# https://github.com/jgm/pandoc/blob/master/INSTALL.md#linux
-# final install is ~80MB vs ~155MB via apt
-RUN curl -sLO "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz" \
+    && tar -xvzf lychee-*.tar.gz -C /usr/local/bin/ \
+    # https://github.com/jgm/pandoc/blob/master/INSTALL.md#linux
+    # final pandoc install is ~80MB vs ~155MB via apt
+    && curl -sLO "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz" \
     && tar -xvzf pandoc-*.tar.gz --strip-components 1 -C /usr/local/ \
     && rm -f /usr/local/bin/pandoc-server
 
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.1.2" \
+      version="5.1.4" \
       description="Custom Docker Image used to run blacklist projects."
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 STOPSIGNAL SIGKILL
-ENV NODE_ENV=production RESOLUTION_BIT_DEPTH=1600x900x16
+ENV LANG=en_US.utf8 RESOLUTION_BIT_DEPTH=1600x900x16 NODE_ENV=production
 
 # https://github.com/ParrotSec/docker-images/blob/master/core/lts-amd64/Dockerfile#L6
 # https://www.parrotsec.org/docs/apparmor.html
@@ -80,7 +79,6 @@ RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
 
 # https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#run
 # https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory#21530768
-# https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
 # use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 RUN apt-get -q -y update --no-allow-insecure-repositories \
     && apt-get -y upgrade --with-new-pkgs \
@@ -114,38 +112,33 @@ RUN apt-get -q -y update --no-allow-insecure-repositories \
     rkhunter=1.4.6-9 \
     && apt-get install -y --no-install-recommends --reinstall ca-certificates=* \
     && apt-get -y autoremove \
-    #&& apt-get -y purge --auto-remove \
     && apt-get -y clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && rm -f /var/cache/ldconfig/aux-cache \
-    && find /var/log -depth -type f -print0 | xargs -0 truncate -s 0 \
-    && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+    && find -P -O3 /var/log -depth -type f -print0 | xargs -0 truncate -s 0 \
+    # https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
+    && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
+    # https://askubuntu.com/questions/477974/how-to-remove-unnecessary-locales
+    && localepurge \
+    && apt-get -y purge --auto-remove localepurge \
+    && find -P -O3 /etc/ /usr/ -type d -empty -delete
 
-ENV LANG=en_US.utf8
-
-# https://askubuntu.com/questions/477974/how-to-remove-unnecessary-locales
-# gnupg2 discovered by debfoster & deborphan
-RUN localepurge \
-    && apt-get -y purge localepurge
-
-RUN rkhunter --update || :; \
+# https://cisofy.com/lynis/controls/HRDN-7222/
+RUN chown 0:0 /usr/bin/as \
+    && chown 0:0 /usr/share/gcc; \
+    #rkhunter --update || :; \
     echo 'will cite' | parallel --citation || :; \
     # https://github.com/debuerreotype/debuerreotype/pull/32
     rmdir /run/mount 2>/dev/null || :;
 
 RUN python3 -m pip install --no-cache-dir --upgrade -e git+https://github.com/JustAnotherArchivist/snscrape.git#egg=snscrape; \
-    py3clean -v ./usr/lib/python3.9 ./usr/share/python3;
-
-# https://cisofy.com/lynis/controls/HRDN-7222/
-RUN chown 0:0 "$(whereis -b as | mawk '{printf "%s", $2}')" \
-    && chown 0:0 "$(whereis -b gcc | mawk '{printf "%s", $2}')"
+    python3 -m pip cache purge; \
+    py3clean -v ./usr/lib/python3.9 ./usr/share/python3; \
+    rm -rf /root/.cache;
 
 ENTRYPOINT [ "bash" ]
 
 # https://cisofy.com/lynis/controls/FILE-6310/
 VOLUME [ "/home", "/tmp", "/var" ]
-
-# twint, tor, privoxy
-#EXPOSE 3000 9050 9051 8118
 
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "ipinfo -h && dnsx --help && httpx --help && ghosts -h && lychee --help && parsort --help" ]
