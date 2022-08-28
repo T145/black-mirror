@@ -82,7 +82,7 @@ RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
 # https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory#21530768
 # https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
 # use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
-RUN apt-get -y update \
+RUN apt-get -q -y update --no-allow-insecure-repositories \
     && apt-get -y upgrade --with-new-pkgs \
     && apt-get -y install --no-install-recommends \
     #apt-show-versions # use dpkg -l (L) instead since ASV doesn't like GZ packages
@@ -103,6 +103,7 @@ RUN apt-get -y update \
     libregexp-common-perl=2017060201-1 \
     libtext-trim-perl=1.04-1 \
     libtry-tiny-perl=0.30-1 \
+    localepurge=0.7.3.10 \
     locales=2.31-13+deb11u3 \
     miller=5.10.0-1 \
     moreutils=0.65-1 \
@@ -112,8 +113,8 @@ RUN apt-get -y update \
     python3-pip=20.3.4-4+deb11u1 \
     rkhunter=1.4.6-9 \
     && apt-get install -y --no-install-recommends --reinstall ca-certificates=* \
-    #&& apt-get -y autoremove \
-    && apt-get -y purge --auto-remove \
+    && apt-get -y autoremove \
+    #&& apt-get -y purge --auto-remove \
     && apt-get -y clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && rm -f /var/cache/ldconfig/aux-cache \
@@ -121,6 +122,11 @@ RUN apt-get -y update \
     && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 
 ENV LANG=en_US.utf8
+
+# https://askubuntu.com/questions/477974/how-to-remove-unnecessary-locales
+# gnupg2 discovered by debfoster & deborphan
+RUN localepurge \
+    && apt-get -y purge localepurge
 
 RUN rkhunter --update || :; \
     echo 'will cite' | parallel --citation || :; \
