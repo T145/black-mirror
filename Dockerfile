@@ -48,6 +48,8 @@ RUN curl -sLO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_
     && tar -xvzf pandoc-*.tar.gz --strip-components 1 -C /usr/local/ \
     && rm -f /usr/local/bin/pandoc-server
 
+# https://wiki.debian.org/DiskFreeSpace
+# https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
       version="5.1.4" \
@@ -110,6 +112,7 @@ RUN apt-get -q -y update --no-allow-insecure-repositories \
     preload=0.6.4-5+b1 \
     python3-pip=20.3.4-4+deb11u1 \
     rkhunter=1.4.6-9 \
+    symlinks=1.4-4 \
     && apt-get install -y --no-install-recommends --reinstall ca-certificates=* \
     && apt-get -y autoremove \
     && apt-get -y clean \
@@ -120,7 +123,9 @@ RUN apt-get -q -y update --no-allow-insecure-repositories \
     && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
     # https://askubuntu.com/questions/477974/how-to-remove-unnecessary-locales
     && localepurge \
-    && apt-get -y purge --auto-remove localepurge \
+    # https://linuxhandbook.com/find-broken-symlinks/
+    && symlinks -rd / \
+    && apt-get -y purge --auto-remove localepurge symlinks \
     && find -P -O3 /etc/ /usr/ -type d -empty -delete
 
 # https://cisofy.com/lynis/controls/HRDN-7222/
