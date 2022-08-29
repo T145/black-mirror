@@ -23,6 +23,7 @@ RUN apt-get -y update \
     && apt-get -y install --no-install-recommends \
     build-essential=12.9ubuntu3 \
     curl=7.81.0-1ubuntu1.3 \
+    dirmngr=2.2.27-3ubuntu2.1 \
     gpg=2.2.27-3ubuntu2.1 \
     && apt-get install -y --no-install-recommends --reinstall ca-certificates=* \
     && rm -rf /var/lib/apt/lists/*
@@ -66,10 +67,8 @@ COPY configs/etc/ /etc/
 COPY --from=go /go/bin/ /usr/local/bin/
 COPY --from=utils /usr/local/bin/ /usr/local/bin/
 
-# strip executables to reduce their file size
-RUN find /usr/bin/ /usr/local/bin/ -type f -not -name strip -and -not -name dbus-daemon -execdir strip --strip-unneeded '{}' \; \
-    # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L26
-    && echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
+# https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L26
+RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
     && echo 'exit 101' >>/usr/sbin/policy-rc.d \
     && chmod +x /usr/sbin/policy-rc.d \
     # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L33
@@ -128,7 +127,10 @@ RUN apt-get -q -y update --no-allow-insecure-repositories \
     # https://linuxhandbook.com/find-broken-symlinks/
     && symlinks -rd / \
     && apt-get -y purge --auto-remove localepurge symlinks \
-    && find -P -O3 /etc/ /usr/ -type d -empty -delete
+    && find -P -O3 /etc/ /usr/ -type d -empty -delete \
+    # strip executables to reduce their file size
+    # can't strip python executables so performing it here is perfect
+    && find /usr/bin/ /usr/local/bin/ -type f -not -name strip -and -not -name dbus-daemon -execdir strip --strip-unneeded '{}' \;
 
 # https://cisofy.com/lynis/controls/HRDN-7222/
 RUN chown 0:0 /usr/bin/as \
