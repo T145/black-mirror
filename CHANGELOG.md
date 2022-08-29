@@ -928,3 +928,12 @@
 - 4a03b97: ✨🎯✨ (T145)
 ## 29-08-2022 02:21:12
 - 5abea08: ✨🍰✨ (T145)
+## 29-08-2022 13:46:10
+- **docker**: Removed dead symlinks ([T145](https://github.com/T145/black-mirror/commit/1c9e5218a69d82a344614b66065f3504a330499d))
+- **docker**: Stripped primary executables ([T145](https://github.com/T145/black-mirror/commit/d3b31990e999a9d65edecc1880d3ca61cc508f07))
+- **docker**: Strip programs a little later ([T145](https://github.com/T145/black-mirror/commit/d7d0496aa709654b1707844e8e378a3e8f39e5dc))
+- **docker**: Removed exec stripping to combat random layer bloat?! ([T145](https://github.com/T145/black-mirror/commit/559f37cf4db10efb210d2e430268b47b93467c6c))
+
+## Commits
+- 949db2b: ✨🍰✨ (T145)
+- c844c1f: ✨🎯✨ (T145)
