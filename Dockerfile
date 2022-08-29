@@ -35,7 +35,7 @@ RUN curl pi.dk/3/ -o install.sh \
     && md5sum install.sh | grep cc21b4c943fd03e93ae1ae49e28573c0 \
     && sha512sum install.sh | grep 79945d9d250b42a42067bb0099da012ec113b49a54e705f86d51e784ebced224fdff3f52ca588d64e75f603361bd543fd631f5922f87ceb2ab0341496df84a35 \
     && bash install.sh \
-    && rm -f /usr/local/bin/env_*
+    && find /usr/local/bin/ -type f ! -name 'par*' -delete
 
 ENV LYCHEE_VERSION=v0.10.0 PANDOC_VERSION=2.19.2
 
@@ -66,8 +66,10 @@ COPY configs/etc/ /etc/
 COPY --from=go /go/bin/ /usr/local/bin/
 COPY --from=utils /usr/local/bin/ /usr/local/bin/
 
-# https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L26
-RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
+# strip executables to reduce their file size
+RUN find /usr/bin/ /usr/local/bin/ -type f -not -name strip -and -not -name dbus-daemon -execdir strip --strip-unneeded '{}' \; \
+    # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L26
+    && echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
     && echo 'exit 101' >>/usr/sbin/policy-rc.d \
     && chmod +x /usr/sbin/policy-rc.d \
     # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L33
