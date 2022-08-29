@@ -25,6 +25,7 @@ RUN apt-get -y update \
     curl=7.81.0-1ubuntu1.3 \
     dirmngr=2.2.27-3ubuntu2.1 \
     gpg=2.2.27-3ubuntu2.1 \
+    gpg-agent=2.2.27-3ubuntu2.1 \
     && apt-get install -y --no-install-recommends --reinstall ca-certificates=* \
     && rm -rf /var/lib/apt/lists/*
 
@@ -53,7 +54,7 @@ RUN curl -sLO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_
 # https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.1.4" \
+      version="5.2.0" \
       description="Custom Docker Image used to run blacklist projects."
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -127,10 +128,7 @@ RUN apt-get -q -y update --no-allow-insecure-repositories \
     # https://linuxhandbook.com/find-broken-symlinks/
     && symlinks -rd / \
     && apt-get -y purge --auto-remove localepurge symlinks \
-    && find -P -O3 /etc/ /usr/ -type d -empty -delete \
-    # strip executables to reduce their file size
-    # can't strip python executables so performing it here is perfect
-    && find /usr/bin/ /usr/local/bin/ -type f -not -name strip -and -not -name dbus-daemon -execdir strip --strip-unneeded '{}' \;
+    && find -P -O3 /etc/ /usr/ -type d -empty -delete
 
 # https://cisofy.com/lynis/controls/HRDN-7222/
 RUN chown 0:0 /usr/bin/as \
