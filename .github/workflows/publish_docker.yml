@@ -42,15 +42,18 @@ jobs:
 
       - name: Squash image
         run: |
-          docker run --rm ${{ env.DOCKER_TAG }}
-          tar -C / -cf- --exclude=./dev --exclude=./sys --exclude=./proc . |
-            docker import - ${{ env.DOCKER_TAG }}
+          docker run --name tmp ${{ env.DOCKER_TAG }}
+          docker image save tmp |
+            docker import - ghcr.io/${{ env.DOCKER_TAG }}
+          docker container stop tmp
+          docker container rm tmp
 
-      - name: Build and push
+      - name: Push image
         uses: docker/build-push-action@v3
         with:
           context: .
           push: true
           tags: ghcr.io/${{ env.DOCKER_TAG }}
+          # Caching is mostly pointless for an image w/ a single layer.
           #cache-from: type=registry,ref=ghcr.io/t145/black-mirror:buildcache
           #cache-to: type=registry,ref=ghcr.io/t145/black-mirror:buildcache,mode=max
