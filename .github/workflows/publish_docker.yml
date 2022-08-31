@@ -8,10 +8,6 @@ on:
       - master
     paths:
       - "Dockerfile"
-  workflow_dispatch:
-
-env:
-  DOCKER_TAG: t145/black-mirror:latest
 
 jobs:
   build:
@@ -24,6 +20,7 @@ jobs:
         uses: docker/setup-qemu-action@v2
 
       - name: Set up Docker Buildx
+        id: buildx
         uses: docker/setup-buildx-action@v2
 
       - name: Login to GitHub Container Registry
@@ -33,27 +30,12 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ github.token }}
 
-      - name: Prepare for squash
+      - name: Build and push
         uses: docker/build-push-action@v3
         with:
           context: .
-          load: true
-          tags: ${{ env.DOCKER_TAG }}
-
-      - name: Squash image
-        run: |
-          docker run --name tmp ${{ env.DOCKER_TAG }}
-          docker image save tmp |
-            docker import - ghcr.io/${{ env.DOCKER_TAG }}
-          docker container stop tmp
-          docker container rm tmp
-
-      - name: Push image
-        uses: docker/build-push-action@v3
-        with:
-          context: .
+          builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ghcr.io/${{ env.DOCKER_TAG }}
-          # Caching is mostly pointless for an image w/ a single layer.
-          #cache-from: type=registry,ref=ghcr.io/t145/black-mirror:buildcache
-          #cache-to: type=registry,ref=ghcr.io/t145/black-mirror:buildcache,mode=max
+          tags: ghcr.io/t145/black-mirror:latest
+          cache-from: type=registry,ref=ghcr.io/t145/black-mirror:buildcache
+          cache-to: type=registry,ref=ghcr.io/t145/black-mirror:buildcache,mode=max
