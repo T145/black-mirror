@@ -8,6 +8,7 @@ on:
       - master
     paths:
       - "Dockerfile"
+  workflow_dispatch:
 
 env:
   DOCKER_TAG: t145/black-mirror:latest
