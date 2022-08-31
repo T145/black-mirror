@@ -199,7 +199,7 @@ jobs:
         if: steps.release_data.outputs.body != 'null'
         run: |
           {
-            echo -n '## ';
+            echo -n '# ';
             date +"%d-%m-%Y %T";
             echo "${{ fromJSON(steps.release_data.outputs.body) }}" | tail -n +2;
           } >>CHANGELOG.md
@@ -213,4 +213,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           # homage to the python linting utility "black"
-          commit_message: ✨🍰✨
+          commit_message: 'ci(build): ✨🍰✨'
