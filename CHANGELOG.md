@@ -942,3 +942,11 @@
 ## 30-08-2022 13:49:46
 - 267568d: ✨🍰✨ (T145)
 - aee4072: ✨🎯✨ (T145)
+## 31-08-2022 02:19:44
+- **actions**: Attempt to squash Docker image before pushing it ([T145](https://github.com/T145/black-mirror/commit/ad1a51e404f7e2a1f192e61b8472fac97706173f))
+
+## Bug Fixes
+- **actions**: Allow manual Docker builds ([T145](https://github.com/T145/black-mirror/commit/ef5a056ff617520a45231250d38f382f26d9e249))
+
+## Commits
+- 6b1a7b0: ✨🍰✨ (T145)
