@@ -83,8 +83,17 @@
         referrerpolicy="no-referrer" />
   </a>
 </div>
+
 <div align="center">
-  <sub>Made with 💖 by <a href="https://github.com/T145" target="_blank">T145</a>!</sub>
+  <sub>
+    <em>Made with 💖 by</em>
+  </sub>
+</div>
+
+<div align="center">
+  <a href="https://github.com/T145" target="_blank">
+    <img width=200px height=75px src="https://glitch-image.vercel.app/api?text=T145" />
+  </a>
 </div>
 
 ## 🛡️ Privacy Protectors
