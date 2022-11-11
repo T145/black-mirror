@@ -1,32 +1,12 @@
 {
-  "cached": 346,
+  "cached": 337,
   "errors": 0,
   "excludes": 0,
   "fail_map": {
     "dist/ats/1hosts.txt": [
       {
         "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/SukkaW/Surge/master/List/domainset/reject_sukka.conf"
-      },
-      {
-        "status": "Failed: Network error",
         "url": "https://raw.githubusercontent.com/sirsunknight/QuantumultX/master/Filter/Radical-Advertising"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/568475513/secret_domain/master/filter.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/unflac/adFILTER/master/filter.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/jackrabbit335/UsefulLinuxShellScripts/master/Hosts%20%26%20sourcelist/blacklist.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/xylagbx/ADBLOCK/master/BLOCK/customadblockdomain.txt"
       },
       {
         "status": "Failed: Network error",
@@ -34,7 +14,7 @@
       },
       {
         "status": "Failed: Network error",
-        "url": "https://gitlab.com/dns-firewall/dns/matrix/matrix/raw/master/source/adware/domains.list"
+        "url": "https://raw.githubusercontent.com/xylagbx/ADBLOCK/master/BLOCK/customadblockdomain.txt"
       },
       {
         "status": "Failed: Network error",
@@ -42,7 +22,7 @@
       },
       {
         "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/lhie1/Rules/master/Auto/REJECT.conf"
+        "url": "https://raw.githubusercontent.com/SukkaW/Surge/master/List/domainset/reject_sukka.conf"
       },
       {
         "status": "Failed: Network error",
@@ -50,7 +30,27 @@
       },
       {
         "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/lhie1/Rules/master/Auto/REJECT.conf"
+      },
+      {
+        "status": "Failed: Network error",
         "url": "https://raw.githubusercontent.com/joaopinto14/PiHole/main/adverts"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/568475513/secret_domain/master/filter.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/jackrabbit335/UsefulLinuxShellScripts/master/Hosts%20%26%20sourcelist/blacklist.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://gitlab.com/dns-firewall/dns/matrix/matrix/raw/master/source/adware/domains.list"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/unflac/adFILTER/master/filter.txt"
       },
       {
         "status": "Failed: Network error",
@@ -66,7 +66,7 @@
     "dist/ats/arapurayil_nsfw.txt": [
       {
         "status": "Failed: Network error",
-        "url": "https://abl.arapurayil.com/core/nsfw_filter.txt"
+        "url": "https://raw.githubusercontent.com/Clefspeare13/pornhosts/master/0.0.0.0/hosts"
       },
       {
         "status": "Failed: Network error",
@@ -74,7 +74,7 @@
       },
       {
         "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/Clefspeare13/pornhosts/master/0.0.0.0/hosts"
+        "url": "https://abl.arapurayil.com/core/nsfw_filter.txt"
       }
     ],
     "dist/ats/arapurayil_social.txt": [
@@ -86,11 +86,19 @@
     "dist/ats/blockconvert.txt": [
       {
         "status": "Failed: Network error",
-        "url": "https://jarv.is/ios-trackers/blocklist.txt"
+        "url": "https://raw.githubusercontent.com/xorcan/hosts/master/xhosts.txt"
       },
       {
         "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/xorcan/hosts/master/xhosts.txt"
+        "url": "https://v.firebog.net/hosts/BillStearns.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://jarv.is/ios-trackers/blocklist.txt"
+      },
+      {
+        "status": "Timeout",
+        "url": "http://192.243.103.198/hosts.deny"
       },
       {
         "status": "Timeout",
@@ -98,19 +106,11 @@
       },
       {
         "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/xorcan/hosts/master/xips.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://v.firebog.net/hosts/BillStearns.txt"
-      },
-      {
-        "status": "Cached: Error (cached)",
         "url": "https://raw.githubusercontent.com/jackrabbit335/UsefulLinuxShellScripts/master/Hosts%20%26%20sourcelist/blacklist.txt"
       },
       {
-        "status": "Timeout",
-        "url": "http://192.243.103.198/hosts.deny"
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/xorcan/hosts/master/xips.txt"
       },
       {
         "status": "Failed: Network error",
@@ -120,7 +120,7 @@
     "dist/ats/energized.txt": [
       {
         "status": "Failed: Network error",
-        "url": "https://gnuzilla.gnu.org/filters/blacklist.txt"
+        "url": "https://v.firebog.net/hosts/Openphish.txt"
       },
       {
         "status": "Failed: Network error",
@@ -132,37 +132,17 @@
       },
       {
         "status": "Failed: Network error",
-        "url": "https://v.firebog.net/hosts/Openphish.txt"
+        "url": "https://gnuzilla.gnu.org/filters/blacklist.txt"
       }
     ],
     "dist/ats/hl2guide.txt": [
       {
         "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/arapurayil/aBL/master/lists/general/filter_list.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/Amdromeda/Blocklist-Pi-Hole/master/Windows%20telemetry.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/Amdromeda/Blocklist-Pi-Hole/master/Mining%20pages.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://threatcrowd.org/feeds/domains.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/Yuki2718/adblock/master/adguard/tracking-plus.txt"
-      },
-      {
-        "status": "Timeout",
-        "url": "https://blocklist.cyberthreatcoalition.org/vetted/domain.txt"
-      },
-      {
-        "status": "Failed: Network error",
         "url": "https://raw.githubusercontent.com/Amdromeda/Blocklist-Pi-Hole/master/Ads%20and%20trackers.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://assets.windscribe.com/custom_blocklists/clickbait.txt"
       },
       {
         "status": "Cached: Error (cached)",
@@ -170,7 +150,19 @@
       },
       {
         "status": "Failed: Network error",
-        "url": "https://lists.noads.online/lists/compilation.txt"
+        "url": "https://raw.githubusercontent.com/Amdromeda/Blocklist-Pi-Hole/master/Mining%20pages.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/arapurayil/aBL/master/lists/general/filter_list.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://threatcrowd.org/feeds/domains.txt"
+      },
+      {
+        "status": "Timeout",
+        "url": "https://blocklist.cyberthreatcoalition.org/vetted/domain.txt"
       },
       {
         "status": "Failed: Network error",
@@ -178,17 +170,25 @@
       },
       {
         "status": "Failed: Network error",
+        "url": "https://lists.noads.online/lists/compilation.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/Amdromeda/Blocklist-Pi-Hole/master/Windows%20telemetry.txt"
+      },
+      {
+        "status": "Failed: Network error",
         "url": "https://v.firebog.net/hosts/static/SamsungSmart.txt"
       },
       {
         "status": "Failed: Network error",
-        "url": "https://assets.windscribe.com/custom_blocklists/clickbait.txt"
+        "url": "https://raw.githubusercontent.com/Yuki2718/adblock/master/adguard/tracking-plus.txt"
       }
     ],
     "dist/ats/oisd_full.txt": [
       {
         "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/bigdataleaveme/dontcollectme/master/dontcollectme.txt"
+        "url": "https://raw.githubusercontent.com/bigdargon/hostsVN/master/option/hostsVN-quantumult.conf"
       },
       {
         "status": "Failed: Network error",
@@ -196,11 +196,7 @@
       },
       {
         "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/Malware%20-%20Win32"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/sections/push-notifications.txt"
+        "url": "https://raw.githubusercontent.com/xinggsf/Adblock-Rule/master/rule.txt"
       },
       {
         "status": "Failed: Network error",
@@ -212,51 +208,7 @@
       },
       {
         "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/adservers.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://curben.gitlab.io/malware-filter/phishing-filter-agh.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/nord73/malware-blocklist-rev/master/zeustracker/domainblocklist.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://sub.adtchrome.com/adt-chinalist-easylist.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/dnswarden/blocklist/master/blacklist-full.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/vavavr00m/lists/main/hosts/phorm"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/xinggsf/Adblock-Rule/master/mv.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/xinggsf/Adblock-Rule/master/rule.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://filter.futa.gg/280blocker/280blocker_adblock.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://v.firebog.net/hosts/Shalla-mal.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://sub.adtchrome.com/adt-chinalist-easylist360.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/foreign.txt"
+        "url": "https://raw.githubusercontent.com/halflife/list/master/ad.txt"
       },
       {
         "status": "Failed: Network error",
@@ -264,35 +216,7 @@
       },
       {
         "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/bigdargon/hostsVN/master/option/hostsVN-quantumult.conf"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/halflife/list/master/ad.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/cryptominers.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/adservers_firstparty.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/Solus32/Hosts/master/hosts.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://stuff.pitris.info/adblock/filters.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://bentasker.co.uk/adblock/adblock_compiled.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/mullvad/dns-adblock/main/lists/doh/adblock/easylist-adblock"
+        "url": "https://curben.gitlab.io/malware-filter/phishing-filter-agh.txt"
       },
       {
         "status": "Failed: Network error",
@@ -300,7 +224,89 @@
       },
       {
         "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/bigdataleaveme/dontcollectme/master/dontcollectme.txt"
+      },
+      {
+        "status": "Failed: Network error",
         "url": "https://raw.githubusercontent.com/dnswarden/blocklist/master/blacklist.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/Solus32/Hosts/master/hosts.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/Malware%20-%20Win32"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://sub.adtchrome.com/adt-chinalist-easylist.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://stuff.pitris.info/adblock/filters.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/vavavr00m/lists/main/hosts/phorm"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/adservers_firstparty.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/foreign.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/mullvad/dns-adblock/main/lists/doh/adblock/easylist-adblock"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://bentasker.co.uk/adblock/adblock_compiled.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/adservers.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/xinggsf/Adblock-Rule/master/mv.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/nord73/malware-blocklist-rev/master/zeustracker/domainblocklist.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/dnswarden/blocklist/master/blacklist-full.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/sections/push-notifications.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://sub.adtchrome.com/adt-chinalist-easylist360.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/cryptominers.txt"
+      }
+    ],
+    "dist/ats/oisd_nsfw.txt": [
+      {
+        "status": "Timeout",
+        "url": "https://mypdns.org/clefspeare13/pornhosts/-/raw/master/download_here/0.0.0.0/hosts"
+      },
+      {
+        "status": "Timeout",
+        "url": "https://mypdns.org/my-privacy-dns/matrix/-/raw/master/source/porn_filters/explicit_content/wildcard.list"
+      },
+      {
+        "status": "Timeout",
+        "url": "https://mypdns.org/my-privacy-dns/matrix/-/raw/master/source/porn_filters/explicit_content/domains.list"
       }
     ],
     "dist/ats/oisd_whitelist.txt": [
@@ -316,59 +322,11 @@
       },
       {
         "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/herrbischoff/trackers/master/domains.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/mypdns/matrix/master/source/adware/inactive_wildcard.list"
-      },
-      {
-        "status": "Cached: Error (cached)",
-        "url": "https://v.firebog.net/hosts/Shalla-mal.txt"
-      },
-      {
-        "status": "Cached: Error (cached)",
-        "url": "https://assets.windscribe.com/custom_blocklists/clickbait.txt"
-      },
-      {
-        "status": "Failed: Network error",
         "url": "https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/fake-news/domain.list"
       },
       {
         "status": "Failed: Network error",
-        "url": "https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/inactive_wildcard.list"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://www.gameindustry.eu/files/hosts.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/mypdns/matrix/master/source/coin-blocker/domains.list"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/spyware/domain.list"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://v.firebog.net/hosts/Airelle-trc.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/bait_sites/domain.list"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://adblock.dk/block.csv"
-      },
-      {
-        "status": "Cached: Error (cached)",
-        "url": "https://v.firebog.net/hosts/Cybercrime.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/mypdns/matrix/master/source/coin-blocker/wildcard.list"
+        "url": "https://v.firebog.net/hosts/Mahakala.txt"
       },
       {
         "status": "Cached: Error (cached)",
@@ -376,15 +334,31 @@
       },
       {
         "status": "Failed: Network error",
+        "url": "https://v.firebog.net/hosts/Airelle-hrsk.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://www.gameindustry.eu/files/hosts.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://v.firebog.net/hosts/Airelle-trc.txt"
+      },
+      {
+        "status": "Cached: Error (cached)",
+        "url": "https://assets.windscribe.com/custom_blocklists/clickbait.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/herrbischoff/trackers/master/domains.txt"
+      },
+      {
+        "status": "Failed: Network error",
         "url": "https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/coin-blocker/domain.list"
       },
       {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/dupontjean/pihole-blocklist/master/game.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/gambling/hosts"
+        "status": "Cached: Error (cached)",
+        "url": "https://raw.githubusercontent.com/Clefspeare13/pornhosts/master/download_here/0.0.0.0/hosts"
       },
       {
         "status": "Failed: Network error",
@@ -392,19 +366,7 @@
       },
       {
         "status": "Failed: Network error",
-        "url": "https://v.firebog.net/hosts/Prigent-Phishing.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://v.firebog.net/hosts/Mahakala.txt"
-      },
-      {
-        "status": "Failed: Network error",
-        "url": "https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/redirector/domain.list"
-      },
-      {
-        "status": "Cached: Error (cached)",
-        "url": "https://raw.githubusercontent.com/Clefspeare13/pornhosts/master/download_here/0.0.0.0/hosts"
+        "url": "https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/bait_sites/domain.list"
       },
       {
         "status": "Cached: Error (cached)",
@@ -412,14 +374,58 @@
       },
       {
         "status": "Failed: Network error",
-        "url": "https://v.firebog.net/hosts/Airelle-hrsk.txt"
+        "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/gambling/hosts"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/inactive_wildcard.list"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://adblock.dk/block.csv"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/mypdns/matrix/master/source/adware/inactive_wildcard.list"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/redirector/domain.list"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://v.firebog.net/hosts/Prigent-Phishing.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://v.firebog.net/hosts/Shalla-mal.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/spyware/domain.list"
+      },
+      {
+        "status": "Cached: Error (cached)",
+        "url": "https://v.firebog.net/hosts/Cybercrime.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/mypdns/matrix/master/source/coin-blocker/domains.list"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/dupontjean/pihole-blocklist/master/game.txt"
+      },
+      {
+        "status": "Failed: Network error",
+        "url": "https://raw.githubusercontent.com/mypdns/matrix/master/source/coin-blocker/wildcard.list"
       }
     ]
   },
-  "failures": 95,
+  "failures": 93,
   "redirects": 0,
-  "successful": 1890,
-  "timeouts": 3,
-  "total": 1988,
+  "successful": 1883,
+  "timeouts": 6,
+  "total": 1982,
   "unknown": 0
 }
