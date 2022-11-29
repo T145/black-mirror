@@ -1924,7 +1924,7 @@
       "https://www.github.developerdan.com/hosts/lists/tracking-aggressive-extended.txt"
     ]
   },
-  "list_kr": {
+  "list_kr_first_domains": {
     "color": "black",
     "filters": [
       {
@@ -1934,7 +1934,20 @@
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/List-KR/List-KR/master/filters-share/adservice.txt"
+      "https://raw.githubusercontent.com/List-KR/List-KR/master/filters-share/1st_domains.txt"
+    ]
+  },
+  "list_kr_third_domains": {
+    "color": "black",
+    "filters": [
+      {
+        "engine": "gawk",
+        "format": "domain",
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
+      }
+    ],
+    "mirrors": [
+      "https://raw.githubusercontent.com/List-KR/List-KR/master/filters-share/3rd_domains.txt"
     ]
   },
   "littlecordines": {
