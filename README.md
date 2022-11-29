@@ -295,7 +295,7 @@ mawk '{print ":: " $0}' black_ipv6.txt >>hosts
 ### [Dnsmasq](https://dnsmasq.org/)
 
 Many popular platforms such as OpenWRT, DDWRT, and Pi-hole use Dnsmasq as their choice TCP powerhouse. After inspecting many domain blocklists you'll inevitably run across a list in the `dnsmasq.conf` format. This list doesn't support it because you can use the `addn-hosts` parameter to add hosts in the list.
-Target a file that has the hosts in a format similar to the **Hosts File** format.
+Target a file that has the hosts in a format similar to the __Hosts File__ format.
 
 If you're using the `RADVD` daemon, prepend any listed hosts with [`::`](https://stackoverflow.com/questions/40189084/what-is-for-localhost-and-0-0-0-0). Otherwise, even if you have IPv6 support set up, prepend hosts with [`0.0.0.0`](https://github.com/StevenBlack/hosts#we-recommend-using-0000-instead-of-127001).
 
