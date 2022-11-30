@@ -1,4 +1,4 @@
-FROM golang:1.17 AS go
+FROM golang:1.18 AS go
 
 # https://golang.org/doc/go-get-install-deprecation#what-to-use-instead
 # the install paths are where "main.go" lives
@@ -13,19 +13,18 @@ RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@v1.1.1 \
     && go install github.com/StevenBlack/ghosts@v0.2.2
 
 # https://hub.docker.com/_/ubuntu/
-# alias: 22.04, jammy-20220801, jammy, latest, rolling
-FROM ubuntu:jammy as utils
+FROM ubuntu:22.04 as utils
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apt-get -y update \
     && apt-get -y upgrade \
     && apt-get -y install --no-install-recommends \
-    build-essential=12.9ubuntu3 \
-    curl=7.81.0-1ubuntu1.3 \
-    dirmngr=2.2.27-3ubuntu2.1 \
-    gpg=2.2.27-3ubuntu2.1 \
-    gpg-agent=2.2.27-3ubuntu2.1 \
+    build-essential=* \
+    curl=* \
+    dirmngr=* \
+    gpg=* \
+    gpg-agent=* \
     && apt-get install -y --no-install-recommends --reinstall ca-certificates=* \
     && rm -rf /var/lib/apt/lists/*
 
@@ -54,7 +53,7 @@ RUN curl -sLO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_
 # https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.2.2" \
+      version="5.2.4" \
       description="Custom Docker Image used to run blacklist projects."
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -121,7 +120,7 @@ RUN apt-get -q -y update --no-allow-insecure-repositories \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && rm -f /var/cache/ldconfig/aux-cache \
     && find -P -O3 /var/log -depth -type f -print0 | xargs -0 truncate -s 0 \
-    #&& update-locale LANG=en_US.UTF-8 \
+    && update-locale LANG=en_US.UTF-8 \
     # https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
     && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
     # https://askubuntu.com/questions/477974/how-to-remove-unnecessary-locales
