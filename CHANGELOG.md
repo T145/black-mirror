@@ -466,3 +466,11 @@
 # 29-11-2022 13:41:52
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/e68d0b68297514517488efcd54c06d27bcb608b1))
 - **targets**: ✨🎯✨ ([T145](https://github.com/T145/black-mirror/commit/03480132881b62cd50d616906d322f73e6662e05))
+# 30-11-2022 02:09:58
+- **source**: Fixed List KR ([T145](https://github.com/T145/black-mirror/commit/ca9cfed227f15e2fe518f3c391e91ce9b3ef3549))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/2a2dc53cedda60561ba60796a96a0667d89e75b0))
+
+## Chores
+- **node**: More updates ([T145](https://github.com/T145/black-mirror/commit/0eae84ab67b3fb1d7e3416318ba9f09e125b7c8d))
