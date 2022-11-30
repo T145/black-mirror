@@ -4,11 +4,11 @@ FROM golang:1.17 AS go
 # the install paths are where "main.go" lives
 
 # https://github.com/projectdiscovery/dnsx#usage
-RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@v1.1.0 \
+RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@v1.1.1 \
     # https://github.com/projectdiscovery/httpx#usage
-    && go install github.com/projectdiscovery/httpx/cmd/httpx@v1.2.4 \
+    && go install github.com/projectdiscovery/httpx/cmd/httpx@v1.2.5 \
     # https://github.com/ipinfo/cli#-ipinfo-cli
-    && go install github.com/ipinfo/cli/ipinfo@ipinfo-2.9.0 \
+    && go install github.com/ipinfo/cli/ipinfo@ipinfo-2.10.0 \
     # https://github.com/StevenBlack/ghosts#ghosts
     && go install github.com/StevenBlack/ghosts@v0.2.2
 
@@ -39,7 +39,7 @@ RUN curl pi.dk/3/ -o install.sh \
     && bash install.sh \
     && find /usr/local/bin/ -type f ! -name 'par*' -delete
 
-ENV LYCHEE_VERSION=v0.10.0 PANDOC_VERSION=2.19.2
+ENV LYCHEE_VERSION=v0.10.3 PANDOC_VERSION=2.19.2
 
 # https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L39
 RUN curl -sLO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_VERSION}/lychee-${LYCHEE_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
@@ -54,7 +54,7 @@ RUN curl -sLO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_
 # https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.2.0" \
+      version="5.2.2" \
       description="Custom Docker Image used to run blacklist projects."
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -88,11 +88,11 @@ RUN apt-get -q -y update --no-allow-insecure-repositories \
     && apt-get -y upgrade --with-new-pkgs \
     && apt-get -y install --no-install-recommends \
     #apt-show-versions # use dpkg -l (L) instead since ASV doesn't like GZ packages
-    aria2=1.35.0-3 \
     apparmor=2.13.6-10 \
     apparmor-utils=2.13.6-10 \
+    aria2=1.35.0-3 \
     auditd=1:3.0-2 \
-    curl=7.84.0-2~bpo11+1 \
+    curl=7.85.0-1~bpo11+1 \
     debsums=3.0.2 \
     gawk=1:5.1.0-1 \
     git=1:2.34.1-1~bpo11+1 \
@@ -106,7 +106,7 @@ RUN apt-get -q -y update --no-allow-insecure-repositories \
     libtext-trim-perl=1.04-1 \
     libtry-tiny-perl=0.30-1 \
     localepurge=0.7.3.10 \
-    locales=2.31-13+deb11u3 \
+    locales=2.31-13+deb11u5 \
     miller=5.10.0-1 \
     moreutils=0.65-1 \
     p7zip-full=16.02+dfsg-8 \
@@ -121,6 +121,7 @@ RUN apt-get -q -y update --no-allow-insecure-repositories \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && rm -f /var/cache/ldconfig/aux-cache \
     && find -P -O3 /var/log -depth -type f -print0 | xargs -0 truncate -s 0 \
+    && update-locale LANG=en_US.UTF-8 \
     # https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
     && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
     # https://askubuntu.com/questions/477974/how-to-remove-unnecessary-locales
