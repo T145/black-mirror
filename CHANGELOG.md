@@ -474,3 +474,13 @@
 
 ## Chores
 - **node**: More updates ([T145](https://github.com/T145/black-mirror/commit/0eae84ab67b3fb1d7e3416318ba9f09e125b7c8d))
+# 30-11-2022 13:43:07
+- **docker**: Repair building? ([T145](https://github.com/T145/black-mirror/commit/1c0cb761f6f93e50703b5485c9862f547ca95d7d))
+- **docker**: The proper update ([T145](https://github.com/T145/black-mirror/commit/3db6629a36706e4e8f80c30381fd2b5409436c74))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/84bad5e0d5611dfb7f727ae9d4852e0711792933))
+- **targets**: ✨🎯✨ ([T145](https://github.com/T145/black-mirror/commit/590be774e67a9c9c3e7314461986ef42ac688bf4))
+
+## Chores
+- **docker**: Updated relevant packages ([T145](https://github.com/T145/black-mirror/commit/7ea159a2109f381ddaa8bd158db5c16fb6221cd7))
