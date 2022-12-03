@@ -12,40 +12,28 @@ RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@v1.1.1 \
     # https://github.com/StevenBlack/ghosts#ghosts
     && go install github.com/StevenBlack/ghosts@v0.2.2
 
-# https://hub.docker.com/_/ubuntu/
-FROM ubuntu:22.04 as utils
+# https://hub.docker.com/_/buildpack-deps/
+FROM buildpack-deps:stable as utils
 
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-
-RUN apt-get -y update \
-    && apt-get -y upgrade \
-    && apt-get -y install --no-install-recommends \
-    build-essential=* \
-    curl=* \
-    dirmngr=* \
-    gpg=* \
-    gpg-agent=* \
-    && apt-get install -y --no-install-recommends --reinstall ca-certificates=* \
-    && rm -rf /var/lib/apt/lists/*
+SHELL ["/bin/bash", "-o", "pipefail", "-ceux"]
+ENV LYCHEE_VERSION=v0.10.3 \
+    PANDOC_VERSION=2.19.2
 
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
 # https://git.savannah.gnu.org/cgit/parallel.git/tree/README
 # https://www.gnu.org/software/parallel/checksums/
-RUN curl pi.dk/3/ -o install.sh \
-    && sha1sum install.sh | grep 12345678883c667e01eed62f975ad28b6d50e22a \
-    && md5sum install.sh | grep cc21b4c943fd03e93ae1ae49e28573c0 \
-    && sha512sum install.sh | grep 79945d9d250b42a42067bb0099da012ec113b49a54e705f86d51e784ebced224fdff3f52ca588d64e75f603361bd543fd631f5922f87ceb2ab0341496df84a35 \
-    && bash install.sh \
-    && find /usr/local/bin/ -type f ! -name 'par*' -delete
-
-ENV LYCHEE_VERSION=v0.10.3 PANDOC_VERSION=2.19.2
-
-# https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L39
-RUN curl -sLO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_VERSION}/lychee-${LYCHEE_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
-    && tar -xvzf lychee-*.tar.gz -C /usr/local/bin/ \
+RUN curl http://pi.dk/3/ -o install.bash \
+    && sha1sum install.bash | grep 12345678883c667e01eed62f975ad28b6d50e22a \
+    && md5sum install.bash | grep cc21b4c943fd03e93ae1ae49e28573c0 \
+    && sha512sum install.bash | grep 79945d9d250b42a42067bb0099da012ec113b49a54e705f86d51e784ebced224fdff3f52ca588d64e75f603361bd543fd631f5922f87ceb2ab0341496df84a35 \
+    && bash install.bash \
+    && find /usr/local/bin/ -type f ! -name 'par*' -delete; \
+    # https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L39
+    curl -sLO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_VERSION}/lychee-${LYCHEE_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
+    && tar -xvzf lychee-*.tar.gz --strip-components 1 -C /usr/local/bin/; \
     # https://github.com/jgm/pandoc/blob/master/INSTALL.md#linux
     # final pandoc install is ~80MB vs ~155MB via apt
-    && curl -sLO "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz" \
+    curl -sLO "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz" \
     && tar -xvzf pandoc-*.tar.gz --strip-components 1 -C /usr/local/ \
     && rm -f /usr/local/bin/pandoc-server
 
@@ -53,12 +41,19 @@ RUN curl -sLO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_
 # https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.2.4" \
+      version="5.3.0" \
       description="Custom Docker Image used to run blacklist projects."
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 STOPSIGNAL SIGKILL
-ENV LANG=en_US.utf8 RESOLUTION_BIT_DEPTH=1600x900x16 NODE_ENV=production
+
+ENV LANG=en_US.utf8 \
+    # https://stackoverflow.com/questions/2499794/how-to-fix-a-locale-setting-warning-from-perl
+    #LC_CTYPE=en_US.UTF-8 \
+    #LC_ALL=en_US.UTF-8 \
+    RESOLUTION_BIT_DEPTH=1600x900x16 \
+    # https://nodejs.dev/en/learn/nodejs-the-difference-between-development-and-production/
+    NODE_ENV=production
 
 # https://github.com/ParrotSec/docker-images/blob/master/core/lts-amd64/Dockerfile#L6
 # https://www.parrotsec.org/docs/apparmor.html
