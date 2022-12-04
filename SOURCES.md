@@ -284,14 +284,26 @@
 - [CryptoScamDB](https://github.com/CryptoScamDB)
   - [blacklist](https://api.cryptoscamdb.org/v1/blacklist)
 - [Critical Path Security](https://github.com/CriticalPathSecurity/Zeek-Intelligence-Feeds)
-  - [cps-*](https://www.criticalpathsecurity.com/critical-path-security-provides-threat-intelligence-feeds-for-credible-ransomware-threat-against-u-s-hospitals/)
-  - [illuminate](https://www.criticalpathsecurity.com/services/managed-zeek-ids/zeek-intelligence-network/)
-  - Because the [Georgia Tech PREDICT](https://www.reddit.com/r/netsec/comments/3e7p8s/georgia_tech_releases_no_cost_malware_dns_data/) data feed [appears to be offline](https://predict.org/), an active version seems to be walled behind [IMPACT](https://www.impactcybertrust.org/dataset_view?idDataset=520), and the "predict_intel" list is labeled "CPS-PREDICT,"
-  the data in the feed is not likely to be pulled from Georgia Tech continously but updated and maintined by CPS.
-  - The `*_ip` lists and `ragnar` list will be ignored due to IP volatility.
-  - `Amnesty_NSO_Domains` is documented as coming from a CPS source.
-  - [Mirrors over here.](https://github.com/CriticalPathSecurity/Public-Intelligence-Feeds)
+  - censys.intel
+  - cps-collected-iocs.intel
+  - cps_cobaltstrike_*.intel (May be collected from Threatview)
+  - fangxiao.intel (Unless other Cyjax posts are found)
+  - filetransferportals.intel
+  - illuminate.intel
+  - lockbit_ip.intel
+  - log4j_ip.intel
+  - ragnar.intel
+  - sans.intel (Seems to largely detail open resolvers)
+  - stalkerware.intel
 - [InQuest](https://labs.inquest.net/api/iocdb/list)
+- [unflac](https://github.com/unflac/filter/blob/main/filter.txt)
+- [SukkaW](https://github.com/SukkaW/Surge/blob/master/List/non_ip/my_reject.conf)
+- [xOS](https://github.com/xOS/Config/blob/Her/RuleSet/Advertising.list)
+- [i-blocklist](https://github.com/jackrabbit335/UsefulLinuxShellScripts/blob/master/blocklist-update.sh#L17)
+- [QuantumultX](https://github.com/TY1ung/QuantumultX/blob/master/Filter/Advertising.snippet)
+- [disposable-email-domains](https://github.com/ivolo/disposable-email-domains/blob/master/index.json)
+- [Threatview](https://threatview.io/)
+- [Cyjax Uploads](https://www.cyjax.com/latest-analysis/)
 
 ## ⬜ Whitelists
 
@@ -405,6 +417,7 @@
 - [Matty Roberts Threat List](https://www.matthewroberts.io/threatlist.html)
   - Used lists [here](https://github.com/bluerogue/threatlist/blob/master/src/main/java/io/matthewroberts/threatlist/service/ThreatAggregationServiceImpl.java#L32).
 - [StrictBlockPAllebone](https://github.com/pallebone/StrictBlockPAllebone)
+- [mullvad](https://github.com/mullvad/dns-blocklists)
 
 ## 🧟 Zombies
 
