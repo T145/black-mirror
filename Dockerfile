@@ -42,7 +42,8 @@ RUN curl http://pi.dk/3/ -o install.bash \
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
       version="5.3.0" \
-      description="Custom Docker Image used to run blacklist projects."
+      description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
+      org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 STOPSIGNAL SIGKILL
