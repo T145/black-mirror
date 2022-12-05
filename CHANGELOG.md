@@ -507,3 +507,8 @@
 # 04-12-2022 13:40:24
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/f3a55b25b11e7aff5f76549cbe2403065c95c26a))
 - **targets**: ✨🎯✨ ([T145](https://github.com/T145/black-mirror/commit/fd49deed71d735371b9922ed0ebf91e3d85e2858))
+# 05-12-2022 02:02:34
+- **docs**: Documented more sources to add ([T145](https://github.com/T145/black-mirror/commit/7a82ed27ba9228b1689fe7fb4ae195a44fca672a))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/d7274a11c904de3aeed454c1579951fc422ea7c7))
