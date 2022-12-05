@@ -4,13 +4,15 @@ FROM golang:1.18 AS go
 # the install paths are where "main.go" lives
 
 # https://github.com/projectdiscovery/dnsx#usage
-RUN go install github.com/projectdiscovery/dnsx/cmd/dnsx@v1.1.1 \
+RUN go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@v1.1.1 \
     # https://github.com/projectdiscovery/httpx#usage
-    && go install github.com/projectdiscovery/httpx/cmd/httpx@v1.2.5 \
+    && go install -v github.com/projectdiscovery/httpx/cmd/httpx@v1.2.5 \
+    # https://github.com/projectdiscovery/shuffledns#usage
+    && go install -v github.com/projectdiscovery/shuffledns/cmd/shuffledns@v1.0.8 \
     # https://github.com/ipinfo/cli#-ipinfo-cli
-    && go install github.com/ipinfo/cli/ipinfo@ipinfo-2.10.0 \
+    && go install -v github.com/ipinfo/cli/ipinfo@ipinfo-2.10.0 \
     # https://github.com/StevenBlack/ghosts#ghosts
-    && go install github.com/StevenBlack/ghosts@v0.2.2
+    && go install -v github.com/StevenBlack/ghosts@v0.2.2
 
 # https://hub.docker.com/_/buildpack-deps/
 FROM buildpack-deps:stable as utils
@@ -35,13 +37,18 @@ RUN curl http://pi.dk/3/ -o install.bash \
     # final pandoc install is ~80MB vs ~155MB via apt
     curl -sLO "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz" \
     && tar -xvzf pandoc-*.tar.gz --strip-components 1 -C /usr/local/ \
-    && rm -f /usr/local/bin/pandoc-server
+    && rm -f /usr/local/bin/pandoc-server; \
+    # https://github.com/blechschmidt/massdns#compilation
+    # https://github.com/projectdiscovery/shuffledns#prerequisite
+    git clone https://github.com/blechschmidt/massdns.git \
+    && make -C massdns \
+    && mv /massdns/bin/massdns /usr/local/bin/;
 
 # https://wiki.debian.org/DiskFreeSpace
 # https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.3.0" \
+      version="5.3.2" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
