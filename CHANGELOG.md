@@ -515,3 +515,9 @@
 # 05-12-2022 13:37:45
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/0b62516002d2da0288adc4fe00dda56ab40d28e1))
 - **targets**: ✨🎯✨ ([T145](https://github.com/T145/black-mirror/commit/cee6a58ea1a38f483ba49147ccf264d7ccf5b0fe))
+# 06-12-2022 02:03:25
+- **docker**: Updated the image description ([T145](https://github.com/T145/black-mirror/commit/d83d5825aa5db3792e507742501b2717f9be4033))
+- **docker**: Added ShuffleDNS ([T145](https://github.com/T145/black-mirror/commit/bf65909d31ca8e708b65a89eb86f1b14ff907c81))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/620422ecaafcacf8338579db54a241b4255bbe8d))
