@@ -8,7 +8,7 @@ on:
     branches:
       - master
     paths:
-      - "data/v2/targets.json"
+      - "data/v1/sources.json"
   workflow_dispatch:
 
 jobs:
@@ -32,7 +32,7 @@ jobs:
           submodules: true
 
       - name: Generate lists
-        run: ./scripts/v2/automated_targeting_system.bash
+        run: ./scripts/ats/automated_targeting_system.bash
 
       - name: Update targets
         uses: stefanzweifel/git-auto-commit-action@v4
