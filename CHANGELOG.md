@@ -578,3 +578,8 @@
 # 17-12-2022 13:35:26
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/94ef4191b93d9133879626ed4dcddf6de190c78d))
 - **targets**: ✨🎯✨ ([T145](https://github.com/T145/black-mirror/commit/0334a260271c5a16c67b4963e9f71439c55d33c2))
+# 18-12-2022 02:00:48
+- **v1**: Set ATS to target V1; the active version ([T145](https://github.com/T145/black-mirror/commit/3447dadcebb5a826077c66629a34de93916578f4))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/c6e2b3f484a621651776ddb78c2b40eb0427c5ca))
