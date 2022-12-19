@@ -21,7 +21,7 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
   </a>
-  <img src="https://img.shields.io/github/actions/workflow/status/T145/black-mirror/workflows/publish_lists.yml?branch=master&label=Release&logo=github"
+  <img src="https://img.shields.io/github/actions/workflow/status/T145/black-mirror/publish_lists.yml?branch=master&label=Release&logo=github"
        alt="release"
        longdesc="https://github.com/badges/shields/"
        crossorigin="anonymous"
@@ -34,7 +34,7 @@
         referrerpolicy="no-referrer" />
   </a>
   <a href="https://github.com/T145/black-mirror/pkgs/container/black-mirror">
-    <img src="https://img.shields.io/github/actions/workflow/status/T145/black-mirror/workflows/publish_docker.yml?branch=master&color=%232496ED&label=Docker&logo=docker"
+    <img src="https://img.shields.io/github/actions/workflow/status/T145/black-mirror/publish_docker.yml?branch=master&color=%232496ED&label=Docker&logo=docker"
         alt="docker"
         longdesc="https://github.com/badges/shields/"
         crossorigin="anonymous"
