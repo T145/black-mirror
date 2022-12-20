@@ -275,7 +275,14 @@ For a persistant container, use something like what's given below:
 docker container run -it --name black-mirror -h black-mirror ghcr.io/t145/black-mirror
 ```
 
-Before using `rkhunter`, be sure to run:
+Then to access the container at a later date, run:
+
+```bash
+docker start black-mirror
+docker exec -it black-mirror /bin/bash
+```
+
+NOTE: Before using `rkhunter`, be sure to run:
 
 ```bash
 rkhunter --update
