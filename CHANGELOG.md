@@ -589,3 +589,12 @@
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/a40494e8d4004f7ea1c25619d60781ccf538273f))
 # 19-12-2022 13:37:55
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/ff4bfd6d739c5683a0866795154771a6ca2f01ed))
+# 20-12-2022 02:06:07
+- **docs**: Repaired workflow status badges ([T145](https://github.com/T145/black-mirror/commit/7e77896e9d5e5be50ffbc2e25f6dfe47e9984476))
+- **docs**: Workflow subdir not actually needed ([T145](https://github.com/T145/black-mirror/commit/00223256946820ec28363c97a55b17cc5e0a768b))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/491eec4fe907090ed9bd581ec0e1cc285cf5206b))
+
+## Chores
+- **node**: Package update ([T145](https://github.com/T145/black-mirror/commit/045d86f3f3a45043b658e3f1d5a4a8ec021b8d45))
