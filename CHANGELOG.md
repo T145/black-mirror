@@ -600,3 +600,9 @@
 - **node**: Package update ([T145](https://github.com/T145/black-mirror/commit/045d86f3f3a45043b658e3f1d5a4a8ec021b8d45))
 # 20-12-2022 13:41:35
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/07b3f58798ff64bf059e0e3bbba6546ee0bc427c))
+# 21-12-2022 02:00:41
+- **docs**: Detailed how to use the persistent Docker container ([T145](https://github.com/T145/black-mirror/commit/b50b9b7a0f7e50f3354939ae3532ef19ac2ada33))
+- **docker**: Improved the healthcheck command ([T145](https://github.com/T145/black-mirror/commit/6031803bd5fe9a9203f5397b2317a626b244ef2d))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/f374d2a68c1afd3cb69d8a79a92bb70629f1298c))
