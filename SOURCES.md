@@ -304,6 +304,11 @@
 - [disposable-email-domains](https://github.com/ivolo/disposable-email-domains/blob/master/index.json)
 - [Threatview](https://threatview.io/)
 - [Cyjax Uploads](https://www.cyjax.com/latest-analysis/)
+- [jawz subdomains](https://github.com/jawz101/subdomain_blocklists)
+- [elliotwutingfeng](https://github.com/elliotwutingfeng/Inversion-DNSBL-Blocklists)
+- [Red Flag Domains](https://dl.red.flag.domains/)
+- [Discord Phishing Links](https://github.com/nikolaischunk/discord-phishing-links)
+- [YT Spam Lists](https://github.com/ThioJoe/YT-Spam-Lists/blob/main/SpamDomainsList.txt)
 
 ## ⬜ Whitelists
 
@@ -648,3 +653,4 @@
   - [domains](https://threatcrowd.org/feeds/domains.txt)
   - [ips](https://threatcrowd.org/feeds/ips.txt)
   - [blacklist](https://threatcrowd.org/inc/blacklist.txt)
+- [antispam-it](https://github.com/marco-acorte/antispam-it)
