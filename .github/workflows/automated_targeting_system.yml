@@ -31,6 +31,9 @@ jobs:
         with:
           submodules: true
 
+      - name: Set permissions
+        run: chmod -R 755 ./scripts/*
+
       - name: Generate lists
         run: ./scripts/ats/automated_targeting_system.bash
 

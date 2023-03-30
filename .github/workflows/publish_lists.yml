@@ -28,6 +28,9 @@ jobs:
         with:
           submodules: true
 
+      - name: Set permissions
+        run: chmod -R 755 ./scripts/*
+
       - name: Generate lists
         id: build
         run: ./scripts/github/workflow.bash
