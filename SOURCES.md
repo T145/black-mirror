@@ -53,7 +53,6 @@
   - sslbl
   - urlhaus
   - threatfox (domains only)
-- [360_netlab](https://data.netlab.360.com/)
 - [cybercrime](https://cybercrime-tracker.net/)
 - [taz_spam](http://taz.net.au/Mail/)
 - [bruteforceblocker](http://danger.rulez.sk/index.php/bruteforceblocker/)
@@ -654,3 +653,5 @@
   - [ips](https://threatcrowd.org/feeds/ips.txt)
   - [blacklist](https://threatcrowd.org/inc/blacklist.txt)
 - [antispam-it](https://github.com/marco-acorte/antispam-it)
+- [360_netlab](https://data.netlab.360.com/)
+  - Pay-walled

@@ -38,17 +38,6 @@
       "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_Pro_Xtra_only.txt"
     ]
   },
-  "360_netlab": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/{print $2}"
-      }
-    ],
-    "mirrors": ["https://data.netlab.360.com/feeds/dga/dga.txt"]
-  },
   "4skinskywalker_anti_porn": {
     "color": "black",
     "filters": [
