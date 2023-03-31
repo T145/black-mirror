@@ -4,12 +4,6 @@ name: Automated Targeting System
 on:
   schedule:
     - cron: "0 7 * * *"
-  push:
-    branches:
-      - master
-    paths:
-      - "data/v1/sources.json"
-  workflow_dispatch:
 
 jobs:
   build:
