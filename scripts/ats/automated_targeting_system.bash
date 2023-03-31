@@ -9,7 +9,7 @@ set -euET -o pipefail # put bash into strict mode & have it give descriptive err
 umask 055             # change all generated file perms from 755 to 700
 export LC_ALL=C       # force byte-wise sorting and default langauge output
 
-SOURCES='/data/v1/targets.json'
+SOURCES='/data/v2/targets.json'
 STATUS='/dist/ats/target-status.json'
 CACHE=$(mktemp -d)
 readonly SOURCES STATUS CACHE
