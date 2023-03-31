@@ -835,22 +835,6 @@
     ],
     "mirrors": ["https://api.cybercure.ai/feed/get_ips"]
   },
-  "cyber_cure_urls": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "jq",
-        "format": "domain",
-        "rule": ".data.urls[] | split(\"/\")[2] | match(\"[a-z].*\";\"gimx\").string"
-      },
-      {
-        "engine": "jq",
-        "format": "ipv4",
-        "rule": ".data.urls[] | split(\"/\")[2] | match(\"[0-9].*\";\"gimx\").string | split(\":\")[0]"
-      }
-    ],
-    "mirrors": ["https://api.cybercure.ai/feed/get_url"]
-  },
   "cybercrime_all": {
     "color": "black",
     "filters": [
