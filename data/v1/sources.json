@@ -437,20 +437,18 @@
     "mirrors": ["https://benkow.cc/export.php"]
   },
   "betterfyi": {
-    "_comment": "Using the pre-optimized Energized mirror.",
     "color": "black",
     "filters": [
       {
-        "engine": "mawk",
+        "engine": "gawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $2}"
+        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
       }
     ],
     "mirrors": [
-      "https://block.energized.pro/assets/sources/filter/better-fyi-trackers.txt"
+      "https://better.fyi/blockerList.txt"
     ],
     "variants": [
-      "https://better.fyi/blockerList.txt",
       "https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt"
     ]
   },
@@ -904,19 +902,6 @@
       "https://infosharing.cybersaiyan.it/feeds/CS-COMMUNITY-HTTP?v=json&tr=1"
     ]
   },
-  "cybo1927": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "gawk",
-        "format": "domain",
-        "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
-      }
-    ],
-    "mirrors": [
-      "https://raw.githubusercontent.com/Cybo1927/Hosts/master/DNS%20Hosts"
-    ]
-  },
   "cymru_bogons": {
     "color": "white",
     "filters": [
@@ -1168,19 +1153,6 @@
     ],
     "mirrors": [
       "https://raw.githubusercontent.com/EnergizedProtection/unblock/master/basic/formats/domains.txt"
-    ]
-  },
-  "energized_xtreme": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/"
-      }
-    ],
-    "mirrors": [
-      "https://block.energized.pro/extensions/xtreme/formats/domains.txt"
     ]
   },
   "esox_lucius_agenttesla": {
@@ -1794,55 +1766,6 @@
       "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Main-Template/hosts"
     ]
   },
-  "kriskintel_covid": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
-      }
-    ],
-    "mirrors": ["https://kriskintel.com/feeds/ktip_covid_domains.txt"]
-  },
-  "kriskintel_domains": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "$0~/^[^#]/{print $1}"
-      }
-    ],
-    "mirrors": ["https://kriskintel.com/feeds/ktip_malicious_domains.txt"]
-  },
-  "kriskintel_ips": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "$0~/^[^#]/{print $1}"
-      }
-    ],
-    "mirrors": ["https://kriskintel.com/feeds/ktip_malicious_Ips.txt"]
-  },
-  "kriskintel_ransomware": {
-    "color": "black",
-    "filters": [
-      {
-        "engine": "mawk",
-        "format": "domain",
-        "rule": "/# Domain Name #/{ f = 1; next } /# Hashes #/{ f = 0 } f"
-      },
-      {
-        "engine": "mawk",
-        "format": "ipv4",
-        "rule": "/# IP Address #/{ f = 1; next } /# Domain Name #/{ f = 0 } f"
-      }
-    ],
-    "mirrors": ["https://kriskintel.com/feeds/ktip_ransomware_feeds.txt"]
-  },
   "lightswitch_ads_and_tracking": {
     "color": "black",
     "filters": [
@@ -2274,27 +2197,27 @@
     ],
     "mirrors": ["http://npc.0am.jp/hosts.php?dl=1"]
   },
-  "oisd_extra": {
+  "oisd_big": {
     "color": "black",
     "filters": [
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>13"
+        "rule": "BEGIN{FS=\"=\"}{print substr($2, 2, length($2)-2)}"
       }
     ],
-    "mirrors": ["https://dbl.oisd.nl/extra/"]
+    "mirrors": ["https://big.oisd.nl/dnsmasq"]
   },
-  "oisd_full": {
+  "oisd_nsfw": {
     "color": "black",
     "filters": [
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>13"
+        "rule": "BEGIN{FS=\"=\"}{print substr($2, 2, length($2)-2)}"
       }
     ],
-    "mirrors": ["https://dbl.oisd.nl"]
+    "mirrors": ["https://nsfw.oisd.nl/dnsmasq"]
   },
   "opendbl_talos": {
     "color": "black",
@@ -3203,12 +3126,11 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "NR>6{print $2}"
+        "rule": "$1~/^0.0.0.0$/{print $2}"
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/gambling-hosts",
-      "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/gambling/hosts"
+      "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/gambling-hosts"
     ]
   },
   "sinfonietta_porn": {
@@ -3218,15 +3140,11 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $2}"
+        "rule": "$1~/^0.0.0.0$/{print $2}"
       }
     ],
     "mirrors": [
-      "https://block.energized.pro/assets/sources/filter/sinfonietta-porn.txt"
-    ],
-    "variants": [
-      "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts",
-      "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/sinfonietta/hosts"
+      "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts"
     ]
   },
   "sinfonietta_snuff": {
@@ -3235,12 +3153,11 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $2}"
+        "rule": "$1~/^127.0.0.1$/{print $2}"
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/snuff-hosts",
-      "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/sinfonietta-snuff/hosts"
+      "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/snuff-hosts"
     ]
   },
   "sinfonietta_social": {
@@ -3249,12 +3166,11 @@
       {
         "engine": "mawk",
         "format": "domain",
-        "rule": "$0~/^[^#]/{print $2}"
+        "rule": "$1~/^127.0.0.1$/{print $2}"
       }
     ],
     "mirrors": [
-      "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/social-hosts",
-      "https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/social/sinfonietta/hosts"
+      "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/social-hosts"
     ]
   },
   "smarttv_tracking": {

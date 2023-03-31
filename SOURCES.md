@@ -28,7 +28,6 @@
   - hostfile
 - [Frellwits-filter-lists](https://github.com/lassekongo83/Frellwits-filter-lists#frellwits-filter-lists)
 - [wally3k](https://v.firebog.net/hosts/)
-- [Energized Xtreme Extension](https://github.com/EnergizedProtection/block#extensions-2)
 - [AnudeepND](https://github.com/anudeepND/blacklist)
 - [WindowsSpyBlocker](https://github.com/crazy-max/WindowsSpyBlocker/tree/master/data/hosts)
 - [Sinfonietta](https://github.com/Sinfonietta/hostfiles)
@@ -42,7 +41,6 @@
 - [not_on_my_shift](https://orca.pet/notonmyshift/)
 - [lightswitch05|developerdan](https://github.com/lightswitch05/hosts)
 - [resecure_me](https://rescure.me/feeds.html)
-- [kriskintel](https://kriskintel.com/)
 - [filtri_dns](https://filtri-dns.ga/)
 - [mailscanner](http://phishing.mailscanner.info/)
 - [binarydefense](https://www.binarydefense.com/)
@@ -100,7 +98,7 @@
 - [Airelle's Hosts](http://rlwpx.free.fr/WPFF/hosts.htm)
 - [someonewhocares](https://someonewhocares.org/)
 - [FutaFilter](https://github.com/FutaGuard/FutaFilter#readme)
-- [betterfyi](https://better.fyi/)
+- [Better FYI](https://better.fyi/)
 - [ayashige](https://github.com/ninoseki/ayashige)
 - [yoyo](https://pgl.yoyo.org/adservers/)
 - [winhelp2002](https://winhelp2002.mvps.org/hosts.htm)
@@ -178,7 +176,6 @@
 - [bjornstar](https://github.com/bjornstar/hosts)
 - [CyberSaiyan](https://github.com/CyberSaiyanIT/InfoSharing)
 - [d3ward](https://github.com/d3ward/toolz#readme)
-- [Cybo1927](https://github.com/Cybo1927/Hosts)
 - [Th3M3](https://github.com/Th3M3/blocklists)
   - malware
 - [Tenzin Gyatso Creations](https://tgc.cloud/downloads/)
@@ -655,3 +652,7 @@
 - [antispam-it](https://github.com/marco-acorte/antispam-it)
 - [360_netlab](https://data.netlab.360.com/)
   - Pay-walled
+- [kriskintel](https://kriskintel.com/)
+  - Bad TLS configuration
+- [Cybo1927](https://github.com/Cybo1927/Hosts)
+- [Energized Xtreme Extension](https://github.com/EnergizedProtection/block#extensions-2)
