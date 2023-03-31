@@ -9,8 +9,14 @@ set -euET -o pipefail # put bash into strict mode & have it give descriptive err
 umask 055             # change all generated file perms from 755 to 700
 export LC_ALL=C       # force byte-wise sorting and default langauge output
 
-DOWNLOADS=$(mktemp -d)
-TMP=$(mktemp --tempdir "$DOWNLOADS")
+if [ "${NODE_ENV+x}" ]; then
+	echo '[INFO] NODE_ENV is set!'
+else
+	NODE_ENV='DEVELOPMENT'
+fi
+
+DOWNLOADS=$(if ["$NODE_ENV" != 'PRODUCTION']; then echo "$(pwd)/output"; else mktemp -d; fi)
+TMP=$(mktemp -p "$DOWNLOADS")
 METHOD_ALLOW='ALLOW'
 METHOD_BLOCK='BLOCK'
 FORMAT_DOMAIN='DOMAIN'
@@ -49,20 +55,18 @@ main() {
 	for method in "${METHODS[@]}"; do
 		cache="${DOWNLOADS}/${method}"
 
-		jq -r --arg method "$method" 'to_entries[] |
-      select(.content.retriever == "ARIA2" and .value.method == $method) |
-      {key, mirrors: .value.mirrors} |
-      .ext = (.mirrors[0] | match(".(tar.gz|zip|7z|json)").captures[0].string // "txt") |
-      (.mirrors | join("\t")), " out=\(.key).\(.ext)"' data/v2/lists.json |
-			(set +e && aria2c -i- -d "$cache" --conf-path='./configs/aria2.conf' && set -e) || set -e
+		# Avoid multiple download attempts when debugging to prevent griefing list providers
+		if [[ "$NODE_ENV" == 'PRODUCTION' || "$NODE_ENV" != 'PRODUCTION' && -z "$(ls -A $cache)" ]]; then
+			jq -r --arg method "$method" 'to_entries[] | select(.value.content.retriever == "ARIA2" and .value.method == $method) | {key, mirrors: .value.mirrors} | .ext = (.mirrors[0] | match(".(tar.gz|zip|7z|json)").captures[0].string // "txt") | (.mirrors | join("\t")), " out=\(.key).\(.ext)"' data/v2/lists.json | (set +e && aria2c -i- -d "$cache" --conf-path='./configs/aria2.conf' && set -e) || set -e
+		fi
 
-		jq -r --arg method "$method" 'to_entries[] |
-      select(.content.retriever == "TWINT" and .value.method == $method) |
-      {key, mirror: .value.mirrors[0]} |
-      "\(.key)#\(.mirror)"' data/v2/lists.json |
-			while IFS='#' read -r key mirror; do
-				./scripts/v2/fetch_twitter_feed.py "$cache" "$key" "$mirror"
-			done
+	# 	jq -r --arg method "$method" 'to_entries[] |
+    #   select(.value.content.retriever == "TWINT" and .value.method == $method) |
+    #   {key, mirror: .value.mirrors[0]} |
+    #   "\(.key)#\(.mirror)"' data/v2/lists.json |
+	# 		while IFS='#' read -r key mirror; do
+	# 			./scripts/v2/fetch_twitter_feed.py "$cache" "$key" "$mirror"
+	# 		done
 
 		jq -r --arg method "$method" 'to_entries[] |
       select(.value.method == $method) | $k as key | .value.formats[] |
