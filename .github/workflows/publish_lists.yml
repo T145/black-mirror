@@ -194,7 +194,7 @@ jobs:
 
       - name: Get changelog content
         id: release_data
-        uses: KevinRohn/github-full-release-data@v2.0.2
+        uses: KevinRohn/github-full-release-data@v2.0.4
         with:
           token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
 
