@@ -86,9 +86,9 @@ RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
 # https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#run
 # https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory#21530768
 # use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
-RUN apt-get -q -y update --no-allow-insecure-repositories \
-    && apt-get -y upgrade --with-new-pkgs \
-    && apt-get -y install --no-install-recommends \
+RUN apt-get -q -y update --no-allow-insecure-repositories; \
+    apt-get -y upgrade --with-new-pkgs; \
+    apt-get -y install --no-install-recommends \
     #apt-show-versions # use dpkg -l (L) instead since ASV doesn't like GZ packages
     apparmor=2.13.6-10 \
     apparmor-utils=2.13.6-10 \
@@ -116,22 +116,22 @@ RUN apt-get -q -y update --no-allow-insecure-repositories \
     #preload=0.6.4-5+b1 \ # May run script functions more than once.
     python3-pip=20.3.4-4+deb11u1 \
     rkhunter=1.4.6-9 \
-    symlinks=1.4-4 \
-    && apt-get install -y --no-install-recommends --reinstall ca-certificates=* \
-    && apt-get -y autoremove \
-    && apt-get -y clean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-    && rm -f /var/cache/ldconfig/aux-cache \
-    && find -P -O3 /var/log -depth -type f -print0 | xargs -0 truncate -s 0 \
-    && update-locale LANG=en_US.UTF-8 \
+    symlinks=1.4-4; \
+    apt-get install -y --no-install-recommends --reinstall ca-certificates=*; \
+    apt-get -y autoremove; \
+    apt-get -y clean; \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*; \
+    rm -f /var/cache/ldconfig/aux-cache; \
+    find -P -O3 /var/log -depth -type f -print0 | xargs -0 truncate -s 0; \
+    update-locale LANG=en_US.UTF-8; \
     # https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
-    && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
+    localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8; \
     # https://askubuntu.com/questions/477974/how-to-remove-unnecessary-locales
-    && localepurge \
+    localepurge; \
     # https://linuxhandbook.com/find-broken-symlinks/
-    && symlinks -rd / \
-    && apt-get -y purge --auto-remove localepurge symlinks \
-    && find -P -O3 /etc/ /usr/ -type d -empty -delete
+    symlinks -rd /; \
+    apt-get -y purge --auto-remove localepurge symlinks; \
+    find -P -O3 /etc/ /usr/ -type d -empty -delete;
 
 # https://cisofy.com/lynis/controls/HRDN-7222/
 RUN chown 0:0 /usr/bin/as \
