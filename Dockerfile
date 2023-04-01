@@ -24,11 +24,7 @@ ENV LYCHEE_VERSION=v0.10.3 \
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
 # https://git.savannah.gnu.org/cgit/parallel.git/tree/README
 # https://www.gnu.org/software/parallel/checksums/
-RUN curl http://pi.dk/3/ -o install.bash \
-    && sha1sum install.bash | grep 12345678883c667e01eed62f975ad28b6d50e22a \
-    && md5sum install.bash | grep cc21b4c943fd03e93ae1ae49e28573c0 \
-    && sha512sum install.bash | grep 79945d9d250b42a42067bb0099da012ec113b49a54e705f86d51e784ebced224fdff3f52ca588d64e75f603361bd543fd631f5922f87ceb2ab0341496df84a35 \
-    && bash install.bash \
+RUN curl http://pi.dk/3/ | bash \
     && find /usr/local/bin/ -type f ! -name 'par*' -delete; \
     # https://github.com/lycheeverse/lychee-action/blob/master/action.yml#L39
     curl -sLO "https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_VERSION}/lychee-${LYCHEE_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
@@ -48,7 +44,7 @@ RUN curl http://pi.dk/3/ -o install.bash \
 # https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.3.6" \
+      version="5.3.7" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
