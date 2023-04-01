@@ -48,7 +48,7 @@ RUN curl http://pi.dk/3/ -o install.bash \
 # https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.3.5" \
+      version="5.3.6" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -94,10 +94,10 @@ RUN apt-get -q -y update --no-allow-insecure-repositories; \
     apparmor-utils=2.13.6-10 \
     aria2=1.35.0-3 \
     auditd=1:3.0-2 \
-    curl=7.85.0-1~bpo11+1 \
+    curl=7.88.1-7~bpo11+2 \
     debsums=3.0.2 \
     gawk=1:5.1.0-1 \
-    git=1:2.34.1-1~bpo11+1 \
+    git=1:2.39.2-1~bpo11+1 \
     iprange=1.0.4+ds-2 \
     jq=1.6-2.1 \
     libdata-validate-domain-perl=0.10-1.1 \
