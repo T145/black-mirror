@@ -48,14 +48,14 @@ RUN curl http://pi.dk/3/ -o install.bash \
 # https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.3.3" \
+      version="5.3.5" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 STOPSIGNAL SIGKILL
 
-ENV LANG=en_US.utf8 \
+ENV LANG=en_US.UTF-8 \
     # https://stackoverflow.com/questions/2499794/how-to-fix-a-locale-setting-warning-from-perl
     #LC_CTYPE=en_US.UTF-8 \
     #LC_ALL=en_US.UTF-8 \
@@ -87,7 +87,7 @@ RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
 # https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory#21530768
 # use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 RUN apt-get -q -y update --no-allow-insecure-repositories; \
-    apt-get -y upgrade --with-new-pkgs; \
+    apt-get -y upgrade; \
     apt-get -y install --no-install-recommends \
     #apt-show-versions # use dpkg -l (L) instead since ASV doesn't like GZ packages
     apparmor=2.13.6-10 \
