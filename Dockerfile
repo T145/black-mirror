@@ -18,8 +18,8 @@ RUN go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@v1.1.3 \
 FROM buildpack-deps:stable as utils
 
 SHELL ["/bin/bash", "-o", "pipefail", "-ceux"]
-ENV LYCHEE_VERSION=v0.10.3 \
-    PANDOC_VERSION=2.19.2
+ENV LYCHEE_VERSION=v0.11.1 \
+    PANDOC_VERSION=3.1.2
 
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
 # https://git.savannah.gnu.org/cgit/parallel.git/tree/README
@@ -44,7 +44,7 @@ RUN curl http://pi.dk/3/ | bash \
 # https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.3.8" \
+      version="5.4.0" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
