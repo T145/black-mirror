@@ -44,7 +44,7 @@ RUN curl http://pi.dk/3/ | bash \
 # https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.3.7" \
+      version="5.3.8" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -137,8 +137,8 @@ RUN chown 0:0 /usr/bin/as \
     # https://github.com/debuerreotype/debuerreotype/pull/32
     rmdir /run/mount 2>/dev/null || :;
 
-RUN python3 -m pip install --no-cache-dir --upgrade -e git+https://github.com/JustAnotherArchivist/snscrape.git#egg=snscrape; \
-    python3 -m pip cache purge; \
+RUN pip3 install --no-cache-dir --upgrade snscrape; \
+    pip3 cache purge; \
     py3clean -v ./usr/lib/python3.9 ./usr/share/python3; \
     rm -rf /root/.cache;
 
