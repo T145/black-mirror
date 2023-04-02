@@ -34,7 +34,7 @@ trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 
 # params: file path
 sorted() {
-	parsort -bfiu -S 100% --parallel=200000 -T "$DOWNLOADS" "$1" | sponge "$1"
+	parsort -bfiu -S 100% -T "$DOWNLOADS" "$1" | sponge "$1"
 }
 
 # merge list 2 into list 1
