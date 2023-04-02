@@ -940,3 +940,39 @@
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/3b0dbf42ef9af95aa4b11ff005dc61c70fd11480))
 # 13-03-2023 02:01:55
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/8a955737104d456a481900406aca84ec24c3615c))
+# 02-04-2023 19:34:27
+- **workflows**: Publish lists once per day ([T145](https://github.com/T145/black-mirror/commit/349430a88976cf018e406fc8f5faeb8423c9ba2e))
+
+## Bug Fixes
+- **workflow**: Repaired workflow removal ([T145](https://github.com/T145/black-mirror/commit/162abff442149e9c3fbcab7ef8befc6128752af0))
+- **sources**: Removed 360 NetLab ([T145](https://github.com/T145/black-mirror/commit/d162c6a8ead772846cd8771bf4a49de320ef3892))
+- **workflows**: Ensure script permissions are always set ([T145](https://github.com/T145/black-mirror/commit/32c1858fc526963a4dd5a337b2b3412698fef746))
+- **sources**: Repaired V1 sources ([T145](https://github.com/T145/black-mirror/commit/1d9a74400bb95dcfc526f76bbba3636c12e41b61))
+- **ats**: Set to only run on a schedule ([T145](https://github.com/T145/black-mirror/commit/8582902a7c66a2f23f3da1b94008da75ae3e7ec2))
+- **ats**: Pointed at the right targets ([T145](https://github.com/T145/black-mirror/commit/e1559ec9d32696085ee4745d25aa72a8e3444970))
+- **sources**: Removed CyberCure URLs b/c the input is sketchy ([T145](https://github.com/T145/black-mirror/commit/4d8cf9737f1602dd3c5f6eeeb041d47b4d27c38e))
+- **docker**: Removed preload to avoid running functions more than once ([T145](https://github.com/T145/black-mirror/commit/6ae42e1b1288c6fbd93c60400d14e552b1d6dcca))
+- **docker**: Separated APT cmds to diagnose which one fails ([T145](https://github.com/T145/black-mirror/commit/8936804d68a84c9dd2a84296f650e2ba9e4e498a))
+- **v2**: Repairing runtime ([T145](https://github.com/T145/black-mirror/commit/bdf848d5476cfc8fb5abe09350ea9bd26aa59227))
+- **docker**: Removed update param and fixed locales ([T145](https://github.com/T145/black-mirror/commit/5736fd3a0edba9c0e09713a8c735e42646f8f0b7))
+- **docker**: Upgraded Git to avoid workflow errors ([T145](https://github.com/T145/black-mirror/commit/b2967ea1700d5fc404b22f85523132b02dbb3636))
+- **docker**: Don't worry about parsort checksums anymore ([T145](https://github.com/T145/black-mirror/commit/471498737c70ab378cd183d5a1fd6681b23e3d28))
+- **docker**: Fixed snscrape install ([T145](https://github.com/T145/black-mirror/commit/5d1cbb04ab9a0d9ce4b476f713678fbed3028605))
+- **dependabot**: Set Dependabot to only check the workflow directory ([T145](https://github.com/T145/black-mirror/commit/a5e6924f95fca852e662cba46f257b15b0bc3962))
+- **ats**: Removed ATS functionality (closes #102) ([T145](https://github.com/T145/black-mirror/commit/1e6377d222481772f7b939862d27d709b0508819))
+- **scripts**: Fixed parallel sorting ([T145](https://github.com/T145/black-mirror/commit/a0225c7b5ef4fe5885c238dfebdbb4ac02a9fc9e))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/ffb3bec635a908515f002693f14264c36f0bc47b))
+- **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/82cd9086fe8d4324b7bcd697d49027eaf9e7bb0f))
+- **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/d6c34a159c50acdfa91a2be35120883e471f1556))
+- **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/1f91f366ecefe531d487d35011b4ac5da374ccb4))
+
+## Chores
+- **deps**: Lockfile update ([T145](https://github.com/T145/black-mirror/commit/b091d49a31a7f2e78a0cfaf22dce46ed84b7a1d1))
+- **update**: Updated Node dependencies ([T145](https://github.com/T145/black-mirror/commit/b0ef58b96dab396fb95b971c030cdaf14385d1fc))
+- **deps**: bump KevinRohn/github-full-release-data from 2.0.2 to 2.0.4 [#99](https://github.com/T145/black-mirror/pull/99) ([dependabot[bot]](https://github.com/T145/black-mirror/commit/2d8c85c98447ed7ab9e69694ace9902ac8589c7f))
+- **deps**: bump docker/build-push-action from 3 to 4 [#100](https://github.com/T145/black-mirror/pull/100) ([dependabot[bot]](https://github.com/T145/black-mirror/commit/7615ee3a7bbe3ab1395f3ab346112cf0c03dd2fa))
+- **deps**: bump actions/upload-artifact from 2 to 3 [#101](https://github.com/T145/black-mirror/pull/101) ([dependabot[bot]](https://github.com/T145/black-mirror/commit/87b8c61bfd1b6069bd2e1433d346455d8ebeb6cb))
+- **docker**: Updated Go apps ([T145](https://github.com/T145/black-mirror/commit/f1ffd23b393275b84498231a0c336b02fdcefc8b))
+- **docker**: Updated Pandoc and Lychee ([T145](https://github.com/T145/black-mirror/commit/edf1b587ecf94eb5de7cb2d10e425f40039c4c20))
