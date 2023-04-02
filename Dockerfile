@@ -1,16 +1,16 @@
-FROM golang:1.18 AS go
+FROM golang:1.19 AS go
 
 # https://golang.org/doc/go-get-install-deprecation#what-to-use-instead
 # the install paths are where "main.go" lives
 
 # https://github.com/projectdiscovery/dnsx#usage
-RUN go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@v1.1.1 \
+RUN go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@v1.1.3 \
     # https://github.com/projectdiscovery/httpx#usage
-    && go install -v github.com/projectdiscovery/httpx/cmd/httpx@v1.2.5 \
+    && go install -v github.com/projectdiscovery/httpx/cmd/httpx@v1.2.9 \
     # https://github.com/projectdiscovery/shuffledns#usage
     && go install -v github.com/projectdiscovery/shuffledns/cmd/shuffledns@v1.0.8 \
     # https://github.com/ipinfo/cli#-ipinfo-cli
-    && go install -v github.com/ipinfo/cli/ipinfo@ipinfo-2.10.0 \
+    && go install -v github.com/ipinfo/cli/ipinfo@ipinfo-2.10.1 \
     # https://github.com/StevenBlack/ghosts#ghosts
     && go install -v github.com/StevenBlack/ghosts@v0.2.2
 
