@@ -9,13 +9,7 @@ set -euET -o pipefail # put bash into strict mode & have it give descriptive err
 umask 055             # change all generated file perms from 755 to 700
 export LC_ALL=C       # force byte-wise sorting and default langauge output
 
-if [ "${NODE_ENV+x}" ]; then
-	echo '[INFO] NODE_ENV is set!'
-else
-	NODE_ENV='DEVELOPMENT'
-fi
-
-DOWNLOADS=$(if ["$NODE_ENV" != 'PRODUCTION']; then echo "$(pwd)/output"; else mktemp -d; fi)
+DOWNLOADS=$(mktemp -d)
 TMP=$(mktemp -p "$DOWNLOADS")
 METHOD_ALLOW='ALLOW'
 METHOD_BLOCK='BLOCK'
@@ -30,8 +24,6 @@ FORMATS=("$FORMAT_DOMAIN" "$FORMAT_IPV4" "$FORMAT_CIDR" "$FORMAT_IPV6")
 readonly -a METHODS
 readonly -a FORMATS
 
-trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
-
 # params: file path
 sorted() {
 	parsort -bfiu -S 100% -T "$DOWNLOADS" "$1" | sponge "$1"
@@ -45,6 +37,8 @@ merge_lists() {
 }
 
 main() {
+	trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
+
 	local cache
 	local list
 	local nxlist
@@ -55,26 +49,28 @@ main() {
 	for method in "${METHODS[@]}"; do
 		cache="${DOWNLOADS}/${method}"
 
-		# Avoid multiple download attempts when debugging to prevent griefing list providers
-		if [[ "$NODE_ENV" == 'PRODUCTION' || "$NODE_ENV" != 'PRODUCTION' && -z "$(ls -A $cache)" ]]; then
-			jq -r --arg method "$method" 'to_entries[] | select(.value.content.retriever == "ARIA2" and .value.method == $method) | {key, mirrors: .value.mirrors} | .ext = (.mirrors[0] | match(".(tar.gz|zip|7z|json)").captures[0].string // "txt") | (.mirrors | join("\t")), " out=\(.key).\(.ext)"' data/v2/lists.json | (set +e && aria2c -i- -d "$cache" --conf-path='./configs/aria2.conf' && set -e) || set -e
-		fi
+		# use 'lynx -dump -listonly -nonumbers' to get a raw page
 
-	# 	jq -r --arg method "$method" 'to_entries[] |
-    #   select(.value.content.retriever == "TWINT" and .value.method == $method) |
-    #   {key, mirror: .value.mirrors[0]} |
-    #   "\(.key)#\(.mirror)"' data/v2/lists.json |
-	# 		while IFS='#' read -r key mirror; do
-	# 			./scripts/v2/fetch_twitter_feed.py "$cache" "$key" "$mirror"
-	# 		done
+		set +e # temporarily disable strict fail, in case downloads fail
+		jq -r --arg method "$method" 'to_entries[] |
+			select(.value.content.retriever == "ARIA2" and .value.method == $method) |
+			{key, mirrors: .value.mirrors} |
+			.ext = (.mirrors[0] |
+			match(".(tar.gz|zip|7z|json)").captures[0].string // "txt") |
+			(.mirrors | join("\t")), " out=\(.key).\(.ext)"' data/v2/lists.json |
+			aria2c -i- -d "$cache" --conf-path='./configs/aria2.conf'
+		set -e
 
 		jq -r --arg method "$method" 'to_entries[] |
-      select(.value.method == $method) | $k as key | .value.formats[] |
-      "\($k)#\(.content.filter)#\(.content.type)#\(.filter)#\(.format)"' data/v2/lists.json |
-			while IFS='#' read -r key content_filter content_type list_filter format; do
-				find -P -O3 "$cache" -type f -exec sem -j+0 ./scripts/v2/apply_filters.bash {} "$key" "$content_filter" "$content_type" "$method" "$list_filter" "$format" \;
-				sem --wait
-			done
+			select(.value.method == $method) |
+			.key as $k |
+			.value.formats[] |
+			"\($k)#\(.content.filter)#\(.content.type)#\(.filter)#\(.format)"' data/v2/lists.json |
+				while IFS='#' read -r key content_filter content_type list_filter list_format; do
+					find -P -O3 "$cache" -type f -exec sem -j+0 ./scripts/v2/apply_filters.bash {} "$key" "$content_filter" "$content_type" "$method" "$list_filter" "$list_format" \;
+				done
+
+		sem --wait
 
 		for format in "${FORMATS[@]}"; do
 			list="build/${method}_${format}.txt"
