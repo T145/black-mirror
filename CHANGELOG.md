@@ -976,3 +976,11 @@
 - **deps**: bump actions/upload-artifact from 2 to 3 [#101](https://github.com/T145/black-mirror/pull/101) ([dependabot[bot]](https://github.com/T145/black-mirror/commit/87b8c61bfd1b6069bd2e1433d346455d8ebeb6cb))
 - **docker**: Updated Go apps ([T145](https://github.com/T145/black-mirror/commit/f1ffd23b393275b84498231a0c336b02fdcefc8b))
 - **docker**: Updated Pandoc and Lychee ([T145](https://github.com/T145/black-mirror/commit/edf1b587ecf94eb5de7cb2d10e425f40039c4c20))
+# 03-04-2023 13:39:33
+- **v2**: Most features are online ([T145](https://github.com/T145/black-mirror/commit/5768701b4b8aa6191789c244bb680dc9a20af510))
+
+## Bug Fixes
+- **actions**: Fixed setting GitHub output ([T145](https://github.com/T145/black-mirror/commit/1d61ff7329334a4bd5679e1460b03966448ea5ef))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/2e42d6712e7258e5396fa25261d103defd7b2a28))
