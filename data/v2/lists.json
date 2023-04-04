@@ -951,11 +951,11 @@
         "format": "DOMAIN"
       },
       {
-        "filter": "REGEX_IPV4",
+        "filter": "GREP_IPV4",
         "format": "IPV4"
       },
       {
-        "filter": "REGEX_IPV6",
+        "filter": "GREP_IPV6",
         "format": "IPV6"
       }
     ],
@@ -1235,11 +1235,11 @@
     },
     "formats": [
       {
-        "filter": "REGEX_IPV4",
+        "filter": "GREP_IPV4",
         "format": "IPV4"
       },
       {
-        "filter": "REGEX_IPV6",
+        "filter": "GREP_IPV6",
         "format": "IPV6"
       }
     ],
@@ -1373,7 +1373,7 @@
     },
     "formats": [
       {
-        "filter": "NONE",
+        "filter": "URL_REGEX_DOMAIN",
         "format": "DOMAIN"
       }
     ],
@@ -1449,11 +1449,11 @@
     },
     "formats": [
       {
-        "filter": "C2_DOMAIN",
+        "filter": "NO_HEADER_FIRST_COLUMN",
         "format": "DOMAIN"
       },
       {
-        "filter": "C2_IPV4",
+        "filter": "NO_HEADER_FOURTH_COLUMN",
         "format": "IPV4"
       }
     ],
@@ -1478,7 +1478,7 @@
     },
     "formats": [
       {
-        "filter": "C2_VPN",
+        "filter": "NO_HEADER_FIRST_COLUMN",
         "format": "IPV4"
       }
     ],
@@ -1758,7 +1758,7 @@
         "format": "DOMAIN"
       },
       {
-        "filter": "REGEX_IPV4",
+        "filter": "GREP_IPV4",
         "format": "IPV4"
       }
     ],
@@ -1831,7 +1831,7 @@
         "format": "DOMAIN"
       },
       {
-        "filter": "REGEX_IPV4",
+        "filter": "GREP_IPV4",
         "format": "IPV4"
       }
     ],
@@ -1858,7 +1858,7 @@
         "format": "DOMAIN"
       },
       {
-        "filter": "REGEX_IPV4",
+        "filter": "GREP_IPV4",
         "format": "IPV4"
       }
     ],
@@ -1941,8 +1941,8 @@
     },
     "formats": [
       {
-        "filter": "CYMRU",
-        "format": "IPV4"
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "CIDR4"
       }
     ],
     "metadata": {
@@ -1967,7 +1967,7 @@
     "formats": [
       {
         "filter": "CYMRU",
-        "format": "IPV6"
+        "format": "CIDR6"
       }
     ],
     "metadata": {
@@ -2019,11 +2019,11 @@
     },
     "formats": [
       {
-        "filter": "REGEX_IPV4",
+        "filter": "GREP_IPV4",
         "format": "IPV4"
       },
       {
-        "filter": "REGEX_IPV6",
+        "filter": "GREP_IPV6",
         "format": "IPV6"
       }
     ],
@@ -2106,12 +2106,12 @@
     },
     "formats": [
       {
-        "filter": "REGEX_IPV4",
+        "filter": "GREP_IPV4",
         "format": "IPV4"
       },
       {
-        "filter": "REGEX_CIDR",
-        "format": "CIDR"
+        "filter": "GREP_CIDR",
+        "format": "CIDR4"
       }
     ],
     "metadata": {
@@ -2330,7 +2330,7 @@
     "formats": [
       {
         "filter": "DSHIELD",
-        "format": "CIDR"
+        "format": "CIDR4"
       }
     ],
     "metadata": {
@@ -2589,7 +2589,7 @@
     },
     "formats": [
       {
-        "filter": "ESOX_LUCIUS",
+        "filter": "HOSTS_FILE",
         "format": "DOMAIN"
       }
     ],
@@ -2614,7 +2614,7 @@
     },
     "formats": [
       {
-        "filter": "ESOX_LUCIUS",
+        "filter": "HOSTS_FILE",
         "format": "DOMAIN"
       }
     ],
@@ -2639,7 +2639,7 @@
     },
     "formats": [
       {
-        "filter": "ESOX_LUCIUS",
+        "filter": "HOSTS_FILE",
         "format": "DOMAIN"
       }
     ],
@@ -2664,7 +2664,7 @@
     },
     "formats": [
       {
-        "filter": "ESOX_LUCIUS",
+        "filter": "HOSTS_FILE",
         "format": "DOMAIN"
       }
     ],
@@ -2689,7 +2689,7 @@
     },
     "formats": [
       {
-        "filter": "ESOX_LUCIUS",
+        "filter": "HOSTS_FILE",
         "format": "DOMAIN"
       }
     ],
@@ -2714,8 +2714,12 @@
     },
     "formats": [
       {
-        "filter": "EXODUS",
+        "filter": "EXODUS_DOMAIN",
         "format": "DOMAIN"
+      },
+      {
+        "filter": "EXODUS_IPV4",
+        "format": "IPV4"
       }
     ],
     "metadata": {
@@ -3422,7 +3426,7 @@
     },
     "formats": [
       {
-        "filter": "IPSUM",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "IPV4"
       }
     ],
@@ -4068,112 +4072,6 @@
       "pihole": "https://kriskintel.com/feeds/ktip_covid_domains.txt"
     }
   },
-  "kriskintel_log4j": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "KRISK_IOC_DOMAIN",
-        "format": "DOMAIN"
-      },
-      {
-        "filter": "KRISK_IOC_IPV4",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://kriskintel.com/",
-      "homepage": "https://kriskintel.com/",
-      "license": "cc-by-sa-4.0"
-    },
-    "method": "BLOCK",
-    "mirrors": ["https://kriskintel.com/feeds/ktip_log4j_feeds.txt"],
-    "topic": "SECURITY"
-  },
-  "kriskintel_malicious_domains": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://kriskintel.com/",
-      "homepage": "https://kriskintel.com/",
-      "license": "cc-by-sa-4.0"
-    },
-    "method": "BLOCK",
-    "mirrors": ["https://kriskintel.com/feeds/ktip_malicious_domains.txt"],
-    "topic": "SECURITY",
-    "variants": {
-      "pihole": "https://kriskintel.com/feeds/ktip_malicious_domains.txt"
-    }
-  },
-  "kriskintel_malicious_ips": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://kriskintel.com/",
-      "homepage": "https://kriskintel.com/",
-      "license": "cc-by-sa-4.0"
-    },
-    "method": "BLOCK",
-    "mirrors": ["https://kriskintel.com/feeds/ktip_malicious_Ips.txt"],
-    "topic": "SECURITY",
-    "variants": {
-      "pihole": "https://kriskintel.com/feeds/ktip_malicious_Ips.txt"
-    }
-  },
-  "kriskintel_ransomware": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "KRISK_IOC_DOMAIN",
-        "format": "DOMAIN"
-      },
-      {
-        "filter": "KRISK_IOC_IPV4",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://kriskintel.com/",
-      "homepage": "https://kriskintel.com/",
-      "license": "cc-by-sa-4.0"
-    },
-    "method": "BLOCK",
-    "mirrors": ["https://kriskintel.com/feeds/ktip_ransomware_feeds.txt"],
-    "topic": "SECURITY"
-  },
   "lightswitch_ads_and_tracking": {
     "archive": false,
     "checksums": {},
@@ -4605,7 +4503,7 @@
     },
     "formats": [
       {
-        "filter": "MALTRAIL_IPV4",
+        "filter": "MALTRAIL",
         "format": "IPV4"
       }
     ],
@@ -4630,11 +4528,11 @@
     },
     "formats": [
       {
-        "filter": "MALWARE_DISCOVERER_DOMAIN",
+        "filter": "NO_HEADER_FIRST_COLUMN",
         "format": "DOMAIN"
       },
       {
-        "filter": "MALWARE_DISCOVERER_IPV4",
+        "filter": "NO_HEADER_THIRD_COLUMN",
         "format": "IPV4"
       }
     ],
@@ -4732,7 +4630,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_FIRST_COLUMN",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
@@ -4757,7 +4655,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_FIRST_COLUMN",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
@@ -4782,12 +4680,12 @@
     },
     "formats": [
       {
-        "filter": "MYIP_IPV4",
-        "format": "IPV4"
-      },
-      {
         "filter": "MYIP_DOMAIN",
         "format": "DOMAIN"
+      },
+      {
+        "filter": "MYIP_IPV4",
+        "format": "IPV4"
       },
       {
         "filter": "MYIP_IPV6",
@@ -4816,7 +4714,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_FIRST_COLUMN",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "IPV4"
       }
     ],
@@ -4827,11 +4725,11 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://myip.ms/files/blacklist/general/full_blacklist_database.zip"
+      "https://myip.ms/files/bots/live_webcrawlers.txt"
     ],
     "topic": "SECURITY"
   },
-  "nextdns_bypass_methods": {
+  "nextdns_tor_bypass": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -4841,18 +4739,68 @@
     },
     "formats": [
       {
-        "filter": "MAWK_FIRST_COLUMN",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
     "metadata": {
       "description": "https://github.com/nextdns/metadata#readme=",
-      "homepage": "https://github.com/nextdns/metadata/tree/master/parentalcontrol",
+      "homepage": "https://github.com/nextdns/dns-bypass-methods",
       "license": "all-rights-reserved"
     },
     "method": "ALLOW",
     "mirrors": [
-      "https://raw.githubusercontent.com/nextdns/metadata/master/parentalcontrol/bypass-methods"
+      "https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/tor"
+    ],
+    "topic": "SECURITY"
+  },
+  "nextdns_linux_bypass": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/metadata#readme=",
+      "homepage": "https://github.com/nextdns/dns-bypass-methods",
+      "license": "all-rights-reserved"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/linux"
+    ],
+    "topic": "SECURITY"
+  },
+  "nextdns_vpn_bypass": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/metadata#readme=",
+      "homepage": "https://github.com/nextdns/dns-bypass-methods",
+      "license": "all-rights-reserved"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/vpn"
     ],
     "topic": "SECURITY"
   },
@@ -4925,7 +4873,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
@@ -4954,7 +4902,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
@@ -4981,7 +4929,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
@@ -5011,7 +4959,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
@@ -5041,7 +4989,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
@@ -5070,7 +5018,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS",
+        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
         "format": "DOMAIN"
       }
     ],
