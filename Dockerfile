@@ -38,13 +38,21 @@ RUN curl http://pi.dk/3/ | bash \
     # https://github.com/projectdiscovery/shuffledns#prerequisite
     git clone https://github.com/blechschmidt/massdns.git \
     && make -C massdns \
-    && mv /massdns/bin/massdns /usr/local/bin/;
+    && mv /massdns/bin/massdns /usr/local/bin/; \
+    # https://unix.stackexchange.com/questions/248610/validating-ip-addresses-ipv4-and-ipv6
+    apt-get -y update \
+    && apt-get -y install meson \
+    && git clone https://gitlab.com/ipcalc/ipcalc.git \
+    && cd ipcalc \
+    && meson setup build --buildtype=release \
+    && ninja -C build \
+    && cp build/ipcalc /usr/local/bin;
 
 # https://wiki.debian.org/DiskFreeSpace
 # https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.4.0" \
+      version="5.4.2" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -94,10 +102,10 @@ RUN apt-get -q -y update --no-allow-insecure-repositories; \
     debsums=3.0.2 \
     gawk=1:5.1.0-1 \
     git=1:2.39.2-1~bpo11+1 \
-    iprange=1.0.4+ds-2 \
     jq=1.6-2.1 \
     libdata-validate-domain-perl=0.10-1.1 \
     libdata-validate-ip-perl=0.30-1 \
+    libnet-cidr-perl=0.20-1 \
     libnet-idn-encode-perl=2.500-1+b2 \
     libnet-libidn-perl=0.12.ds-3+b3 \
     libregexp-common-perl=2017060201-1 \
