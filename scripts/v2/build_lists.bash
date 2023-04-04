@@ -14,13 +14,14 @@ TMP=$(mktemp -p "$DOWNLOADS")
 METHOD_ALLOW='ALLOW'
 METHOD_BLOCK='BLOCK'
 FORMAT_DOMAIN='DOMAIN'
+FORMAT_CIDR4='CIDR4'
+FORMAT_CIDR6='CIDR6'
 FORMAT_IPV4='IPV4'
-FORMAT_CIDR='CIDR'
 FORMAT_IPV6='IPV6'
-readonly DOWNLOADS TMP METHOD_ALLOW METHOD_BLOCK FORMAT_DOMAIN FORMAT_IPV4 FORMAT_CIDR FORMAT_IPV6
+readonly DOWNLOADS TMP METHOD_ALLOW METHOD_BLOCK FORMAT_DOMAIN FORMAT_CIDR4 FORMAT_CIDR6 FORMAT_IPV4 FORMAT_IPV6
 
 METHODS=("$METHOD_BLOCK" "$METHOD_ALLOW")
-FORMATS=("$FORMAT_DOMAIN" "$FORMAT_IPV4" "$FORMAT_CIDR" "$FORMAT_IPV6")
+FORMATS=("$FORMAT_DOMAIN" "$FORMAT_CIDR4" "$FORMAT_CIDR6" "$FORMAT_IPV4" "$FORMAT_IPV6")
 readonly -a METHODS
 readonly -a FORMATS
 
@@ -77,9 +78,8 @@ main() {
 			nxlist="dist/NX${format}.txt"
 
 			if test -f "$list"; then
-				if [[ "$method" == "$METHOD_BLOCK" ]]; then
-					if [[ "$format" != "$FORMAT_CIDR" ]]; then
-
+				if [[ "$format" != "$FORMAT_CIDR4" || "$format" != "$FORMAT_CIDR6" ]]; then
+					if [[ "$method" == "$METHOD_BLOCK" ]]; then
 						# if the nxlist is present, then rescan it to see if any hosts are online
 						# put any online hosts into the blacklist and remove them from the nxlist
 						# rescan the blacklist using the nxlist as a hosts file to optimize searching
@@ -99,21 +99,18 @@ main() {
 
 						sorted "$nxlist"
 					else
-						# can also do more advanced CIDR operations here
-						sorted "$list"
+						# apply the whitelist to the blacklist
+						blacklist="build/BLOCK_${format}.txt"
+
+						# merge the nxlist and whitelist
+						merge_lists "$list" "$nxlist"
+
+						# https://askubuntu.com/a/562352
+						# send each line into the temp file as it's processed instead of keeping it in memory
+						parallel --pipe -k -j+0 grep --line-buffered -Fxvf "$list" - <"$blacklist" >>"$TMP"
+						cp "$TMP" "$blacklist"
+						: >"$TMP"
 					fi
-				else
-					# apply the whitelist to the blacklist
-					blacklist="build/BLOCK_${format}.txt"
-
-					# merge the nxlist and whitelist
-					merge_lists "$list" "$nxlist"
-
-					# https://askubuntu.com/a/562352
-					# send each line into the temp file as it's processed instead of keeping it in memory
-					parallel --pipe -k -j+0 grep --line-buffered -Fxvf "$list" - <"$blacklist" >>"$TMP"
-					cp "$TMP" "$blacklist"
-					: >"$TMP"
 				fi
 			fi
 		done
