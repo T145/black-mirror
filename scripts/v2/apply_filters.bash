@@ -14,86 +14,37 @@ get_domains_from_urls() {
     perl -M'Data::Validate::Domain qw(is_domain)' -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?"}{-keep}/g) {say $3 if is_domain($3)}'
 }
 
-get_exodus_content() {
-    # edge cases:
-    # "mns\..*\.aliyuncs\.com" (currently being ignored)
-    # "mst[0-9]*.is.autonavi.com" / "mt[0-9]*.google.cn" (currently being ignored)
-
-    # "network_signature" & "code_signature" currently have invalid domains
-    # https://etip.exodus-privacy.eu.org/trackers/export
-    jq -r '.trackers[] |
-        (.network_signature | split ("|")[] | gsub("\\\\"; "") | ltrimstr(".*")),
-        (.code_signature | split("|")[] | rtrimstr(".") | split(".") | reverse | join(".")) | ltrimstr(".")'
+get_ipv4s_from_urls() {
+    perl -M'Data::Validate::IP qw(is_ipv4)' -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?"}{-keep}/g) {say $3 if is_ipv4($3)}'
 }
 
 # params: content type, format filter
+# REQUIRED OUTPUT: Unverified hosts applicable to the designated format (no empty lines)
 apply_format_filter() {
     case $1 in
     TEXT)
         case $2 in
         NONE) cat -s ;;
-        MAWK_WITH_COMMENTS_FIRST_COLUMN) mawk '$0~/^[^#|^!]/{print $1}' ;;
-        MAWK_WITH_COMMENTS_SECOND_COLUMN) mawk '$0~/^[^#|^!]/{print $2}' ;;
-        ADBLOCK)
-            # https://github.com/DandelionSprout/adfilt/blob/master/Wiki/SyntaxMeaningsThatAreActuallyHumanReadable.md
-            mawk -F"[|^]" '$0~/^\|/{if ($4~/^$/) {print $3}}'
-            ;;
+        RAW_HOSTS_WITH_COMMENTS) mawk '/^[^[:space:]|^#|^!]/{print $1}' ;;
         HOSTS_FILE) ghosts -m /dev/fd/0 -o -p -noheader -stats=false ;;
-        ALIENVAULT) mawk -F# '{print $1}' ;;
-        URL_REGEX_DOMAIN) get_domains_from_urls ;;
-        #REGEX_IPV4) perl -MRegexp::Common=net -nE 'say $& while /$RE{net}{IPv4}/g' ;;
-        #REGEX_IPV6) perl -MRegexp::Common=net -nE 'say $& while /$RE{net}{IPv6}/g' ;;
-        GREP_IPV4) ipinfo grepip -4hox --nocolor ;;
-        GREP_IPV6) ipinfo grepip -6hox --nocolor ;;
-        GREP_CIDR) cat -s ;; # Presently this just passes output to the CIDR validation, but actually retrieving CIDRs would be nice.
-        BLACKBIRD) mawk 'NR>4' ;; # '$0~/^[^;]/'
-        BOTVIRJ_IPV4) mawk -F'|' '{print $1}' ;;
-        CRYPTOLAEMUS_DOMAIN) perl ./scripts/v1/process_domains.pl ;;
-        CERTEGO_DOMAIN) ;; # TODO
-        CERTEGO_IPV4) ;;   # TODO
-        CYBERCRIME_DOMAIN) mawk -F/ '{print $1}' | perl ./scripts/v1/process_domains.pl ;;
-        SCHEMELESS_URL_DOMAIN) gawk -F/ '$1~/^([[:alnum:]_-]{1,63}\.)+[[:alpha:]]+([[:space:]]|$)/{print tolower($1)}' ;;
-        SCHEMELESS_URL_IPV4) gawk -F/ '$1~/^([0-9]{1,3}\.){3}[0-9]{1,3}+(:|$)/{split($1,a,":");print a[1]}' ;;
-        DATAPLANE_IPV4) mawk -F'|' '$0~/^[^#]/{gsub(/ /,""); print $3}' ;;
-        DSHIELD) mawk '$0~/^[^#]/&&$1!~/^Start$/{printf "%s/%s\n",$1,$3}' ;;
-        MYIP_DOMAIN)
-            # https://unix.stackexchange.com/questions/459127/grep-to-extract-lines-that-contains-full-domain-names-from-a-file
-            mawk 'BEGIN{FS=","}{if($0~/^[^#]/){print $2}}' | grep -P "^.[^.]+\.[a-zA-Z]{3}$|^.[^.]+\.[a-zA-Z]{2}\.[a-zA-Z]{2}$"
-            ;;
-        MYIP_IPV4) mawk '$0~/^[^#]/{print $1}' | ipinfo grepip -4hox --nocolor ;;
-        MYIP_IPV6) mawk '$0~/^[^#]/{print $1}' | ipinfo grepip -6hox --nocolor ;;
+        ABUSE_CH_URLHAUS_DOMAIN) get_domains_from_urls ;;
+        ABUSE_CH_URLHAUS_IPV4) get_ipv4s_from_urls ;;
         esac
         ;;
     JSON)
         case $2 in
-        FEODO_DOMAIN) jq -r '.[] | select(.hostname != null) | .hostname' ;;
-        FEODO_IPV4) jq -r '.[].ip_address' ;;
-        THREATFOX_DOMAIN) jq -r '.[] | .[] | select(.ioc_type == "domain") | .ioc_value' ;;
-        THREATFOX_IPV4) jq -r '.[] | .[] | select(.ioc_type == "ip:port") | .ioc_value | split(":")[0]' ;;
-        AYASHIGE) jq -r '.[].fqdn' ;;
-        CYBERSAIYAN_DOMAIN) jq -r '.[] | select(.value.type == "domain") | .indicator' ;;
-        CYBERSAIYAN_IPV4) jq -r '.[] | select(.value.type == "IPv4") | .indicator' ;;
-        CYBER_CURE_IPV4) jq -r '.data.ip[]' ;;
-        DISCONNECTME) jq -r '.entities[] | "\(.properties[])\n\(.resources[])"' ;;
-        EXODUS_DOMAIN) get_exodus_content ;; # Will be sanitized by the Perl script later
-        EXODUS_IPV4) get_exodus_content | gawk '/^([0-9]+(\.|:|\/|$)){4}/' ;;
-        HIPO_UNIVERSITIES) jq -r '.[].domains | join("\n")' ;;
-        ISCSANS) jq -r '.[].ipv4' ;;
-        MALSILO_DOMAIN) jq -r '.data[].network_traffic | select(.dns != null) | .dns[]' ;;
-        MALSILO_IPV4) jq -r '.data[].network_traffic | select(.tcp != null) | .tcp[] | split(":")[0]' ;;
-        MALTRAIL) jq -r '.[].ip' ;;
+        ABUSE_CH_FEODOTRACKER_IPV4) jq -r '.[].ip_address' ;;
+        ABUSE_CH_FEODOTRACKER_DOMAIN) jq -r '.[] | select(.hostname != null) | .hostname' ;;
+        ABUSE_CH_THREATFOX_IPV4) jq -r 'to_entries[].value[].ioc_value | split(":")[0]' ;;
+        ABUSE_CH_THREATFOX_DOMAIN) jq -r 'to_entries[].value[].ioc_value' ;;
         esac
         ;;
     CSV)
         case $2 in
-        NO_HEADER_FIRST_COLUMN) mlr --mmap --csv --skip-comments -N cut -f 1 ;;
-        NO_HEADER_SECOND_COLUMN) mlr --mmap --csv --skip-comments -N cut -f 2 ;;
-        NO_HEADER_THIRD_COLUMN) mlr --mmap --csv --skip-comments -N cut -f 3 ;;
-        NO_HEADER_FOURTH_COLUMN) mlr --mmap --csv --skip-comments -N cut -f 4 ;;
-        URLHAUS_DOMAIN) mlr --mmap --csv --skip-comments -N put -S '$3 =~ "https?://([a-z][^/|^:]+)"; $Domain = "\1"' then cut -f Domain then uniq -a ;;
-        URLHAUS_IPV4) mlr --mmap --csv --skip-comments -N put -S '$3 =~ "https?://([0-9][^/|^:]+)"; $IP = "\1"' then cut -f IP then uniq -a ;;
-        BOTVIRJ_COVID) mawk 'NR>1' ;;
-        CYBER_CURE_DOMAIN_URL) tr ',' '\n' | get_domains_from_urls ;;
+        MLR_CUT_1) mlr --mmap --csv --skip-comments -N cut -f 1 ;;
+        MLR_CUT_2) mlr --mmap --csv --skip-comments -N cut -f 2 ;;
+        MLR_CUT_3) mlr --mmap --csv --skip-comments -N cut -f 3 ;;
+        MLR_CUT_4) mlr --mmap --csv --skip-comments -N cut -f 4 ;;
         esac
         ;;
     esac | # filter blank lines and duplicates
