@@ -46,6 +46,7 @@ main() {
 	local blacklist
 
 	mkdir -p build/
+	: >logs/aria2.log
 
 	for method in "${METHODS[@]}"; do
 		cache="${DOWNLOADS}/${method}"
@@ -70,7 +71,7 @@ main() {
 			.value.formats[] |
 			"\($key)#\($content_filter)#\($content_type)#\(.filter)#\(.format)"' data/v2/lists.json |
 				while IFS='#' read -r key content_filter content_type list_filter list_format; do
-					find -P -O3 "$cache" -type f -exec sem -j+0 ./scripts/v2/apply_filters.bash {} "$key" "$content_filter" "$content_type" "$method" "$list_filter" "$list_format" \;
+					find -P -O3 "$cache" -type f -exec sem -j+0 ./scripts/v2/apply_filters.bash {} "$key" "$content_filter" "$content_type" "$method" "$list_filter" "$list_format" \; 1>/dev/null
 				done
 
 		sem --wait

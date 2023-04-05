@@ -62,7 +62,6 @@ apply_format_filter() {
             ;;
         MYIP_IPV4) mawk '$0~/^[^#]/{print $1}' | ipinfo grepip -4hox --nocolor ;;
         MYIP_IPV6) mawk '$0~/^[^#]/{print $1}' | ipinfo grepip -6hox --nocolor ;;
-        *) echo "[WARN] Unknown format filter: ${2}" ;;
         esac
         ;;
     JSON)
@@ -83,7 +82,6 @@ apply_format_filter() {
         MALSILO_DOMAIN) jq -r '.data[].network_traffic | select(.dns != null) | .dns[]' ;;
         MALSILO_IPV4) jq -r '.data[].network_traffic | select(.tcp != null) | .tcp[] | split(":")[0]' ;;
         MALTRAIL) jq -r '.[].ip' ;;
-        *) echo "[WARN] Unknown format filter: ${2}" ;;
         esac
         ;;
     CSV)
@@ -96,10 +94,8 @@ apply_format_filter() {
         URLHAUS_IPV4) mlr --mmap --csv --skip-comments -N put -S '$3 =~ "https?://([0-9][^/|^:]+)"; $IP = "\1"' then cut -f IP then uniq -a ;;
         BOTVIRJ_COVID) mawk 'NR>1' ;;
         CYBER_CURE_DOMAIN_URL) tr ',' '\n' | get_domains_from_urls ;;
-        *) echo "[WARN] Unknown format filter: ${2}" ;;
         esac
         ;;
-    *) echo "[WARN] Unknown format: ${1}" ;;
     esac | # filter blank lines and duplicates
         mawk 'NF && !seen[$0]++'
 }
@@ -117,15 +113,15 @@ validate_output() {
     case $1 in
     DOMAIN)
         perl ./scripts/v1/process_domains.pl 2>/dev/null
-            >>"build/${METHOD}_${FORMAT}.txt"
+            >>"build/${2}_${1}.txt"
         ;;
     IPV4)
         perl -MData::Validate::IP -nE 'chomp($_); if(defined($_) && is_ipv4($_) && !is_unroutable_ipv4($_) && !is_private_ipv4($_) && !is_loopback_ipv4($_) && !is_linklocal_ipv4($_) && !is_testnet_ipv4($_)) {say $_;}'
-            >>"build/${METHOD}_${FORMAT}.txt"
+            >>"build/${2}_${1}.txt"
         ;;
     IPV6)
         perl -MData::Validate::IP -nE 'chomp($_); if(defined($_) && is_ipv6($_)) {say $_;}'
-            >>"build/${METHOD}_${FORMAT}.txt"
+            >>"build/${2}_${1}.txt"
         ;;
     CIDR4) validate_cidr 'IPV4' "$2" "$3" ;;
     CIDR6) validate_cidr 'IPV6' "$2" "$3" ;;
@@ -155,7 +151,7 @@ main() {
 
     readonly LIST KEY CONTENT_FILTER METHOD LIST_FILTER LIST_FORMAT
 
-    echo "[INFO] Operating on ${LIST} with ${LIST_FORMAT} content with the ${CONTENT_FILTER} filter."
+    #echo "[INFO] Operating on ${LIST} with ${LIST_FORMAT} content with the ${CONTENT_FILTER} filter."
 
     apply_content_filter "$LIST" "$CONTENT_FILTER" |
         apply_format_filter "$CONTENT_TYPE" "$LIST_FILTER" |
