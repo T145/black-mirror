@@ -989,3 +989,12 @@
 
 ## Continuous Integration
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/b17f1ff0dee01f67990e6b97d074f10007625ad7))
+# 05-04-2023 13:43:39
+- **v2**: Finished major features ([T145](https://github.com/T145/black-mirror/commit/320b363878f6afbd8347c3ec9d9e588e0c372d60))
+
+## Bug Fixes
+- **v2**: Implemented the new CIDR formats ([T145](https://github.com/T145/black-mirror/commit/8f72fb8d7e6f6e531984b4a9cfff32468a5845f3))
+- **v2**: Fixed jq list format processing ([T145](https://github.com/T145/black-mirror/commit/929b5722316c88eec027835668366f3a71a1c91d))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/0cbbfd52194abd6e4f8fe1bfd91d042ff9a1a994))
