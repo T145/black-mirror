@@ -998,3 +998,11 @@
 
 ## Continuous Integration
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/0cbbfd52194abd6e4f8fe1bfd91d042ff9a1a994))
+# 06-04-2023 13:38:13
+- **v2**: Fixed list exporting ([T145](https://github.com/T145/black-mirror/commit/b618c86be80a872479ff0ba81374ac39513f1167))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/eeaa0575847558a4f5fd2e542255955794113d24))
+
+## Chores
+- **deps**: bump peter-evans/create-pull-request in /.github/workflows [#103](https://github.com/T145/black-mirror/pull/103) ([dependabot[bot]](https://github.com/T145/black-mirror/commit/7387a11a860d9727ff9577d828efabb073d78a75))
