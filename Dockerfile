@@ -37,7 +37,7 @@ RUN curl http://pi.dk/3/ | bash \
     && rm -f /usr/local/bin/pandoc-server; \
     # https://miller.readthedocs.io/en/latest/build/
     curl -sLO "https://github.com/johnkerl/miller/releases/download/v${MILLER_VERSION}/miller-${MILLER_VERSION}-linux-amd64.tar.gz" \
-    && tar -xvzf miller-*.tar.gz -C /usr/local/bin/;
+    && tar -xvzf miller-*.tar.gz -C /usr/local/bin/; \
     # https://github.com/blechschmidt/massdns#compilation
     # https://github.com/projectdiscovery/shuffledns#prerequisite
     git clone https://github.com/blechschmidt/massdns.git \
