@@ -57,7 +57,7 @@ RUN curl http://pi.dk/3/ | bash \
 # https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.4.2" \
+      version="5.4.4" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -107,6 +107,7 @@ RUN apt-get -q -y update --no-allow-insecure-repositories; \
     debsums=3.0.2 \
     gawk=1:5.1.0-1 \
     git=1:2.39.2-1~bpo11+1 \
+    html-xml-utils=7.7-1.1 \
     jq=1.6-2.1 \
     libdata-validate-domain-perl=0.10-1.1 \
     libdata-validate-ip-perl=0.30-1 \
@@ -118,11 +119,8 @@ RUN apt-get -q -y update --no-allow-insecure-repositories; \
     libtry-tiny-perl=0.30-1 \
     localepurge=0.7.3.10 \
     locales=2.31-13+deb11u5 \
-    #miller=5.10.0-1 \
     moreutils=0.65-1 \
     p7zip-full=16.02+dfsg-8 \
-    #pandoc=2.9.2.1-1+b1 \ # ~155MB binary!
-    #preload=0.6.4-5+b1 \ # May run script functions more than once.
     python3-pip=20.3.4-4+deb11u1 \
     rkhunter=1.4.6-9 \
     symlinks=1.4-4; \
