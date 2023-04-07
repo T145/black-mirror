@@ -4,22 +4,23 @@ FROM golang:1.19 AS go
 # the install paths are where "main.go" lives
 
 # https://github.com/projectdiscovery/dnsx#usage
-RUN go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@v1.1.3 \
+RUN go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@v1.1.3; \
     # https://github.com/projectdiscovery/httpx#usage
-    && go install -v github.com/projectdiscovery/httpx/cmd/httpx@v1.2.9 \
+    go install -v github.com/projectdiscovery/httpx/cmd/httpx@v1.2.9; \
     # https://github.com/projectdiscovery/shuffledns#usage
-    && go install -v github.com/projectdiscovery/shuffledns/cmd/shuffledns@v1.0.8 \
+    go install -v github.com/projectdiscovery/shuffledns/cmd/shuffledns@v1.0.8; \
     # https://github.com/ipinfo/cli#-ipinfo-cli
-    && go install -v github.com/ipinfo/cli/ipinfo@ipinfo-2.10.1 \
+    go install -v github.com/ipinfo/cli/ipinfo@ipinfo-2.10.1; \
     # https://github.com/StevenBlack/ghosts#ghosts
-    && go install -v github.com/StevenBlack/ghosts@v0.2.2
+    go install -v github.com/StevenBlack/ghosts@v0.2.2;
 
 # https://hub.docker.com/_/buildpack-deps/
 FROM buildpack-deps:stable as utils
 
 SHELL ["/bin/bash", "-o", "pipefail", "-ceux"]
 ENV LYCHEE_VERSION=v0.11.1 \
-    PANDOC_VERSION=3.1.2
+    PANDOC_VERSION=3.1.2 \
+    MILLER_VERSION=6.7.0
 
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
 # https://git.savannah.gnu.org/cgit/parallel.git/tree/README
@@ -34,6 +35,9 @@ RUN curl http://pi.dk/3/ | bash \
     curl -sLO "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz" \
     && tar -xvzf pandoc-*.tar.gz --strip-components 1 -C /usr/local/ \
     && rm -f /usr/local/bin/pandoc-server; \
+    # https://miller.readthedocs.io/en/latest/build/
+    curl -sLO "https://github.com/johnkerl/miller/releases/download/v${MILLER_VERSION}/miller-${MILLER_VERSION}-linux-amd64.tar.gz" \
+    && tar -xvzf miller-*.tar.gz -C /usr/local/bin/;
     # https://github.com/blechschmidt/massdns#compilation
     # https://github.com/projectdiscovery/shuffledns#prerequisite
     git clone https://github.com/blechschmidt/massdns.git \
@@ -113,7 +117,7 @@ RUN apt-get -q -y update --no-allow-insecure-repositories; \
     libtry-tiny-perl=0.30-1 \
     localepurge=0.7.3.10 \
     locales=2.31-13+deb11u5 \
-    miller=5.10.0-1 \
+    #miller=5.10.0-1 \
     moreutils=0.65-1 \
     p7zip-full=16.02+dfsg-8 \
     #pandoc=2.9.2.1-1+b1 \ # ~155MB binary!
