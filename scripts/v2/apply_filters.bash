@@ -96,7 +96,7 @@ main() {
         esac | mawk 'NF && !seen[$0]++' |
         case "$LIST_FORMAT" in
         'DOMAIN')
-            perl ./scripts/v1/process_domains.pl 2>/dev/null
+            perl ./scripts/v2/process_domains.pl 2>/dev/null
             >>"build/${LIST_METHOD}_${LIST_FORMAT}.txt"
             ;;
         'IPV4')
