@@ -44,6 +44,11 @@ RUN curl http://pi.dk/3/ | bash \
     git clone https://github.com/blechschmidt/massdns.git \
     && make -C massdns \
     && mv /massdns/bin/massdns /usr/local/bin/; \
+    # https://github.com/wwalexander/hostsblock
+    # forked in case the original repo goes offline
+    git clone https://github.com/T145/hostsblock \
+    && make -C hostsblock \
+    && mv /hostsblock/hostsblock /usr/local/bin; \
     # https://unix.stackexchange.com/questions/248610/validating-ip-addresses-ipv4-and-ipv6
     apt-get -y update \
     && apt-get -y install meson \
@@ -57,7 +62,7 @@ RUN curl http://pi.dk/3/ | bash \
 # https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.4.4" \
+      version="5.4.5" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
