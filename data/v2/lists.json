@@ -1,5 +1,5 @@
 {
-  "1hosts_excludes": {
+  "1hosts_official_exclusions": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -9,7 +9,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -24,7 +24,7 @@
     ],
     "topic": "SECURITY"
   },
-  "1hosts_includes": {
+  "1hosts_staged_exclusions": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -34,7 +34,32 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/badmojr/1Hosts#readme",
+      "homepage": "https://github.com/badmojr/1Hosts/tree/master/submit_here",
+      "license": "mpl-2.0"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/click_me_to_edit/exclude_for_all.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "1hosts_official_inclusions": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -52,7 +77,7 @@
       "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_all.txt"
     }
   },
-  "1hosts_pro_includes": {
+  "1hosts_staged_inclusions": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -62,7 +87,35 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/badmojr/1Hosts#readme",
+      "homepage": "https://github.com/badmojr/1Hosts/tree/master/submit_here",
+      "license": "mpl-2.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/click_me_to_edit/include_for_all.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/click_me_to_edit/include_for_all.txt"
+    }
+  },
+  "1hosts_official_pro_inclusions": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -80,7 +133,7 @@
       "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_Pro_Xtra_only.txt"
     }
   },
-  "280blocker": {
+  "1hosts_staged_pro_inclusions": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -90,26 +143,25 @@
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
     "metadata": {
-      "description": "https://280blocker.net/welcome/",
-      "homepage": "https://280blocker.net",
-      "license": "not-available"
+      "description": "https://github.com/badmojr/1Hosts#readme",
+      "homepage": "https://github.com/badmojr/1Hosts/tree/master/submit_here",
+      "license": "mpl-2.0"
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://filter.futa.gg/280blocker/280blocker_domain_ag.txt",
-      "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/280blocker/280blocker_domain_ag.txt"
+      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/click_me_to_edit/include_for_Pro_Xtra_only.txt"
     ],
     "topic": "SECURITY",
     "variants": {
-      "adguard": "https://filter.futa.gg/280blocker/280blocker_domain_ag.txt"
+      "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/click_me_to_edit/include_for_Pro_Xtra_only.txt"
     }
   },
-  "4skinskywalker": {
+  "anti_porn": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -147,12 +199,12 @@
     },
     "formats": [
       {
-        "filter": "FEODO_DOMAIN",
-        "format": "DOMAIN"
+        "filter": "ABUSE_CH_FEODOTRACKER_IPV4",
+        "format": "IPV4"
       },
       {
-        "filter": "FEODO_IPV4",
-        "format": "IPV4"
+        "filter": "ABUSE_CH_FEODOTRACKER_DOMAIN",
+        "format": "DOMAIN"
       }
     ],
     "metadata": {
@@ -179,7 +231,7 @@
     },
     "formats": [
       {
-        "filter": "NO_HEADER_SECOND_COLUMN",
+        "filter": "MLR_CUT_2",
         "format": "IPV4"
       }
     ],
@@ -195,7 +247,7 @@
       "pihole": "https://sslbl.abuse.ch/blacklist/sslipblacklist.txt"
     }
   },
-  "abuse_ch_threatfox": {
+  "abuse_ch_threatfox_domains": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -205,11 +257,33 @@
     },
     "formats": [
       {
-        "filter": "THREATFOX_DOMAIN",
+        "filter": "ABUSE_CH_THREATFOX_DOMAIN",
         "format": "DOMAIN"
-      },
+      }
+    ],
+    "metadata": {
+      "description": "https://threatfox.abuse.ch/browse/",
+      "homepage": "https://abuse.ch/",
+      "license": "cc0-1.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://threatfox.abuse.ch/export/json/domains/full/"],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://threatfox.abuse.ch/downloads/hostfile/"
+    }
+  },
+  "abuse_ch_threatfox_ips": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "ZIP",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
       {
-        "filter": "THREATFOX_IPV4",
+        "filter": "ABUSE_CH_THREATFOX_IPV4",
         "format": "IPV4"
       }
     ],
@@ -219,27 +293,24 @@
       "license": "cc0-1.0"
     },
     "method": "BLOCK",
-    "mirrors": ["https://threatfox.abuse.ch/export/json/full/"],
-    "topic": "SECURITY",
-    "variants": {
-      "pihole": "https://threatfox.abuse.ch/downloads/hostfile/"
-    }
+    "mirrors": ["https://threatfox.abuse.ch/export/json/ip-port/full/"],
+    "topic": "SECURITY"
   },
   "abuse_ch_urlhaus": {
     "archive": false,
     "checksums": {},
     "content": {
-      "filter": "ZIP",
+      "filter": "NONE",
       "retriever": "ARIA2",
-      "type": "CSV"
+      "type": "TEXT"
     },
     "formats": [
       {
-        "filter": "URLHAUS_DOMAIN",
+        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
         "format": "DOMAIN"
       },
       {
-        "filter": "URLHAUS_IPV4",
+        "filter": "ABUSE_CH_URLHAUS_IPV4",
         "format": "IPV4"
       }
     ],
@@ -249,7 +320,7 @@
       "license": "cc0-1.0"
     },
     "method": "BLOCK",
-    "mirrors": ["https://urlhaus.abuse.ch/downloads/csv/"],
+    "mirrors": ["https://urlhaus.abuse.ch/downloads/text/"],
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://urlhaus.abuse.ch/downloads/hostfile/"
@@ -265,7 +336,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -283,7 +354,7 @@
       "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/activation.txt"
     }
   },
-  "additional_hosts_ads": {
+  "additional_hosts_adservers_and_trackers": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -293,7 +364,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -311,7 +382,7 @@
       "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/adservers-and-trackers.txt"
     }
   },
-  "additional_hosts_duckduckgo": {
+  "additional_hosts_fake_domains": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -321,32 +392,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/DRSDavidSoft/additional-hosts#readme",
-      "homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
-      "license": "mit"
-    },
-    "method": "ALLOW",
-    "mirrors": [
-      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/duckduckgo.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "additional_hosts_fake": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -364,7 +410,7 @@
       "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/fake-domains.txt"
     }
   },
-  "additional_hosts_github": {
+  "additional_hosts_parking_iranian": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -374,32 +420,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/DRSDavidSoft/additional-hosts#readme",
-      "homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
-      "license": "mit"
-    },
-    "method": "ALLOW",
-    "mirrors": [
-      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/duckduckgo.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "additional_hosts_iranian_parking": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -417,7 +438,7 @@
       "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/parking-iranian.txt"
     }
   },
-  "additional_hosts_iranian_unwanted": {
+  "additional_hosts_unwanted_iranian": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -427,7 +448,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -445,7 +466,7 @@
       "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/unwanted-iranian.txt"
     }
   },
-  "additional_hosts_root": {
+  "additional_hosts_search_blacklist": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -455,33 +476,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/DRSDavidSoft/additional-hosts#readme",
-      "homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
-      "license": "mit"
-    },
-    "method": "ALLOW",
-    "mirrors": [
-      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/root.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "additional_hosts_search": {
-    "_notes": "Presently raw, but the present filter is maintained to avoid any potential format changes.",
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -498,6 +493,206 @@
     "variants": {
       "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/search-blacklist.txt"
     }
+  },
+  "additional_hosts_duckduckgo": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+      "homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
+      "license": "mit"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/duckduckgo.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "additional_hosts_github": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/DRSDavidSoft/additional-hosts#readme",
+      "homepage": "https://github.com/DRSDavidSoft/additional-hosts/tree/master/domains/whitelist",
+      "license": "mit"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/duckduckgo.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "windscribe_ads": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Windscribe",
+      "homepage": "https://windscribe.net/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://assets.windscribe.com/custom_blocklists/ads.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "windscribe_porn": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Windscribe",
+      "homepage": "https://windscribe.net/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://assets.windscribe.com/custom_blocklists/porn.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "windscribe_gambling": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Windscribe",
+      "homepage": "https://windscribe.net/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://assets.windscribe.com/custom_blocklists/gambling.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "windscribe_clickbait": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Windscribe",
+      "homepage": "https://windscribe.net/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://assets.windscribe.com/custom_blocklists/clickbait.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "windscribe_iot": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Windscribe",
+      "homepage": "https://windscribe.net/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://assets.windscribe.com/custom_blocklists/iot.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "windscribe_malware": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Windscribe",
+      "homepage": "https://windscribe.net/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://assets.windscribe.com/custom_blocklists/malware.txt"
+    ],
+    "topic": "SECURITY"
   },
   "airelle_mis": {
     "archive": false,
@@ -648,7 +843,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -683,7 +878,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -786,7 +981,7 @@
     }
   },
   "anudeep_whitelist": {
-    "_notes": "The 'referral-sites' & 'optional-list' have been ignored.",
+    "_notes": "The 'referral-sites' & 'optional-list' lists have been ignored.",
     "archive": false,
     "checksums": {},
     "content": {
@@ -796,7 +991,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "NONE",
         "format": "DOMAIN"
       }
     ],
@@ -821,7 +1016,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "NONE",
         "format": "DOMAIN"
       }
     ],
@@ -921,16 +1116,12 @@
     },
     "formats": [
       {
-        "filter": "URL_REGEX_DOMAIN",
+        "filter": "BENKOW_DOMAIN",
         "format": "DOMAIN"
       },
       {
-        "filter": "GREP_IPV4",
+        "filter": "BENKOW_IPV4",
         "format": "IPV4"
-      },
-      {
-        "filter": "GREP_IPV6",
-        "format": "IPV6"
       }
     ],
     "metadata": {
@@ -942,33 +1133,6 @@
     "mirrors": ["https://benkow.cc/export.php"],
     "topic": "SECURITY"
   },
-  "betterfyi": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ADBLOCK",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://better.fyi/trackers/",
-      "homepage": "https://source.ind.ie/better/better",
-      "license": "agpl-3.0"
-    },
-    "method": "BLOCK",
-    "mirrors": ["https://better.fyi/blockerList.txt"],
-    "topic": "SECURITY",
-    "variants": {
-      "easylist": "https://better.fyi/blockerList.txt",
-      "pihole": "https://block.energized.pro/assets/sources/filter/better-fyi-trackers.txt"
-    }
-  },
   "binarydefense": {
     "archive": false,
     "checksums": {},
@@ -979,7 +1143,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "IPV4"
       }
     ],
@@ -1033,7 +1197,7 @@
     },
     "formats": [
       {
-        "filter": "BLACKBIRD",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -1049,7 +1213,7 @@
       "pihole": "https://getblackbird.net/blacklist/hosts.txt"
     }
   },
-  "block_list_project_main": {
+  "blp_everything": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -1059,7 +1223,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -1079,7 +1243,7 @@
       "pihole": "https://raw.githubusercontent.com/blocklistproject/Lists/master/everything.txt"
     }
   },
-  "block_list_project_smart_tv": {
+  "blp_smart_tv": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -1089,7 +1253,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -1109,7 +1273,7 @@
       "pihole": "https://raw.githubusercontent.com/blocklistproject/Lists/master/smart-tv.txt"
     }
   },
-  "block_list_project_vaping": {
+  "blp_vaping": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -1119,7 +1283,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -1139,7 +1303,7 @@
       "pihole": "https://raw.githubusercontent.com/blocklistproject/Lists/master/vaping.txt"
     }
   },
-  "block_list_project_whatsapp": {
+  "blp_whatsapp": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -1149,7 +1313,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -1179,7 +1343,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -1335,7 +1499,6 @@
     "topic": "SECURITY"
   },
   "botvrij_ioc_url": {
-    "_notes": "Some entries do NOT start w/ http(s)!",
     "archive": false,
     "checksums": {
       "md5": "https://www.botvrij.eu/data/ioclist.url.raw.md5"
@@ -1347,8 +1510,12 @@
     },
     "formats": [
       {
-        "filter": "URL_REGEX_DOMAIN",
+        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
         "format": "DOMAIN"
+      },
+      {
+        "filter": "ABUSE_CH_URLHAUS_IPV4",
+        "format": "IPV4"
       }
     ],
     "metadata": {
@@ -1361,7 +1528,6 @@
     "topic": "SECURITY"
   },
   "botvrij_misp_ip_dst": {
-    "_notes": "Skipping the URL list",
     "archive": false,
     "checksums": {
       "md5": "https://www.botvrij.eu/data/misp.md5.ADMIN.txt",
@@ -1375,7 +1541,7 @@
     },
     "formats": [
       {
-        "filter": "BOTVIRJ_IPV4",
+        "filter": "NONE",
         "format": "IPV4"
       }
     ],
@@ -1398,7 +1564,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "IPV4"
       }
     ],
@@ -1423,11 +1589,11 @@
     },
     "formats": [
       {
-        "filter": "NO_HEADER_FIRST_COLUMN",
+        "filter": "MLR_CUT_1",
         "format": "DOMAIN"
       },
       {
-        "filter": "NO_HEADER_FOURTH_COLUMN",
+        "filter": "MLR_CUT_4",
         "format": "IPV4"
       }
     ],
@@ -1452,7 +1618,7 @@
     },
     "formats": [
       {
-        "filter": "NO_HEADER_FIRST_COLUMN",
+        "filter": "MLR_CUT_1",
         "format": "IPV4"
       }
     ],
@@ -1467,40 +1633,13 @@
     ],
     "topic": "SECURITY"
   },
-  "certego": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "TWINT",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "CERTEGO_DOMAIN",
-        "format": "DOMAIN"
-      },
-      {
-        "filter": "CERTEGO_IPV4",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://twitter.com/Certego_Intel",
-      "homepage": "https://twitter.com/Certego_Intel",
-      "license": "not-available"
-    },
-    "method": "BLOCK",
-    "mirrors": ["https://twitter.com/Certego_Intel"],
-    "topic": "SECURITY"
-  },
   "chrisjudk": {
     "archive": false,
     "checksums": {},
     "content": {
       "filter": "NONE",
       "retriever": "ARIA2",
-      "type": "CSV"
+      "type": "NONE"
     },
     "formats": [
       {
@@ -1558,7 +1697,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -1732,7 +1871,7 @@
         "format": "DOMAIN"
       },
       {
-        "filter": "GREP_IPV4",
+        "filter": "CRYPTOLAEMUS_IPV4",
         "format": "IPV4"
       }
     ],
@@ -1765,7 +1904,7 @@
       "license": "not-available"
     },
     "method": "BLOCK",
-    "mirrors": ["http://api.cybercure.ai/feed/get_ips?type=json"],
+    "mirrors": ["https://api.cybercure.ai/feed/get_ips?type=json"],
     "topic": "SECURITY"
   },
   "cyber_cure_urls": {
@@ -1788,7 +1927,7 @@
       "license": "not-available"
     },
     "method": "BLOCK",
-    "mirrors": ["http://api.cybercure.ai/feed/get_url?type=csv"],
+    "mirrors": ["https://api.cybercure.ai/feed/get_url?type=csv"],
     "topic": "SECURITY"
   },
   "cybercrime_all": {
@@ -1801,11 +1940,11 @@
     },
     "formats": [
       {
-        "filter": "SCHEMELESS_URL_DOMAIN",
+        "filter": "CYBERCRIME_DOMAIN",
         "format": "DOMAIN"
       },
       {
-        "filter": "GREP_IPV4",
+        "filter": "CYBERCRIME_IPV4",
         "format": "IPV4"
       }
     ],
@@ -1828,11 +1967,11 @@
     },
     "formats": [
       {
-        "filter": "URL_REGEX_DOMAIN",
+        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
         "format": "DOMAIN"
       },
       {
-        "filter": "GREP_IPV4",
+        "filter": "ABUSE_CH_URLHAUS_IPV4",
         "format": "IPV4"
       }
     ],
@@ -1872,38 +2011,7 @@
     "mirrors": [
       "https://infosharing.cybersaiyan.it/feeds/CS-COMMUNITY-HTTP?v=json&tr=1"
     ],
-    "topic": "SECURITY",
-    "variants": {
-      "pihole": "https://infosharing.cybersaiyan.it/feeds/CS-PIHOLE"
-    }
-  },
-  "cybo1927": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ADGUARD",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/Cybo1927/Hosts#available-lists-and-folders=",
-      "homepage": "https://github.com/Cybo1927/Hosts",
-      "license": "unlicense"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/Cybo1927/Hosts/master/DNS%20Hosts"
-    ],
-    "topic": "SECURITY",
-    "variants": {
-      "adguard": "https://raw.githubusercontent.com/Cybo1927/Hosts/master/DNS%20Hosts"
-    }
+    "topic": "SECURITY"
   },
   "cymru_ipv4_bogons": {
     "archive": false,
@@ -1915,7 +2023,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "CIDR4"
       }
     ],
@@ -1940,7 +2048,7 @@
     },
     "formats": [
       {
-        "filter": "CYMRU",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "CIDR6"
       }
     ],
@@ -2020,12 +2128,8 @@
     },
     "formats": [
       {
-        "filter": "DANDELION_DOMAIN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
-      },
-      {
-        "filter": "DANDELION_IPV4",
-        "format": "IPV4"
       }
     ],
     "metadata": {
@@ -2039,7 +2143,7 @@
     ],
     "topic": "SECURITY",
     "variants": {
-      "adguard": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareDomains.txt"
+      "pihole": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareDomains.txt"
     }
   },
   "dandelionsprout_norwegian": {
@@ -2052,7 +2156,7 @@
     },
     "formats": [
       {
-        "filter": "DANDELION_DOMAIN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -2063,7 +2167,7 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt"
+      "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersPiHole.txt"
     ],
     "topic": "SECURITY",
     "variants": {
@@ -2084,7 +2188,7 @@
         "format": "IPV4"
       },
       {
-        "filter": "GREP_CIDR",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "CIDR4"
       }
     ],
@@ -2222,7 +2326,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -2238,7 +2342,7 @@
     ],
     "topic": "SECURITY",
     "variants": {
-      "pihole": "https://osint.digitalside.it/Threat-Intel/lists/latestdomains.piHole.txt"
+      "pihole": "https://raw.githubusercontent.com/davidonzo/Threat-Intel/master/lists/latestdomains.piHole.txt"
     }
   },
   "digitalside_ips": {
@@ -2251,7 +2355,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "IPV4"
       }
     ],
@@ -2267,8 +2371,7 @@
     ],
     "topic": "SECURITY"
   },
-  "disconnectme": {
-    "_notes": "The 'services' file has similar domains: https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json",
+  "disconnectme_entities": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -2278,7 +2381,7 @@
     },
     "formats": [
       {
-        "filter": "DISCONNECTME",
+        "filter": "DISCONNECTME_ENTITIES",
         "format": "DOMAIN"
       }
     ],
@@ -2290,6 +2393,31 @@
     "method": "BLOCK",
     "mirrors": [
       "https://raw.githubusercontent.com/disconnectme/disconnect-tracking-protection/master/entities.json"
+    ],
+    "topic": "SECURITY"
+  },
+  "disconnectme_services": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "DISCONNECTME_SERVICES",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/disconnectme/disconnect-tracking-protection#readme",
+      "homepage": "https://disconnect.me/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/disconnectme/disconnect-tracking-protection/master/services.json"
     ],
     "topic": "SECURITY"
   },
@@ -2483,7 +2611,7 @@
     },
     "formats": [
       {
-        "filter": "NONE",
+        "filter": "ADBLOCK",
         "format": "DOMAIN"
       }
     ],
@@ -2513,7 +2641,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -2525,31 +2653,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://raw.githubusercontent.com/EnergizedProtection/unblock/master/basic/formats/domains.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "energized_xtreme": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/EnergizedProtection/block#extensions=",
-      "homepage": "https://github.com/EnergizedProtection/block",
-      "license": "mit"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://block.energized.pro/extensions/xtreme/formats/domains.txt"
     ],
     "topic": "SECURITY"
   },
@@ -2675,36 +2778,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/AZORult%20-%20Malware%20Domain%20Feed%20V2"
-    ],
-    "topic": "SECURITY"
-  },
-  "exodus_trackers": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "JSON"
-    },
-    "formats": [
-      {
-        "filter": "EXODUS_DOMAIN",
-        "format": "DOMAIN"
-      },
-      {
-        "filter": "EXODUS_IPV4",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://etip.exodus-privacy.eu.org/",
-      "homepage": "https://exodus-privacy.eu.org/en/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://etip.exodus-privacy.eu.org/trackers/export",
-      "https://reports.exodus-privacy.eu.org/api/trackers"
     ],
     "topic": "SECURITY"
   },
@@ -2864,8 +2937,12 @@
     },
     "formats": [
       {
-        "filter": "HOSTS_FILE",
-        "format": "DOMAIN"
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "IPV4"
+      },
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "CIDR4"
       }
     ],
     "metadata": {
@@ -2877,10 +2954,7 @@
     "mirrors": [
       "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level4.netset"
     ],
-    "topic": "SECURITY",
-    "variants": {
-      "pihole": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level4.netset"
-    }
+    "topic": "SECURITY"
   },
   "frellwits": {
     "archive": false,
@@ -2968,33 +3042,6 @@
     "topic": "SECURITY",
     "variants": {
       "adguard": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/nofarm_hosts.txt"
-    }
-  },
-  "geoffrey_frogeye_firstparty": {
-    "_notes": "Has a 'firstparty-only-trackers' list, which is smaller.",
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://hostfiles.frogeye.fr/",
-      "homepage": "https://hostfiles.frogeye.fr/",
-      "license": "not-available"
-    },
-    "method": "BLOCK",
-    "mirrors": ["https://hostfiles.frogeye.fr/firstparty-trackers.txt"],
-    "topic": "SECURITY",
-    "variants": {
-      "pihole": "https://hostfiles.frogeye.fr/firstparty-trackers.txt"
     }
   },
   "geoffrey_frogeye_multiparty": {
@@ -3400,7 +3447,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "IPV4"
       }
     ],
@@ -3852,34 +3899,6 @@
     "mirrors": ["https://isc.sans.edu/api/threatlist/univsydney?json"],
     "topic": "SECURITY"
   },
-  "joewein": {
-    "archive": false,
-    "checksums": {
-      "md5": "https://joewein.net/dl/bl/dom-bl.txt.md5"
-    },
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://joewein.net/spam/bl-text.htm",
-      "homepage": "https://joewein.net/",
-      "license": "not-available"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://www.joewein.net/dl/bl/dom-bl.txt",
-      "https://joewein.net/dl/bl/dom-bl.txt"
-    ],
-    "topic": "SECURITY"
-  },
   "kadhosts": {
     "archive": false,
     "checksums": {},
@@ -4030,7 +4049,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -4340,7 +4359,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -4394,7 +4413,7 @@
     },
     "formats": [
       {
-        "filter": "HOSTS_FILE",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -4416,7 +4435,7 @@
     "archive": false,
     "checksums": {},
     "content": {
-      "filter": "MALSILO",
+      "filter": "NONE",
       "retriever": "ARIA2",
       "type": "JSON"
     },
@@ -4502,11 +4521,11 @@
     },
     "formats": [
       {
-        "filter": "NO_HEADER_FIRST_COLUMN",
+        "filter": "MALWARE_DISCOVERER_DOMAIN",
         "format": "DOMAIN"
       },
       {
-        "filter": "NO_HEADER_THIRD_COLUMN",
+        "filter": "MALWARE_DISCOVERER_IPV4",
         "format": "IPV4"
       }
     ],
@@ -4581,7 +4600,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "IPV4"
       }
     ],
@@ -4604,7 +4623,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -4629,7 +4648,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -4688,7 +4707,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "IPV4"
       }
     ],
@@ -4713,7 +4732,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -4738,7 +4757,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -4763,7 +4782,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -4847,7 +4866,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -4876,7 +4895,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -4903,7 +4922,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -4933,7 +4952,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -4963,7 +4982,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -4992,7 +5011,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -5045,7 +5064,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -5073,7 +5092,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -5101,7 +5120,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
@@ -5129,7 +5148,7 @@
     },
     "formats": [
       {
-        "filter": "MAWK_WITH_COMMENTS_FIRST_COLUMN",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],

@@ -169,7 +169,6 @@
 - [shady-hosts](https://github.com/shreyasminocha/shady-hosts)
 - [DataPlane](https://dataplane.org/)
 - [C2IntelFeeds](https://github.com/drb-ra/C2IntelFeeds#c2intelfeeds)
-- [joewein's custom list](https://www.joewein.net/dl/bl/dom-bl.txt)
 - [SecurityResearch](http://security-research.dyndns.org/pub/malware-feeds)
 - [Sunshine](https://www.sunshine.it/)
   - [Webradio](http://195.201.227.227/webradio.htm) (Germans know how to party: be nice!)
@@ -384,8 +383,6 @@
   - Only TikTok list; WhiteOps is should be double-checked.
 - [ut-capitole](https://dsi.ut-capitole.fr/blacklists/index_en.php)
   - Has a lot of deprecated data.
-- [joewein's base list](https://www.joewein.net/dl/bl/dom-bl-base.txt)
-  - Infrequently updated and impossible to update frequently.
 - [shallalist](https://www.shallalist.de/)
   - Similar to `ut-capitole`.
   - [cbuijs](https://github.com/cbuijs/shallalist)
@@ -656,3 +653,5 @@
   - Bad TLS configuration
 - [Cybo1927](https://github.com/Cybo1927/Hosts)
 - [Energized Xtreme Extension](https://github.com/EnergizedProtection/block#extensions-2)
+- [joewein's domain lists](https://joewein.net/spam/bl-text.htm)
+  - The domain lists have been deprecated.
