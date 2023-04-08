@@ -2062,5 +2062,3109 @@
       "https://www.team-cymru.org/Services/Bogons/fullbogons-ipv6.txt"
     ],
     "topic": "SECURITY"
+  },
+  "d3ward": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/d3ward/toolz#readme",
+      "homepage": "https://github.com/d3ward/toolz",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/d3ward/toolz/master/src/d3host.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/d3ward/toolz/master/src/d3host.txt"
+    }
+  },
+  "dan_me_uk": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "GREP_IPV4",
+        "format": "IPV4"
+      },
+      {
+        "filter": "GREP_IPV6",
+        "format": "IPV6"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.dan.me.uk/",
+      "homepage": "https://www.dan.me.uk/",
+      "license": "all-rights-reserved"
+    },
+    "method": "ALLOW",
+    "mirrors": ["https://www.dan.me.uk/torlist/"],
+    "topic": "SECURITY"
+  },
+  "dandelion_antimalware": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/DandelionSprout/adfilt#readme=",
+      "homepage": "https://github.com/DandelionSprout/adfilt",
+      "license": "https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareDomains.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareDomains.txt"
+    }
+  },
+  "dandelionsprout_norwegian": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/DandelionSprout/adfilt#readme=",
+      "homepage": "https://github.com/DandelionSprout/adfilt",
+      "license": "https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersPiHole.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt"
+    }
+  },
+  "darklist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "GREP_IPV4",
+        "format": "IPV4"
+      },
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "CIDR4"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.darklist.de/",
+      "homepage": "https://www.darklist.de/",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://www.darklist.de/raw.php"],
+    "topic": "SECURITY"
+  },
+  "dataplane_sipinvitation": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "DATAPLANE_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://dataplane.org/signals.html",
+      "homepage": "https://dataplane.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://dataplane.org/sipinvitation.txt"],
+    "topic": "SECURITY"
+  },
+  "dataplane_sipquery": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "DATAPLANE_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://dataplane.org/signals.html",
+      "homepage": "https://dataplane.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://dataplane.org/sipquery.txt"],
+    "topic": "SECURITY"
+  },
+  "dataplane_sipregistration": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "DATAPLANE_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://dataplane.org/signals.html",
+      "homepage": "https://dataplane.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://dataplane.org/sipregistration.txt"],
+    "topic": "SECURITY"
+  },
+  "dataplane_sshpwauth": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "DATAPLANE_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://dataplane.org/signals.html",
+      "homepage": "https://dataplane.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://dataplane.org/sshpwauth.txt"],
+    "topic": "SECURITY"
+  },
+  "dataplane_vncrfb": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "DATAPLANE_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://dataplane.org/signals.html",
+      "homepage": "https://dataplane.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://dataplane.org/vncrfb.txt"],
+    "topic": "SECURITY"
+  },
+  "digitalside_domains": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/davidonzo/Threat-Intel#readme",
+      "homepage": "https://github.com/davidonzo/Threat-Intel",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt",
+      "https://raw.githubusercontent.com/davidonzo/Threat-Intel/master/lists/latestdomains.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/davidonzo/Threat-Intel/master/lists/latestdomains.piHole.txt"
+    }
+  },
+  "digitalside_ips": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/davidonzo/Threat-Intel#readme",
+      "homepage": "https://github.com/davidonzo/Threat-Intel",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://osint.digitalside.it/Threat-Intel/lists/latestips.txt",
+      "https://raw.githubusercontent.com/davidonzo/Threat-Intel/master/lists/latestips.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "disconnectme_entities": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "DISCONNECTME_ENTITIES",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/disconnectme/disconnect-tracking-protection#readme",
+      "homepage": "https://disconnect.me/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/disconnectme/disconnect-tracking-protection/master/entities.json"
+    ],
+    "topic": "SECURITY"
+  },
+  "disconnectme_services": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "DISCONNECTME_SERVICES",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/disconnectme/disconnect-tracking-protection#readme",
+      "homepage": "https://disconnect.me/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/disconnectme/disconnect-tracking-protection/master/services.json"
+    ],
+    "topic": "SECURITY"
+  },
+  "dshield": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "DSHIELD",
+        "format": "CIDR4"
+      }
+    ],
+    "metadata": {
+      "description": "https://dshield.org/sources.html",
+      "homepage": "https://dshield.org/",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://feeds.dshield.org/block.txt"],
+    "topic": "SECURITY"
+  },
+  "durablenapkin_avast": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/durablenapkin/block#readme",
+      "homepage": "https://github.com/durablenapkin/block",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/durablenapkin/block/master/avast.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "durablenapkin_luminati": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/durablenapkin/block#readme",
+      "homepage": "https://github.com/durablenapkin/block",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/durablenapkin/block/master/luminati.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "durablenapkin_scams": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/durablenapkin/scamblocklist#readme",
+      "homepage": "https://github.com/durablenapkin/scamblocklist",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/hosts.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt"
+    }
+  },
+  "durablenapkin_streaming": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/durablenapkin/block#readme",
+      "homepage": "https://github.com/durablenapkin/block",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/durablenapkin/block/master/streaming.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "durablenapkin_tvstream": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/durablenapkin/block#readme",
+      "homepage": "https://github.com/durablenapkin/block",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/durablenapkin/block/master/tvstream.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "easylist_finnish": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/finnish-easylist-addition/finnish-easylist-addition#readme",
+      "homepage": "https://github.com/finnish-easylist-addition/finnish-easylist-addition",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt"
+    }
+  },
+  "easylist_indonesian": {
+    "_notes": "https://github.com/ABPindo/indonesianadblockrules/issues/336",
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/ABPindo/indonesianadblockrules#abpindo=",
+      "homepage": "https://github.com/ABPindo/indonesianadblockrules",
+      "license": "https://github.com/ABPindo/indonesianadblockrules/blob/master/subscriptions/LICENSE"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/domain_adult.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/aghome_adult.txt",
+      "dnsmasq": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/dnsmasq_adult.txt",
+      "pihole": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/domain_adult.txt"
+    }
+  },
+  "energized_unblock": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/EnergizedProtection/unblock#energized-protection---unblock-=",
+      "homepage": "https://github.com/EnergizedProtection/unblock",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/EnergizedProtection/unblock/master/basic/formats/domains.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "esox_lucius_agenttesla": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
+      "homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
+      "license": "cc0-1.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/AgentTesla%20-%20Malware%20Domain%20Feed%20V2"
+    ],
+    "topic": "SECURITY"
+  },
+  "esox_lucius_amadey": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
+      "homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
+      "license": "cc0-1.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/Amadey%20-%20Malware%20Domain%20Feed%20V2"
+    ],
+    "topic": "SECURITY"
+  },
+  "esox_lucius_andromeda": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
+      "homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
+      "license": "cc0-1.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/Andromeda%20-%20Malware%20Domain%20Feed%20V2"
+    ],
+    "topic": "SECURITY"
+  },
+  "esox_lucius_asyncrat": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
+      "homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
+      "license": "cc0-1.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/AsyncRAT%20-%20Malware%20Domain%20Feed%20V2"
+    ],
+    "topic": "SECURITY"
+  },
+  "esox_lucius_azorult": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Esox-Lucius/PiHoleblocklists#readme=",
+      "homepage": "https://github.com/Esox-Lucius/PiHoleblocklists",
+      "license": "cc0-1.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Esox-Lucius/PiHoleblocklists/main/AZORult%20-%20Malware%20Domain%20Feed%20V2"
+    ],
+    "topic": "SECURITY"
+  },
+  "fanboy_antifonts": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://fanboy.co.nz/filters.html",
+      "homepage": "https://github.com/ryanbr/fanboy-adblock",
+      "license": "cc-by-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://secure.fanboy.co.nz/fanboy-antifonts.txt",
+      "https://fanboy.co.nz/fanboy-antifonts.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://secure.fanboy.co.nz/fanboy-antifonts.txt"
+    }
+  },
+  "fanboy_cookiemonster": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://fanboy.co.nz/filters.html",
+      "homepage": "https://github.com/ryanbr/fanboy-adblock",
+      "license": "cc-by-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+      "https://fanboy.co.nz/fanboy-cookiemonster.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+      "pihole": "https://block.energized.pro/assets/sources/filter/fanboy-cookiemonster.txt"
+    }
+  },
+  "fanboy_indian": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://fanboy.co.nz/filters.html",
+      "homepage": "https://github.com/ryanbr/fanboy-adblock",
+      "license": "cc-by-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://secure.fanboy.co.nz/fanboy-indian.txt",
+      "https://fanboy.co.nz/fanboy-indian.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://secure.fanboy.co.nz/fanboy-indian.txt",
+      "pihole": "https://block.energized.pro/assets/sources/filter/fanboy-indian.txt"
+    }
+  },
+  "fanboy_ultimate": {
+    "_notes": "The 'anti-facebook' list is covered by other Facebook hate.",
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://fanboy.co.nz/filters.html",
+      "homepage": "https://github.com/ryanbr/fanboy-adblock",
+      "license": "cc-by-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://secure.fanboy.co.nz/r/fanboy-ultimate.txt",
+      "https://fanboy.co.nz/r/fanboy-ultimate.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://secure.fanboy.co.nz/r/fanboy-ultimate.txt",
+      "pihole": "https://block.energized.pro/assets/sources/filter/fanboy-ultimate.txt"
+    }
+  },
+  "filtri_dns": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://filtri-dns.ga/",
+      "homepage": "https://filtri-dns.ga/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://filtri-dns.ga/filtri.txt"],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://filtri-dns.ga/filtri.txt"
+    }
+  },
+  "firehol_level4": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "IPV4"
+      },
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "CIDR4"
+      }
+    ],
+    "metadata": {
+      "description": "https://iplists.firehol.org/",
+      "homepage": "https://github.com/firehol/blocklist-ipsets",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level4.netset"
+    ],
+    "topic": "SECURITY"
+  },
+  "frellwits": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/lassekongo83/Frellwits-filter-lists#frellwits-filter-lists",
+      "homepage": "https://github.com/lassekongo83/Frellwits-filter-lists",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "easylist": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
+      "pihole": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt"
+    }
+  },
+  "futafilter_hosts": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/FutaGuard/FutaFilter#futafilter=",
+      "homepage": "https://github.com/FutaGuard/FutaFilter",
+      "license": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/LICENSE"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/hosts.txt",
+      "https://filter.futa.gg/hosts.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://filter.futa.gg/hosts.txt",
+      "easylist": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/filter.txt"
+    }
+  },
+  "futafilter_nofarm_hosts": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/FutaGuard/FutaFilter#futafilter=",
+      "homepage": "https://github.com/FutaGuard/FutaFilter",
+      "license": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/LICENSE"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/nofarm_hosts.txt",
+      "https://filter.futa.gg/nofarm_hosts.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/nofarm_hosts.txt"
+    }
+  },
+  "geoffrey_frogeye_multiparty": {
+    "_notes": "Has a 'multiparty-only-trackers' list, which is smaller.",
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://hostfiles.frogeye.fr/",
+      "homepage": "https://hostfiles.frogeye.fr/",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://hostfiles.frogeye.fr/multiparty-trackers.txt"],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://hostfiles.frogeye.fr/multiparty-trackers.txt"
+    }
+  },
+  "goodbye_ads_core": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/jerryn70/GoodbyeAds#goodbyeads---wrld-of-ads-free-internet",
+      "homepage": "https://github.com/jerryn70/GoodbyeAds",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Core/GoodbyeAds-Database.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Core/GoodbyeAds-Database.txt"
+    }
+  },
+  "goodbye_ads_leeco": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/jerryn70/GoodbyeAds#package-sources=",
+      "homepage": "https://github.com/jerryn70/GoodbyeAds",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-LeEco-Extension.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-LeEco-Extension.txt"
+    }
+  },
+  "goodbye_ads_samsung": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/jerryn70/GoodbyeAds#package-sources=",
+      "homepage": "https://github.com/jerryn70/GoodbyeAds",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Samsung-AdBlock.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Samsung-AdBlock.txt"
+    }
+  },
+  "goodbye_ads_spotify": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/jerryn70/GoodbyeAds#package-sources=",
+      "homepage": "https://github.com/jerryn70/GoodbyeAds",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Spotify-AdBlock.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Spotify-AdBlock.txt"
+    }
+  },
+  "goodbye_ads_xiaomi": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/jerryn70/GoodbyeAds#package-sources=",
+      "homepage": "https://github.com/jerryn70/GoodbyeAds",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Xiaomi-Extension.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Xiaomi-Extension.txt"
+    }
+  },
+  "goodbye_ads_youtube": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/jerryn70/GoodbyeAds#package-sources=",
+      "homepage": "https://github.com/jerryn70/GoodbyeAds",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-YouTube-AdBlock.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-YouTube-AdBlock.txt"
+    }
+  },
+  "hexxium": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://hexxiumcreations.com/projects/malicious-domain-blocking/",
+      "homepage": "https://github.com/HexxiumCreations/threat-list",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/HexxiumCreations/threat-list/gh-pages/domainsonly",
+      "https://hexxiumcreations.github.io/threat-list/domainsonly"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/HexxiumCreations/threat-list/gh-pages/hexxiumthreatlist.txt",
+      "pihole": "https://raw.githubusercontent.com/HexxiumCreations/threat-list/gh-pages/hosts.txt"
+    }
+  },
+  "hipo_universities": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "HIPO_UNIVERSITIES",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Hipo/university-domains-list#university-domains-and-names-data-list--api=",
+      "homepage": "https://github.com/Hipo/university-domains-list",
+      "license": "mit"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json"
+    ],
+    "topic": "SECURITY"
+  },
+  "infinitytec_ads_and_trackers": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/infinitytec/blocklists#infinitytecs-blocklists",
+      "homepage": "https://github.com/infinitytec/blocklists",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/infinitytec/blocklists/master/ads-and-trackers.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "easylist": "https://raw.githubusercontent.com/infinitytec/blocklists/master/adfilters.txt",
+      "pihole": "https://raw.githubusercontent.com/infinitytec/blocklists/master/ads-and-trackers.txt"
+    }
+  },
+  "infinitytec_medical_pseudoscience": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/infinitytec/blocklists#infinitytecs-blocklists",
+      "homepage": "https://github.com/infinitytec/blocklists",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/infinitytec/blocklists/master/medicalpseudoscience.txt"
+    ],
+    "topic": "SANITY",
+    "variants": {
+      "easylist": "https://raw.githubusercontent.com/infinitytec/blocklists/master/annoyances.txt",
+      "pihole": "https://raw.githubusercontent.com/infinitytec/blocklists/master/medicalpseudoscience.txt"
+    }
+  },
+  "infinitytec_multi_level_marketing": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/infinitytec/blocklists#infinitytecs-blocklists",
+      "homepage": "https://github.com/infinitytec/blocklists",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/infinitytec/blocklists/master/mlm.txt"
+    ],
+    "topic": "SANITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/infinitytec/blocklists/master/mlm.txt"
+    }
+  },
+  "infinitytec_scams_and_phishing": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/infinitytec/blocklists#infinitytecs-blocklists",
+      "homepage": "https://github.com/infinitytec/blocklists",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/infinitytec/blocklists/master/scams-and-phishing.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/infinitytec/blocklists/master/scams-and-phishing.txt"
+    }
+  },
+  "ios_trackers": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/jakejarvis/ios-trackers#ios-tracker-blocklist=",
+      "homepage": "https://github.com/jakejarvis/ios-trackers",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/jakejarvis/ios-trackers/master/blocklist.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/jakejarvis/ios-trackers/master/adguard.txt",
+      "pihole": "https://raw.githubusercontent.com/jakejarvis/ios-trackers/master/blocklist.txt"
+    }
+  },
+  "ipsum": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/stamparm/ipsum#about=",
+      "homepage": "https://github.com/stamparm/ipsum",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "isc_adscore": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/adscore?json"],
+    "topic": "SECURITY"
+  },
+  "isc_alphastrike": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/alphastrike?json"],
+    "topic": "SECURITY"
+  },
+  "isc_arbor": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/arbor?json"],
+    "topic": "SECURITY"
+  },
+  "isc_blindferret": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/blindferret?json"],
+    "topic": "SECURITY"
+  },
+  "isc_censys": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/censys?json"],
+    "topic": "SECURITY"
+  },
+  "isc_ciarmy": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/ciarmy?json"],
+    "topic": "SECURITY"
+  },
+  "isc_cybergreen": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/cybergreen?json"],
+    "topic": "SECURITY"
+  },
+  "isc_erratasec": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/erratasec?json"],
+    "topic": "SECURITY"
+  },
+  "isc_internetcensus": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/internetcensus?json"],
+    "topic": "SECURITY"
+  },
+  "isc_ipip": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/ipip?json"],
+    "topic": "SECURITY"
+  },
+  "isc_netsystems": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/netsystems?json"],
+    "topic": "SECURITY"
+  },
+  "isc_onyphe": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/onyphe?json"],
+    "topic": "SECURITY"
+  },
+  "isc_rapid7sonar": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/rapid7sonar?json"],
+    "topic": "SECURITY"
+  },
+  "isc_recyber": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/recyber?json"],
+    "topic": "SECURITY"
+  },
+  "isc_scorecard": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/scorecard?json"],
+    "topic": "SECURITY"
+  },
+  "isc_shodan": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/shodan?json"],
+    "topic": "SECURITY"
+  },
+  "isc_stretchoid": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/stretchoid?json"],
+    "topic": "SECURITY"
+  },
+  "isc_univmichigan": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/univmichigan?json"],
+    "topic": "SECURITY"
+  },
+  "isc_univsydney": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "ISCSANS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://isc.sans.edu/threatfeed.html",
+      "homepage": "https://isc.sans.edu/api/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://isc.sans.edu/api/threatlist/univsydney?json"],
+    "topic": "SECURITY"
+  },
+  "kadhosts": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://kadantiscam.netlify.app/",
+      "homepage": "https://github.com/FiltersHeroes/KADhosts",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/KADomains.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/KADhole.txt"
+    }
+  },
+  "kodopenguin_amazon_firestick": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://hosts.gameindustry.eu/",
+      "homepage": "https://github.com/KodoPengin/GameIndustry-hosts-Template",
+      "license": "https://gameindustry.eu/de/lizenz/"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Amazon-FireStick/hosts"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Amazon-FireStick/hosts"
+    }
+  },
+  "kodopenguin_android": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://hosts.gameindustry.eu/",
+      "homepage": "https://github.com/KodoPengin/GameIndustry-hosts-Template",
+      "license": "https://gameindustry.eu/de/lizenz/"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Android-Full-Template/hosts"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Android-Full-Template/hosts"
+    }
+  },
+  "kodopenguin_gaming": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://hosts.gameindustry.eu/",
+      "homepage": "https://github.com/KodoPengin/GameIndustry-hosts-Template",
+      "license": "https://gameindustry.eu/de/lizenz/"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Gaming-Full-Template/hosts"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Gaming-Full-Template/hosts"
+    }
+  },
+  "kodopenguin_main": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://hosts.gameindustry.eu/",
+      "homepage": "https://github.com/KodoPengin/GameIndustry-hosts-Template",
+      "license": "https://gameindustry.eu/de/lizenz/"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Main-Template/hosts"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Main-Template/hosts"
+    }
+  },
+  "kriskintel_covid": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://kriskintel.com/",
+      "homepage": "https://kriskintel.com/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://kriskintel.com/feeds/ktip_covid_domains.txt"],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://kriskintel.com/feeds/ktip_covid_domains.txt"
+    }
+  },
+  "lightswitch_ads_and_tracking": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.github.developerdan.com/hosts/",
+      "homepage": "https://github.com/lightswitch05/hosts",
+      "license": "apache-2.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/ads-and-tracking-extended.txt",
+      "https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/ads-and-tracking-extended.txt"
+    }
+  },
+  "lightswitch_amp_hosts": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.github.developerdan.com/hosts/",
+      "homepage": "https://github.com/lightswitch05/hosts",
+      "license": "apache-2.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/amp-hosts-extended.txt",
+      "https://www.github.developerdan.com/hosts/lists/amp-hosts-extended.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/amp-hosts-extended.txt"
+    }
+  },
+  "lightswitch_dating": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.github.developerdan.com/hosts/",
+      "homepage": "https://github.com/lightswitch05/hosts",
+      "license": "apache-2.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/dating-services-extended.txt",
+      "https://www.github.developerdan.com/hosts/lists/dating-services-extended.txt"
+    ],
+    "topic": "SANITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/dating-services-extended.txt"
+    }
+  },
+  "lightswitch_facebook": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.github.developerdan.com/hosts/",
+      "homepage": "https://github.com/lightswitch05/hosts",
+      "license": "apache-2.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/facebook-extended.txt",
+      "https://www.github.developerdan.com/hosts/lists/facebook-extended.txt"
+    ],
+    "topic": "SANITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/facebook-extended.txt"
+    }
+  },
+  "lightswitch_hate_and_junk": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.github.developerdan.com/hosts/",
+      "homepage": "https://github.com/lightswitch05/hosts",
+      "license": "apache-2.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/hate-and-junk-extended.txt",
+      "https://www.github.developerdan.com/hosts/lists/hate-and-junk-extended.txt"
+    ],
+    "topic": "SANITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/hate-and-junk-extended.txt"
+    }
+  },
+  "lightswitch_tracking_aggressive": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.github.developerdan.com/hosts/",
+      "homepage": "https://github.com/lightswitch05/hosts",
+      "license": "apache-2.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/tracking-aggressive-extended.txt",
+      "https://www.github.developerdan.com/hosts/lists/tracking-aggressive-extended.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/tracking-aggressive-extended.txt"
+    }
+  },
+  "list_kr_adservice": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/List-KR/List-KR#list-kr",
+      "homepage": "https://github.com/List-KR/List-KR",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/List-KR/List-KR/master/filters-share/adservice.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/List-KR/List-KR/master/filter.txt"
+    }
+  },
+  "list_kr_firstparty_adservice": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/List-KR/List-KR#list-kr",
+      "homepage": "https://github.com/List-KR/List-KR",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/List-KR/List-KR/master/filters-share/adservice_firstparty.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "littlecordines_general": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/LittleCordines/pfsense-hosts-file/#readme=",
+      "homepage": "https://github.com/LittleCordines/pfsense-hosts-file/",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/LittleCordines/pfsense-hosts-file/master/GeneralBlocklists"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/LittleCordines/pfsense-hosts-file/master/GeneralBlocklists"
+    }
+  },
+  "littlecordines_porn": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/LittleCordines/pfsense-hosts-file/#readme=",
+      "homepage": "https://github.com/LittleCordines/pfsense-hosts-file/",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/LittleCordines/pfsense-hosts-file/master/PornBlocklists"
+    ],
+    "topic": "SANITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/LittleCordines/pfsense-hosts-file/master/PornBlocklists"
+    }
+  },
+  "mailscanner_bad_phishing": {
+    "_notes": "Could use 'phishing.safe.sites.conf' as a whitelist.",
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.mailborder.com/products/hosted-email-spam-filter/",
+      "homepage": "https://www.mailborder.com/",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": ["http://phishing.mailscanner.info/phishing.bad.sites.conf"],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "http://phishing.mailscanner.info/phishing.bad.sites.conf"
+    }
+  },
+  "majkiit_hole_cert": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://majkiit.github.io/polish-ads-filter/docs/",
+      "homepage": "https://github.com/MajkiIT/polish-ads-filter",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hole_cert_pl.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hole_cert_pl.txt"
+    }
+  },
+  "majkiit_hostfile": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://majkiit.github.io/polish-ads-filter/docs/",
+      "homepage": "https://github.com/MajkiIT/polish-ads-filter",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hostfile.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hole_cert_pl.txt"
+    }
+  },
+  "malsilo": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "MALSILO_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "MALSILO_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://raw-data.gitlab.io/post/malsilo_2.0/",
+      "homepage": "https://raw-data.gitlab.io/post/malsilo_2.0/",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://malsilo.gitlab.io/feeds/dumps/master-feed.json"],
+    "topic": "SECURITY"
+  },
+  "maltrail_domains": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/stamparm/MalTrail#introduction=",
+      "homepage": "https://github.com/stamparm/MalTrail",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/stamparm/aux/master/maltrail-malware-domains.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/stamparm/aux/master/maltrail-malware-domains.txt"
+    }
+  },
+  "maltrail_ips": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "MALTRAIL",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/stamparm/MalTrail#introduction=",
+      "homepage": "https://github.com/stamparm/MalTrail",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/stamparm/aux/master/fetch-some-list.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "malware_discoverer": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "CSV"
+    },
+    "formats": [
+      {
+        "filter": "MALWARE_DISCOVERER_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "MALWARE_DISCOVERER_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/zhouhanc/malware-discoverer#readme",
+      "homepage": "https://github.com/zhouhanc/malware-discoverer",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/zhouhanc/malware-discoverer/master/blocklist.csv"
+    ],
+    "topic": "SECURITY"
+  },
+  "marktron_fakenews": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/marktron/fakenews#readme",
+      "homepage": "https://github.com/marktron/fakenews",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/marktron/fakenews/master/fakenews"
+    ],
+    "topic": "SANITY"
+  },
+  "metalhead": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/T145/metalhead#readme",
+      "homepage": "https://github.com/T145/metalhead",
+      "license": "agpl-3.0"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/T145/metalhead/master/dist/black_nxdomain.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "mirai_tracker": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://mirai.security.gives/how_it_works.php",
+      "homepage": "https://mirai.security.gives/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://mirai.security.gives/data/ip_list.txt"],
+    "topic": "SECURITY"
+  },
+  "mobiletrackers_list": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/craiu/mobiletrackers#readme",
+      "homepage": "https://github.com/craiu/mobiletrackers",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/craiu/mobiletrackers/master/list.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "mobiletrackers_windows": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/craiu/mobiletrackers#readme",
+      "homepage": "https://github.com/craiu/mobiletrackers",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/craiu/mobiletrackers/master/windowslist.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "myip_full_blacklist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MYIP_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "MYIP_IPV4",
+        "format": "IPV4"
+      },
+      {
+        "filter": "MYIP_IPV6",
+        "format": "IPV6"
+      }
+    ],
+    "metadata": {
+      "description": "https://myip.ms/browse/blacklist/Blacklist_IP_Blacklist_IP_Addresses_Live_Database_Real-time",
+      "homepage": "https://myip.ms/",
+      "license": "all-rights-reserved",
+      "notes": "The second col contains host information, which can be either the first col or a domain"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://myip.ms/files/blacklist/general/full_blacklist_database.zip"
+    ],
+    "topic": "SECURITY"
+  },
+  "myip_webcrawlers": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://myip.ms/browse/blacklist/Blacklist_IP_Blacklist_IP_Addresses_Live_Database_Real-time",
+      "homepage": "https://myip.ms/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://myip.ms/files/bots/live_webcrawlers.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "nextdns_tor_bypass": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/metadata#readme=",
+      "homepage": "https://github.com/nextdns/dns-bypass-methods",
+      "license": "all-rights-reserved"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/tor"
+    ],
+    "topic": "SECURITY"
+  },
+  "nextdns_linux_bypass": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/metadata#readme=",
+      "homepage": "https://github.com/nextdns/dns-bypass-methods",
+      "license": "all-rights-reserved"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/linux"
+    ],
+    "topic": "SECURITY"
+  },
+  "nextdns_vpn_bypass": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/metadata#readme=",
+      "homepage": "https://github.com/nextdns/dns-bypass-methods",
+      "license": "all-rights-reserved"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/vpn"
+    ],
+    "topic": "SECURITY"
+  },
+  "no_qanon": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/rimu/no-qanon#readme",
+      "homepage": "https://github.com/rimu/no-qanon",
+      "license": "https://raw.githubusercontent.com/rimu/no-qanon/master/LICENSE.txt"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/rimu/no-qanon/master/etc_hosts.txt"
+    ],
+    "topic": "SANITY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/rimu/no-qanon/master/adblock.txt",
+      "dnsmasq": "https://raw.githubusercontent.com/rimu/no-qanon/master/dnsmasq_hosts.txt",
+      "pihole": "https://raw.githubusercontent.com/rimu/no-qanon/master/etc_hosts.txt"
+    }
+  },
+  "nocoin": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/hoshsadiq/adblock-nocoin-list#readme=",
+      "homepage": "https://github.com/hoshsadiq/adblock-nocoin-list",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt",
+      "pihole": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt"
+    }
+  },
+  "noplaylist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/allendema/noplaylist#readme=",
+      "homepage": "https://github.com/allendema/noplaylist",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/allendema/noplaylist/main/NoPlayList.txt",
+      "https://codeberg.org/allendema/NoPlayList/raw/branch/main/NoPlayList.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/allendema/noplaylist/main/NoPlayList.txt"
+    }
+  },
+  "not_on_my_shift": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/allendema/noplaylist#readme=",
+      "homepage": "https://orca.pet/notonmyshift/",
+      "license": "https://orca.pet/#license"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://orca.pet/notonmyshift/domains.txt"],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://orca.pet/notonmyshift/abp.txt",
+      "pihole": "https://orca.pet/notonmyshift/hosts.txt"
+    }
+  },
+  "notrack_annoyance": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://quidsup.net/notrack/blocklist.php",
+      "homepage": "https://quidsup.net/notrack/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://quidsup.net/notrack/blocklist.php?download=annoyancedomains",
+      "https://gitlab.com/quidsup/notrack-annoyance-blocklist/-/raw/master/annoyance.list"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://quidsup.net/notrack/blocklist.php?download=annoyanceunix",
+      "pihole": "https://quidsup.net/notrack/blocklist.php?download=annoyance"
+    }
+  },
+  "notrack_malware": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://quidsup.net/notrack/blocklist.php",
+      "homepage": "https://quidsup.net/notrack/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://quidsup.net/notrack/blocklist.php?download=malwaredomains",
+      "https://gitlab.com/quidsup/notrack-blocklists/-/raw/master/malware.list"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://quidsup.net/notrack/blocklist.php?download=malwareunix",
+      "pihole": "https://quidsup.net/notrack/blocklist.php?download=malware"
+    }
+  },
+  "notrack_tracker_radar": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://quidsup.net/notrack/blocklist.php",
+      "homepage": "https://quidsup.net/notrack/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.hosts",
+      "pihole": "https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.hosts"
+    }
+  },
+  "notrack_trackers": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://quidsup.net/notrack/blocklist.php",
+      "homepage": "https://quidsup.net/notrack/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://quidsup.net/notrack/blocklist.php?download=trackersdomains",
+      "https://gitlab.com/quidsup/notrack-blocklists/-/raw/master/trackers.list"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://quidsup.net/notrack/blocklist.php?download=trackersunix",
+      "pihole": "https://quidsup.net/notrack/blocklist.php?download=trackers"
+    }
+  },
+  "npc_hosts": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "http://npc.0am.jp/hosts.php",
+      "homepage": "http://npc.0am.jp/",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": ["http://npc.0am.jp/hosts.php?dl=1"],
+    "topic": "SECURITY"
+  },
+  "perflyst_amazon_fire_tv": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Perflyst/PiHoleBlocklist#readme",
+      "homepage": "https://github.com/Perflyst/PiHoleBlocklist",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/AmazonFireTV.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/AmazonFireTV.txt"
+    }
+  },
+  "perflyst_android_tracking": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Perflyst/PiHoleBlocklist#readme",
+      "homepage": "https://github.com/Perflyst/PiHoleBlocklist",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt"
+    }
+  },
+  "perflyst_session_replay": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Perflyst/PiHoleBlocklist#readme",
+      "homepage": "https://github.com/Perflyst/PiHoleBlocklist",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SessionReplay.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SessionReplay.txt"
+    }
+  },
+  "perflyst_smart_tv": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Perflyst/PiHoleBlocklist#readme",
+      "homepage": "https://github.com/Perflyst/PiHoleBlocklist",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt",
+      "pihole": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt"
+    }
   }
 }

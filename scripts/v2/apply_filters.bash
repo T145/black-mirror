@@ -45,7 +45,7 @@ main() {
             'ABUSE_CH_URLHAUS_DOMAIN') get_domains_from_urls ;;
             'ABUSE_CH_URLHAUS_IPV4') get_ipv4s_from_urls ;;
             'ALIENVAULT') mawk -F# '{print $1}' ;;
-            'ADBLOCK')  ;; # TODO betterfyi
+            'ADBLOCK') hostsblock | mawk '{print $2}' ;;
             'GREP_IPV4') ipinfo grepip -4hox --nocolor ;;
             'GREP_IPV6') ipinfo grepip -6hox --nocolor ;;
             'BOTVIRJ_IPV4') mawk -F'|' '{print $1}' ;;
@@ -53,6 +53,11 @@ main() {
             'CRYPTOLAEMUS_IPV4') hxextract code /dev/stdin | head -n -1 | tail -n +6 | ipinfo grepip -4hox --nocolor ;;
             'CYBERCRIME_DOMAIN') mawk -F/ '{print $1}' ;;
             'CYBERCRIME_IPV4') mawk -F/ '{split($1,a,":");print a[1]}' | ipinfo grepip -4hox --nocolor ;;
+            'DATAPLANE_IPV4') mawk -F'|' '$0~/^[^#]/{gsub(/ /,""); print $3}' ;;
+            'DSHIELD') mlr --tsv --skip-comments -N put '$cidr = $1 . "/" . $3' then cut -f cidr ;;
+            'MYIP_DOMAIN') mawk -F, '$0~/^[^#]/{print $2}' ;;
+            'MYIP_IPV4') mawk '$0~/^[^#]/{print $1}' | ipinfo grepip -4hox --nocolor ;;
+            'MYIP_IPV6') mawk '$0~/^[^#]/{print $1}' | ipinfo grepip -6hox --nocolor ;;
             esac
             ;;
         'JSON')
@@ -65,34 +70,46 @@ main() {
             'CYBER_CURE_IPV4') jq -r '.data.ip[]' ;;
             'CYBERSAIYAN_DOMAIN') jq -r '.[] | select(.value.type == "URL") | .indicator' | get_domains_from_urls ;;
             'CYBERSAIYAN_IPV4') jq -r '.[] | select(.value.type == "URL") | .indicator' | get_ipv4s_from_urls ;;
+            'DISCONNECTME_ENTITIES') jq -r '.entities[] | "\(.properties[])\n\(.resources[])"' ;;
+            'DISCONNECTME_SERVICES') jq -r '.categories[] | to_entries[].value[] | to_entries[].value[]' ;;
+            'HIPO_UNIVERSITIES') jq -r '.[].domains | join("\n")' ;;
+            'ISCSANS') jq -r '.[].ipv4' ;;
+            'MALSILO_DOMAIN') jq -r '.data[].network_traffic | select(.dns != null) | .dns[]' ;;
+            'MALSILO_IPV4') jq -r '.data[].network_traffic | select(.tcp != null) | .tcp[] | split(":")[0]' ;;
+            'MALTRAIL') jq -r '.[].ip' ;;
             esac
             ;;
         'CSV')
             case "$LIST_FILTER" in
-            'MLR_CUT_1') mlr --csv --skip-comments -N clean-whitespace then cut -f 1 ;;
-            'MLR_CUT_2') mlr --csv --skip-comments -N clean-whitespace then cut -f 2 ;;
-            'MLR_CUT_3') mlr --csv --skip-comments -N clean-whitespace then cut -f 3 ;;
-            'MLR_CUT_4') mlr --csv --skip-comments -N clean-whitespace then cut -f 4 ;;
-            'BENKOW_DOMAIN') mlr --csv --ifs ';' cut -f url | get_domains_from_urls ;;
-            'BENKOW_IPV4') mlr --csv --ifs ';' cut -f url | get_ipv4s_from_urls ;;
+            'MLR_CUT_1') mlr --csv --skip-comments --headerless-csv-output -N clean-whitespace then cut -f 1 ;;
+            'MLR_CUT_2') mlr --csv --skip-comments --headerless-csv-output -N clean-whitespace then cut -f 2 ;;
+            'MLR_CUT_3') mlr --csv --skip-comments --headerless-csv-output -N clean-whitespace then cut -f 3 ;;
+            'MLR_CUT_4') mlr --csv --skip-comments --headerless-csv-output -N clean-whitespace then cut -f 4 ;;
+            'BENKOW_DOMAIN') mlr --csv --headerless-csv-output --ifs ';' cut -f url | get_domains_from_urls ;;
+            'BENKOW_IPV4') mlr --csv --headerless-csv-output --ifs ';' cut -f url | get_ipv4s_from_urls ;;
             'BOTVIRJ_COVID') mawk 'NR>1' ;;
             'CYBER_CURE_DOMAIN_URL') tr ',' '\n' | get_domains_from_urls ;;
+            'MALWARE_DISCOVERER_DOMAIN') mlr --csv --headerless-csv-output cut -f domain ;;
+            'MALWARE_DISCOVERER_IPV4') mlr --csv --headerless-csv-output cut -f ip ;;
             esac
             ;;
         esac | mawk 'NF && !seen[$0]++' |
-            case "$LIST_FORMAT" in
-            'DOMAIN')
-                perl ./scripts/v1/process_domains.pl 2>/dev/null
-                ;;
-            'IPV4')
-                perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_ipv4($_) && !is_unroutable_ipv4($_) && !is_private_ipv4($_) && !is_loopback_ipv4($_) && !is_linklocal_ipv4($_) && !is_testnet_ipv4($_)) {say $_;}' 2>/dev/null
-                ;;
-            'IPV6')
-                perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_ipv6($_)) {say $_;}' 2>/dev/null
-                ;;
-            'CIDR4') validate_cidr ;;
-            'CIDR6') validate_cidr ;;
-            esac >>"build/${LIST_METHOD}_${LIST_FORMAT}.txt"
+        case "$LIST_FORMAT" in
+        'DOMAIN')
+            perl ./scripts/v1/process_domains.pl 2>/dev/null
+            >>"build/${LIST_METHOD}_${LIST_FORMAT}.txt"
+            ;;
+        'IPV4')
+            perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_ipv4($_) && !is_unroutable_ipv4($_) && !is_private_ipv4($_) && !is_loopback_ipv4($_) && !is_linklocal_ipv4($_) && !is_testnet_ipv4($_)) {say $_;}' 2>/dev/null
+            >>"build/${LIST_METHOD}_${LIST_FORMAT}.txt"
+            ;;
+        'IPV6')
+            perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_ipv6($_)) {say $_;}' 2>/dev/null
+            >>"build/${LIST_METHOD}_${LIST_FORMAT}.txt"
+            ;;
+        'CIDR4') validate_cidr >>"build/IPV4_${LIST_FORMAT}.txt" ;;
+        'CIDR6') validate_cidr >>"build/IPV6_${LIST_FORMAT}.txt" ;;
+        esac
 }
 
 main "$1" "$2" "$3" "$4" "$5" "$6"
