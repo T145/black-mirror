@@ -18,7 +18,7 @@ get_ipv4s_from_urls() {
 
 # params: column number
 mlr_cut_col() {
-    mlr --csv --skip-comments --headerless-csv-output -N clean-whitespace then cut -f "$1"
+    mlr --csv --skip-comments -N clean-whitespace then cut -f "$1"
 }
 
 # params: list format, method, key
@@ -113,7 +113,7 @@ main() {
             'PHISHSTATS_DOMAIN') mlr_cut_col 3 | get_domains_from_urls ;;
             'PHISHSTATS_IPV4') mlr_cut_col 4 | get_ipv4s ;;
             'PHISHSTATS_IPV6') mlr_cut_col 4 | get_ipv6s ;;
-            'TURRIS') mlr --csv --skip-comments cut -f Address ;;
+            'TURRIS') mlr --csv --headerless-csv-output --skip-comments cut -f Address ;;
             'VIRIBACK_DOMAIN') mlr --csv --headerless-csv-output cut -f URL | get_domains_from_urls ;;
             'VIRIBACK_IPV4') mlr --csv --headerless-csv-output cut -f IP ;;
             esac
