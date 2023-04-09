@@ -62,7 +62,7 @@ RUN curl http://pi.dk/3/ | bash \
 # https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.4.5" \
+      version="5.4.6" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -128,7 +128,8 @@ RUN apt-get -q -y update --no-allow-insecure-repositories; \
     p7zip-full=16.02+dfsg-8 \
     python3-pip=20.3.4-4+deb11u1 \
     rkhunter=1.4.6-9 \
-    symlinks=1.4-4; \
+    symlinks=1.4-4 \
+    unzip=6.0-26+deb11u1; \
     apt-get install -y --no-install-recommends --reinstall ca-certificates=*; \
     apt-get -y autoremove; \
     apt-get -y clean; \

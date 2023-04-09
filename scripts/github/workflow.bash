@@ -4,7 +4,7 @@
 main() {
 	git config --global --add safe.directory /__w/black-mirror/black-mirror
 
-	if ./scripts/v2/build_release.bash; then
+	if ./scripts/v2/build_lists.bash; then
 		find -P -O3 ./build/ -type f -name "*.txt" -exec ./scripts/github/update_readme_tag.bash {} \;
 
 		# https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#outputs-for-composite-actions=

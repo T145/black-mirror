@@ -14,7 +14,6 @@
   - Main-Template
   - Gaming-Full-Template
   - Android-Full-Template
-- [notracking](https://github.com/notracking/hosts-blocklists#no-more-ads-tracking-and-other-virtual-garbage)
 - [oisd_full](https://oisd.nl/downloads)
 - [oisd_extra](https://oisd.nl/downloadsXtra)
 - [openphish](https://openphish.com/index.html)
@@ -416,6 +415,7 @@
   - Used lists [here](https://github.com/bluerogue/threatlist/blob/master/src/main/java/io/matthewroberts/threatlist/service/ThreatAggregationServiceImpl.java#L32).
 - [StrictBlockPAllebone](https://github.com/pallebone/StrictBlockPAllebone)
 - [mullvad](https://github.com/mullvad/dns-blocklists)
+- [notracking](https://github.com/notracking/hosts-blocklists/blob/master/SOURCES.md)
 
 ## 🧟 Zombies
 
