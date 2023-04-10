@@ -25,10 +25,16 @@ FORMATS=("$FORMAT_DOMAIN" "$FORMAT_CIDR4" "$FORMAT_CIDR6" "$FORMAT_IPV4" "$FORMA
 readonly -a METHODS
 readonly -a FORMATS
 
+sorted() {
+	parsort -bfiu -S 100% -T "$DOWNLOADS" "$1" | sponge "$1"
+}
+
 main() {
 	trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 
 	local cache
+	local list
+	local blacklist
 
 	mkdir -p build/
 	: >logs/aria2.log
@@ -54,10 +60,30 @@ main() {
 			.value.formats[] |
 			"\($key)#\($content_filter)#\($content_type)#\(.filter)#\(.format)"' data/v2/lists.json |
 				while IFS='#' read -r key content_filter content_type list_filter list_format; do
-					find -P -O3 "$cache" -name "$key" -type f -exec sem -j+0 ./scripts/v2/apply_filters.bash {} "$method" "$content_filter" "$content_type" "$list_filter" "$list_format" \;
+					find -P -O3 "$cache" -name "$key" -type f -exec sem -j+0 ./scripts/v2/apply_filters.bash {} "$method" "$content_filter" "$content_type" "$list_filter" "$list_format" \; 1>/dev/null
 				done
 
 		sem --wait
+
+		for format in "${FORMATS[@]}"; do
+			if [[ "$format" != "$FORMAT_CIDR4" || "$format" != "$FORMAT_CIDR6" ]]; then
+				list="build/${method}_${format}.txt"
+
+				if test -f "$list"; then
+					if [[ "$method" == "$METHOD_BLOCK" ]]; then
+						sorted "$list"
+					else
+						blacklist="build/BLOCK_${format}.txt"
+
+						# https://askubuntu.com/a/562352
+						# send each line into the temp file as it's processed instead of keeping it in memory
+						parallel --pipe -k -j+0 grep --line-buffered -Fxvf "$list" - <"$blacklist" >>"$TMP"
+						cp "$TMP" "$blacklist"
+						: >"$TMP"
+					fi
+				fi
+			fi
+		done
 	done
 }
 
