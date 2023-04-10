@@ -73,6 +73,7 @@ main() {
             'MYIP_DOMAIN') mawk -F, '$0~/^[^#]/{print $2}' ;;
             'MYIP_IPV4') mawk '$0~/^[^#]/{print $1}' | get_ipv4s ;;
             'MYIP_IPV6') mawk '$0~/^[^#]/{print $1}' | get_ipv6s ;;
+            'XFILES') tr -d "[:blank:]" | hostsblock | mawk '{print $2}' ;;
             esac
             ;;
         'JSON')
@@ -121,16 +122,15 @@ main() {
         esac | mawk 'NF && !seen[$0]++' |
         case "$LIST_FORMAT" in
         'DOMAIN')
-            perl ./scripts/v2/process_domains.pl 2>/dev/null
-            >>"build/${LIST_METHOD}_${LIST_FORMAT}.txt"
+            perl ./scripts/v2/process_domains.pl 2>/dev/null >>"build/${LIST_METHOD}_${LIST_FORMAT}.txt"
             ;;
         'IPV4')
             perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_ipv4($_) && !is_unroutable_ipv4($_) && !is_private_ipv4($_) && !is_loopback_ipv4($_) && !is_linklocal_ipv4($_) && !is_testnet_ipv4($_)) {say $_;}' 2>/dev/null
-            >>"build/${LIST_METHOD}_${LIST_FORMAT}.txt"
+                >>"build/${LIST_METHOD}_${LIST_FORMAT}.txt"
             ;;
         'IPV6')
             perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_ipv6($_)) {say $_;}' 2>/dev/null
-            >>"build/${LIST_METHOD}_${LIST_FORMAT}.txt"
+                >>"build/${LIST_METHOD}_${LIST_FORMAT}.txt"
             ;;
         'CIDR4') validate_cidr >>"build/IPV4_${LIST_FORMAT}.txt" ;;
         'CIDR6') validate_cidr >>"build/IPV6_${LIST_FORMAT}.txt" ;;
