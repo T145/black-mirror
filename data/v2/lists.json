@@ -6220,5 +6220,433 @@
     "method": "BLOCK",
     "mirrors": ["https://raw.githubusercontent.com/tiuxo/hosts/master/social"],
     "topic": "SECURITY"
+  },
+  "giox_siteblock": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "XFILES",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/gioxx/xfiles#readme",
+      "homepage": "https://xfiles.noads.it/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://raw.githubusercontent.com/gioxx/xfiles/master/siteblock.txt"],
+    "topic": "SECURITY"
+  },
+  "giox_facebook": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "XFILES",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/gioxx/xfiles#readme",
+      "homepage": "https://xfiles.noads.it/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://raw.githubusercontent.com/gioxx/xfiles/master/facebook.txt"],
+    "topic": "SECURITY"
+  },
+  "giox_filtri": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "XFILES",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/gioxx/xfiles#readme",
+      "homepage": "https://xfiles.noads.it/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://raw.githubusercontent.com/gioxx/xfiles/master/filtri.txt"],
+    "topic": "SECURITY"
+  },
+  "giox_upd": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "XFILES",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/gioxx/xfiles#readme",
+      "homepage": "https://xfiles.noads.it/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://raw.githubusercontent.com/gioxx/xfiles/master/upd.txt"],
+    "topic": "SECURITY"
+  },
+  "sinfonietta_gambling": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Sinfonietta/hostfiles",
+      "homepage": "https://github.com/Sinfonietta/hostfiles",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/gambling-hosts"],
+    "topic": "SECURITY"
+  },
+  "sinfonietta_porn": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Sinfonietta/hostfiles",
+      "homepage": "https://github.com/Sinfonietta/hostfiles",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts"],
+    "topic": "SECURITY"
+  },
+  "sinfonietta_snuff": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Sinfonietta/hostfiles",
+      "homepage": "https://github.com/Sinfonietta/hostfiles",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/snuff-hosts"],
+    "topic": "SECURITY"
+  },
+  "soteria_nou_ads": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/soteria-nou/domain-list#readme",
+      "homepage": "https://github.com/soteria-nou/domain-list",
+      "license": "https://github.com/soteria-nou/domain-list#license"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://raw.githubusercontent.com/soteria-nou/domain-list/master/ads.txt"],
+    "topic": "SECURITY"
+  },
+  "soteria_nou_analytics": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/soteria-nou/domain-list#readme",
+      "homepage": "https://github.com/soteria-nou/domain-list",
+      "license": "https://github.com/soteria-nou/domain-list#license"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://raw.githubusercontent.com/soteria-nou/domain-list/master/analytics.txt"],
+    "topic": "SECURITY"
+  },
+  "soteria_nou_enrichments": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/soteria-nou/domain-list#readme",
+      "homepage": "https://github.com/soteria-nou/domain-list",
+      "license": "https://github.com/soteria-nou/domain-list#license"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://raw.githubusercontent.com/soteria-nou/domain-list/master/enrichments.txt"],
+    "topic": "SECURITY"
+  },
+  "soteria_nou_fake": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/soteria-nou/domain-list#readme",
+      "homepage": "https://github.com/soteria-nou/domain-list",
+      "license": "https://github.com/soteria-nou/domain-list#license"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://raw.githubusercontent.com/soteria-nou/domain-list/master/fake.txt"],
+    "topic": "SECURITY"
+  },
+  "toms_security": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "CSV"
+    },
+    "formats": [
+      {
+        "filter": "SHADOWSERVER_HOSTS",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "SHADOWSERVER_TARGET",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "SHADOWSERVER_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/soteria-nou/domain-list#readme",
+      "homepage": "https://github.com/soteria-nou/domain-list",
+      "license": "https://github.com/soteria-nou/domain-list#license"
+    },
+    "method": "BLOCK",
+    "mirrors": ["http://security-research.dyndns.org/pub/malware-feeds/ponmocup-infected-domains-shadowserver.csv"],
+    "topic": "SECURITY"
+  },
+  "windowsspyblocker_extra": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/crazy-max/WindowsSpyBlocker",
+      "homepage": "https://crazymax.dev/WindowsSpyBlocker/",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/extra.txt"],
+    "topic": "SECURITY"
+  },
+  "windowsspyblocker_spy": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/crazy-max/WindowsSpyBlocker",
+      "homepage": "https://crazymax.dev/WindowsSpyBlocker/",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt"],
+    "topic": "SECURITY"
+  },
+  "windowsspyblocker_update": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/crazy-max/WindowsSpyBlocker",
+      "homepage": "https://crazymax.dev/WindowsSpyBlocker/",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update.txt"],
+    "topic": "SECURITY"
+  },
+  "sunshine_it": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.sunshine.it/",
+      "homepage": "https://www.sunshine.it/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://www.sunshine.it/blacklist.txt"],
+    "topic": "SECURITY"
+  },
+  "spamhouse_drop": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "CIDR4"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.spamhaus.org/organization/",
+      "homepage": "https://www.spamhaus.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.spamhaus.org/drop/drop.txt",
+      "https://www.spamhaus.org/drop/drop.lasso"
+    ],
+    "topic": "SECURITY"
+  },
+  "spamhouse_edrop": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "CIDR6"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.spamhaus.org/organization/",
+      "homepage": "https://www.spamhaus.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.spamhaus.org/drop/edrop.txt",
+      "https://www.spamhaus.org/drop/edrop.lasso"
+    ],
+    "topic": "SECURITY"
   }
 }

@@ -178,7 +178,6 @@
   - malware
 - [Tenzin Gyatso Creations](https://tgc.cloud/downloads/)
 - [Orthrus](https://github.com/marcusminus/Orthrus-BlockList)
-- [youtube_ad_blocklist](https://github.com/Ewpratten/youtube_ad_blocklist)
 - [Esox-Lucius](https://github.com/Esox-Lucius/PiHoleblocklists)
   - AZORult
   - AgentTesla
@@ -655,3 +654,4 @@
 - [Energized Xtreme Extension](https://github.com/EnergizedProtection/block#extensions-2)
 - [joewein's domain lists](https://joewein.net/spam/bl-text.htm)
   - The domain lists have been deprecated.
+- [youtube_ad_blocklist](https://github.com/Ewpratten/youtube_ad_blocklist)

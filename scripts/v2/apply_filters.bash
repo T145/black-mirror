@@ -117,6 +117,9 @@ main() {
             'TURRIS') mlr --csv --headerless-csv-output --skip-comments cut -f Address ;;
             'VIRIBACK_DOMAIN') mlr --csv --headerless-csv-output cut -f URL | get_domains_from_urls ;;
             'VIRIBACK_IPV4') mlr --csv --headerless-csv-output cut -f IP ;;
+            'SHADOWSERVER_HOST') mlr --csv --headerless-csv-output cut -f http_host ;;
+            'SHADOWSERVER_TARGET') mlr --csv --headerless-csv-output cut -f redirect_target ;;
+            'SHADOWSERVER_IPV4') mlr --csv --headerless-csv-output cut -f ip ;;
             esac
             ;;
         esac | mawk 'NF && !seen[$0]++' |
@@ -132,8 +135,8 @@ main() {
             perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_ipv6($_)) {say $_;}' 2>/dev/null
                 >>"build/${LIST_METHOD}_${LIST_FORMAT}.txt"
             ;;
-        'CIDR4') validate_cidr >>"build/IPV4_${LIST_FORMAT}.txt" ;;
-        'CIDR6') validate_cidr >>"build/IPV6_${LIST_FORMAT}.txt" ;;
+        'CIDR4') validate_cidr >>"build/${LIST_METHOD}_IPV4.txt" ;;
+        'CIDR6') validate_cidr >>"build/${LIST_METHOD}_IPV6.txt" ;;
         esac
 }
 
