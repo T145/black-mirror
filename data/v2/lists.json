@@ -1827,56 +1827,6 @@
     ],
     "topic": "SECURITY"
   },
-  "cymru_ipv4_bogons": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "CIDR4"
-      }
-    ],
-    "metadata": {
-      "description": "https://team-cymru.com/community-services/bogon-reference/",
-      "homepage": "https://team-cymru.com/community-services/bogon-reference/bogon-reference-http/",
-      "license": "all-rights-reserved"
-    },
-    "method": "ALLOW",
-    "mirrors": [
-      "https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "cymru_ipv6_bogons": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "CIDR6"
-      }
-    ],
-    "metadata": {
-      "description": "https://team-cymru.com/community-services/bogon-reference/",
-      "homepage": "https://team-cymru.com/community-services/bogon-reference/bogon-reference-http/",
-      "license": "all-rights-reserved"
-    },
-    "method": "ALLOW",
-    "mirrors": [
-      "https://www.team-cymru.org/Services/Bogons/fullbogons-ipv6.txt"
-    ],
-    "topic": "SECURITY"
-  },
   "d3ward": {
     "archive": false,
     "checksums": {},
