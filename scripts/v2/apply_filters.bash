@@ -73,6 +73,8 @@ main() {
             'MYIP_DOMAIN') mawk -F, '$0~/^[^#]/{print $2}' ;;
             'MYIP_IPV4') mawk '$0~/^[^#]/{print $1}' | get_ipv4s ;;
             'MYIP_IPV6') mawk '$0~/^[^#]/{print $1}' | get_ipv6s ;;
+            'VXVAULT_DOMAIN') mawk '/^[http]/' | get_domains_from_urls ;;
+            'VXVAULT_IPV4') mawk '/^[http]/' | get_ipv4s_from_urls ;;
             'XFILES') tr -d "[:blank:]" | hostsblock | mawk '{print $2}' ;;
             esac
             ;;

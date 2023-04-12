@@ -195,23 +195,21 @@
   - ads
   - analytics
   - enrichments
+- [vxvault](http://vxvault.net/URL_List.php)
+- [Chong Lua Dao](https://chongluadao.vn/)
+  - [Blacklist](https://api.chongluadao.vn/v1/blacklist)
 
 ### Add to blacklist
 
-- [Yuki2718](https://github.com/Yuki2718/adblock)
 - [Mochi Filter](https://github.com/eEIi0A5L/adblock_filter/blob/master/mochi_filter.txt)
 - [herrbischoff](https://git.herrbischoff.com/trackers/about/)
   - All lists are used.
   - [Support female hygiene in Zanzibar](https://git.herrbischoff.com/trackers/about/#women-empowerment-in-zanzibar)!
-- [Chong Lua Dao](https://chongluadao.vn/)
-  - [Blacklist](https://api.chongluadao.vn/v1/blacklist)
-  - [Whitelist](https://api.chongluadao.vn/v1/whitelist)
 - [migueldemoura](https://github.com/migueldemoura/ublock-umatrix-rulesets)
 - nextdns
   - [cname-cloaking-blocklist](https://github.com/nextdns/cname-cloaking-blocklist) ?
 - [uAssets](https://github.com/uBlockOrigin/uAssets)
 - [stonecrusher](https://github.com/stonecrusher/filterlists-pihole/blob/master/watchlist-internet-ph.txt)
-- [vxvault](http://vxvault.net/URL_List.php)
 - [pop3gropers](https://home.nuug.no/~peter/pop3gropers.txt)
 - [blacklist-named](https://github.com/tomzuu/blacklist-named)
 - [ad-wars](https://github.com/jdlingyu/ad-wars)
@@ -240,8 +238,6 @@
   - webattack
 - [Ugly Email Trackers](https://github.com/OneClickLab/ugly-email-trackers)
   - [Leave Me Alone](https://github.com/leavemealone-app/email-trackers)
-- [interactivefriends](http://interactivefriends.co.uk/blocklist.txt)
-  - Seems to be against gambling.
 - [JoshWho](https://ddosblocklist.joshwho.net/)
 - [mhhakim](https://github.com/mhhakim/pihole-blocklist)
   - custom-blacklist
@@ -326,6 +322,8 @@
 - [mhhakim](https://github.com/mhhakim/pihole-blocklist)
   - custom-porn-whitelist
 - [metalhead](https://github.com/T145/metalhead)
+- [Chong Lua Dao](https://chongluadao.vn/)
+  - [Whitelist](https://api.chongluadao.vn/v1/whitelist)
 
 ### Add to whitelist
 
@@ -656,3 +654,6 @@
 - [youtube_ad_blocklist](https://github.com/Ewpratten/youtube_ad_blocklist)
 - [Airelle's Hosts](http://rlwpx.free.fr/WPFF/hosts.htm)
   - The content of every download has their "NoWar" package, which includes scripts intented to DDoS Russian websites.
+- [interactivefriends](http://interactivefriends.co.uk/blocklist.txt)
+  - Seems to be against gambling.
+- [Yuki's Old Adblock](https://github.com/Yuki2718/adblock)

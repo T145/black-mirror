@@ -6533,5 +6533,34 @@
       "https://www.spamhaus.org/drop/edrop.lasso"
     ],
     "topic": "SECURITY"
+  },
+  "vxvault": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "VXVAULT_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "VXVAULT_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "http://vxvault.net/",
+      "homepage": "http://vxvault.net/",
+      "license": "no-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "http://vxvault.net/URL_List.php"
+    ],
+    "topic": "SECURITY"
   }
 }
