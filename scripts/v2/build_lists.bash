@@ -42,6 +42,8 @@ main() {
 	for method in "${METHODS[@]}"; do
 		cache="${DOWNLOADS}/${method}"
 
+		echo "[INFO] Processing method: ${method}"
+
 		# use 'lynx -dump -listonly -nonumbers' to get a raw page
 
 		set +e # temporarily disable strict fail, in case downloads fail
@@ -52,6 +54,8 @@ main() {
 			aria2c -i- -d "$cache" --conf-path='./configs/aria2.conf'
 		set -e
 
+		echo "[INFO] Downloaded lists!"
+
 		jq -r --arg method "$method" 'to_entries[] |
 			select(.value.method == $method) |
 			.key as $key |
@@ -60,27 +64,33 @@ main() {
 			.value.formats[] |
 			"\($key)#\($content_filter)#\($content_type)#\(.filter)#\(.format)"' data/v2/lists.json |
 			while IFS='#' read -r key content_filter content_type list_filter list_format; do
-				#find -P -O3 "$cache" -name "$key" -type f -exec sem -j+0 ./scripts/v2/apply_filters.bash {} "$method" "$content_filter" "$content_type" "$list_filter" "$list_format" \; 1>/dev/null
-				find -P -O3 "$cache" -name "$key" -type f -exec ./scripts/v2/apply_filters.bash {} "$method" "$content_filter" "$content_type" "$list_filter" "$list_format" \; 1>/dev/null
+				find -P -O3 "$cache" -name "$key" -type f -exec sem -j+0 ./scripts/v2/apply_filters.bash {} "$method" "$content_filter" "$content_type" "$list_filter" "$list_format" \; 1>/dev/null
 			done
 
-		#sem --wait
+		sem --wait
+
+		echo "[INFO] Processed ${method} lists!"
 
 		for format in "${FORMATS[@]}"; do
 			if [[ "$format" != "$FORMAT_CIDR4" || "$format" != "$FORMAT_CIDR6" ]]; then
 				list="build/${method}_${format}.txt"
+
+				echo "[INFO] Processing: ${list}"
 
 				if test -f "$list"; then
 					if [[ "$method" == "$METHOD_BLOCK" ]]; then
 						sorted "$list"
 					else
 						blacklist="build/BLOCK_${format}.txt"
+						echo "[INFO] Applying whitelist: ${list}"
 
 						# https://askubuntu.com/a/562352
 						# send each line into the temp file as it's processed instead of keeping it in memory
 						parallel --pipe -k -j+0 grep --line-buffered -Fxvf "$list" - <"$blacklist" >>"$TMP"
 						cp "$TMP" "$blacklist"
 						: >"$TMP"
+
+						echo "[INFO] Applied whitelist to: ${blacklist}"
 					fi
 				fi
 			fi
