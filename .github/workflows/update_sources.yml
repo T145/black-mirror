@@ -8,6 +8,7 @@ on:
       - master
     paths:
       - "data/v2/lists.json"
+  workflow_dispatch:
 
 jobs:
   export_sources:

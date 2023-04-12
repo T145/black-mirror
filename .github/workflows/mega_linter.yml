@@ -8,6 +8,7 @@ on:
   #push: # Comment this line to trigger action only on pull-requests (not recommended if you don't pay for GH Actions)
   pull_request:
     branches: [master]
+  workflow_dispatch:
 
 env: # Comment env block if you do not want to apply fixes
   # Apply linter fixes configuration
