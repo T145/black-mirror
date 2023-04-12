@@ -7,7 +7,6 @@ shopt -s execfail     # ensure interactive and non-interactive runtime are simil
 shopt -s extglob      # enable extended pattern matching (https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html)
 set -euET -o pipefail # put bash into strict mode & have it give descriptive errors
 umask 055             # change all generated file perms from 755 to 700
-ulimit -v 2048000	  # set virtual memory limit to 2GB
 export LC_ALL=C       # force byte-wise sorting and default langauge output
 
 DOWNLOADS=$(mktemp -d)
