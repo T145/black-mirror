@@ -56,8 +56,7 @@ main() {
             case "$LIST_FILTER" in
             'NONE') cat -s ;;
             'RAW_HOSTS_WITH_COMMENTS') mawk '/^[^[:space:]|^#|^!|^;]/{print $1}' ;;
-            # ghosts -m /dev/stdin -o -p -noheader -stats=false
-            'HOSTS_FILE') hosts-bl -f fqdn -compression 1 /dev/stdin /dev/stdout ;;
+            'HOSTS_FILE') ghosts -m /dev/stdin -o -p -noheader -stats=false ;;
             'ABUSE_CH_URLHAUS_DOMAIN') get_domains_from_urls ;;
             'ABUSE_CH_URLHAUS_IPV4') get_ipv4s_from_urls ;;
             'ALIENVAULT') mawk -F# '{print $1}' ;;

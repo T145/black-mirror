@@ -10,7 +10,9 @@ RUN go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@v1.1.3; \
     # https://github.com/projectdiscovery/shuffledns#usage
     go install -v github.com/projectdiscovery/shuffledns/cmd/shuffledns@v1.0.8; \
     # https://github.com/ipinfo/cli#-ipinfo-cli
-    go install -v github.com/ipinfo/cli/ipinfo@ipinfo-2.10.1;
+    go install -v github.com/ipinfo/cli/ipinfo@ipinfo-2.10.1; \
+    # https://github.com/StevenBlack/ghosts#ghosts
+    go install -v github.com/StevenBlack/ghosts@v0.2.2;
 
 # https://hub.docker.com/_/buildpack-deps/
 FROM buildpack-deps:stable as utils
@@ -37,10 +39,6 @@ RUN curl http://pi.dk/3/ | bash \
     curl -sLO "https://github.com/johnkerl/miller/releases/download/v${MILLER_VERSION}/miller-${MILLER_VERSION}-linux-amd64.tar.gz" \
     && tar -xvzf miller-*.tar.gz \
     && mv miller-*/mlr /usr/local/bin; \
-    # https://scripttiger.github.io/more/
-    curl -sLO "https://github.com/ScriptTiger/Hosts-BL/releases/download/26JUN2022/hosts-bl_linux_amd64.zip" \
-    && unzip hosts-bl_linux_amd64.zip \
-    && mv hosts-bl /usr/local/bin; \
     # https://github.com/blechschmidt/massdns#compilation
     # https://github.com/projectdiscovery/shuffledns#prerequisite
     git clone https://github.com/blechschmidt/massdns.git \
