@@ -94,7 +94,6 @@
 - [malsilo|raw-data](https://raw-data.gitlab.io/post/feeds/)
 - [The Quantum Ad-List](https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list)
   - Last updated nearly a year ago and may need to be deprecated, though most hosts seem to be up.
-- [Airelle's Hosts](http://rlwpx.free.fr/WPFF/hosts.htm)
 - [someonewhocares](https://someonewhocares.org/)
 - [FutaFilter](https://github.com/FutaGuard/FutaFilter#readme)
 - [Better FYI](https://better.fyi/)
@@ -655,3 +654,5 @@
 - [joewein's domain lists](https://joewein.net/spam/bl-text.htm)
   - The domain lists have been deprecated.
 - [youtube_ad_blocklist](https://github.com/Ewpratten/youtube_ad_blocklist)
+- [Airelle's Hosts](http://rlwpx.free.fr/WPFF/hosts.htm)
+  - The content of every download has their "NoWar" package, which includes scripts intented to DDoS Russian websites.
