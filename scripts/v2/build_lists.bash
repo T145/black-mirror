@@ -73,7 +73,7 @@ main() {
 		echo "[INFO] Processed ${method} lists!"
 
 		for format in "${FORMATS[@]}"; do
-			if [[ "$format" != "$FORMAT_CIDR4" || "$format" != "$FORMAT_CIDR6" ]]; then
+			if [[ "$format" != "$FORMAT_CIDR4" && "$format" != "$FORMAT_CIDR6" ]]; then
 				list="build/${method}_${format}.txt"
 
 				echo "[INFO] Processing: ${list}"
