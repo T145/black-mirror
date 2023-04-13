@@ -31,10 +31,11 @@ sorted() {
 
 # params: ip list, cidr whitelist
 apply_cidr_whitelist() {
-	if test -f "$1"; then
+	if test -f "$1" && test -f "$2"; then
 		grepcidr -vf "$2" <"$1" >>"$TMP"
 		cp "$TMP" "$1"
 		: >"$TMP"
+		echo "[INFO] Applied CIDR whitelist to: ${blacklist}"
 	fi
 }
 
@@ -105,9 +106,13 @@ main() {
 						parallel --pipe -k -j+0 grep --line-buffered -Fxvf "$list" - <"$blacklist" >>"$TMP"
 						cp "$TMP" "$blacklist"
 						: >"$TMP"
+						echo "[INFO] Applied whitelist to: ${blacklist}"
 					fi
-
-					echo "[INFO] Applied whitelist to: ${blacklist}"
+				# Remove IPs from the IP blacklists that are covered by the CIDR blacklists
+				elif [[ "$format" == "$FORMAT_CIDR4" ]]; then
+					apply_cidr_whitelist "build/BLOCK_IPV4.txt" "$list"
+				elif [[ "$format" == "$FORMAT_CIDR6" ]]; then
+					apply_cidr_whitelist "build/BLOCK_IPV6.txt" "$list"
 				fi
 			fi
 		done
