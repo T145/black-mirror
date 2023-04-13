@@ -48,21 +48,13 @@ RUN curl http://pi.dk/3/ | bash \
     # forked in case the original repo goes offline
     git clone https://github.com/T145/hostsblock \
     && make -C hostsblock \
-    && mv /hostsblock/hostsblock /usr/local/bin; \
-    # https://unix.stackexchange.com/questions/248610/validating-ip-addresses-ipv4-and-ipv6
-    apt-get -y update \
-    && apt-get -y install meson \
-    && git clone https://gitlab.com/ipcalc/ipcalc.git \
-    && cd ipcalc \
-    && meson setup build --buildtype=release \
-    && ninja -C build \
-    && cp build/ipcalc /usr/local/bin;
+    && mv /hostsblock/hostsblock /usr/local/bin;
 
 # https://wiki.debian.org/DiskFreeSpace
 # https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.4.6" \
+      version="5.4.8" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -112,6 +104,7 @@ RUN apt-get -q -y update --no-allow-insecure-repositories; \
     debsums=3.0.2 \
     gawk=1:5.1.0-1 \
     git=1:2.39.2-1~bpo11+1 \
+    grepcidr=2.0-2 \
     html-xml-utils=7.7-1.1 \
     jq=1.6-2.1 \
     libdata-validate-domain-perl=0.10-1.1 \
@@ -154,7 +147,7 @@ RUN chown 0:0 /usr/bin/as \
     # https://github.com/debuerreotype/debuerreotype/pull/32
     rmdir /run/mount 2>/dev/null || :;
 
-RUN pip3 install --no-cache-dir --upgrade snscrape; \
+RUN pip3 install --no-cache-dir --upgrade snscrape==0.6.2.20230320; \
     pip3 cache purge; \
     py3clean -v ./usr/lib/python3.9 ./usr/share/python3; \
     rm -rf /root/.cache;

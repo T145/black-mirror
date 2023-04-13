@@ -445,9 +445,7 @@
         "rule": "BEGIN{FS=\"[|^]\"}/^\\|\\|([[:alnum:]_-]{1,63}\\.)+[[:alpha:]]+\\^(\\$third-party)?$/{print tolower($3)}"
       }
     ],
-    "mirrors": [
-      "https://better.fyi/blockerList.txt"
-    ],
+    "mirrors": ["https://better.fyi/blockerList.txt"],
     "variants": [
       "https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt"
     ]

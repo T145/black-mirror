@@ -21,12 +21,21 @@ FORMAT_IPV6='IPV6'
 readonly DOWNLOADS TMP METHOD_ALLOW METHOD_BLOCK FORMAT_DOMAIN FORMAT_CIDR4 FORMAT_CIDR6 FORMAT_IPV4 FORMAT_IPV6
 
 METHODS=("$METHOD_BLOCK" "$METHOD_ALLOW")
-FORMATS=("$FORMAT_DOMAIN" "$FORMAT_CIDR4" "$FORMAT_CIDR6" "$FORMAT_IPV4" "$FORMAT_IPV6")
+FORMATS=("$FORMAT_DOMAIN" "$FORMAT_IPV4" "$FORMAT_IPV6" "$FORMAT_CIDR4" "$FORMAT_CIDR6")
 readonly -a METHODS
 readonly -a FORMATS
 
 sorted() {
 	parsort -bfiu -S 100% -T "$DOWNLOADS" "$1" | sponge "$1"
+}
+
+# params: ip list, cidr whitelist
+apply_cidr_whitelist() {
+	if test -f "$1"; then
+		grepcidr -vf "$2" <"$1" >>"$TMP"
+		cp "$TMP" "$1"
+		: >"$TMP"
+	fi
 }
 
 main() {
@@ -73,26 +82,32 @@ main() {
 		echo "[INFO] Processed ${method} lists!"
 
 		for format in "${FORMATS[@]}"; do
-			if [[ "$format" != "$FORMAT_CIDR4" && "$format" != "$FORMAT_CIDR6" ]]; then
-				list="build/${method}_${format}.txt"
+			list="build/${method}_${format}.txt"
 
-				echo "[INFO] Processing: ${list}"
+			echo "[INFO] Processing: ${list}"
 
-				if test -f "$list"; then
-					if [[ "$method" == "$METHOD_BLOCK" ]]; then
-						sorted "$list"
+			if test -f "$list"; then
+				sorted "$list"
+
+				if [[ "$method" == "$METHOD_ALLOW" ]]; then
+					blacklist="build/BLOCK_${format}.txt"
+					echo "[INFO] Applying whitelist: ${list}"
+
+					if [[ "$format" == "$FORMAT_CIDR4" ]]; then
+						apply_cidr_whitelist "$blacklist" "$list"
+						apply_cidr_whitelist "build/BLOCK_IPV4.txt" "$list"
+					elif [[ "$format" == "$FORMAT_CIDR6" ]]; then
+						apply_cidr_whitelist "$blacklist" "$list"
+						apply_cidr_whitelist "build/BLOCK_IPV6.txt" "$list"
 					else
-						blacklist="build/BLOCK_${format}.txt"
-						echo "[INFO] Applying whitelist: ${list}"
-
 						# https://askubuntu.com/a/562352
 						# send each line into the temp file as it's processed instead of keeping it in memory
 						parallel --pipe -k -j+0 grep --line-buffered -Fxvf "$list" - <"$blacklist" >>"$TMP"
 						cp "$TMP" "$blacklist"
 						: >"$TMP"
-
-						echo "[INFO] Applied whitelist to: ${blacklist}"
 					fi
+
+					echo "[INFO] Applied whitelist to: ${blacklist}"
 				fi
 			fi
 		done
