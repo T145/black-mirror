@@ -35,7 +35,7 @@ apply_cidr_whitelist() {
 		grepcidr -vf "$2" <"$1" >>"$TMP"
 		cp "$TMP" "$1"
 		: >"$TMP"
-		echo "[INFO] Applied CIDR whitelist to: ${blacklist}"
+		echo "[INFO] Applied CIDR whitelist to: ${1}"
 	fi
 }
 
