@@ -198,31 +198,37 @@
 - [vxvault](http://vxvault.net/URL_List.php)
 - [Chong Lua Dao](https://chongluadao.vn/)
   - [Blacklist](https://api.chongluadao.vn/v1/blacklist)
+- [herrbischoff](https://git.herrbischoff.com/trackers/about/)
+  - All lists are used.
+  - [Support female hygiene in Zanzibar](https://git.herrbischoff.com/trackers/about/#women-empowerment-in-zanzibar)!
+- [stonecrusher](https://github.com/stonecrusher/filterlists-pihole)
+- [Watchlist Internet](https://www.watchlist-internet.at/)
+- [CruzIT](https://www.cruzit.com/wbl.php)
+- [phishtank](https://data.phishtank.com/data/online-valid.csv)
+  - Mirror: [tg12](https://github.com/tg12/pihole-phishtank-list)
+- [trackerslist](https://github.com/ngosang/trackerslist)
+  - blacklist
+- [Charles B. Haley](https://charles.the-haleys.org/ssh_dico_attack_with_timestamps.php?days=7)
+- [CryptoScamDB Blacklist](https://github.com/CryptoScamDB)
+  - The API is currently offline.
+- [Red Flag Domains](https://red.flag.domains/)
+- [DNS For Family](https://dnsforfamily.com/)
 
 ### Add to blacklist
 
 - [Mochi Filter](https://github.com/eEIi0A5L/adblock_filter/blob/master/mochi_filter.txt)
-- [herrbischoff](https://git.herrbischoff.com/trackers/about/)
-  - All lists are used.
-  - [Support female hygiene in Zanzibar](https://git.herrbischoff.com/trackers/about/#women-empowerment-in-zanzibar)!
 - [migueldemoura](https://github.com/migueldemoura/ublock-umatrix-rulesets)
 - nextdns
   - [cname-cloaking-blocklist](https://github.com/nextdns/cname-cloaking-blocklist) ?
 - [uAssets](https://github.com/uBlockOrigin/uAssets)
-- [stonecrusher](https://github.com/stonecrusher/filterlists-pihole/blob/master/watchlist-internet-ph.txt)
 - [pop3gropers](https://home.nuug.no/~peter/pop3gropers.txt)
 - [blacklist-named](https://github.com/tomzuu/blacklist-named)
 - [ad-wars](https://github.com/jdlingyu/ad-wars)
 - [miriquidi](https://github.com/miriquidi/dns-block-lists)
-- [phishtank](https://data.phishtank.com/data/online-valid.csv)
-  - Mirror: [tg12](https://github.com/tg12/pihole-phishtank-list)
 - [turk-adlist](https://github.com/bkrucarci/turk-adlist)
 - [ad-hosts](https://github.com/ilpl/ad-hosts)
 - [SNAFU](https://github.com/RooneyMcNibNug/pihole-stuff/blob/master/SNAFU.txt)
-- [trackerslist](https://github.com/ngosang/trackerslist)
-  - blacklist
 - [dohservers](https://github.com/oneoffdallas/dohservers)
-- [CruzIT](https://www.cruzit.com/wbl.php)
 - [DroneBL](https://dronebl.org/docs/howtouse) ?
 - [Free Email Provider Domains](https://gist.github.com/tbrianjones/5992856)
 - [Search Engine Spam Blocklist](https://github.com/no-cmyk/Search-Engine-Spam-Blocklist)
@@ -244,7 +250,6 @@
   - custom-porn-blacklist
 - [TR-CERT](https://www.usom.gov.tr/url-list.txt)
   - Reference: [usom-blacklist](https://github.com/fuatboluk/usom-blacklist)
-- [Charles B. Haley](http://charles.the-haleys.org/ssh_dico_attack_with_timestamps.php?days=7)
 - [antipopads:reborn](https://github.com/AdroitAdorKhan/antipopads-re#antipopadsreborn=)
 - [HaGeZi/Zelo](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/personal.txt)
 - [bestpika](https://github.com/bestpika/abp)
@@ -261,7 +266,6 @@
 - [ilpl](https://github.com/ilpl/ad-hosts)
 - [Cats-Team](https://github.com/Cats-Team/AdRules)
   - [Mirror](https://cats-team.coding.net/p/adguard/d/AdRules/git/raw/main/ad-domains.txt)
-- [DNS For Family](https://dnsforfamily.com/Public/customBlacklist.txt)
 - [XIU2](https://github.com/XIU2/TrackersListCollection)
   - blacklist
 - [blockconvert](https://github.com/mkb2091/blockconvert)
@@ -269,8 +273,6 @@
 - [CleanTalk](https://cleantalk.org/help/iptables-connect)
 - [UA Blocklist](https://blocklist.net.ua/providers/)
 - [BotScout](https://botscout.com/last_caught_cache.htm)
-- [CryptoScamDB](https://github.com/CryptoScamDB)
-  - [blacklist](https://api.cryptoscamdb.org/v1/blacklist)
 - [Critical Path Security](https://github.com/CriticalPathSecurity/Zeek-Intelligence-Feeds)
   - censys.intel
   - cps-collected-iocs.intel
@@ -294,7 +296,6 @@
 - [Cyjax Uploads](https://www.cyjax.com/latest-analysis/)
 - [jawz subdomains](https://github.com/jawz101/subdomain_blocklists)
 - [elliotwutingfeng](https://github.com/elliotwutingfeng/Inversion-DNSBL-Blocklists)
-- [Red Flag Domains](https://dl.red.flag.domains/)
 - [Discord Phishing Links](https://github.com/nikolaischunk/discord-phishing-links)
 - [YT Spam Lists](https://github.com/ThioJoe/YT-Spam-Lists/blob/main/SpamDomainsList.txt)
 
@@ -324,13 +325,14 @@
 - [metalhead](https://github.com/T145/metalhead)
 - [Chong Lua Dao](https://chongluadao.vn/)
   - [Whitelist](https://api.chongluadao.vn/v1/whitelist)
+- [trackerslist](https://github.com/ngosang/trackerslist)
+  - trackers_best
+  - trackers_best_ip
+- [CryptoScamDB Whitelist](https://github.com/CryptoScamDB)
+  - The API is currently offline.
 
 ### Add to whitelist
 
-- [trackerslist](https://github.com/ngosang/trackerslist)
-  - trackers_all
-  - trackers_all_ws
-  - trackers_all_ip
 - [newtrackon](https://newtrackon.com/api/stable)
 - [CIDR Report](https://www.cidr-report.org/bogons/freespace-prefix.txt)
 - [zapret info nxdomain](https://github.com/zapret-info/z-i)
@@ -342,8 +344,6 @@
   - best lists
 - [quindecim](https://github.com/quindecim/block)
   - [domains-allowlist](https://github.com/quindecim/block/blob/master/config/domains-allowlist.txt)
-- [CryptoScamDB](https://github.com/CryptoScamDB)
-  - [whitelist](https://api.cryptoscamdb.org/v1/whitelist)
 - [SecureDrop](https://securedrop.org/api/v1/directory/)
 
 ## 🥢 Duplicates

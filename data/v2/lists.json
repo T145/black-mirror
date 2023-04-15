@@ -4238,59 +4238,6 @@
       "pihole": "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/tracking-aggressive-extended.txt"
     }
   },
-  "list_kr_adservice": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ADBLOCK",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/List-KR/List-KR#list-kr",
-      "homepage": "https://github.com/List-KR/List-KR",
-      "license": "gpl-3.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/List-KR/List-KR/master/filters-share/adservice.txt"
-    ],
-    "topic": "SECURITY",
-    "variants": {
-      "adguard": "https://raw.githubusercontent.com/List-KR/List-KR/master/filter.txt"
-    }
-  },
-  "list_kr_firstparty_adservice": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ADBLOCK",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/List-KR/List-KR#list-kr",
-      "homepage": "https://github.com/List-KR/List-KR",
-      "license": "gpl-3.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/List-KR/List-KR/master/filters-share/adservice_firstparty.txt"
-    ],
-    "topic": "SECURITY"
-  },
   "listkr_first_domains": {
     "archive": false,
     "checksums": {},
@@ -6796,6 +6743,591 @@
     "method": "BLOCK",
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
+    ],
+    "topic": "SECURITY"
+  },
+  "chong_lua_dao": {
+    "_notes": "Whitelist needs a greylist: https://api.chongluadao.vn/v1/whitelist",
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "CHONG_LUA_DAO_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "CHONG_LUA_DAO_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://chongluadao.vn/",
+      "homepage": "https://chongluadao.vn/",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://api.chongluadao.vn/v1/blacklist"
+    ],
+    "topic": "SECURITY"
+  },
+  "herrbischoff_trackers": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://git.herrbischoff.com/trackers/about/",
+      "homepage": "https://git.herrbischoff.com/trackers/about/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://git.herrbischoff.com/trackers/plain/trackers.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "herrbischoff_domains": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://git.herrbischoff.com/trackers/about/",
+      "homepage": "https://git.herrbischoff.com/trackers/about/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://git.herrbischoff.com/trackers/plain/domains.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "herrbischoff_telemetry": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://git.herrbischoff.com/trackers/about/",
+      "homepage": "https://git.herrbischoff.com/trackers/about/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://git.herrbischoff.com/trackers/plain/telemetry.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "herrbischoff_crap": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://git.herrbischoff.com/trackers/about/",
+      "homepage": "https://git.herrbischoff.com/trackers/about/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://git.herrbischoff.com/trackers/plain/crap.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "herrbischoff_cookie": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://git.herrbischoff.com/trackers/about/",
+      "homepage": "https://git.herrbischoff.com/trackers/about/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://git.herrbischoff.com/trackers/plain/cookie.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "herrbischoff_reject": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://git.herrbischoff.com/trackers/about/",
+      "homepage": "https://git.herrbischoff.com/trackers/about/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://git.herrbischoff.com/trackers/plain/reject.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "herrbischoff_spam": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://git.herrbischoff.com/trackers/about/",
+      "homepage": "https://git.herrbischoff.com/trackers/about/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://git.herrbischoff.com/trackers/plain/spam.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "stonecrusher_fake_shops": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/stonecrusher/filterlists-pihole",
+      "homepage": "https://github.com/stonecrusher/filterlists-pihole",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/stonecrusher/filterlists-pihole/master/VScom_fakeshops-ph.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "stonecrusher_streaming": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/stonecrusher/filterlists-pihole",
+      "homepage": "https://github.com/stonecrusher/filterlists-pihole",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/stonecrusher/filterlists-pihole/master/VScom_streaming-ph.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "stonecrusher_problematic_shops": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/stonecrusher/filterlists-pihole",
+      "homepage": "https://github.com/stonecrusher/filterlists-pihole",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/stonecrusher/filterlists-pihole/master/VSde_problematic_onlineshops-ph.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "stonecrusher_pseudoscience": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/stonecrusher/filterlists-pihole",
+      "homepage": "https://github.com/stonecrusher/filterlists-pihole",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/stonecrusher/filterlists-pihole/master/pseudowissenschaft-ph.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "stonecrusher_watchlist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/stonecrusher/filterlists-pihole",
+      "homepage": "https://github.com/stonecrusher/filterlists-pihole",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/stonecrusher/filterlists-pihole/master/watchlist-internet-ph.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "cruz_it": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "CSV"
+    },
+    "formats": [
+      {
+        "filter": "CRUZ_IT",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.cruzit.com/wbl.php",
+      "homepage": "https://www.cruzit.com/wbl.php",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.cruzit.com/xxwbl2csv.php"
+    ],
+    "topic": "SECURITY"
+  },
+  "phishtank": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "CSV"
+    },
+    "formats": [
+      {
+        "filter": "PHISHTANK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://phishtank.com/",
+      "homepage": "https://phishtank.com/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://data.phishtank.com/data/online-valid.csv"
+    ],
+    "topic": "SECURITY"
+  },
+  "trackerslist_best_domains": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "NONE"
+    },
+    "formats": [
+      {
+        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://ngosang.github.io/trackerslist/",
+      "homepage": "https://ngosang.github.io/trackerslist/",
+      "license": "gpl-2.0"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best.txt",
+      "https://ngosang.github.io/trackerslist/trackers_best.txt",
+      "https://cdn.jsdelivr.net/gh/ngosang/trackerslist@master/trackers_best.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "trackerslist_best_ips": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "NONE"
+    },
+    "formats": [
+      {
+        "filter": "ABUSE_CH_URLHAUS_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://ngosang.github.io/trackerslist/",
+      "homepage": "https://ngosang.github.io/trackerslist/",
+      "license": "gpl-2.0"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best_ip.txt",
+      "https://ngosang.github.io/trackerslist/trackers_best_ip.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "trackerslist_blacklist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "NONE"
+    },
+    "formats": [
+      {
+        "filter": "TRACKERSLIST",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://ngosang.github.io/trackerslist/",
+      "homepage": "https://ngosang.github.io/trackerslist/",
+      "license": "gpl-2.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ngosang/trackerslist/master/blacklist.txt",
+      "https://ngosang.github.io/trackerslist/blacklist.txt",
+      "https://cdn.jsdelivr.net/gh/ngosang/trackerslist@master/blacklist.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "charles_b_haley": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "NONE"
+    },
+    "formats": [
+      {
+        "filter": "CHARLES_B_HALEY",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://charles.the-haleys.org/",
+      "homepage": "https://charles.the-haleys.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://charles.the-haleys.org/ssh_dico_attack_with_timestamps.php?days=7"
+    ],
+    "topic": "SECURITY"
+  },
+  "cryptoscamdb_blacklist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "YAML"
+    },
+    "formats": [
+      {
+        "filter": "CRYPTOSCAMDB_BLACKLIST",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://cryptoscamdb.org/",
+      "homepage": "https://github.com/CryptoScamDB/blacklist",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/CryptoScamDB/blacklist/master/data/urls.yaml"
+    ],
+    "topic": "SECURITY"
+  },
+  "cryptoscamdb_whitelist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "YAML"
+    },
+    "formats": [
+      {
+        "filter": "CRYPTOSCAMDB_WHITELIST",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://cryptoscamdb.org/",
+      "homepage": "https://github.com/CryptoScamDB/whitelist",
+      "license": "all-rights-reserved"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/CryptoScamDB/whitelist/master/data/urls.yaml"
+    ],
+    "topic": "SECURITY"
+  },
+  "red_flag_domains": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://red.flag.domains/",
+      "homepage": "https://red.flag.domains/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://dl.red.flag.domains/red.flag.domains.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "dns_for_family": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://dnsforfamily.com/",
+      "homepage": "https://dnsforfamily.com/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://dnsforfamily.com/Public/customBlacklist.txt"
     ],
     "topic": "SECURITY"
   }

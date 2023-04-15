@@ -75,6 +75,8 @@ main() {
 			'VXVAULT_DOMAIN') mawk '/^[http]/' | get_domains_from_urls ;;
 			'VXVAULT_IPV4') mawk '/^[http]/' | get_ipv4s_from_urls ;;
 			'XFILES') tr -d "[:blank:]" | hostsblock | mawk '{print $2}' ;;
+			'TRACKERSLIST') mawk '{print $1}' | get_domains_from_urls ;;
+			'CHARLES_B_HALEY') mawk '$0~/^[^#]/{print $3}' ;;
 			esac
 			;;
 		'JSON')
@@ -98,6 +100,8 @@ main() {
 			'TINYCHECK_FREEDNS') jq -r '.iocs[] | select(.type == "freedns") | .value' ;;
 			'TINYCHECK_IPV4') jq -r '.iocs[] | select(.type == "ip4addr") | .value' ;;
 			'TINYCHECK_CIDR') jq -r '.iocs[] | select(.type == "cidr") | .value' ;;
+			'CHONG_LUA_DAO_DOMAIN') jq -r '.[].url' | get_domains_from_urls ;;
+			'CHONG_LUA_DAO_IPV4') jq -r '.[].url' | get_ipv4s_from_urls ;;
 			esac
 			;;
 		'CSV')
@@ -121,6 +125,15 @@ main() {
 			'SHADOWSERVER_HOST') mlr --csv --headerless-csv-output cut -f http_host ;;
 			'SHADOWSERVER_TARGET') mlr --csv --headerless-csv-output cut -f redirect_target ;;
 			'SHADOWSERVER_IPV4') mlr --csv --headerless-csv-output cut -f ip ;;
+			'WATCHLIST_INTERNET') mlr --csv --ifs ';' -N cut -f 1 ;;
+			'CRUZ_IT') mlr --csv --headerless-csv-output clean-whitespace then cut -f ip_address ;;
+			'PHISHTANK') mlr --csv --headerless-csv-output cut -f url | get_domains_from_urls ;;
+			esac
+			;;
+		'YAML')
+			case "$LIST_FILTER" in
+			'CRYPTOSCAMDB_BLACKLIST') yq '.[].name' ;;
+			'CRYPTOSCAMDB_WHITELIST') yq '.[].url' | get_domains_from_urls ;;
 			esac
 			;;
 		esac | mawk 'NF && !seen[$0]++' |
