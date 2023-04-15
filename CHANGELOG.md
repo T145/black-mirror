@@ -1006,3 +1006,10 @@
 
 ## Chores
 - **deps**: bump peter-evans/create-pull-request in /.github/workflows [#103](https://github.com/T145/black-mirror/pull/103) ([dependabot[bot]](https://github.com/T145/black-mirror/commit/7387a11a860d9727ff9577d828efabb073d78a75))
+# 15-04-2023 13:42:53
+- **v2**: Fixed CIDR processing ([T145](https://github.com/T145/black-mirror/commit/e18aff39c41e2645c43e67ac354ee8ff125e802a))
+- **v2**: Ensure each CIDR list is present before processing ([T145](https://github.com/T145/black-mirror/commit/8e35718214bd16f9754e9e73f52c67a031098bea))
+- **v2**: Fixed runtime ([T145](https://github.com/T145/black-mirror/commit/9238f9ed4bea87840d7222a4b2d84960fe91b925))
+
+## Continuous Integration
+- **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/8bf1a372aac02d8fcc6da7c4055a1503b6e71b32))
