@@ -1013,3 +1013,13 @@
 
 ## Continuous Integration
 - **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/8bf1a372aac02d8fcc6da7c4055a1503b6e71b32))
+# 16-04-2023 13:42:57
+- **docker**: Installed yq ([T145](https://github.com/T145/black-mirror/commit/b0270020715c414bf0ec5cc744e367294335060b))
+- **v2**: Added some sources ([T145](https://github.com/T145/black-mirror/commit/8e315a351b580be1d0de18491319421e69156634))
+
+## Bug Fixes
+- **docs**: Updated README for V2 ([T145](https://github.com/T145/black-mirror/commit/61b77a6205199ca7fe20582aec565d77e12b65b8))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/099272119e0b20cabaefff13d5eddc522bc96544))
+- **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/ebf1b1493561426bbfa590f7e87eda05d63666b3))
