@@ -49,6 +49,7 @@ main() {
 	'GZIP') tar -xOzf "$FILE_PATH" ;;
 	'SQUIDGUARD') tar -xOzf "$FILE_PATH" --wildcards-match-slash --wildcards '*/domains' ;;
 	'SCAFROGLIA') unzip -p "$FILE_PATH" blocklists-master/*.txt ;;
+	'SHADOWWHISPERER') unzip -p "$FILE_PATH" BlockLists-master/RAW/* ;;
 	esac |
 		case "$CONTENT_TYPE" in
 		'TEXT')
@@ -134,6 +135,11 @@ main() {
 			case "$LIST_FILTER" in
 			'CRYPTOSCAMDB_BLACKLIST') yq '.[].name' ;;
 			'CRYPTOSCAMDB_WHITELIST') yq '.[].url' | get_domains_from_urls ;;
+			esac
+			;;
+		'XML')
+			case "$LIST_FILTER" in
+			'PROJECTHONEYPOT') xmllint --xpath '/rss/channel/item/title/text()' | mawk -F'|' '{print $1}' ;;
 			esac
 			;;
 		esac | mawk 'NF && !seen[$0]++' |
