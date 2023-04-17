@@ -102,6 +102,7 @@ RUN apt-get -q -y update --no-allow-insecure-repositories; \
     apparmor-utils=2.13.6-10 \
     aria2=1.35.0-3 \
     auditd=1:3.0-2 \
+    csvkit=1.0.5-2 \
     curl=7.88.1-7~bpo11+2 \
     debsums=3.0.2 \
     gawk=1:5.1.0-1 \

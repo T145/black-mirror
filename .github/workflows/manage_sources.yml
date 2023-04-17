@@ -28,10 +28,15 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
+      - name: Configure Git
+        run: git config --global --add safe.directory /__w/black-mirror/black-mirror
+
       - name: Sort sources
-        run: |
-          git config --global --add safe.directory /__w/black-mirror/black-mirror
-          jq -S '.' data/v2/lists.json | sponge data/v2/lists.json
+        run: jq -S '.' data/v2/lists.json | sponge data/v2/lists.json
+
+      # https://unix.stackexchange.com/questions/646332/json-to-table-format-using-shell-script
+      - name: Export sources
+        run: jq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/lists.json | csvlook | sponge SOURCES.md
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
