@@ -613,6 +613,31 @@
       "pihole": "https://raw.githubusercontent.com/4skinSkywalker/Anti-Porn-HOSTS-File/master/HOSTS.txt"
     }
   },
+  "antipopads": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/AdroitAdorKhan/antipopads-re#antipopadsreborn=",
+      "homepage": "https://github.com/AdroitAdorKhan/antipopads-re/",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/AdroitAdorKhan/antipopads-re/master/formats/domains.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "antisocialengineer": {
     "archive": false,
     "checksums": {},
@@ -1035,6 +1060,31 @@
     "variants": {
       "pihole": "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt"
     }
+  },
+  "blocklist_ua": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "CSV"
+    },
+    "formats": [
+      {
+        "filter": "BLOCKLIST_UA",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://blocklist.net.ua/rules/",
+      "homepage": "https://blocklist.net.ua/providers/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://blocklist.net.ua/blocklist.csv"
+    ],
+    "topic": "SECURITY"
   },
   "blp_everything": {
     "archive": false,
@@ -2641,6 +2691,31 @@
       "pihole": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/domain_adult.txt"
     }
   },
+  "elliotwutingfeng": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/elliotwutingfeng/Inversion-DNSBL-Blocklists",
+      "homepage": "https://github.com/elliotwutingfeng/Inversion-DNSBL-Blocklists",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/elliotwutingfeng/Inversion-DNSBL-Blocklists/main/Google_hostnames.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "energized_unblock": {
     "archive": false,
     "checksums": {},
@@ -3353,6 +3428,56 @@
       "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-YouTube-AdBlock.txt"
     }
   },
+  "greensnow": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://greensnow.co/",
+      "homepage": "https://greensnow.co/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://blocklist.greensnow.co/greensnow.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "hagezi": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/hagezi/dns-blocklists",
+      "homepage": "https://github.com/hagezi/dns-blocklists",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/personal.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "herrbischoff_cookie": {
     "archive": false,
     "checksums": {},
@@ -3721,6 +3846,35 @@
     "variants": {
       "pihole": "https://raw.githubusercontent.com/infinitytec/blocklists/master/scams-and-phishing.txt"
     }
+  },
+  "inquest": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "INQUEST_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "INQUEST_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://labs.inquest.net/",
+      "homepage": "https://labs.inquest.net/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://labs.inquest.net/api/iocdb/list"
+    ],
+    "topic": "SECURITY"
   },
   "ios_trackers": {
     "archive": false,
@@ -4248,6 +4402,56 @@
     "method": "BLOCK",
     "mirrors": [
       "https://isc.sans.edu/api/threatlist/univsydney?json"
+    ],
+    "topic": "SECURITY"
+  },
+  "jawz101": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/jawz101/subdomain_blocklists",
+      "homepage": "https://github.com/jawz101/subdomain_blocklists",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/jawz101/subdomain_blocklists/main/hosts.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "joshwho": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://ddosblocklist.joshwho.net/",
+      "homepage": "https://ddosblocklist.joshwho.net/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://ddosblocklist.joshwho.net/blocklist.txt"
     ],
     "topic": "SECURITY"
   },
@@ -4992,6 +5196,32 @@
     "method": "BLOCK",
     "mirrors": [
       "https://mirai.security.gives/data/ip_list.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "miriquidi": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/miriquidi/dns-block-lists",
+      "homepage": "https://github.com/miriquidi/dns-block-lists",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/block.txt",
+      "https://fussle.de/block.txt"
     ],
     "topic": "SECURITY"
   },
@@ -6169,6 +6399,31 @@
     ],
     "topic": "SECURITY"
   },
+  "quantumultx_advertising": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "QUANTUMULTX",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/TY1ung/QuantumultX",
+      "homepage": "https://github.com/TY1ung/QuantumultX/blob/master/Filter/Advertising.snippet",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://labs.inquest.net/api/iocdb/list"
+    ],
+    "topic": "SECURITY"
+  },
   "red_flag_domains": {
     "archive": false,
     "checksums": {},
@@ -7121,6 +7376,82 @@
     ],
     "topic": "SECURITY"
   },
+  "threatview_domains": {
+    "_notes": "Has a poorly formatted C2 Intel feed as well.",
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://threatview.io/",
+      "homepage": "https://threatview.io/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://threatview.io/Downloads/DOMAIN-High-Confidence-Feed.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "threatview_iocs": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "GREP_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://threatview.io/",
+      "homepage": "https://threatview.io/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://threatview.io/Downloads/Experimental-IOC-Tweets.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "threatview_ips": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://threatview.io/",
+      "homepage": "https://threatview.io/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://threatview.io/Downloads/IP-High-Confidence-Feed.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "tinycheck_iocs": {
     "_notes": "https://github.com/KasperskyLab/TinyCheck/blob/main/assets/whitelist.json",
     "archive": false,
@@ -7803,337 +8134,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ],
-    "topic": "SECURITY"
-  },
-  "inquest": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "JSON"
-    },
-    "formats": [
-      {
-        "filter": "INQUEST_DOMAIN",
-        "format": "DOMAIN"
-      },
-      {
-        "filter": "INQUEST_IPV4",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://labs.inquest.net/",
-      "homepage": "https://labs.inquest.net/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://labs.inquest.net/api/iocdb/list"
-    ],
-    "topic": "SECURITY"
-  },
-  "quantumultx_advertising": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "QUANTUMULTX",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/TY1ung/QuantumultX",
-      "homepage": "https://github.com/TY1ung/QuantumultX/blob/master/Filter/Advertising.snippet",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://labs.inquest.net/api/iocdb/list"
-    ],
-    "topic": "SECURITY"
-  },
-  "jawz101": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/jawz101/subdomain_blocklists",
-      "homepage": "https://github.com/jawz101/subdomain_blocklists",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/jawz101/subdomain_blocklists/main/hosts.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "antipopads": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/AdroitAdorKhan/antipopads-re#antipopadsreborn=",
-      "homepage": "https://github.com/AdroitAdorKhan/antipopads-re/",
-      "license": "mit"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/AdroitAdorKhan/antipopads-re/master/formats/domains.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "joshwho": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://ddosblocklist.joshwho.net/",
-      "homepage": "https://ddosblocklist.joshwho.net/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://ddosblocklist.joshwho.net/blocklist.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "greensnow": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://greensnow.co/",
-      "homepage": "https://greensnow.co/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://blocklist.greensnow.co/greensnow.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "blocklist_ua": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "CSV"
-    },
-    "formats": [
-      {
-        "filter": "BLOCKLIST_UA",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://blocklist.net.ua/rules/",
-      "homepage": "https://blocklist.net.ua/providers/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://blocklist.net.ua/blocklist.csv"
-    ],
-    "topic": "SECURITY"
-  },
-  "hagezi": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/hagezi/dns-blocklists",
-      "homepage": "https://github.com/hagezi/dns-blocklists",
-      "license": "mit"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/personal.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "threatview_domains": {
-    "_notes": "Has a poorly formatted C2 Intel feed as well.",
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://threatview.io/",
-      "homepage": "https://threatview.io/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://threatview.io/Downloads/DOMAIN-High-Confidence-Feed.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "threatview_ips": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://threatview.io/",
-      "homepage": "https://threatview.io/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://threatview.io/Downloads/IP-High-Confidence-Feed.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "threatview_iocs": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "GREP_IPV4",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://threatview.io/",
-      "homepage": "https://threatview.io/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://threatview.io/Downloads/Experimental-IOC-Tweets.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "elliotwutingfeng": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/elliotwutingfeng/Inversion-DNSBL-Blocklists",
-      "homepage": "https://github.com/elliotwutingfeng/Inversion-DNSBL-Blocklists",
-      "license": "cc-by-sa-4.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/elliotwutingfeng/Inversion-DNSBL-Blocklists/main/Google_hostnames.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "miriquidi": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/miriquidi/dns-block-lists",
-      "homepage": "https://github.com/miriquidi/dns-block-lists",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/block.txt",
-      "https://fussle.de/block.txt"
     ],
     "topic": "SECURITY"
   }
