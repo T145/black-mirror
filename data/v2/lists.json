@@ -7780,5 +7780,30 @@
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
     ],
     "topic": "SECURITY"
+  },
+  "iam_py_test_antimalware": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://iam-py-test.github.io/my_filters_001/",
+      "homepage": "https://github.com/iam-py-test/my_filters_001",
+      "license": "cc0-1.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/iam-py-test/my_filters_001/main/Alternative%20list%20formats/antimalware_domains.txt"
+    ],
+    "topic": "SECURITY"
   }
 }
