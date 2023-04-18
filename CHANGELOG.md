@@ -1029,3 +1029,15 @@
 ## Continuous Integration
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/1bfcc73a29e0728d287486fd8210dd40391abca6))
 - **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/cd26f4c804bd77727ae8194500fd1fc2608656e9))
+# 18-04-2023 13:44:15
+- **sources**: Added @iam-py-test's antimalware list ([T145](https://github.com/T145/black-mirror/commit/dfe8d45a33bd9404bdc2b5b37a184abf342903c1))
+- **v2**: Set sources to auto export when updated ([T145](https://github.com/T145/black-mirror/commit/5a5797c12c4f2f1138fb3fa3b1ce13b9ce38f34a))
+- **sources**: Added & fixed more sources ([T145](https://github.com/T145/black-mirror/commit/0372d38392a8a8dd87ce1e9728131bddb1fb5dc9))
+
+## Bug Fixes
+- **docs**: Fixed README updating ([T145](https://github.com/T145/black-mirror/commit/653dbd68c14ac88bd00eb771bb37e199f522dbdc))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/f6ab917a7fc4755454bb5bcf84b0801347221ca9))
+- **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/2f94097f95c9c387c31ab1f52e2e6c47952dbae3))
+- **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/831d5aac2f853f0b01f03698b880c753b9eb27b7))
