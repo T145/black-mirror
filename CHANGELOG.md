@@ -1041,3 +1041,9 @@
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/f6ab917a7fc4755454bb5bcf84b0801347221ca9))
 - **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/2f94097f95c9c387c31ab1f52e2e6c47952dbae3))
 - **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/831d5aac2f853f0b01f03698b880c753b9eb27b7))
+# 19-04-2023 13:44:30
+- **sources**: Removed Krisk Intel ([T145](https://github.com/T145/black-mirror/commit/aee118f879850a06f576f9535c1cfd648aa7d4dc))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/7997b8972128f465cb772deb41fc431012a8b13a))
+- **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/551cf58bf39f6d795414cc69c32b63d2016a4d40))
