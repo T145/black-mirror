@@ -151,11 +151,28 @@ main() {
 		'DOMAIN')
 			perl ./scripts/v2/process_domains.pl 2>/dev/null
 			;;
+		# https://metacpan.org/pod/Data::Validate::IP
 		'IPV4')
-			perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_ipv4($_) && !is_unroutable_ipv4($_) && !is_private_ipv4($_) && !is_loopback_ipv4($_) && !is_linklocal_ipv4($_) && !is_testnet_ipv4($_)) {say $_;}' 2>/dev/null
+			case "$LIST_METHOD" in
+			'BLOCK')
+				perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_public_ipv4($_)) {say $_;}' 2>/dev/null
+				;;
+			# Ensure bogons get whitelisted
+			'ALLOW')
+				perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_ipv4($_)) {say $_;}' 2>/dev/null
+				;;
+			esac
 			;;
 		'IPV6')
-			perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_ipv6($_)) {say $_;}' 2>/dev/null
+			case "$LIST_METHOD" in
+			'BLOCK')
+				perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_public_ipv6($_)) {say $_;}' 2>/dev/null
+				;;
+			# Ensure bogons get whitelisted
+			'ALLOW')
+				perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_ipv6($_)) {say $_;}' 2>/dev/null
+				;;
+			esac
 			;;
 		'CIDR4') validate_cidr ;;
 		'CIDR6') validate_cidr ;;
