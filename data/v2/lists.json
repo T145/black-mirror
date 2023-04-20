@@ -306,6 +306,32 @@
       "pihole": "https://urlhaus.abuse.ch/downloads/hostfile/"
     }
   },
+  "adaway": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/AdAway/AdAway#readme",
+      "homepage": "https://adaway.org/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
+      "https://adaway.org/hosts.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "additional_hosts_activation": {
     "archive": false,
     "checksums": {},
@@ -1482,6 +1508,32 @@
     "method": "ALLOW",
     "mirrors": [
       "https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/vpn/NordVPNIPs.csv"
+    ],
+    "topic": "SECURITY"
+  },
+  "certego_intel": {
+    "_notes": "Ignoring the IP reports since they're pretty old.",
+    "archive": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "SNSCRAPE",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "CERTEGO",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://twitter.com/Certego_Intel",
+      "homepage": "https://twitter.com/Certego_Intel",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "Certego_Intel"
     ],
     "topic": "SECURITY"
   },
@@ -7701,6 +7753,106 @@
     ],
     "topic": "SECURITY"
   },
+  "uceprotect_backscatterer": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "GZIP",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.backscatterer.org/?target=usage",
+      "homepage": "https://www.backscatterer.org/",
+      "license": "https://www.backscatterer.org/?target=license"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz"
+    ],
+    "topic": "SECURITY"
+  },
+  "uceprotect_level_one": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "GZIP",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "CIDR4"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.uceprotect.net/en/index.php?m=3&s=3",
+      "homepage": "https://www.uceprotect.net/en/index.php?m=1&s=0",
+      "license": "https://www.uceprotect.net/en/index.php?m=13&s=0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-1.uceprotect.net.gz"
+    ],
+    "topic": "SECURITY"
+  },
+  "uceprotect_level_three": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "GZIP",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "CIDR4"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.uceprotect.net/en/index.php?m=3&s=3",
+      "homepage": "https://www.uceprotect.net/en/index.php?m=1&s=0",
+      "license": "https://www.uceprotect.net/en/index.php?m=13&s=0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz"
+    ],
+    "topic": "SECURITY"
+  },
+  "uceprotect_level_two": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "GZIP",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "CIDR4"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.uceprotect.net/en/index.php?m=3&s=3",
+      "homepage": "https://www.uceprotect.net/en/index.php?m=1&s=0",
+      "license": "https://www.uceprotect.net/en/index.php?m=13&s=0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz"
+    ],
+    "topic": "SECURITY"
+  },
   "viriback": {
     "archive": false,
     "checksums": {},
@@ -8106,158 +8258,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
-    ],
-    "topic": "SECURITY"
-  },
-  "adaway": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/AdAway/AdAway#readme",
-      "homepage": "https://adaway.org/",
-      "license": "cc-by-sa-4.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
-      "https://adaway.org/hosts.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "uceprotect_level_one": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "GZIP",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "CIDR4"
-      }
-    ],
-    "metadata": {
-      "description": "https://www.uceprotect.net/en/index.php?m=3&s=3",
-      "homepage": "https://www.uceprotect.net/en/index.php?m=1&s=0",
-      "license": "https://www.uceprotect.net/en/index.php?m=13&s=0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-1.uceprotect.net.gz"
-    ],
-    "topic": "SECURITY"
-  },
-  "uceprotect_level_two": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "GZIP",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "CIDR4"
-      }
-    ],
-    "metadata": {
-      "description": "https://www.uceprotect.net/en/index.php?m=3&s=3",
-      "homepage": "https://www.uceprotect.net/en/index.php?m=1&s=0",
-      "license": "https://www.uceprotect.net/en/index.php?m=13&s=0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz"
-    ],
-    "topic": "SECURITY"
-  },
-  "uceprotect_level_three": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "GZIP",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "CIDR4"
-      }
-    ],
-    "metadata": {
-      "description": "https://www.uceprotect.net/en/index.php?m=3&s=3",
-      "homepage": "https://www.uceprotect.net/en/index.php?m=1&s=0",
-      "license": "https://www.uceprotect.net/en/index.php?m=13&s=0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz"
-    ],
-    "topic": "SECURITY"
-  },
-  "uceprotect_backscatterer": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "GZIP",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://www.backscatterer.org/?target=usage",
-      "homepage": "https://www.backscatterer.org/",
-      "license": "https://www.backscatterer.org/?target=license"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz"
-    ],
-    "topic": "SECURITY"
-  },
-  "certego_intel": {
-    "_notes": "Ignoring the IP reports since they're pretty old.",
-    "archive": true,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "SNSCRAPE",
-      "type": "JSON"
-    },
-    "formats": [
-      {
-        "filter": "CERTEGO",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://twitter.com/Certego_Intel",
-      "homepage": "https://twitter.com/Certego_Intel",
-      "license": "not-available"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "Certego_Intel"
     ],
     "topic": "SECURITY"
   }
