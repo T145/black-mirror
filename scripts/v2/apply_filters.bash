@@ -45,8 +45,8 @@ main() {
 	case "$CONTENT_FILTER" in
 	'NONE') cat -s "$FILE_PATH" ;;
 	'7Z') 7za -y -so e "$FILE_PATH" ;;
-	'ZIP') zcat "$FILE_PATH" ;;
-	'GZIP') tar -xOzf "$FILE_PATH" ;;
+	'GZIP') zcat "$FILE_PATH" ;;
+	'TARBALL') tar -xOzf "$FILE_PATH" ;;
 	'SQUIDGUARD') tar -xOzf "$FILE_PATH" --wildcards-match-slash --wildcards '*/domains' ;;
 	'SCAFROGLIA') unzip -p "$FILE_PATH" blocklists-master/*.txt ;;
 	'SHADOWWHISPERER') unzip -p "$FILE_PATH" BlockLists-master/RAW/* ;;
@@ -55,7 +55,7 @@ main() {
 		'TEXT')
 			case "$LIST_FILTER" in
 			'NONE') cat -s ;;
-			'RAW_HOSTS_WITH_COMMENTS') mawk '/^[^[:space:]|^#|^!|^;]/{print $1}' ;;
+			'RAW_HOSTS_WITH_COMMENTS') mawk '/^[^[:space:]|^#|^!|^;|^$|^:]/{print $1}' ;;
 			'HOSTS_FILE') ghosts -m /dev/stdin -o -p -noheader -stats=false ;;
 			'ABUSE_CH_URLHAUS_DOMAIN') get_domains_from_urls ;;
 			'ABUSE_CH_URLHAUS_IPV4') get_ipv4s_from_urls ;;
@@ -106,6 +106,7 @@ main() {
 			'CHONG_LUA_DAO_IPV4') jq -r '.[].url' | get_ipv4s_from_urls ;;
 			'INQUEST_DOMAIN') jq -r '.data[] | select(.artifact_type == "domain") | .artifact' ;;
 			'INQUEST_IPV4') jq -r '.data[] | select(.artifact_type == "ipaddress") | .artifact' ;;
+			'CERTEGO') jq -rs '.[].links[].url' | mawk -F/ '$5~/^domain$/{print $6}' ;;
 			esac
 			;;
 		'CSV')

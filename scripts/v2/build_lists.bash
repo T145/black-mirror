@@ -57,11 +57,27 @@ main() {
 		# use 'lynx -dump -listonly -nonumbers' to get a raw page
 
 		set +e # temporarily disable strict fail, in case downloads fail
-		jq -r --arg method "$method" 'to_entries[] |
-			select(.value.content.retriever == "ARIA2" and .value.method == $method) |
-			{key, mirrors: .value.mirrors} |
-			(.mirrors | join("\t")), " out=\(.key)"' data/v2/lists.json |
-			aria2c -i- -d "$cache" --conf-path='./configs/aria2.conf'
+		jq -r 'to_entries[].value.content.retriever' data/v2/lists.json | sort | uniq |
+			while read -r retriever; do
+				case "$retriever" in
+				'ARIA2')
+					jq -r --arg method "$method" 'to_entries[] |
+						select(.value.content.retriever == "ARIA2" and .value.method == $method) |
+						{key, mirrors: .value.mirrors} |
+						(.mirrors | join("\t")), " out=\(.key)"' data/v2/lists.json |
+						aria2c -i- -d "$cache" --conf-path='./configs/aria2.conf'
+					;;
+				'SNSCRAPE')
+					jq -r --arg method "$method" 'to_entries[] |
+						select(.value.content.retriever == "SNSCRAPE" and .value.method == $method) |
+						{key, mirror: .value.mirrors[0]} |
+						"\(.key)#\(.mirror)"' data/v2/lists.json |
+						while IFS='#' read -r key mirror; do
+							snscrape --jsonl twitter-user "$mirror" | sponge "$key"
+						done
+					;;
+				esac
+			done
 		set -e
 
 		echo "[INFO] Downloaded lists!"

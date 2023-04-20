@@ -3,12 +3,6 @@
 ## ⬛ Blacklists
 
 - [Better FYI](https://better.fyi/blockerList.txt)
-- [Certego Intel](https://twitter.com/Certego_Intel)
-- [UCEPROTECT](https://www.uceprotect.net/en/index.php?m=1&s=0)
-  - [Level 1](https://www.uceprotect.net/en/index.php?m=3&s=3)
-  - [Level 2](https://www.uceprotect.net/en/index.php?m=3&s=4)
-  - [Level 3](https://www.uceprotect.net/en/index.php?m=3&s=5)
-  - [Backscatterer](https://www.backscatterer.org/)
 - [Exodus Privacy](https://reports.exodus-privacy.eu.org/en/)
 - [Mochi Filter](https://github.com/eEIi0A5L/adblock_filter/blob/master/mochi_filter.txt)
 - [migueldemoura](https://github.com/migueldemoura/ublock-umatrix-rulesets)
@@ -83,6 +77,12 @@
 - [Cyjax Uploads](https://www.cyjax.com/latest-analysis/)
 - [Discord Phishing Links](https://github.com/nikolaischunk/discord-phishing-links)
 - [YT Spam Lists](https://github.com/ThioJoe/YT-Spam-Lists/blob/main/SpamDomainsList.txt)
+
+## Add but archive
+
+- [Quarklist](https://github.com/francis-zhao/quarklist)
+- [Cameleon](https://sysctl.org/cameleon/)
+- [BadHosts](https://www.hostsfile.org/hosts.html)
 
 ## ⬜ Whitelists
 
@@ -247,12 +247,9 @@
 - [iblocklist](https://www.iblocklist.com/lists)
 - [malc0de](http://malc0de.com/bl/)
   - **_MALC0DE'S RSS FEED CONTAINS SHADE RANSOMWARE! YOU HAVE BEEN WARNED._**
-- [cameleon](https://sysctl.org/cameleon/)
 - [malfeed](https://github.com/eSentire/malfeed/)
 - [carl.net](https://carl.net/spam/access.txt)
   - `last-modified: Sun, 01 Sep 2002 16:05:00 GMT`
-- [BadHosts](http://www.hostsfile.org/Downloads/BadHosts.unx.zip)
-  - Last updated in 2018
 - [gjtech](https://web.archive.org/web/20160221135711/http://adblock.gjtech.net/?format=unix-hosts)
 - [ethanr dns-blacklists](https://bitbucket.org/ethanr/dns-blacklists/src/master/bad_lists/)
 - [keweonDNS](https://forum.xda-developers.com/t/keweondns-now-with-improved-certificate-ios-mac-android.3681139/) [up2date](https://pastebin.com/raw/UP3s7pEB)
