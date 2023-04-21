@@ -1049,3 +1049,15 @@
 - **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/551cf58bf39f6d795414cc69c32b63d2016a4d40))
 # 20-04-2023 13:50:13
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/ec4204b6accfe539c3de91f8e96db33ab4cf0593))
+# 21-04-2023 13:43:57
+- **v2**: Added Twitter scraping ([T145](https://github.com/T145/black-mirror/commit/9672b85e39cac0aeff22f45620b6b96bc3ad1f4d))
+- **v2**: Consumed NoTracking (need ABP sources still) ([T145](https://github.com/T145/black-mirror/commit/58858335e6d4b222ed85a9686d35416dd149eb22))
+
+## Bug Fixes
+- **v2**: Updated contributing outline ([T145](https://github.com/T145/black-mirror/commit/6d8bd3c506b707bcec45134b5e50086cebf81571))
+- **v2**: Ensure bogons get whitelisted ([T145](https://github.com/T145/black-mirror/commit/0171dde3ce410d922afab8df8940eb6614f69c5f))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/b3378cd53f5ae3e78c8e7d41c794e30ed1609ddb))
+- **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/44411299ed120370781dbe3c005e940eb2f818b1))
+- **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/23728e8aa9c43d03140c29f6079f06d5414dd536))
