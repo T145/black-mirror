@@ -9,11 +9,11 @@ get_ipv6s() {
 }
 
 get_domains_from_urls() {
-	perl -M'Data::Validate::Domain qw(is_domain)' -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?"}{-keep}/g) {say $3 if is_domain($3)}' 2>/dev/null
+	perl -M'Data::Validate::Domain qw(is_domain)' -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_domain($3)}' 2>/dev/null
 }
 
 get_ipv4s_from_urls() {
-	perl -M'Data::Validate::IP qw(is_ipv4)' -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?"}{-keep}/g) {say $3 if is_ipv4($3)}' 2>/dev/null
+	perl -M'Data::Validate::IP qw(is_ipv4)' -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_ipv4($3)}' 2>/dev/null
 }
 
 # params: column number

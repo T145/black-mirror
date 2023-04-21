@@ -86,13 +86,9 @@
 
 ## ⬜ Whitelists
 
-- [newtrackon](https://newtrackon.com/api/stable)
 - [CIDR Report](https://www.cidr-report.org/bogons/freespace-prefix.txt)
 - [zapret info nxdomain](https://github.com/zapret-info/z-i)
   - Websites initially blocked by the Russian government that are offline now.
-- notracking
-  - [domains.dead](https://raw.githubusercontent.com/notracking/hosts-blocklists-scripts/master/domains.dead.txt)
-  - [hostnames.dead](https://raw.githubusercontent.com/notracking/hosts-blocklists-scripts/master/hostnames.dead.txt)
 - [XIU2](https://github.com/XIU2/TrackersListCollection)
   - best lists
 - [quindecim](https://github.com/quindecim/block)
@@ -292,8 +288,6 @@
 - [Gift-Card-Killer](https://github.com/TakoYachty/Gift-Card-Killer)
 - [crypto-scams-fr](https://github.com/CryptoFR/crypto-scams-fr)
 - [GetAdmiral](https://github.com/smed79/blacklist)
-- [nolovia](https://github.com/parseword/nolovia)
-  - Active but references many dead sources.
 - [spammerslapper](http://spammerslapper.com/downloads/adblock_include.conf)
 - [Badd-Boyz-Hosts](https://github.com/mitchellkrogza/Badd-Boyz-Hosts)
 - [The-Big-List-of-Hacked-Malware-Web-Sites](https://github.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites)
@@ -316,8 +310,6 @@
 - [pdns-recreator](https://github.com/suuhm/pdns-recreator)
 - [adblock.gardar](https://adblock.gardar.net/)
 - [TR-PhishingList](https://github.com/HorusTeknoloji/TR-PhishingList)
-- [Spam404](https://github.com/Spam404/lists/blob/master/main-blacklist.txt)
-  - [Dawsey21](https://github.com/Dawsey21/Lists)
 - [bgpranking](https://github.com/D4-project/BGP-Ranking/tree/master/bgpranking/config/modules)
 - [anti-pr0n](https://github.com/CyanideBrother/anti-pr0n)
 - [Evil Domains](https://github.com/hell-sh/Evil-Domains/tree/master/lists)
@@ -438,7 +430,6 @@
   - [domains](https://threatcrowd.org/feeds/domains.txt)
   - [ips](https://threatcrowd.org/feeds/ips.txt)
   - [blacklist](https://threatcrowd.org/inc/blacklist.txt)
-- [antispam-it](https://github.com/marco-acorte/antispam-it)
 - [360_netlab](https://data.netlab.360.com/)
   - Pay-walled
 - [kriskintel](https://kriskintel.com/)

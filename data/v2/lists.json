@@ -1862,7 +1862,7 @@
       }
     ],
     "metadata": {
-      "description": "https://paste.cryptolaemus.com/feed.xml",
+      "description": "https://twitter.com/Cryptolaemus1",
       "homepage": "https://paste.cryptolaemus.com/",
       "license": "not-available"
     },
@@ -8258,6 +8258,307 @@
     "method": "BLOCK",
     "mirrors": [
       "https://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext"
+    ],
+    "topic": "SECURITY"
+  },
+  "antispam_it": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/marco-acorte/antispam-it/",
+      "homepage": "https://github.com/marco-acorte/antispam-it/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/marco-acorte/antispam-it/main/antispam-it.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "spam404": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Spam404/lists",
+      "homepage": "https://github.com/Spam404/lists",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "stopforumspam_domains": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.stopforumspam.com/downloads",
+      "homepage": "https://www.stopforumspam.com/",
+      "license": "https://www.stopforumspam.com/license"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.stopforumspam.com/downloads/toxic_domains_whole.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "stopforumspam_ips": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "GZIP",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.stopforumspam.com/downloads",
+      "homepage": "https://www.stopforumspam.com/",
+      "license": "https://www.stopforumspam.com/license"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.stopforumspam.com/downloads/listed_ip_1.zip"
+    ],
+    "topic": "SECURITY"
+  },
+  "hostsvn": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/bigdargon/hostsVN",
+      "homepage": "https://github.com/bigdargon/hostsVN",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts"
+    ],
+    "topic": "PRIVACY"
+  },
+  "cert_pl": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://hole.cert.pl/schema/certpl_lista_ostrzezen_api_v1.pdf",
+      "homepage": "https://cert.pl/en/posts/2020/03/malicious_domains/",
+      "license": "https://www.stopforumspam.com/license"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://hole.cert.pl/domains/domains.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "notracking_whitelist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/notracking/hosts-blocklists-scripts",
+      "homepage": "https://github.com/notracking/hosts-blocklists-scripts",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/notracking/hosts-blocklists-scripts/master/hostnames.whitelist.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "notracking_dead": {
+    "_notes": "Ignoring the dead hostnames list since it's built against Cloudflare.",
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/notracking/hosts-blocklists-scripts",
+      "homepage": "https://github.com/notracking/hosts-blocklists-scripts",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/notracking/hosts-blocklists-scripts/master/domains.dead.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "hpthreatresearch_ta551": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/hpthreatresearch/iocs",
+      "homepage": "https://github.com/hpthreatresearch/iocs",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/hpthreatresearch/iocs/main/TA551/domains.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "nolovia_government": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/hpthreatresearch/iocs",
+      "homepage": "https://github.com/hpthreatresearch/iocs",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/parseword/nolovia/master/skel/hosts-government-malware.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "cert_agid_log4shell": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://cert-agid.gov.it/",
+      "homepage": "https://cert-agid.gov.it/",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://cert-agid.gov.it/download/log4shell-iocs-raw-domain.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "newtrackon": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://newtrackon.com/api",
+      "homepage": "https://newtrackon.com/",
+      "license": "mit"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://newtrackon.com/api/stable"
     ],
     "topic": "SECURITY"
   }
