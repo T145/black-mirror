@@ -1061,3 +1061,12 @@
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/b3378cd53f5ae3e78c8e7d41c794e30ed1609ddb))
 - **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/44411299ed120370781dbe3c005e940eb2f818b1))
 - **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/23728e8aa9c43d03140c29f6079f06d5414dd536))
+# 22-04-2023 13:46:33
+- **lists**: Condensed Esox Lucius content ([T145](https://github.com/T145/black-mirror/commit/3ddf8472c0279ebb77b956befe53f3343f144677))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/501963602d12c205924e488f4ea5c4ae5ef6cf35))
+- **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/94ca09b2124acb16780195791979fa79730c9197))
+
+## Chores
+- **node**: Package update ([T145](https://github.com/T145/black-mirror/commit/38164412390ab89b7824bdc81d1c8604b1a819fa))
