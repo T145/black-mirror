@@ -50,6 +50,7 @@ main() {
 	'SQUIDGUARD') tar -xOzf "$FILE_PATH" --wildcards-match-slash --wildcards '*/domains' ;;
 	'SCAFROGLIA') unzip -p "$FILE_PATH" blocklists-master/*.txt ;;
 	'SHADOWWHISPERER') unzip -p "$FILE_PATH" BlockLists-master/RAW/* ;;
+	'ESOX_LUCIUS') unzip -p "$FILE_PATH" -x LICENSE README.md ;;
 	esac |
 		case "$CONTENT_TYPE" in
 		'TEXT')
