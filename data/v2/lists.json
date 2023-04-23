@@ -7829,31 +7829,6 @@
     ],
     "topic": "SECURITY"
   },
-  "uceprotect_level_3": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "GZIP",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://www.uceprotect.net/en/index.php?m=3&s=3",
-      "homepage": "https://www.uceprotect.net/en/index.php?m=1&s=0",
-      "license": "https://www.uceprotect.net/en/index.php?m=13&s=0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz"
-    ],
-    "topic": "SECURITY"
-  },
   "uceprotect_level_2": {
     "archive": false,
     "checksums": {},
@@ -7876,6 +7851,31 @@
     "method": "BLOCK",
     "mirrors": [
       "http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz"
+    ],
+    "topic": "SECURITY"
+  },
+  "uceprotect_level_3": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "GZIP",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.uceprotect.net/en/index.php?m=3&s=3",
+      "homepage": "https://www.uceprotect.net/en/index.php?m=1&s=0",
+      "license": "https://www.uceprotect.net/en/index.php?m=13&s=0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz"
     ],
     "topic": "SECURITY"
   },
