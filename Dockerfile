@@ -13,8 +13,10 @@ RUN go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@v1.1.3; \
     go install -v github.com/ipinfo/cli/ipinfo@ipinfo-2.10.1; \
     # https://github.com/StevenBlack/ghosts#ghosts
     go install -v github.com/StevenBlack/ghosts@v0.2.2; \
-    # # https://github.com/mikefarah/yq/
-    go install -v github.com/mikefarah/yq/v4@latest;
+    # https://github.com/mikefarah/yq/
+    go install -v github.com/mikefarah/yq/v4@latest; \
+    # https://github.com/tomnomnom/unfurl
+    go install -v github.com/tomnomnom/unfurl@latest;
 
 # https://hub.docker.com/_/buildpack-deps/
 FROM buildpack-deps:stable as utils
@@ -56,7 +58,7 @@ RUN curl http://pi.dk/3/ | bash \
 # https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.5.1" \
+      version="5.5.3" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -118,7 +120,7 @@ RUN apt-get -q -y update --no-allow-insecure-repositories; \
     libregexp-common-perl=2017060201-1 \
     libtext-trim-perl=1.04-1 \
     libtry-tiny-perl=0.30-1 \
-    libxml2-utils=2.9.10+dfsg-6.7+deb11u3 \
+    #libxml2-utils=2.9.10+dfsg-6.7+deb11u4 \
     localepurge=0.7.3.10 \
     locales=2.31-13+deb11u5 \
     moreutils=0.65-1 \
