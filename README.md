@@ -154,7 +154,7 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
     <tr>
       <td>BLOCK_DOMAIN</td>
       <td>Domain entries</td>
-      <td id="BLOCK-DOMAIN-line-count">8,230,633</td>
+      <td id="BLOCK-DOMAIN-line-count">8,243,277</td>
       <td id="BLOCK-DOMAIN-file-size">183M</td>
       <td align="center"><a href="">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_DOMAIN.txt">🔗]</a></td>
       <td align="center"><a href="">[✔️</a>,<a href="">🔗]</a></td>
@@ -162,7 +162,7 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
     <tr>
       <td>BLOCK_IPV4</td>
       <td>IPv4 addresses</td>
-      <td id="BLOCK-IPV4-line-count">777,475</td>
+      <td id="BLOCK-IPV4-line-count">751,535</td>
       <td id="BLOCK-IPV4-file-size">11M</td>
       <td align="center"><a href="">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_IPV4.txt">🔗]</a></td>
       <td align="center"><a href="">[✔️</a>,<a href="">🔗]</a></td>
@@ -170,15 +170,15 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
     <tr>
       <td>BLOCK_IPV6</td>
       <td>IPv6 addresses</td>
-      <td id="BLOCK-IPV6-line-count">50</td>
-      <td id="BLOCK-IPV6-file-size">1.6K</td>
+      <td id="BLOCK-IPV6-line-count">2,549</td>
+      <td id="BLOCK-IPV6-file-size">65K</td>
       <td align="center"><a href="">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_IPV6.txt">🔗]</a></td>
       <td align="center"><a href="">[✔️</a>,<a href="">🔗]</a></td>
     </tr>
     <tr>
       <td>BLOCK_CIDR4</td>
       <td>IPv4 CIDR blocks</td>
-      <td id="BLOCK-CIDR4-line-count">101,642</td>
+      <td id="BLOCK-CIDR4-line-count">101,882</td>
       <td id="BLOCK-CIDR4-cidr-file-size">1.2M</td>
       <td align="center"><a href="">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_CIDR4.txt">🔗]</a></td>
       <td align="center"><a href="">[✔️</a>,<a href="">🔗]</a></td>
@@ -186,7 +186,7 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
     <tr>
       <td>ALLOW_DOMAIN</td>
       <td>Domain entries</td>
-      <td id="ALLOW-DOMAIN-line-count">551,098</td>
+      <td id="ALLOW-DOMAIN-line-count">549,552</td>
       <td id="ALLOW-DOMAIN-file-size">12M</td>
       <td align="center"><a href="">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_DOMAIN.txt">🔗]</a></td>
       <td align="center"><a href="">[✔️</a>,<a href="">🔗]</a></td>
@@ -194,7 +194,7 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
     <tr>
       <td>ALLOW_IPV4</td>
       <td>IPv4 addresses</td>
-      <td id="ALLOW-IPV4-line-count">89,687</td>
+      <td id="ALLOW-IPV4-line-count">89,618</td>
       <td id="ALLOW-IPV4-file-size">1.2M</td>
       <td align="center"><a href="">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_IPV4.txt">🔗]</a></td>
       <td align="center"><a href="">[✔️</a>,<a href="">🔗]</a></td>
@@ -202,7 +202,7 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
     <tr>
       <td>ALLOW_IPV6</td>
       <td>IPv6 addresses</td>
-      <td id="ALLOW-IPV6-line-count">2,662</td>
+      <td id="ALLOW-IPV6-line-count">2,663</td>
       <td id="ALLOW-IPV6-file-size">101K</td>
       <td align="center"><a href="">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_IPV6.txt">🔗]</a></td>
       <td align="center"><a href="">[✔️</a>,<a href="">🔗]</a></td>
