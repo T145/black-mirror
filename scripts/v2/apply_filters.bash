@@ -21,8 +21,7 @@ mlr_cut_col() {
 	mlr --csv --skip-comments -N clean-whitespace then cut -f "$1"
 }
 
-# params: list format, method, key
-validate_cidr() {
+validate_cidrs() {
 	# https://metacpan.org/pod/Net::CIDR#$ip=Net::CIDR::cidrvalidate($ip);
 	perl -MNet::CIDR=cidrvalidate -nE 'chomp($_); if (defined($_) && index($_, "/") != -1 && cidrvalidate($_)) {say $_;}'
 }
@@ -150,33 +149,33 @@ main() {
 		esac | mawk 'NF && !seen[$0]++' |
 		case "$LIST_FORMAT" in
 		'DOMAIN')
-			perl ./scripts/v2/process_domains.pl 2>/dev/null
+			xargs -n1 idn2 2>/dev/null | perl -M'Data::Validate::Domain qw(is_domain)' -nE 'chomp($_); if (defined($_) && is_domain($_)) {say $_;}'
 			;;
 		# https://metacpan.org/pod/Data::Validate::IP
 		'IPV4')
 			case "$LIST_METHOD" in
 			'BLOCK')
-				perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_public_ipv4($_)) {say $_;}' 2>/dev/null
+				perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_public_ipv4($_)) {say $_;}'
 				;;
 			# Ensure bogons get whitelisted
 			'ALLOW')
-				perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_ipv4($_)) {say $_;}' 2>/dev/null
+				perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_ipv4($_)) {say $_;}'
 				;;
 			esac
 			;;
 		'IPV6')
 			case "$LIST_METHOD" in
 			'BLOCK')
-				perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_public_ipv6($_)) {say $_;}' 2>/dev/null
+				perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_public_ipv6($_)) {say $_;}'
 				;;
 			# Ensure bogons get whitelisted
 			'ALLOW')
-				perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_ipv6($_)) {say $_;}' 2>/dev/null
+				perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_ipv6($_)) {say $_;}'
 				;;
 			esac
 			;;
-		'CIDR4') validate_cidr ;;
-		'CIDR6') validate_cidr ;;
+		'CIDR4') validate_cidrs ;;
+		'CIDR6') validate_cidrs ;;
 		esac >>"build/${LIST_METHOD}_${LIST_FORMAT}.txt"
 }
 

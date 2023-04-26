@@ -58,7 +58,7 @@ RUN curl http://pi.dk/3/ | bash \
 # https://raphaelhertzog.com/mastering-debian/
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.5.3" \
+      version="5.5.4" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -111,15 +111,16 @@ RUN apt-get -q -y update --no-allow-insecure-repositories; \
     git=1:2.39.2-1~bpo11+1 \
     grepcidr=2.0-2 \
     html-xml-utils=7.7-1.1 \
+    idn2=2.3.0-5 \
     jq=1.6-2.1 \
     libdata-validate-domain-perl=0.10-1.1 \
     libdata-validate-ip-perl=0.30-1 \
     libnet-cidr-perl=0.20-1 \
-    libnet-idn-encode-perl=2.500-1+b2 \
-    libnet-libidn-perl=0.12.ds-3+b3 \
+    #libnet-idn-encode-perl=2.500-1+b2 \
+    #libnet-libidn-perl=0.12.ds-3+b3 \
     libregexp-common-perl=2017060201-1 \
-    libtext-trim-perl=1.04-1 \
-    libtry-tiny-perl=0.30-1 \
+    #libtext-trim-perl=1.04-1 \
+    #libtry-tiny-perl=0.30-1 \
     #libxml2-utils=2.9.10+dfsg-6.7+deb11u4 \
     localepurge=0.7.3.10 \
     locales=2.31-13+deb11u5 \
