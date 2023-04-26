@@ -1586,32 +1586,6 @@
     ],
     "topic": "SECURITY"
   },
-  "certego_intel": {
-    "_notes": "Ignoring the IP reports since they're pretty old.",
-    "archive": true,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "SNSCRAPE",
-      "type": "JSON"
-    },
-    "formats": [
-      {
-        "filter": "CERTEGO",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://twitter.com/Certego_Intel",
-      "homepage": "https://twitter.com/Certego_Intel",
-      "license": "not-available"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "Certego_Intel"
-    ],
-    "topic": "SECURITY"
-  },
   "charles_b_haley": {
     "archive": false,
     "checksums": {},
@@ -2889,7 +2863,7 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://github.com/Esox-Lucius/PiHoleblocklists/archive/main.zip"
+      "https://codeload.github.com/Esox-Lucius/PiHoleblocklists/zip/refs/heads/main"
     ],
     "topic": "SECURITY"
   },
@@ -6695,7 +6669,7 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://github.com/scafroglia93/blocklists/archive/master.zip"
+      "https://codeload.github.com/scafroglia93/blocklists/zip/refs/heads/master"
     ],
     "topic": "SECURITY"
   },
@@ -6745,7 +6719,7 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://github.com/ShadowWhisperer/BlockLists/archive/master.zip"
+      "https://codeload.github.com/ShadowWhisperer/BlockLists/zip/refs/heads/master"
     ],
     "topic": "SECURITY"
   },
@@ -6753,7 +6727,7 @@
     "archive": false,
     "checksums": {},
     "content": {
-      "filter": "SHADOWWHISPERER",
+      "filter": "NONE",
       "retriever": "ARIA2",
       "type": "TEXT"
     },
@@ -6778,7 +6752,7 @@
     "archive": false,
     "checksums": {},
     "content": {
-      "filter": "SHADOWWHISPERER",
+      "filter": "NONE",
       "retriever": "ARIA2",
       "type": "TEXT"
     },
