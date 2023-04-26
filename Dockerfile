@@ -56,9 +56,10 @@ RUN curl http://pi.dk/3/ | bash \
 
 # https://wiki.debian.org/DiskFreeSpace
 # https://raphaelhertzog.com/mastering-debian/
-FROM docker.io/parrotsec/core:base-lts-amd64
+# https://gitlab.com/parrotsec/build/containers
+FROM parrot.run/core:5.2
 LABEL maintainer="T145" \
-      version="5.5.4" \
+      version="5.6.0" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -104,6 +105,7 @@ RUN apt-get -q -y update --no-allow-insecure-repositories; \
     apparmor-utils=2.13.6-10 \
     aria2=1.35.0-3 \
     auditd=1:3.0-2 \
+    #build-essential=2.31-13+deb11u5 \
     csvkit=1.0.5-2 \
     curl=7.88.1-7~bpo11+2 \
     debsums=3.0.2 \
@@ -131,11 +133,6 @@ RUN apt-get -q -y update --no-allow-insecure-repositories; \
     symlinks=1.4-4 \
     unzip=6.0-26+deb11u1; \
     apt-get install -y --no-install-recommends --reinstall ca-certificates=*; \
-    apt-get -y autoremove; \
-    apt-get -y clean; \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*; \
-    rm -f /var/cache/ldconfig/aux-cache; \
-    find -P -O3 /var/log -depth -type f -print0 | xargs -0 truncate -s 0; \
     update-locale LANG=en_US.UTF-8; \
     # https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
     localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8; \
@@ -143,8 +140,12 @@ RUN apt-get -q -y update --no-allow-insecure-repositories; \
     localepurge; \
     # https://linuxhandbook.com/find-broken-symlinks/
     symlinks -rd /; \
-    apt-get -y purge --auto-remove localepurge symlinks; \
-    find -P -O3 /etc/ /usr/ -type d -empty -delete;
+    apt-get remove localepurge symlinks; \
+    apt-get -y purge --auto-remove; \
+    find -P -O3 /etc/ /usr/ -type d -empty -delete; \
+    rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/* /var/tmp/*; \
+    rm -f /var/cache/ldconfig/aux-cache; \
+    find -P -O3 /var/log -depth -type f -print0 | xargs -0 truncate -s 0;
 
 # https://cisofy.com/lynis/controls/HRDN-7222/
 RUN chown 0:0 /usr/bin/as \
