@@ -1078,3 +1078,8 @@
 - **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/8a18d455ff6edba121a251f66c6d3cde0c6a1417))
 # 25-04-2023 13:43:03
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/e14ee4be516e82e7ec38113a4814a1e402d20066))
+# 26-04-2023 15:59:59
+- **v2**: Sped up domain validation ([T145](https://github.com/T145/black-mirror/commit/d07870dbbecf20c6a79c238076476241b13c5c40))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/ac70c30e83b648a9ec8fe2f1e0df3383f3022409))

@@ -154,15 +154,15 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
     <tr>
       <td>BLOCK_DOMAIN</td>
       <td>Domain entries</td>
-      <td id="BLOCK-DOMAIN-line-count">8,243,277</td>
-      <td id="BLOCK-DOMAIN-file-size">183M</td>
+      <td id="BLOCK-DOMAIN-line-count">7,916,356</td>
+      <td id="BLOCK-DOMAIN-file-size">174M</td>
       <td align="center"><a href="">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_DOMAIN.txt">🔗]</a></td>
       <td align="center"><a href="">[✔️</a>,<a href="">🔗]</a></td>
     </tr>
     <tr>
       <td>BLOCK_IPV4</td>
       <td>IPv4 addresses</td>
-      <td id="BLOCK-IPV4-line-count">751,535</td>
+      <td id="BLOCK-IPV4-line-count">751,023</td>
       <td id="BLOCK-IPV4-file-size">11M</td>
       <td align="center"><a href="">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_IPV4.txt">🔗]</a></td>
       <td align="center"><a href="">[✔️</a>,<a href="">🔗]</a></td>
@@ -170,15 +170,15 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
     <tr>
       <td>BLOCK_IPV6</td>
       <td>IPv6 addresses</td>
-      <td id="BLOCK-IPV6-line-count">2,549</td>
-      <td id="BLOCK-IPV6-file-size">65K</td>
+      <td id="BLOCK-IPV6-line-count">2,522</td>
+      <td id="BLOCK-IPV6-file-size">64K</td>
       <td align="center"><a href="">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_IPV6.txt">🔗]</a></td>
       <td align="center"><a href="">[✔️</a>,<a href="">🔗]</a></td>
     </tr>
     <tr>
       <td>BLOCK_CIDR4</td>
       <td>IPv4 CIDR blocks</td>
-      <td id="BLOCK-CIDR4-line-count">101,882</td>
+      <td id="BLOCK-CIDR4-line-count">101,866</td>
       <td id="BLOCK-CIDR4-cidr-file-size">1.2M</td>
       <td align="center"><a href="">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_CIDR4.txt">🔗]</a></td>
       <td align="center"><a href="">[✔️</a>,<a href="">🔗]</a></td>
@@ -186,15 +186,15 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
     <tr>
       <td>ALLOW_DOMAIN</td>
       <td>Domain entries</td>
-      <td id="ALLOW-DOMAIN-line-count">549,552</td>
-      <td id="ALLOW-DOMAIN-file-size">12M</td>
+      <td id="ALLOW-DOMAIN-line-count">535,897</td>
+      <td id="ALLOW-DOMAIN-file-size">11M</td>
       <td align="center"><a href="">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_DOMAIN.txt">🔗]</a></td>
       <td align="center"><a href="">[✔️</a>,<a href="">🔗]</a></td>
     </tr>
     <tr>
       <td>ALLOW_IPV4</td>
       <td>IPv4 addresses</td>
-      <td id="ALLOW-IPV4-line-count">89,618</td>
+      <td id="ALLOW-IPV4-line-count">89,550</td>
       <td id="ALLOW-IPV4-file-size">1.2M</td>
       <td align="center"><a href="">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_IPV4.txt">🔗]</a></td>
       <td align="center"><a href="">[✔️</a>,<a href="">🔗]</a></td>
@@ -210,15 +210,15 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
     <tr>
       <td>ALLOW_CIDR4</td>
       <td>IPv4 CIDR blocks</td>
-      <td id="ALLOW-CIDR4-line-count">969</td>
-      <td id="ALLOW-CIDR4-file-size">16K</td>
+      <td id="ALLOW-CIDR4-line-count">966</td>
+      <td id="ALLOW-CIDR4-file-size">15K</td>
       <td align="center"><a href="">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_CIDR4.txt">🔗]</a></td>
       <td align="center"><a href="">[✔️</a>,<a href="">🔗]</a></td>
     </tr>
     <tr>
       <td>ALLOW_CIDR6</td>
       <td>IPv6 CIDR blocks</td>
-      <td id="ALLOW-CIDR6-line-count">137,632</td>
+      <td id="ALLOW-CIDR6-line-count">137,663</td>
       <td id="ALLOW-CIDR6-file-size">2.2M</td>
       <td align="center"><a href="">[✔️</a>,<a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_CIDR6.txt">🔗]</a></td>
       <td align="center"><a href="">[✔️</a>,<a href="">🔗]</a></td>
