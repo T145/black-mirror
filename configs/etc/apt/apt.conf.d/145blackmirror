@@ -15,6 +15,7 @@ Dir::Cache::srcpkgcache "";
 APT::Install-Recommends "false";
 APT::Install-Suggests "false";
 APT::AutoRemove::SuggestsImportant "false";
+APT::AutoRemove::RecommendsImportant "false";
 
 // Ensure apt package lists are compressed to save space.
 Acquire::GzipIndexes "true";
