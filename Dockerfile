@@ -102,7 +102,7 @@ RUN apt-get -y upgrade; \
     git=1:2.39.2-1~bpo11+1 \
     grepcidr=2.0-2 \
     html-xml-utils=7.7-1.1 \
-    idn2=2.3.0-5 \
+    #idn2=2.3.0-5 \
     jq=1.6-2.1 \
     # For building and testing IO::Socket::SSL
     libssl-dev=1.1.1n-0+deb11u4 \

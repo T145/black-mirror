@@ -149,7 +149,7 @@ main() {
 		esac | mawk 'NF && !seen[$0]++' |
 		case "$LIST_FORMAT" in
 		'DOMAIN')
-			xargs -n1 idn2 2>/dev/null | perl -M'Data::Validate::Domain qw(is_domain)' -nE 'chomp($_); if (defined($_) && is_domain($_)) {say $_;}'
+			perl ./scripts/v2/process_domains.pl 2>/dev/null
 			;;
 		# https://metacpan.org/pod/Data::Validate::IP
 		'IPV4')
