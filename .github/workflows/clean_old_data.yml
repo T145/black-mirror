@@ -27,4 +27,4 @@ jobs:
       - name: Delete old container versions
         uses: minish144/delete-untagged-action@v2
         with:
-          github-token: ${{ secrets.DELETE_PACKAGES_TOKEN }}
+          github-token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
