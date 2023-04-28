@@ -1,9 +1,10 @@
 ---
-name: Clean Old Workflows
+name: Clean Old Data
 
 on:
   schedule:
     - cron: "0 0 * * *"
+  workflow_dispatch:
 
 jobs:
   clean:
@@ -22,3 +23,10 @@ jobs:
         uses: otto-de/purge-deprecated-workflow-runs@v1
         with:
           token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
+
+      - name: Delete old container versions
+        uses: smartsquaregmbh/delete-old-packages@v0.7.0
+        with:
+          user: T145
+          type: container
+          names: black-mirror
