@@ -234,18 +234,10 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
 ## 🧮 Checksum Evaluation
 
 ```bash
-cat BLOCK_DOMAIN.txt | sha256sum -c BLOCK_DOMAIN.checksums --status && echo $?
+cat BLOCK_DOMAIN.txt | sha256sum -c BLOCK_DOMAIN.sha256 sha256sum --strict --check -
 ```
 
-A return code of `0` means the check was successful. The specific checksum command can be any of the following:
-
-- `md5sum`
-- `b2sum`
-- `sha1sum`
-- `sha224sum`
-- `sha256sum`
-- `sha384sum`
-- `sha512sum`
+The output will print `OK` if the check was successful. The specific checksum command can be any of the following:
 
 ## 🐙 Fetching GitHub Releases
 

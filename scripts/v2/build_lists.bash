@@ -124,6 +124,9 @@ main() {
 						: >"$TMP"
 						echo "[INFO] Applied whitelist to: ${blacklist}"
 					fi
+
+					sha256sum <"$list" >>"build/ALLOW_${format}.sha256"
+					sha256sum <"$blacklist" >>"build/BLOCK_${format}.sha256"
 				# Remove IPs from the IP blacklists that are covered by the CIDR blacklists
 				elif [[ "$format" == "$FORMAT_CIDR4" ]]; then
 					apply_cidr_whitelist "build/BLOCK_IPV4.txt" "$list"
