@@ -1669,6 +1669,31 @@
       "pihole": "https://raw.githubusercontent.com/chrisjudk/hosts/master/hosts"
     }
   },
+  "cidr_report": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "CIDR4"
+      }
+    ],
+    "metadata": {
+      "description": "https://bgp.potaroo.net/index-ale.html",
+      "homepage": "https://www.cidr-report.org/as2.0/",
+      "license": "all-rights-reserved"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://www.cidr-report.org/bogons/freespace-prefix.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "cinsscore": {
     "archive": false,
     "checksums": {},
@@ -6373,6 +6398,31 @@
     ],
     "topic": "SECURITY"
   },
+  "quindecim_allowlist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "QUINDECIM",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/quindecim/block",
+      "homepage": "https://github.com/quindecim/block",
+      "license": "gpl-3.0"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/quindecim/block/master/allowed-names.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "red_flag_domains": {
     "archive": false,
     "checksums": {},
@@ -6470,6 +6520,31 @@
     "method": "BLOCK",
     "mirrors": [
       "https://rescure.me/rescure_blacklist.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "rjm": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://rjmblocklist.com/worst-recent-attackers.php",
+      "homepage": "https://rjmblocklist.com/index.php",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://rjmblocklist.com/sizzling/freships.txt"
     ],
     "topic": "SECURITY"
   },
@@ -6695,6 +6770,31 @@
     "method": "BLOCK",
     "mirrors": [
       "https://schakal.ru/hosts/alive_hosts.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "securedrop": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "SECUREDROP",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://securedrop.org/",
+      "homepage": "https://securedrop.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://securedrop.org/api/v1/directory/?format=json"
     ],
     "topic": "SECURITY"
   },
@@ -8211,6 +8311,31 @@
     ],
     "topic": "SECURITY"
   },
+  "xiu2_best_trackers": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/XIU2/TrackersListCollection",
+      "homepage": "https://github.com/XIU2/TrackersListCollection",
+      "license": "gpl-3.0"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/best.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "yoyo_domains": {
     "archive": false,
     "checksums": {},
@@ -8261,106 +8386,6 @@
     ],
     "topic": "SECURITY"
   },
-  "rjm": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://rjmblocklist.com/worst-recent-attackers.php",
-      "homepage": "https://rjmblocklist.com/index.php",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://rjmblocklist.com/sizzling/freships.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "securedrop": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "SECUREDROP",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://securedrop.org/",
-      "homepage": "https://securedrop.org/",
-      "license": "all-rights-reserved"
-    },
-    "method": "ALLOW",
-    "mirrors": [
-      "https://securedrop.org/api/v1/directory/?format=json"
-    ],
-    "topic": "SECURITY"
-  },
-  "cidr_report": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "CIDR4"
-      }
-    ],
-    "metadata": {
-      "description": "https://bgp.potaroo.net/index-ale.html",
-      "homepage": "https://www.cidr-report.org/as2.0/",
-      "license": "all-rights-reserved"
-    },
-    "method": "ALLOW",
-    "mirrors": [
-      "https://www.cidr-report.org/bogons/freespace-prefix.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "xiu2_best_trackers": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/XIU2/TrackersListCollection",
-      "homepage": "https://github.com/XIU2/TrackersListCollection",
-      "license": "gpl-3.0"
-    },
-    "method": "ALLOW",
-    "mirrors": [
-      "https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/best.txt"
-    ],
-    "topic": "SECURITY"
-  },
   "zapret_nxdomain": {
     "archive": false,
     "checksums": {},
@@ -8383,31 +8408,6 @@
     "method": "ALLOW",
     "mirrors": [
       "https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "quindecim_allowlist": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "QUINDECIM",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/quindecim/block",
-      "homepage": "https://github.com/quindecim/block",
-      "license": "gpl-3.0"
-    },
-    "method": "ALLOW",
-    "mirrors": [
-      "https://raw.githubusercontent.com/quindecim/block/master/allowed-names.txt"
     ],
     "topic": "SECURITY"
   }
