@@ -38,12 +38,13 @@ RUN curl http://pi.dk/3/ | bash \
 # https://gitlab.com/parrotsec/build/containers
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.6.0" \
+      version="5.7.0" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 STOPSIGNAL SIGKILL
+WORKDIR "/root"
 
 # https://github.com/ParrotSec/docker-images/blob/master/core/lts-amd64/Dockerfile#L6
 # https://www.parrotsec.org/docs/apparmor.html
@@ -88,10 +89,12 @@ ENV LANG=en_US.utf8 \
 RUN apt-get -y upgrade; \
     apt-get -y install --no-install-recommends \
     #apt-show-versions # use dpkg -l (L) instead since ASV doesn't like GZ packages
-    apparmor=2.13.6-10 \
-    apparmor-utils=2.13.6-10 \
+    #apparmor=2.13.6-10 \
+    #apparmor-utils=2.13.6-10 \
     aria2=1.35.0-3 \
-    auditd=1:3.0-2 \
+    #auditd=1:3.0-2 \
+    # For building and testing Perl 5.37.11
+    build-essential=12.9 \
     csvkit=1.0.5-2 \
     curl=7.88.1-7~bpo11+2 \
     debsums=3.0.2 \
@@ -101,23 +104,48 @@ RUN apt-get -y upgrade; \
     html-xml-utils=7.7-1.1 \
     idn2=2.3.0-5 \
     jq=1.6-2.1 \
-    libdata-validate-domain-perl=0.10-1.1 \
-    libdata-validate-ip-perl=0.30-1 \
-    libnet-cidr-perl=0.20-1 \
-    #libnet-idn-encode-perl=2.500-1+b2 \
-    #libnet-libidn-perl=0.12.ds-3+b3 \
-    libregexp-common-perl=2017060201-1 \
-    #libtext-trim-perl=1.04-1 \
-    #libtry-tiny-perl=0.30-1 \
-    #libxml2-utils=2.9.10+dfsg-6.7+deb11u4 \
+    # For building and testing IO::Socket::SSL
+    libssl-dev=1.1.1n-0+deb11u4 \
     localepurge=0.7.3.10 \
     moreutils=0.65-1 \
+    #patch=2.7.6-7 \
     p7zip-full=16.02+dfsg-8 \
-    python3-pip=20.3.4-4+deb11u1 \
-    rkhunter=1.4.6-9 \
+    #python3-pip=20.3.4-4+deb11u1 \
+    #rkhunter=1.4.6-9 \
     symlinks=1.4-4 \
-    unzip=6.0-26+deb11u1; \
+    unzip=6.0-26+deb11u1 \
+    # For extracting *.xz archives
+    xz-utils=5.2.5-2.1~deb11u1 \
+    # For building and testing IO::Socket::SSL
+    zlib1g-dev=1:1.2.11.dfsg-2+deb11u2; \
     apt-get install -y --no-install-recommends --reinstall ca-certificates=*; \
+    # Upgrade Perl
+    mkdir perl/ && cd perl/ \
+    && curl -fLO https://www.cpan.org/src/5.0/perl-5.37.11.tar.xz \
+    && echo '3946b00266595ccc44df28275e2fbb7b86c1482934cbeab2780db304a75ffd58 *perl-5.37.11.tar.xz' | sha256sum --strict --check - \
+    && tar --strip-components=1 -xaf perl-5.37.11.tar.xz \
+    #&& cat *.patch | patch -p1 # no included patch files at present
+    && ./Configure -Darchname=x86_64-linux-gnu -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des \
+    && make -j$(nproc) \
+    && TEST_JOBS=$(nproc) make test_harness \
+    && make install && cd .. \
+    # Install cpanm & the project packages
+    && curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7046.tar.gz \
+    && echo '3e8c9d9b44a7348f9acc917163dbfc15bd5ea72501492cea3a35b346440ff862 *App-cpanminus-1.7046.tar.gz' | sha256sum --strict --check - \
+    && tar -xzf App-cpanminus-1.7046.tar.gz && cd App-cpanminus-1.7046 && perl bin/cpanm . && cd .. \
+    && cpanm IO::Socket::SSL \
+    && cpanm Data::Validate \
+    && cpanm Net::CIDR \
+    && cpanm Net::IDN::Encode \
+    && cpanm Text::Trim \
+    && cpanm Try::Tiny \
+    # Update cpm
+    && curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997011/cpm -o /usr/local/bin/cpm \
+    # sha256 checksum is from docker-perl team, cf https://github.com/docker-library/official-images/pull/12612#issuecomment-1158288299
+    && echo '7dee2176a450a8be3a6b9b91dac603a0c3a7e807042626d3fe6c93d843f75610 */usr/local/bin/cpm' | sha256sum --strict --check - \
+    && chmod +x /usr/local/bin/cpm \
+    # Cleanup
+    && rm -rf ./*; \
     # https://askubuntu.com/questions/477974/how-to-remove-unnecessary-locales
     localepurge; \
     # https://linuxhandbook.com/find-broken-symlinks/
@@ -140,10 +168,10 @@ RUN chown 0:0 /usr/bin/as \
     # https://github.com/debuerreotype/debuerreotype/pull/32
     rmdir /run/mount 2>/dev/null || :;
 
-RUN pip3 install --no-cache-dir --upgrade snscrape==0.6.2.20230320; \
-    pip3 cache purge; \
-    py3clean -v ./usr/lib/python3.9 ./usr/share/python3; \
-    rm -rf /root/.cache;
+#RUN pip3 install --no-cache-dir --upgrade snscrape==0.6.2.20230320; \
+#    pip3 cache purge; \
+#    py3clean -v ./usr/lib/python3.9 ./usr/share/python3; \
+#    rm -rf /root/.cache;
 
 ENTRYPOINT [ "bash" ]
 
