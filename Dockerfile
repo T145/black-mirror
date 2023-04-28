@@ -38,7 +38,7 @@ RUN curl http://pi.dk/3/ | bash \
 # https://gitlab.com/parrotsec/build/containers
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.7.0" \
+      version="5.7.1" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -134,16 +134,18 @@ RUN apt-get -y upgrade; \
     && echo '3e8c9d9b44a7348f9acc917163dbfc15bd5ea72501492cea3a35b346440ff862 *App-cpanminus-1.7046.tar.gz' | sha256sum --strict --check - \
     && tar -xzf App-cpanminus-1.7046.tar.gz && cd App-cpanminus-1.7046 && perl bin/cpanm . && cd .. \
     && cpanm IO::Socket::SSL \
-    && cpanm Data::Validate \
-    && cpanm Net::CIDR \
-    && cpanm Net::IDN::Encode \
-    && cpanm Text::Trim \
-    && cpanm Try::Tiny \
     # Update cpm
     && curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997011/cpm -o /usr/local/bin/cpm \
     # sha256 checksum is from docker-perl team, cf https://github.com/docker-library/official-images/pull/12612#issuecomment-1158288299
     && echo '7dee2176a450a8be3a6b9b91dac603a0c3a7e807042626d3fe6c93d843f75610 */usr/local/bin/cpm' | sha256sum --strict --check - \
     && chmod +x /usr/local/bin/cpm \
+    # Install dependencies
+    && cpanm Data::Validate::Domain \
+    && cpanm Data::Validate::IP \
+    && cpanm Net::CIDR \
+    && cpanm Net::IDN::Encode \
+    && cpanm Text::Trim \
+    && cpanm Try::Tiny \
     # Cleanup
     && rm -rf ./*; \
     # https://askubuntu.com/questions/477974/how-to-remove-unnecessary-locales
