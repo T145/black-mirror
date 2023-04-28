@@ -25,8 +25,6 @@ jobs:
           token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
 
       - name: Delete old container versions
-        uses: smartsquaregmbh/delete-old-packages@v0.7.0
+        uses: minish144/delete-untagged-action@v2
         with:
-          user: T145
-          type: container
-          names: black-mirror
+          github-token: ${{ secrets.DELETE_PACKAGES_TOKEN }}
