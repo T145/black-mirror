@@ -44,7 +44,8 @@ main() {
 	case "$CONTENT_FILTER" in
 	'NONE') cat -s "$FILE_PATH" ;;
 	'7Z') 7za -y -so e "$FILE_PATH" ;;
-	'GZIP') zcat "$FILE_PATH" ;;
+	'ZIP') zcat "$FILE_PATH" ;;
+	'GZIP') gzip -cd "$FILE_PATH" ;;
 	'TARBALL') tar -xOzf "$FILE_PATH" ;;
 	'SQUIDGUARD') tar -xOzf "$FILE_PATH" --wildcards-match-slash --wildcards '*/domains' ;;
 	'SCAFROGLIA') unzip -p "$FILE_PATH" blocklists-master/*.txt ;;
