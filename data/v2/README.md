@@ -26,9 +26,6 @@
 - [perso](https://perso.pw/blocklist.txt)
 - [Lunar Blocklist](https://blocklist.palemoon.org/ABL/lunar-blocklist.txt)
 - [Luke's Blocklist](https://github.com/lwojcik/lukes-pihole-blocklist)
-- [RJM Blocklist](https://www.rjmblocklist.com/)
-  - badips
-  - webattack
 - [Ugly Email Trackers](https://github.com/OneClickLab/ugly-email-trackers)
   - [Leave Me Alone](https://github.com/leavemealone-app/email-trackers)
 - [mhhakim](https://github.com/mhhakim/pihole-blocklist)
@@ -86,14 +83,7 @@
 
 ## ⬜ Whitelists
 
-- [CIDR Report](https://www.cidr-report.org/bogons/freespace-prefix.txt)
-- [zapret info nxdomain](https://github.com/zapret-info/z-i)
-  - Websites initially blocked by the Russian government that are offline now.
-- [XIU2](https://github.com/XIU2/TrackersListCollection)
-  - best lists
-- [quindecim](https://github.com/quindecim/block)
-  - [domains-allowlist](https://github.com/quindecim/block/blob/master/config/domains-allowlist.txt)
-- [SecureDrop](https://securedrop.org/api/v1/directory/)
+*Add more here!*
 
 # 🥢 Duplicates
 
@@ -207,6 +197,7 @@
   - Actively updated though!
 - [sspakrac](https://www.sspakrac.hr/blokiraniurl/hosts.txt)
   - Ancient `WinHelp` version.
+- [quindecim blocklist](https://github.com/quindecim/block/)
 
 # 🧟 Zombies
 

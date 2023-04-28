@@ -80,6 +80,7 @@ main() {
 			'TRACKERSLIST') mawk '{print $1}' | get_domains_from_urls ;;
 			'CHARLES_B_HALEY') mawk '$0~/^[^#]/{print $3}' ;;
 			'QUANTUMULTX') mawk -F, '$1~/^HOST-SUFFIX$/{print $2}' ;;
+			'QUINDECIM') mawk -F= '$0~/^=/{print $2}' | mawk '{print $1}' ;;
 			esac
 			;;
 		'JSON')
@@ -108,6 +109,7 @@ main() {
 			'INQUEST_DOMAIN') jq -r '.data[] | select(.artifact_type == "domain") | .artifact' ;;
 			'INQUEST_IPV4') jq -r '.data[] | select(.artifact_type == "ipaddress") | .artifact' ;;
 			'CERTEGO') jq -rs '.[].links[].url' | mawk -F/ '$5~/^domain$/{print $6}' ;;
+			'SECUREDROP') jq -r '.[] | .onion_address as $onion | .organization_url | split("/")[2] as $org | $org, $onion' ;;
 			esac
 			;;
 		'CSV')
@@ -140,11 +142,6 @@ main() {
 			case "$LIST_FILTER" in
 			'CRYPTOSCAMDB_BLACKLIST') yq '.[].name' ;;
 			'CRYPTOSCAMDB_WHITELIST') yq '.[].url' | get_domains_from_urls ;;
-			esac
-			;;
-		'XML')
-			case "$LIST_FILTER" in
-			'PROJECTHONEYPOT') xmllint --xpath '/rss/channel/item/title/text()' | mawk -F'|' '{print $1}' ;;
 			esac
 			;;
 		esac | mawk 'NF && !seen[$0]++' |
