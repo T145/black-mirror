@@ -16,7 +16,7 @@ while (<>) {
   try {
     my $line = domain_to_ascii($_);
 
-    if (defined($line) && is_domain($line)) {
+    if (defined($line) && is_domain($line, { domain_private_tld => { onion => 1 } })) {
       say($line);
     }
   }
