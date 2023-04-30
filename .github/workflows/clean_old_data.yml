@@ -24,7 +24,7 @@ jobs:
         with:
           token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
 
-      - name: Delete old container versions
-        uses: minish144/delete-untagged-action@v2
-        with:
-          github-token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
+      # - name: Delete old container versions
+      #   uses: minish144/delete-untagged-action@v2
+      #   with:
+      #     github-token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
