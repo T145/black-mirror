@@ -1,32 +1,30 @@
-FROM golang:1.19 AS go
+# https://github.com/google/sanitizers/wiki/AddressSanitizerComparisonOfMemoryTools
+FROM golang:1.16 AS go1.16
 
-# https://golang.org/doc/go-get-install-deprecation#what-to-use-instead
-# the install paths are where "main.go" lives
-# ---
-# https://github.com/ipinfo/cli#-ipinfo-cli
-RUN go install -v github.com/ipinfo/cli/ipinfo@ipinfo-2.10.1; \
+# https://github.com/johnkerl/miller/tree/v6.7.0
+# miller 6.7 is on 1.15 technically
+RUN git clone -b v6.7.0 https://github.com/johnkerl/miller.git \
+    && cd miller/ \
+    && go install -v github.com/johnkerl/miller/cmd/mlr \
+    && cd ..; \
     # https://github.com/StevenBlack/ghosts#ghosts
     go install -v github.com/StevenBlack/ghosts@v0.2.2; \
-    # https://github.com/mikefarah/yq/
-    go install -v github.com/mikefarah/yq/v4@latest; \
-    # https://github.com/tomnomnom/unfurl
-    go install -v github.com/tomnomnom/unfurl@latest;
+    # https://github.com/ipinfo/cli#-ipinfo-cli
+    go install -v github.com/ipinfo/cli/ipinfo@ipinfo-2.10.1;
+
+FROM golang:1.20 AS go1.20
+
+# https://github.com/mikefarah/yq/
+RUN go install -v github.com/mikefarah/yq/v4@v4.33.3
 
 # https://hub.docker.com/_/buildpack-deps/
 FROM buildpack-deps:stable as utils
-
-SHELL ["/bin/bash", "-o", "pipefail", "-ceux"]
-ENV MILLER_VERSION=6.7.0
 
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
 # https://git.savannah.gnu.org/cgit/parallel.git/tree/README
 # https://www.gnu.org/software/parallel/checksums/
 RUN curl http://pi.dk/3/ | bash \
     && find /usr/local/bin/ -type f ! -name 'par*' -delete; \
-    # https://miller.readthedocs.io/en/latest/build/
-    curl -sLO "https://github.com/johnkerl/miller/releases/download/v${MILLER_VERSION}/miller-${MILLER_VERSION}-linux-amd64.tar.gz" \
-    && tar -xvzf miller-*.tar.gz \
-    && mv miller-*/mlr /usr/local/bin; \
     # https://github.com/wwalexander/hostsblock
     # forked in case the original repo goes offline
     git clone https://github.com/T145/hostsblock \
@@ -38,7 +36,7 @@ RUN curl http://pi.dk/3/ | bash \
 # https://gitlab.com/parrotsec/build/containers
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.7.3" \
+      version="5.7.4" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -50,7 +48,8 @@ WORKDIR "/root"
 # https://www.parrotsec.org/docs/apparmor.html
 # rkhunter: https://unix.stackexchange.com/questions/562560/invalid-web-cmd-configuration-option-relative-pathname-bin-false
 COPY configs/etc/ /etc/
-COPY --from=go /go/bin/ /usr/local/bin/
+COPY --from=go1.16 /go/bin/ /usr/local/bin/
+COPY --from=go1.20 /go/bin/ /usr/local/bin/
 COPY --from=utils /usr/local/bin/ /usr/local/bin/
 
 # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L26
@@ -118,7 +117,20 @@ RUN apt-get -y upgrade; \
     xz-utils=5.2.5-2.1~deb11u1 \
     # For building and testing IO::Socket::SSL
     zlib1g-dev=1:1.2.11.dfsg-2+deb11u2; \
-    apt-get install -y --no-install-recommends --reinstall ca-certificates=*;
+    apt-get install -y --no-install-recommends --reinstall ca-certificates=*; \
+    # https://askubuntu.com/questions/477974/how-to-remove-unnecessary-locales
+    localepurge; \
+    # https://linuxhandbook.com/find-broken-symlinks/
+    symlinks -rd /; \
+    apt-get -y purge --auto-remove localepurge symlinks; \
+    #apt-get -y autoremove; \
+    #apt-get -y clean; \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*; \
+    rm -f /var/cache/ldconfig/aux-cache; \
+    # clear all logs
+    find -P -O3 /var/log -depth -type f -print0 | xargs -0 truncate -s 0; \
+    # remove all empty directories
+    find -P -O3 /etc/ /usr/ -type d -empty -delete;
 
 # Upgrade Perl
 RUN mkdir perl/ && cd perl/; \
@@ -150,21 +162,6 @@ RUN mkdir perl/ && cd perl/; \
     # Cleanup
     rm -rf ./*;
 
-# Cleanup
-# https://askubuntu.com/questions/477974/how-to-remove-unnecessary-locales
-RUN localepurge; \
-    # https://linuxhandbook.com/find-broken-symlinks/
-    symlinks -rd /; \
-    apt-get -y purge --auto-remove localepurge symlinks; \
-    apt-get -y autoremove; \
-    apt-get -y clean; \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*; \
-    rm -f /var/cache/ldconfig/aux-cache; \
-    # clear all logs
-    find -P -O3 /var/log -depth -type f -print0 | xargs -0 truncate -s 0; \
-    # remove all empty directories
-    find -P -O3 /etc/ /usr/ -type d -empty -delete;
-
 # https://cisofy.com/lynis/controls/HRDN-7222/
 RUN chown 0:0 /usr/bin/as \
     && chown 0:0 /usr/share/gcc; \
@@ -183,4 +180,4 @@ ENTRYPOINT [ "bash" ]
 # https://cisofy.com/lynis/controls/FILE-6310/
 VOLUME [ "/home", "/tmp", "/var" ]
 
-#HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "command -v ipinfo && command -v dnsx && command -v httpx && command -v ghosts && command -v lychee && command -v parsort" ]
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "command -v ipinfo && command -v ghosts && command -v parsort && command -v yq && command -v mlr" ]
