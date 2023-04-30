@@ -86,10 +86,13 @@ jobs:
         with:
           name: lists
 
-      - name: Extract lists
+      - name: Extract & verify lists
         run: |
           tar -xvf lists.tar
           rm -f lists.tar
+          cd build/
+          sha256sum CHECKSUMS.txt --strict
+          cd ..
 
       - name: Create GitHub release
         uses: marvinpinto/action-automatic-releases@v1.2.1
@@ -122,10 +125,13 @@ jobs:
         with:
           name: lists
 
-      - name: Extract lists
+      - name: Extract & verify lists
         run: |
           tar -xvf lists.tar
           rm -f lists.tar
+          cd build/
+          sha256sum CHECKSUMS.txt --strict
+          cd ..
 
       - name: Upload blacklists
         uses: deka0106/upload-to-dropbox@v2
