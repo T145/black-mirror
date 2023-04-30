@@ -8410,5 +8410,109 @@
       "https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt"
     ],
     "topic": "SECURITY"
+  },
+  "cps_iocs": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ZEEK_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "ZEEK_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/CriticalPathSecurity/Zeek-Intelligence-Feeds",
+      "homepage": "https://github.com/CriticalPathSecurity/Zeek-Intelligence-Feeds",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/master/cps-collected-iocs.intel"
+    ],
+    "topic": "SECURITY"
+  },
+  "cps_illuminate": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ZEEK_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/CriticalPathSecurity/Zeek-Intelligence-Feeds",
+      "homepage": "https://github.com/CriticalPathSecurity/Zeek-Intelligence-Feeds",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/master/illuminate.intel"
+    ],
+    "topic": "SECURITY"
+  },
+  "cps_stalkerware": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ZEEK_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/CriticalPathSecurity/Zeek-Intelligence-Feeds",
+      "homepage": "https://github.com/CriticalPathSecurity/Zeek-Intelligence-Feeds",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/master/stalkerware.intel"
+    ],
+    "topic": "SECURITY"
+  },
+  "cps_predict": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ZEEK_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/CriticalPathSecurity/Zeek-Intelligence-Feeds",
+      "homepage": "https://github.com/CriticalPathSecurity/Zeek-Intelligence-Feeds",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/master/predict_intel.intel"
+    ],
+    "topic": "SECURITY"
   }
 }

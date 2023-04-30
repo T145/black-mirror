@@ -81,6 +81,8 @@ main() {
 			'CHARLES_B_HALEY') mawk '$0~/^[^#]/{print $3}' ;;
 			'QUANTUMULTX') mawk -F, '$1~/^HOST-SUFFIX$/{print $2}' ;;
 			'QUINDECIM') mawk -F= '$0~/^=/{print $2}' | mawk '{print $1}' ;;
+			'ZEEK_DOMAIN') mawk '/^[^[:space:]|^#]/&&$2~/^Intel::DOMAIN$/{print $1}' ;;
+			'ZEEK_IPV4') mawk '/^[^[:space:]|^#]/&&$2~/^Intel::ADDR$/{print $1}' ;;
 			esac
 			;;
 		'JSON')
