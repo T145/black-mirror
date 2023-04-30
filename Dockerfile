@@ -38,7 +38,7 @@ RUN curl http://pi.dk/3/ | bash \
 # https://gitlab.com/parrotsec/build/containers
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.7.1" \
+      version="5.7.2" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -118,38 +118,41 @@ RUN apt-get -y upgrade; \
     xz-utils=5.2.5-2.1~deb11u1 \
     # For building and testing IO::Socket::SSL
     zlib1g-dev=1:1.2.11.dfsg-2+deb11u2; \
-    apt-get install -y --no-install-recommends --reinstall ca-certificates=*; \
-    # Upgrade Perl
-    mkdir perl/ && cd perl/ \
-    && curl -fLO https://www.cpan.org/src/5.0/perl-5.37.11.tar.xz \
-    && echo '3946b00266595ccc44df28275e2fbb7b86c1482934cbeab2780db304a75ffd58 *perl-5.37.11.tar.xz' | sha256sum --strict --check - \
-    && tar --strip-components=1 -xaf perl-5.37.11.tar.xz \
-    #&& cat *.patch | patch -p1 # no included patch files at present
-    && ./Configure -Darchname=x86_64-linux-gnu -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des \
-    && make -j$(nproc) \
-    && TEST_JOBS=$(nproc) make test_harness \
-    && make install && cd .. \
+    apt-get install -y --no-install-recommends --reinstall ca-certificates=*;
+
+# Upgrade Perl
+RUN mkdir perl/ && cd perl/; \
+    curl -fLO https://www.cpan.org/src/5.0/perl-5.37.11.tar.xz; \
+    echo '3946b00266595ccc44df28275e2fbb7b86c1482934cbeab2780db304a75ffd58 *perl-5.37.11.tar.xz' | sha256sum --strict --check -; \
+    tar --strip-components=1 -xaf perl-5.37.11.tar.xz \
+    #cat *.patch | patch -p1 # no included patch files at present
+    ./Configure -Darchname=x86_64-linux-gnu -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des; \
+    make -j$(nproc); \
+    TEST_JOBS=$(nproc) make test_harness; \
+    make install && cd ..; \
     # Install cpanm & the project packages
-    && curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7046.tar.gz \
-    && echo '3e8c9d9b44a7348f9acc917163dbfc15bd5ea72501492cea3a35b346440ff862 *App-cpanminus-1.7046.tar.gz' | sha256sum --strict --check - \
-    && tar -xzf App-cpanminus-1.7046.tar.gz && cd App-cpanminus-1.7046 && perl bin/cpanm . && cd .. \
-    && cpanm IO::Socket::SSL \
+    curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7046.tar.gz; \
+    echo '3e8c9d9b44a7348f9acc917163dbfc15bd5ea72501492cea3a35b346440ff862 *App-cpanminus-1.7046.tar.gz' | sha256sum --strict --check -; \
+    tar -xzf App-cpanminus-1.7046.tar.gz && cd App-cpanminus-1.7046 && perl bin/cpanm . && cd ..; \
+    cpanm IO::Socket::SSL; \
     # Update cpm
-    && curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997011/cpm -o /usr/local/bin/cpm \
+    curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997011/cpm -o /usr/local/bin/cpm; \
     # sha256 checksum is from docker-perl team, cf https://github.com/docker-library/official-images/pull/12612#issuecomment-1158288299
-    && echo '7dee2176a450a8be3a6b9b91dac603a0c3a7e807042626d3fe6c93d843f75610 */usr/local/bin/cpm' | sha256sum --strict --check - \
-    && chmod +x /usr/local/bin/cpm \
+    echo '7dee2176a450a8be3a6b9b91dac603a0c3a7e807042626d3fe6c93d843f75610 */usr/local/bin/cpm' | sha256sum --strict --check -; \
+    chmod +x /usr/local/bin/cpm; \
     # Install dependencies
-    && cpanm Data::Validate::Domain \
-    && cpanm Data::Validate::IP \
-    && cpanm Net::CIDR \
-    && cpanm Net::IDN::Encode \
-    && cpanm Text::Trim \
-    && cpanm Try::Tiny \
+    cpanm Data::Validate::Domain; \
+    cpanm Data::Validate::IP; \
+    cpanm Net::CIDR; \
+    cpanm Net::IDN::Encode; \
+    cpanm Text::Trim; \
+    cpanm Try::Tiny; \
     # Cleanup
-    && rm -rf ./*; \
-    # https://askubuntu.com/questions/477974/how-to-remove-unnecessary-locales
-    localepurge; \
+    rm -rf ./*;
+
+# Cleanup
+# https://askubuntu.com/questions/477974/how-to-remove-unnecessary-locales
+RUN localepurge; \
     # https://linuxhandbook.com/find-broken-symlinks/
     symlinks -rd /; \
     apt-get -y purge --auto-remove localepurge symlinks; \
