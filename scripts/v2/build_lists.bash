@@ -134,7 +134,7 @@ main() {
 		done
 
 		find -P -O3 ./build/ -type f -name "*.txt" -exec sha256sum {} \; |
-			sponge CHECKSUMS.txt
+			sponge './build/CHECKSUMS.txt'
 	done
 }
 
