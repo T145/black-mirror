@@ -38,7 +38,7 @@ RUN curl http://pi.dk/3/ | bash \
 # https://gitlab.com/parrotsec/build/containers
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.7.2" \
+      version="5.7.3" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -124,7 +124,7 @@ RUN apt-get -y upgrade; \
 RUN mkdir perl/ && cd perl/; \
     curl -fLO https://www.cpan.org/src/5.0/perl-5.37.11.tar.xz; \
     echo '3946b00266595ccc44df28275e2fbb7b86c1482934cbeab2780db304a75ffd58 *perl-5.37.11.tar.xz' | sha256sum --strict --check -; \
-    tar --strip-components=1 -xaf perl-5.37.11.tar.xz \
+    tar --strip-components=1 -xaf perl-5.37.11.tar.xz; \
     #cat *.patch | patch -p1 # no included patch files at present
     ./Configure -Darchname=x86_64-linux-gnu -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des; \
     make -j$(nproc); \
