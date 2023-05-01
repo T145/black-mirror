@@ -29,10 +29,20 @@ sorted() {
 	parsort -bfiu -S 100% -T "$DOWNLOADS" "$1" | sponge "$1"
 }
 
+# params: blacklist, whitelist
+apply_whitelist() {
+	# https://askubuntu.com/a/562352
+	# send each line into the temp file as it's processed instead of keeping it in memory
+	parallel --pipe -k -j+0 grep --line-buffered -Fxvf "$2" - <"$1" >>"$TMP"
+	cp "$TMP" "$1"
+	: >"$TMP"
+	echo "[INFO] Applied whitelist to: ${1}"
+}
+
 # params: ip list, cidr whitelist
 apply_cidr_whitelist() {
-	if test -f "$1" && test -f "$2"; then
-		grepcidr -vf "$2" <"$1" >>"$TMP"
+	if test -f "$1"; then
+		grepcidr -vf "$2" <"$1" | sponge "$TMP"
 		cp "$TMP" "$1"
 		: >"$TMP"
 		echo "[INFO] Applied CIDR whitelist to: ${1}"
@@ -110,25 +120,30 @@ main() {
 					blacklist="build/BLOCK_${format}.txt"
 					echo "[INFO] Applying whitelist: ${list}"
 
-					if [[ "$format" == "$FORMAT_CIDR4" ]]; then
+					case "$format" in
+					'CIDR4')
 						apply_cidr_whitelist "$blacklist" "$list"
 						apply_cidr_whitelist "build/BLOCK_IPV4.txt" "$list"
-					elif [[ "$format" == "$FORMAT_CIDR6" ]]; then
+						;;
+					'CIDR6')
 						apply_cidr_whitelist "$blacklist" "$list"
 						apply_cidr_whitelist "build/BLOCK_IPV6.txt" "$list"
-					else
-						# https://askubuntu.com/a/562352
-						# send each line into the temp file as it's processed instead of keeping it in memory
-						parallel --pipe -k -j+0 grep --line-buffered -Fxvf "$list" - <"$blacklist" >>"$TMP"
-						cp "$TMP" "$blacklist"
-						: >"$TMP"
-						echo "[INFO] Applied whitelist to: ${blacklist}"
-					fi
-				# Remove IPs from the IP blacklists that are covered by the CIDR blacklists
-				elif [[ "$format" == "$FORMAT_CIDR4" ]]; then
-					apply_cidr_whitelist "build/BLOCK_IPV4.txt" "$list"
-				elif [[ "$format" == "$FORMAT_CIDR6" ]]; then
-					apply_cidr_whitelist "build/BLOCK_IPV6.txt" "$list"
+						;;
+					*)
+						apply_whitelist "$blacklist" "$list"
+						;;
+					esac
+				else
+					# Remove IPs from the IP blacklists that are covered by the CIDR blacklists
+					case "$format" in
+					'CIDR4')
+						apply_cidr_whitelist "build/BLOCK_IPV4.txt" "$list"
+						;;
+					'CIDR6')
+						apply_cidr_whitelist "build/BLOCK_IPV4.txt" "$list"
+						;;
+					*) ;;
+					esac
 				fi
 			fi
 		done
