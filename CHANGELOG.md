@@ -1083,3 +1083,30 @@
 
 ## Continuous Integration
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/ac70c30e83b648a9ec8fe2f1e0df3383f3022409))
+# 02-05-2023 13:50:09
+- **docker**: Upgraded to a modern Perl version ([T145](https://github.com/T145/black-mirror/commit/45f39cc5cff5ec08bc9033c2e49ed3bdd2190627))
+- **v2**: Restored checksum generation ([T145](https://github.com/T145/black-mirror/commit/50e72121d105a5f1a0e54e7bac3735bd4d448bd2))
+- **workflows**: Delete old container versions ([T145](https://github.com/T145/black-mirror/commit/ce596a5a16397f506a5563114dbc2cd79ce69d3a))
+- **lists**: Added pending whitelists ([T145](https://github.com/T145/black-mirror/commit/87d8d6f19415007d44b1096f5662050acc297664))
+- **lists**: Added Critical Path Security lists ([T145](https://github.com/T145/black-mirror/commit/e6b6366c0bcf106385006b9995b3555e776c7b2f))
+- **v2**: Added shell script profiling ([T145](https://github.com/T145/black-mirror/commit/64023a50cbe19259699f311c5c1ce55dd63efd11))
+
+## Bug Fixes
+- **docker**: Bumped the locales version ([T145](https://github.com/T145/black-mirror/commit/6c4d2f9f3c3e1a717f0355c44d695165d40e2fb7))
+- **v2**: Restored the old domain processing ([T145](https://github.com/T145/black-mirror/commit/d5d00d568691603a1ec5cf13636f4a91f5a84138))
+- **workflows**: Hopefully fixed package cleanup ([T145](https://github.com/T145/black-mirror/commit/ed2cf013830b8f847fe65ff1047dfbf4855d8b8f))
+- **workflows**: Used the right token ([T145](https://github.com/T145/black-mirror/commit/e130958624011f59da59ae5f83abb1d1be142d21))
+- **docker**: Fixed Perl packages ([T145](https://github.com/T145/black-mirror/commit/e03f9dac3d598e981273c93abe849e9e37690e44))
+- **v2**: Hopefully fixed UCEPROTECT processing ([T145](https://github.com/T145/black-mirror/commit/4df54a1e1f626d1334b7a7b2861fa9f98c009f84))
+- **v2**: Fixed onion domain processing ([T145](https://github.com/T145/black-mirror/commit/c68c7a6bf6264f0686e7932b61650f5b8e15caa8))
+- **docker**: Moved Perl features to their own layer ([T145](https://github.com/T145/black-mirror/commit/e67e5267bbbf18b5291413740832352b9f7edd05))
+- **docker**: Minor patch ([T145](https://github.com/T145/black-mirror/commit/9119e56211b46bf2956309434dc04be1efd04d42))
+- **docker**: Prevent useful layers from getting deleted ([T145](https://github.com/T145/black-mirror/commit/01edb7f4f16e36336fbacee598fce3e87517e671))
+- **docker**: Specified Go versions to build utils on ([T145](https://github.com/T145/black-mirror/commit/7cebbbe44700f3f5f27a1e2d97292d3bfeaede14))
+- **v2**: Fixed checksum validation ([T145](https://github.com/T145/black-mirror/commit/2fdb9c74dd39d806ee513bac9abf2466b2935ef1))
+- **v2**: Minor fix ([T145](https://github.com/T145/black-mirror/commit/2bb9a1b4a1671e0c9c38ae6a41cc714bb7aab838))
+- **v2**: Cleaned up CIDR management logic ([T145](https://github.com/T145/black-mirror/commit/4a8ceb7a23eb67fbdbff31eae72cb9ed7839817e))
+- **v2**: Ok GitHub ([T145](https://github.com/T145/black-mirror/commit/8eab966849ce4a854a7530e6d81eaf4d23f68666))
+
+## Continuous Integration
+- **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/8f6c588fadfb1f28f4110cb2ed62839fc4e812bf))
