@@ -91,7 +91,7 @@ jobs:
           tar -xvf lists.tar
           rm -f lists.tar
           cd build/
-          sha256sum CHECKSUMS.txt --strict
+          sha256sum CHECKSUMS.txt
           cd ..
 
       - name: Create GitHub release
@@ -130,7 +130,7 @@ jobs:
           tar -xvf lists.tar
           rm -f lists.tar
           cd build/
-          sha256sum CHECKSUMS.txt --strict
+          sha256sum CHECKSUMS.txt
           cd ..
 
       - name: Upload blacklists
