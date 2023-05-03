@@ -137,43 +137,7 @@ jobs:
         uses: deka0106/upload-to-dropbox@v2
         with:
           dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-          src: build/black*.txt
-          dest: /black-mirror/
-          mode: overwrite
-          multiple: true
-
-      - name: Sleep to avoid 429 error
-        run: sleep 5s
-
-      - name: Upload blacklist checksums
-        uses: deka0106/upload-to-dropbox@v2
-        with:
-          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-          src: build/black*.checksums
-          dest: /black-mirror/
-          mode: overwrite
-          multiple: true
-
-      - name: Sleep to avoid 429 error
-        run: sleep 5s
-
-      - name: Upload whitelists
-        uses: deka0106/upload-to-dropbox@v2
-        with:
-          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-          src: build/white*.txt
-          dest: /black-mirror/
-          mode: overwrite
-          multiple: true
-
-      - name: Sleep to avoid 429 error
-        run: sleep 5s
-
-      - name: Upload whitelist checksums
-        uses: deka0106/upload-to-dropbox@v2
-        with:
-          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-          src: build/white*.checksums
+          src: build/*.txt
           dest: /black-mirror/
           mode: overwrite
           multiple: true
