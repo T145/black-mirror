@@ -147,10 +147,10 @@ main() {
 				fi
 			fi
 		done
-
-		find -P -O3 ./build/ -type f -name "*.txt" -exec sha256sum {} \; |
-			sponge './build/CHECKSUMS.txt'
 	done
+
+	find -P -O3 ./build/ -type f -name "*.txt" -exec sha256sum {} \; |
+			sponge './build/CHECKSUMS.txt'
 }
 
 # https://github.com/koalaman/shellcheck/wiki/SC2218

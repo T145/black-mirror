@@ -10,14 +10,13 @@ use Net::IDN::Encode 'domain_to_ascii';
 use Data::Validate::Domain 'is_domain';
 
 while (<>) {
-  chomp($_);
-  trim($_);
+  chomp;
 
   try {
-    my $line = domain_to_ascii($_);
+    my $domain = domain_to_ascii(trim($_));
 
-    if (defined($line) && is_domain($line, { domain_private_tld => { onion => 1 } })) {
-      say($line);
+    if (defined($domain) && is_domain($domain, { domain_private_tld => { onion => 1 } })) {
+      say($domain);
     }
   }
 }

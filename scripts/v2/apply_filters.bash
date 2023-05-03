@@ -9,21 +9,16 @@ get_ipv6s() {
 }
 
 get_domains_from_urls() {
-	perl -M'Data::Validate::Domain qw(is_domain)' -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_domain($3)}' 2>/dev/null
+	perl -MData::Validate::Domain=is_domain -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_domain($3)}' 2>/dev/null
 }
 
 get_ipv4s_from_urls() {
-	perl -M'Data::Validate::IP qw(is_ipv4)' -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_ipv4($3)}' 2>/dev/null
+	perl -MData::Validate::IP=is_ipv4 -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_ipv4($3)}' 2>/dev/null
 }
 
 # params: column number
 mlr_cut_col() {
 	mlr --csv --skip-comments -N clean-whitespace then cut -f "$1"
-}
-
-validate_cidrs() {
-	# https://metacpan.org/pod/Net::CIDR#$ip=Net::CIDR::cidrvalidate($ip);
-	perl -MNet::CIDR=cidrvalidate -nE 'chomp($_); if (defined($_) && index($_, "/") != -1 && cidrvalidate($_)) {say $_;}'
 }
 
 main() {
@@ -155,27 +150,31 @@ main() {
 		'IPV4')
 			case "$LIST_METHOD" in
 			'BLOCK')
-				perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_public_ipv4($_)) {say $_;}'
+				perl -MData::Validate::IP=is_public_ipv4 -nE 'chomp; if(defined($_) && is_public_ipv4($_)) {say $_;}'
 				;;
 			# Ensure bogons get whitelisted
 			'ALLOW')
-				perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_ipv4($_)) {say $_;}'
+				perl -MData::Validate::IP=is_ipv4 -nE 'chomp; if(defined($_) && is_ipv4($_)) {say $_;}'
 				;;
 			esac
 			;;
 		'IPV6')
 			case "$LIST_METHOD" in
 			'BLOCK')
-				perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_public_ipv6($_)) {say $_;}'
+				perl -MData::Validate::IP=is_public_ipv6 -nE 'chomp; if(defined($_) && is_public_ipv6($_)) {say $_;}'
 				;;
 			# Ensure bogons get whitelisted
 			'ALLOW')
-				perl -M'Data::Validate::IP' -nE 'chomp($_); if(defined($_) && is_ipv6($_)) {say $_;}'
+				perl -MData::Validate::IP=is_ipv6 -nE 'chomp; if(defined($_) && is_ipv6($_)) {say $_;}'
 				;;
 			esac
 			;;
-		'CIDR4') validate_cidrs ;;
-		'CIDR6') validate_cidrs ;;
+		'CIDR4')
+			perl ./scripts/v2/process_cidrs.pl 2>/dev/null
+			;;
+		'CIDR6')
+			perl ./scripts/v2/process_cidrs.pl 2>/dev/null
+			;;
 		esac >>"build/${LIST_METHOD}_${LIST_FORMAT}.txt"
 }
 
