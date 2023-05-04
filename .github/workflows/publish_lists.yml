@@ -133,11 +133,25 @@ jobs:
           sha256sum CHECKSUMS.txt
           cd ..
 
+      - name: Upload whitelists
+        uses: deka0106/upload-to-dropbox@v2
+        with:
+          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
+          src: |
+            build/CHECKSUMS.txt
+            build/ALLOW*.txt
+          dest: /black-mirror/
+          mode: overwrite
+          multiple: true
+
+      - name: Sleep to avoid 429 error
+        run: sleep 5s
+
       - name: Upload blacklists
         uses: deka0106/upload-to-dropbox@v2
         with:
           dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-          src: build/*.txt
+          src: build/BLOCK*.txt
           dest: /black-mirror/
           mode: overwrite
           multiple: true
