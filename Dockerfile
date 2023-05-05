@@ -40,7 +40,7 @@ RUN curl http://pi.dk/3/ | bash \
 # https://gitlab.com/parrotsec/build/containers
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.7.4" \
+      version="5.8.0" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -111,7 +111,7 @@ RUN apt-get -y upgrade; \
     # For building and testing IO::Socket::SSL
     libssl-dev=1.1.1n-0+deb11u4 \
     localepurge=0.7.3.10 \
-    moreutils=0.65-1 \
+    #moreutils=0.65-1 \
     #patch=2.7.6-7 \
     p7zip-full=16.02+dfsg-8 \
     #python3-pip=20.3.4-4+deb11u1 \

@@ -26,7 +26,9 @@ readonly -a METHODS
 readonly -a FORMATS
 
 sorted() {
-	parsort -bfiu -S 100% -T "$DOWNLOADS" "$1" | sponge "$1"
+	parsort -bfiu -S 100% -T "$DOWNLOADS" "$1" >"$TMP"
+	cp "$TMP" "$1"
+	: >"$TMP"
 }
 
 # params: blacklist, whitelist
@@ -42,7 +44,7 @@ apply_whitelist() {
 # params: ip list, cidr whitelist
 apply_cidr_whitelist() {
 	if test -f "$1"; then
-		grepcidr -vf "$2" <"$1" | sponge "$TMP"
+		grepcidr -vf "$2" <"$1" >"$TMP"
 		cp "$TMP" "$1"
 		: >"$TMP"
 		echo "[INFO] Applied CIDR whitelist to: ${1}"
@@ -83,7 +85,7 @@ main() {
 						{key, mirror: .value.mirrors[0]} |
 						"\(.key)#\(.mirror)"' data/v2/lists.json |
 						while IFS='#' read -r key mirror; do
-							snscrape --jsonl twitter-user "$mirror" | sponge "$key"
+							snscrape --jsonl twitter-user "$mirror" >"$key"
 						done
 					;;
 				esac
@@ -149,8 +151,7 @@ main() {
 		done
 	done
 
-	find -P -O3 ./build/ -type f -name "*.txt" -exec sha256sum {} \; |
-			sponge './build/CHECKSUMS.txt'
+	find -P -O3 ./build/ -type f -name "*.txt" -exec sha256sum {} \; >'./build/CHECKSUMS.txt'
 }
 
 # https://github.com/koalaman/shellcheck/wiki/SC2218
