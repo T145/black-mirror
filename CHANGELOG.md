@@ -1116,3 +1116,10 @@
 
 ## Continuous Integration
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/82720e5867d7ed816668012db7a102d85553cf7d))
+# 05-05-2023 13:46:26
+- **v2**: Properly fixed Dropbox uploads ([T145](https://github.com/T145/black-mirror/commit/e1741ecee237018420410064d904898e27c14853))
+- **lists**: Fixed Hagezi's personal list ([T145](https://github.com/T145/black-mirror/commit/a15ae4e0707bb1274e6fb1fcab12bffb77d34001))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/7d6d5e59dc29dd3f889babe3550c7ab068ac796f))
+- **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/6c4ca8c171425149092da3c3c8a970dfc295b869))
