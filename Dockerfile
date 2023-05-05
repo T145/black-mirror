@@ -1,14 +1,16 @@
 # https://github.com/google/sanitizers/wiki/AddressSanitizerComparisonOfMemoryTools
-FROM golang:1.16 AS go1.16
+FROM golang:1.15 AS go1.15
+
+WORKDIR "/src"
 
 # https://github.com/johnkerl/miller/tree/v6.7.0
-# miller 6.7 is on 1.15 technically
-RUN git clone -b v6.7.0 https://github.com/johnkerl/miller.git \
-    && cd miller/ \
-    && go install -v github.com/johnkerl/miller/cmd/mlr \
-    && cd ..; \
-    # https://github.com/StevenBlack/ghosts#ghosts
-    go install -v github.com/StevenBlack/ghosts@v0.2.2; \
+RUN git clone -b v6.7.0 https://github.com/johnkerl/miller.git .; \
+    go install -v github.com/johnkerl/miller/cmd/mlr;
+
+FROM golang:1.16 AS go1.16
+
+# https://github.com/StevenBlack/ghosts#ghosts
+RUN go install -v github.com/StevenBlack/ghosts@v0.2.2; \
     # https://github.com/ipinfo/cli#-ipinfo-cli
     go install -v github.com/ipinfo/cli/ipinfo@ipinfo-2.10.1;
 
@@ -19,6 +21,8 @@ RUN go install -v github.com/mikefarah/yq/v4@v4.33.3
 
 # https://hub.docker.com/_/buildpack-deps/
 FROM buildpack-deps:stable as utils
+
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
 # https://git.savannah.gnu.org/cgit/parallel.git/tree/README
@@ -48,6 +52,7 @@ WORKDIR "/root"
 # https://www.parrotsec.org/docs/apparmor.html
 # rkhunter: https://unix.stackexchange.com/questions/562560/invalid-web-cmd-configuration-option-relative-pathname-bin-false
 COPY configs/etc/ /etc/
+COPY --from=go1.15 /go/bin/ /usr/local/bin/
 COPY --from=go1.16 /go/bin/ /usr/local/bin/
 COPY --from=go1.20 /go/bin/ /usr/local/bin/
 COPY --from=utils /usr/local/bin/ /usr/local/bin/
@@ -123,8 +128,7 @@ RUN apt-get -y upgrade; \
     # https://linuxhandbook.com/find-broken-symlinks/
     symlinks -rd /; \
     apt-get -y purge --auto-remove localepurge symlinks; \
-    #apt-get -y autoremove; \
-    #apt-get -y clean; \
+    apt-get -y clean; \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*; \
     rm -f /var/cache/ldconfig/aux-cache; \
     # clear all logs
@@ -133,34 +137,35 @@ RUN apt-get -y upgrade; \
     find -P -O3 /etc/ /usr/ -type d -empty -delete;
 
 # Upgrade Perl
-RUN mkdir perl/ && cd perl/; \
-    curl -fLO https://www.cpan.org/src/5.0/perl-5.37.11.tar.xz; \
+RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.37.11.tar.xz; \
     echo '3946b00266595ccc44df28275e2fbb7b86c1482934cbeab2780db304a75ffd58 *perl-5.37.11.tar.xz' | sha256sum --strict --check -; \
-    tar --strip-components=1 -xaf perl-5.37.11.tar.xz; \
+    tar --strip-components=1 -xaf perl-*.tar.xz; \
     #cat *.patch | patch -p1 # no included patch files at present
     ./Configure -Darchname=x86_64-linux-gnu -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des; \
-    make -j$(nproc); \
-    TEST_JOBS=$(nproc) make test_harness; \
-    make install && cd ..; \
+    make -j "$(nproc)"; \
+    TEST_JOBS="$(nproc)" make test_harness; \
+    make install; \
+    rm -rf ./*; \
     # Install cpanm & the project packages
     curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7046.tar.gz; \
     echo '3e8c9d9b44a7348f9acc917163dbfc15bd5ea72501492cea3a35b346440ff862 *App-cpanminus-1.7046.tar.gz' | sha256sum --strict --check -; \
-    tar -xzf App-cpanminus-1.7046.tar.gz && cd App-cpanminus-1.7046 && perl bin/cpanm . && cd ..; \
+    tar --strip-components=1 -xaf App-cpanminus-*.tar.gz; \
+    perl bin/cpanm .; \
     cpanm IO::Socket::SSL; \
     # Update cpm
     curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997011/cpm -o /usr/local/bin/cpm; \
     # sha256 checksum is from docker-perl team, cf https://github.com/docker-library/official-images/pull/12612#issuecomment-1158288299
     echo '7dee2176a450a8be3a6b9b91dac603a0c3a7e807042626d3fe6c93d843f75610 */usr/local/bin/cpm' | sha256sum --strict --check -; \
     chmod +x /usr/local/bin/cpm; \
+    # Cleanup
+    rm -rf ./*; \
     # Install dependencies
     cpanm Data::Validate::Domain; \
     cpanm Data::Validate::IP; \
     cpanm Net::CIDR; \
     cpanm Net::IDN::Encode; \
     cpanm Text::Trim; \
-    cpanm Try::Tiny; \
-    # Cleanup
-    rm -rf ./*;
+    cpanm Try::Tiny;
 
 # https://cisofy.com/lynis/controls/HRDN-7222/
 RUN chown 0:0 /usr/bin/as \
