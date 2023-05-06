@@ -1123,3 +1123,11 @@
 ## Continuous Integration
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/7d6d5e59dc29dd3f889babe3550c7ab068ac796f))
 - **sources**: ✨📚✨ ([T145](https://github.com/T145/black-mirror/commit/6c4ca8c171425149092da3c3c8a970dfc295b869))
+# 06-05-2023 13:45:46
+- **v2**: Removed sponge dependency ([T145](https://github.com/T145/black-mirror/commit/1c2b9e7a5581b198755f4b42481c2d0059917a2d))
+
+## Bug Fixes
+- **docker**: Mostly satisfied Hadolint ([T145](https://github.com/T145/black-mirror/commit/a081b5e3f45f470659884d16c12f0487d92f4bc2))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/907742c632e33668ea114e260e0db0e38842bcaa))
