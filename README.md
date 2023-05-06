@@ -21,24 +21,8 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
   </a>
-  <img src="https://img.shields.io/github/actions/workflow/status/T145/black-mirror/publish_lists.yml?branch=master&label=Release&logo=github"
-       alt="release"
-       longdesc="https://github.com/badges/shields/"
-       crossorigin="anonymous"
-       referrerpolicy="no-referrer" />
-  <a href="https://www.dropbox.com/sh/lg4i0sjexubhcz6/AABO35HOVeK7Z0VHXN9MTp_ya?dl=0">
-    <img src="https://img.shields.io/static/v1?logo=dropbox&label=Dropbox&message=builds&color=0061FF"
-        alt="release"
-        longdesc="https://github.com/badges/shields/"
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer" />
-  </a>
-  <a href="https://github.com/T145/black-mirror/pkgs/container/black-mirror">
-    <img src="https://img.shields.io/github/actions/workflow/status/T145/black-mirror/publish_docker.yml?branch=master&color=%232496ED&label=Docker&logo=docker"
-        alt="docker"
-        longdesc="https://github.com/badges/shields/"
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer" />
+  <a href="https://bestpractices.coreinfrastructure.org/projects/6372">
+    <img src="https://bestpractices.coreinfrastructure.org/projects/6372/badge">
   </a>
 </div>
 <div align="center">
@@ -65,19 +49,21 @@
   </a>
 </div>
 <div align="center">
-  <a href="https://bestpractices.coreinfrastructure.org/projects/6372">
-    <img src="https://bestpractices.coreinfrastructure.org/projects/6372/badge">
-  </a>
-  <a href="https://raw.githubusercontent.com/T145/black-mirror/master/dist/sources.adguard">
-    <img src="https://img.shields.io/static/v1?logo=ublockOrigin&label=uBlock&message=subscribe&color=800000"
-        alt="docker"
+  <img src="https://img.shields.io/github/actions/workflow/status/T145/black-mirror/publish_lists.yml?branch=master&label=Release&logo=github"
+       alt="release"
+       longdesc="https://github.com/badges/shields/"
+       crossorigin="anonymous"
+       referrerpolicy="no-referrer" />
+  <a href="https://www.dropbox.com/sh/lg4i0sjexubhcz6/AABO35HOVeK7Z0VHXN9MTp_ya?dl=0">
+    <img src="https://img.shields.io/static/v1?logo=dropbox&label=Dropbox&message=builds&color=0061FF"
+        alt="release"
         longdesc="https://github.com/badges/shields/"
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
   </a>
-  <a href="https://raw.githubusercontent.com/T145/black-mirror/master/dist/sources.pihole">
-    <img src="https://img.shields.io/static/v1?logo=pihole&label=Pi-Hole&message=subscribe&color=96060C"
-        alt="pihole"
+  <a href="https://github.com/T145/black-mirror/pkgs/container/black-mirror">
+    <img src="https://img.shields.io/github/actions/workflow/status/T145/black-mirror/publish_docker.yml?branch=master&color=%232496ED&label=Docker&logo=docker"
+        alt="docker"
         longdesc="https://github.com/badges/shields/"
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
