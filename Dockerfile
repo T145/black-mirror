@@ -28,19 +28,14 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # https://git.savannah.gnu.org/cgit/parallel.git/tree/README
 # https://www.gnu.org/software/parallel/checksums/
 RUN curl http://pi.dk/3/ | bash \
-    && find /usr/local/bin/ -type f ! -name 'par*' -delete; \
-    # https://github.com/wwalexander/hostsblock
-    # forked in case the original repo goes offline
-    git clone https://github.com/T145/hostsblock \
-    && make -C hostsblock \
-    && mv /hostsblock/hostsblock /usr/local/bin;
+    && find /usr/local/bin/ -type f ! -name 'par*' -delete
 
 # https://wiki.debian.org/DiskFreeSpace
 # https://raphaelhertzog.com/mastering-debian/
 # https://gitlab.com/parrotsec/build/containers
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.8.0" \
+      version="5.8.2" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -101,7 +96,7 @@ RUN apt-get -y upgrade; \
     build-essential=12.9 \
     csvkit=1.0.5-2 \
     curl=7.88.1-7~bpo11+2 \
-    debsums=3.0.2 \
+    #debsums=3.0.2 \
     gawk=1:5.1.0-1 \
     git=1:2.39.2-1~bpo11+1 \
     grepcidr=2.0-2 \

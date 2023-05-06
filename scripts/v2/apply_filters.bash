@@ -56,7 +56,7 @@ main() {
 			'ABUSE_CH_URLHAUS_DOMAIN') get_domains_from_urls ;;
 			'ABUSE_CH_URLHAUS_IPV4') get_ipv4s_from_urls ;;
 			'ALIENVAULT') mawk -F# '{print $1}' ;;
-			'ADBLOCK') hostsblock | mawk '{print $2}' ;;
+			'ADBLOCK') gawk 'BEGIN{FS="[|^]"}/^\|\|([[:alnum:]_-]{1,63}\.)+[[:alpha:]]+\^(\$third-party)?$/{print tolower($3)}' ;;
 			'GREP_IPV4') get_ipv4s ;;
 			'GREP_IPV6') get_ipv6s ;;
 			'BOTVIRJ_IPV4') mawk -F'|' '{print $1}' ;;
