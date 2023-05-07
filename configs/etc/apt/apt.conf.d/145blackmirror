@@ -14,6 +14,8 @@ Dir::Cache::srcpkgcache "";
 // https://www.linuxquestions.org/questions/debian-26/how-to-configure-apt-get-to-install-suggested-packages-169746/
 APT::Install-Recommends "false";
 APT::Install-Suggests "false";
+APT::Get::Install-Recommends "false";
+APT::Get::Install-Suggests "false";
 APT::AutoRemove::SuggestsImportant "false";
 APT::AutoRemove::RecommendsImportant "false";
 
