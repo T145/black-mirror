@@ -1,5 +1,5 @@
 ---
-name: Sort Sources
+name: Edit Lists
 
 # https://github.community/t/trigger-workflow-only-on-pull-request-merge/17359/2
 on:
@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  export_sources:
+  edit_lists:
     runs-on: ubuntu-22.04
     defaults:
       run:
@@ -31,14 +31,26 @@ jobs:
       - name: Configure Git
         run: git config --global --add safe.directory /__w/black-mirror/black-mirror
 
-      - name: Sort sources
+      - name: Sort lists
         run: jq -S '.' data/v2/lists.json >data/v2/lists.json
 
       # https://unix.stackexchange.com/questions/646332/json-to-table-format-using-shell-script
-      - name: Export sources
-        run: jq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/lists.json | csvlook >SOURCES.md
+      # https://github.com/ildar-shaimordanov/perl-utils#sponge
+      # Direct piping works in a local Docker BM container, but not in the workflow?
+      - name: Export lists
+        run: |
+            jq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/lists.json |
+            csvlook |
+            perl -ne '
+            push @lines, $_;
+            END {
+              open(OUT, ">$file")
+              or die "sponge: cannot open $file: $!\n";
+              print OUT @lines;
+              close(OUT);
+            }' -s -- -file=SOURCES.md
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "ci(sources): ✨📚✨"
+          commit_message: "ci(lists): ✨📚✨"
