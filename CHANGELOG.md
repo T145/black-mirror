@@ -1131,3 +1131,14 @@
 
 ## Continuous Integration
 - **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/907742c632e33668ea114e260e0db0e38842bcaa))
+# 07-05-2023 13:48:23
+- **v2**: Removed hostsblock in favor of the old Gawk filter ([T145](https://github.com/T145/black-mirror/commit/f7ca0b2d13d7e29cacc4a1d0787c76a15a998d95))
+
+## Bug Fixes
+- **docs**: Fixed badges ([T145](https://github.com/T145/black-mirror/commit/fb5b8259ebd5cb23ba229da8e5a96b13148608d7))
+- **v2**: Ensure recommended packages are not installed ([T145](https://github.com/T145/black-mirror/commit/1ad37ef52f15d8ebdd0676e747139585df22eae5))
+- **lists**: Added Rescure mirrors ([T145](https://github.com/T145/black-mirror/commit/61a3633499b172d29dc0cd844392217c700c7ba8))
+- **v2**: Fixed list exporting? ([T145](https://github.com/T145/black-mirror/commit/de77f137c65466a549ba1c5a749baa7d672cdf25))
+
+## Continuous Integration
+- **build**: ✨🍰✨ ([T145](https://github.com/T145/black-mirror/commit/8709383e802b396e243d0749b5e80dd51444aca6))
