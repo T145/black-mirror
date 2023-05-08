@@ -16,6 +16,10 @@ get_ipv4s_from_urls() {
 	perl -MData::Validate::IP=is_ipv4 -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_ipv4($3)}' 2>/dev/null
 }
 
+hostsblock() {
+	gawk 'BEGIN{FS="[|^]"}/^\|\|([[:alnum:]_-]{1,63}\.)+[[:alpha:]]+\^(\$third-party)?$/{print tolower($3)}'
+}
+
 # params: column number
 mlr_cut_col() {
 	mlr --csv --skip-comments -N clean-whitespace then cut -f "$1"
@@ -56,7 +60,7 @@ process_list() {
 			'ABUSE_CH_URLHAUS_DOMAIN') get_domains_from_urls ;;
 			'ABUSE_CH_URLHAUS_IPV4') get_ipv4s_from_urls ;;
 			'ALIENVAULT') mawk -F# '{print $1}' ;;
-			'ADBLOCK') gawk 'BEGIN{FS="[|^]"}/^\|\|([[:alnum:]_-]{1,63}\.)+[[:alpha:]]+\^(\$third-party)?$/{print tolower($3)}' ;;
+			'ADBLOCK') hostsblock ;;
 			'GREP_IPV4') get_ipv4s ;;
 			'GREP_IPV6') get_ipv6s ;;
 			'BOTVIRJ_IPV4') mawk -F'|' '{print $1}' ;;
