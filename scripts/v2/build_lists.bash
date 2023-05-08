@@ -44,7 +44,9 @@ apply_whitelist() {
 # params: ip list, cidr whitelist
 apply_cidr_whitelist() {
 	if test -f "$1"; then
-		grepcidr -vf "$2" <"$1" >"$TMP"
+		# Use all available cores to handle this operation
+		sem -j+0 grepcidr -vf "$2" <"$1" >"$TMP"
+		sem --wait
 		cp "$TMP" "$1"
 		: >"$TMP"
 		echo "[INFO] Applied CIDR whitelist to: ${1}"
@@ -92,30 +94,18 @@ main() {
 			done
 		set -e
 
-		echo "[INFO] Downloaded lists!"
-
-		jq -r --arg method "$method" 'to_entries[] |
-			select(.value.method == $method) |
-			.key as $key |
-			.value.content.filter as $content_filter |
-			.value.content.type as $content_type |
-			.value.formats[] |
-			"\($key)#\($content_filter)#\($content_type)#\(.filter)#\(.format)"' data/v2/lists.json |
-			while IFS='#' read -r key content_filter content_type list_filter list_format; do
-				echo "[INFO] Processing ${key}.."
-				find -P -O3 "$cache" -name "$key" -type f -exec sem -j+0 ./scripts/v2/apply_filters.bash {} "$method" "$content_filter" "$content_type" "$list_filter" "$list_format" \; 1>/dev/null
-			done
-
-		sem --wait
-
-		echo "[INFO] Processed ${method} lists!"
+		echo "[INFO] Downloaded ${method} lists!"
 
 		for format in "${FORMATS[@]}"; do
 			list="build/${method}_${format}.txt"
 
-			echo "[INFO] Processing: ${list}"
+			find -P -O3 "$cache" -maxdepth 1 -type f |
+				# Can use --use-cpus-instead-of-cores to effectively use `nproc` available "threads"
+				parallel -j+0 --linebuffer --tmpdir "${cache}/${format}" --files -m ./scripts/v2/apply_filters.bash {} "$method"
 
-			if test -f "$list"; then
+			cat "${cache}/${format}/*.par" >"$list" || :
+
+			if [ -f "$list" ] && [ -s "$list" ]; then
 				sorted "$list"
 
 				if [[ "$method" == "$METHOD_ALLOW" ]]; then
@@ -147,6 +137,8 @@ main() {
 					*) ;;
 					esac
 				fi
+
+				echo "[INFO] Processed ${method} ${format} list!"
 			fi
 		done
 	done

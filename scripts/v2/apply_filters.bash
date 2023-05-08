@@ -9,7 +9,7 @@ get_ipv6s() {
 }
 
 get_domains_from_urls() {
-	perl -MData::Validate::Domain=is_domain -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_domain($3)}' 2>/dev/null
+	perl -MData::Validate::Domain=is_domain -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_domain($3, { domain_private_tld => { onion => 1 } })}' 2>/dev/null
 }
 
 get_ipv4s_from_urls() {
@@ -21,7 +21,7 @@ mlr_cut_col() {
 	mlr --csv --skip-comments -N clean-whitespace then cut -f "$1"
 }
 
-main() {
+process_list() {
 	local FILE_PATH
 	local LIST_METHOD
 	local CONTENT_FILTER
@@ -175,7 +175,19 @@ main() {
 		'CIDR6')
 			perl ./scripts/v2/process_cidrs.pl 2>/dev/null
 			;;
-		esac >>"build/${LIST_METHOD}_${LIST_FORMAT}.txt"
+		esac
 }
 
-main "$1" "$2" "$3" "$4" "$5" "$6"
+main() {
+	jq -r --arg key "$(basename 1)" --arg method "$2" 'to_entries[] |
+		select(.value.method == $method and .key == $key) |
+		.value.content.filter as $content_filter |
+		.value.content.type as $content_type |
+		.value.formats[] |
+		"\($content_filter)#\($content_type)#\(.filter)#\(.format)"' data/v2/lists.json |
+		while IFS='#' read -r content_filter content_type list_filter list_format; do
+			process_list "$1" "$2" "$content_filter" "$content_type" "$list_filter" "$list_format"
+		done
+}
+
+main "$1"
