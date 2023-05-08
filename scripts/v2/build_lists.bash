@@ -115,7 +115,8 @@ main() {
 			echo "[INFO] Sending list results to: ${results}"
 
 			find -P -O3 "$cache" -maxdepth 1 -type f |
-				parallel --use-cpus-instead-of-cores -N0 --jobs 0 --results "$results" ./scripts/v2/apply_filters.bash {} "$method" "$format"
+				# https://www.gnu.org/software/parallel/parallel_tutorial.html#controlling-the-execution
+				parallel --use-cpus-instead-of-cores --jobs 0 --results "$results" ./scripts/v2/apply_filters.bash {} "$method" "$format"
 
 			chmod +t /tmp
 
@@ -123,7 +124,7 @@ main() {
 
 			echo "[INFO] Processed: ${list}"
 
-			find -P -O3 "$results" -type f -name stdout -exec cat {} + | sponge "$list"
+			find -P -O3 "$results" -type f -name stdout -exec cat -s {} + | sponge "$list"
 
 			if [ -f "$list" ] && [ -s "$list" ]; then
 				sorted "$list"
