@@ -101,6 +101,7 @@ main() {
 			chmod -t /tmp
 
 			results="${cache}/${format}"
+			mkdir -p "$results"
 
 			echo "[INFO] Sending list results to: ${results}"
 
@@ -108,11 +109,11 @@ main() {
 				# Can use --use-cpus-instead-of-cores to effectively use `nproc` available "threads"
 				parallel -j+0 --linebuffer --tmpdir "$results" --files -m ./scripts/v2/apply_filters.bash {} "$method"
 
+			chmod +t /tmp
+
 			list="build/${method}_${format}.txt"
 
 			cat "${cache}/${format}/*.par" >"$list" || :
-
-			chmod +t /tmp
 
 			if [ -f "$list" ] && [ -s "$list" ]; then
 				sorted "$list"
