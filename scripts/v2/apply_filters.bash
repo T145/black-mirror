@@ -183,7 +183,6 @@ process_list() {
 }
 
 main() {
-	echo "[INFO] Processing ${1}..."
 	jq -r --arg key "$(basename "$1")" 'to_entries[] |
 		select(.key == $key) |
 		.value.content.filter as $content_filter |
