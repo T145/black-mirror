@@ -113,7 +113,9 @@ main() {
 
 			list="build/${method}_${format}.txt"
 
-			find -P -O3 "$results" -type f -name stdout -exec cat -s {} \;
+			find -P -O3 "$results" -type f -name stdout -exec cat -s {} \; >>"$TMP"
+			cp "$TMP" "$list"
+			: >"$TMP"
 
 			if [ -f "$list" ] && [ -s "$list" ]; then
 				sorted "$list"
