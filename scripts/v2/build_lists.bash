@@ -101,7 +101,7 @@ main() {
 
 			find -P -O3 "$cache" -maxdepth 1 -type f |
 				# Can use --use-cpus-instead-of-cores to effectively use `nproc` available "threads"
-				parallel -j+0 --linebuffer --tmpdir "~${cache}/${format}" --files -m ./scripts/v2/apply_filters.bash {} "$method"
+				parallel -j+0 --linebuffer --tmpdir "${cache}/${format}" --files -m ./scripts/v2/apply_filters.bash {} "$method"
 
 			list="build/${method}_${format}.txt"
 
