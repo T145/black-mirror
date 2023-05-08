@@ -25,10 +25,21 @@ FORMATS=("$FORMAT_DOMAIN" "$FORMAT_IPV4" "$FORMAT_IPV6" "$FORMAT_CIDR4" "$FORMAT
 readonly -a METHODS
 readonly -a FORMATS
 
+# https://github.com/ildar-shaimordanov/perl-utils#sponge
+sponge() {
+	perl -ne '
+	push @lines, $_;
+	END {
+		open(OUT, ">$file")
+		or die "sponge: cannot open $file: $!\n";
+		print OUT @lines;
+		close(OUT);
+	}
+	' -s -- -file="$1"
+}
+
 sorted() {
-	parsort -bfiu -S 100% -T "$DOWNLOADS" "$1" >"$TMP"
-	cp "$TMP" "$1"
-	: >"$TMP"
+	parsort -bfiu -S 100% -T "$DOWNLOADS" "$1" | sponge "$1"
 }
 
 # params: blacklist, whitelist
@@ -44,11 +55,8 @@ apply_whitelist() {
 # params: ip list, cidr whitelist
 apply_cidr_whitelist() {
 	if test -f "$1"; then
-		# Use all available cores to handle this operation
-		sem -j+0 grepcidr -vf "$2" <"$1" >"$TMP"
+		sem -j+0 grepcidr -vf "$2" <"$1" | sponge "$1"
 		sem --wait
-		cp "$TMP" "$1"
-		: >"$TMP"
 		echo "[INFO] Applied CIDR whitelist to: ${1}"
 	fi
 }
@@ -106,16 +114,13 @@ main() {
 			echo "[INFO] Sending list results to: ${results}"
 
 			find -P -O3 "$cache" -maxdepth 1 -type f |
-				# Can use --use-cpus-instead-of-cores to effectively use `nproc` available "threads"
-				parallel --results "$results" ./scripts/v2/apply_filters.bash {} "$method" "$format"
+				parallel --use-cpus-instead-of-cores -N0 --jobs 0 --results "$results" ./scripts/v2/apply_filters.bash {} "$method" "$format"
 
 			chmod +t /tmp
 
 			list="build/${method}_${format}.txt"
 
-			find -P -O3 "$results" -type f -name stdout -exec cat -s {} \; >>"$TMP"
-			cp "$TMP" "$list"
-			: >"$TMP"
+			find -P -O3 "$results" -type f -name stdout -exec cat {} + | sponge "$list"
 
 			if [ -f "$list" ] && [ -s "$list" ]; then
 				sorted "$list"
