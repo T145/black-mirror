@@ -179,8 +179,8 @@ process_list() {
 }
 
 main() {
-	jq -r --arg key "$(basename 1)" --arg method "$2" 'to_entries[] |
-		select(.value.method == $method and .key == $key) |
+	jq -r --arg key "$(basename 1)" 'to_entries[] |
+		select(.key == $key) |
 		.value.content.filter as $content_filter |
 		.value.content.type as $content_type |
 		.value.formats[] |
