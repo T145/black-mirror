@@ -113,7 +113,7 @@ main() {
 
 			list="build/${method}_${format}.txt"
 
-			cat "${cache}/${format}/*.par" >"$list" || :
+			cat "${results}/*.par" >"$list"
 
 			if [ -f "$list" ] && [ -s "$list" ]; then
 				sorted "$list"
