@@ -40,6 +40,7 @@ sponge() {
 
 sorted() {
 	parsort -bfiu -S 100% -T "$DOWNLOADS" "$1" | sponge "$1"
+	echo "[INFO] Optimized: ${1}"
 }
 
 # params: blacklist, whitelist
@@ -120,6 +121,8 @@ main() {
 
 			list="build/${method}_${format}.txt"
 
+			echo "[INFO] Processed: ${list}"
+
 			find -P -O3 "$results" -type f -name stdout -exec cat {} + | sponge "$list"
 
 			if [ -f "$list" ] && [ -s "$list" ]; then
@@ -149,7 +152,7 @@ main() {
 						apply_cidr_whitelist "build/BLOCK_IPV4.txt" "$list"
 						;;
 					'CIDR6')
-						apply_cidr_whitelist "build/BLOCK_IPV4.txt" "$list"
+						apply_cidr_whitelist "build/BLOCK_IPV6.txt" "$list"
 						;;
 					*) ;;
 					esac
@@ -160,7 +163,7 @@ main() {
 		done
 	done
 
-	find -P -O3 ./build/ -type f -name "*.txt" -exec sha256sum {} \; >'./build/CHECKSUMS.txt'
+	find -P -O3 ./build/ -type f -name "*.txt" -exec sha256sum {} \; | sponge './build/CHECKSUMS.txt'
 }
 
 # https://github.com/koalaman/shellcheck/wiki/SC2218
