@@ -183,15 +183,16 @@ process_list() {
 }
 
 main() {
-	jq -r --arg key "$(basename "$1")" 'to_entries[] |
-		select(.key == $key) |
-		.value.content.filter as $content_filter |
-		.value.content.type as $content_type |
-		.value.formats[] |
-		"\($content_filter)#\($content_type)#\(.filter)#\(.format)"' data/v2/lists.json |
-		while IFS='#' read -r content_filter content_type list_filter list_format; do
-			process_list "$1" "$2" "$content_filter" "$content_type" "$list_filter" "$list_format"
+	jq -r --arg key "$(basename "$1")" --arg format "$3" 'to_entries[] |
+		select(.key == $key) | .value |
+		.content.filter as $content_filter |
+		.content.type as $content_type |
+		.formats[] |
+		select(.format == $format) |
+		"\($content_filter)#\($content_type)#\(.filter)' data/v2/lists.json |
+		while IFS='#' read -r content_filter content_type list_filter; do
+			process_list "$1" "$2" "$content_filter" "$content_type" "$list_filter" "$3"
 		done
 }
 
-main "$1" "$2"
+main "$1" "$2" "$3"
