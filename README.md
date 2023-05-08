@@ -143,7 +143,7 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
       <td id="BLOCK-DOMAIN-line-count">8,289,433</td>
       <td id="BLOCK-DOMAIN-file-size">184M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_DOMAIN.txt">🔗</a></td>
-      <td align="center"><a href="">🔗</a></td>
+      <td align="center"><a href="https://www.dropbox.com/s/k0cpm86vw66e0jg/BLOCK_DOMAIN.txt?dl=0">🔗</a></td>
     </tr>
     <tr>
       <td>BLOCK_IPV4</td>
@@ -151,15 +151,15 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
       <td id="BLOCK-IPV4-line-count">473,364</td>
       <td id="BLOCK-IPV4-file-size">6.4M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_IPV4.txt">🔗</a></td>
-      <td align="center"><a href="">🔗</a></td>
+      <td align="center"><a href="https://www.dropbox.com/s/zkg2eiypf3d42mj/BLOCK_IPV4.txt?dl=0">🔗</a></td>
     </tr>
     <tr>
       <td>BLOCK_IPV6</td>
       <td>IPv6 addresses</td>
       <td id="BLOCK-IPV6-line-count">2,286</td>
       <td id="BLOCK-IPV6-file-size">58K</td>
-      <td align="center"><a href=""><a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_IPV6.txt">🔗</a></td>
-      <td align="center"><a href="">🔗</a></td>
+      <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_IPV6.txt">🔗</a></td>
+      <td align="center"><a href="https://www.dropbox.com/s/lun3qt7my8dcj5e/BLOCK_IPV6.txt?dl=0">🔗</a></td>
     </tr>
     <tr>
       <td>BLOCK_CIDR4</td>
@@ -167,7 +167,7 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
       <td id="BLOCK-CIDR4-line-count">125,522</td>
       <td id="BLOCK-CIDR4-cidr-file-size">1.2M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_CIDR4.txt">🔗</a></td>
-      <td align="center"><a href="">🔗</a></td>
+      <td align="center"><a href="https://www.dropbox.com/s/r0s4balz5b951in/BLOCK_CIDR4.txt?dl=0">🔗</a></td>
     </tr>
     <tr>
       <td>ALLOW_DOMAIN</td>
@@ -175,7 +175,7 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
       <td id="ALLOW-DOMAIN-line-count">664,026</td>
       <td id="ALLOW-DOMAIN-file-size">14M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_DOMAIN.txt">🔗</a></td>
-      <td align="center"><a href="">🔗</a></td>
+      <td align="center"><a href="https://www.dropbox.com/s/xt5frs2ivac14ap/ALLOW_DOMAIN.txt?dl=0">🔗</a></td>
     </tr>
     <tr>
       <td>ALLOW_IPV4</td>
@@ -199,7 +199,7 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
       <td id="ALLOW-CIDR4-line-count">7,839</td>
       <td id="ALLOW-CIDR4-file-size">120K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_CIDR4.txt">🔗</a></td>
-      <td align="center"><a href="">🔗</a></td>
+      <td align="center"><a href="https://www.dropbox.com/s/1esd0w1o2xo6qox/ALLOW_CIDR4.txt?dl=0">🔗</a></td>
     </tr>
     <tr>
       <td>ALLOW_CIDR6</td>
@@ -207,7 +207,7 @@ Free thought exchange is encouraged, so feel free to open discussions about any 
       <td id="ALLOW-CIDR6-line-count">137,822</td>
       <td id="ALLOW-CIDR6-file-size">2.2M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_CIDR6.txt">🔗</a></td>
-      <td align="center"><a href="">🔗</a></td>
+      <td align="center"><a href="https://www.dropbox.com/s/jqstqs2tll0kp84/ALLOW_CIDR6.txt?dl=0">🔗</a></td>
     </tr>
   </tbody>
 </table>
