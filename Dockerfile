@@ -35,7 +35,7 @@ RUN curl http://pi.dk/3/ | bash \
 # https://gitlab.com/parrotsec/build/containers
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.8.2" \
+      version="5.8.3" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -68,14 +68,15 @@ RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
 # Make the "en_US.UTF-8" locale the default
 RUN apt-get -yq update --no-allow-insecure-repositories; \
     apt-get -y install --no-install-recommends locales=2.31-13+deb11u6; \
+    # https://wiki.debian.org/Locale
+    locale-gen; \
     # https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8; \
-    update-locale LANG=en_US.utf8;
+    update-locale LANG=en_US.UTF-8; \
+    export LC_ALL=C man;
 # https://perldoc.perl.org/perllocale
-ENV LANG=en_US.utf8 \
-    # https://stackoverflow.com/questions/2499794/how-to-fix-a-locale-setting-warning-from-perl
-    #LC_CTYPE=en_US.utf8 \
-    #LANGUAGE=en_US.utf8 \
+ENV LANGUAGE=en_US \
+    LANG=en_US.UTF-8 \
     # Make commands sort by the C locale
     LC_COLLATE=C \
     RESOLUTION_BIT_DEPTH=1600x900x16 \

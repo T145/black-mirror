@@ -62,7 +62,6 @@ apply_cidr_whitelist() {
 }
 
 init() {
-	export LC_ALL=C # force byte-wise sorting and default langauge output
 	trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 	mkdir -p build/
 	: >logs/aria2.log
@@ -71,7 +70,6 @@ init() {
 
 cleanup() {
 	chmod +t /tmp
-	unset LC_ALL # reset the locale
 }
 
 main() {
