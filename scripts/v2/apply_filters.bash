@@ -179,7 +179,7 @@ process_list() {
 		'CIDR6')
 			perl ./scripts/v2/process_cidrs.pl 2>/dev/null
 			;;
-		esac
+		esac | cat -s
 }
 
 main() {
