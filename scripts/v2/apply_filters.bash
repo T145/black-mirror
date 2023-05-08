@@ -190,4 +190,4 @@ main() {
 		done
 }
 
-main "$1"
+main "$1" "$2"
