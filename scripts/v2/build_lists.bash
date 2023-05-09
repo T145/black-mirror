@@ -46,7 +46,7 @@ sorted() {
 apply_whitelist() {
 	# https://askubuntu.com/a/562352
 	# send each line into the temp file as it's processed instead of keeping it in memory
-	parallel --pipe -k --jobs 0 grep --line-buffered -Fxvf "$2" - <"$1" >>"$TMP"
+	parallel --pipe -k -j+0 grep --line-buffered -Fxvf "$2" - <"$1" >>"$TMP"
 	cp "$TMP" "$1"
 	: >"$TMP"
 	echo "[INFO] Applied whitelist to: ${1}"
