@@ -11,7 +11,7 @@ on:
 
 jobs:
   publish_manifest:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     defaults:
       run:
@@ -28,6 +28,8 @@ jobs:
       options: --user root
 
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
       - name: Sort manifest
         run: jq -S '.' data/v2/lists.json >data/v2/lists.json
       - name: Document manifest
