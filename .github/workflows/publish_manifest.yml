@@ -32,9 +32,9 @@ jobs:
         uses: actions/checkout@v3
       - name: Sort manifest
         run: jq -S '.' data/v2/lists.json >data/v2/lists.json
+      - name: Make commit directory safe
+        run: git config --global --add safe.directory /__w/black-mirror/black-mirror
       - name: Commit changes
-        run: |
-          git config --global --add safe.directory /__w/black-mirror/black-mirror
-          git add -A
-          git commit -m "ci(lists): ✨📚✨"
-          git push origin master
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "ci(lists): ✨📚✨"
