@@ -3261,6 +3261,31 @@
       "adguard": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/nofarm_hosts.txt"
     }
   },
+  "fzlistkor": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/elsannadisney/fzListKor",
+      "homepage": "https://github.com/elsannadisney/fzListKor",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/elsannadisney/fzListKor/main/warehouse/maindns.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "geoffrey_frogeye_multiparty": {
     "_notes": "Has a 'multiparty-only-trackers' list, which is smaller. Contains 'firstparty-trackers.'",
     "archive": false,
@@ -8515,31 +8540,6 @@
     "method": "ALLOW",
     "mirrors": [
       "https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "fzlistkor": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ADBLOCK",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/elsannadisney/fzListKor",
-      "homepage": "https://github.com/elsannadisney/fzListKor",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/elsannadisney/fzListKor/main/warehouse/maindns.txt"
     ],
     "topic": "SECURITY"
   }
