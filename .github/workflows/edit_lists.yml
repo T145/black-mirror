@@ -41,14 +41,7 @@ jobs:
         run: |
             jq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/lists.json |
             csvlook |
-            perl -ne '
-            push @lines, $_;
-            END {
-              open(OUT, ">$file")
-              or die "sponge: cannot open $file: $!\n";
-              print OUT @lines;
-              close(OUT);
-            }' -s -- -file=SOURCES.md
+            perl -ne 'push @lines, $_; END { open(OUT, ">$file") or die "sponge: cannot open $file: $!\n"; print OUT @lines; close(OUT); }' -s -- -file=SOURCES.md
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
