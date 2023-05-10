@@ -33,6 +33,7 @@ jobs:
       - name: Sort manifest
         run: jq -S '.' data/v2/lists.json >data/v2/lists.json
       - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "ci(lists): ✨📚✨"
+        run: |
+          git add -A
+          git commit -m "ci(lists): ✨📚✨"
+          git push origin master
