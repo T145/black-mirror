@@ -1,7 +1,6 @@
----
-name: Edit Lists
+﻿---
+name: Publish Manifest
 
-# https://github.community/t/trigger-workflow-only-on-pull-request-merge/17359/2
 on:
   push:
     branches:
@@ -11,11 +10,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  edit_lists:
+  publish_manifest:
     runs-on: ubuntu-22.04
+
     defaults:
       run:
         shell: bash
+
+    permissions:
+      contents: write
 
     container:
       image: ghcr.io/t145/black-mirror:latest
@@ -25,21 +28,10 @@ jobs:
       options: --user root
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Configure Git
-        run: git config --global --add safe.directory /__w/black-mirror/black-mirror
-
-      - name: Sort lists
+      - name: Sort manifest
         run: jq -S '.' data/v2/lists.json >data/v2/lists.json
-
-      # https://unix.stackexchange.com/questions/646332/json-to-table-format-using-shell-script
-      # https://github.com/ildar-shaimordanov/perl-utils#sponge
-      # Direct piping works in a local Docker BM container, but not in the workflow?
-      - name: Export lists
+      - name: Document manifest
         run: jq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/lists.json | csvlook >SOURCES.md
-
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
