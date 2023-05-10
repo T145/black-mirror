@@ -6,7 +6,7 @@ on:
     branches:
       - master
     paths:
-      - "data/v2/lists.json"
+      - "data/v2/manifest.json"
   workflow_dispatch:
 
 jobs:
@@ -32,7 +32,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Sort manifest
         run: |
-            jq -S '.' data/v2/lists.json |
+            jq -S '.' data/v2/manifest.json |
             perl -ne '
             push @lines, $_;
             END {
@@ -40,9 +40,9 @@ jobs:
               or die "sponge: cannot open $file: $!\n";
               print OUT @lines;
               close(OUT);
-            }' -s -- -file=data/v2/lists.json
+            }' -s -- -file=data/v2/manifest.json
       - name: Document manifest
-        run: jq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/lists.json | csvlook >SOURCES.md
+        run: jq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/manifest.json | csvlook >SOURCES.md
       - name: Make commit directory safe
         run: git config --global --add safe.directory /__w/black-mirror/black-mirror
       - name: Commit changes

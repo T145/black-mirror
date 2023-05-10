@@ -189,7 +189,7 @@ main() {
 		.content.type as $content_type |
 		.formats[] |
 		select(.format == $format) |
-		"\($content_filter)#\($content_type)#\(.filter)"' data/v2/lists.json |
+		"\($content_filter)#\($content_type)#\(.filter)"' data/v2/manifest.json |
 		while IFS='#' read -r content_filter content_type list_filter; do
 			process_list "$1" "$2" "$content_filter" "$content_type" "$list_filter" "$3"
 		done

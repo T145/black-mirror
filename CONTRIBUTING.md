@@ -7,7 +7,7 @@ Join the discussion around lists under the "Discussions" tab!
 Issues should be restricted for more critical subjects about how the project works.
 
 ### Have you found a redundant list?
-A redundant list would be any list that has its own entry in `data/v2/lists.json` and is mostly or fully included in another list.
+A redundant list would be any list that has its own entry in `data/v2/manifest.json` and is mostly or fully included in another list.
 Obviously one or the other should be removed, so please make an issue detailing the conflict.
 
 ### Have you found a deprecated list?
@@ -21,7 +21,7 @@ Please make an issue detailing the problem as thoroughly as possible.
 
 ## Manually adding a list
 
-`Black Mirror` works by taking blacklist or whitelist listings from `data/v2/lists.json`.
+`Black Mirror` works by taking blacklist or whitelist listings from `data/v2/manifest.json`.
 Each listing has the following fields:
 
 Example:
