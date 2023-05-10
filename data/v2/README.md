@@ -68,6 +68,7 @@
 - [Quarklist](https://github.com/francis-zhao/quarklist)
 - [Cameleon](https://sysctl.org/cameleon/)
 - [BadHosts](https://www.hostsfile.org/hosts.html)
+- [brijrajparmar27](https://raw.githubusercontent.com/brijrajparmar27/host-sources/master/Porn/hosts)
 
 ## ⬜ Whitelists
 

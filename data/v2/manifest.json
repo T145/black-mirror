@@ -8542,5 +8542,80 @@
       "https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt"
     ],
     "topic": "SECURITY"
+  },
+  "metamask": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/MetaMask/eth-phishing-detect",
+      "homepage": "https://github.com/MetaMask/eth-phishing-detect",
+      "license": "https://raw.githubusercontent.com/MetaMask/eth-phishing-detect/main/LICENSE"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/MetaMask/eth-phishing-detect/master/src/hosts.txt"
+    ],
+    "topic": "CRYPTO"
+  },
+  "fademind_unchecky": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/FadeMind/hosts.extras#readme",
+      "homepage": "https://github.com/FadeMind/hosts.extras/blob/master/UncheckyAds/hosts",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/FadeMind/hosts.extras/master/UncheckyAds/hosts"
+    ],
+    "topic": "PRIVACY"
+  },
+  "minecraft_hosts": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/jamiemansfield/minecraft-hosts",
+      "homepage": "https://github.com/jamiemansfield/minecraft-hosts",
+      "license": "cc0-1.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/jamiemansfield/minecraft-hosts/master/lists/tracking.txt"
+    ],
+    "topic": "PRIVACY"
   }
 }
