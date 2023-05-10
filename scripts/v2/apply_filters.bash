@@ -17,7 +17,7 @@ get_ipv4s_from_urls() {
 }
 
 hostsblock() {
-	gawk 'BEGIN{FS="[|^]"}/^\|\|([[:alnum:]_-]{1,63}\.)+[[:alpha:]]+\^(\$third-party)?$/{print tolower($3)}'
+	gawk 'BEGIN{FS="[|^]"}/^\|\|([[:alnum:]_-]{1,63}\.)+[[:alpha:]]+\^(\$third-party|\$important|\$all)?$/{print tolower($3)}'
 }
 
 # params: column number
