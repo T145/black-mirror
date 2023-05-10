@@ -8617,5 +8617,30 @@
       "https://raw.githubusercontent.com/jamiemansfield/minecraft-hosts/master/lists/tracking.txt"
     ],
     "topic": "PRIVACY"
+  },
+  "betterfyi": {
+    "archive": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "BETTER_FYI",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://better.fyi/trackers/",
+      "homepage": "https://better.fyi/",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://better.fyi/blockerList.txt"
+    ],
+    "topic": "PRIVACY"
   }
 }

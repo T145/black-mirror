@@ -82,6 +82,7 @@ process_list() {
 			'QUINDECIM') mawk -F= '$0~/^=/{print $2}' | mawk '{print $1}' ;;
 			'ZEEK_DOMAIN') mawk '/^[^[:space:]|^#]/&&$2~/^Intel::DOMAIN$/{print $1}' ;;
 			'ZEEK_IPV4') mawk '/^[^[:space:]|^#]/&&$2~/^Intel::ADDR$/{print $1}' ;;
+			'BETTER_FYI') gawk 'BEGIN{FS="[|^]"}/^\|\|([[:alnum:]_-]{1,63}\.)+[[:alpha:]]+(\$third-party)?$/{print tolower($3)}' | mawk -F$ '{print $1}' ;;
 			esac
 			;;
 		'JSON')

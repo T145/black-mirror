@@ -2,7 +2,6 @@
 
 ## ⬛ Blacklists
 
-- [Better FYI](https://better.fyi/blockerList.txt)
 - [Exodus Privacy](https://reports.exodus-privacy.eu.org/en/)
 - [Mochi Filter](https://github.com/eEIi0A5L/adblock_filter/blob/master/mochi_filter.txt)
 - [migueldemoura](https://github.com/migueldemoura/ublock-umatrix-rulesets)
