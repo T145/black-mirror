@@ -38,12 +38,7 @@ jobs:
       # https://github.com/ildar-shaimordanov/perl-utils#sponge
       # Direct piping works in a local Docker BM container, but not in the workflow?
       - name: Export lists
-        run: |
-            jq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] |
-              .key as $key | .value.method as $method | .value.metadata |
-              [$key, $method, .description, .homepage, .license]) | @csv' data/v2/lists.json |
-              csvlook |
-              perl -ne 'push @lines, $_; END { open(OUT, ">$file") or die "sponge: cannot open $file: $!\n"; print OUT @lines; close(OUT); }' -s -- -file=SOURCES.md
+        run: jq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/lists.json | csvlook >SOURCES.md
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
