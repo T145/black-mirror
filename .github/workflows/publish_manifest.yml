@@ -34,6 +34,7 @@ jobs:
         run: jq -S '.' data/v2/lists.json >data/v2/lists.json
       - name: Commit changes
         run: |
+          git config --global --add safe.directory /__w/black-mirror/black-mirror
           git add -A
           git commit -m "ci(lists): ✨📚✨"
           git push origin master
