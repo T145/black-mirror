@@ -32,8 +32,6 @@ jobs:
         uses: actions/checkout@v3
       - name: Sort manifest
         run: jq -S '.' data/v2/lists.json >data/v2/lists.json
-      - name: Document manifest
-        run: jq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/lists.json | csvlook >SOURCES.md
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
