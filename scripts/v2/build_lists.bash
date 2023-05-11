@@ -10,6 +10,7 @@ umask 055             # change all generated file perms from 755 to 700
 
 DOWNLOADS=$(mktemp -d)
 TMP=$(mktemp -p "$DOWNLOADS")
+ERROR_LOG='logs/error.log'
 METHOD_ALLOW='ALLOW'
 METHOD_BLOCK='BLOCK'
 FORMAT_DOMAIN='DOMAIN'
@@ -17,7 +18,7 @@ FORMAT_CIDR4='CIDR4'
 FORMAT_CIDR6='CIDR6'
 FORMAT_IPV4='IPV4'
 FORMAT_IPV6='IPV6'
-readonly DOWNLOADS TMP METHOD_ALLOW METHOD_BLOCK FORMAT_DOMAIN FORMAT_CIDR4 FORMAT_CIDR6 FORMAT_IPV4 FORMAT_IPV6
+readonly DOWNLOADS TMP ERROR_LOG METHOD_ALLOW METHOD_BLOCK FORMAT_DOMAIN FORMAT_CIDR4 FORMAT_CIDR6 FORMAT_IPV4 FORMAT_IPV6
 
 METHODS=("$METHOD_BLOCK" "$METHOD_ALLOW")
 FORMATS=("$FORMAT_DOMAIN" "$FORMAT_IPV4" "$FORMAT_IPV6" "$FORMAT_CIDR4" "$FORMAT_CIDR6")
@@ -65,7 +66,7 @@ init() {
 	trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 	mkdir -p build/
 	: >logs/aria2.log
-	: >logs/error.log
+	: >"$ERROR_LOG"
 	chmod -t /tmp
 }
 
@@ -132,8 +133,8 @@ main() {
 
 			find -P -O3 "$results" -type f -name stderr |
 				while read -r file; do
-					echo "${file}:" >>err.log
-					cat -s "$file" >>err.log
+					echo "${file}:" >>"$ERROR_LOG"
+					cat -s "$file" >>"$ERROR_LOG"
 				done
 
 			if [ -f "$list" ] && [ -s "$list" ]; then
