@@ -2,8 +2,6 @@
 
 ## ⬛ Blacklists
 
-- [Exodus Privacy](https://reports.exodus-privacy.eu.org/en/)
-- [Mochi Filter](https://github.com/eEIi0A5L/adblock_filter/blob/master/mochi_filter.txt)
 - [migueldemoura](https://github.com/migueldemoura/ublock-umatrix-rulesets)
 - nextdns
   - [cname-cloaking-blocklist](https://github.com/nextdns/cname-cloaking-blocklist) ?
@@ -48,8 +46,6 @@
   - [Mirror](https://cats-team.coding.net/p/adguard/d/AdRules/git/raw/main/ad-domains.txt)
 - [XIU2](https://github.com/XIU2/TrackersListCollection)
   - blacklist
-- [blockconvert](https://github.com/mkb2091/blockconvert)
-  - [blocklist](https://github.com/mkb2091/blockconvert/blob/master/internal/blocklist.txt)
 - [CleanTalk](https://cleantalk.org/help/iptables-connect)
 - [UA Blocklist](https://blocklist.net.ua/providers/)
 - [BotScout](https://botscout.com/last_caught_cache.htm)
@@ -68,6 +64,8 @@
 - [Cameleon](https://sysctl.org/cameleon/)
 - [BadHosts](https://www.hostsfile.org/hosts.html)
 - [brijrajparmar27](https://raw.githubusercontent.com/brijrajparmar27/host-sources/master/Porn/hosts)
+- [malwaredomainlist_delisted](https://www.malwaredomainlist.com/hostslist/delisted.txt)
+  - [Homepage](https://www.malwaredomainlist.com/forums/index.php?topic=3270.0)
 
 ## ⬜ Whitelists
 
