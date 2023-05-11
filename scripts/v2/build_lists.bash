@@ -65,6 +65,7 @@ init() {
 	trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 	mkdir -p build/
 	: >logs/aria2.log
+	: >logs/error.log
 	chmod -t /tmp
 }
 
@@ -128,6 +129,12 @@ main() {
 			echo "[INFO] Processed: ${list}"
 
 			find -P -O3 "$results" -type f -name stdout -exec cat -s {} + | sponge "$list"
+
+			find -P -O3 "$results" -type f -name stderr |
+				while read -r file; do
+					echo "${file}:" >>err.log
+					cat -s "$file" >>err.log
+				done
 
 			if [ -f "$list" ] && [ -s "$list" ]; then
 				sorted "$list"
