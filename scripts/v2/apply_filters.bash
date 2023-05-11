@@ -83,6 +83,10 @@ process_list() {
 			'ZEEK_DOMAIN') mawk '/^[^[:space:]|^#]/&&$2~/^Intel::DOMAIN$/{print $1}' ;;
 			'ZEEK_IPV4') mawk '/^[^[:space:]|^#]/&&$2~/^Intel::ADDR$/{print $1}' ;;
 			'BETTER_FYI') gawk 'BEGIN{FS="[|^]"}/^\|\|([[:alnum:]_-]{1,63}\.)+[[:alpha:]]+(\$third-party)?$/{print tolower($3)}' | mawk -F$ '{print $1}' ;;
+			'HERRBISCHOFF_IPV4') mawk '$0~/./&&$0!~/\/|:|^#/' ;;
+			'HERRBISCHOFF_IPV6') mawk '$0~/:/&&$0!~/\/|^#/' ;;
+			'HERRBISCHOFF_CIDR4') mawk '$0~/\//&&$0!~/:/' ;;
+			'HERRBISCHOFF_CIDR6') mawk '$0~/:/&&$0~/\//&&$0!~/^#/' ;;
 			esac
 			;;
 		'JSON')

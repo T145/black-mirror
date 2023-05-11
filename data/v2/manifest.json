@@ -8642,5 +8642,71 @@
       "https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt"
     ],
     "topic": "SECURITY"
+  },
+  "herrbischoff_ipbl": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HERRBISCHOFF_IPV4",
+        "format": "IPV4"
+      },
+      {
+        "filter": "HERRBISCHOFF_IPV6",
+        "format": "IPV6"
+      },
+      {
+        "filter": "HERRBISCHOFF_CIDR4",
+        "format": "CIDR4"
+      },
+      {
+        "filter": "HERRBISCHOFF_CIDR6",
+        "format": "CIDR6"
+      }
+    ],
+    "metadata": {
+      "description": "https://ipbl.herrbischoff.com/",
+      "homepage": "https://ipbl.herrbischoff.com/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://ipbl.herrbischoff.com/list.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "herrbischoff_drop": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HERRBISCHOFF_CIDR4",
+        "format": "CIDR4"
+      },
+      {
+        "filter": "HERRBISCHOFF_CIDR6",
+        "format": "CIDR6"
+      }
+    ],
+    "metadata": {
+      "description": "https://ipbl.herrbischoff.com/",
+      "homepage": "https://ipbl.herrbischoff.com/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://ipbl.herrbischoff.com/badasn.txt"
+    ],
+    "topic": "SECURITY"
   }
 }
