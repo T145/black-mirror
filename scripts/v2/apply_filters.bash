@@ -55,6 +55,7 @@ process_list() {
 		'TEXT')
 			case "$LIST_FILTER" in
 			'NONE') cat -s ;;
+			'SIMPLE_HOSTS_FILE') mawk '$1~/^(0.0.0.0|127.0.0.1|0|::)$/{print $2}' ;;
 			'RAW_HOSTS_WITH_COMMENTS') mawk '/^[^[:space:]|^#|^!|^;|^$|^:]/{print $1}' ;;
 			'HOSTS_FILE') ghosts -m /dev/stdin -o -p -noheader -stats=false ;;
 			'ABUSE_CH_URLHAUS_DOMAIN') get_domains_from_urls ;;
