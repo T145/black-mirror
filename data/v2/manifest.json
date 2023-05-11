@@ -1104,6 +1104,56 @@
       "pihole": "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt"
     }
   },
+  "blockconvert_adblock": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/mkb2091/blockconvert",
+      "homepage": "https://github.com/mkb2091/blockconvert",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/mkb2091/blockconvert/master/internal/adblock.txt"
+    ],
+    "topic": "PRIVACY"
+  },
+  "blockconvert_internal": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/mkb2091/blockconvert",
+      "homepage": "https://github.com/mkb2091/blockconvert",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/mkb2091/blockconvert/master/internal/blocklist.txt"
+    ],
+    "topic": "PRIVACY"
+  },
   "blocklist_de": {
     "archive": false,
     "checksums": {},
@@ -1161,6 +1211,33 @@
       "https://blocklist.net.ua/blocklist.csv"
     ],
     "topic": "SECURITY"
+  },
+  "blokada_exodusprivacy": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://community.blokada.org/t/introducing-exodus-privacy-to-blokada/7358",
+      "homepage": "https://blokada.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://blokada.org/blocklists/exodusprivacy/standard/hosts.txt",
+      "https://blokada.org/mirror/v5/exodusprivacy/standard/hosts.txt",
+      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/exodusprivacy/standard/hosts.txt"
+    ],
+    "topic": "PRIVACY"
   },
   "blp_everything": {
     "archive": false,
@@ -1560,6 +1637,36 @@
       "https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/vpn/NordVPNIPs.csv"
     ],
     "topic": "SECURITY"
+  },
+  "cats_team": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Cats-Team/AdRules",
+      "homepage": "https://github.com/Cats-Team/AdRules",
+      "license": "do-wtf-you-want"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Cats-Team/AdRules/main/ad-domains.txt"
+    ],
+    "topic": "PRIVACY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt",
+      "easylist": "https://raw.githubusercontent.com/Cats-Team/AdRules/main/adblock_plus.txt",
+      "pihole": "https://raw.githubusercontent.com/Cats-Team/AdRules/main/hosts.txt"
+    }
   },
   "cert_agid_log4shell": {
     "archive": false,
@@ -2338,6 +2445,36 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/d3ward/toolz/master/src/d3host.txt"
+    }
+  },
+  "damengzhu": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/damengzhu/banad",
+      "homepage": "https://github.com/damengzhu/banad",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/damengzhu/banad/main/hosts.txt"
+    ],
+    "topic": "PRIVACY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/damengzhu/banad/main/dnslist.txt",
+      "easylist": "https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt",
+      "pihole": "https://raw.githubusercontent.com/damengzhu/banad/main/hosts.txt"
     }
   },
   "dan_me_uk": {
@@ -5618,6 +5755,34 @@
     ],
     "topic": "SECURITY"
   },
+  "mochifilter_dns": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/eEIi0A5L/adblock_filter",
+      "homepage": "https://eeii0a5l.github.io/mochifilter_homepage/index.html",
+      "license": "cc0-1.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/eEIi0A5L/adblock_filter/master/adguard_dns.txt"
+    ],
+    "topic": "PRIVACY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/eEIi0A5L/adblock_filter/master/adguard_dns.txt"
+    }
+  },
   "myip_full_blacklist": {
     "archive": false,
     "checksums": {},
@@ -8708,170 +8873,5 @@
       "https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt"
     ],
     "topic": "SECURITY"
-  },
-  "blokada_exodusprivacy": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://community.blokada.org/t/introducing-exodus-privacy-to-blokada/7358",
-      "homepage": "https://blokada.org/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://blokada.org/blocklists/exodusprivacy/standard/hosts.txt",
-      "https://blokada.org/mirror/v5/exodusprivacy/standard/hosts.txt",
-      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/exodusprivacy/standard/hosts.txt"
-    ],
-    "topic": "PRIVACY"
-  },
-  "blockconvert_adblock": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ADBLOCK",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/mkb2091/blockconvert",
-      "homepage": "https://github.com/mkb2091/blockconvert",
-      "license": "gpl-3.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/mkb2091/blockconvert/master/internal/adblock.txt"
-    ],
-    "topic": "PRIVACY"
-  },
-  "blockconvert_internal": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/mkb2091/blockconvert",
-      "homepage": "https://github.com/mkb2091/blockconvert",
-      "license": "gpl-3.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/mkb2091/blockconvert/master/internal/blocklist.txt"
-    ],
-    "topic": "PRIVACY"
-  },
-  "cats_team": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/Cats-Team/AdRules",
-      "homepage": "https://github.com/Cats-Team/AdRules",
-      "license": "do-wtf-you-want"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/Cats-Team/AdRules/main/ad-domains.txt"
-    ],
-    "topic": "PRIVACY",
-    "variants": {
-      "pihole": "https://raw.githubusercontent.com/Cats-Team/AdRules/main/hosts.txt",
-      "easylist": "https://raw.githubusercontent.com/Cats-Team/AdRules/main/adblock_plus.txt",
-      "adguard": "https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt"
-    }
-  },
-  "damengzhu": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/damengzhu/banad",
-      "homepage": "https://github.com/damengzhu/banad",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/damengzhu/banad/main/hosts.txt"
-    ],
-    "topic": "PRIVACY",
-    "variants": {
-      "easylist": "https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt",
-      "adguard": "https://raw.githubusercontent.com/damengzhu/banad/main/dnslist.txt",
-      "pihole": "https://raw.githubusercontent.com/damengzhu/banad/main/hosts.txt"
-    }
-  },
-  "mochifilter_dns": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ADBLOCK",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/eEIi0A5L/adblock_filter",
-      "homepage": "https://eeii0a5l.github.io/mochifilter_homepage/index.html",
-      "license": "cc0-1.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/eEIi0A5L/adblock_filter/master/adguard_dns.txt"
-    ],
-    "topic": "PRIVACY",
-    "variants": {
-      "adguard": "https://raw.githubusercontent.com/eEIi0A5L/adblock_filter/master/adguard_dns.txt"
-    }
   }
 }
