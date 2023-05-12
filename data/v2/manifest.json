@@ -611,6 +611,31 @@
       "surge2": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge2.txt"
     }
   },
+  "anti_axelspringer": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "SIMPLE_HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/autinerd/anti-axelspringer-hosts/tree/master#anti-axel-springer-hosts-file",
+      "homepage": "https://github.com/autinerd/anti-axelspringer-hosts",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/autinerd/anti-axelspringer-hosts/master/axelspringer-hosts"
+    ],
+    "topic": "SANITY"
+  },
   "anti_porn": {
     "archive": false,
     "checksums": {},
@@ -2845,6 +2870,56 @@
     "method": "BLOCK",
     "mirrors": [
       "https://raw.githubusercontent.com/disconnectme/disconnect-tracking-protection/master/services.json"
+    ],
+    "topic": "SECURITY"
+  },
+  "discord_phishing_links": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nikolaischunk/discord-phishing-links",
+      "homepage": "https://github.com/nikolaischunk/discord-phishing-links",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nikolaischunk/discord-phishing-links/main/txt/domain-list.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "discord_suspicious_links": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nikolaischunk/discord-phishing-links",
+      "homepage": "https://github.com/nikolaischunk/discord-phishing-links",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nikolaischunk/discord-phishing-links/main/txt/suspicious-list.txt"
     ],
     "topic": "SECURITY"
   },
@@ -5335,6 +5410,31 @@
       "pihole": "https://raw.githubusercontent.com/LittleCordines/pfsense-hosts-file/master/PornBlocklists"
     }
   },
+  "lukes_list": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/lwojcik/lukes-pihole-blocklist",
+      "homepage": "https://github.com/lwojcik/lukes-pihole-blocklist",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/lwojcik/lukes-pihole-blocklist/master/hosts.txt"
+    ],
+    "topic": "PRIVACY"
+  },
   "mailscanner_bad_phishing": {
     "_notes": "Could use 'phishing.safe.sites.conf' as a whitelist.",
     "archive": false,
@@ -5869,6 +5969,31 @@
     ],
     "topic": "SECURITY"
   },
+  "nextdns_cname_cloaking": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/cname-cloaking-blocklist",
+      "homepage": "https://github.com/nextdns/cname-cloaking-blocklist",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/cname-cloaking-blocklist/master/domains"
+    ],
+    "topic": "PRIVACY"
+  },
   "nextdns_linux_bypass": {
     "archive": false,
     "checksums": {},
@@ -6360,6 +6485,31 @@
     ],
     "topic": "SECURITY"
   },
+  "palemoon": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.palemoon.org/",
+      "homepage": "https://www.palemoon.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://blocklist.palemoon.org/ABL/lunar-blocklist.txt"
+    ],
+    "topic": "PRIVACY"
+  },
   "perflyst_amazon_fire_tv": {
     "archive": false,
     "checksums": {},
@@ -6653,6 +6803,35 @@
     "method": "BLOCK",
     "mirrors": [
       "https://data.phishtank.com/data/online-valid.csv"
+    ],
+    "topic": "SECURITY"
+  },
+  "pop3gropers": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "POP3GROPERS_IPV4",
+        "format": "IPV4"
+      },
+      {
+        "filter": "POP3GROPERS_IPV6",
+        "format": "IPV6"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.bsdly.net/~peter/index.shtml",
+      "homepage": "https://home.nuug.no/~peter/",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://home.nuug.no/~peter/pop3gropers.txt"
     ],
     "topic": "SECURITY"
   },
@@ -7235,6 +7414,31 @@
     "method": "BLOCK",
     "mirrors": [
       "https://schakal.ru/hosts/alive_hosts.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "search_engine_spam": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/no-cmyk/Search-Engine-Spam-Blocklist",
+      "homepage": "https://github.com/no-cmyk/Search-Engine-Spam-Blocklist",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/no-cmyk/Search-Engine-Spam-Blocklist/master/blocklist.txt"
     ],
     "topic": "SECURITY"
   },
@@ -8418,6 +8622,31 @@
     ],
     "topic": "SECURITY"
   },
+  "unflac": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/unflac/filter",
+      "homepage": "https://github.com/unflac/filter",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/unflac/filter/main/filter.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "viriback": {
     "archive": false,
     "checksums": {},
@@ -8898,235 +9127,6 @@
     "method": "ALLOW",
     "mirrors": [
       "https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "palemoon": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ADBLOCK",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://www.palemoon.org/",
-      "homepage": "https://www.palemoon.org/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://blocklist.palemoon.org/ABL/lunar-blocklist.txt"
-    ],
-    "topic": "PRIVACY"
-  },
-  "discord_phishing_links": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/nikolaischunk/discord-phishing-links",
-      "homepage": "https://github.com/nikolaischunk/discord-phishing-links",
-      "license": "mit"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/nikolaischunk/discord-phishing-links/main/txt/domain-list.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "discord_suspicious_links": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/nikolaischunk/discord-phishing-links",
-      "homepage": "https://github.com/nikolaischunk/discord-phishing-links",
-      "license": "mit"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/nikolaischunk/discord-phishing-links/main/txt/suspicious-list.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "lukes_list": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/lwojcik/lukes-pihole-blocklist",
-      "homepage": "https://github.com/lwojcik/lukes-pihole-blocklist",
-      "license": "unlicense"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/lwojcik/lukes-pihole-blocklist/master/hosts.txt"
-    ],
-    "topic": "PRIVACY"
-  },
-  "search_engine_spam": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/no-cmyk/Search-Engine-Spam-Blocklist",
-      "homepage": "https://github.com/no-cmyk/Search-Engine-Spam-Blocklist",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/no-cmyk/Search-Engine-Spam-Blocklist/master/blocklist.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "unflac": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ADBLOCK",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/unflac/filter",
-      "homepage": "https://github.com/unflac/filter",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/unflac/filter/main/filter.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "anti_axelspringer": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "SIMPLE_HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/autinerd/anti-axelspringer-hosts/tree/master#anti-axel-springer-hosts-file",
-      "homepage": "https://github.com/autinerd/anti-axelspringer-hosts",
-      "license": "gpl-3.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/autinerd/anti-axelspringer-hosts/master/axelspringer-hosts"
-    ],
-    "topic": "SANITY"
-  },
-  "nextdns_cname_cloaking": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/nextdns/cname-cloaking-blocklist",
-      "homepage": "https://github.com/nextdns/cname-cloaking-blocklist",
-      "license": "mit"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/nextdns/cname-cloaking-blocklist/master/domains"
-    ],
-    "topic": "PRIVACY"
-  },
-  "pop3gropers": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "POP3GROPERS_IPV4",
-        "format": "IPV4"
-      },
-      {
-        "filter": "POP3GROPERS_IPV6",
-        "format": "IPV6"
-      }
-    ],
-    "metadata": {
-      "description": "https://www.bsdly.net/~peter/index.shtml",
-      "homepage": "https://home.nuug.no/~peter/",
-      "license": "not-available"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://home.nuug.no/~peter/pop3gropers.txt"
     ],
     "topic": "SECURITY"
   }
