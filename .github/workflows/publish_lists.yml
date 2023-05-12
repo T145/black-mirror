@@ -145,7 +145,7 @@ jobs:
           name: build
   update_docs:
     runs-on: ubuntu-latest
-    needs: publish_github
+    needs: upload_github
 
     permissions:
       contents: write
