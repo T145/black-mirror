@@ -17,7 +17,7 @@ get_ipv4s_from_urls() {
 }
 
 hostsblock() {
-	gawk 'BEGIN{FS="[|^]"}/^\|\|([[:alnum:]_-]{1,63}\.)+[[:alpha:]]+\^(\$third-party|\$important|\$all)?/{print tolower($3)}'
+	gawk 'BEGIN{FS="[|^]"}/^\|\|([[:alnum:]_-]{1,63}\.)+[[:alpha:]]+\^(\$third-party|\$important|\$all|\$xmlhttprequest)?/{print tolower($3)}'
 }
 
 # params: column number
@@ -88,6 +88,8 @@ process_list() {
 			'HERRBISCHOFF_IPV6') mawk '$0~/:/&&$0!~/\/|^#/' ;;
 			'HERRBISCHOFF_CIDR4') mawk '$0~/\//&&$0!~/:/' ;;
 			'HERRBISCHOFF_CIDR6') mawk '$0~/:/&&$0~/\//&&$0!~/^#/' ;;
+			'POP3GROPERS_IPV4') mawk '$0~/./&&$0!~/\/|:|^#/{gsub(/ /, "", $1); print $1}' ;;
+			'POP3GROPERS_IPV6') mawk '$0~/:/&&$0!~/\/|^#/{gsub(/ /, "", $1); print $1}' ;;
 			esac
 			;;
 		'JSON')

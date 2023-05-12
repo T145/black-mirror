@@ -3,10 +3,7 @@
 ## ⬛ Blacklists
 
 - [migueldemoura](https://github.com/migueldemoura/ublock-umatrix-rulesets)
-- nextdns
-  - [cname-cloaking-blocklist](https://github.com/nextdns/cname-cloaking-blocklist) ?
 - [uAssets](https://github.com/uBlockOrigin/uAssets)
-- [pop3gropers](https://home.nuug.no/~peter/pop3gropers.txt)
 - [blacklist-named](https://github.com/tomzuu/blacklist-named)
 - [ad-wars](https://github.com/jdlingyu/ad-wars)
 - [turk-adlist](https://github.com/bkrucarci/turk-adlist)
@@ -15,14 +12,9 @@
 - [dohservers](https://github.com/oneoffdallas/dohservers)
 - [DroneBL](https://dronebl.org/docs/howtouse) ?
 - [Free Email Provider Domains](https://gist.github.com/tbrianjones/5992856)
-- [Search Engine Spam Blocklist](https://github.com/no-cmyk/Search-Engine-Spam-Blocklist)
-- [anti-axelspringer-hosts](https://github.com/autinerd/anti-axelspringer-hosts#anti-axel-springer-hosts-file)
 - [wh0ami](https://codeberg.org/wh0ami/pihole-lists)
 - [Artists Against 419](https://db.aa419.org/fakebankslist.php)
 - [Okean Spam ChinaCIDR](https://www.okean.com/chinacidr.txt)
-- [perso](https://perso.pw/blocklist.txt)
-- [Lunar Blocklist](https://blocklist.palemoon.org/ABL/lunar-blocklist.txt)
-- [Luke's Blocklist](https://github.com/lwojcik/lukes-pihole-blocklist)
 - [Ugly Email Trackers](https://github.com/OneClickLab/ugly-email-trackers)
   - [Leave Me Alone](https://github.com/leavemealone-app/email-trackers)
 - [mhhakim](https://github.com/mhhakim/pihole-blocklist)
@@ -42,20 +34,12 @@
 - [xiaobeita](https://github.com/rentianyu/Ad-set-hosts/tree/master/xiaobeita)
 - [VeleSila/yhosts](https://github.com/VeleSila/yhosts)
 - [ilpl](https://github.com/ilpl/ad-hosts)
-- [Cats-Team](https://github.com/Cats-Team/AdRules)
-  - [Mirror](https://cats-team.coding.net/p/adguard/d/AdRules/git/raw/main/ad-domains.txt)
-- [XIU2](https://github.com/XIU2/TrackersListCollection)
-  - blacklist
 - [CleanTalk](https://cleantalk.org/help/iptables-connect)
-- [UA Blocklist](https://blocklist.net.ua/providers/)
 - [BotScout](https://botscout.com/last_caught_cache.htm)
-- [unflac](https://github.com/unflac/filter/blob/main/filter.txt)
-- [SukkaW](https://github.com/SukkaW/Surge/blob/master/List/non_ip/my_reject.conf)
 - [xOS](https://github.com/xOS/Config/blob/Her/RuleSet/Advertising.list)
 - [i-blocklist](https://github.com/jackrabbit335/UsefulLinuxShellScripts/blob/master/blocklist-update.sh#L17)
 - [disposable-email-domains](https://github.com/ivolo/disposable-email-domains/blob/master/index.json)
 - [Cyjax Uploads](https://www.cyjax.com/latest-analysis/)
-- [Discord Phishing Links](https://github.com/nikolaischunk/discord-phishing-links)
 - [YT Spam Lists](https://github.com/ThioJoe/YT-Spam-Lists/blob/main/SpamDomainsList.txt)
 
 ## Add but archive
@@ -184,6 +168,7 @@
 - [sspakrac](https://www.sspakrac.hr/blokiraniurl/hosts.txt)
   - Ancient `WinHelp` version.
 - [quindecim blocklist](https://github.com/quindecim/block/)
+- [SukkaW](https://github.com/SukkaW/Surge)
 
 # 🧟 Zombies
 
@@ -577,3 +562,4 @@
   - [THENEWLIST](http://zitstif.no-ip.org/THENEWLIST.txt)
     - Last-Modified: Tue, 18 Apr 2017 02:13:20 GMT
   - [Other Lists](http://zitstif.no-ip.org/?cat=1037)
+- [perso](https://perso.pw/blocklist.txt)
