@@ -1074,37 +1074,6 @@
       "pihole": "https://getblackbird.net/blacklist/hosts.txt"
     }
   },
-  "blokada_tracker_radar": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://community.blokada.org/t/introducing-duckduckgo-tracker-radar-to-blokada/469",
-      "homepage": "https://blokada.org/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt",
-      "https://blokada.org/mirror/v5/ddgtrackerradar/standard/hosts.txt",
-      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/ddgtrackerradar/standard/hosts.txt",
-      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/mirror/v5/ddgtrackerradar/standard/hosts.txt"
-    ],
-    "topic": "SECURITY",
-    "variants": {
-      "pihole": "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt"
-    }
-  },
   "blockconvert_adblock": {
     "archive": false,
     "checksums": {},
@@ -1240,6 +1209,37 @@
       "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/mirror/v5/exodusprivacy/standard/hosts.txt"
     ],
     "topic": "PRIVACY"
+  },
+  "blokada_tracker_radar": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://community.blokada.org/t/introducing-duckduckgo-tracker-radar-to-blokada/469",
+      "homepage": "https://blokada.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt",
+      "https://blokada.org/mirror/v5/ddgtrackerradar/standard/hosts.txt",
+      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/ddgtrackerradar/standard/hosts.txt",
+      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/mirror/v5/ddgtrackerradar/standard/hosts.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt"
+    }
   },
   "blp_everything": {
     "archive": false,
