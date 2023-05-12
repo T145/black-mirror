@@ -8,7 +8,7 @@ on:
 
 jobs:
   build_lists:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest-16-cores
 
     defaults:
       run:
@@ -66,6 +66,7 @@ jobs:
   upload_github:
     runs-on: ubuntu-latest
     needs: build_lists
+    continue-on-error: true
 
     permissions:
       contents: write
@@ -95,14 +96,10 @@ jobs:
       - name: Delete lists
         if: always()
         run: rm -rf build/ && rm -f lists.tar
-      - name: Delete build artifact
-        if: failure()
-        uses: geekyeggo/delete-artifact@v2
-        with:
-          name: build
   upload_dropbox:
     runs-on: ubuntu-latest
     needs: build_lists
+    continue-on-error: true
 
     steps:
       - name: Checkout repo
@@ -118,20 +115,44 @@ jobs:
           cd build/
           sha256sum CHECKSUMS.txt
           cd ..
-      - name: Dropbox Uploader
-        uses: whalemare/action-dropbox@v1.0.0
+      # The largest list, so we'll just handle this independently
+      - name: Upload domain blacklist
+        uses: deka0106/upload-to-dropbox@v2
         with:
-          accessToken: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-          destination: /black-mirror/
-          pattern: build/*.txt
+          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
+          src: build/BLOCK_DOMAIN.txt
+          dest: /black-mirror/
+          mode: overwrite
+          multiple: false
+      - name: Sleep to avoid 429 error
+        run: sleep 5s
+      - name: Upload other blacklists
+        uses: deka0106/upload-to-dropbox@v2
+        with:
+          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
+          src: |
+            build/BLOCK_IPV4.txt
+            build/BLOCK_IPV6.txt
+            build/BLOCK_CIDR4.txt
+            build/BLOCK_CIDR6.txt
+          dest: /black-mirror/
+          mode: overwrite
+          multiple: true
+      - name: Sleep to avoid 429 error
+        run: sleep 5s
+      - name: Upload whitelists and checksums
+        uses: deka0106/upload-to-dropbox@v2
+        with:
+          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
+          src: |
+            build/WHITE*.txt
+            bulid/CHECKSUMS.txt
+          dest: /black-mirror/
+          mode: overwrite
+          multiple: true
       - name: Delete lists
         if: always()
         run: rm -rf build/ && rm -f lists.tar
-      - name: Delete build artifact
-        if: failure()
-        uses: geekyeggo/delete-artifact@v2
-        with:
-          name: build
   delete_build_artifact:
     runs-on: ubuntu-latest
     needs: [upload_github, upload_dropbox]
