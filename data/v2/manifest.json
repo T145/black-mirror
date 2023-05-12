@@ -1074,7 +1074,7 @@
       "pihole": "https://getblackbird.net/blacklist/hosts.txt"
     }
   },
-  "blockada_tracker_radar": {
+  "blokada_tracker_radar": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -1089,14 +1089,15 @@
       }
     ],
     "metadata": {
-      "description": "https://github.com/blokadaorg/landing-github-pages/blob/master/scripts/ddg.py",
+      "description": "https://community.blokada.org/t/introducing-duckduckgo-tracker-radar-to-blokada/469",
       "homepage": "https://blokada.org/",
       "license": "all-rights-reserved"
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/ddgtrackerradar/standard/hosts.txt",
       "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt",
+      "https://blokada.org/mirror/v5/ddgtrackerradar/standard/hosts.txt",
+      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/ddgtrackerradar/standard/hosts.txt",
       "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/mirror/v5/ddgtrackerradar/standard/hosts.txt"
     ],
     "topic": "SECURITY",
@@ -1235,7 +1236,8 @@
     "mirrors": [
       "https://blokada.org/blocklists/exodusprivacy/standard/hosts.txt",
       "https://blokada.org/mirror/v5/exodusprivacy/standard/hosts.txt",
-      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/exodusprivacy/standard/hosts.txt"
+      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/blocklists/exodusprivacy/standard/hosts.txt",
+      "https://raw.githubusercontent.com/blokadaorg/landing-github-pages/master/mirror/v5/exodusprivacy/standard/hosts.txt"
     ],
     "topic": "PRIVACY"
   },
