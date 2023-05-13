@@ -133,8 +133,10 @@ main() {
 
 			find -P -O3 "$results" -type f -name stderr |
 				while read -r file; do
-					echo "${file}:" >>"$ERROR_LOG"
-					cat -s "$file" >>"$ERROR_LOG"
+					if [ -s "$file" ]; then
+						echo "$file" | mawk -F'\+z' '{printf "%s:\n",$5}' >>"$ERROR_LOG"
+						cat -s "$file" >>"$ERROR_LOG"
+					fi
 				done
 
 			if [ -f "$list" ] && [ -s "$list" ]; then
