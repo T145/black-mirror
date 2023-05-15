@@ -1,39 +1,23 @@
-# https://oxsecurity.github.io/megalinter/configuration/
 ---
-APPLY_FIXES: all
+# Configuration file for MegaLinter
+# See all available variables at https://megalinter.io/configuration/ and in linters documentation
+
+APPLY_FIXES: all # all, none, or list of linter keys
+# ENABLE: # If you use ENABLE variable, all other languages/formats/tooling-formats will be disabled by default
+# ENABLE_LINTERS: # If you use ENABLE_LINTERS variable, all other linters will be disabled by default
+DISABLE:
+  - COPYPASTE # Comment to enable checks of excessive copy-pastes
+  - SPELL # Comment to enable checks of spelling mistakes
 SHOW_ELAPSED_TIME: true
 FILEIO_REPORTER: false
-GITHUB_STATUS_REPORTER: false
-PRINT_ALPACA: false
-UPDATED_SOURCES_REPORTER: true
-VALIDATE_ALL_CODEBASE: true
-IGNORE_GITIGNORED_FILES: true
-SHOW_SKIPPED_LINTERS: false
-
-ENABLE:
-  - ACTION
-  - BASH
-  - DOCKERFILE
-  - EDITORCONFIG
-  - JSON
-  - MARKDOWN
-  - PERL
-  - PYTHON
-  - REPOSITORY
-  - YAML
-
+# DISABLE_ERRORS: true # Uncomment if you want MegaLinter to detect errors but not block CI to pass
+CLEAR_REPORT_FOLDER: true
+FILTER_REGEX_EXCLUDE: (pnpm-lock.yaml|node_modules/*)
 DISABLE_LINTERS:
-  - "MARKDOWN_MARKDOWN_LINK_CHECK" # passed on last checks, and is rather lengthy to scan (~500s)
-  - "PYTHON_PYLINT" # presently broken in megalinter v6
-  - "REPOSITORY_CHECKOV" # currently unable to perform a security scan, and other reports are similar to hadolint
-  - "REPOSITORY_SECRETLINT" # made redundant by gitleaks, which provides very detailed information
+  - "MARKDOWN_MARKDOWN_LINK_CHECK"
+  - "REPOSITORY_DEVSKIM"
   - "REPOSITORY_GITLEAKS" # takes a very long time to process
-  - "REPOSITORY_DEVSKIM" # a bit unstable atm
-  - "REPOSITORY_TRIVY" # TODO: configure to only scan the Dockerfile
   - "REPOSITORY_SYFT" # generating an unused bill of materials is not necessary
-
-YAML_YAMLLINT_FILTER_REGEX_EXCLUDE: (pnpm-lock.yaml)
-
 # remove lingering docker containers when done
 POST_COMMANDS:
   - command: docker system prune -f

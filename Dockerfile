@@ -35,13 +35,14 @@ RUN curl http://pi.dk/3/ | bash \
 # https://gitlab.com/parrotsec/build/containers
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.8.3" \
+      version="5.8.4" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 STOPSIGNAL SIGKILL
 WORKDIR "/root"
+USER "admin"
 
 # https://github.com/ParrotSec/docker-images/blob/master/core/lts-amd64/Dockerfile#L6
 # https://www.parrotsec.org/docs/apparmor.html

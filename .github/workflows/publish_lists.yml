@@ -6,6 +6,8 @@ on:
     - cron: "27 13 * * *"
   workflow_dispatch:
 
+permissions: read-all
+
 jobs:
   build_lists:
     # https://docs.github.com/en/actions/using-github-hosted-runners/using-larger-runners
@@ -15,9 +17,6 @@ jobs:
     defaults:
       run:
         shell: bash
-
-    permissions:
-      contents: write
 
     container:
       image: ghcr.io/t145/black-mirror:latest

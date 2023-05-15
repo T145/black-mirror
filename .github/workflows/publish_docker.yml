@@ -10,9 +10,15 @@ on:
       - "Dockerfile"
   workflow_dispatch:
 
+permissions: read-all
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    permissions:
+      packages: write
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3

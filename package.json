@@ -1,25 +1,15 @@
 {
-  "name": "black-mirror",
-  "version": "4.2.0",
-  "private": true,
-  "description": "Blacklists and whitelists that aim to promote security, safety, and sanity across the internet!",
-  "repository": "https://github.com/T145/black-mirror.git",
-  "license": "AGPL-3.0",
-  "author": "T145",
-  "scripts": {
-    "clean-logs": "run-script-os",
-    "clean-logs:darwin:linux": "[ -d megalinter-reports/ ] && rm -rf megalinter-reports",
-    "clean-logs:win32": "if exist megalinter-reports rmdir megalinter-reports /s /q",
-    "lint": "pnpm clean-logs && pnpm mega-linter-runner && pnpm sort-package-json"
-  },
-  "devDependencies": {
-    "glob": "^7.1.6",
-    "mega-linter-runner": "^6.22.2",
-    "npm-check-updates": "^16.10.9",
-    "run-script-os": "^1.1.6",
-    "sort-package-json": "^2.4.1"
-  },
-  "engines": {
-    "node": ">=18"
-  }
+	"name": "black-mirror",
+	"displayName": "Black Mirror",
+	"version": "1.0.0",
+	"scripts": {
+		"lint": "pnpm sort-package-json && pnpm mega-linter-runner"
+	},
+	"dependencies": {
+		"mega-linter-runner": "^6.22.2"
+	},
+	"devDependencies": {
+		"npm-check-updates": "^16.10.12",
+		"sort-package-json": "^2.4.1"
+	}
 }

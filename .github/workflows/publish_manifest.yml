@@ -9,6 +9,8 @@ on:
       - "data/v2/manifest.json"
   workflow_dispatch:
 
+permissions: read-all
+
 jobs:
   publish_manifest:
     runs-on: ubuntu-latest
