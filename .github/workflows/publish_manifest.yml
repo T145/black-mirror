@@ -34,15 +34,15 @@ jobs:
         uses: actions/checkout@v3
       - name: Sort manifest
         run: |
-            jq -S '.' data/v2/manifest.json |
-            perl -ne '
-            push @lines, $_;
-            END {
-              open(OUT, ">$file")
-              or die "sponge: cannot open $file: $!\n";
-              print OUT @lines;
-              close(OUT);
-            }' -s -- -file=data/v2/manifest.json
+          jq -S '.' data/v2/manifest.json |
+          perl -ne '
+          push @lines, $_;
+          END {
+            open(OUT, ">$file")
+            or die "sponge: cannot open $file: $!\n";
+            print OUT @lines;
+            close(OUT);
+          }' -s -- -file=data/v2/manifest.json
       - name: Document manifest
         run: jq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/manifest.json | csvlook >SOURCES.md
       - name: Make commit directory safe
