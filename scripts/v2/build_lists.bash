@@ -90,7 +90,7 @@ main() {
 		# use 'lynx -dump -listonly -nonumbers' to get a raw page
 
 		set +e # temporarily disable strict fail, in case downloads fail
-		jq -r 'to_entries[].value.content.retriever' data/v2/manifest.json | sort | uniq |
+		jq -r 'to_entries[].value.content.retriever' data/v2/manifest.json | mawk 'NF && !seen[$0]++' |
 			while read -r retriever; do
 				case "$retriever" in
 				'ARIA2')
@@ -99,6 +99,15 @@ main() {
 						{key, mirrors: .value.mirrors} |
 						(.mirrors | join("\t")), " out=\(.key)"' data/v2/manifest.json |
 						aria2c -i- -d "$cache" --conf-path='./configs/aria2.conf'
+					;;
+				'WGET')
+					jq -r --arg method "$method" 'to_entries[] |
+						select(.value.content.retriever == "WGET" and .value.method == $method) |
+						{key, mirror: .value.mirrors[0]} |
+						"\(.key)#\(.mirror)"' data/v2/manifest.json |
+						while IFS='#' read -r key mirror; do
+							wget --config='./configs/wget.conf' -O "$key" "$mirror"
+						done
 					;;
 				'SNSCRAPE')
 					jq -r --arg method "$method" 'to_entries[] |
@@ -134,7 +143,7 @@ main() {
 			find -P -O3 "$results" -type f -name stderr |
 				while read -r file; do
 					if [ -s "$file" ]; then
-						echo "$file" | mawk -F'\+z' '{printf "%s:\n",$5}' >>"$ERROR_LOG"
+						echo "$file" | mawk -F'\+z' '{printf "[ERROR] %s:\n",$5}' >>"$ERROR_LOG"
 						cat -s "$file" >>"$ERROR_LOG"
 					fi
 				done

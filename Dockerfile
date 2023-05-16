@@ -35,7 +35,7 @@ RUN curl http://pi.dk/3/ | bash \
 # https://gitlab.com/parrotsec/build/containers
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.8.4" \
+      version="5.8.5" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -115,6 +115,7 @@ RUN apt-get -y upgrade; \
     #rkhunter=1.4.6-9 \
     symlinks=1.4-4 \
     unzip=6.0-26+deb11u1 \
+    wget=1.21-1+deb11u1 \
     # For extracting *.xz archives
     xz-utils=5.2.5-2.1~deb11u1 \
     # For building and testing IO::Socket::SSL
