@@ -103,7 +103,7 @@
 
 **Closed issues:**
 
-- <https://assets.windscribe.com/extension/ws/malwaredomains.txt> [\#50](https://github.com/T145/black-mirror/issues/50)
+- https://assets.windscribe.com/extension/ws/malwaredomains.txt [\#50](https://github.com/T145/black-mirror/issues/50)
 - Link Checker Report [\#49](https://github.com/T145/black-mirror/issues/49)
 - Parse the betterfyi blockerList [\#47](https://github.com/T145/black-mirror/issues/47)
 - Use lychee to check for any dead source or README links [\#46](https://github.com/T145/black-mirror/issues/46)
