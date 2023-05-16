@@ -42,7 +42,6 @@ LABEL maintainer="T145" \
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 STOPSIGNAL SIGKILL
 WORKDIR "/root"
-USER "admin"
 
 # https://github.com/ParrotSec/docker-images/blob/master/core/lts-amd64/Dockerfile#L6
 # https://www.parrotsec.org/docs/apparmor.html
@@ -179,8 +178,7 @@ RUN chown 0:0 /usr/bin/as \
 #    rm -rf /root/.cache;
 
 ENTRYPOINT [ "bash" ]
-
 # https://cisofy.com/lynis/controls/FILE-6310/
 VOLUME [ "/home", "/tmp", "/var" ]
-
+USER "admin"
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "command -v ipinfo && command -v ghosts && command -v parsort && command -v yq && command -v mlr" ]
