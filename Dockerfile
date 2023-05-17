@@ -180,5 +180,5 @@ RUN chown 0:0 /usr/bin/as \
 ENTRYPOINT [ "bash" ]
 # https://cisofy.com/lynis/controls/FILE-6310/
 VOLUME [ "/home", "/tmp", "/var" ]
-USER "admin"
+USER admin
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "command -v ipinfo && command -v ghosts && command -v parsort && command -v yq && command -v mlr" ]
