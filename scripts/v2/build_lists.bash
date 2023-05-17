@@ -106,6 +106,7 @@ main() {
 						{key, mirror: .value.mirrors[0]} |
 						"\(.key)#\(.mirror)"' data/v2/manifest.json |
 						while IFS='#' read -r key mirror; do
+							# https://www.gnu.org/software/wget/manual/html_node/Download-Options
 							wget --config='./configs/wget.conf' -O "$key" "$mirror"
 						done
 					;;
