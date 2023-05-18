@@ -65,8 +65,8 @@ apply_cidr_whitelist() {
 init() {
 	trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 	mkdir -p build/
-	: >logs/aria2.log
-	: >"$ERROR_LOG"
+	# clear all logs
+	find -P -O3 ./logs -depth -type f -print0 | xargs -0 truncate -s 0
 	chmod -t /tmp
 }
 
@@ -90,7 +90,8 @@ main() {
 		# use 'lynx -dump -listonly -nonumbers' to get a raw page
 
 		set +e # temporarily disable strict fail, in case downloads fail
-		jq -r 'to_entries[].value.content.retriever' data/v2/manifest.json | mawk 'NF && !seen[$0]++' |
+		jq -r 'to_entries[].value.content.retriever' data/v2/manifest.json |
+		mawk 'NF && !seen[$0]++' |
 			while read -r retriever; do
 				case "$retriever" in
 				'ARIA2')
@@ -107,7 +108,8 @@ main() {
 						"\(.key)#\(.mirror)"' data/v2/manifest.json |
 						while IFS='#' read -r key mirror; do
 							# https://www.gnu.org/software/wget/manual/html_node/Download-Options
-							wget --config='./configs/wget.conf' -O "$key" "$mirror"
+							# https://www.gnu.org/software/wget/manual/html_node/Logging-and-Input-File-Options.html
+							wget --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
 						done
 					;;
 				'SNSCRAPE')
