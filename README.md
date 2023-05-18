@@ -268,6 +268,8 @@ docker start black-mirror
 docker exec -it black-mirror /bin/bash
 ```
 
+To use the root user just append `-u 0`.
+
 NOTE: Before using `rkhunter`, be sure to run:
 
 ```bash

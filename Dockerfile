@@ -178,7 +178,14 @@ RUN chown 0:0 /usr/bin/as \
 #    rm -rf /root/.cache;
 
 ENTRYPOINT [ "bash" ]
+
 # https://cisofy.com/lynis/controls/FILE-6310/
 VOLUME [ "/home", "/tmp", "/var" ]
+
+# To fix:
+# docker: Error response from daemon: unable to find user admin: no matching entries in passwd file.
+RUN useradd -m admin && echo "admin:headhoncho" | chpasswd
+#&& usermod -aG wheel admin
 USER admin
+
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "command -v ipinfo && command -v ghosts && command -v parsort && command -v yq && command -v mlr" ]
