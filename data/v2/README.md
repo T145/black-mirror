@@ -41,6 +41,7 @@
 - [disposable-email-domains](https://github.com/ivolo/disposable-email-domains/blob/master/index.json)
 - [Cyjax Uploads](https://www.cyjax.com/latest-analysis/)
 - [YT Spam Lists](https://github.com/ThioJoe/YT-Spam-Lists/blob/main/SpamDomainsList.txt)
+- [phishing_kits](https://github.com/0xDanielLopez/phishing_kits)
 
 ## Add but archive
 

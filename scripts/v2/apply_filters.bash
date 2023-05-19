@@ -17,7 +17,7 @@ get_ipv4s_from_urls() {
 }
 
 hostsblock() {
-	gawk 'BEGIN{FS="[|^]"}/^\|\|([[:alnum:]_-]{1,63}\.)+[[:alpha:]]+\^(\$third-party|\$important|\$all|\$xmlhttprequest)?/{print tolower($3)}'
+	gawk -F'[|^]' '/^\|\|([[:alnum:]_-]{1,63}\.)+[[:alpha:]]+\^(\$third-party|\$important|\$all|\$xmlhttprequest)?/{print tolower($3)}'
 }
 
 # params: column number
@@ -103,7 +103,7 @@ process_list() {
 			'CYBERSAIYAN_DOMAIN') jq -r '.[] | select(.value.type == "URL") | .indicator' | get_domains_from_urls ;;
 			'CYBERSAIYAN_IPV4') jq -r '.[] | select(.value.type == "URL") | .indicator' | get_ipv4s_from_urls ;;
 			'DISCONNECTME_ENTITIES') jq -r '.entities[] | "\(.properties[])\n\(.resources[])"' ;;
-			'DISCONNECTME_SERVICES') jq -r '.categories[] | to_entries[].value[] | to_entries[].value[]' ;;
+			#'DISCONNECTME_SERVICES') jq -r '.categories[] | to_entries[].value[] | to_entries[].value[]' ;;
 			'HIPO_UNIVERSITIES') jq -r '.[].domains | join("\n")' ;;
 			'ISCSANS') jq -r '.[].ipv4' ;;
 			'MALSILO_DOMAIN') jq -r '.data[].network_traffic | select(.dns != null) | .dns[]' ;;

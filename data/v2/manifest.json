@@ -2840,36 +2840,11 @@
     "metadata": {
       "description": "https://github.com/disconnectme/disconnect-tracking-protection#readme",
       "homepage": "https://disconnect.me/",
-      "license": "cc-by-sa-4.0"
+      "license": "cc-by-nc-sa-4.0"
     },
     "method": "BLOCK",
     "mirrors": [
       "https://raw.githubusercontent.com/disconnectme/disconnect-tracking-protection/master/entities.json"
-    ],
-    "topic": "SECURITY"
-  },
-  "disconnectme_services": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "JSON"
-    },
-    "formats": [
-      {
-        "filter": "DISCONNECTME_SERVICES",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/disconnectme/disconnect-tracking-protection#readme",
-      "homepage": "https://disconnect.me/",
-      "license": "cc-by-sa-4.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/disconnectme/disconnect-tracking-protection/master/services.json"
     ],
     "topic": "SECURITY"
   },
@@ -3160,7 +3135,7 @@
       "pihole": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/domain_adult.txt"
     }
   },
-  "elliotwutingfeng": {
+  "wutingfeng_google_safe_browsing": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -9127,6 +9102,131 @@
     "method": "ALLOW",
     "mirrors": [
       "https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "abvpn_ads": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/abpvn/abpvn#readme",
+      "homepage": "https://abpvn.com/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/src/abpvn_ad_domain.txt"
+    ],
+    "topic": "PRIVACY"
+  },
+  "abvpn_adult": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/abpvn/abpvn#readme",
+      "homepage": "https://abpvn.com/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/src/abpvn_adult.txt"
+    ],
+    "topic": "SANITY"
+  },
+  "abvpn_general": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/abpvn/abpvn#readme",
+      "homepage": "https://abpvn.com/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/src/abpvn_general.txt"
+    ],
+    "topic": "PRIVACY"
+  },
+  "phishunt": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/abpvn/abpvn#readme",
+      "homepage": "https://phishunt.io/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://phishunt.io/feed.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "wutingfeng_global_anti_scam": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/elliotwutingfeng/GlobalAntiScamOrg-blocklist",
+      "homepage": "https://www.globalantiscam.org/scam-websites",
+      "license": "bsd-3c"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/elliotwutingfeng/GlobalAntiScamOrg-blocklist/main/global-anti-scam-org-scam-urls-pihole.txt"
     ],
     "topic": "SECURITY"
   }
