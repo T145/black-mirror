@@ -625,6 +625,156 @@
       "pihole": "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/unwanted-iranian.txt"
     }
   },
+  "air_ads": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://airvpn.org/api/dns_lists/",
+      "homepage": "https://airvpn.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://airvpn.org/api/dns_lists/?code=air_ads&style=domains"
+    ],
+    "topic": "SECURITY"
+  },
+  "air_anti_icann": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://airvpn.org/api/dns_lists/",
+      "homepage": "https://airvpn.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://airvpn.org/api/dns_lists/?code=air_anti_icann&style=domains"
+    ],
+    "topic": "SECURITY"
+  },
+  "air_cryptojacking": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://airvpn.org/api/dns_lists/",
+      "homepage": "https://airvpn.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://airvpn.org/api/dns_lists/?code=air_cryptojacking&style=domains"
+    ],
+    "topic": "SECURITY"
+  },
+  "air_gambling": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://airvpn.org/api/dns_lists/",
+      "homepage": "https://airvpn.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://airvpn.org/api/dns_lists/?code=air_gambling&style=domains"
+    ],
+    "topic": "SANITY"
+  },
+  "air_malware": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://airvpn.org/api/dns_lists/",
+      "homepage": "https://airvpn.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://airvpn.org/api/dns_lists/?code=air_malware&style=domains"
+    ],
+    "topic": "SECURITY"
+  },
+  "air_porn": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://airvpn.org/api/dns_lists/",
+      "homepage": "https://airvpn.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://airvpn.org/api/dns_lists/?code=air_porn&style=domains"
+    ],
+    "topic": "SANITY"
+  },
   "alienvault": {
     "_notes": "http://data.alienvault.com/feed/binary/Packages",
     "archive": false,
@@ -9229,155 +9379,5 @@
       "https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt"
     ],
     "topic": "SECURITY"
-  },
-  "air_ads": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://airvpn.org/api/dns_lists/",
-      "homepage": "https://airvpn.org/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://airvpn.org/api/dns_lists/?code=air_ads&style=domains"
-    ],
-    "topic": "SECURITY"
-  },
-  "air_anti_icann": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://airvpn.org/api/dns_lists/",
-      "homepage": "https://airvpn.org/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://airvpn.org/api/dns_lists/?code=air_anti_icann&style=domains"
-    ],
-    "topic": "SECURITY"
-  },
-  "air_cryptojacking": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://airvpn.org/api/dns_lists/",
-      "homepage": "https://airvpn.org/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://airvpn.org/api/dns_lists/?code=air_cryptojacking&style=domains"
-    ],
-    "topic": "SECURITY"
-  },
-  "air_gambling": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://airvpn.org/api/dns_lists/",
-      "homepage": "https://airvpn.org/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://airvpn.org/api/dns_lists/?code=air_gambling&style=domains"
-    ],
-    "topic": "SANITY"
-  },
-  "air_malware": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://airvpn.org/api/dns_lists/",
-      "homepage": "https://airvpn.org/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://airvpn.org/api/dns_lists/?code=air_malware&style=domains"
-    ],
-    "topic": "SECURITY"
-  },
-  "air_porn": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://airvpn.org/api/dns_lists/",
-      "homepage": "https://airvpn.org/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://airvpn.org/api/dns_lists/?code=air_porn&style=domains"
-    ],
-    "topic": "SANITY"
   }
 }
