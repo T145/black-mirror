@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/T145/black-mirror/tree/HEAD)
+
+[Full Changelog](https://github.com/T145/black-mirror/compare/latest...HEAD)
+
+**Merged pull requests:**
+
+- chore\(deps\): bump tj-actions/github-changelog-generator from 1.18 to 1.19 in /.github/workflows [\#106](https://github.com/T145/black-mirror/pull/106) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [latest](https://github.com/T145/black-mirror/tree/latest) (2023-05-11)
 
 [Full Changelog](https://github.com/T145/black-mirror/compare/4.0.0...latest)
