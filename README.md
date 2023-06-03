@@ -87,6 +87,7 @@
 > Good causes that help secure your digital life.
 
 - *__[Stop using Cloudflare!](https://framagit.org/dCF/deCloudflare/-/tree/master)__*
+- Use a [pcWRT](https://shop.pcwrt.com/) to easily secure your internet!
 - Test your browser's tracking resilience with [CoverYourTracks](https://coveryourtracks.eff.org/)!
 - Support [LetsBlockIt](https://letsblock.it/) to consolidate and simplify uBlock filters!
 - Explore [PrivacyGuides](https://privacyguides.org/) and [Prism Break](https://prism-break.org/en/all/) to discover services that respect your privacy!
