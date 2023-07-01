@@ -2127,7 +2127,7 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/master/combined_disguised_trackers_justdomains.txt"
+      "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/master/data/combined_disguised_trackers_justdomains.txt"
     ],
     "topic": "SECURITY"
   },
@@ -2531,93 +2531,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://api.cybercure.ai/feed/get_url?type=csv"
-    ],
-    "topic": "SECURITY"
-  },
-  "cybercrime_all": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "CYBERCRIME_DOMAIN",
-        "format": "DOMAIN"
-      },
-      {
-        "filter": "CYBERCRIME_IPV4",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://cybercrime-tracker.net/tools.php",
-      "homepage": "https://cybercrime-tracker.net/",
-      "license": "cc0-1.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://cybercrime-tracker.net/all.php"
-    ],
-    "topic": "SECURITY"
-  },
-  "cybercrime_ccmgate": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
-        "format": "DOMAIN"
-      },
-      {
-        "filter": "ABUSE_CH_URLHAUS_IPV4",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://cybercrime-tracker.net/tools.php",
-      "homepage": "https://cybercrime-tracker.net/",
-      "license": "cc0-1.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://cybercrime-tracker.net/ccamgate.php"
-    ],
-    "topic": "SECURITY"
-  },
-  "cybersaiyan": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "JSON"
-    },
-    "formats": [
-      {
-        "filter": "CYBERSAIYAN_DOMAIN",
-        "format": "DOMAIN"
-      },
-      {
-        "filter": "CYBERSAIYAN_IPV4",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/CyberSaiyanIT/InfoSharing#readme",
-      "homepage": "https://github.com/CyberSaiyanIT/InfoSharing",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://infosharing.cybersaiyan.it/feeds/CS-COMMUNITY-HTTP?v=json&tr=1"
     ],
     "topic": "SECURITY"
   },
