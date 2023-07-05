@@ -1,17 +1,21 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   mega-linter-runner:
-    specifier: ^6.22.2
-    version: 6.22.2(glob@7.2.3)(mem-fs-editor@9.5.0)(mem-fs@2.2.1)
+    specifier: ^7.1.0
+    version: 7.1.0(glob@7.2.3)(mem-fs-editor@9.5.0)(mem-fs@2.2.1)
 
 devDependencies:
   npm-check-updates:
-    specifier: ^16.10.12
-    version: 16.10.12
+    specifier: ^16.10.13
+    version: 16.10.13
   sort-package-json:
-    specifier: ^2.4.1
-    version: 2.4.1
+    specifier: ^2.5.0
+    version: 2.5.0
 
 packages:
 
@@ -1058,6 +1062,7 @@ packages:
 
   /debuglog@1.0.1:
     resolution: {integrity: sha512-syBZ+rnAK3EgMsH2aYEOLUW7mZSY9Gb+0wUMCFsZvcmiz+HigA0LOcq/HoQqVuGG+EKykunc7QG2bzrponfaSw==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     dev: false
 
   /decompress-response@6.0.0:
@@ -1388,6 +1393,11 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /get-stdin@9.0.0:
+    resolution: {integrity: sha512-dVKBjfWisLAicarI2Sf+JuBE/DghV4UzNAVe9yhEJuzeREd3JhOTE9cUaJTeSa77fsbQUK3pcOpJfM59+VKZaA==}
+    engines: {node: '>=12'}
+    dev: true
+
   /get-stream@6.0.1:
     resolution: {integrity: sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==}
     engines: {node: '>=10'}
@@ -1562,9 +1572,6 @@ packages:
     dependencies:
       lru-cache: 7.18.3
     dev: true
-
-  /http-cache-semantics@4.1.0:
-    resolution: {integrity: sha512-carPklcUh7ROWRK7Cv27RPtdhYhUsela/ue5/jKzjegVvXDqM2ILE9Q2BGn9JZJh1g87cp56su/FgQSzcWS8cQ==}
 
   /http-cache-semantics@4.1.1:
     resolution: {integrity: sha512-er295DKPVsV82j5kw1Gjt+ADA/XYHsajl82cGNQG2eyoPkvgUhX+nDIyelzhIWbbsXP39EHcI6l5tYs2FYqYXQ==}
@@ -2059,7 +2066,7 @@ packages:
     dependencies:
       agentkeepalive: 4.2.1
       cacache: 16.1.1
-      http-cache-semantics: 4.1.0
+      http-cache-semantics: 4.1.1
       http-proxy-agent: 5.0.0
       https-proxy-agent: 5.0.1
       is-lambda: 1.0.1
@@ -2125,8 +2132,8 @@ packages:
       - supports-color
     dev: false
 
-  /mega-linter-runner@6.22.2(glob@7.2.3)(mem-fs-editor@9.5.0)(mem-fs@2.2.1):
-    resolution: {integrity: sha512-Gp8k5ZnkgpJEIdFCuYORO4e7PdsYI+tol8tLYLwmVaWTWCdupCsW3uUCpOERAYzmVwSg2OjY41NRotRcFAG0Cg==}
+  /mega-linter-runner@7.1.0(glob@7.2.3)(mem-fs-editor@9.5.0)(mem-fs@2.2.1):
+    resolution: {integrity: sha512-8dVfnOD+p3G2noA6VzFvKmoz7IXpYclJXrQzcQqLyYUIVu3aYVx9d8oixH9DotmHjjwARCmv4zKKkgE5wbt1bg==}
     hasBin: true
     dependencies:
       chalk: 4.1.2
@@ -2472,8 +2479,8 @@ packages:
       npm-normalize-package-bin: 3.0.1
     dev: true
 
-  /npm-check-updates@16.10.12:
-    resolution: {integrity: sha512-js/Gg9+5RTyOQZnmFcPswLxf4sK/H5AE/8bl4tkleLJTC1gXhQqqELUFwXqppNvx488aXxN52ZY9k9MSSvEW2A==}
+  /npm-check-updates@16.10.13:
+    resolution: {integrity: sha512-ZsWrtHnaMkcxAaCtDFEr8i7jgM0Bz2AYsnsJlmxISgltG8ie43bWC6G9icxFKfYSLeJJtcj/Yw1Mq5f8GL2F3g==}
     engines: {node: '>=14.14'}
     hasBin: true
     dependencies:
@@ -3260,14 +3267,6 @@ packages:
     hasBin: true
     dev: false
 
-  /semver@7.3.8:
-    resolution: {integrity: sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==}
-    engines: {node: '>=10'}
-    hasBin: true
-    dependencies:
-      lru-cache: 6.0.0
-    dev: false
-
   /semver@7.5.1:
     resolution: {integrity: sha512-Wvss5ivl8TMRZXXESstBA4uR5iXgEN/VC5/sOcuXdVLzcdkz4HWetIoRfG5gb5X+ij/G9rw9YoGn3QoQ8OCSpw==}
     engines: {node: '>=10'}
@@ -3373,12 +3372,13 @@ packages:
     resolution: {integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==}
     dev: true
 
-  /sort-package-json@2.4.1:
-    resolution: {integrity: sha512-Nd3rgLBJcZ4iw7tpuOhwBupG6SvUDU0Fy1cZGAMorA2JmDUb+29Dg5phJK9gapa2Ak9d15w/RuMl/viwX+nKwQ==}
+  /sort-package-json@2.5.0:
+    resolution: {integrity: sha512-KIsqEi/ameVyhhatpzwialQVSMP1mFzRLJgTBKJDz0duQmhnBDjf8MFyFoIoVnW69SqjH3/bziCSlgiuz2KbHg==}
     hasBin: true
     dependencies:
       detect-indent: 7.0.1
       detect-newline: 4.0.0
+      get-stdin: 9.0.0
       git-hooks-list: 3.1.0
       globby: 13.1.4
       is-plain-obj: 4.1.0
@@ -3955,7 +3955,7 @@ packages:
       pacote: 12.0.3
       preferred-pm: 3.0.3
       pretty-bytes: 5.6.0
-      semver: 7.3.8
+      semver: 7.5.1
       slash: 3.0.0
       strip-ansi: 6.0.1
       text-table: 0.2.0
@@ -3984,7 +3984,7 @@ packages:
       minimist: 1.2.6
       read-pkg-up: 7.0.1
       run-async: 2.4.1
-      semver: 7.3.8
+      semver: 7.5.1
       shelljs: 0.8.5
       sort-keys: 4.2.0
       text-table: 0.2.0
