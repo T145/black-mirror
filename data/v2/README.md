@@ -566,6 +566,4 @@
     - Last-Modified: Tue, 18 Apr 2017 02:13:20 GMT
   - [Other Lists](http://zitstif.no-ip.org/?cat=1037)
 - [perso](https://perso.pw/blocklist.txt)
-- [cybercrime tracker](https://cybercrime-tracker.net/)
-  -[GitHub?](https://github.com/CiscoSecurity/tr-05-serverless-cybercrime-tracker)
 - [CyberSaiyanIT](https://infosharing.cybersaiyan.it)
