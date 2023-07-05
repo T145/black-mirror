@@ -2534,6 +2534,64 @@
     ],
     "topic": "SECURITY"
   },
+  "cybercrime_all": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "CYBERCRIME_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "CYBERCRIME_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://cybercrime-tracker.net/tools.php",
+      "homepage": "https://cybercrime-tracker.net/",
+      "license": "cc0-1.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://cybercrime-tracker.net/all.php"
+    ],
+    "topic": "SECURITY"
+  },
+  "cybercrime_ccmgate": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "ABUSE_CH_URLHAUS_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://cybercrime-tracker.net/tools.php",
+      "homepage": "https://cybercrime-tracker.net/ccam.php",
+      "license": "cc0-1.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://cybercrime-tracker.net/ccamgate.php"
+    ],
+    "topic": "SECURITY"
+  },
   "cymru_ipv4_bogons": {
     "archive": false,
     "checksums": {},
@@ -9290,64 +9348,6 @@
     "method": "ALLOW",
     "mirrors": [
       "https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "cybercrime_all": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "CYBERCRIME_DOMAIN",
-        "format": "DOMAIN"
-      },
-      {
-        "filter": "CYBERCRIME_IPV4",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://cybercrime-tracker.net/tools.php",
-      "homepage": "https://cybercrime-tracker.net/",
-      "license": "cc0-1.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://cybercrime-tracker.net/all.php"
-    ],
-    "topic": "SECURITY"
-  },
-  "cybercrime_ccmgate": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
-        "format": "DOMAIN"
-      },
-      {
-        "filter": "ABUSE_CH_URLHAUS_IPV4",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://cybercrime-tracker.net/tools.php",
-      "homepage": "https://cybercrime-tracker.net/ccam.php",
-      "license": "cc0-1.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://cybercrime-tracker.net/ccamgate.php"
     ],
     "topic": "SECURITY"
   }
