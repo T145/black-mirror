@@ -9186,5 +9186,58 @@
       "https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt"
     ],
     "topic": "SECURITY"
+  },
+  "azorult_domains": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://azorult-tracker.net/about",
+      "homepage": "https://azorult-tracker.net/",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://azorult-tracker.net/api/list/domain?format=plain"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://azorult-tracker.net/api/list/domain?format=plain"
+    }
+  },
+  "azorult_ips": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://azorult-tracker.net/about",
+      "homepage": "https://azorult-tracker.net/",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://azorult-tracker.net/api/list/ip?format=plain"
+    ],
+    "topic": "SECURITY"
   }
 }

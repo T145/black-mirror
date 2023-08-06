@@ -572,3 +572,4 @@
   - [domains](https://rescure.me/rescure_domain_blacklist.txt)
   - [ips](https://rescure.me/rescure_blacklist.txt)
 - [PhishStats](https://phishstats.info/phish_score.csv)
+  - [Last capture](https://web.archive.org/web/20230405175854/https://phishstats.info/phish_score.csv)
