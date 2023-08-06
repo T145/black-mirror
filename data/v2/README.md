@@ -44,6 +44,7 @@
 - [phishing_kits](https://github.com/0xDanielLopez/phishing_kits)
 - [HaaS](https://haas.nic.cz/stats/)
 - [Spamhaus V6](https://www.spamhaus.org/drop/dropv6.txt)
+- [AbuseIPDB](https://docs.abuseipdb.com/#blacklist-endpoint)
 
 ## Add but archive
 
