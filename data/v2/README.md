@@ -567,3 +567,8 @@
   - [Other Lists](http://zitstif.no-ip.org/?cat=1037)
 - [perso](https://perso.pw/blocklist.txt)
 - [CyberSaiyanIT](https://infosharing.cybersaiyan.it)
+- Rescure
+  - [covid](https://rescure.me/covid.txt)
+  - [domains](https://rescure.me/rescure_domain_blacklist.txt)
+  - [ips](https://rescure.me/rescure_blacklist.txt)
+- [PhishStats](https://phishstats.info/phish_score.csv)

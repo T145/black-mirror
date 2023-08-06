@@ -1133,59 +1133,6 @@
     ],
     "topic": "SECURITY"
   },
-  "azorult_domains": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://azorult-tracker.net/about",
-      "homepage": "https://azorult-tracker.net/",
-      "license": "mit"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://azorult-tracker.net/api/list/domain?format=plain"
-    ],
-    "topic": "SECURITY",
-    "variants": {
-      "pihole": "https://azorult-tracker.net/api/list/domain?format=plain"
-    }
-  },
-  "azorult_ips": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://azorult-tracker.net/about",
-      "homepage": "https://azorult-tracker.net/",
-      "license": "mit"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://azorult-tracker.net/api/list/ip?format=plain"
-    ],
-    "topic": "SECURITY"
-  },
   "benkow_cc": {
     "archive": false,
     "checksums": {},
@@ -6557,7 +6504,7 @@
     "checksums": {},
     "content": {
       "filter": "NONE",
-      "retriever": "ARIA2",
+      "retriever": "WGET",
       "type": "TEXT"
     },
     "formats": [
@@ -6894,39 +6841,6 @@
     ],
     "topic": "SECURITY"
   },
-  "phishstats": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "CSV"
-    },
-    "formats": [
-      {
-        "filter": "PHISHSTATS_DOMAIN",
-        "format": "DOMAIN"
-      },
-      {
-        "filter": "PHISHSTATS_IPV4",
-        "format": "IPV4"
-      },
-      {
-        "filter": "PHISHSTATS_IPV6",
-        "format": "IPV6"
-      }
-    ],
-    "metadata": {
-      "description": "https://phishstats.info/tos.html",
-      "homepage": "https://phishstats.info/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://phishstats.info/phish_score.csv"
-    ],
-    "topic": "SECURITY"
-  },
   "phishtank": {
     "archive": false,
     "checksums": {},
@@ -7257,84 +7171,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://dl.red.flag.domains/red.flag.domains.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "rescure_covid": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://rescure.me/index.html#about",
-      "homepage": "https://rescure.me/feeds.html",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://rescure.me/covid.txt",
-      "https://rescure.fruxlabs.com/covid.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "rescure_domains": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://rescure.me/index.html#about",
-      "homepage": "https://rescure.me/feeds.html",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://rescure.me/rescure_domain_blacklist.txt",
-      "https://rescure.fruxlabs.com/rescure_domain_blacklist.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "rescure_ips": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://rescure.me/index.html#about",
-      "homepage": "https://rescure.me/feeds.html",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://rescure.me/rescure_blacklist.txt",
-      "https://rescure.fruxlabs.com/rescure_blacklist.txt"
     ],
     "topic": "SECURITY"
   },

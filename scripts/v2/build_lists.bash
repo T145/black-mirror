@@ -121,6 +121,10 @@ main() {
 							snscrape --jsonl twitter-user "$mirror" >"$key"
 						done
 					;;
+				'SAFE_GIT')
+					# Some repos contain active malware, which we don't want to download.
+					#curl -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/0xDanielLopez/phishing_kits/git/trees/master?recursive=1
+					;;
 				esac
 			done
 		set -e
