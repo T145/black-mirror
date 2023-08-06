@@ -7702,6 +7702,31 @@
     ],
     "topic": "SECURITY"
   },
+  "snort_blocklist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.snort.org/",
+      "homepage": "https://www.snort.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.snort.org/downloads/ip-block-list"
+    ],
+    "topic": "SECURITY"
+  },
   "soteria_nou_ads": {
     "archive": false,
     "checksums": {},
@@ -9237,31 +9262,6 @@
     "method": "ALLOW",
     "mirrors": [
       "https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "snort_blocklist": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://www.snort.org/",
-      "homepage": "https://www.snort.org/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://www.snort.org/downloads/ip-block-list"
     ],
     "topic": "SECURITY"
   }
