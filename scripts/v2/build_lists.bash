@@ -145,7 +145,7 @@ main() {
 
 			echo "[INFO] Processed: ${list}"
 
-			find -P -O3 "$results" -type f -name stdout -exec cat -s {} + | sponge "$list"
+			find -P -O3 "$results" -type f -name stdout -exec cat -s {} + >>"$list"
 
 			find -P -O3 "$results" -type f -name stderr |
 				while read -r file; do
@@ -194,8 +194,8 @@ main() {
 	done
 
 	# https://superuser.com/questions/191889/how-can-i-list-only-non-empty-files-using-ls
-	find -P -O3 ./build/ -size 0 -type f -name "*.txt" -exec rm {} \; # remove any empty lists
-	find -P -O3 ./build/ -type f -name "*.txt" -exec sha256sum {} \; | sponge './build/CHECKSUMS.txt'
+	find ./build/ -type f -name "*.txt" -size 0 -exec rm {} \;
+	find ./build/ -type f -name "*.txt" -exec sha256sum {} \; | sort -k2 >>'./build/CHECKSUMS.txt'
 
 	cleanup
 }
