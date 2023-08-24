@@ -82,48 +82,6 @@
   </a>
 </div>
 
-## 🛡️ Privacy Protectors
-
-> Good causes that help secure your digital life.
-
-- *__[Stop using Cloudflare!](https://framagit.org/dCF/deCloudflare/-/tree/master)__*
-- Use a [pcWRT](https://shop.pcwrt.com/) to easily secure your internet!
-- Test your browser's tracking resilience with [CoverYourTracks](https://coveryourtracks.eff.org/)!
-- Support [LetsBlockIt](https://letsblock.it/) to consolidate and simplify uBlock filters!
-- Explore [PrivacyGuides](https://privacyguides.org/) and [Prism Break](https://prism-break.org/en/all/) to discover services that respect your privacy!
-- Use [BypassPaywalls](https://github.com/iamadamdev/bypass-paywalls-chrome#readme) to access restricted and useful information, such as the [WSJ's Facebook Files](https://www.wsj.com/articles/the-facebook-files-11631713039).
-- Skip over URL shortener links by using [FastForward](https://github.com/FastForwardTeam/FastForward#readme), which is a better alternative to outright domain blocking.
-
-## 💕 Companion Projects
-
-> Great projects that leverage Black Mirror's content!
-
-</br>
-<a href="https://github.com/T145/metalhead"><img src="https://github.com/T145/metalhead/raw/master/.github/images/logo.jpg" width=220px height=60px></a>
-
-<i>NXDOMAIN scanner against Black Mirror's lists</i>
-</br>
-
-## 🖋️ [Manifesto](https://github.com/T145/black-mirror/blob/master/MANIFESTO.md)
-
-> Please report any hosts that are wrongly blocked or sources that do not wholly align in an issue.
-
-Defines the logic behind why a host is permitted or blocked.
-It has been written to reflect common ideologies across the blacklisting community and those specific to this project.
-
-Complete author bias reflection is not intended, which is why it speaks from the `Black Mirror` person.
-Free thought exchange is encouraged, so feel free to open discussions about any points!
-
-## 📋 Attributes
-
-1. Produced in builds specific to each host's syntax.
-2. Updates at [1:27 AM UTC](https://www.timeanddate.com/time/zone/timezone/utc).
-3. No excess or trailing whitespace.
-4. No lingering webscraper garbage.
-5. Lines are terminated with `lf`.
-6. No blank lines.
-7. No comments.
-
 ## 🚚 Deliverables
 
 <table>
@@ -248,34 +206,25 @@ curl --proto '=https' --tlsv1.3 -H 'Accept: application/vnd.github.v3+json' -sSf
 curl --proto '=https' --tlsv1.3 -H 'Accept: application/vnd.github.v3+json' -sSf https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("BLOCK_DOMAIN")) | select(.name | endswith(".txt")).browser_download_url'
 ```
 
-## 🐋 Docker Usage
+## 🖋️ [Manifesto](https://github.com/T145/black-mirror/blob/master/MANIFESTO.md)
 
-To provide a temporary container to experiment with `Black Mirror` scripts and the CLI utilities it uses, run the following:
+> Please report any hosts that are wrongly blocked or sources that do not wholly align in an issue.
 
-```bash
-docker container run -it --rm -h black-mirror ghcr.io/t145/black-mirror
-```
+Defines the logic behind why a host is permitted or blocked.
+It has been written to reflect common ideologies across the blacklisting community and those specific to this project.
 
-For a persistant container, use something like what's given below:
+Complete author bias reflection is not intended, which is why it speaks from the `Black Mirror` person.
+Free thought exchange is encouraged, so feel free to open discussions about any points!
 
-```bash
-docker container run -it --name black-mirror -h black-mirror ghcr.io/t145/black-mirror
-```
+## 📋 Attributes
 
-Then to access the container at a later date, run:
-
-```bash
-docker start black-mirror
-docker exec -it black-mirror /bin/bash
-```
-
-To use the root user just append `-u 0`.
-
-NOTE: Before using `rkhunter`, be sure to run:
-
-```bash
-rkhunter --update
-```
+1. Produced in builds specific to each host's syntax.
+2. Updates at [1:27 AM UTC](https://www.timeanddate.com/time/zone/timezone/utc).
+3. No excess or trailing whitespace.
+4. No lingering webscraper garbage.
+5. Lines are terminated with `lf`.
+6. No blank lines.
+7. No comments.
 
 ## 🛠️ List Usage
 
@@ -318,6 +267,35 @@ Use the domain list.
 
 Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/master/dist/sources.adguard) list or the domain list.
 
+## 🐋 Docker Usage
+
+To provide a temporary container to experiment with `Black Mirror` scripts and the CLI utilities it uses, run the following:
+
+```bash
+docker container run -it --rm -h black-mirror ghcr.io/t145/black-mirror
+```
+
+For a persistant container, use something like what's given below:
+
+```bash
+docker container run -it --name black-mirror -h black-mirror ghcr.io/t145/black-mirror
+```
+
+Then to access the container at a later date, run:
+
+```bash
+docker start black-mirror
+docker exec -it black-mirror /bin/bash
+```
+
+To use the root user just append `-u 0`.
+
+NOTE: Before using `rkhunter`, be sure to run:
+
+```bash
+rkhunter --update
+```
+
 ## 👨‍💻 Development
 
 ### Workspace Setup
@@ -335,6 +313,18 @@ With Docker running in the background, execute `pnpm lint` to debug any changes.
 ### Forkers
 
 [![Forkers repo roster for @T145/black-mirror](https://reporoster.com/forks/dark/T145/black-mirror)](https://github.com/T145/black-mirror/network/members)
+
+## 🛡️ Privacy Protectors
+
+> Good causes that help secure your digital life.
+
+- *__[Stop using Cloudflare!](https://framagit.org/dCF/deCloudflare/-/tree/master)__*
+- Use a [pcWRT](https://shop.pcwrt.com/) to easily secure your internet!
+- Test your browser's tracking resilience with [CoverYourTracks](https://coveryourtracks.eff.org/)!
+- Support [LetsBlockIt](https://letsblock.it/) to consolidate and simplify uBlock filters!
+- Explore [PrivacyGuides](https://privacyguides.org/) and [Prism Break](https://prism-break.org/en/all/) to discover services that respect your privacy!
+- Use [BypassPaywalls](https://github.com/iamadamdev/bypass-paywalls-chrome#readme) to access restricted and useful information, such as the [WSJ's Facebook Files](https://www.wsj.com/articles/the-facebook-files-11631713039).
+- Skip over URL shortener links by using [FastForward](https://github.com/FastForwardTeam/FastForward#readme), which is a better alternative to outright domain blocking.
 
 ## 🎶 Notes
 
