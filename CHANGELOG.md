@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump actions/checkout from 3 to 4 in /.github/workflows [\#108](https://github.com/T145/black-mirror/pull/108) ([dependabot[bot]](https://github.com/apps/dependabot))
 - \[Snyk\] Upgrade mega-linter-runner from 6.22.2 to 7.0.0 [\#107](https://github.com/T145/black-mirror/pull/107) ([T145](https://github.com/T145))
 - chore\(deps\): bump tj-actions/github-changelog-generator from 1.18 to 1.19 in /.github/workflows [\#106](https://github.com/T145/black-mirror/pull/106) ([dependabot[bot]](https://github.com/apps/dependabot))
 
