@@ -134,8 +134,8 @@ RUN apt-get -y upgrade; \
     find -P -O3 /etc/ /usr/ -type d -empty -delete;
 
 # Upgrade Perl
-RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.37.11.tar.xz; \
-    echo '3946b00266595ccc44df28275e2fbb7b86c1482934cbeab2780db304a75ffd58 *perl-5.37.11.tar.xz' | sha256sum --strict --check -; \
+RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.39.2.tar.xz; \
+    echo 'b7ae33d3c6ff80107d14c92dfb3d8d4944fec926b11bcc40c8764b73c710694f *perl*.tar.xz' | sha256sum --strict --check -; \
     tar --strip-components=1 -xaf perl-*.tar.xz; \
     #cat *.patch | patch -p1 # no included patch files at present
     ./Configure -Darchname=x86_64-linux-gnu -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des; \
@@ -144,8 +144,8 @@ RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.37.11.tar.xz; \
     make install; \
     rm -rf ./*; \
     # Install cpanm & the project packages
-    curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7046.tar.gz; \
-    echo '3e8c9d9b44a7348f9acc917163dbfc15bd5ea72501492cea3a35b346440ff862 *App-cpanminus-1.7046.tar.gz' | sha256sum --strict --check -; \
+    curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz; \
+    echo '963e63c6e1a8725ff2f624e9086396ae150db51dd0a337c3781d09a994af05a5 *cpanminus*.tar.gz' | sha256sum --strict --check -; \
     tar --strip-components=1 -xaf App-cpanminus-*.tar.gz; \
     perl bin/cpanm .; \
     cpanm IO::Socket::SSL; \
