@@ -108,7 +108,7 @@ RUN apt-get -y upgrade; \
     libssl-dev=1.1.1n-0+deb11u5 \
     localepurge=0.7.3.10 \
     #moreutils=0.65-1 \
-    patch=2.7.6-7 \
+    #patch=2.7.6-7 \
     p7zip-full=16.02+dfsg-8 \
     #python3-pip=20.3.4-4+deb11u1 \
     #rkhunter=1.4.6-9 \
@@ -137,7 +137,7 @@ RUN apt-get -y upgrade; \
 RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.39.2.tar.xz; \
     echo 'b7ae33d3c6ff80107d14c92dfb3d8d4944fec926b11bcc40c8764b73c710694f *perl-5.39.2.tar.xz' | sha256sum --strict --check -; \
     tar --strip-components=1 -xaf perl-*.tar.xz; \
-    cat *.patch | patch -p1 || :; \
+    #cat *.patch | patch -p1 || :; \
     ./Configure -Darchname=x86_64-linux-gnu -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des; \
     make -j "$(nproc)"; \
     TEST_JOBS="$(nproc)" make test_harness; \
