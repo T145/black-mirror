@@ -1,23 +1,23 @@
 # https://github.com/google/sanitizers/wiki/AddressSanitizerComparisonOfMemoryTools
-FROM golang:1.15 AS go1.15
+FROM golang:1.18 AS go1.18
 
 WORKDIR "/src"
 
-# https://github.com/johnkerl/miller/tree/v6.7.0
-RUN git clone -b v6.7.0 https://github.com/johnkerl/miller.git .; \
+# https://github.com/johnkerl/miller#readme
+RUN git clone -b v6.9.0 https://github.com/johnkerl/miller.git .; \
     go install -v github.com/johnkerl/miller/cmd/mlr;
 
 FROM golang:1.16 AS go1.16
 
 # https://github.com/StevenBlack/ghosts#ghosts
-RUN go install -v github.com/StevenBlack/ghosts@v0.2.2; \
-    # https://github.com/ipinfo/cli#-ipinfo-cli
-    go install -v github.com/ipinfo/cli/ipinfo@ipinfo-2.10.1;
+RUN go install -v github.com/StevenBlack/ghosts@v0.2.2;
 
 FROM golang:1.20 AS go1.20
 
 # https://github.com/mikefarah/yq/
-RUN go install -v github.com/mikefarah/yq/v4@v4.33.3
+RUN go install -v github.com/mikefarah/yq/v4@v4.33.3; \
+    # https://github.com/ipinfo/cli#-ipinfo-cli
+    go install -v github.com/ipinfo/cli/ipinfo@ipinfo-3.1.0;
 
 # https://hub.docker.com/_/buildpack-deps/
 FROM buildpack-deps:stable as utils
@@ -35,7 +35,7 @@ RUN curl http://pi.dk/3/ | bash \
 # https://gitlab.com/parrotsec/build/containers
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.8.5" \
+      version="5.9.0" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -47,7 +47,7 @@ WORKDIR "/root"
 # https://www.parrotsec.org/docs/apparmor.html
 # rkhunter: https://unix.stackexchange.com/questions/562560/invalid-web-cmd-configuration-option-relative-pathname-bin-false
 COPY configs/etc/ /etc/
-COPY --from=go1.15 /go/bin/ /usr/local/bin/
+COPY --from=go1.18 /go/bin/ /usr/local/bin/
 COPY --from=go1.16 /go/bin/ /usr/local/bin/
 COPY --from=go1.20 /go/bin/ /usr/local/bin/
 COPY --from=utils /usr/local/bin/ /usr/local/bin/
