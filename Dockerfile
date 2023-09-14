@@ -105,10 +105,10 @@ RUN apt-get -y upgrade; \
     #idn2=2.3.0-5 \
     jq=1.6-2.1 \
     # For building and testing IO::Socket::SSL
-    libssl-dev=1.1.1n-0+deb11u4 \
+    libssl-dev=1.1.1n-0+deb11u5 \
     localepurge=0.7.3.10 \
     #moreutils=0.65-1 \
-    #patch=2.7.6-7 \
+    patch=2.7.6-7 \
     p7zip-full=16.02+dfsg-8 \
     #python3-pip=20.3.4-4+deb11u1 \
     #rkhunter=1.4.6-9 \
@@ -135,9 +135,9 @@ RUN apt-get -y upgrade; \
 
 # Upgrade Perl
 RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.39.2.tar.xz; \
-    echo 'b7ae33d3c6ff80107d14c92dfb3d8d4944fec926b11bcc40c8764b73c710694f *perl*.tar.xz' | sha256sum --strict --check -; \
+    echo 'b7ae33d3c6ff80107d14c92dfb3d8d4944fec926b11bcc40c8764b73c710694f *perl-5.39.2.tar.xz' | sha256sum --strict --check -; \
     tar --strip-components=1 -xaf perl-*.tar.xz; \
-    #cat *.patch | patch -p1 # no included patch files at present
+    cat *.patch | patch -p1 || :; \
     ./Configure -Darchname=x86_64-linux-gnu -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des; \
     make -j "$(nproc)"; \
     TEST_JOBS="$(nproc)" make test_harness; \
@@ -145,14 +145,14 @@ RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.39.2.tar.xz; \
     rm -rf ./*; \
     # Install cpanm & the project packages
     curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz; \
-    echo '963e63c6e1a8725ff2f624e9086396ae150db51dd0a337c3781d09a994af05a5 *cpanminus*.tar.gz' | sha256sum --strict --check -; \
+    echo '963e63c6e1a8725ff2f624e9086396ae150db51dd0a337c3781d09a994af05a5 *App-cpanminus-1.7047.tar.gz' | sha256sum --strict --check -; \
     tar --strip-components=1 -xaf App-cpanminus-*.tar.gz; \
     perl bin/cpanm .; \
     cpanm IO::Socket::SSL; \
     # Update cpm
-    curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997011/cpm -o /usr/local/bin/cpm; \
-    # sha256 checksum is from docker-perl team, cf https://github.com/docker-library/official-images/pull/12612#issuecomment-1158288299
-    echo '7dee2176a450a8be3a6b9b91dac603a0c3a7e807042626d3fe6c93d843f75610 */usr/local/bin/cpm' | sha256sum --strict --check -; \
+    curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997014/cpm -o /usr/local/bin/cpm; \
+    # https://github.com/skaji/cpm/blob/main/Changes
+    echo 'ee525f2493e36c6f688eddabaf53a51c4d3b2a4ebaa81576ac8b9f78ab57f4a1 */usr/local/bin/cpm' | sha256sum --strict --check -; \
     chmod +x /usr/local/bin/cpm; \
     # Cleanup
     rm -rf ./*; \
