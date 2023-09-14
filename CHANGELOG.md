@@ -7,6 +7,8 @@
 **Merged pull requests:**
 
 - chore\(deps\): bump docker/setup-buildx-action from 2 to 3 in /.github/workflows [\#113](https://github.com/T145/black-mirror/pull/113) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/setup-qemu-action from 2 to 3 in /.github/workflows [\#112](https://github.com/T145/black-mirror/pull/112) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/build-push-action from 4 to 5 in /.github/workflows [\#111](https://github.com/T145/black-mirror/pull/111) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump otto-de/purge-deprecated-workflow-runs from 1 to 2 in /.github/workflows [\#110](https://github.com/T145/black-mirror/pull/110) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/login-action from 2 to 3 in /.github/workflows [\#109](https://github.com/T145/black-mirror/pull/109) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/checkout from 3 to 4 in /.github/workflows [\#108](https://github.com/T145/black-mirror/pull/108) ([dependabot[bot]](https://github.com/apps/dependabot))
