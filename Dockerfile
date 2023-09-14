@@ -39,9 +39,11 @@ LABEL maintainer="T145" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
+WORKDIR "/root"
+# https://cisofy.com/lynis/controls/FILE-6310/
+VOLUME [ "/home", "/tmp", "/var" ]
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 STOPSIGNAL SIGKILL
-WORKDIR "/root"
 
 # https://github.com/ParrotSec/docker-images/blob/master/core/lts-amd64/Dockerfile#L6
 # https://www.parrotsec.org/docs/apparmor.html
@@ -88,37 +90,24 @@ ENV LANGUAGE=en_US \
 # use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 RUN apt-get -y upgrade; \
     apt-get -y install --no-install-recommends \
-    #apt-show-versions # use dpkg -l (L) instead since ASV doesn't like GZ packages
-    #apparmor=2.13.6-10 \
-    #apparmor-utils=2.13.6-10 \
-    aria2=1.35.0-3 \
-    #auditd=1:3.0-2 \
-    # For building and testing Perl 5.37.11
+    aria2=1.36.0-1 \
     build-essential=12.9 \
-    csvkit=1.0.5-2 \
-    curl=7.88.1-7~bpo11+2 \
-    #debsums=3.0.2 \
-    gawk=1:5.1.0-1 \
-    git=1:2.39.2-1~bpo11+1 \
+    csvkit=1.0.7-1 \
+    curl=7.88.1-10 \
+    debsums=3.0.2.1 \
+    gawk=1:5.2.1-2 \
+    git=1:2.39.2-1.1 \
     grepcidr=2.0-2 \
     html-xml-utils=7.7-1.1 \
-    #idn2=2.3.0-5 \
     jq=1.6-2.1 \
-    # For building and testing IO::Socket::SSL
-    libssl-dev=1.1.1n-0+deb11u5 \
-    localepurge=0.7.3.10 \
-    #moreutils=0.65-1 \
-    #patch=2.7.6-7 \
+    libssl-dev=3.0.9-1 \
+    localepurge \
     p7zip-full=16.02+dfsg-8 \
-    #python3-pip=20.3.4-4+deb11u1 \
-    #rkhunter=1.4.6-9 \
-    symlinks=1.4-4 \
-    unzip=6.0-26+deb11u1 \
-    wget=1.21-1+deb11u1 \
-    # For extracting *.xz archives
-    xz-utils=5.2.5-2.1~deb11u1 \
-    # For building and testing IO::Socket::SSL
-    zlib1g-dev=1:1.2.11.dfsg-2+deb11u2; \
+    symlinks \
+    unzip=6.0-28 \
+    wget=1.21.3-1+b2 \
+    xz-utils=5.4.1-0.2 \
+    zlib1g-dev=1:1.2.13.dfsg-1; \
     apt-get install -y --no-install-recommends --reinstall ca-certificates=*; \
     # https://askubuntu.com/questions/477974/how-to-remove-unnecessary-locales
     localepurge; \
@@ -132,6 +121,14 @@ RUN apt-get -y upgrade; \
     find -P -O3 /var/log -depth -type f -print0 | xargs -0 truncate -s 0; \
     # remove all empty directories
     find -P -O3 /etc/ /usr/ -type d -empty -delete;
+
+# https://cisofy.com/lynis/controls/HRDN-7222/
+RUN chown 0:0 /usr/bin/as \
+    && chown 0:0 /usr/share/gcc; \
+    #rkhunter --update || :; \
+    echo 'will cite' | parallel --citation || :; \
+    # https://github.com/debuerreotype/debuerreotype/pull/32
+    rmdir /run/mount 2>/dev/null || :;
 
 # Upgrade Perl
 RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.39.2.tar.xz; \
@@ -164,13 +161,11 @@ RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.39.2.tar.xz; \
     cpanm Text::Trim; \
     cpanm Try::Tiny;
 
-# https://cisofy.com/lynis/controls/HRDN-7222/
-RUN chown 0:0 /usr/bin/as \
-    && chown 0:0 /usr/share/gcc; \
-    #rkhunter --update || :; \
-    echo 'will cite' | parallel --citation || :; \
-    # https://github.com/debuerreotype/debuerreotype/pull/32
-    rmdir /run/mount 2>/dev/null || :;
+# To fix:
+# docker: Error response from daemon: unable to find user admin: no matching entries in passwd file.
+RUN useradd -m admin && echo "admin:headhoncho" | chpasswd
+#&& usermod -aG wheel admin
+USER admin
 
 #RUN pip3 install --no-cache-dir --upgrade snscrape==0.6.2.20230320; \
 #    pip3 cache purge; \
@@ -178,14 +173,5 @@ RUN chown 0:0 /usr/bin/as \
 #    rm -rf /root/.cache;
 
 ENTRYPOINT [ "bash" ]
-
-# https://cisofy.com/lynis/controls/FILE-6310/
-VOLUME [ "/home", "/tmp", "/var" ]
-
-# To fix:
-# docker: Error response from daemon: unable to find user admin: no matching entries in passwd file.
-RUN useradd -m admin && echo "admin:headhoncho" | chpasswd
-#&& usermod -aG wheel admin
-USER admin
 
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "command -v ipinfo && command -v ghosts && command -v parsort && command -v yq && command -v mlr" ]
