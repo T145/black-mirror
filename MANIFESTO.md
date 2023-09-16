@@ -56,7 +56,7 @@ These services intrude on privacy, are usually malware, and compromise individua
 ## On Propaganda
 
 <p align="center">
-<a href="https://www.ted.com/talks/eva_galperin_what_you_need_to_know_about_stalkerware/transcript?language=en&utm_campaign=black_mirror&utm_medium=referral&utm_source=github_com_T145/black-mirror"><img src="https://pi.tedcdn.com/r/s3.amazonaws.com/talkstar-photos/uploads/db5bcc6b-ea54-4c76-a43a-1d0a5b5e5adc/AndrewMarantz_2019-embed.jpg?op=%5E&c=1280%2C720&gravity=t&u%5Br%5D=2&u%5Bs%5D=0.5&u%5Ba%5D=0.8&u%5Bt%5D=0.03&quality=82&w=1280&h=720"
+<a href="https://www.ted.com/talks/andrew_marantz_inside_the_bizarre_world_of_internet_trolls_and_propagandists/transcript?language=en&utm_campaign=black_mirror&utm_medium=referral&utm_source=github_com_T145/black-mirror"><img src="https://pi.tedcdn.com/r/s3.amazonaws.com/talkstar-photos/uploads/db5bcc6b-ea54-4c76-a43a-1d0a5b5e5adc/AndrewMarantz_2019-embed.jpg?op=%5E&c=1280%2C720&gravity=t&u%5Br%5D=2&u%5Bs%5D=0.5&u%5Ba%5D=0.8&u%5Bt%5D=0.03&quality=82&w=1280&h=720"
        alt="GitHub Top Languages"
        longdesc="https://raw.githubusercontent.com/anuraghazra/github-readme-stats/master/readme.md"
        crossorigin="anonymous"
@@ -92,6 +92,8 @@ Like dealings with religion, platforms that promote "knee-jerk contrarianism" or
 
 Due to consistent privacy and security concerns, this platform will be blocked.
 
+##### References
+
 - [The Facebook Files](https://www.wsj.com/articles/the-facebook-files-11631713039)
 
 #### Instagram
@@ -103,6 +105,10 @@ Owned by Facebook, but does not have majority support on issues that would get t
 Owned and heavily monitored by Facebook. Communications may be private between users, but can still be monitored by Facebook.
 It also has a track record of significant security concerns. All services will be blocked.
 
+##### References
+
+- [NIST Vulnerabilities](https://nvd.nist.gov/vuln/search/results?form_type=Advanced&results_type=overview&query=whatsapp&search_type=all&isCpeNameSearch=true&cvss_version=3)
+
 ### Twitter
 
 Though the cause of most internet drama, this platform is also where many cybersecurity community members communicate and collaborate.
@@ -111,12 +117,16 @@ Its trackers and such will be blocked.
 
 ### Reddit
 
-While there are some relatively harmful subreddits, they are not in the majority. Many such subreddits have actually been banned, so this will remain unblocked.
+While there are harmful subreddits, they are not in the majority. Many have actually been banned, so this will remain unblocked.
 Its trackers and such will be blocked.
 
 ### Snapchat
 
-Largely supports privacy, even though there are some security concerns. Will remain unblocked.
+Largely supports privacy, even though there are some security concerns. It will remain unblocked.
+
+#### References
+
+- [Data Breach Timeline](https://firewalltimes.com/snapchat-data-breach-timeline)
 
 ### Tumblr
 
@@ -125,4 +135,10 @@ Therefore all services will be blocked.
 
 ### TikTok
 
-Due its moderation lacking in categories that would classify as not promoting sanity under earlier definitions, it will be blocked.
+Blocked due to its moderation lacking in categories that would classify as not promoting sanity under earlier definitions and countless privacy concerns (regardless of its Chinese affiliations).
+
+#### References
+
+- [Times: TikTok Privacy Concerns](https://time.com/6265651/tiktok-security-us/)
+- [Forbes: American Surveilance (Referenced by the above article)](https://www.forbes.com/sites/emilybaker-white/2022/10/20/tiktok-bytedance-surveillance-american-user-data/?sh=218b4cc36c2d)
+- [Forbes: Spying on Forbes Journalists](https://www.forbes.com/sites/emilybaker-white/2022/12/22/tiktok-tracks-forbes-journalists-bytedance/?sh=645bc0227da5)
