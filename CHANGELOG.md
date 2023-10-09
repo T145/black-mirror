@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump stefanzweifel/git-auto-commit-action from 4 to 5 in /.github/workflows [\#114](https://github.com/T145/black-mirror/pull/114) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/setup-buildx-action from 2 to 3 in /.github/workflows [\#113](https://github.com/T145/black-mirror/pull/113) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/setup-qemu-action from 2 to 3 in /.github/workflows [\#112](https://github.com/T145/black-mirror/pull/112) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/build-push-action from 4 to 5 in /.github/workflows [\#111](https://github.com/T145/black-mirror/pull/111) ([dependabot[bot]](https://github.com/apps/dependabot))
