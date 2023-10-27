@@ -1,74 +1,79 @@
---2023-10-26 13:34:04--  https://www.opendbl.net/lists/talos.list
+--2023-10-27 13:33:31--  https://www.opendbl.net/lists/talos.list
 Resolving www.opendbl.net (www.opendbl.net)... 193.150.22.47, 2001:67c:24e4:33::47
 Connecting to www.opendbl.net (www.opendbl.net)|193.150.22.47|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 69012 (67K)
+Length: 68984 (67K)
 Saving to: ‘opendbl_cisco_talos’
 
-     0K .......... .......... .......... .......... .......... 74%  174K 0s
-    50K .......... .......                                    100%  432M=0.3s
+     0K .......... .......... .......... .......... .......... 74%  179K 0s
+    50K .......... .......                                    100%  393M=0.3s
 
-2023-10-26 13:34:05 (234 KB/s) - ‘opendbl_cisco_talos’ saved [69012/69012]
+2023-10-27 13:33:32 (242 KB/s) - ‘opendbl_cisco_talos’ saved [68984/68984]
 
---2023-10-26 13:34:05--  http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz
-Resolving wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)... 96.31.84.20, 217.23.49.207, 41.208.71.58, ...
-Connecting to wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)|96.31.84.20|:80... connected.
-HTTP request sent, awaiting response... 404 Not Found
-2023-10-26 13:34:05 ERROR 404: Not Found.
-
---2023-10-26 13:34:05--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-1.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)... 217.23.49.207, 66.240.236.50, 185.248.148.6, ...
-Connecting to wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)|217.23.49.207|:80... connected.
+--2023-10-27 13:33:32--  http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz
+Resolving wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)... 193.138.29.13, 185.248.148.6, 72.13.86.154, ...
+Connecting to wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)|193.138.29.13|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 316664 (309K) [application/octet-stream]
+Length: 67098 (66K) [application/octet-stream]
+Saving to: ‘uceprotect_backscatterer’
+
+     0K .......... .......... .......... .......... .......... 76%  134K 0s
+    50K .......... .....                                      100%  117M=0.4s
+
+2023-10-27 13:33:33 (176 KB/s) - ‘uceprotect_backscatterer’ saved [67098/67098]
+
+--2023-10-27 13:33:33--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-1.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)... 193.138.29.13, 72.13.86.154, 66.240.236.50, ...
+Connecting to wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)|193.138.29.13|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 336013 (328K) [application/octet-stream]
 Saving to: ‘uceprotect_level_1’
 
-     0K .......... .......... .......... .......... .......... 16%  176K 1s
-    50K .......... .......... .......... .......... .......... 32% 45.6M 1s
-   100K .......... .......... .......... .......... .......... 48%  353K 0s
-   150K .......... .......... .......... .......... .......... 64% 40.0M 0s
-   200K .......... .......... .......... .......... .......... 80%  357K 0s
-   250K .......... .......... .......... .......... .......... 97% 43.0M 0s
-   300K .........                                             100% 64.6K=0.7s
+     0K .......... .......... .......... .......... .......... 15%  195K 1s
+    50K .......... .......... .......... .......... .......... 30%  194K 1s
+   100K .......... .......... .......... .......... .......... 45%  390K 1s
+   150K .......... .......... .......... .......... .......... 60%  389K 0s
+   200K .......... .......... .......... .......... .......... 76%  389K 0s
+   250K .......... .......... .......... .......... .......... 91%  388K 0s
+   300K .......... .......... ........                        100%  443M=1.0s
 
-2023-10-26 13:34:06 (434 KB/s) - ‘uceprotect_level_1’ saved [316664/316664]
+2023-10-27 13:33:34 (319 KB/s) - ‘uceprotect_level_1’ saved [336013/336013]
 
---2023-10-26 13:34:06--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)... 72.13.86.154, 204.155.151.130, 185.248.148.6, ...
-Connecting to wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)|72.13.86.154|:80... connected.
+--2023-10-27 13:33:34--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)... 204.155.151.130, 217.23.49.207, 5.253.40.63, ...
+Connecting to wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)|204.155.151.130|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 380188 (371K) [text/plain]
+Length: 387694 (379K) [text/plain]
 Saving to: ‘uceprotect_level_2’
 
-     0K .......... .......... .......... .......... .......... 13%  783K 0s
-    50K .......... .......... .......... .......... .......... 26% 1.03M 0s
-   100K .......... .......... .......... .......... .......... 40% 1.03M 0s
-   150K .......... .......... .......... .......... .......... 53% 1.03M 0s
-   200K .......... .......... .......... .......... .......... 67% 1.03M 0s
-   250K .......... .......... .......... .......... .......... 80% 1.02M 0s
-   300K .......... .......... .......... .......... .......... 94% 1.04M 0s
-   350K .......... .......... .                               100% 1.30M=0.4s
+     0K .......... .......... .......... .......... .......... 13%  877K 0s
+    50K .......... .......... .......... .......... .......... 26% 1.98M 0s
+   100K .......... .......... .......... .......... .......... 39% 2.96M 0s
+   150K .......... .......... .......... .......... .......... 52% 2.76M 0s
+   200K .......... .......... .......... .......... .......... 66% 3.01M 0s
+   250K .......... .......... .......... .......... .......... 79% 5.97M 0s
+   300K .......... .......... .......... .......... .......... 92% 5.65M 0s
+   350K .......... .......... ........                        100%  357M=0.1s
 
-2023-10-26 13:34:06 (1021 KB/s) - ‘uceprotect_level_2’ saved [380188/380188]
+2023-10-27 13:33:34 (2.48 MB/s) - ‘uceprotect_level_2’ saved [387694/387694]
 
---2023-10-26 13:34:06--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)... 66.240.236.50, 185.248.148.6, 209.126.213.95, ...
-Connecting to wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)|66.240.236.50|:80... connected.
+--2023-10-27 13:33:34--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)... 193.138.29.13, 209.126.213.95, 96.31.84.20, ...
+Connecting to wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)|193.138.29.13|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 521991 (510K) [application/octet-stream]
+Length: 491277 (480K) [application/octet-stream]
 Saving to: ‘uceprotect_level_3’
 
-     0K .......... .......... .......... .......... ..........  9% 2.23M 0s
-    50K .......... .......... .......... .......... .......... 19% 4.42M 0s
-   100K .......... .......... .......... .......... .......... 29%  132M 0s
-   150K .......... .......... .......... .......... .......... 39% 4.47M 0s
-   200K .......... .......... .......... .......... .......... 49% 91.8M 0s
-   250K .......... .......... .......... .......... .......... 58%  142M 0s
-   300K .......... .......... .......... .......... .......... 68% 4.70M 0s
-   350K .......... .......... .......... .......... .......... 78%  159M 0s
-   400K .......... .......... .......... .......... .......... 88% 84.6M 0s
-   450K .......... .......... .......... .......... .......... 98%  191M 0s
-   500K .........                                             100%  877K=0.07s
+     0K .......... .......... .......... .......... .......... 10%  130K 3s
+    50K .......... .......... .......... .......... .......... 20%  389K 2s
+   100K .......... .......... .......... .......... .......... 31%  389K 1s
+   150K .......... .......... .......... .......... .......... 41%  387K 1s
+   200K .......... .......... .......... .......... .......... 52%  390K 1s
+   250K .......... .......... .......... .......... .......... 62%  391K 1s
+   300K .......... .......... .......... .......... .......... 72%  390K 0s
+   350K .......... .......... .......... .......... .......... 83%  389K 0s
+   400K .......... .......... .......... .......... .......... 93%  390K 0s
+   450K .......... .......... .........                       100%  492M=1.4s
 
-2023-10-26 13:34:06 (7.34 MB/s) - ‘uceprotect_level_3’ saved [521991/521991]
+2023-10-27 13:33:36 (340 KB/s) - ‘uceprotect_level_3’ saved [491277/491277]
 
