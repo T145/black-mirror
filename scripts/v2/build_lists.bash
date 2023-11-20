@@ -91,7 +91,7 @@ main() {
 
 		set +e # temporarily disable strict fail, in case downloads fail
 		jq -r 'to_entries[].value.content.retriever' data/v2/manifest.json |
-		mawk 'NF && !seen[$0]++' |
+			mawk 'NF && !seen[$0]++' |
 			while read -r retriever; do
 				case "$retriever" in
 				'ARIA2')

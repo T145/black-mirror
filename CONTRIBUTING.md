@@ -3,20 +3,25 @@
 ## List recommendations
 
 ### Do you have a list you'd like to add?
+
 Join the discussion around lists under the "Discussions" tab!
 Issues should be restricted for more critical subjects about how the project works.
 
 ### Have you found a redundant list?
+
 A redundant list would be any list that has its own entry in `data/v2/manifest.json` and is mostly or fully included in another list.
 Obviously one or the other should be removed, so please make an issue detailing the conflict.
 
 ### Have you found a deprecated list?
+
 Please make an issue featuring the list and whether or not it should be removed or archived.
 
 ### Do you have a host or some hosts to whitelist or blacklist?
+
 Join the corresponding discussion and post 'em!
 
 ### Have you found a bug in the main program?
+
 Please make an issue detailing the problem as thoroughly as possible.
 
 ## Manually adding a list
@@ -25,6 +30,7 @@ Please make an issue detailing the problem as thoroughly as possible.
 Each listing has the following fields:
 
 Example:
+
 ```json
 "certego_intel": {
   "_notes": "Ignoring the IP reports since they're pretty old.",
