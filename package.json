@@ -6,10 +6,13 @@
     "lint": "pnpm sort-package-json && pnpm mega-linter-runner"
   },
   "dependencies": {
-    "mega-linter-runner": "^7.1.0"
+    "mega-linter-runner": "^7.6.0"
   },
   "devDependencies": {
-    "npm-check-updates": "^16.10.13",
-    "sort-package-json": "^2.5.0"
+    "npm-check-updates": "^16.14.11",
+    "sort-package-json": "^2.6.0"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
