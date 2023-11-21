@@ -91,7 +91,7 @@ main() {
 
 		set +e # temporarily disable strict fail, in case downloads fail
 		jq -r 'to_entries[].value.content.retriever' data/v2/manifest.json |
-			mawk 'NF && !seen[$0]++' |
+			mawk 'NF && !seen[$0]++' | # remove duplicates
 			while read -r retriever; do
 				case "$retriever" in
 				'ARIA2')
@@ -110,6 +110,18 @@ main() {
 							# https://www.gnu.org/software/wget/manual/html_node/Download-Options
 							# https://www.gnu.org/software/wget/manual/html_node/Logging-and-Input-File-Options.html
 							wget --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
+						done
+					;;
+				'WGET_INSECURE')
+					jq -r --arg method "$method" 'to_entries[] |
+						select(.value.content.retriever == "WGET_INSECURE" and .value.method == $method) |
+						{key, mirror: .value.mirrors[0]} |
+						"\(.key)#\(.mirror)"' data/v2/manifest.json |
+						while IFS='#' read -r key mirror; do
+							# https://www.gnu.org/software/wget/manual/html_node/Download-Options
+							# https://www.gnu.org/software/wget/manual/html_node/Logging-and-Input-File-Options.html
+							# https://www.gnu.org/software/wget/manual/wget.html
+							wget --no-check-certificate --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
 						done
 					;;
 				'SNSCRAPE')
