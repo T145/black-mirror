@@ -1,4 +1,4 @@
---2023-11-23 13:35:17--  https://www.cruzit.com/xxwbl2csv.php
+--2023-11-24 13:31:20--  https://www.cruzit.com/xxwbl2csv.php
 Resolving www.cruzit.com (www.cruzit.com)... 169.231.8.205
 Connecting to www.cruzit.com (www.cruzit.com)|169.231.8.205|:443... connected.
 WARNING: The certificate of ‘www.cruzit.com’ is not trusted.
@@ -7,86 +7,77 @@ HTTP request sent, awaiting response... 200 OK
 Length: 151537 (148K) [text/x-csv]
 Saving to: ‘cruz_it’
 
-     0K .......... .......... .......... .......... .......... 33%  847K 0s
-    50K .......... .......... .......... .......... .......... 67% 1.66M 0s
-   100K .......... .......... .......... .......... .......   100% 1.60M=0.1s
+     0K .......... .......... .......... .......... .......... 33%  306K 0s
+    50K .......... .......... .......... .......... .......... 67%  611K 0s
+   100K .......... .......... .......... .......... .......   100%  153M=0.2s
 
-2023-11-23 13:35:18 (1.23 MB/s) - ‘cruz_it’ saved [151537/151537]
+2023-11-24 13:31:21 (602 KB/s) - ‘cruz_it’ saved [151537/151537]
 
 Will not apply HSTS. The HSTS database must be a regular and non-world-writable file.
 ERROR: could not open HSTS store at '/github/home/.wget-hsts'. HSTS will be disabled.
---2023-11-23 13:35:18--  https://opendbl.net/lists/talos.list
-Resolving opendbl.net (opendbl.net)... 104.21.69.127, 172.67.208.178, 2606:4700:3035::6815:457f, ...
-Connecting to opendbl.net (opendbl.net)|104.21.69.127|:443... connected.
+--2023-11-24 13:31:21--  https://opendbl.net/lists/talos.list
+Resolving opendbl.net (opendbl.net)... 193.150.22.47
+Connecting to opendbl.net (opendbl.net)|193.150.22.47|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 23463 (23K)
 Saving to: ‘opendbl_cisco_talos’
 
-     0K .......... .......... ..                              100%  133K=0.2s
+     0K .......... .......... ..                              100%  221K=0.1s
 
-2023-11-23 13:35:19 (133 KB/s) - ‘opendbl_cisco_talos’ saved [23463/23463]
-
-Will not apply HSTS. The HSTS database must be a regular and non-world-writable file.
-ERROR: could not open HSTS store at '/github/home/.wget-hsts'. HSTS will be disabled.
---2023-11-23 13:35:19--  http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz
-Resolving wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)... 72.13.86.154, 199.187.241.194, 5.253.40.63, ...
-Connecting to wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)|72.13.86.154|:80... connected.
-HTTP request sent, awaiting response... 403 Forbidden
-2023-11-23 13:35:19 ERROR 403: Forbidden.
+2023-11-24 13:31:22 (221 KB/s) - ‘opendbl_cisco_talos’ saved [23463/23463]
 
 Will not apply HSTS. The HSTS database must be a regular and non-world-writable file.
 ERROR: could not open HSTS store at '/github/home/.wget-hsts'. HSTS will be disabled.
---2023-11-23 13:35:19--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-1.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)... 5.253.40.63, 96.31.84.20, 41.208.71.58, ...
+--2023-11-24 13:31:22--  http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz
+Resolving wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)... 41.208.71.58, 96.31.84.20, 45.93.137.156, ...
+Connecting to wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)|41.208.71.58|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 69038 (67K) [text/plain]
+Saving to: ‘uceprotect_backscatterer’
+
+     0K .......... .......... .......... .......... .......... 74%  152K 0s
+    50K .......... .......                                    100%  158K=0.4s
+
+2023-11-24 13:31:22 (153 KB/s) - ‘uceprotect_backscatterer’ saved [69038/69038]
+
+Will not apply HSTS. The HSTS database must be a regular and non-world-writable file.
+ERROR: could not open HSTS store at '/github/home/.wget-hsts'. HSTS will be disabled.
+--2023-11-24 13:31:22--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-1.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)... 5.253.40.63, 66.240.236.50, 45.93.137.156, ...
 Connecting to wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)|5.253.40.63|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 198101 (193K) [application/octet-stream]
+Length: 182683 (178K) [application/octet-stream]
 Saving to: ‘uceprotect_level_1’
 
-     0K .......... .......... .......... .......... .......... 25% 2.73M 0s
-    50K .......... .......... .......... .......... .......... 51% 5.50M 0s
-   100K .......... .......... .......... .......... .......... 77% 11.1M 0s
-   150K .......... .......... .......... .......... ...       100% 3.43M=0.04s
+     0K .......... .......... .......... .......... .......... 28%  447K 0s
+    50K .......... .......... .......... .......... .......... 56%  899K 0s
+   100K .......... .......... .......... .......... .......... 84% 11.2M 0s
+   150K .......... .......... ........                        100%  490K=0.2s
 
-2023-11-23 13:35:20 (4.34 MB/s) - ‘uceprotect_level_1’ saved [198101/198101]
+2023-11-24 13:31:23 (777 KB/s) - ‘uceprotect_level_1’ saved [182683/182683]
 
 Will not apply HSTS. The HSTS database must be a regular and non-world-writable file.
 ERROR: could not open HSTS store at '/github/home/.wget-hsts'. HSTS will be disabled.
---2023-11-23 13:35:20--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)... 193.138.29.13, 217.23.49.207, 185.248.148.6, ...
-Connecting to wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)|193.138.29.13|:80... connected.
+--2023-11-24 13:31:23--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)... 217.23.49.207, 45.93.137.156, 72.13.86.154, ...
+Connecting to wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)|217.23.49.207|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 228791 (223K) [application/octet-stream]
+Length: 213699 (209K) [application/octet-stream]
 Saving to: ‘uceprotect_level_2’
 
-     0K .......... .......... .......... .......... .......... 22%  151K 1s
-    50K .......... .......... .......... .......... .......... 44%  151K 1s
-   100K .......... .......... .......... .......... .......... 67%  301K 0s
-   150K .......... .......... .......... .......... .......... 89%  302K 0s
-   200K .......... .......... ...                             100%  134M=1.0s
+     0K .......... .......... .......... .......... .......... 23%  259K 1s
+    50K .......... .......... .......... .......... .......... 47%  519K 0s
+   100K .......... .......... .......... .......... .......... 71% 21.3M 0s
+   150K .......... .......... .......... .......... .......... 95%  532K 0s
+   200K ........                                              100% 90.2K=0.5s
 
-2023-11-23 13:35:21 (225 KB/s) - ‘uceprotect_level_2’ saved [228791/228791]
+2023-11-24 13:31:24 (433 KB/s) - ‘uceprotect_level_2’ saved [213699/213699]
 
 Will not apply HSTS. The HSTS database must be a regular and non-world-writable file.
 ERROR: could not open HSTS store at '/github/home/.wget-hsts'. HSTS will be disabled.
---2023-11-23 13:35:21--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)... 193.138.29.13, 66.240.236.50, 96.31.84.20, ...
-Connecting to wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)|193.138.29.13|:80... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 514191 (502K) [application/octet-stream]
-Saving to: ‘uceprotect_level_3’
-
-     0K .......... .......... .......... .......... ..........  9%  151K 3s
-    50K .......... .......... .......... .......... .......... 19%  150K 3s
-   100K .......... .......... .......... .......... .......... 29%  301K 2s
-   150K .......... .......... .......... .......... .......... 39% 97.6M 1s
-   200K .......... .......... .......... .......... .......... 49%  301K 1s
-   250K .......... .......... .......... .......... .......... 59%  302K 1s
-   300K .......... .......... .......... .......... .......... 69%  120M 1s
-   350K .......... .......... .......... .......... .......... 79%  302K 0s
-   400K .......... .......... .......... .......... .......... 89% 82.5M 0s
-   450K .......... .......... .......... .......... .......... 99%  303K 0s
-   500K ..                                                    100% 3.99T=1.5s
-
-2023-11-23 13:35:23 (336 KB/s) - ‘uceprotect_level_3’ saved [514191/514191]
+--2023-11-24 13:31:24--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)... 96.31.84.20, 209.126.213.95, 72.13.86.154, ...
+Connecting to wget-mirrors.uceprotect.net (wget-mirrors.uceprotect.net)|96.31.84.20|:80... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2023-11-24 13:31:24 ERROR 404: Not Found.
 
