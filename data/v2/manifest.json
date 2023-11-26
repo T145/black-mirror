@@ -9264,5 +9264,30 @@
       "https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt"
     ],
     "topic": "SECURITY"
+  },
+  "3coresec": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://blacklist.3coresec.net/",
+      "homepage": "https://www.3coresec.com/",
+      "license": "agpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://blacklist.3coresec.net/lists/all.txt"
+    ],
+    "topic": "SECURITY"
   }
 }
