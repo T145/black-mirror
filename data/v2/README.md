@@ -11,7 +11,6 @@
 - [ad-wars](https://github.com/jdlingyu/ad-wars)
 - [turk-adlist](https://github.com/bkrucarci/turk-adlist)
 - [ad-hosts](https://github.com/ilpl/ad-hosts)
-- [SNAFU](https://github.com/RooneyMcNibNug/pihole-stuff/blob/master/SNAFU.txt)
 - [dohservers](https://github.com/oneoffdallas/dohservers)
 - [DroneBL](https://dronebl.org/docs/howtouse) ?
 - [Free Email Provider Domains](https://gist.github.com/tbrianjones/5992856)
