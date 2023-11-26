@@ -161,6 +161,31 @@
       "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/click_me_to_edit/include_for_Pro_Xtra_only.txt"
     }
   },
+  "3coresec": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://blacklist.3coresec.net/",
+      "homepage": "https://www.3coresec.com/",
+      "license": "agpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://blacklist.3coresec.net/lists/all.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "abuse_ch_feodotracker": {
     "archive": false,
     "checksums": {},
@@ -7252,6 +7277,31 @@
     ],
     "topic": "SECURITY"
   },
+  "rooneymcnibnug_snafu": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/RooneyMcNibNug/pihole-stuff",
+      "homepage": "https://github.com/RooneyMcNibNug/pihole-stuff",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/RooneyMcNibNug/pihole-stuff/master/SNAFU.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "rpilist_corona": {
     "archive": false,
     "checksums": {},
@@ -8280,6 +8330,85 @@
     ],
     "topic": "SECURITY"
   },
+  "threatview_high_confidence_domains": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://threatview.io/",
+      "homepage": "https://threatview.io/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://threatview.io/Downloads/DOMAIN-High-Confidence-Feed.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "threatview_high_confidence_ips": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://threatview.io/",
+      "homepage": "https://threatview.io/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://threatview.io/Downloads/IP-High-Confidence-Feed.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "threatview_high_confidence_urls": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "ABUSE_CH_URLHAUS_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://threatview.io/",
+      "homepage": "https://threatview.io/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://threatview.io/Downloads/URL-High-Confidence-Feed.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "threatview_iocs": {
     "archive": false,
     "checksums": {},
@@ -9262,135 +9391,6 @@
     "method": "ALLOW",
     "mirrors": [
       "https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "3coresec": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://blacklist.3coresec.net/",
-      "homepage": "https://www.3coresec.com/",
-      "license": "agpl-3.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://blacklist.3coresec.net/lists/all.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "threatview_high_confidence_domains": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://threatview.io/",
-      "homepage": "https://threatview.io/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://threatview.io/Downloads/DOMAIN-High-Confidence-Feed.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "threatview_high_confidence_ips": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://threatview.io/",
-      "homepage": "https://threatview.io/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://threatview.io/Downloads/IP-High-Confidence-Feed.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "threatview_high_confidence_urls": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
-        "format": "DOMAIN"
-      },
-      {
-        "filter": "ABUSE_CH_URLHAUS_IPV4",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://threatview.io/",
-      "homepage": "https://threatview.io/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://threatview.io/Downloads/URL-High-Confidence-Feed.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "rooneymcnibnug_snafu": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/RooneyMcNibNug/pihole-stuff",
-      "homepage": "https://github.com/RooneyMcNibNug/pihole-stuff",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/RooneyMcNibNug/pihole-stuff/master/SNAFU.txt"
     ],
     "topic": "SECURITY"
   }
