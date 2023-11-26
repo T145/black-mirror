@@ -9289,5 +9289,84 @@
       "https://blacklist.3coresec.net/lists/all.txt"
     ],
     "topic": "SECURITY"
+  },
+  "threatview_high_confidence_domains": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://threatview.io/",
+      "homepage": "https://threatview.io/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://threatview.io/Downloads/DOMAIN-High-Confidence-Feed.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "threatview_high_confidence_ips": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://threatview.io/",
+      "homepage": "https://threatview.io/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://threatview.io/Downloads/IP-High-Confidence-Feed.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "threatview_high_confidence_urls": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "ABUSE_CH_URLHAUS_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://threatview.io/",
+      "homepage": "https://threatview.io/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://threatview.io/Downloads/URL-High-Confidence-Feed.txt"
+    ],
+    "topic": "SECURITY"
   }
 }

@@ -2,6 +2,9 @@
 
 ## ⬛ Blacklists
 
+- [Threatview](https://threatview.io/)
+  - OSINT Threat Feed
+  - C2 Hunt Feed
 - [migueldemoura](https://github.com/migueldemoura/ublock-umatrix-rulesets)
 - [uAssets](https://github.com/uBlockOrigin/uAssets)
 - [blacklist-named](https://github.com/tomzuu/blacklist-named)
