@@ -7928,6 +7928,31 @@
     ],
     "topic": "SECURITY"
   },
+  "spamhouse_drop_v6": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "CIDR6"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.spamhaus.org/organization/",
+      "homepage": "https://www.spamhaus.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.spamhaus.org/drop/dropv6.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "spamhouse_edrop": {
     "archive": false,
     "checksums": {},
