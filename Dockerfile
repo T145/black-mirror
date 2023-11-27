@@ -1,16 +1,17 @@
+FROM golang:1.16 AS go1.16
+
+# https://github.com/StevenBlack/ghosts#ghosts
+RUN go get github.com/StevenBlack/ghosts;
+
 # https://github.com/google/sanitizers/wiki/AddressSanitizerComparisonOfMemoryTools
 FROM golang:1.18 AS go1.18
 
 WORKDIR "/src"
 
 # https://github.com/johnkerl/miller#readme
-RUN git clone -b v6.9.0 https://github.com/johnkerl/miller.git .; \
+RUN git config --global advice.detachedHead false; \
+    git clone --depth 1 -b v6.9.0 https://github.com/johnkerl/miller.git .; \
     go install -v github.com/johnkerl/miller/cmd/mlr;
-
-FROM golang:1.16 AS go1.16
-
-# https://github.com/StevenBlack/ghosts#ghosts
-RUN go install -v github.com/StevenBlack/ghosts@v0.2.2;
 
 FROM golang:1.21 AS go1.21
 
@@ -88,22 +89,22 @@ ENV LANGUAGE=en_US \
 # https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#run
 # https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory#21530768
 # use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
-RUN apt-get -y upgrade; \
-    apt-get -y install --no-install-recommends \
+# dpkg --list to get versions
+RUN apt-get -y install --no-install-recommends \
     aria2=1.36.0-1 \
     build-essential=12.9 \
     csvkit=1.0.7-1 \
-    curl=7.88.1-10 \
+    curl=7.88.1-10+deb12u3 \
     debsums=3.0.2.1 \
     gawk=1:5.2.1-2 \
     git=1:2.39.2-1.1 \
     grepcidr=2.0-2 \
     html-xml-utils=7.7-1.1 \
     jq=1.6-2.1 \
-    libssl-dev=3.0.9-1 \
-    localepurge \
+    libssl-dev=3.0.11-1~deb12u1 \
+    localepurge=* \
     p7zip-full=16.02+dfsg-8 \
-    symlinks \
+    symlinks=* \
     unzip=6.0-28 \
     wget=1.21.3-1+b2 \
     xz-utils=5.4.1-0.2 \
