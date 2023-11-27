@@ -8304,19 +8304,22 @@
     ],
     "topic": "SECURITY"
   },
-  "threatview_domains": {
-    "_notes": "Has a poorly formatted C2 Intel feed as well.",
+  "threatview_c2_intel": {
     "archive": false,
     "checksums": {},
     "content": {
       "filter": "NONE",
       "retriever": "ARIA2",
-      "type": "TEXT"
+      "type": "CSV"
     },
     "formats": [
       {
-        "filter": "NONE",
+        "filter": "THREATVIEW_C2_HOSTS",
         "format": "DOMAIN"
+      },
+      {
+        "filter": "THREATVIEW_C2_IPV4",
+        "format": "IPV4"
       }
     ],
     "metadata": {
@@ -8326,7 +8329,7 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://threatview.io/Downloads/DOMAIN-High-Confidence-Feed.txt"
+      "https://threatview.io/Downloads/High-Confidence-CobaltStrike-C2%20-Feeds.txt"
     ],
     "topic": "SECURITY"
   },
@@ -8409,7 +8412,7 @@
     ],
     "topic": "SECURITY"
   },
-  "threatview_iocs": {
+  "threatview_ioc_tweets": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -8431,31 +8434,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://threatview.io/Downloads/Experimental-IOC-Tweets.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "threatview_ips": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://threatview.io/",
-      "homepage": "https://threatview.io/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://threatview.io/Downloads/IP-High-Confidence-Feed.txt"
     ],
     "topic": "SECURITY"
   },

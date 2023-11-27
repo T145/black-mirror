@@ -8,6 +8,10 @@ get_ipv6s() {
 	ipinfo grepip -6hox --nocolor
 }
 
+get_domains() {
+	perl -MData::Validate::IP=is_ipv4 -nE 'chomp; if(defined($_) && !is_ipv4($_)) {say $_;}'
+}
+
 get_domains_from_urls() {
 	perl -MData::Validate::Domain=is_domain -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_domain($3, { domain_private_tld => { onion => 1 } })}' 2>/dev/null
 }
@@ -145,6 +149,8 @@ process_list() {
 			'CRUZ_IT') mlr --csv --headerless-csv-output clean-whitespace then cut -f ip_address ;;
 			'PHISHTANK') mlr --csv --headerless-csv-output cut -f url | get_domains_from_urls ;;
 			'BLOCKLIST_UA') mlr --csv --ifs ';' --headerless-csv-output cut -f IP ;;
+			'THREATVIEW_C2_HOSTS') mawk -F, '$0~/^[^#]/{print $3}' | get_domains ;;
+			'THREATVIEW_C2_IPV4') mawk -F, '$0~/^[^#]/{print $1}' | get_ipv4s ;;
 			esac
 			;;
 		'YAML')
