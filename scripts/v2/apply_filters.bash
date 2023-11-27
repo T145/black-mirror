@@ -117,7 +117,7 @@ process_list() {
 			'TINYCHECK_FREEDNS') jq -r '.iocs[] | select(.type == "freedns") | .value' ;;
 			'TINYCHECK_IPV4') jq -r '.iocs[] | select(.type == "ip4addr") | .value' ;;
 			'TINYCHECK_CIDR') jq -r '.iocs[] | select(.type == "cidr") | .value' ;;
-			'CHONG_LUA_DAO_DOMAIN') jq -r '.[].url' | get_domains_from_urls ;;
+			'CHONG_LUA_DAO_DOMAIN') jq -r '.[].url' | sed 's/\*\.//g' | perl -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3}' ;;
 			'CHONG_LUA_DAO_IPV4') jq -r '.[].url' | get_ipv4s_from_urls ;;
 			'INQUEST_DOMAIN') jq -r '.data[] | select(.artifact_type == "domain") | .artifact' ;;
 			'INQUEST_IPV4') jq -r '.data[] | select(.artifact_type == "ipaddress") | .artifact' ;;

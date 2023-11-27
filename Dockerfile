@@ -36,7 +36,7 @@ RUN curl http://pi.dk/3/ | bash \
 # https://gitlab.com/parrotsec/build/containers
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.9.3" \
+      version="6.0.0" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -157,6 +157,7 @@ RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.39.2.tar.xz; \
     # Cleanup
     rm -rf ./*; \
     # Install dependencies
+    cpanm Regexp::Common; \
     cpanm Data::Validate::Domain; \
     cpanm Data::Validate::IP; \
     cpanm Net::CIDR; \
