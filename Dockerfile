@@ -70,13 +70,14 @@ RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
 
 # Make the "en_US.UTF-8" locale the default
 RUN apt-get -yq update --no-allow-insecure-repositories; \
-    apt-get -y install --no-install-recommends locales=2.31-13+deb11u6; \
+    apt-get -y install --no-install-recommends locales=2.36-9+deb12u2; \
     # https://wiki.debian.org/Locale
     locale-gen; \
     # https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8; \
     update-locale LANG=en_US.UTF-8; \
     export LC_ALL=C man;
+
 # https://perldoc.perl.org/perllocale
 ENV LANGUAGE=en_US \
     LANG=en_US.UTF-8 \
@@ -133,8 +134,8 @@ RUN chown 0:0 /usr/bin/as \
 
 # Upgrade Perl
 # https://github.com/Perl/docker-perl/blob/master/5.039.005-main%2Cthreaded-bullseye/Dockerfile
-RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.39.5.tar.xz; \
-    echo '4048cf0065f347a03ec85e989631a64e03ba9c9ccbc8f2a35153cad07fe21930 *perl-5.39.5.tar.xz' | sha256sum --strict --check -; \
+RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.39.2.tar.xz; \
+    echo 'b7ae33d3c6ff80107d14c92dfb3d8d4944fec926b11bcc40c8764b73c710694f *perl-5.39.2.tar.xz' | sha256sum --strict --check -; \
     tar --strip-components=1 -xaf perl-*.tar.xz; \
     #cat *.patch | patch -p1 || :; \
     ./Configure -Darchname=x86_64-linux-gnu -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des; \
@@ -149,14 +150,13 @@ RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.39.5.tar.xz; \
     perl bin/cpanm .; \
     cpanm IO::Socket::SSL; \
     # Update cpm
-    curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997011/cpm -o /usr/local/bin/cpm; \
+    curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997014/cpm -o /usr/local/bin/cpm; \
     # https://github.com/skaji/cpm/blob/main/Changes
-    echo '7dee2176a450a8be3a6b9b91dac603a0c3a7e807042626d3fe6c93d843f75610 */usr/local/bin/cpm' | sha256sum --strict --check -; \
+    echo 'ee525f2493e36c6f688eddabaf53a51c4d3b2a4ebaa81576ac8b9f78ab57f4a1 */usr/local/bin/cpm' | sha256sum --strict --check -; \
     chmod +x /usr/local/bin/cpm; \
     # Cleanup
     rm -rf ./*; \
-    cpanm --version && cpm --version ; \
-    # Install project dependencies
+    # Install dependencies
     cpanm Data::Validate::Domain; \
     cpanm Data::Validate::IP; \
     cpanm Net::CIDR; \
