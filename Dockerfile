@@ -12,12 +12,12 @@ FROM golang:1.16 AS go1.16
 # https://github.com/StevenBlack/ghosts#ghosts
 RUN go install -v github.com/StevenBlack/ghosts@v0.2.2;
 
-FROM golang:1.20 AS go1.20
+FROM golang:1.21 AS go1.21
 
 # https://github.com/mikefarah/yq/
-RUN go install -v github.com/mikefarah/yq/v4@v4.33.3; \
+RUN go install -v github.com/mikefarah/yq/v4@v4.40.3; \
     # https://github.com/ipinfo/cli#-ipinfo-cli
-    go install -v github.com/ipinfo/cli/ipinfo@ipinfo-3.1.0;
+    go install -v github.com/ipinfo/cli/ipinfo@ipinfo-3.2.0;
 
 # https://hub.docker.com/_/buildpack-deps/
 FROM buildpack-deps:stable as utils
@@ -35,7 +35,7 @@ RUN curl http://pi.dk/3/ | bash \
 # https://gitlab.com/parrotsec/build/containers
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="5.9.0" \
+      version="5.9.3" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -51,7 +51,7 @@ STOPSIGNAL SIGKILL
 COPY configs/etc/ /etc/
 COPY --from=go1.18 /go/bin/ /usr/local/bin/
 COPY --from=go1.16 /go/bin/ /usr/local/bin/
-COPY --from=go1.20 /go/bin/ /usr/local/bin/
+COPY --from=go1.21 /go/bin/ /usr/local/bin/
 COPY --from=utils /usr/local/bin/ /usr/local/bin/
 
 # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L26
@@ -131,8 +131,9 @@ RUN chown 0:0 /usr/bin/as \
     rmdir /run/mount 2>/dev/null || :;
 
 # Upgrade Perl
-RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.39.2.tar.xz; \
-    echo 'b7ae33d3c6ff80107d14c92dfb3d8d4944fec926b11bcc40c8764b73c710694f *perl-5.39.2.tar.xz' | sha256sum --strict --check -; \
+# https://github.com/Perl/docker-perl/blob/master/5.039.005-main%2Cthreaded-bullseye/Dockerfile
+RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.39.5.tar.xz; \
+    echo '4048cf0065f347a03ec85e989631a64e03ba9c9ccbc8f2a35153cad07fe21930 *perl-5.39.5.tar.xz' | sha256sum --strict --check -; \
     tar --strip-components=1 -xaf perl-*.tar.xz; \
     #cat *.patch | patch -p1 || :; \
     ./Configure -Darchname=x86_64-linux-gnu -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des; \
@@ -147,13 +148,14 @@ RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.39.2.tar.xz; \
     perl bin/cpanm .; \
     cpanm IO::Socket::SSL; \
     # Update cpm
-    curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997014/cpm -o /usr/local/bin/cpm; \
+    curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997011/cpm -o /usr/local/bin/cpm; \
     # https://github.com/skaji/cpm/blob/main/Changes
-    echo 'ee525f2493e36c6f688eddabaf53a51c4d3b2a4ebaa81576ac8b9f78ab57f4a1 */usr/local/bin/cpm' | sha256sum --strict --check -; \
+    echo '7dee2176a450a8be3a6b9b91dac603a0c3a7e807042626d3fe6c93d843f75610 */usr/local/bin/cpm' | sha256sum --strict --check -; \
     chmod +x /usr/local/bin/cpm; \
     # Cleanup
     rm -rf ./*; \
-    # Install dependencies
+    cpanm --version && cpm --version ; \
+    # Install project dependencies
     cpanm Data::Validate::Domain; \
     cpanm Data::Validate::IP; \
     cpanm Net::CIDR; \
