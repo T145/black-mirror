@@ -109,7 +109,7 @@ main() {
 						while IFS='#' read -r key mirror; do
 							# https://www.gnu.org/software/wget/manual/html_node/Download-Options
 							# https://www.gnu.org/software/wget/manual/html_node/Logging-and-Input-File-Options.html
-							wget --config='./configs/wget.conf' -O "$key" "$mirror"
+							wget --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
 						done
 					;;
 				'WGET_INSECURE')
@@ -121,7 +121,7 @@ main() {
 							# https://www.gnu.org/software/wget/manual/html_node/Download-Options
 							# https://www.gnu.org/software/wget/manual/html_node/Logging-and-Input-File-Options.html
 							# https://www.gnu.org/software/wget/manual/wget.html
-							wget --no-check-certificate --config='./configs/wget.conf' -O "$key" "$mirror"
+							wget --no-check-certificate --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
 						done
 					;;
 				'SNSCRAPE')
