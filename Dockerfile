@@ -31,12 +31,23 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN curl http://pi.dk/3/ | bash \
     && find /usr/local/bin/ -type f ! -name 'par*' -delete
 
+# Build Wget from source to enable c-ares support
+RUN apt-get -y update; \
+    # The latest libssl-dev is already included!
+    apt-get -y install libc-ares-dev libpsl-dev; \
+    wget https://ftp.gnu.org/gnu/wget/wget-1.21.4.tar.gz; \
+    tar -xzf wget-*.tar.gz; \
+    cd wget-1.21.4; \
+    ./configure --with-ssl=openssl --with-cares --with-psl; \
+    make install;
+# Executable will be under /usr/bin/local
+
 # https://wiki.debian.org/DiskFreeSpace
 # https://raphaelhertzog.com/mastering-debian/
 # https://gitlab.com/parrotsec/build/containers
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.0.0" \
+      version="6.0.2" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -102,14 +113,16 @@ RUN apt-get -y install --no-install-recommends \
     grepcidr=2.0-2 \
     html-xml-utils=7.7-1.1 \
     jq=1.6-2.1 \
-    libssl-dev=3.0.11-1~deb12u1 \
+    libc-ares2=1.18.1-3 \
+    libpsl5=0.21.2-1 \
+    libssl3=3.0.11-1~deb12u1 \
     localepurge=* \
     p7zip-full=16.02+dfsg-8 \
     symlinks=* \
     unzip=6.0-28 \
-    wget=1.21.3-1+b2 \
+    #wget=1.21.3-1+b2 \
     xz-utils=5.4.1-0.2 \
-    zlib1g-dev=1:1.2.13.dfsg-1; \
+    zlib1g=1:1.2.13.dfsg-1; \
     apt-get install -y --no-install-recommends --reinstall ca-certificates=*; \
     # https://askubuntu.com/questions/477974/how-to-remove-unnecessary-locales
     localepurge; \
