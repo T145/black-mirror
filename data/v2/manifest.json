@@ -9396,5 +9396,30 @@
       "https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt"
     ],
     "topic": "SECURITY"
+  },
+  "vivaldi": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "VIVALDI",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://vivaldi.com/",
+      "homepage": "https://vivaldi.com/",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://downloads.vivaldi.com/blocklist/current.json"
+    ],
+    "topic": "PRIVACY"
   }
 }
