@@ -6056,6 +6056,31 @@
       "adguard": "https://raw.githubusercontent.com/eEIi0A5L/adblock_filter/master/adguard_dns.txt"
     }
   },
+  "msedge": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "MSEDGE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.microsoft.com/en-us/edge",
+      "homepage": "https://www.microsoft.com/en-us/edge",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://edge.microsoft.com/abusiveadblocking/api/v1/blocklist"
+    ],
+    "topic": "PRIVACY"
+  },
   "myip_full_blacklist": {
     "archive": false,
     "checksums": {},
@@ -8893,6 +8918,31 @@
     ],
     "topic": "SECURITY"
   },
+  "vivaldi": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "VIVALDI",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://vivaldi.com/",
+      "homepage": "https://vivaldi.com/",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://downloads.vivaldi.com/blocklist/current.json"
+    ],
+    "topic": "PRIVACY"
+  },
   "voipbl": {
     "archive": false,
     "checksums": {},
@@ -9396,55 +9446,5 @@
       "https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt"
     ],
     "topic": "SECURITY"
-  },
-  "vivaldi": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "JSON"
-    },
-    "formats": [
-      {
-        "filter": "VIVALDI",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://vivaldi.com/",
-      "homepage": "https://vivaldi.com/",
-      "license": "not-available"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://downloads.vivaldi.com/blocklist/current.json"
-    ],
-    "topic": "PRIVACY"
-  },
-  "msedge": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "JSON"
-    },
-    "formats": [
-      {
-        "filter": "MSEDGE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://www.microsoft.com/en-us/edge",
-      "homepage": "https://www.microsoft.com/en-us/edge",
-      "license": "not-available"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://edge.microsoft.com/abusiveadblocking/api/v1/blocklist"
-    ],
-    "topic": "PRIVACY"
   }
 }
