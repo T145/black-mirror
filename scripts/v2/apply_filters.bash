@@ -124,6 +124,7 @@ process_list() {
 			'CERTEGO') jq -rs '.[].links[].url' | mawk -F/ '$5~/^domain$/{print $6}' ;;
 			'SECUREDROP') jq -r '.[] | .onion_address as $onion | .organization_url | split("/")[2] as $org | $org, $onion' ;;
 			'VIVALDI') jq -r '.[] | select(.filterStatus == "ON") | .reviewedSite' ;;
+			'MSEDGE') jq -r '.sites[].url' ;;
 			esac
 			;;
 		'CSV')

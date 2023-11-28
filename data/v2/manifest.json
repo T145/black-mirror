@@ -9421,5 +9421,30 @@
       "https://downloads.vivaldi.com/blocklist/current.json"
     ],
     "topic": "PRIVACY"
+  },
+  "msedge": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "MSEDGE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.microsoft.com/en-us/edge",
+      "homepage": "https://www.microsoft.com/en-us/edge",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://edge.microsoft.com/abusiveadblocking/api/v1/blocklist"
+    ],
+    "topic": "PRIVACY"
   }
 }
