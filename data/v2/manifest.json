@@ -6944,6 +6944,39 @@
     ],
     "topic": "SECURITY"
   },
+  "phishstats": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "CSV"
+    },
+    "formats": [
+      {
+        "filter": "PHISHSTATS_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "PHISHSTATS_IPV4",
+        "format": "IPV4"
+      },
+      {
+        "filter": "PHISHSTATS_IPV6",
+        "format": "IPV6"
+      }
+    ],
+    "metadata": {
+      "description": "https://phishstats.info/",
+      "homepage": "https://phishstats.info/",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://phishstats.info/phish_score.csv"
+    ],
+    "topic": "SECURITY"
+  },
   "phishtank": {
     "archive": false,
     "checksums": {},
@@ -7274,6 +7307,81 @@
     "method": "BLOCK",
     "mirrors": [
       "https://dl.red.flag.domains/red.flag.domains.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "rescure_covid": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://rescure.me/feeds.html",
+      "homepage": "https://rescure.me",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://rescure.me/covid.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "rescure_malicious_domains": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://rescure.me/feeds.html",
+      "homepage": "https://rescure.me",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://rescure.me/rescure_domain_blacklist.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "rescure_malicious_ips": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://rescure.me/feeds.html",
+      "homepage": "https://rescure.me",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://rescure.me/rescure_blacklist.txt"
     ],
     "topic": "SECURITY"
   },
@@ -9447,40 +9555,7 @@
     ],
     "topic": "SECURITY"
   },
-  "phishstats": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "CSV"
-    },
-    "formats": [
-      {
-        "filter": "PHISHSTATS_DOMAIN",
-        "format": "DOMAIN"
-      },
-      {
-        "filter": "PHISHSTATS_IPV4",
-        "format": "IPV4"
-      },
-      {
-        "filter": "PHISHSTATS_IPV6",
-        "format": "IPV6"
-      }
-    ],
-    "metadata": {
-      "description": "https://phishstats.info/",
-      "homepage": "https://phishstats.info/",
-      "license": "mit"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://phishstats.info/phish_score.csv"
-    ],
-    "topic": "SECURITY"
-  },
-  "rescure_covid": {
+  "zonefiles_compromised_domains": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -9495,63 +9570,13 @@
       }
     ],
     "metadata": {
-      "description": "https://rescure.me/feeds.html",
-      "homepage": "https://rescure.me",
+      "description": "https://zonefiles.io/compromised-domain-list/",
+      "homepage": "https://zonefiles.io",
       "license": "all-rights-reserved"
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://rescure.me/covid.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "rescure_malicious_domains": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://rescure.me/feeds.html",
-      "homepage": "https://rescure.me",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://rescure.me/rescure_domain_blacklist.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "rescure_malicious_ips": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://rescure.me/feeds.html",
-      "homepage": "https://rescure.me",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://rescure.me/rescure_blacklist.txt"
+      "https://zonefiles.io/f/compromised/domains/live/"
     ],
     "topic": "SECURITY"
   },
@@ -9581,31 +9606,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://zonefiles.io/f/compromised/ip/live/"
-    ],
-    "topic": "SECURITY"
-  },
-  "zonefiles_compromised_domains": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://zonefiles.io/compromised-domain-list/",
-      "homepage": "https://zonefiles.io",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://zonefiles.io/f/compromised/domains/live/"
     ],
     "topic": "SECURITY"
   }
