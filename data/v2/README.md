@@ -43,6 +43,7 @@
 - [phishing_kits](https://github.com/0xDanielLopez/phishing_kits)
 - [HaaS](https://haas.nic.cz/stats/)
 - [AbuseIPDB](https://docs.abuseipdb.com/#blacklist-endpoint)
+- [Wael](https://github.com/waelisa/Best-blocklist)
 
 ## Add but archive
 
@@ -183,7 +184,6 @@
   - Contains some obvious placeholder/garbage domains
 - [BarbBlock](https://github.com/paulgb/BarbBlock/blob/master/blacklists/domain-list.txt)
 - [NSABlocklist](https://github.com/nextdns/metadata/blob/master/privacy/blocklists/nsa-blocklist.json)
-- [Wael](https://www.wael.name/other/best-blocklist/)
 - [Sblam](https://github.com/kornelski/Sblam/tree/master/data)
 - [St. Dominic's Priory College](https://www.stdominics.sa.edu.au/) [Droplists](https://threatintel.stdominics.sa.edu.au/)
 - [URLVir](https://www.urlvir.com/)
@@ -295,8 +295,6 @@
   - Offline since last check.
 - [Clefspeare13](https://tinyurl.com/clefspeare13)
   - [GitHub's Dirty Dancing](https://github.com/StevenBlack/hosts/pull/1784)
-- [Zonefiles](https://zonefiles.io/compromised-ip-list/)
-  - Offline since last check.
 - [black-domains](https://github.com/ADsecu/black-domains)
 - [ADios!](https://github.com/AlexRabbit/ADios)
 - [Amdr0meda](https://github.com/Amdr0meda/Blocklist_Pi_Hole)
@@ -568,9 +566,3 @@
   - [Other Lists](http://zitstif.no-ip.org/?cat=1037)
 - [perso](https://perso.pw/blocklist.txt)
 - [CyberSaiyanIT](https://infosharing.cybersaiyan.it)
-- Rescure
-  - [covid](https://rescure.me/covid.txt)
-  - [domains](https://rescure.me/rescure_domain_blacklist.txt)
-  - [ips](https://rescure.me/rescure_blacklist.txt)
-- [PhishStats](https://phishstats.info/phish_score.csv)
-  - [Last capture](https://web.archive.org/web/20230405175854/https://phishstats.info/phish_score.csv)
