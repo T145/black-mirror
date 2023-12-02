@@ -775,31 +775,6 @@
     ],
     "topic": "SECURITY"
   },
-  "air_porn": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://airvpn.org/api/dns_lists/",
-      "homepage": "https://airvpn.org/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://airvpn.org/api/dns_lists/?code=air_porn&style=domains"
-    ],
-    "topic": "SANITY"
-  },
   "alienvault": {
     "_notes": "http://data.alienvault.com/feed/binary/Packages",
     "archive": false,
@@ -3695,31 +3670,6 @@
     "variants": {
       "adguard": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/nofarm_hosts.txt"
     }
-  },
-  "fzlistkor": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ADBLOCK",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/elsannadisney/fzListKor",
-      "homepage": "https://github.com/elsannadisney/fzListKor",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/elsannadisney/fzListKor/main/warehouse/maindns.txt"
-    ],
-    "topic": "SECURITY"
   },
   "geoffrey_frogeye_multiparty": {
     "_notes": "Has a 'multiparty-only-trackers' list, which is smaller. Contains 'firstparty-trackers.'",

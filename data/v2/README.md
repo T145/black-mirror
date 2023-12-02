@@ -566,3 +566,5 @@
   - [Other Lists](http://zitstif.no-ip.org/?cat=1037)
 - [perso](https://perso.pw/blocklist.txt)
 - [CyberSaiyanIT](https://infosharing.cybersaiyan.it)
+- [fzListKor](https://raw.githubusercontent.com/elsannadisney/fzListKor/main/warehouse/maindns.txt)
+- [AirVPN Adult Filter](https://airvpn.org/api/dns_lists/?code=air_porn)
