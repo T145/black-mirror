@@ -9683,5 +9683,30 @@
       "https://raw.githubusercontent.com/logroid/adaway-hosts/master/hosts.txt"
     ],
     "topic": "PRIVACY"
+  },
+  "in0de": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://in0de.synology.me/",
+      "homepage": "https://in0de.synology.me/",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://in0de.synology.me/pwn.txt"
+    ],
+    "topic": "PRIVACY"
   }
 }
