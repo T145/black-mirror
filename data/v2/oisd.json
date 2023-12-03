@@ -1989,72 +1989,6 @@
       "mirrors": ["https://www.sgv417.jp/~makopi/RaspberryPi/block.txt"],
       "scan": false
     },
-    "miriquidi_block": {
-      "_desc": "https://github.com/miriquidi/dns-block-lists#readme",
-      "_homepage": "https://fussle.de/",
-      "_license": "all-rights-reserved",
-      "checksums": {},
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "method": "BLOCK",
-      "mirrors": [
-        "https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/block.txt",
-        "https://fussle.de/block.txt"
-      ],
-      "scan": false
-    },
-    "miriquidi_fritz": {
-      "_desc": "https://github.com/miriquidi/dns-block-lists#readme",
-      "_homepage": "https://fussle.de/",
-      "_license": "all-rights-reserved",
-      "checksums": {},
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "method": "BLOCK",
-      "mirrors": [
-        "https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/fb-block.txt",
-        "https://fussle.de/fb-block.txt"
-      ],
-      "scan": false
-    },
-    "miriquidi_social": {
-      "_desc": "https://github.com/miriquidi/dns-block-lists#readme",
-      "_homepage": "https://fussle.de/",
-      "_license": "all-rights-reserved",
-      "checksums": {},
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "method": "BLOCK",
-      "mirrors": [
-        "https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/social.txt",
-        "https://fussle.de/social.txt"
-      ],
-      "scan": false
-    },
     "nicolasforcet": {
       "_desc": "https://nicolasforcet.com/2019/11/02/meilleures-listes-de-filtrage-dns-pour-pihole-et-autres/",
       "_homepage": "https://forcet.fr/",
@@ -2179,44 +2113,6 @@
         "http://zitstif.com/badips.txt",
         "http://zitstif.no-ip.org/badips.txt"
       ],
-      "scan": false
-    },
-    "zoso_rolist1": {
-      "_desc": "https://zoso.ro/rolist/",
-      "_homepage": "https://zoso.ro/goodies/",
-      "_license": "not-available",
-      "checksums": {},
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "method": "BLOCK",
-      "mirrors": ["https://zoso.ro/pages/rolist.txt"],
-      "scan": false
-    },
-    "zoso_rolist2": {
-      "_desc": "https://zoso.ro/rolist/",
-      "_homepage": "https://zoso.ro/goodies/",
-      "_license": "not-available",
-      "checksums": {},
-      "content": {
-        "filter": "NONE",
-        "type": "TEXT"
-      },
-      "formats": [
-        {
-          "filter": "NONE",
-          "format": "DOMAIN"
-        }
-      ],
-      "method": "BLOCK",
-      "mirrors": ["https://zoso.ro/pages/rolist2.txt"],
       "scan": false
     }
   },

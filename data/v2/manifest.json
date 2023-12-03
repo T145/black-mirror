@@ -9178,7 +9178,7 @@
     "mirrors": [
       "https://assets.windscribe.com/custom_blocklists/ads.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "PRIVACY"
   },
   "windscribe_clickbait": {
     "archive": false,
@@ -9228,7 +9228,7 @@
     "mirrors": [
       "https://assets.windscribe.com/custom_blocklists/gambling.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SANITY"
   },
   "windscribe_iot": {
     "archive": false,
@@ -9253,7 +9253,7 @@
     "mirrors": [
       "https://assets.windscribe.com/custom_blocklists/iot.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "PRIVACY"
   },
   "windscribe_malware": {
     "archive": false,
@@ -9303,7 +9303,7 @@
     "mirrors": [
       "https://assets.windscribe.com/custom_blocklists/porn.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SANITY"
   },
   "winhelp": {
     "archive": false,
@@ -9558,5 +9558,55 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
+  },
+  "rolist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://zoso.ro/rolist/",
+      "homepage": "https://zoso.ro/",
+      "license": "cc-by-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://zoso.ro/pages/rolist.txt"
+    ],
+    "topic": "PRIVACY"
+  },
+  "rolist2": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://zoso.ro/rolist/",
+      "homepage": "https://zoso.ro/",
+      "license": "cc-by-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://zoso.ro/pages/rolist2.txt"
+    ],
+    "topic": "PRIVACY"
   }
 }
