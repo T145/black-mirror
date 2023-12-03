@@ -4389,6 +4389,31 @@
     ],
     "topic": "SECURITY"
   },
+  "in0de": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://in0de.synology.me/",
+      "homepage": "https://in0de.synology.me/",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://in0de.synology.me/pwn.txt"
+    ],
+    "topic": "PRIVACY"
+  },
   "infinitytec_ads_and_trackers": {
     "archive": false,
     "checksums": {},
@@ -5531,6 +5556,31 @@
       "pihole": "https://raw.githubusercontent.com/LittleCordines/pfsense-hosts-file/master/PornBlocklists"
     }
   },
+  "logroid": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/logroid/adaway-hosts#readme",
+      "homepage": "https://github.com/logroid/adaway-hosts/blob/master/hosts.txt",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/logroid/adaway-hosts/master/hosts.txt"
+    ],
+    "topic": "PRIVACY"
+  },
   "lukes_list": {
     "archive": false,
     "checksums": {},
@@ -5640,6 +5690,31 @@
     "variants": {
       "pihole": "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hole_cert_pl.txt"
     }
+  },
+  "makopi": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.sgv417.jp/",
+      "homepage": "https://www.sgv417.jp/",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.sgv417.jp/~makopi/RaspberryPi/block.txt"
+    ],
+    "topic": "PRIVACY"
   },
   "malsilo": {
     "archive": false,
@@ -7360,6 +7435,56 @@
     ],
     "topic": "SECURITY"
   },
+  "rolist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://zoso.ro/rolist/",
+      "homepage": "https://zoso.ro/",
+      "license": "cc-by-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://zoso.ro/pages/rolist.txt"
+    ],
+    "topic": "PRIVACY"
+  },
+  "rolist2": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://zoso.ro/rolist/",
+      "homepage": "https://zoso.ro/",
+      "license": "cc-by-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://zoso.ro/pages/rolist2.txt"
+    ],
+    "topic": "PRIVACY"
+  },
   "rooneymcnibnug_snafu": {
     "archive": false,
     "checksums": {},
@@ -8411,6 +8536,31 @@
       "https://raw.githubusercontent.com/Th3M3/blocklists/master/malware.list"
     ],
     "topic": "SECURITY"
+  },
+  "thedumbterminal": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://thedumbterminal.co.uk/services/squidblockedsites.html",
+      "homepage": "https://thedumbterminal.co.uk/",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://thedumbterminal.co.uk/files/services/squidblockedsites/blocked.txt"
+    ],
+    "topic": "PRIVACY"
   },
   "threatview_c2_intel": {
     "archive": false,
@@ -9558,155 +9708,5 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
-  },
-  "rolist": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ADBLOCK",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://zoso.ro/rolist/",
-      "homepage": "https://zoso.ro/",
-      "license": "cc-by-3.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://zoso.ro/pages/rolist.txt"
-    ],
-    "topic": "PRIVACY"
-  },
-  "rolist2": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ADBLOCK",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://zoso.ro/rolist/",
-      "homepage": "https://zoso.ro/",
-      "license": "cc-by-3.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://zoso.ro/pages/rolist2.txt"
-    ],
-    "topic": "PRIVACY"
-  },
-  "thedumbterminal": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://thedumbterminal.co.uk/services/squidblockedsites.html",
-      "homepage": "https://thedumbterminal.co.uk/",
-      "license": "mit"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://thedumbterminal.co.uk/files/services/squidblockedsites/blocked.txt"
-    ],
-    "topic": "PRIVACY"
-  },
-  "makopi": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://www.sgv417.jp/",
-      "homepage": "https://www.sgv417.jp/",
-      "license": "not-available"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://www.sgv417.jp/~makopi/RaspberryPi/block.txt"
-    ],
-    "topic": "PRIVACY"
-  },
-  "logroid": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/logroid/adaway-hosts#readme",
-      "homepage": "https://github.com/logroid/adaway-hosts/blob/master/hosts.txt",
-      "license": "not-available"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/logroid/adaway-hosts/master/hosts.txt"
-    ],
-    "topic": "PRIVACY"
-  },
-  "in0de": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ADBLOCK",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://in0de.synology.me/",
-      "homepage": "https://in0de.synology.me/",
-      "license": "not-available"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://in0de.synology.me/pwn.txt"
-    ],
-    "topic": "PRIVACY"
   }
 }
