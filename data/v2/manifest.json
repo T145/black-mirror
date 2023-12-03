@@ -9658,5 +9658,30 @@
       "https://www.sgv417.jp/~makopi/RaspberryPi/block.txt"
     ],
     "topic": "PRIVACY"
+  },
+  "logroid": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/logroid/adaway-hosts#readme",
+      "homepage": "https://github.com/logroid/adaway-hosts/blob/master/hosts.txt",
+      "license": "not-available"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/logroid/adaway-hosts/master/hosts.txt"
+    ],
+    "topic": "PRIVACY"
   }
 }
