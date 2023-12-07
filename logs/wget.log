@@ -1,19 +1,19 @@
---2023-12-06 13:31:12--  https://www.cruzit.com/xxwbl2csv.php
+--2023-12-07 13:33:27--  https://www.cruzit.com/xxwbl2csv.php
 Resolving www.cruzit.com... 169.231.8.205
 Connecting to www.cruzit.com|169.231.8.205|:443... connected.
 WARNING: cannot verify www.cruzit.com's certificate, issued by ‘CN=AlphaSSL CA - SHA256 - G4,O=GlobalSign nv-sa,C=BE’:
   Unable to locally verify the issuer's authority.
 HTTP request sent, awaiting response... 200 OK
-Length: 135531 (132K) [text/x-csv]
+Length: 135596 (132K) [text/x-csv]
 Saving to: ‘cruz_it’
 
-     0K .......... .......... .......... .......... .......... 37%  685K 0s
-    50K .......... .......... .......... .......... .......... 75% 1.34M 0s
-   100K .......... .......... .......... ..                   100%  224M=0.1s
+     0K .......... .......... .......... .......... .......... 37%  838K 0s
+    50K .......... .......... .......... .......... .......... 75% 1.64M 0s
+   100K .......... .......... .......... ..                   100% 1.07M=0.1s
 
-2023-12-06 13:31:12 (1.18 MB/s) - ‘cruz_it’ saved [135531/135531]
+2023-12-07 13:33:27 (1.09 MB/s) - ‘cruz_it’ saved [135596/135596]
 
---2023-12-06 13:31:12--  https://opendbl.net/lists/talos.list
+--2023-12-07 13:33:27--  https://opendbl.net/lists/talos.list
 Resolving opendbl.net... 193.150.22.60, 2001:67c:24e4:33::60
 Connecting to opendbl.net|193.150.22.60|:443... connected.
 WARNING: cannot verify opendbl.net's certificate, issued by ‘CN=Sectigo RSA Domain Validation Secure Server CA,O=Sectigo Limited,L=Salford,ST=Greater Manchester,C=GB’:
@@ -22,71 +22,54 @@ HTTP request sent, awaiting response... 200 OK
 Length: 23463 (23K) [application/octet-stream]
 Saving to: ‘opendbl_cisco_talos’
 
-     0K .......... .......... ..                              100%  197K=0.1s
+     0K .......... .......... ..                              100%  173K=0.1s
 
-2023-12-06 13:31:13 (197 KB/s) - ‘opendbl_cisco_talos’ saved [23463/23463]
+2023-12-07 13:33:28 (173 KB/s) - ‘opendbl_cisco_talos’ saved [23463/23463]
 
---2023-12-06 13:31:13--  http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz
-Resolving wget-mirrors.uceprotect.net... 204.155.151.130, 66.240.236.50, 45.93.137.156, ...
+--2023-12-07 13:33:28--  http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz
+Resolving wget-mirrors.uceprotect.net... 96.31.84.20, 193.138.29.13, 185.248.148.6, ...
+Connecting to wget-mirrors.uceprotect.net|96.31.84.20|:80... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2023-12-07 13:33:28 ERROR 404: Not Found.
+
+--2023-12-07 13:33:28--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-1.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net... 204.155.151.130, 72.13.86.154, 199.187.241.194, ...
 Connecting to wget-mirrors.uceprotect.net|204.155.151.130|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 54644 (53K) [text/plain]
-Saving to: ‘uceprotect_backscatterer’
-
-     0K .......... .......... .......... .......... .......... 93%  410K 0s
-    50K ...                                                   100% 6.26T=0.1s
-
-2023-12-06 13:31:13 (437 KB/s) - ‘uceprotect_backscatterer’ saved [54644/54644]
-
---2023-12-06 13:31:13--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-1.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net... 204.155.151.130, 66.240.236.50, 45.93.137.156, ...
-Connecting to wget-mirrors.uceprotect.net|204.155.151.130|:80... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 320241 (313K) [text/plain]
+Length: 344795 (337K) [text/plain]
 Saving to: ‘uceprotect_level_1’
 
-     0K .......... .......... .......... .......... .......... 15%  345K 1s
-    50K .......... .......... .......... .......... .......... 31%  685K 0s
-   100K .......... .......... .......... .......... .......... 47% 1.01M 0s
-   150K .......... .......... .......... .......... .......... 63% 2.01M 0s
-   200K .......... .......... .......... .......... .......... 79% 1.01M 0s
-   250K .......... .......... .......... .......... .......... 95%  120M 0s
-   300K .......... ..                                         100%  311M=0.3s
+     0K .......... .......... .......... .......... .......... 14%  183K 2s
+    50K .......... .......... .......... .......... .......... 29%  642K 1s
+   100K .......... .......... .......... .......... .......... 44%  641K 1s
+   150K .......... .......... .......... .......... .......... 59% 1.25M 0s
+   200K .......... .......... .......... .......... .......... 74% 1.25M 0s
+   250K .......... .......... .......... .......... .......... 89%  165M 0s
+   300K .......... .......... .......... ......               100%  118M=0.5s
 
-2023-12-06 13:31:14 (921 KB/s) - ‘uceprotect_level_1’ saved [320241/320241]
+2023-12-07 13:33:29 (664 KB/s) - ‘uceprotect_level_1’ saved [344795/344795]
 
---2023-12-06 13:31:14--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net... 41.208.71.58, 96.31.84.20, 66.240.236.50, ...
-Connecting to wget-mirrors.uceprotect.net|41.208.71.58|:80... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 254142 (248K) [text/plain]
-Saving to: ‘uceprotect_level_2’
-
-     0K .......... .......... .......... .......... .......... 20%  100K 2s
-    50K .......... .......... .......... .......... .......... 40%  150K 1s
-   100K .......... .......... .......... .......... .......... 60%  300K 1s
-   150K .......... .......... .......... .......... .......... 80%  300K 0s
-   200K .......... .......... .......... .......... ........  100%  109M=1.2s
-
-2023-12-06 13:31:15 (213 KB/s) - ‘uceprotect_level_2’ saved [254142/254142]
-
---2023-12-06 13:31:15--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net... 204.155.151.130, 66.240.236.50, 45.93.137.156, ...
+--2023-12-07 13:33:29--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net... 204.155.151.130, 72.13.86.154, 199.187.241.194, ...
 Connecting to wget-mirrors.uceprotect.net|204.155.151.130|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 464136 (453K) [text/plain]
-Saving to: ‘uceprotect_level_3’
+Length: 401278 (392K) [text/plain]
+Saving to: ‘uceprotect_level_2’
 
-     0K .......... .......... .......... .......... .......... 11%  345K 1s
-    50K .......... .......... .......... .......... .......... 22%  685K 1s
-   100K .......... .......... .......... .......... .......... 33% 1.01M 1s
-   150K .......... .......... .......... .......... .......... 44% 1.01M 0s
-   200K .......... .......... .......... .......... .......... 55% 1.01M 0s
-   250K .......... .......... .......... .......... .......... 66% 76.2M 0s
-   300K .......... .......... .......... .......... .......... 77% 2.01M 0s
-   350K .......... .......... .......... .......... .......... 88% 1.78M 0s
-   400K .......... .......... .......... .......... .......... 99%  476M 0s
-   450K ...                                                   100% 6.07T=0.4s
+     0K .......... .......... .......... .......... .......... 12%  214K 2s
+    50K .......... .......... .......... .......... .......... 25%  427K 1s
+   100K .......... .......... .......... .......... .......... 38% 1.25M 1s
+   150K .......... .......... .......... .......... .......... 51%  643K 0s
+   200K .......... .......... .......... .......... .......... 63% 1.24M 0s
+   250K .......... .......... .......... .......... .......... 76% 71.9M 0s
+   300K .......... .......... .......... .......... .......... 89% 1.24M 0s
+   350K .......... .......... .......... .......... .         100%  147M=0.5s
 
-2023-12-06 13:31:16 (1.07 MB/s) - ‘uceprotect_level_3’ saved [464136/464136]
+2023-12-07 13:33:30 (716 KB/s) - ‘uceprotect_level_2’ saved [401278/401278]
+
+--2023-12-07 13:33:30--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net... 96.31.84.20, 193.138.29.13, 185.248.148.6, ...
+Connecting to wget-mirrors.uceprotect.net|96.31.84.20|:80... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2023-12-07 13:33:30 ERROR 404: Not Found.
 
