@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump geekyeggo/delete-artifact from 2 to 4 in /.github/workflows [\#118](https://github.com/T145/black-mirror/pull/118) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/upload-artifact from 3 to 4 in /.github/workflows [\#117](https://github.com/T145/black-mirror/pull/117) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/download-artifact from 3 to 4 in /.github/workflows [\#116](https://github.com/T145/black-mirror/pull/116) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump stefanzweifel/git-auto-commit-action from 4 to 5 in /.github/workflows [\#114](https://github.com/T145/black-mirror/pull/114) ([dependabot[bot]](https://github.com/apps/dependabot))
