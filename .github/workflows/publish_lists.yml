@@ -162,7 +162,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
       - name: Delete build artifact
-        uses: geekyeggo/delete-artifact@v2
+        uses: geekyeggo/delete-artifact@v4
         with:
           name: lists
   update_docs:
@@ -184,7 +184,7 @@ jobs:
         with:
           name: docs
       - name: Delete docs artifact
-        uses: geekyeggo/delete-artifact@v2
+        uses: geekyeggo/delete-artifact@v4
         with:
           name: docs
       - name: Make the working tree safe
