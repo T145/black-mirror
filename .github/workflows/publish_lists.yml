@@ -157,6 +157,7 @@ jobs:
   delete_build_artifact:
     runs-on: ubuntu-latest
     needs: [upload_github, upload_dropbox]
+    permissions: write
 
     steps:
       - name: Checkout repo
@@ -168,9 +169,7 @@ jobs:
   update_docs:
     runs-on: ubuntu-latest
     needs: upload_github
-
-    permissions:
-      contents: write
+    permissions: write
 
     steps:
       - name: Checkout repo
