@@ -174,13 +174,14 @@
   - Ancient `WinHelp` version.
 - [quindecim blocklist](https://github.com/quindecim/block/)
 - [SukkaW](https://github.com/SukkaW/Surge)
+- [Cat's Team](https://github.com/Cats-Team/AdRules)
+  - Just copies the [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash) `BanAD` & `BanProgramAD` lists.
 
 # 🧟 Zombies
 
 > Sources that are dead or deprecated and not included but may be [worth mentioning](https://blog.talosintelligence.com/2021/03/domain-dumpster-diving.html).
 
 - [Squidguard Archive](http://squidguard.mesd.k12.or.us/)
-  - Found individually a while back
   - Contains some obvious placeholder/garbage domains
 - [BarbBlock](https://github.com/paulgb/BarbBlock/blob/master/blacklists/domain-list.txt)
 - [NSABlocklist](https://github.com/nextdns/metadata/blob/master/privacy/blocklists/nsa-blocklist.json)

@@ -94,6 +94,8 @@ process_list() {
 			'HERRBISCHOFF_CIDR6') mawk '$0~/:/&&$0~/\//&&$0!~/^#/' ;;
 			'POP3GROPERS_IPV4') mawk '$0~/./&&$0!~/\/|:|^#/{gsub(/ /, "", $1); print $1}' ;;
 			'POP3GROPERS_IPV6') mawk '$0~/:/&&$0!~/\/|^#/{gsub(/ /, "", $1); print $1}' ;;
+			'CLASH_DOMAIN') mawk -F, '$1~/^DOMAIN/&&$1!~/KEYWORD$/{print $2}' ;;
+			'CLASH_CIDR4') mawk -F, '$1~/^IP-CIDR/{print $2}' ;;
 			esac
 			;;
 		'JSON')
