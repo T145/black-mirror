@@ -186,6 +186,85 @@
     ],
     "topic": "SECURITY"
   },
+  "ACL4SSR_program_ads": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "CLASH_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "CLASH_CIDR4",
+        "format": "CIDR4"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/ACL4SSR/ACL4SSR/tree/master",
+      "homepage": "https://github.com/ACL4SSR/ACL4SSR/tree/master",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
+    ],
+    "topic": "PRIVACY"
+  },
+  "ACL4SSR_web_ads": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "CLASH_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/ACL4SSR/ACL4SSR/tree/master",
+      "homepage": "https://github.com/ACL4SSR/ACL4SSR/tree/master",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
+    ],
+    "topic": "PRIVACY"
+  },
+  "ACL4SSR_whitelist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "CLASH_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/ACL4SSR/ACL4SSR/tree/master",
+      "homepage": "https://github.com/ACL4SSR/ACL4SSR/tree/master",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list"
+    ],
+    "topic": "PRIVACY"
+  },
   "abuse_ch_feodotracker": {
     "archive": false,
     "checksums": {},
@@ -9678,84 +9757,5 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
-  },
-  "ACL4SSR_web_ads": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "CLASH_DOMAIN",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/ACL4SSR/ACL4SSR/tree/master",
-      "homepage": "https://github.com/ACL4SSR/ACL4SSR/tree/master",
-      "license": "cc-by-sa-4.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
-    ],
-    "topic": "PRIVACY"
-  },
-  "ACL4SSR_program_ads": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "CLASH_DOMAIN",
-        "format": "DOMAIN"
-      },
-      {
-        "filter": "CLASH_CIDR4",
-        "format": "CIDR4"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/ACL4SSR/ACL4SSR/tree/master",
-      "homepage": "https://github.com/ACL4SSR/ACL4SSR/tree/master",
-      "license": "cc-by-sa-4.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
-    ],
-    "topic": "PRIVACY"
-  },
-  "ACL4SSR_whitelist": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "CLASH_DOMAIN",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/ACL4SSR/ACL4SSR/tree/master",
-      "homepage": "https://github.com/ACL4SSR/ACL4SSR/tree/master",
-      "license": "cc-by-sa-4.0"
-    },
-    "method": "ALLOW",
-    "mirrors": [
-      "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list"
-    ],
-    "topic": "PRIVACY"
   }
 }
