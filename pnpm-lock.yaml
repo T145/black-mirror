@@ -6,13 +6,16 @@ settings:
 
 dependencies:
   mega-linter-runner:
-    specifier: ^7.6.0
-    version: 7.6.0(@yeoman/types@1.1.2)(glob@8.1.0)
+    specifier: ^7.7.0
+    version: 7.7.0(@yeoman/types@1.1.2)(glob@8.1.0)
+  mem-fs:
+    specifier: ^3.0.0
+    version: 3.0.0
 
 devDependencies:
   npm-check-updates:
-    specifier: ^16.14.11
-    version: 16.14.11
+    specifier: ^16.14.12
+    version: 16.14.12
   sort-package-json:
     specifier: ^2.6.0
     version: 2.6.0
@@ -638,7 +641,7 @@ packages:
       '@yeoman/types': ^1.1.0
     dependencies:
       '@types/inquirer': 9.0.7
-      '@yeoman/types': 1.1.2(@types/inquirer@9.0.7)(mem-fs@4.0.0)
+      '@yeoman/types': 1.1.2(@types/inquirer@9.0.7)(mem-fs@3.0.0)
       chalk: 5.3.0
       inquirer: 9.2.12
       log-symbols: 5.1.0
@@ -656,7 +659,7 @@ packages:
     dependencies:
       '@types/node': 16.18.62
       '@yeoman/transform': 1.2.0
-      '@yeoman/types': 1.1.2(@types/inquirer@9.0.7)(mem-fs@4.0.0)
+      '@yeoman/types': 1.1.2(@types/inquirer@9.0.7)(mem-fs@3.0.0)
       binary-extensions: 2.2.0
       cli-table: 0.3.11
       dateformat: 5.0.3
@@ -684,7 +687,7 @@ packages:
       readable-stream: 4.4.2
     dev: false
 
-  /@yeoman/types@1.1.2(@types/inquirer@9.0.7)(mem-fs@4.0.0):
+  /@yeoman/types@1.1.2(@types/inquirer@9.0.7)(mem-fs@3.0.0):
     resolution: {integrity: sha512-/hg8AIU0ZLijHfZWi0vFgWPVWvUJs/tlKeia7Z5sKsWYGCcqsPSHZcnov5bZlpxv8v+vPQ8K9VtTKORtVALsJw==}
     engines: {node: ^16.13.0 || >=18.12.0}
     peerDependencies:
@@ -702,7 +705,7 @@ packages:
     dependencies:
       '@types/inquirer': 9.0.7
       '@types/node': 16.18.62
-      mem-fs: 4.0.0
+      mem-fs: 3.0.0
     dev: false
 
   /abbrev@1.1.1:
@@ -2397,8 +2400,8 @@ packages:
       - supports-color
     dev: false
 
-  /mega-linter-runner@7.6.0(@yeoman/types@1.1.2)(glob@8.1.0):
-    resolution: {integrity: sha512-/8vMsm3plCeHRjZCSaAdk+Rck3MUhI7Fr0XjTT4kSVo7gSV/+xICkT1Vitg5Yf90Rl/3SJDK+00ywXV6xk781A==}
+  /mega-linter-runner@7.7.0(@yeoman/types@1.1.2)(glob@8.1.0):
+    resolution: {integrity: sha512-cfnbkSOa0ccd4lwFUX0kWzopd3blniOxaa91O3nMQlcEURpDD11chLHoUp0d4Jqu2UzXs4wXPYdQDaYjV0/WNA==}
     hasBin: true
     dependencies:
       chalk: 5.3.0
@@ -2441,6 +2444,16 @@ packages:
       normalize-path: 3.0.0
       textextensions: 5.16.0
       vinyl: 3.0.0
+    dev: false
+
+  /mem-fs@3.0.0:
+    resolution: {integrity: sha512-ORIMUgVVaKTsruUnt8qka8CD0T05mQnW5m7OZ/JtyUcfXKZ5vvHNf34CHvfbpd+WYm+6iWXKS5MvO6zhjJWlrg==}
+    engines: {node: '>=16.13.0'}
+    dependencies:
+      '@types/node': 18.18.10
+      '@types/vinyl': 2.0.10
+      vinyl: 3.0.0
+      vinyl-file: 5.0.0
     dev: false
 
   /mem-fs@4.0.0:
@@ -2712,8 +2725,8 @@ packages:
     dependencies:
       npm-normalize-package-bin: 3.0.1
 
-  /npm-check-updates@16.14.11:
-    resolution: {integrity: sha512-0MMWGbGci22Pu77bR9jRsy5qgxdQSJVqNtSyyFeubDPtbcU36z4gjEDITu26PMabFWPNkAoVfKF31M3uKUvzFg==}
+  /npm-check-updates@16.14.12:
+    resolution: {integrity: sha512-5FvqaDX8AqWWTDQFbBllgLwoRXTvzlqVIRSKl9Kg8bYZTfNwMnrp1Zlmb5e/ocf11UjPTc+ShBFjYQ7kg6FL0w==}
     engines: {node: '>=14.14'}
     hasBin: true
     dependencies:
@@ -4104,7 +4117,7 @@ packages:
       '@yeoman/conflicter': 2.0.0(@yeoman/types@1.1.2)(mem-fs@4.0.0)
       '@yeoman/namespace': 1.0.0
       '@yeoman/transform': 1.2.0
-      '@yeoman/types': 1.1.2(@types/inquirer@9.0.7)(mem-fs@4.0.0)
+      '@yeoman/types': 1.1.2(@types/inquirer@9.0.7)(mem-fs@3.0.0)
       arrify: 3.0.0
       chalk: 5.3.0
       commander: 11.1.0
@@ -4140,7 +4153,7 @@ packages:
       '@types/lodash-es': 4.17.11
       '@types/node': 18.18.10
       '@yeoman/namespace': 1.0.0
-      '@yeoman/types': 1.1.2(@types/inquirer@9.0.7)(mem-fs@4.0.0)
+      '@yeoman/types': 1.1.2(@types/inquirer@9.0.7)(mem-fs@3.0.0)
       chalk: 5.3.0
       debug: 4.3.4
       execa: 8.0.1
