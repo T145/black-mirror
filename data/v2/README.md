@@ -569,3 +569,4 @@
 - [CyberSaiyanIT](https://infosharing.cybersaiyan.it)
 - [fzListKor](https://raw.githubusercontent.com/elsannadisney/fzListKor/main/warehouse/maindns.txt)
 - [AirVPN Adult Filter](https://airvpn.org/api/dns_lists/?code=air_porn)
+- [Richard's Blocklist](https://forum.virtualmin.com/t/all-of-my-blocklists-are-now-free-at-least-for-the-time-being/116454)
