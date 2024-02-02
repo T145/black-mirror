@@ -62,7 +62,10 @@ STOPSIGNAL SIGKILL
 # https://www.parrotsec.org/docs/apparmor.html
 # rkhunter: https://unix.stackexchange.com/questions/562560/invalid-web-cmd-configuration-option-relative-pathname-bin-false
 COPY configs/etc/ /etc/
-COPY --from=go1.18 /go/bin/ --from=go1.16 /go/bin/ --from=go1.21 /go/bin/ --from=utils /usr/local/bin/ /usr/local/bin/
+COPY --from=go1.18 /go/bin/ /usr/local/bin/
+COPY --from=go1.16 /go/bin/ /usr/local/bin/
+COPY --from=go1.21 /go/bin/ /usr/local/bin/
+COPY --from=utils /usr/local/bin/ /usr/local/bin/
 
 # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L26
 RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
