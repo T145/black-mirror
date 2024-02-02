@@ -107,7 +107,7 @@ RUN apt-get -y install --no-install-recommends \
     aria2=1.36.0-1 \
     build-essential=12.9 \
     csvkit=1.0.7-1 \
-    curl=7.88.1-10+deb12u3 \
+    curl=7.88.1-10+deb12u4 \
     debsums=3.0.2.1 \
     gawk=1:5.2.1-2 \
     git=1:2.39.2-1.1 \
@@ -116,7 +116,7 @@ RUN apt-get -y install --no-install-recommends \
     jq=1.6-2.1 \
     libc-ares2=1.18.1-3 \
     libpsl5=0.21.2-1 \
-    libssl3=3.0.11-1~deb12u1 \
+    libssl3=3.0.11-1~deb12u2 \
     localepurge=* \
     p7zip-full=16.02+dfsg-8 \
     symlinks=* \
@@ -147,9 +147,9 @@ RUN chown 0:0 /usr/bin/as \
     rmdir /run/mount 2>/dev/null || :;
 
 # Upgrade Perl
-# https://github.com/Perl/docker-perl/blob/master/5.039.005-main%2Cthreaded-bullseye/Dockerfile
-RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.39.2.tar.xz; \
-    echo 'b7ae33d3c6ff80107d14c92dfb3d8d4944fec926b11bcc40c8764b73c710694f *perl-5.39.2.tar.xz' | sha256sum --strict --check -; \
+# https://github.com/Perl/docker-perl/blob/master/5.039.007-main%2Cthreaded-bullseye/Dockerfile
+RUN curl -fLO https://cpan.metacpan.org/authors/id/C/CO/CORION/perl-5.39.7.tar.gz; \
+    echo 'c85f9ef13fa674839b076d81edb45242a5ddff3df4b111f764a7abe72edd83eb *perl-5.39.7.tar.gz' | sha256sum --strict --check -; \
     tar --strip-components=1 -xaf perl-*.tar.xz; \
     #cat *.patch | patch -p1 || :; \
     ./Configure -Darchname=x86_64-linux-gnu -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des; \
@@ -179,8 +179,7 @@ RUN curl -fLO https://www.cpan.org/src/5.0/perl-5.39.2.tar.xz; \
     cpanm Text::Trim; \
     cpanm Try::Tiny;
 
-# To fix:
-# docker: Error response from daemon: unable to find user admin: no matching entries in passwd file.
+# Fixes: "docker: Error response from daemon: unable to find user admin: no matching entries in passwd file."
 RUN useradd -m admin && echo "admin:headhoncho" | chpasswd
 #&& usermod -aG wheel admin
 USER admin
