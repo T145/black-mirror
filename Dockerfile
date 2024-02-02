@@ -150,7 +150,7 @@ RUN chown 0:0 /usr/bin/as \
 # https://github.com/Perl/docker-perl/blob/master/5.039.007-main%2Cthreaded-bullseye/Dockerfile
 RUN curl -fLO https://cpan.metacpan.org/authors/id/C/CO/CORION/perl-5.39.7.tar.gz; \
     echo 'c85f9ef13fa674839b076d81edb45242a5ddff3df4b111f764a7abe72edd83eb *perl-5.39.7.tar.gz' | sha256sum --strict --check -; \
-    tar --strip-components=1 -xaf perl-*.tar.xz; \
+    tar --strip-components=1 -xaf perl-*.tar.gz; \
     #cat *.patch | patch -p1 || :; \
     ./Configure -Darchname=x86_64-linux-gnu -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des; \
     make -j "$(nproc)"; \
