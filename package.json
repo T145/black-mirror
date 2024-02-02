@@ -3,15 +3,10 @@
   "displayName": "Black Mirror",
   "version": "1.0.0",
   "scripts": {
-    "lint": "pnpm sort-package-json && pnpm mega-linter-runner"
-  },
-  "dependencies": {
-    "mega-linter-runner": "^7.7.0",
-    "mem-fs": "^3.0.0"
+    "lint": "pnpm mega-linter-runner"
   },
   "devDependencies": {
-    "npm-check-updates": "^16.14.12",
-    "sort-package-json": "^2.6.0"
+    "mega-linter-runner": "^7.8.0"
   },
   "engines": {
     "node": ">=20"

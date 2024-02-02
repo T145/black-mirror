@@ -11,24 +11,19 @@ permissions: read-all
 
 jobs:
   build_lists:
-    # https://docs.github.com/en/actions/using-github-hosted-runners/using-larger-runners
-    # https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions#per-minute-rates
-    runs-on: ubuntu-latest
-
+    runs-on: ubuntu-22.04
     defaults:
       run:
         shell: bash
-
     container:
       image: ghcr.io/t145/black-mirror:latest
       credentials:
         username: ${{ github.actor }}
         password: ${{ github.token }}
       options: --user root
-
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
         with:
           submodules: true
       - name: Generate lists
@@ -46,7 +41,7 @@ jobs:
         run: tar -cvf lists.tar build/
       - name: Cache lists
         if: steps.build.outputs.status == 'success'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@3a8048248f2f288c271830f8ecf2a1c5d8eb0e9a
         with:
           name: lists
           path: lists.tar
@@ -54,7 +49,7 @@ jobs:
           retention-days: 1
       - name: Cache documents
         if: steps.build.outputs.status == 'success'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@3a8048248f2f288c271830f8ecf2a1c5d8eb0e9a
         with:
           name: docs
           path: |
@@ -66,19 +61,17 @@ jobs:
         if: always()
         run: rm -rf build/ && rm -f lists.tar
   upload_github:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: build_lists
     continue-on-error: true
-
     permissions:
       contents: write
-
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       # https://github.com/actions/download-artifact#limitations=
       - name: Fetch lists
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@3ad8411bbdac537922aa8fb779989d55b1df4a4e
         with:
           name: lists
       - name: Extract & verify lists
@@ -89,7 +82,7 @@ jobs:
           cd ..
       # https://github.com/softprops/action-gh-release
       - name: Create release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@c9b46fe7aad9f02afd89b12450b780f52dacfb2d
         with:
           files: build/*
           generate_release_notes: true
@@ -99,16 +92,15 @@ jobs:
         if: always()
         run: rm -rf build/ && rm -f lists.tar
   upload_dropbox:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: build_lists
     continue-on-error: true
-
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       # https://github.com/actions/download-artifact#limitations=
       - name: Fetch lists
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@3ad8411bbdac537922aa8fb779989d55b1df4a4e
         with:
           name: lists
       - name: Extract & verify lists
@@ -119,7 +111,7 @@ jobs:
           cd ..
       # The largest list, so we'll just handle this independently
       - name: Upload domain blacklist
-        uses: deka0106/upload-to-dropbox@v2
+        uses: deka0106/upload-to-dropbox@0e5a2c63d797e18f9abd8f07fef7d1d001c915af
         with:
           dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
           src: build/BLOCK_DOMAIN.txt
@@ -129,7 +121,7 @@ jobs:
       - name: Sleep to avoid 429 error
         run: sleep 5s
       - name: Upload other blacklists
-        uses: deka0106/upload-to-dropbox@v2
+        uses: deka0106/upload-to-dropbox@0e5a2c63d797e18f9abd8f07fef7d1d001c915af
         with:
           dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
           src: |
@@ -143,7 +135,7 @@ jobs:
       - name: Sleep to avoid 429 error
         run: sleep 5s
       - name: Upload whitelists and checksums
-        uses: deka0106/upload-to-dropbox@v2
+        uses: deka0106/upload-to-dropbox@0e5a2c63d797e18f9abd8f07fef7d1d001c915af
         with:
           dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
           src: |
@@ -156,41 +148,39 @@ jobs:
         if: always()
         run: rm -rf build/ && rm -f lists.tar
   delete_build_artifact:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: [upload_github, upload_dropbox]
     permissions: write-all
-
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       - name: Delete build artifact
-        uses: geekyeggo/delete-artifact@v4
+        uses: GeekyEggo/delete-artifact@3f83cd6bfd1bb806746002ab8b59cc6f76f1740f
         with:
           name: lists
   update_docs:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: upload_github
     permissions: write-all
-
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
         with:
           fetch-depth: 0
       - name: Generate changelog
-        uses: tj-actions/github-changelog-generator@v1.19
+        uses: tj-actions/github-changelog-generator@120e016b1f3307c74233ed979c18a1a83a1b7ccd
       - name: Fetch documents
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@3ad8411bbdac537922aa8fb779989d55b1df4a4e
         with:
           name: docs
       - name: Delete docs artifact
-        uses: geekyeggo/delete-artifact@v4
+        uses: GeekyEggo/delete-artifact@3f83cd6bfd1bb806746002ab8b59cc6f76f1740f
         with:
           name: docs
       - name: Make the working tree safe
         run: git config --global --add safe.directory /__w/black-mirror/black-mirror
       - name: Update documents
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@12f68633e45c72459cd040c868605f2471c7f63b
         with:
           # homage to the python linting utility "black"
           commit_message: "ci(build): ✨🍰✨"

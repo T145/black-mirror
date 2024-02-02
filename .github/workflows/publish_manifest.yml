@@ -13,25 +13,21 @@ permissions: read-all
 
 jobs:
   publish_manifest:
-    runs-on: ubuntu-latest
-
+    runs-on: ubuntu-22.04
     defaults:
       run:
         shell: bash
-
     permissions:
       contents: write
-
     container:
       image: ghcr.io/t145/black-mirror:latest
       credentials:
         username: ${{ github.actor }}
         password: ${{ github.token }}
       options: --user root
-
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       - name: Sort manifest
         run: |
           jq -S '.' data/v2/manifest.json |
@@ -48,6 +44,6 @@ jobs:
       - name: Make commit directory safe
         run: git config --global --add safe.directory /__w/black-mirror/black-mirror
       - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@12f68633e45c72459cd040c868605f2471c7f63b
         with:
           commit_message: "ci(lists): ✨📚✨"

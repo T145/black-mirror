@@ -34,7 +34,8 @@ RUN curl http://pi.dk/3/ | bash \
 # Build Wget from source to enable c-ares support
 RUN apt-get -y update; \
     # The latest libssl-dev is already included!
-    apt-get -y install libc-ares-dev libpsl-dev; \
+    apt-get -y install --no-install-recommends libc-ares-dev libpsl-dev; \
+    apt-get -y clean; \
     wget https://ftp.gnu.org/gnu/wget/wget-1.21.4.tar.gz; \
     tar -xzf wget-*.tar.gz; \
     cd wget-1.21.4; \
@@ -61,10 +62,7 @@ STOPSIGNAL SIGKILL
 # https://www.parrotsec.org/docs/apparmor.html
 # rkhunter: https://unix.stackexchange.com/questions/562560/invalid-web-cmd-configuration-option-relative-pathname-bin-false
 COPY configs/etc/ /etc/
-COPY --from=go1.18 /go/bin/ /usr/local/bin/
-COPY --from=go1.16 /go/bin/ /usr/local/bin/
-COPY --from=go1.21 /go/bin/ /usr/local/bin/
-COPY --from=utils /usr/local/bin/ /usr/local/bin/
+COPY --from=go1.18 /go/bin/ --from=go1.16 /go/bin/ --from=go1.21 /go/bin/ --from=utils /usr/local/bin/ /usr/local/bin/
 
 # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L26
 RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \

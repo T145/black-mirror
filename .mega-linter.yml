@@ -12,7 +12,7 @@ SHOW_ELAPSED_TIME: true
 FILEIO_REPORTER: false
 # DISABLE_ERRORS: true # Uncomment if you want MegaLinter to detect errors but not block CI to pass
 CLEAR_REPORT_FOLDER: true
-FILTER_REGEX_EXCLUDE: (pnpm-lock.yaml|node_modules/*)
+FILTER_REGEX_EXCLUDE: (pnpm-lock.yaml|node_modules/*|logs/*|megalinter-reports/*)
 DISABLE_LINTERS:
   - "MARKDOWN_MARKDOWN_LINK_CHECK"
   - "REPOSITORY_DEVSKIM"

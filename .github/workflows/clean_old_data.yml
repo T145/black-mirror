@@ -11,22 +11,18 @@ permissions: read-all
 jobs:
   clean:
     runs-on: ubuntu-22.04
-
     steps:
+      # https://github.com/Mattraks/delete-workflow-runs
       - name: Remove expired workflow runs
-        uses: Mattraks/delete-workflow-runs@v2
+        uses: Mattraks/delete-workflow-runs@99626ea7e2020a8ab987073a1e127e2597102694
         with:
           token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
           retain_days: 1
           keep_minimum_runs: 2
-
       # https://github.com/otto-de/purge-deprecated-workflow-runs
       - name: Remove ancient workflow runs
-        uses: otto-de/purge-deprecated-workflow-runs@v2
+        uses: otto-de/purge-deprecated-workflow-runs@92c76f4e319728cef930489ae0ac7dd5e72e550e
         with:
           token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
-
-      # - name: Delete old container versions
-      #   uses: minish144/delete-untagged-action@v2
-      #   with:
-      #     github-token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
+          remove-cancelled: true
+          remove-skipped: true
