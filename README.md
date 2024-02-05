@@ -260,22 +260,17 @@ This has been tested across all the mentioned platforms using `dig{6}` on a smal
 
 Follow [this guide](https://aws.amazon.com/premiumsupport/knowledge-center/dns-resolution-failures-ec2-linux/) to create a DNS server on an Amazon EC2 instance.
 
-### [Pi-hole](https://pi-hole.net/)
+### [Pi-hole](https://pi-hole.net/) / [personalDNSfilter](https://github.com/IngoZenz/personaldnsfilter)
 
-If you'd like to update when some sources do or not extract a production build, just use the [single-line list](https://discourse.pi-hole.net/t/how-to-add-blocklists-v5-and-later/32127) [`sources.pihole`](https://github.com/T145/black-mirror/blob/master/dist/sources.pihole).
-Note that this list only contains Pihole-compatible sources, and not every handled source. Some manual configuration may also be required.
+Domain list usage is recommended.
 
-### [unbound](https://nlnetlabs.nl/projects/unbound/about/)
+### [Unbound](https://nlnetlabs.nl/projects/unbound/about/)
 
 Similar to dnsmasq, but requires more manual configuration. Name any products as a \*.conf file. [Then follow Steffinstanly's instructions on how to apply blocklists](https://medium.com/@steffinstanly/unbound-dns-blocking-3567986a5735).
 
-### [personalDNSfilter](https://github.com/IngoZenz/personaldnsfilter)
+### [AdGuard](https://adguard.com/en/welcome.html)
 
-Use the domain list.
-
-### [Adguard](https://adguard.com/en/welcome.html)
-
-Leverage the [`sources.adguard`](https://github.com/T145/black-mirror/blob/master/dist/sources.adguard) list or the domain list.
+Leverage the [`ADGUARD_SOURCES.txt`](https://github.com/T145/black-mirror/blob/master/dist/ADGUARD_SOURCES.txt) list or the domain list.
 
 ## 🐋 Docker Usage
 

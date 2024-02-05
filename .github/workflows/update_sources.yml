@@ -1,5 +1,5 @@
 ---
-name: Publish Manifest
+name: Update Sources
 
 on:
   push:
@@ -40,7 +40,9 @@ jobs:
             close(OUT);
           }' -s -- -file=data/v2/manifest.json
       - name: Document manifest
-        run: jq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/manifest.json | csvlook >SOURCES.md
+        run: jq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/manifest.json | csvlook >dist/SOURCES.md
+      - name: Document AdGuard sources
+        run: jq -jr 'to_entries[] | select(.value.method == "BLOCK" and .value.variants.adguard != null) | ("!#include ", .value.variants.adguard, "\n")' data/v2/manifest.json >dist/ADGUARD_SOURCES.txt
       - name: Make commit directory safe
         run: git config --global --add safe.directory /__w/black-mirror/black-mirror
       - name: Commit changes
