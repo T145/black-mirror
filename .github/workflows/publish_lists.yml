@@ -168,7 +168,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Generate changelog
-        uses: tj-actions/github-changelog-generator@120e016b1f3307c74233ed979c18a1a83a1b7ccd
+        uses: tj-actions/github-changelog-generator@7ab65a1a0aa50760bcbaec364d55956e4bcec163
       - name: Fetch documents
         uses: actions/download-artifact@3ad8411bbdac537922aa8fb779989d55b1df4a4e
         with:
