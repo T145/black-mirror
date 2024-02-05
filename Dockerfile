@@ -4,21 +4,21 @@ FROM golang:1.16 AS go1.16
 RUN go get github.com/StevenBlack/ghosts;
 
 # https://github.com/google/sanitizers/wiki/AddressSanitizerComparisonOfMemoryTools
-FROM golang:1.18 AS go1.18
+FROM golang:1.19 AS go1.19
 
 WORKDIR "/src"
 
-# https://github.com/johnkerl/miller#readme
+# https://github.com/johnkerl/miller
 RUN git config --global advice.detachedHead false; \
-    git clone --depth 1 -b v6.9.0 https://github.com/johnkerl/miller.git .; \
+    git clone --depth 1 -b v6.11.0 https://github.com/johnkerl/miller.git .; \
     go install -v github.com/johnkerl/miller/cmd/mlr;
 
 FROM golang:1.21 AS go1.21
 
 # https://github.com/mikefarah/yq/
-RUN go install -v github.com/mikefarah/yq/v4@v4.40.3; \
-    # https://github.com/ipinfo/cli#-ipinfo-cli
-    go install -v github.com/ipinfo/cli/ipinfo@ipinfo-3.2.0;
+RUN go install -v github.com/mikefarah/yq/v4@v4.40.5; \
+    # https://github.com/ipinfo/cli
+    go install -v github.com/ipinfo/cli/ipinfo@ipinfo-3.3.0;
 
 # https://hub.docker.com/_/buildpack-deps/
 FROM buildpack-deps:stable as utils
@@ -48,7 +48,7 @@ RUN apt-get -y update; \
 # https://gitlab.com/parrotsec/build/containers
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.0.2" \
+      version="6.1.0" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -62,8 +62,8 @@ STOPSIGNAL SIGKILL
 # https://www.parrotsec.org/docs/apparmor.html
 # rkhunter: https://unix.stackexchange.com/questions/562560/invalid-web-cmd-configuration-option-relative-pathname-bin-false
 COPY configs/etc/ /etc/
-COPY --from=go1.18 /go/bin/ /usr/local/bin/
 COPY --from=go1.16 /go/bin/ /usr/local/bin/
+COPY --from=go1.19 /go/bin/ /usr/local/bin/
 COPY --from=go1.21 /go/bin/ /usr/local/bin/
 COPY --from=utils /usr/local/bin/ /usr/local/bin/
 
@@ -80,18 +80,17 @@ RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
     # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L78
     && mkdir -p /run/systemd && echo 'docker' >/run/systemd/container
 
-# Make the "en_US.UTF-8" locale the default
-RUN apt-get -yq update --no-allow-insecure-repositories; \
-    apt-get -y install --no-install-recommends locales=2.36-9+deb12u2; \
-    # https://wiki.debian.org/Locale
-    locale-gen; \
+# Use "en_US.UTF-8" as the default locale
+# https://wiki.debian.org/Locale
+RUN locale-gen; \
     # https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8; \
-    update-locale LANG=en_US.UTF-8; \
-    export LC_ALL=C man;
+    update-locale LANG=en_US.UTF-8;
 
 # https://perldoc.perl.org/perllocale
-ENV LANGUAGE=en_US \
+# https://stackoverflow.com/questions/2499794/how-to-fix-a-locale-setting-warning-from-perl
+ENV LC_ALL=en_US.UTF-8 \
+    LANGUAGE=en_US \
     LANG=en_US.UTF-8 \
     # Make commands sort by the C locale
     LC_COLLATE=C \
@@ -103,7 +102,8 @@ ENV LANGUAGE=en_US \
 # https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory#21530768
 # use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 # dpkg --list to get versions
-RUN apt-get -y install --no-install-recommends \
+RUN apt-get -q update --no-allow-insecure-repositories; \
+    apt-get -y install --no-install-recommends \
     aria2=1.36.0-1 \
     build-essential=12.9 \
     csvkit=1.0.7-1 \
@@ -121,7 +121,6 @@ RUN apt-get -y install --no-install-recommends \
     p7zip-full=16.02+dfsg-8 \
     symlinks=* \
     unzip=6.0-28 \
-    #wget=1.21.3-1+b2 \
     xz-utils=5.4.1-0.2 \
     zlib1g=1:1.2.13.dfsg-1; \
     apt-get install -y --no-install-recommends --reinstall ca-certificates=*; \
