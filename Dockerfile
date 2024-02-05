@@ -82,9 +82,11 @@ RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
 
 # Use "en_US.UTF-8" as the default locale
 # https://wiki.debian.org/Locale
-RUN locale-gen; \
+RUN apt-get -q update --no-allow-insecure-repositories; \
+    apt-get -y install --no-install-recommends locales=*; \
+    locale-gen; \
     # https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
-	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8; \
+    localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8; \
     update-locale LANG=en_US.UTF-8;
 
 # https://perldoc.perl.org/perllocale
@@ -102,8 +104,7 @@ ENV LC_ALL=en_US.UTF-8 \
 # https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory#21530768
 # use apt-get & apt-cache rather than apt: https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 # dpkg --list to get versions
-RUN apt-get -q update --no-allow-insecure-repositories; \
-    apt-get -y install --no-install-recommends \
+RUN apt-get -y install --no-install-recommends \
     aria2=1.36.0-1 \
     build-essential=12.9 \
     csvkit=1.0.7-1 \
