@@ -2691,6 +2691,31 @@
     ],
     "topic": "SECURITY"
   },
+  "czech_risky_eshops": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.coi.cz/pro-spotrebitele/rizikove-e-shopy/",
+      "homepage": "https://www.ttc-cert.or.th/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.coi.cz/userdata/files/dokumenty-ke-stazeni/open-data/rizikove.csv"
+    ],
+    "topic": "SECURITY"
+  },
   "d3ward": {
     "archive": false,
     "checksums": {},
@@ -4016,6 +4041,31 @@
     "variants": {
       "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-YouTube-AdBlock.txt"
     }
+  },
+  "government_malware": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://gitlab.com/nitrohorse/government-malware-domains-blocklist/-/tree/master#government-malware-domains-blocklist",
+      "homepage": "https://github.com/parseword/nolovia/pull/4",
+      "license": "apache-2.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://gitlab.com/nitrohorse/government-malware-domains-blocklist/-/raw/master/domains.txt"
+    ],
+    "topic": "SECURITY"
   },
   "greensnow": {
     "archive": false,
@@ -6289,6 +6339,31 @@
     ],
     "topic": "SECURITY"
   },
+  "nextdns_no_safesearch": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/no-safesearch",
+      "homepage": "https://github.com/nextdns/no-safesearch",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/no-safesearch/main/domains"
+    ],
+    "topic": "SANITY"
+  },
   "nextdns_tor_bypass": {
     "archive": false,
     "checksums": {},
@@ -6311,31 +6386,6 @@
     "method": "ALLOW",
     "mirrors": [
       "https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/tor"
-    ],
-    "topic": "PRIVACY"
-  },
-  "nextdns_vpn_bypass": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/nextdns/metadata#readme=",
-      "homepage": "https://github.com/nextdns/dns-bypass-methods",
-      "license": "mit"
-    },
-    "method": "ALLOW",
-    "mirrors": [
-      "https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/vpn"
     ],
     "topic": "PRIVACY"
   },
@@ -6536,6 +6586,31 @@
     "method": "BLOCK",
     "mirrors": [
       "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi"
+    ],
+    "topic": "PRIVACY"
+  },
+  "nextdns_vpn_bypass": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/metadata#readme=",
+      "homepage": "https://github.com/nextdns/dns-bypass-methods",
+      "license": "mit"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/vpn"
     ],
     "topic": "PRIVACY"
   },
@@ -8786,6 +8861,110 @@
     ],
     "topic": "SECURITY"
   },
+  "thailand_telecommunications_sector_honeypot": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/ttc-cert/TTC-CERT_blocklist_recommended",
+      "homepage": "https://www.ttc-cert.or.th/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ttc-cert/TTC-CERT_blocklist_recommended/master/ip_from_honeypot_blocklist_recommended.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "thailand_telecommunications_sector_rats": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/ttc-cert/TTC-CERT_blocklist_recommended",
+      "homepage": "https://www.ttc-cert.or.th/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ttc-cert/TTC-CERT_blocklist_recommended/master/domain_from_android_rat_blocklist_recommended.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "thailand_telecommunications_sector_recommended": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/ttc-cert/TTC-CERT_blocklist_recommended",
+      "homepage": "https://www.ttc-cert.or.th/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ttc-cert/TTC-CERT_blocklist_recommended/master/domain_blocklist_recommended.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "thailand_telecommunications_sector_urls": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "ABUSE_CH_URLHAUS_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/ttc-cert/TTC-CERT_blocklist_recommended",
+      "homepage": "https://www.ttc-cert.or.th/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ttc-cert/TTC-CERT_blocklist_recommended/master/url_blocklist_recommended.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "thedumbterminal": {
     "archive": false,
     "checksums": {},
@@ -9955,185 +10134,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://zonefiles.io/f/compromised/ip/live/"
-    ],
-    "topic": "SECURITY"
-  },
-  "thailand_telecommunications_sector_recommended": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/ttc-cert/TTC-CERT_blocklist_recommended",
-      "homepage": "https://www.ttc-cert.or.th/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/ttc-cert/TTC-CERT_blocklist_recommended/master/domain_blocklist_recommended.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "thailand_telecommunications_sector_rats": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/ttc-cert/TTC-CERT_blocklist_recommended",
-      "homepage": "https://www.ttc-cert.or.th/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/ttc-cert/TTC-CERT_blocklist_recommended/master/domain_from_android_rat_blocklist_recommended.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "thailand_telecommunications_sector_honeypot": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/ttc-cert/TTC-CERT_blocklist_recommended",
-      "homepage": "https://www.ttc-cert.or.th/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/ttc-cert/TTC-CERT_blocklist_recommended/master/ip_from_honeypot_blocklist_recommended.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "thailand_telecommunications_sector_urls": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
-        "format": "DOMAIN"
-      },
-      {
-        "filter": "ABUSE_CH_URLHAUS_IPV4",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/ttc-cert/TTC-CERT_blocklist_recommended",
-      "homepage": "https://www.ttc-cert.or.th/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/ttc-cert/TTC-CERT_blocklist_recommended/master/url_blocklist_recommended.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "czech_risky_eshops": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://www.coi.cz/pro-spotrebitele/rizikove-e-shopy/",
-      "homepage": "https://www.ttc-cert.or.th/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://www.coi.cz/userdata/files/dokumenty-ke-stazeni/open-data/rizikove.csv"
-    ],
-    "topic": "SECURITY"
-  },
-  "nextdns_no_safesearch": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/nextdns/no-safesearch",
-      "homepage": "https://github.com/nextdns/no-safesearch",
-      "license": "mit"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/nextdns/no-safesearch/main/domains"
-    ],
-    "topic": "SANITY"
-  },
-  "government_malware": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://gitlab.com/nitrohorse/government-malware-domains-blocklist/-/tree/master#government-malware-domains-blocklist",
-      "homepage": "https://github.com/parseword/nolovia/pull/4",
-      "license": "apache-2.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://gitlab.com/nitrohorse/government-malware-domains-blocklist/-/raw/master/domains.txt"
     ],
     "topic": "SECURITY"
   }
