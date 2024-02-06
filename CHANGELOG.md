@@ -4,8 +4,14 @@
 
 [Full Changelog](https://github.com/T145/black-mirror/compare/latest...HEAD)
 
+**Implemented enhancements:**
+
+- \[feature\]: sources.adguard seems to be missing? [\#119](https://github.com/T145/black-mirror/issues/119)
+
 **Merged pull requests:**
 
+- chore\(deps\): bump tj-actions/github-changelog-generator from 120e016b1f3307c74233ed979c18a1a83a1b7ccd to 7ab65a1a0aa50760bcbaec364d55956e4bcec163 in /.github/workflows [\#122](https://github.com/T145/black-mirror/pull/122) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/build-push-action from 2b28f2a8545204e21203248d81ca7dd077f9a74d to 4976231911ebf5f32aad765192d35f942aa48cb8 in /.github/workflows [\#121](https://github.com/T145/black-mirror/pull/121) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump geekyeggo/delete-artifact from 2 to 4 in /.github/workflows [\#118](https://github.com/T145/black-mirror/pull/118) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/upload-artifact from 3 to 4 in /.github/workflows [\#117](https://github.com/T145/black-mirror/pull/117) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/download-artifact from 3 to 4 in /.github/workflows [\#116](https://github.com/T145/black-mirror/pull/116) ([dependabot[bot]](https://github.com/apps/dependabot))
