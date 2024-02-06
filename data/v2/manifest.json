@@ -1182,7 +1182,7 @@
     "mirrors": [
       "https://raw.githubusercontent.com/adversarialtools/apple-telemetry/master/blacklist"
     ],
-    "topic": "SECURITY",
+    "topic": "PRIVACY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/adversarialtools/apple-telemetry/master/blacklist"
     }
@@ -6281,7 +6281,7 @@
     "metadata": {
       "description": "https://github.com/nextdns/metadata#readme=",
       "homepage": "https://github.com/nextdns/dns-bypass-methods",
-      "license": "all-rights-reserved"
+      "license": "mit"
     },
     "method": "ALLOW",
     "mirrors": [
@@ -6306,13 +6306,13 @@
     "metadata": {
       "description": "https://github.com/nextdns/metadata#readme=",
       "homepage": "https://github.com/nextdns/dns-bypass-methods",
-      "license": "all-rights-reserved"
+      "license": "mit"
     },
     "method": "ALLOW",
     "mirrors": [
       "https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/tor"
     ],
-    "topic": "SECURITY"
+    "topic": "PRIVACY"
   },
   "nextdns_vpn_bypass": {
     "archive": false,
@@ -6331,13 +6331,213 @@
     "metadata": {
       "description": "https://github.com/nextdns/metadata#readme=",
       "homepage": "https://github.com/nextdns/dns-bypass-methods",
-      "license": "all-rights-reserved"
+      "license": "mit"
     },
     "method": "ALLOW",
     "mirrors": [
       "https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/vpn"
     ],
-    "topic": "SECURITY"
+    "topic": "PRIVACY"
+  },
+  "nextdns_tracking_alexa": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/native-tracking-domains",
+      "homepage": "https://github.com/nextdns/native-tracking-domains",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/alexa"
+    ],
+    "topic": "PRIVACY"
+  },
+  "nextdns_tracking_apple": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/native-tracking-domains",
+      "homepage": "https://github.com/nextdns/native-tracking-domains",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/apple"
+    ],
+    "topic": "PRIVACY"
+  },
+  "nextdns_tracking_huawei": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/native-tracking-domains",
+      "homepage": "https://github.com/nextdns/native-tracking-domains",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/huawei"
+    ],
+    "topic": "PRIVACY"
+  },
+  "nextdns_tracking_roku": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/native-tracking-domains",
+      "homepage": "https://github.com/nextdns/native-tracking-domains",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/roku"
+    ],
+    "topic": "PRIVACY"
+  },
+  "nextdns_tracking_samsung": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/native-tracking-domains",
+      "homepage": "https://github.com/nextdns/native-tracking-domains",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/samsung"
+    ],
+    "topic": "PRIVACY"
+  },
+  "nextdns_tracking_sonos": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/native-tracking-domains",
+      "homepage": "https://github.com/nextdns/native-tracking-domains",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/sonos"
+    ],
+    "topic": "PRIVACY"
+  },
+  "nextdns_tracking_windows": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/native-tracking-domains",
+      "homepage": "https://github.com/nextdns/native-tracking-domains",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/windows"
+    ],
+    "topic": "PRIVACY"
+  },
+  "nextdns_tracking_xiaomi": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/native-tracking-domains",
+      "homepage": "https://github.com/nextdns/native-tracking-domains",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi"
+    ],
+    "topic": "PRIVACY"
   },
   "no_qanon": {
     "archive": false,
@@ -8109,6 +8309,31 @@
     ],
     "topic": "SECURITY"
   },
+  "soteria_nou_widgets": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/soteria-nou/domain-list#readme",
+      "homepage": "https://github.com/soteria-nou/domain-list",
+      "license": "https://github.com/soteria-nou/domain-list#license"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/soteria-nou/domain-list/master/widgets.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "spam404": {
     "archive": false,
     "checksums": {},
@@ -9730,6 +9955,185 @@
     "method": "BLOCK",
     "mirrors": [
       "https://zonefiles.io/f/compromised/ip/live/"
+    ],
+    "topic": "SECURITY"
+  },
+  "thailand_telecommunications_sector_recommended": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/ttc-cert/TTC-CERT_blocklist_recommended",
+      "homepage": "https://www.ttc-cert.or.th/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ttc-cert/TTC-CERT_blocklist_recommended/master/domain_blocklist_recommended.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "thailand_telecommunications_sector_rats": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/ttc-cert/TTC-CERT_blocklist_recommended",
+      "homepage": "https://www.ttc-cert.or.th/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ttc-cert/TTC-CERT_blocklist_recommended/master/domain_from_android_rat_blocklist_recommended.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "thailand_telecommunications_sector_honeypot": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/ttc-cert/TTC-CERT_blocklist_recommended",
+      "homepage": "https://www.ttc-cert.or.th/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ttc-cert/TTC-CERT_blocklist_recommended/master/ip_from_honeypot_blocklist_recommended.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "thailand_telecommunications_sector_urls": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "ABUSE_CH_URLHAUS_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/ttc-cert/TTC-CERT_blocklist_recommended",
+      "homepage": "https://www.ttc-cert.or.th/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ttc-cert/TTC-CERT_blocklist_recommended/master/url_blocklist_recommended.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "czech_risky_eshops": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.coi.cz/pro-spotrebitele/rizikove-e-shopy/",
+      "homepage": "https://www.ttc-cert.or.th/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.coi.cz/userdata/files/dokumenty-ke-stazeni/open-data/rizikove.csv"
+    ],
+    "topic": "SECURITY"
+  },
+  "nextdns_no_safesearch": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/nextdns/no-safesearch",
+      "homepage": "https://github.com/nextdns/no-safesearch",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/nextdns/no-safesearch/main/domains"
+    ],
+    "topic": "SANITY"
+  },
+  "government_malware": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://gitlab.com/nitrohorse/government-malware-domains-blocklist/-/tree/master#government-malware-domains-blocklist",
+      "homepage": "https://github.com/parseword/nolovia/pull/4",
+      "license": "apache-2.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://gitlab.com/nitrohorse/government-malware-domains-blocklist/-/raw/master/domains.txt"
     ],
     "topic": "SECURITY"
   }

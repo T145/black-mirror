@@ -176,6 +176,7 @@
 - [SukkaW](https://github.com/SukkaW/Surge)
 - [Cat's Team](https://github.com/Cats-Team/AdRules)
   - Just copies the [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash) `BanAD` & `BanProgramAD` lists.
+- [cmiksche](https://gitlab.com/cmiksche/blacklists)
 
 # 🧟 Zombies
 
@@ -247,7 +248,7 @@
   - [simple_ad](https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt) (Last-Modified: Fri, 31 Jul 2015 19:01:02 GMT)
   - [simple_tracking](https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt) (Last-Modified: Sat, 01 Feb 2020 02:37:09 GMT)
   - [shavar-prod-lists](https://github.com/mozilla-services/shavar-prod-lists)
-- [phishing_hosts](https://github.com/Kurobeats/phishing_hosts)
+- [phishing_hosts](https://gitlab.com/Kurobeats/phishing_hosts)
 - [antipopads](https://github.com/Yhonay/antipopads)
 - [romanian-media-propaganda-adblock-list](https://github.com/Recon/romanian-media-propaganda-adblock-list)
 - [cosmonotes](https://cosmonote.blogspot.com/2013/09/Download.html)
@@ -570,3 +571,7 @@
 - [fzListKor](https://raw.githubusercontent.com/elsannadisney/fzListKor/main/warehouse/maindns.txt)
 - [AirVPN Adult Filter](https://airvpn.org/api/dns_lists/?code=air_porn)
 - [Richard's Blocklist](https://forum.virtualmin.com/t/all-of-my-blocklists-are-now-free-at-least-for-the-time-being/116454)
+- [twann](https://codeberg.org/twann/filters)
+- [dnsblocklistnet](https://github.com/dnsblocklistnet/blocklists)
+- [cert-agid lists](https://cert-agid.gov.it/download/)
+  - If there are any present compromised domains that are active and malicious, they'll likely appear in other maintained security lists.
