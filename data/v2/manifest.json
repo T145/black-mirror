@@ -4117,7 +4117,7 @@
     ],
     "topic": "SECURITY"
   },
-  "herrbischoff_trackers": {
+  "herrbischoff_advertising": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -4138,7 +4138,86 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://git.herrbischoff.com/trackers/plain/trackers.txt"
+      "https://git.herrbischoff.com/trackers/plain/advertising.txt"
+    ],
+    "topic": "PRIVACY"
+  },
+  "herrbischoff_ai": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HERRBISCHOFF_CIDR4",
+        "format": "CIDR4"
+      }
+    ],
+    "metadata": {
+      "description": "https://ipbl.herrbischoff.com/",
+      "homepage": "https://ipbl.herrbischoff.com/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://ipbl.herrbischoff.com/ai.txt"
+    ],
+    "topic": "PRIVACY"
+  },
+  "herrbischoff_badasn": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HERRBISCHOFF_CIDR4",
+        "format": "CIDR4"
+      },
+      {
+        "filter": "HERRBISCHOFF_CIDR6",
+        "format": "CIDR6"
+      }
+    ],
+    "metadata": {
+      "description": "https://ipbl.herrbischoff.com/",
+      "homepage": "https://ipbl.herrbischoff.com/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://ipbl.herrbischoff.com/badasn.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "herrbischoff_cookie": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://git.herrbischoff.com/trackers/about/",
+      "homepage": "https://git.herrbischoff.com/trackers/about/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://git.herrbischoff.com/trackers/plain/cookie.txt"
     ],
     "topic": "PRIVACY"
   },
@@ -4167,7 +4246,7 @@
     ],
     "topic": "PRIVACY"
   },
-  "herrbischoff_telemetry": {
+  "herrbischoff_ipbl": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -4177,45 +4256,32 @@
     },
     "formats": [
       {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://git.herrbischoff.com/trackers/about/",
-      "homepage": "https://git.herrbischoff.com/trackers/about/",
-      "license": "unlicense"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://git.herrbischoff.com/trackers/plain/telemetry.txt"
-    ],
-    "topic": "PRIVACY"
-  },
-  "herrbischoff_cookie": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
+        "filter": "GREP_IPV4",
+        "format": "IPV4"
+      },
       {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
+        "filter": "HERRBISCHOFF_CIDR4",
+        "format": "CIDR4"
+      },
+      {
+        "filter": "GREP_IPV6",
+        "format": "IPV6"
+      },
+      {
+        "filter": "HERRBISCHOFF_CIDR6",
+        "format": "CIDR6"
       }
     ],
     "metadata": {
-      "description": "https://git.herrbischoff.com/trackers/about/",
-      "homepage": "https://git.herrbischoff.com/trackers/about/",
+      "description": "https://ipbl.herrbischoff.com/",
+      "homepage": "https://ipbl.herrbischoff.com/",
       "license": "unlicense"
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://git.herrbischoff.com/trackers/plain/cookie.txt"
+      "https://ipbl.herrbischoff.com/list.txt"
     ],
-    "topic": "PRIVACY"
+    "topic": "SECURITY"
   },
   "herrbischoff_reject": {
     "archive": false,
@@ -4300,7 +4366,7 @@
     ],
     "topic": "SECURITY"
   },
-  "herrbischoff_advertising": {
+  "herrbischoff_telemetry": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -4321,11 +4387,11 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://git.herrbischoff.com/trackers/plain/advertising.txt"
+      "https://git.herrbischoff.com/trackers/plain/telemetry.txt"
     ],
     "topic": "PRIVACY"
   },
-  "herrbischoff_ipbl": {
+  "herrbischoff_trackers": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -4335,84 +4401,18 @@
     },
     "formats": [
       {
-        "filter": "GREP_IPV4",
-        "format": "IPV4"
-      },
-      {
-        "filter": "HERRBISCHOFF_CIDR4",
-        "format": "CIDR4"
-      },
-      {
-        "filter": "GREP_IPV6",
-        "format": "IPV6"
-      },
-      {
-        "filter": "HERRBISCHOFF_CIDR6",
-        "format": "CIDR6"
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
       }
     ],
     "metadata": {
-      "description": "https://ipbl.herrbischoff.com/",
-      "homepage": "https://ipbl.herrbischoff.com/",
+      "description": "https://git.herrbischoff.com/trackers/about/",
+      "homepage": "https://git.herrbischoff.com/trackers/about/",
       "license": "unlicense"
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://ipbl.herrbischoff.com/list.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "herrbischoff_badasn": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HERRBISCHOFF_CIDR4",
-        "format": "CIDR4"
-      },
-      {
-        "filter": "HERRBISCHOFF_CIDR6",
-        "format": "CIDR6"
-      }
-    ],
-    "metadata": {
-      "description": "https://ipbl.herrbischoff.com/",
-      "homepage": "https://ipbl.herrbischoff.com/",
-      "license": "unlicense"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://ipbl.herrbischoff.com/badasn.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "herrbischoff_ai": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HERRBISCHOFF_CIDR4",
-        "format": "CIDR4"
-      }
-    ],
-    "metadata": {
-      "description": "https://ipbl.herrbischoff.com/",
-      "homepage": "https://ipbl.herrbischoff.com/",
-      "license": "unlicense"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://ipbl.herrbischoff.com/ai.txt"
+      "https://git.herrbischoff.com/trackers/plain/trackers.txt"
     ],
     "topic": "PRIVACY"
   },
