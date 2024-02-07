@@ -10,6 +10,10 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump actions/upload-artifact from 3a8048248f2f288c271830f8ecf2a1c5d8eb0e9a to 4c0ff1c489dca52fedb26375d7d8fe7bd9233f19 in /.github/workflows [\#126](https://github.com/T145/black-mirror/pull/126) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump softprops/action-gh-release from c9b46fe7aad9f02afd89b12450b780f52dacfb2d to 4634c16e79c963813287e889244c50009e7f0981 in /.github/workflows [\#125](https://github.com/T145/black-mirror/pull/125) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump actions/download-artifact from 3ad8411bbdac537922aa8fb779989d55b1df4a4e to 348754975ef0295bfa2c111cba996120cfdf8a5d in /.github/workflows [\#124](https://github.com/T145/black-mirror/pull/124) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump stefanzweifel/git-auto-commit-action from 12f68633e45c72459cd040c868605f2471c7f63b to 4d160c5e4d67c62e67f03ae49aa38359e964139a in /.github/workflows [\#123](https://github.com/T145/black-mirror/pull/123) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump tj-actions/github-changelog-generator from 120e016b1f3307c74233ed979c18a1a83a1b7ccd to 7ab65a1a0aa50760bcbaec364d55956e4bcec163 in /.github/workflows [\#122](https://github.com/T145/black-mirror/pull/122) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/build-push-action from 2b28f2a8545204e21203248d81ca7dd077f9a74d to 4976231911ebf5f32aad765192d35f942aa48cb8 in /.github/workflows [\#121](https://github.com/T145/black-mirror/pull/121) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump geekyeggo/delete-artifact from 2 to 4 in /.github/workflows [\#118](https://github.com/T145/black-mirror/pull/118) ([dependabot[bot]](https://github.com/apps/dependabot))
