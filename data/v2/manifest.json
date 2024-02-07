@@ -4117,7 +4117,7 @@
     ],
     "topic": "SECURITY"
   },
-  "herrbischoff_cookie": {
+  "herrbischoff_trackers": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -4138,34 +4138,9 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://git.herrbischoff.com/trackers/plain/cookie.txt"
+      "https://git.herrbischoff.com/trackers/plain/trackers.txt"
     ],
-    "topic": "SECURITY"
-  },
-  "herrbischoff_crap": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://git.herrbischoff.com/trackers/about/",
-      "homepage": "https://git.herrbischoff.com/trackers/about/",
-      "license": "unlicense"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://git.herrbischoff.com/trackers/plain/crap.txt"
-    ],
-    "topic": "SECURITY"
+    "topic": "PRIVACY"
   },
   "herrbischoff_domains": {
     "archive": false,
@@ -4190,9 +4165,204 @@
     "mirrors": [
       "https://git.herrbischoff.com/trackers/plain/domains.txt"
     ],
+    "topic": "PRIVACY"
+  },
+  "herrbischoff_telemetry": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://git.herrbischoff.com/trackers/about/",
+      "homepage": "https://git.herrbischoff.com/trackers/about/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://git.herrbischoff.com/trackers/plain/telemetry.txt"
+    ],
+    "topic": "PRIVACY"
+  },
+  "herrbischoff_cookie": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://git.herrbischoff.com/trackers/about/",
+      "homepage": "https://git.herrbischoff.com/trackers/about/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://git.herrbischoff.com/trackers/plain/cookie.txt"
+    ],
+    "topic": "PRIVACY"
+  },
+  "herrbischoff_reject": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://git.herrbischoff.com/trackers/about/",
+      "homepage": "https://git.herrbischoff.com/trackers/about/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://git.herrbischoff.com/trackers/plain/reject.txt"
+    ],
+    "topic": "PRIVACY"
+  },
+  "herrbischoff_spam_domains": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://git.herrbischoff.com/trackers/about/",
+      "homepage": "https://git.herrbischoff.com/trackers/about/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://git.herrbischoff.com/trackers/plain/spam.txt"
+    ],
+    "topic": "PRIVACY"
+  },
+  "herrbischoff_spam_ips": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "GREP_IPV4",
+        "format": "IPV4"
+      },
+      {
+        "filter": "HERRBISCHOFF_CIDR4",
+        "format": "CIDR4"
+      },
+      {
+        "filter": "GREP_IPV6",
+        "format": "IPV6"
+      }
+    ],
+    "metadata": {
+      "description": "https://git.herrbischoff.com/trackers/about/",
+      "homepage": "https://git.herrbischoff.com/trackers/about/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://git.herrbischoff.com/trackers/plain/spam.netset"
+    ],
     "topic": "SECURITY"
   },
-  "herrbischoff_drop": {
+  "herrbischoff_advertising": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://git.herrbischoff.com/trackers/about/",
+      "homepage": "https://git.herrbischoff.com/trackers/about/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://git.herrbischoff.com/trackers/plain/advertising.txt"
+    ],
+    "topic": "PRIVACY"
+  },
+  "herrbischoff_ipbl": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "GREP_IPV4",
+        "format": "IPV4"
+      },
+      {
+        "filter": "HERRBISCHOFF_CIDR4",
+        "format": "CIDR4"
+      },
+      {
+        "filter": "GREP_IPV6",
+        "format": "IPV6"
+      },
+      {
+        "filter": "HERRBISCHOFF_CIDR6",
+        "format": "CIDR6"
+      }
+    ],
+    "metadata": {
+      "description": "https://ipbl.herrbischoff.com/",
+      "homepage": "https://ipbl.herrbischoff.com/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://ipbl.herrbischoff.com/list.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "herrbischoff_badasn": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -4221,7 +4391,7 @@
     ],
     "topic": "SECURITY"
   },
-  "herrbischoff_ipbl": {
+  "herrbischoff_ai": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -4231,20 +4401,8 @@
     },
     "formats": [
       {
-        "filter": "HERRBISCHOFF_IPV4",
-        "format": "IPV4"
-      },
-      {
-        "filter": "HERRBISCHOFF_IPV6",
-        "format": "IPV6"
-      },
-      {
         "filter": "HERRBISCHOFF_CIDR4",
         "format": "CIDR4"
-      },
-      {
-        "filter": "HERRBISCHOFF_CIDR6",
-        "format": "CIDR6"
       }
     ],
     "metadata": {
@@ -4254,109 +4412,9 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://ipbl.herrbischoff.com/list.txt"
+      "https://ipbl.herrbischoff.com/ai.txt"
     ],
-    "topic": "SECURITY"
-  },
-  "herrbischoff_reject": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://git.herrbischoff.com/trackers/about/",
-      "homepage": "https://git.herrbischoff.com/trackers/about/",
-      "license": "unlicense"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://git.herrbischoff.com/trackers/plain/reject.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "herrbischoff_spam": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://git.herrbischoff.com/trackers/about/",
-      "homepage": "https://git.herrbischoff.com/trackers/about/",
-      "license": "unlicense"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://git.herrbischoff.com/trackers/plain/spam.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "herrbischoff_telemetry": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://git.herrbischoff.com/trackers/about/",
-      "homepage": "https://git.herrbischoff.com/trackers/about/",
-      "license": "unlicense"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://git.herrbischoff.com/trackers/plain/telemetry.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "herrbischoff_trackers": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://git.herrbischoff.com/trackers/about/",
-      "homepage": "https://git.herrbischoff.com/trackers/about/",
-      "license": "unlicense"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://git.herrbischoff.com/trackers/plain/trackers.txt"
-    ],
-    "topic": "SECURITY"
+    "topic": "PRIVACY"
   },
   "hexxium": {
     "archive": false,
@@ -6097,8 +6155,7 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/block.txt",
-      "https://fussle.de/block.txt"
+      "https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/block.txt"
     ],
     "topic": "SECURITY"
   },
@@ -8449,8 +8506,8 @@
       }
     ],
     "metadata": {
-      "description": "https://www.spamhaus.org/organization/",
-      "homepage": "https://www.spamhaus.org/",
+      "description": "https://www.spamhaus.org/faq/section/Spamhaus%C2%A0DROP",
+      "homepage": "https://www.spamhaus.org/organization/",
       "license": "all-rights-reserved"
     },
     "method": "BLOCK",
@@ -8475,8 +8532,8 @@
       }
     ],
     "metadata": {
-      "description": "https://www.spamhaus.org/organization/",
-      "homepage": "https://www.spamhaus.org/",
+      "description": "https://www.spamhaus.org/faq/section/Spamhaus%C2%A0DROP",
+      "homepage": "https://www.spamhaus.org/organization/",
       "license": "all-rights-reserved"
     },
     "method": "BLOCK",
@@ -8500,8 +8557,8 @@
       }
     ],
     "metadata": {
-      "description": "https://www.spamhaus.org/organization/",
-      "homepage": "https://www.spamhaus.org/",
+      "description": "https://www.spamhaus.org/faq/section/Spamhaus%C2%A0DROP",
+      "homepage": "https://www.spamhaus.org/organization/",
       "license": "all-rights-reserved"
     },
     "method": "BLOCK",
