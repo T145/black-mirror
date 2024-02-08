@@ -5,8 +5,8 @@ set +H +o history     # disable history features (helps avoid errors from "!" in
 shopt -u cmdhist      # would be enabled and have no effect otherwise
 shopt -s execfail     # ensure interactive and non-interactive runtime are similar
 shopt -s extglob      # enable extended pattern matching (https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html)
-set -euET -o pipefail # put bash into strict mode & have it give descriptive errors
-umask 055             # change all generated file perms from 755 to 700
+set -euET -o pipefail # put bash into "strict mode" & have it give descriptive errors
+umask 055             # change all generated file permissions from 755 to 700
 
 DOWNLOADS=$(mktemp -d)
 TMP=$(mktemp -p "$DOWNLOADS")
@@ -38,12 +38,13 @@ sponge() {
 	' -s -- -file="$1"
 }
 
+# params: file to sort,
 sorted() {
 	parsort -bfiu -S 100% -T "$DOWNLOADS" "$1" | sponge "$1"
-	echo "[INFO] Optimized: ${1}"
+	echo "[INFO] Organized: ${1}"
 }
 
-# params: blacklist, whitelist
+# params: blacklist, whitelist,
 apply_whitelist() {
 	# https://askubuntu.com/a/562352
 	# send each line into the temp file as it's processed instead of keeping it in memory
@@ -53,7 +54,7 @@ apply_whitelist() {
 	echo "[INFO] Applied whitelist to: ${1}"
 }
 
-# params: ip list, cidr whitelist
+# params: ip list, cidr whitelist,
 apply_cidr_whitelist() {
 	if test -f "$1"; then
 		sem -j+0 grepcidr -vf "$2" <"$1" | sponge "$1"
@@ -62,9 +63,10 @@ apply_cidr_whitelist() {
 	fi
 }
 
+# params: output directory,
 init() {
 	trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
-	mkdir -p build/
+	mkdir -p "$1"
 	# clear all logs
 	find -P -O3 ./logs -depth -type f -print0 | xargs -0 truncate -s 0
 	chmod -t /tmp
@@ -80,7 +82,9 @@ main() {
 	local blacklist
 	local results
 
-	init
+	outdir="build"
+
+	init "$outdir"
 
 	for method in "${METHODS[@]}"; do
 		cache="${DOWNLOADS}/${method}"
@@ -124,19 +128,19 @@ main() {
 							wget --no-check-certificate --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
 						done
 					;;
-				'SNSCRAPE')
-					jq -r --arg method "$method" 'to_entries[] |
-						select(.value.content.retriever == "SNSCRAPE" and .value.method == $method) |
-						{key, mirror: .value.mirrors[0]} |
-						"\(.key)#\(.mirror)"' data/v2/manifest.json |
-						while IFS='#' read -r key mirror; do
-							snscrape --jsonl twitter-user "$mirror" >"$key"
-						done
-					;;
-				'SAFE_GIT')
-					# Some repos contain active malware, which we don't want to download.
-					#curl -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/0xDanielLopez/phishing_kits/git/trees/master?recursive=1
-					;;
+				# 'SNSCRAPE')
+				# 	jq -r --arg method "$method" 'to_entries[] |
+				# 		select(.value.content.retriever == "SNSCRAPE" and .value.method == $method) |
+				# 		{key, mirror: .value.mirrors[0]} |
+				# 		"\(.key)#\(.mirror)"' data/v2/manifest.json |
+				# 		while IFS='#' read -r key mirror; do
+				# 			snscrape --jsonl twitter-user "$mirror" >"$key"
+				# 		done
+				# 	;;
+				# 'SAFE_GIT')
+				# 	# Some repos contain active malware, which we don't want to download.
+				# 	curl -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/0xDanielLopez/phishing_kits/git/trees/master?recursive=1
+				# 	;;
 				esac
 			done
 		set -e
@@ -153,7 +157,7 @@ main() {
 				# https://www.gnu.org/software/parallel/parallel_tutorial.html#controlling-the-execution
 				parallel -0 --use-cpus-instead-of-cores --jobs 0 --results "$results" -X ./scripts/v2/apply_filters.bash {} "$method" "$format"
 
-			list="build/${method}_${format}.txt"
+			list="${outdir}/${method}_${format}.txt"
 
 			echo "[INFO] Processed: ${list}"
 
@@ -171,17 +175,16 @@ main() {
 				sorted "$list"
 
 				if [[ "$method" == "$METHOD_ALLOW" ]]; then
-					blacklist="build/BLOCK_${format}.txt"
-					echo "[INFO] Applying whitelist: ${list}"
+					blacklist="${outdir}/BLOCK_${format}.txt"
 
 					case "$format" in
 					"$FORMAT_CIDR4")
 						apply_cidr_whitelist "$blacklist" "$list"
-						apply_cidr_whitelist "build/BLOCK_IPV4.txt" "$list"
+						apply_cidr_whitelist "${outdir}/BLOCK_IPV4.txt" "$list"
 						;;
 					"$FORMAT_CIDR6")
 						apply_cidr_whitelist "$blacklist" "$list"
-						apply_cidr_whitelist "build/BLOCK_IPV6.txt" "$list"
+						apply_cidr_whitelist "${outdir}/BLOCK_IPV6.txt" "$list"
 						;;
 					*)
 						apply_whitelist "$blacklist" "$list"
@@ -191,23 +194,21 @@ main() {
 					# Remove IPs from the IP blacklists that are covered by the CIDR blacklists
 					case "$format" in
 					"$FORMAT_CIDR4")
-						apply_cidr_whitelist "build/BLOCK_IPV4.txt" "$list"
+						apply_cidr_whitelist "${outdir}/BLOCK_IPV4.txt" "$list"
 						;;
 					"$FORMAT_CIDR6")
-						apply_cidr_whitelist "build/BLOCK_IPV6.txt" "$list"
+						apply_cidr_whitelist "${outdir}/BLOCK_IPV6.txt" "$list"
 						;;
 					*) ;;
 					esac
 				fi
-
-				echo "[INFO] Processed ${method} ${format} list!"
 			fi
 		done
 	done
 
 	# https://superuser.com/questions/191889/how-can-i-list-only-non-empty-files-using-ls
-	find ./build/ -type f -name "*.txt" -size 0 -exec rm {} \;
-	find ./build/ -type f -name "*.txt" -exec sha256sum {} \; | sort -k2 >>'./build/CHECKSUMS.txt'
+	find "${outdir}" -type f -name "*.txt" -size 0 -exec rm {} \;
+	find "${outdir}" -type f -name "*.txt" -exec sha256sum {} \; | sort -k2 >>"${outdir}/CHECKSUMS.txt"
 
 	cleanup
 }
