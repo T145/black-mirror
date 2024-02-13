@@ -45,7 +45,7 @@
 - [AbuseIPDB](https://docs.abuseipdb.com/#blacklist-endpoint)
 - [Wael](https://github.com/waelisa/Best-blocklist)
 
-## Add but archive
+### Add but archive
 
 - [Quarklist](https://github.com/francis-zhao/quarklist)
 - [Cameleon](https://sysctl.org/cameleon/)
@@ -69,16 +69,7 @@
 - [ftpmorph pastebin](https://pastebin.com/raw/gKaWxety)
 - [my](https://github.com/mypdns/matrix)[pdns](https://mypdns.org/mypdns/support/-/wikis/Blacklists/Abusech-badips)
 - [gnuzilla](https://gnuzilla.gnu.org/filters/)
-  - In [`update.sh`](https://gnuzilla.gnu.org/filters/retriever/update.sh):
-
-    ```bash
-    wget https://easylist-downloads.adblockplus.org/easyprivacy.txt -q
-    wget https://easylist-downloads.adblockplus.org/easylist.txt -q
-    #wget https://easylist-downloads.adblockplus.org/antiadblockfilters.txt -q
-    #wget https://easylist-downloads.adblockplus.org/fanboy-annoyance.txt -q
-    wget https://easylist-downloads.adblockplus.org/fanboy-social.txt -q
-    ```
-
+  - An [`EasyList`](https://gnuzilla.gnu.org/filters/retriever/update.sh) mirror.
 - [sebsauvage](https://sebsauvage.net/hosts/hosts)
 - [EmergingThreats](https://rules.emergingthreats.net/blockrules/)
   - Pulls from abuse.ch, spamhaus, and dshield, which are all in use.
