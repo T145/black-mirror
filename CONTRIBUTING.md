@@ -1,80 +1,67 @@
-# Project Contribution
+# How to Report:
 
-## List recommendations
+| **Problem**              | **Forum**                       | **Required Label** |
+|--------------------------|---------------------------------|--------------------|
+| Adding a list            | Issue, Pull Request, Discussion | enhancement        |
+| Modifying a list         | Issue, Pull Request             | enhancement        |
+| List redundancy          | Issue, Discussion               | redundant hosts    |
+| List deprecation         | Issue                           | bug                |
+| Whitelist specific hosts | Discussion                      | whitelist hosts    |
+| Blacklist specific hosts | Discussion                      | blacklist hosts    |
+| Bug in the main scripts  | Issue                           | bug                |
 
-### Do you have a list you'd like to add?
-
-Join the discussion around lists under the "Discussions" tab!
-Issues should be restricted for more critical subjects about how the project works.
-
-### Have you found a redundant list?
-
-A redundant list would be any list that has its own entry in `data/v2/manifest.json` and is mostly or fully included in another list.
-Obviously one or the other should be removed, so please make an issue detailing the conflict.
-
-### Have you found a deprecated list?
-
-Please make an issue featuring the list and whether or not it should be removed or archived.
-
-### Do you have a host or some hosts to whitelist or blacklist?
-
-Join the corresponding discussion and post 'em!
-
-### Have you found a bug in the main program?
-
-Please make an issue detailing the problem as thoroughly as possible.
-
-## Manually adding a list
+# Adding a list
 
 `Black Mirror` works by taking blacklist or whitelist listings from `data/v2/manifest.json`.
 Each listing has the following fields:
 
+* **_notes**: Any extra information about the list or its filters.
+* **archive**: `true` or `false`.
+  * Will autocommit the list to the archive submodule in case the original ever becomes unvailable or maliciously modified.
+* **checksums**: Checksums for the list in the form of a JSON object with the key being the checksum format and the value being the checksum's URL.
+* **content**:
+  * **filter**: A preprocessing command to transform the list into plain text. Reference where the filters [are defined](https://github.com/T145/black-mirror/blob/master/scripts/v2/apply_filters.bash).
+  * **retriever**: The utility to download the list. Reference where retrievers [are defined](https://github.com/T145/black-mirror/blob/master/scripts/v2/build_lists.bash#L60).
+  * **type**: Determines which filter type is applied. Reference where filters [are defined](https://github.com/T145/black-mirror/blob/master/scripts/v2/apply_filters.bash).
+* **formats**: Applies a designated filter and sends the output to a list with the specified host type. Reference where filters [are defined](https://github.com/T145/black-mirror/blob/master/scripts/v2/apply_filters.bash).
+* **metadata**: An object with a `description`, `homepage`, and `license` string objects.
+* **method**: `BLOCK` or `ALLOW` to respectively blacklist or whitelist the hosts.
+* **mirrors**: An array of URLs where the list and its mirrors are located.
+* **topic**: A general topic to summarize the list's goal, such as `PRIVACY` or `SECURITY`.
+
 Example:
 
 ```json
-"certego_intel": {
-  "_notes": "Ignoring the IP reports since they're pretty old.",
-  "archive": true,
-  "checksums": {},
+"botvrij_misp_ip_dst": {
+  "archive": false,
+  "checksums": {
+    "md5": "https://www.botvrij.eu/data/misp.md5.ADMIN.txt",
+    "sha1": "https://www.botvrij.eu/data/misp.sha1.ADMIN.txt",
+    "sha256": "https://www.botvrij.eu/data/misp.sha256.ADMIN.txt"
+  },
   "content": {
     "filter": "NONE",
-    "retriever": "SNSCRAPE",
-    "type": "JSON"
+    "retriever": "ARIA2",
+    "type": "TEXT"
   },
   "formats": [
     {
-      "filter": "CERTEGO",
-      "format": "DOMAIN"
+      "filter": "NONE",
+      "format": "IPV4"
     }
   ],
   "metadata": {
-    "description": "https://twitter.com/Certego_Intel",
-    "homepage": "https://twitter.com/Certego_Intel",
+    "description": "https://www.botvrij.eu/data/",
+    "homepage": "https://www.botvrij.eu/",
     "license": "not-available"
   },
   "method": "BLOCK",
   "mirrors": [
-    "Certego_Intel"
+    "https://www.botvrij.eu/data/misp.text_ip-dst.ADMIN.txt"
   ],
   "topic": "SECURITY"
 }
 ```
-
-* **_notes**: Any information to detail more on how to use the list.
-* **archive**: `true` or `false`.
-  * Will autocommit the list to the archive submodule in case the original ever becomes unvailable or maliciously modified.
-* **checksums**: Provide any checksums for the list in the form of a JSON object with the key being the checksum format and the value being the checksum's URL.
-* **content**:
-  * **filter**: How any preprocessing required to perform on the list. Reference where the filters [are defined](https://github.com/T145/black-mirror/blob/master/scripts/v2/apply_filters.bash).
-  * **retriever**: Download the list. Reference where the retrievers [are defined](https://github.com/T145/black-mirror/blob/master/scripts/v2/build_lists.bash#L60).
-  * **type**: Determines which filter type is applied. Reference where the filters [are defined](https://github.com/T145/black-mirror/blob/master/scripts/v2/apply_filters.bash).
-* **formats**: Applies a designated filter and sends the output to a list with the specified host type. Reference where the filters [are defined](https://github.com/T145/black-mirror/blob/master/scripts/v2/apply_filters.bash).
-* **metadata**: Should be self-explanatory.
-* **method**: `BLOCK` or `ALLOW` to respectively blacklist or whitelist the hosts.
-* **mirrors**: An array of URLs where the list is located.
-* **topic**: A general topic the list emphasizes, such as `PRIVACY` or `SECURITY`.
-
-Now go make a PR!
 
 ### Adding an Adblock list
 

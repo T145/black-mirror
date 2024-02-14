@@ -1,0 +1,37 @@
+---
+name: Documentation Update
+description: Update some documentation
+title: "[docs]: "
+labels: ["documentation"]
+assignees:
+  - T145
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill this out!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: request
+    attributes:
+      label: What needs a change?
+      description: Also tell us implementation details if applicable.
+      placeholder: Place details here!
+      value: "This needed a grammar fix..."
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/T145/black-mirror/blob/master/CODE_OF_CONDUCT.md#contributor-covenant-code-of-conduct)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
