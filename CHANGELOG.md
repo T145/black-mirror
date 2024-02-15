@@ -8,6 +8,10 @@
 
 - \[feature\]: sources.adguard seems to be missing? [\#119](https://github.com/T145/black-mirror/issues/119)
 
+**Fixed bugs:**
+
+- \[bug\]: Herrbischoff lists are not downloading during CI [\#129](https://github.com/T145/black-mirror/issues/129)
+
 **Merged pull requests:**
 
 - chore\(deps\): bump tj-actions/github-changelog-generator from 7ab65a1a0aa50760bcbaec364d55956e4bcec163 to 224c1e160604b84c3c9e54cc9848a5c34870edc3 in /.github/workflows [\#128](https://github.com/T145/black-mirror/pull/128) ([dependabot[bot]](https://github.com/apps/dependabot))
