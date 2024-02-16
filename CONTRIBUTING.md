@@ -17,7 +17,7 @@ Each listing has the following fields:
 
 * **_notes**: Any extra information about the list or its filters.
 * **archive**: `true` or `false`.
-  * Will autocommit the list to the archive submodule in case the original ever becomes unvailable or maliciously modified.
+  * Saves the list to the Internet Archive in case the original ever becomes unvailable or maliciously modified.
 * **checksums**: Checksums for the list in the form of a JSON object with the key being the checksum format and the value being the checksum's URL.
 * **content**:
   * **filter**: A preprocessing command to transform the list into plain text. Reference where the filters [are defined](https://github.com/T145/black-mirror/blob/master/scripts/v2/apply_filters.bash).
