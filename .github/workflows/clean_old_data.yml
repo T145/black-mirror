@@ -14,7 +14,7 @@ jobs:
     steps:
       # https://github.com/Mattraks/delete-workflow-runs
       - name: Remove expired workflow runs
-        uses: Mattraks/delete-workflow-runs@99626ea7e2020a8ab987073a1e127e2597102694
+        uses: Mattraks/delete-workflow-runs@c3872d103f18a947d291cd2c3c81c90397b4b830
         with:
           token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
           retain_days: 1
