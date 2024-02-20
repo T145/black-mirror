@@ -14,6 +14,7 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump Mattraks/delete-workflow-runs from 99626ea7e2020a8ab987073a1e127e2597102694 to c3872d103f18a947d291cd2c3c81c90397b4b830 in /.github/workflows [\#135](https://github.com/T145/black-mirror/pull/135) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump tj-actions/github-changelog-generator from 7ab65a1a0aa50760bcbaec364d55956e4bcec163 to 224c1e160604b84c3c9e54cc9848a5c34870edc3 in /.github/workflows [\#128](https://github.com/T145/black-mirror/pull/128) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/upload-artifact from 3a8048248f2f288c271830f8ecf2a1c5d8eb0e9a to 4c0ff1c489dca52fedb26375d7d8fe7bd9233f19 in /.github/workflows [\#126](https://github.com/T145/black-mirror/pull/126) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump softprops/action-gh-release from c9b46fe7aad9f02afd89b12450b780f52dacfb2d to 4634c16e79c963813287e889244c50009e7f0981 in /.github/workflows [\#125](https://github.com/T145/black-mirror/pull/125) ([dependabot[bot]](https://github.com/apps/dependabot))
