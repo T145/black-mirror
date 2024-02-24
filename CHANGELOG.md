@@ -14,6 +14,11 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump docker/setup-buildx-action from edfb0fe6204400c56fbfd3feba3fe9ad1adfa345 to 0d103c3126aa41d772a8362f6aa67afac040f80c in /.github/workflows [\#141](https://github.com/T145/black-mirror/pull/141) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/setup-qemu-action from e0e4588fad221d38ee467c0bffd91115366dc0c5 to 13c418a7a83fd3d2be64d58f68c94a6f1951d3ce in /.github/workflows [\#140](https://github.com/T145/black-mirror/pull/140) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/build-push-action from 4976231911ebf5f32aad765192d35f942aa48cb8 to b3eddbb94c4146a0988a620b01720afe50639271 in /.github/workflows [\#138](https://github.com/T145/black-mirror/pull/138) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/login-action from 83a00bc1ab5ded6580f31df1c49e6aaa932d840d to 5139682d94efc37792e6b54386b5b470a68a4737 in /.github/workflows [\#137](https://github.com/T145/black-mirror/pull/137) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump stefanzweifel/git-auto-commit-action from 4d160c5e4d67c62e67f03ae49aa38359e964139a to e040c596f0a65570b339c60818081175bcf82d11 in /.github/workflows [\#136](https://github.com/T145/black-mirror/pull/136) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump Mattraks/delete-workflow-runs from 99626ea7e2020a8ab987073a1e127e2597102694 to c3872d103f18a947d291cd2c3c81c90397b4b830 in /.github/workflows [\#135](https://github.com/T145/black-mirror/pull/135) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump tj-actions/github-changelog-generator from 224c1e160604b84c3c9e54cc9848a5c34870edc3 to 1a433c6dd89ce95368c1d416c0e47afa10bc2b8c in /.github/workflows [\#134](https://github.com/T145/black-mirror/pull/134) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/setup-qemu-action from 5306bad0baa6b616b9934712d4eba8da2112606d to e0e4588fad221d38ee467c0bffd91115366dc0c5 in /.github/workflows [\#133](https://github.com/T145/black-mirror/pull/133) ([dependabot[bot]](https://github.com/apps/dependabot))
