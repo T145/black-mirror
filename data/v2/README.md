@@ -168,6 +168,9 @@
 - [Cat's Team](https://github.com/Cats-Team/AdRules)
   - Just copies the [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash) `BanAD` & `BanProgramAD` lists.
 - [cmiksche](https://gitlab.com/cmiksche/blacklists)
+- [Filtri DNS](https://web.archive.org/web/20230415114729/https://filtri-dns.ga/filtri.txt)
+  - [Old Link](https://filtri-dns.ga/filtri.txt)
+  - A combination of EasyList Italy and X Files
 
 # 🧟 Zombies
 
@@ -338,6 +341,7 @@
 - [twcau](https://github.com/twcau/AdblockRules)
 - [AdblockListABP](https://github.com/w13d/adblockListABP-PiHole)
 - [xlimit91](https://github.com/xlimit91/xlimit91-block-list)
+  - Loads of false positives too
 - [china-cdn-domain-whitelist](https://github.com/mawenjian/china-cdn-domain-whitelist)
 - [TheGreatWall](https://github.com/Sekhan/TheGreatWall)
 - [Flyn Computing](https://www.flyn.org/CDX/2017-dns-blacklist.txt)

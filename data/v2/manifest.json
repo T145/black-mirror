@@ -3600,34 +3600,6 @@
       "pihole": "https://block.energized.pro/assets/sources/filter/fanboy-ultimate.txt"
     }
   },
-  "filtri_dns": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "SIMPLE_HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://filtri-dns.ga/",
-      "homepage": "https://filtri-dns.ga/",
-      "license": "cc-by-sa-4.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://web.archive.org/web/20230415114729/https://filtri-dns.ga/filtri.txt"
-    ],
-    "topic": "SECURITY",
-    "variants": {
-      "pihole": "https://filtri-dns.ga/filtri.txt"
-    }
-  },
   "firehol_level4": {
     "archive": false,
     "checksums": {},
@@ -4012,34 +3984,6 @@
     "topic": "SECURITY",
     "variants": {
       "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Xiaomi-Extension.txt"
-    }
-  },
-  "goodbye_ads_youtube": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/jerryn70/GoodbyeAds#package-sources=",
-      "homepage": "https://github.com/jerryn70/GoodbyeAds",
-      "license": "mit"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-YouTube-AdBlock.txt"
-    ],
-    "topic": "SECURITY",
-    "variants": {
-      "pihole": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-YouTube-AdBlock.txt"
     }
   },
   "government_malware": {
@@ -7541,31 +7485,6 @@
     ],
     "topic": "SECURITY"
   },
-  "quantum_extreme_youtube_ads": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "SIMPLE_HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list",
-      "homepage": "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list",
-      "license": "unlicense"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual%20lists/Extreme%20lists/The_Quantum_Extreme_Youtube_Ad-List.txt"
-    ],
-    "topic": "SECURITY"
-  },
   "quantum_privacy": {
     "archive": false,
     "checksums": {},
@@ -10343,5 +10262,33 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
+  },
+  "snota418": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "SIMPLE_HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Snota418/Youtube-spam-host-list/",
+      "homepage": "https://github.com/Snota418/Youtube-spam-host-list/",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Snota418/Youtube-spam-host-list/main/Crypto%20streams"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/Snota418/Youtube-spam-host-list/main/Crypto%20streams"
+    }
   }
 }
