@@ -3193,6 +3193,31 @@
     ],
     "topic": "SECURITY"
   },
+  "dogino_discord": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "SIMPLE_HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Dogino/Discord-Phishing-URLs/",
+      "homepage": "https://github.com/Dogino/Discord-Phishing-URLs/",
+      "license": "unlicense"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Dogino/Discord-Phishing-URLs/main/pihole-phishing-adlist.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "dshield": {
     "archive": false,
     "checksums": {},
@@ -10288,31 +10313,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://zonefiles.io/f/compromised/ip/live/"
-    ],
-    "topic": "SECURITY"
-  },
-  "dogino_discord": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "SIMPLE_HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/Dogino/Discord-Phishing-URLs/",
-      "homepage": "https://github.com/Dogino/Discord-Phishing-URLs/",
-      "license": "unlicense"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/Dogino/Discord-Phishing-URLs/main/pihole-phishing-adlist.txt"
     ],
     "topic": "SECURITY"
   }
