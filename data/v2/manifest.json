@@ -8260,6 +8260,34 @@
     ],
     "topic": "SECURITY"
   },
+  "snota418": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "SIMPLE_HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Snota418/Youtube-spam-host-list/",
+      "homepage": "https://github.com/Snota418/Youtube-spam-host-list/",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Snota418/Youtube-spam-host-list/main/Crypto%20streams"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/Snota418/Youtube-spam-host-list/main/Crypto%20streams"
+    }
+  },
   "soteria_nou_ads": {
     "archive": false,
     "checksums": {},
@@ -10262,33 +10290,5 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
-  },
-  "snota418": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "SIMPLE_HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/Snota418/Youtube-spam-host-list/",
-      "homepage": "https://github.com/Snota418/Youtube-spam-host-list/",
-      "license": "mit"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/Snota418/Youtube-spam-host-list/main/Crypto%20streams"
-    ],
-    "topic": "SECURITY",
-    "variants": {
-      "pihole": "https://raw.githubusercontent.com/Snota418/Youtube-spam-host-list/main/Crypto%20streams"
-    }
   }
 }
