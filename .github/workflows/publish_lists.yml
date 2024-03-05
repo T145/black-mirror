@@ -71,7 +71,7 @@ jobs:
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       # https://github.com/actions/download-artifact#limitations=
       - name: Fetch lists
-        uses: actions/download-artifact@348754975ef0295bfa2c111cba996120cfdf8a5d
+        uses: actions/download-artifact@c850b930e6ba138125429b7e5c93fc707a7f8427
         with:
           name: lists
       - name: Extract & verify lists
@@ -100,7 +100,7 @@ jobs:
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       # https://github.com/actions/download-artifact#limitations=
       - name: Fetch lists
-        uses: actions/download-artifact@348754975ef0295bfa2c111cba996120cfdf8a5d
+        uses: actions/download-artifact@c850b930e6ba138125429b7e5c93fc707a7f8427
         with:
           name: lists
       - name: Extract & verify lists
@@ -170,7 +170,7 @@ jobs:
       - name: Generate changelog
         uses: tj-actions/github-changelog-generator@cd6cc6efdc274185f186d2a0ca6856403b230d0d
       - name: Fetch documents
-        uses: actions/download-artifact@348754975ef0295bfa2c111cba996120cfdf8a5d
+        uses: actions/download-artifact@c850b930e6ba138125429b7e5c93fc707a7f8427
         with:
           name: docs
       - name: Delete docs artifact
