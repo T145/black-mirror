@@ -32,7 +32,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ github.token }}
       - name: Build and push
-        uses: docker/build-push-action@831ca179d3cf91cf0c90ca465a408fa61e2129a2
+        uses: docker/build-push-action@00ae31ab6ef216583e63647d8865f52da6b99a13
         with:
           context: .
           builder: ${{ steps.buildx.outputs.name }}
