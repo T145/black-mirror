@@ -10290,5 +10290,30 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
+  },
+  "sefinek_whitelist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/sefinek24/Sefinek-Blocklist-Collection/",
+      "homepage": "https://blocklist.sefinek.net/",
+      "license": "cc-by-4.0"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/sefinek24/Sefinek-Blocklist-Collection/main/whitelists/main.txt"
+    ],
+    "topic": "SECURITY"
   }
 }
