@@ -23,7 +23,7 @@ jobs:
       options: --user root
     steps:
       - name: Checkout repo
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
         with:
           submodules: true
       - name: Generate lists
@@ -68,7 +68,7 @@ jobs:
       contents: write
     steps:
       - name: Checkout repo
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
       # https://github.com/actions/download-artifact#limitations=
       - name: Fetch lists
         uses: actions/download-artifact@c850b930e6ba138125429b7e5c93fc707a7f8427
@@ -97,7 +97,7 @@ jobs:
     continue-on-error: true
     steps:
       - name: Checkout repo
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
       # https://github.com/actions/download-artifact#limitations=
       - name: Fetch lists
         uses: actions/download-artifact@c850b930e6ba138125429b7e5c93fc707a7f8427
@@ -153,7 +153,7 @@ jobs:
     permissions: write-all
     steps:
       - name: Checkout repo
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
       - name: Delete build artifact
         uses: GeekyEggo/delete-artifact@3f83cd6bfd1bb806746002ab8b59cc6f76f1740f
         with:
@@ -164,7 +164,7 @@ jobs:
     permissions: write-all
     steps:
       - name: Checkout repo
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
         with:
           fetch-depth: 0
       - name: Generate changelog
