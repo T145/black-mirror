@@ -14,6 +14,10 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump docker/build-push-action from 5.2.0 to 5.3.0 in /.github/workflows [\#162](https://github.com/T145/black-mirror/pull/162) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/setup-buildx-action from 3.1.0 to 3.2.0 in /.github/workflows [\#161](https://github.com/T145/black-mirror/pull/161) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump softprops/action-gh-release from 2.0.2 to 2.0.4 in /.github/workflows [\#159](https://github.com/T145/black-mirror/pull/159) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump actions/checkout from 4.1.1 to 4.1.2 in /.github/workflows [\#158](https://github.com/T145/black-mirror/pull/158) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump tj-actions/github-changelog-generator from cd6cc6efdc274185f186d2a0ca6856403b230d0d to 79640f18bb90f084451caabf9e807a4e3ef28b02 in /.github/workflows [\#156](https://github.com/T145/black-mirror/pull/156) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump softprops/action-gh-release from 4634c16e79c963813287e889244c50009e7f0981 to d99959edae48b5ffffd7b00da66dcdb0a33a52ee in /.github/workflows [\#155](https://github.com/T145/black-mirror/pull/155) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/build-push-action from 831ca179d3cf91cf0c90ca465a408fa61e2129a2 to af5a7ed5ba88268d5278f7203fb52cd833f66d6e in /.github/workflows [\#154](https://github.com/T145/black-mirror/pull/154) ([dependabot[bot]](https://github.com/apps/dependabot))
