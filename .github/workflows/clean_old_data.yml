@@ -21,7 +21,7 @@ jobs:
           keep_minimum_runs: 2
       # https://github.com/otto-de/purge-deprecated-workflow-runs
       - name: Remove ancient workflow runs
-        uses: otto-de/purge-deprecated-workflow-runs@92c76f4e319728cef930489ae0ac7dd5e72e550e
+        uses: otto-de/purge-deprecated-workflow-runs@9153ae001447f83141bc1fd902bad64ea2ce42c5
         with:
           token: ${{ secrets.FOR_WEBHOOKS_SECRET }}
           remove-cancelled: true
