@@ -155,7 +155,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
       - name: Delete build artifact
-        uses: GeekyEggo/delete-artifact@3f83cd6bfd1bb806746002ab8b59cc6f76f1740f
+        uses: GeekyEggo/delete-artifact@7ef9ad14db68b2b805c8b43c32cd3f79d501804c
         with:
           name: lists
   update_docs:
@@ -174,7 +174,7 @@ jobs:
         with:
           name: docs
       - name: Delete docs artifact
-        uses: GeekyEggo/delete-artifact@3f83cd6bfd1bb806746002ab8b59cc6f76f1740f
+        uses: GeekyEggo/delete-artifact@7ef9ad14db68b2b805c8b43c32cd3f79d501804c
         with:
           name: docs
       - name: Make the working tree safe
