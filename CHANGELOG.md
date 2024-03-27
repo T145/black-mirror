@@ -14,8 +14,12 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump tj-actions/github-changelog-generator from 79640f18bb90f084451caabf9e807a4e3ef28b02 to 37e350393ce2a682752c668d766430b127a0e45e in /.github/workflows [\#167](https://github.com/T145/black-mirror/pull/167) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump otto-de/purge-deprecated-workflow-runs from 92c76f4e319728cef930489ae0ac7dd5e72e550e to 9153ae001447f83141bc1fd902bad64ea2ce42c5 in /.github/workflows [\#166](https://github.com/T145/black-mirror/pull/166) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump GeekyEggo/delete-artifact from 3f83cd6bfd1bb806746002ab8b59cc6f76f1740f to 7ef9ad14db68b2b805c8b43c32cd3f79d501804c in /.github/workflows [\#163](https://github.com/T145/black-mirror/pull/163) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/build-push-action from 5.2.0 to 5.3.0 in /.github/workflows [\#162](https://github.com/T145/black-mirror/pull/162) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/setup-buildx-action from 3.1.0 to 3.2.0 in /.github/workflows [\#161](https://github.com/T145/black-mirror/pull/161) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/login-action from 5139682d94efc37792e6b54386b5b470a68a4737 to e92390c5fb421da1463c202d546fed0ec5c39f20 in /.github/workflows [\#160](https://github.com/T145/black-mirror/pull/160) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump softprops/action-gh-release from 2.0.2 to 2.0.4 in /.github/workflows [\#159](https://github.com/T145/black-mirror/pull/159) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/checkout from 4.1.1 to 4.1.2 in /.github/workflows [\#158](https://github.com/T145/black-mirror/pull/158) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump tj-actions/github-changelog-generator from cd6cc6efdc274185f186d2a0ca6856403b230d0d to 79640f18bb90f084451caabf9e807a4e3ef28b02 in /.github/workflows [\#156](https://github.com/T145/black-mirror/pull/156) ([dependabot[bot]](https://github.com/apps/dependabot))
