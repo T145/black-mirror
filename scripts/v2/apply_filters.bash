@@ -29,11 +29,6 @@ mlr_cut_col() {
 	mlr --csv --skip-comments -N clean-whitespace then cut -f "$1"
 }
 
-# params: ASN to look up
-asn_lookup() {
-	whois -h whois.radb.net -- "-i origin {$1}" | mawk '$1~/^route(6)?:$/{print $2}'
-}
-
 process_list() {
 	local FILE_PATH
 	local LIST_METHOD
