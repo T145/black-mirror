@@ -48,7 +48,7 @@ RUN apt-get -y update; \
 # https://gitlab.com/parrotsec/build/containers
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.1.0" \
+      version="6.1.1" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -122,6 +122,7 @@ RUN apt-get -y install --no-install-recommends \
     p7zip-full=16.02+dfsg-8 \
     symlinks=* \
     unzip=6.0-28 \
+    whois=5.5.17 \
     xz-utils=5.4.1-0.2 \
     zlib1g=1:1.2.13.dfsg-1; \
     apt-get install -y --no-install-recommends --reinstall ca-certificates=*; \
