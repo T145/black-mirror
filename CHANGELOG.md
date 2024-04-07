@@ -14,6 +14,7 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump tj-actions/github-changelog-generator from 37e350393ce2a682752c668d766430b127a0e45e to c45cd9913c6df54e0500cd666ee82ade9385ece6 in /.github/workflows [\#169](https://github.com/T145/black-mirror/pull/169) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump tj-actions/github-changelog-generator from 79640f18bb90f084451caabf9e807a4e3ef28b02 to 37e350393ce2a682752c668d766430b127a0e45e in /.github/workflows [\#167](https://github.com/T145/black-mirror/pull/167) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump otto-de/purge-deprecated-workflow-runs from 92c76f4e319728cef930489ae0ac7dd5e72e550e to 9153ae001447f83141bc1fd902bad64ea2ce42c5 in /.github/workflows [\#166](https://github.com/T145/black-mirror/pull/166) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump GeekyEggo/delete-artifact from 3f83cd6bfd1bb806746002ab8b59cc6f76f1740f to 7ef9ad14db68b2b805c8b43c32cd3f79d501804c in /.github/workflows [\#163](https://github.com/T145/black-mirror/pull/163) ([dependabot[bot]](https://github.com/apps/dependabot))
