@@ -10394,5 +10394,38 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
+  },
+  "github_meta": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "GITHUB_ACTIONS_DOMAINS",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "GITHUB_META_CIDR4",
+        "format": "CIDR4"
+      },
+      {
+        "filter": "GITHUB_META_CIDR6",
+        "format": "CIDR6"
+      }
+    ],
+    "metadata": {
+      "description": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-githubs-ip-addresses",
+      "homepage": "https://docs.github.com/en/rest/meta/meta?apiVersion=2022-11-28#get-github-meta-information",
+      "license": "all-rights-reserved"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://api.github.com/meta"
+    ],
+    "topic": "SECURITY"
   }
 }

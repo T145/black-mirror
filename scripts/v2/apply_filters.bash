@@ -8,6 +8,14 @@ get_ipv6s() {
 	ipinfo grepip -6hox --nocolor
 }
 
+get_ipv4_cidrs() {
+	ipinfo grepip -4h --nocolor --cidrs-only
+}
+
+get_ipv6_cidrs() {
+	ipinfo grepip -6h --nocolor --cidrs-only
+}
+
 get_domains() {
 	perl -MData::Validate::IP=is_ipv4 -nE 'chomp; if(defined($_) && !is_ipv4($_)) {say $_;}'
 }
@@ -139,6 +147,9 @@ process_list() {
 			'SECUREDROP') jq -r '.[] | .onion_address as $onion | .organization_url | split("/")[2] as $org | $org, $onion' ;;
 			'VIVALDI') jq -r '.[] | select(.filterStatus == "ON") | .reviewedSite' ;;
 			'MSEDGE') jq -r '.sites[].url' ;;
+			'GITHUB_ACTIONS_DOMAINS') jq -r '.domains.actions[]' ;;
+			'GITHUB_META_CIDR4') jq -r '.hooks[], .web[], .api[], .git[], .github_enterprise_importer[], .packages[], .pages[], .importer[], .actions[], .dependabot[]' | get_ipv4_cidrs ;;
+			'GITHUB_META_CIDR6') jq -r '.hooks[], .web[], .api[], .git[], .github_enterprise_importer[], .pages[], .actions[]' | get_ipv6_cidrs ;;
 			esac
 			;;
 		'CSV')
