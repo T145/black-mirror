@@ -54,6 +54,13 @@
 - [malwaredomainlist_delisted](https://www.malwaredomainlist.com/hostslist/delisted.txt)
   - [Homepage](https://www.malwaredomainlist.com/forums/index.php?topic=3270.0)
 
+### Data to Scrape
+
+- https://tracker.h3x.eu/download/5000
+- https://www.circl.lu/doc/misp/feed-osint/
+- https://api.xforce.ibmcloud.com/doc/
+- https://blacklist.lashback.com/
+
 ## ⬜ Whitelists
 
 *Add more here!*
@@ -221,8 +228,9 @@
 - [Princeton Webcensus](https://webtransparency.cs.princeton.edu/webcensus/)
 - [UnrealSecurity](https://github.com/UnrealSecurity/badips)
   - Takes too long to respond; likely offline.
-- [ipspamlist](http://www.ipspamlist.com/)
-  - Last updated in 2020.
+- [IPSpamList](http://www.ipspamlist.com/public_feeds.csv)
+  - Free feeds are inactive
+  - Active feeds are paywalled
 - [neohosts](https://github.com/neoFelhz/neohosts)
 - [android-stalkerware](https://github.com/diskurse/android-stalkerware)
 - [stalkerware-urls](https://github.com/astryzia/stalkerware-urls)
@@ -570,3 +578,10 @@
 - [dnsblocklistnet](https://github.com/dnsblocklistnet/blocklists)
 - [cert-agid lists](https://cert-agid.gov.it/download/)
   - If there are any present compromised domains that are active and malicious, they'll likely appear in other maintained security lists.
+- [LinuxTracker](https://github.com/LinuxTracker/Blocklists)
+- [USCERT HIDDEN COBRA](https://www.cisa.gov/sites/default/files/publications/TA-17-164A_csv.csv)
+  - Last-Modified: Thu, 05 Jan 2023 14:02:34 GMT
+  - Predominately contains IPs
+- [PushingInertia](https://github.com/pushinginertia/ip-blacklist)
+- [ImproWare](https://antispam.imp.ch/)
+  - No public facing lists found

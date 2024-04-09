@@ -314,6 +314,7 @@ With Docker running in the background, execute `pnpm lint` to debug any changes.
 > Good causes that help secure your digital life.
 
 - *__[Stop using Cloudflare!](https://framagit.org/dCF/deCloudflare/-/tree/master)__*
+- Keep up with [Chinese activity](https://www.chinasentry.com/congressional)!
 - Use a [pcWRT](https://shop.pcwrt.com/) to easily secure your internet!
 - Test your browser's tracking resilience with [CoverYourTracks](https://coveryourtracks.eff.org/)!
 - Support [LetsBlockIt](https://letsblock.it/) to consolidate and simplify uBlock filters!
@@ -336,8 +337,6 @@ With Docker running in the background, execute `pnpm lint` to debug any changes.
 - <https://filterlists.com/>
 - <https://firebog.net/>
 - <https://grimore.org/assets/databases/blocklist-ipsets>
-- <https://users.cs.northwestern.edu/~jesse/course/cs214-fa19/lec/21-bloom/bloom.txt>
-- <https://gist.github.com/jedisct1/c7548d814de2dd661f033d9cb18a0006>
 
 ### Lamers Unwelcome
 
@@ -350,13 +349,6 @@ With Docker running in the background, execute `pnpm lint` to debug any changes.
 - [malshare](https://malshare.com/daily/malshare.current.all.txt)
 - [Metasploit CVEs](https://feeds.ecrimelabs.net/data/metasploit-cve)
 - [malarchive](https://github.com/raw-data/malarchive)
-
-### Interesting Oddities
-
-- <https://www.chaosreigns.com/>
-- <https://vpn.hidemyass.com/vpn-config/>
-- <http://www.textfiles.com/programming/>
-- <https://www.rhyolite.com//anti-spam/you-might-be.html>
 
 ### Big Data Lists
 
@@ -378,3 +370,4 @@ With Docker running in the background, execute `pnpm lint` to debug any changes.
 - [openportstats](http://www.openportstats.com/)
 - [ipdeny](https://www.ipdeny.com/ipblocks/)
 - [IPverse](http://ipverse.net/)
+- [IP2Location](https://lite.ip2location.com/ip2location-lite)
