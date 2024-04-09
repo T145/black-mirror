@@ -10527,5 +10527,31 @@
       "https://www.nixspam.net/download/nixspam-ip.dump.gz"
     ],
     "topic": "SECURITY"
+  },
+  "iblocklist_pedos": {
+    "_notes": "The 'cidr' and 'p2p' formats produce the same output.",
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "GZIP",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NO_PEDOS",
+        "format": "CIDR4"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.iblocklist.com/lists?fileformat=p2p&archiveformat=gz",
+      "homepage": "https://www.iblocklist.com/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "http://list.iblocklist.com/?list=dufcxgnbjsdwmwctgfuj&fileformat=cidr&archiveformat=gz"
+    ],
+    "topic": "SAFETY"
   }
 }

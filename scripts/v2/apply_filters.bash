@@ -117,6 +117,7 @@ process_list() {
 					done
 				;;
 			'SECOND_COLUMN') mawk '{print $2}' ;;
+			'NO_PEDOS') mawk -F: '/^[^[:space:]]/{print $2}' | ipinfo range2cidr ;;
 			esac
 			;;
 		'JSON')
