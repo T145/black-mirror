@@ -10502,5 +10502,30 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
+  },
+  "nix_spam": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "GZIP",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "SECOND_COLUMN",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.heise.de/ix/NiX-Spam-DNSBL-and-blacklist-for-download-499637.html",
+      "homepage": "https://www.nixspam.net/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.nixspam.net/download/nixspam-ip.dump.gz"
+    ],
+    "topic": "SECURITY"
   }
 }

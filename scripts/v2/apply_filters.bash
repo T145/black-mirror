@@ -116,6 +116,7 @@ process_list() {
 						whois -h whois.radb.net -- "-i origin ${asn}" | mawk '$1~/^route6:$/{print $2}'
 					done
 				;;
+			'SECOND_COLUMN') mawk '{print $2}' ;;
 			esac
 			;;
 		'JSON')
