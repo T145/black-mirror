@@ -76,14 +76,6 @@ cleanup() {
 	chmod +t /tmp
 }
 
-# params: output list type, retriever id,
-get_lists() {
-	jq -r --arg method "$1" --arg retriever "$2" 'to_entries[] |
-		select(.value.content.retriever == $retriever and .value.method == $method) |
-		{key, mirrors: .value.mirrors} |
-		(.mirrors | join("\t")), " out=\(.key)"' data/v2/manifest.json
-}
-
 main() {
 	local cache
 	local list
@@ -107,23 +99,40 @@ main() {
 			while read -r retriever; do
 				case "$retriever" in
 				'ARIA2')
-					get_lists "$method" 'ARIA2' |
+					jq -r --arg method "$method" 'to_entries[] |
+						select(.value.content.retriever == "ARIA2" and .value.method == $method) |
+						{key, mirrors: .value.mirrors} |
+						(.mirrors | join("\t")), " out=\(.key)"' data/v2/manifest.json |
 						aria2c -i- -d "$cache" --conf-path='./configs/aria2.conf'
 					;;
 				'WGET')
-					get_lists "$method" 'WGET' |
+					jq -r --arg method "$method" 'to_entries[] |
+						select(.value.content.retriever == "WGET" and .value.method == $method) |
+						{key, mirror: .value.mirrors[0]} |
+						"\(.key)#\(.mirror)"' data/v2/manifest.json |
 						while IFS='#' read -r key mirror; do
+							# https://www.gnu.org/software/wget/manual/html_node/Download-Options
+							# https://www.gnu.org/software/wget/manual/html_node/Logging-and-Input-File-Options.html
 							wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
 						done
 					;;
 				'WGET_INSECURE')
-					get_lists "$method" 'WGET_INSECURE' |
+					jq -r --arg method "$method" 'to_entries[] |
+						select(.value.content.retriever == "WGET_INSECURE" and .value.method == $method) |
+						{key, mirror: .value.mirrors[0]} |
+						"\(.key)#\(.mirror)"' data/v2/manifest.json |
 						while IFS='#' read -r key mirror; do
+							# https://www.gnu.org/software/wget/manual/html_node/Download-Options
+							# https://www.gnu.org/software/wget/manual/html_node/Logging-and-Input-File-Options.html
+							# https://www.gnu.org/software/wget/manual/wget.html
 							wget -P "$cache" --no-check-certificate --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
 						done
 					;;
 				'ASN_QUERY')
-					get_lists "$method" 'ASN_QUERY' |
+					jq -r --arg method "$method" 'to_entries[] |
+						select(.value.content.retriever == "ASN_QUERY" and .value.method == $method) |
+						{key, mirror: .value.mirrors[0]} |
+						"\(.key)#\(.mirror)"' data/v2/manifest.json |
 						while IFS='#' read -r key mirror; do
 							curl -s "$mirror" | mawk '/^[^[:space:]|^#|^!|^;|^$|^:]/{print $1}' |
 							while read -r asn; do
@@ -132,7 +141,9 @@ main() {
 						done
 					;;
 				# 'SNSCRAPE')
-				# 	get_lists "$method" 'SNSCRAPE' |
+				# 	jq -r --arg method "$method" 'to_entries[] |
+				# 		select(.value.content.retriever == "SNSCRAPE" and .value.method == $method) |
+				# 		{key, mirror: .value.mirrors[0]} |
 				# 		"\(.key)#\(.mirror)"' data/v2/manifest.json |
 				# 		while IFS='#' read -r key mirror; do
 				# 			snscrape --jsonl twitter-user "$mirror" >"$key"
