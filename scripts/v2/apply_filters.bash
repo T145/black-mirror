@@ -104,18 +104,8 @@ process_list() {
 			'POP3GROPERS_IPV6') mawk '$0~/:/&&$0!~/\/|^#/{gsub(/ /, "", $1); print $1}' ;;
 			'CLASH_DOMAIN') mawk -F, '$1~/^DOMAIN/&&$1!~/KEYWORD$/{print $2}' ;;
 			'CLASH_CIDR4') mawk -F, '$1~/^IP-CIDR/{print $2}' ;;
-			'ASN_CIDR4')
-				mawk '/^[^[:space:]|^#|^!|^;|^$|^:]/{print $1}' |
-					while read -r asn; do
-						whois -h whois.radb.net -- "-i origin ${asn}" | mawk '$1~/^route:$/{print $2}'
-					done
-				;;
-			'ASN_CIDR6')
-				mawk '/^[^[:space:]|^#|^!|^;|^$|^:]/{print $1}' |
-					while read -r asn; do
-						whois -h whois.radb.net -- "-i origin ${asn}" | mawk '$1~/^route6:$/{print $2}'
-					done
-				;;
+			'ASN_CIDR4') mawk '$1~/^route:$/{print $2}' ;;
+			'ASN_CIDR6') mawk '$1~/^route6:$/{print $2}' ;;
 			'SECOND_COLUMN') mawk '{print $2}' ;;
 			'NO_PEDOS') mawk -F: '/^[^[:space:]]/{print $2}' | ipinfo range2cidr ;;
 			esac

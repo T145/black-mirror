@@ -113,7 +113,7 @@ main() {
 						while IFS='#' read -r key mirror; do
 							# https://www.gnu.org/software/wget/manual/html_node/Download-Options
 							# https://www.gnu.org/software/wget/manual/html_node/Logging-and-Input-File-Options.html
-							wget --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
+							wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
 						done
 					;;
 				'WGET_INSECURE')
@@ -125,7 +125,19 @@ main() {
 							# https://www.gnu.org/software/wget/manual/html_node/Download-Options
 							# https://www.gnu.org/software/wget/manual/html_node/Logging-and-Input-File-Options.html
 							# https://www.gnu.org/software/wget/manual/wget.html
-							wget --no-check-certificate --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
+							wget -P "$cache" --no-check-certificate --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
+						done
+					;;
+				'ASN_QUERY')
+					jq -r --arg method "$method" 'to_entries[] |
+						select(.value.content.retriever == "ASN_QUERY" and .value.method == $method) |
+						{key, mirror: .value.mirrors[0]} |
+						"\(.key)#\(.mirror)"' data/v2/manifest.json |
+						while IFS='#' read -r key mirror; do
+							curl -s "$mirror" | mawk '/^[^[:space:]|^#|^!|^;|^$|^:]/{print $1}' |
+							while read -r asn; do
+								whois -h whois.radb.net -- "-i origin ${asn}" >>"${cache}/${key}"
+							done
 						done
 					;;
 				# 'SNSCRAPE')
