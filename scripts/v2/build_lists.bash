@@ -99,8 +99,6 @@ main() {
 
 		echo "[INFO] Processing method: ${method}"
 
-		# use 'lynx -dump -listonly -nonumbers' to get a raw page
-
 		set +e # temporarily disable strict fail, in case downloads fail
 		jq -r 'to_entries[].value.content.retriever' data/v2/manifest.json |
 			mawk 'NF && !seen[$0]++' | # remove duplicates
@@ -134,9 +132,14 @@ main() {
 							done
 						done
 					;;
+				'LYNX')
+					get_lists "$method" 'LYNX' |
+						while IFS='#' read -r key mirror; do
+							lynx -dump -listonly -nonumbers "$mirror" | sponge "${cache}/${key}"
+						done
+					;;
 				# 'SNSCRAPE')
 				# 	get_lists "$method" 'SNSCRAPE' |
-				# 		"\(.key)#\(.mirror)"' data/v2/manifest.json |
 				# 		while IFS='#' read -r key mirror; do
 				# 			snscrape --jsonl twitter-user "$mirror" >"$key"
 				# 		done
