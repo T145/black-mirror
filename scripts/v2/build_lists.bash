@@ -8,6 +8,7 @@ shopt -s extglob      # enable extended pattern matching (https://www.gnu.org/so
 set -euET -o pipefail # put bash into "strict mode" & have it give descriptive errors
 umask 055             # change all generated file permissions from 755 to 700
 
+OUTDIR='build'
 DOWNLOADS=$(mktemp -d)
 TMP=$(mktemp -p "$DOWNLOADS")
 ERROR_LOG='logs/error.log'
@@ -18,7 +19,7 @@ FORMAT_CIDR4='CIDR4'
 FORMAT_CIDR6='CIDR6'
 FORMAT_IPV4='IPV4'
 FORMAT_IPV6='IPV6'
-readonly DOWNLOADS TMP ERROR_LOG METHOD_ALLOW METHOD_BLOCK FORMAT_DOMAIN FORMAT_CIDR4 FORMAT_CIDR6 FORMAT_IPV4 FORMAT_IPV6
+readonly OUTDIR DOWNLOADS TMP ERROR_LOG METHOD_ALLOW METHOD_BLOCK FORMAT_DOMAIN FORMAT_CIDR4 FORMAT_CIDR6 FORMAT_IPV4 FORMAT_IPV6
 
 METHODS=("$METHOD_BLOCK" "$METHOD_ALLOW")
 FORMATS=("$FORMAT_DOMAIN" "$FORMAT_IPV4" "$FORMAT_IPV6" "$FORMAT_CIDR4" "$FORMAT_CIDR6")
@@ -63,10 +64,9 @@ apply_cidr_whitelist() {
 	fi
 }
 
-# params: output directory,
 init() {
 	trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
-	mkdir -p "$1"
+	mkdir -p "$OUTDIR"
 	# clear all logs
 	find -P -O3 ./logs -depth -type f -print0 | xargs -0 truncate -s 0
 	chmod -t /tmp
@@ -85,14 +85,12 @@ get_lists() {
 }
 
 main() {
+	init
+
 	local cache
 	local list
 	local blacklist
 	local results
-
-	outdir="build"
-
-	init "$outdir"
 
 	for method in "${METHODS[@]}"; do
 		cache="${DOWNLOADS}/${method}"
@@ -164,7 +162,7 @@ main() {
 				# https://www.gnu.org/software/parallel/parallel_tutorial.html#controlling-the-execution
 				parallel -0 --use-cpus-instead-of-cores --jobs 0 --results "$results" -X ./scripts/v2/apply_filters.bash {} "$method" "$format"
 
-			list="${outdir}/${method}_${format}.txt"
+			list="${OUTDIR}/${method}_${format}.txt"
 
 			echo "[INFO] Processed: ${list}"
 
@@ -182,16 +180,16 @@ main() {
 				sorted "$list"
 
 				if [[ "$method" == "$METHOD_ALLOW" ]]; then
-					blacklist="${outdir}/BLOCK_${format}.txt"
+					blacklist="${OUTDIR}/BLOCK_${format}.txt"
 
 					case "$format" in
 					"$FORMAT_CIDR4")
 						apply_cidr_whitelist "$blacklist" "$list"
-						apply_cidr_whitelist "${outdir}/BLOCK_IPV4.txt" "$list"
+						apply_cidr_whitelist "${OUTDIR}/BLOCK_IPV4.txt" "$list"
 						;;
 					"$FORMAT_CIDR6")
 						apply_cidr_whitelist "$blacklist" "$list"
-						apply_cidr_whitelist "${outdir}/BLOCK_IPV6.txt" "$list"
+						apply_cidr_whitelist "${OUTDIR}/BLOCK_IPV6.txt" "$list"
 						;;
 					*)
 						apply_whitelist "$blacklist" "$list"
@@ -201,10 +199,10 @@ main() {
 					# Remove IPs from the IP blacklists that are covered by the CIDR blacklists
 					case "$format" in
 					"$FORMAT_CIDR4")
-						apply_cidr_whitelist "${outdir}/BLOCK_IPV4.txt" "$list"
+						apply_cidr_whitelist "${OUTDIR}/BLOCK_IPV4.txt" "$list"
 						;;
 					"$FORMAT_CIDR6")
-						apply_cidr_whitelist "${outdir}/BLOCK_IPV6.txt" "$list"
+						apply_cidr_whitelist "${OUTDIR}/BLOCK_IPV6.txt" "$list"
 						;;
 					*) ;;
 					esac
@@ -214,8 +212,8 @@ main() {
 	done
 
 	# https://superuser.com/questions/191889/how-can-i-list-only-non-empty-files-using-ls
-	find "${outdir}" -type f -name "*.txt" -size 0 -exec rm {} \;
-	find "${outdir}" -type f -name "*.txt" -exec sha256sum {} \; | sort -k2 >>"${outdir}/CHECKSUMS.txt"
+	find "$OUTDIR" -type f -name "*.txt" -size 0 -exec rm {} \;
+	find "$OUTDIR" -type f -name "*.txt" -exec sha256sum {} \; | sort -k2 >>"${OUTDIR}/CHECKSUMS.txt"
 
 	cleanup
 }
