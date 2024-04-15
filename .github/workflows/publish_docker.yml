@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@04a8d28c228b3f4b8a1aeac1242de40d0c1e5493
+        uses: docker/setup-qemu-action@e2a9378e4fbe420303ee70e96da4b7f39a6e99b9
       - name: Set up Docker Buildx
         id: buildx
         uses: docker/setup-buildx-action@d70bba72b1f3fd22344832f00baa16ece964efeb
