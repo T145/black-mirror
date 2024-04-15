@@ -125,9 +125,9 @@ main() {
 					get_lists "$method" 'ASN_QUERY' |
 						while IFS='#' read -r key mirror; do
 							curl -s "$mirror" | mawk '/^[^[:space:]|^#|^!|^;|^$|^:]/{print $1}' |
-							while read -r asn; do
-								whois -h whois.radb.net -- "-i origin ${asn}" >>"${cache}/${key}"
-							done
+								while read -r asn; do
+									whois -h whois.radb.net -- "-i origin ${asn}" >>"${cache}/${key}"
+								done
 						done
 					;;
 				'LYNX')

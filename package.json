@@ -1,12 +1,11 @@
 {
-  "name": "black-mirror",
-  "displayName": "Black Mirror",
-  "version": "1.0.0",
+  "private": true,
   "scripts": {
     "lint": "pnpm mega-linter-runner"
   },
   "devDependencies": {
-    "mega-linter-runner": "^7.8.0"
+    "mega-linter-runner": "^7.10.0",
+    "mem-fs": "^3.0.0"
   },
   "engines": {
     "node": ">=20"
