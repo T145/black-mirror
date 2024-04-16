@@ -23,6 +23,7 @@ RUN go install -v github.com/mikefarah/yq/v4@v4.40.5; \
 # https://hub.docker.com/_/buildpack-deps/
 FROM buildpack-deps:stable as utils
 
+WORKDIR "/root"
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
@@ -36,11 +37,12 @@ RUN apt-get -y update; \
     # The latest libssl-dev is already included!
     apt-get -y install --no-install-recommends libc-ares-dev libpsl-dev; \
     apt-get -y clean; \
-    wget https://ftp.gnu.org/gnu/wget/wget-1.21.4.tar.gz; \
-    tar -xzf wget-*.tar.gz; \
+    curl https://ftp.gnu.org/gnu/wget/wget-1.21.4.tar.gz --output wget.tar.gz; \
+    tar -xzf wget.tar.gz; \
     cd wget-1.21.4; \
     ./configure --with-ssl=openssl --with-cares --with-psl; \
-    make install;
+    make install; \
+    rm -rf /var/lib/apt/lists/*;
 # Executable will be under /usr/bin/local
 
 # https://wiki.debian.org/DiskFreeSpace
@@ -182,8 +184,7 @@ RUN curl -fLO https://cpan.metacpan.org/authors/id/C/CO/CORION/perl-5.39.7.tar.g
     cpanm Try::Tiny;
 
 # Fixes: "docker: Error response from daemon: unable to find user admin: no matching entries in passwd file."
-RUN useradd -m admin && echo "admin:headhoncho" | chpasswd
-#&& usermod -aG wheel admin
+RUN adduser --disabled-password --gecos "" admin
 USER admin
 
 #RUN pip3 install --no-cache-dir --upgrade snscrape==0.6.2.20230320; \
