@@ -89,7 +89,8 @@ RUN apt-get -q update --no-allow-insecure-repositories; \
     locale-gen; \
     # https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
     localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8; \
-    update-locale LANG=en_US.UTF-8;
+    update-locale LANG=en_US.UTF-8; \
+    rm -rf /var/lib/apt/lists/*;
 
 # https://perldoc.perl.org/perllocale
 # https://stackoverflow.com/questions/2499794/how-to-fix-a-locale-setting-warning-from-perl

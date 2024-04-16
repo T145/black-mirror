@@ -1,23 +1,40 @@
 ---
-# Configuration file for MegaLinter
-# See all available variables at https://megalinter.io/configuration/ and in linters documentation
-
-APPLY_FIXES: all # all, none, or list of linter keys
-# ENABLE: # If you use ENABLE variable, all other languages/formats/tooling-formats will be disabled by default
-# ENABLE_LINTERS: # If you use ENABLE_LINTERS variable, all other linters will be disabled by default
+# https://megalinter.io/configuration/
+CLEAR_REPORT_FOLDER: true
+ENABLE:
+  - ACTION
+  - BASH
+  - DOCKERFILE
+  - EDITORCONFIG
+  - JSON
+  - REPOSITORY
+  - YAML
 DISABLE:
-  - COPYPASTE # Comment to enable checks of excessive copy-pastes
-  - SPELL # Comment to enable checks of spelling mistakes
+  - COPYPASTE
+  - SPELL
+DISABLE_LINTERS:
+  - JSON_NPM_PACKAGE_JSON_LINT
+  - REPOSITORY_DEVSKIM
+  - REPOSITORY_GITLEAKS # ignores config rules to not lint certain file paths
+  - REPOSITORY_SYFT # generating an unused bill of materials is not necessary
+  - REPOSITORY_SECRETLINT # functionality is covered by checkov
+  - REPOSITORY_KICS # functionality is efficiently covered by hadolint
+FAIL_IF_MISSING_LINTER_IN_FLAVOR: true
+#FILTER_REGEX_INCLUDE: (.github/|configs/|data/|scripts/|Dockerfile)
+FILTER_REGEX_EXCLUDE: (^pnpm-lock\.yaml|node_modules/|logs/|megalinter-reports/|dist/)
+REPOSITORY_CHECKOV_UNSECURED_ENV_VARIABLES:
+  - CKV_IGNORED_DIRECTORIES=logs
+REPOSITORY_CHECKOV_ARGUMENTS: --skip-check MEDIUM
+EXCLUDED_DIRECTORIES:
+  - .git
+  - node_modules
+  - logs
+  - megalinter-reports
+  - dist
 SHOW_ELAPSED_TIME: true
 FILEIO_REPORTER: false
-# DISABLE_ERRORS: true # Uncomment if you want MegaLinter to detect errors but not block CI to pass
-CLEAR_REPORT_FOLDER: true
-FILTER_REGEX_EXCLUDE: (pnpm-lock.yaml|node_modules/*|logs/*|megalinter-reports/*|dist/*)
-DISABLE_LINTERS:
-  - "MARKDOWN_MARKDOWN_LINK_CHECK"
-  - "REPOSITORY_DEVSKIM"
-  - "REPOSITORY_GITLEAKS" # takes a very long time to process
-  - "REPOSITORY_SYFT" # generating an unused bill of materials is not necessary
+PRINT_ALPACA: false
+FLAVOR_SUGGESTIONS: false
 # remove lingering docker containers when done
 POST_COMMANDS:
   - command: docker system prune -f
