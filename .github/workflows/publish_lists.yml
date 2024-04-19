@@ -41,7 +41,7 @@ jobs:
         run: tar -cvf lists.tar build/
       - name: Cache lists
         if: steps.build.outputs.status == 'success'
-        uses: actions/upload-artifact@18bf333cd2249fbbbdb605fd9d9ed57efd7adf34
+        uses: actions/upload-artifact@b06cde36fc32a3ee94080e87258567f73f921537
         with:
           name: lists
           path: lists.tar
@@ -49,7 +49,7 @@ jobs:
           retention-days: 1
       - name: Cache documents
         if: steps.build.outputs.status == 'success'
-        uses: actions/upload-artifact@18bf333cd2249fbbbdb605fd9d9ed57efd7adf34
+        uses: actions/upload-artifact@b06cde36fc32a3ee94080e87258567f73f921537
         with:
           name: docs
           path: |
