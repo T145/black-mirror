@@ -42,13 +42,13 @@ RUN apt-get -y update; \
     ./configure --with-ssl=openssl --with-cares --with-psl; \
     make install; \
     rm -rf *; \
-    wget https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.17.tar.gz; \
-    tar --strip-components=1 -xzf libiconv*.gz; \
+    wget https://ftp.gnu.org/gnu/libunistring/libunistring-1.2.tar.xz; \
+    tar --strip-components=1 -xzf libunistring*.gz; \
     ./configure; \
     make install; \
     rm -rf *; \
-    wget https://ftp.gnu.org/gnu/libunistring/libunistring-1.2.tar.xz; \
-    tar --strip-components=1 -xzf libunistring*.gz; \
+    wget https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.17.tar.gz; \
+    tar --strip-components=1 -xzf libiconv*.gz; \
     ./configure; \
     make install; \
     rm -rf *; \
@@ -142,8 +142,8 @@ RUN apt-get -y install --no-install-recommends \
     symlinks=* \
     unzip=6.0-28 \
     whois=5.5.17 \
-    xz-utils=5.4.1-0.2 \
-    zlib1g=1:1.2.13.dfsg-1; \
+    xz-utils=* \
+    zlib1g=*; \
     apt-get install -y --no-install-recommends --reinstall ca-certificates=*; \
     # https://askubuntu.com/questions/477974/how-to-remove-unnecessary-locales
     localepurge; \
@@ -168,7 +168,7 @@ RUN chown 0:0 /usr/bin/as \
 
 # Upgrade Perl
 # https://github.com/Perl/docker-perl/blob/master/5.039.007-main%2Cthreaded-bullseye/Dockerfile
-RUN curl -fLO https://cpan.metacpan.org/authors/id/C/CO/CORION/perl-5.39.7.tar.gz; \
+RUN wget https://cpan.metacpan.org/authors/id/C/CO/CORION/perl-5.39.7.tar.gz; \
     echo 'c85f9ef13fa674839b076d81edb45242a5ddff3df4b111f764a7abe72edd83eb *perl-5.39.7.tar.gz' | sha256sum --strict --check -; \
     tar --strip-components=1 -xzf perl-*.tar.gz; \
     #cat *.patch | patch -p1 || :; \
@@ -178,13 +178,13 @@ RUN curl -fLO https://cpan.metacpan.org/authors/id/C/CO/CORION/perl-5.39.7.tar.g
     make install; \
     rm -rf ./*; \
     # Install cpanm & the project packages
-    curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz; \
+    wget https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz; \
     echo '963e63c6e1a8725ff2f624e9086396ae150db51dd0a337c3781d09a994af05a5 *App-cpanminus-1.7047.tar.gz' | sha256sum --strict --check -; \
     tar --strip-components=1 -xzf App-cpanminus-*.tar.gz; \
     perl bin/cpanm .; \
     cpanm IO::Socket::SSL; \
     # Update cpm
-    curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997014/cpm -o /usr/local/bin/cpm; \
+    wget -P /usr/local/bin/ https://raw.githubusercontent.com/skaji/cpm/0.997014/cpm; \
     # https://github.com/skaji/cpm/blob/main/Changes
     echo 'ee525f2493e36c6f688eddabaf53a51c4d3b2a4ebaa81576ac8b9f78ab57f4a1 */usr/local/bin/cpm' | sha256sum --strict --check -; \
     chmod +x /usr/local/bin/cpm; \
