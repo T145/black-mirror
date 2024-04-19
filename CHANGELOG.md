@@ -14,6 +14,8 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump actions/upload-artifact from ef09cdac3e2d3e60d8ccadda691f4f1cec5035cb to 18bf333cd2249fbbbdb605fd9d9ed57efd7adf34 in /.github/workflows [\#180](https://github.com/T145/black-mirror/pull/180) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/setup-qemu-action from 04a8d28c228b3f4b8a1aeac1242de40d0c1e5493 to b7249025a94417def5eea224a7408d279c7becfb in /.github/workflows [\#177](https://github.com/T145/black-mirror/pull/177) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump stefanzweifel/git-auto-commit-action from e040c596f0a65570b339c60818081175bcf82d11 to 4b8a201e31cadd9829df349894b28c54e6c19fe6 in /.github/workflows [\#174](https://github.com/T145/black-mirror/pull/174) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/setup-qemu-action from 13c418a7a83fd3d2be64d58f68c94a6f1951d3ce to 04a8d28c228b3f4b8a1aeac1242de40d0c1e5493 in /.github/workflows [\#172](https://github.com/T145/black-mirror/pull/172) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/setup-buildx-action from 3.2.0 to 3.3.0 in /.github/workflows [\#170](https://github.com/T145/black-mirror/pull/170) ([dependabot[bot]](https://github.com/apps/dependabot))
