@@ -1990,7 +1990,7 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://cert-agid.gov.it/download/log4shell-iocs-raw-domain.txt"
+      "https://cert-agid.gov.it/download/LOG4SHELL/log4shell-iocs-raw-domain.txt"
     ],
     "topic": "SECURITY"
   },
@@ -5368,31 +5368,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://raw.githubusercontent.com/jawz101/subdomain_blocklists/main/hosts.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "joshwho": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://ddosblocklist.joshwho.net/",
-      "homepage": "https://ddosblocklist.joshwho.net/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://ddosblocklist.joshwho.net/blocklist.txt"
     ],
     "topic": "SECURITY"
   },
