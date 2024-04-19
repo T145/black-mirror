@@ -115,7 +115,7 @@ ENV LC_ALL=en_US.UTF-8 \
 # Use "en_US.UTF-8" as the default locale
 # https://wiki.debian.org/Locale
 RUN apt-get -q update --no-allow-insecure-repositories; \
-    apt-get -yqf upgrade \
+    apt-get -yqf upgrade; \
     apt-get -y install --no-install-recommends \
     aria2=1.36.0-1 \
     build-essential=12.9 \
@@ -147,23 +147,6 @@ RUN apt-get -q update --no-allow-insecure-repositories; \
     apt-get -y clean; \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*; \
     rm -f /var/cache/ldconfig/aux-cache;
-
-# Install idn2 (requires iconv, so it needs to be installed locally)
-RUN wget -q https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.17.tar.gz; \
-    tar --strip-components=1 -xzf libiconv*.gz; \
-    ./configure; \
-    make install; \
-    rm -rf ./*; \
-    wget -q https://ftp.gnu.org/gnu/libunistring/libunistring-1.2.tar.xz; \
-    tar --strip-components=1 -xzf libunistring*.gz; \
-    ./configure; \
-    make install; \
-    rm -rf ./*; \
-    wget -q https://ftp.gnu.org/gnu/libidn/libidn2-2.3.7.tar.gz; \
-    tar --strip-components=1 -xzf libidn2*.gz; \
-    ./configure; \
-    make install; \
-    rm -rf ./*;
 
 # Upgrade Perl
 # https://github.com/Perl/docker-perl/blob/master/5.039.009-main%2Cthreaded-bullseye/Dockerfile
