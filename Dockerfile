@@ -29,7 +29,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
 # https://git.savannah.gnu.org/cgit/parallel.git/tree/README
 # https://www.gnu.org/software/parallel/checksums/
-RUN curl http://pi.dk/3/ | bash \
+RUN curl -sSL http://pi.dk/3/ | bash \
     && find /usr/local/bin/ -type f ! -name 'par*' -delete
 
 # Build Wget from source to enable c-ares support
@@ -37,11 +37,26 @@ RUN apt-get -y update; \
     # The latest libssl-dev is already included!
     apt-get -y install --no-install-recommends libc-ares-dev libpsl-dev; \
     apt-get -y clean; \
-    curl https://ftp.gnu.org/gnu/wget/wget-1.21.4.tar.gz --output wget.tar.gz; \
-    tar -xzf wget.tar.gz; \
-    cd wget-1.21.4; \
+    wget https://ftp.gnu.org/gnu/wget/wget-1.21.4.tar.gz; \
+    tar --strip-components=1 -xzf wget*.gz; \
     ./configure --with-ssl=openssl --with-cares --with-psl; \
     make install; \
+    rm -rf *; \
+    wget https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.17.tar.gz; \
+    tar --strip-components=1 -xzf libiconv*.gz; \
+    ./configure; \
+    make install; \
+    rm -rf *; \
+    wget https://ftp.gnu.org/gnu/libunistring/libunistring-1.2.tar.xz; \
+    tar --strip-components=1 -xzf libunistring*.gz; \
+    ./configure; \
+    make install; \
+    rm -rf *; \
+    wget https://ftp.gnu.org/gnu/libidn/libidn2-2.3.7.tar.gz; \
+    tar --strip-components=1 -xzf libidn2*.gz; \
+    ./configure; \
+    make install; \
+    rm -rf *; \
     rm -rf /var/lib/apt/lists/*;
 # Executable will be under /usr/bin/local
 
@@ -50,7 +65,7 @@ RUN apt-get -y update; \
 # https://gitlab.com/parrotsec/build/containers
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.1.3" \
+      version="6.1.6" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -155,7 +170,7 @@ RUN chown 0:0 /usr/bin/as \
 # https://github.com/Perl/docker-perl/blob/master/5.039.007-main%2Cthreaded-bullseye/Dockerfile
 RUN curl -fLO https://cpan.metacpan.org/authors/id/C/CO/CORION/perl-5.39.7.tar.gz; \
     echo 'c85f9ef13fa674839b076d81edb45242a5ddff3df4b111f764a7abe72edd83eb *perl-5.39.7.tar.gz' | sha256sum --strict --check -; \
-    tar --strip-components=1 -xaf perl-*.tar.gz; \
+    tar --strip-components=1 -xzf perl-*.tar.gz; \
     #cat *.patch | patch -p1 || :; \
     ./Configure -Darchname=x86_64-linux-gnu -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des; \
     make -j "$(nproc)"; \
@@ -165,7 +180,7 @@ RUN curl -fLO https://cpan.metacpan.org/authors/id/C/CO/CORION/perl-5.39.7.tar.g
     # Install cpanm & the project packages
     curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz; \
     echo '963e63c6e1a8725ff2f624e9086396ae150db51dd0a337c3781d09a994af05a5 *App-cpanminus-1.7047.tar.gz' | sha256sum --strict --check -; \
-    tar --strip-components=1 -xaf App-cpanminus-*.tar.gz; \
+    tar --strip-components=1 -xzf App-cpanminus-*.tar.gz; \
     perl bin/cpanm .; \
     cpanm IO::Socket::SSL; \
     # Update cpm
