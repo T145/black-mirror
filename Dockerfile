@@ -33,25 +33,26 @@ RUN curl -sSL http://pi.dk/3/ | bash \
     && find /usr/local/bin/ -type f ! -name 'par*' -delete
 
 # Build Wget from source to enable c-ares support
-RUN apt-get -y update; \
+RUN apt-get -yq update --no-allow-insecure-repositories; \
     # The latest libssl-dev is already included!
-    apt-get -y install --no-install-recommends libc-ares-dev libpsl-dev; \
+    apt-get -y install --no-install-recommends libc-ares-dev=* libpsl-dev=*; \
     apt-get -y clean; \
-    wget https://ftp.gnu.org/gnu/wget/wget-1.21.4.tar.gz; \
+    wget -q https://ftp.gnu.org/gnu/wget/wget-1.21.4.tar.gz; \
     tar --strip-components=1 -xzf wget*.gz; \
     ./configure --with-ssl=openssl --with-cares --with-psl; \
     make install; \
-    # Lessen the image cache size
-    rm -rf *; \
+    # Lessen the layer cache size
+    rm -rf ./*; \
     rm -rf /var/lib/apt/lists/*;
 # Executable will be under /usr/bin/local
 
 # https://wiki.debian.org/DiskFreeSpace
 # https://raphaelhertzog.com/mastering-debian/
-# https://gitlab.com/parrotsec/build/containers
+# https://gitlab.com/parrotsec/build/containers/-/blob/latest/core/Dockerfile?ref_type=heads
+# https://hub.docker.com/r/parrotsec/core
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.2.0" \
+      version="6.2.4" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -83,16 +84,29 @@ RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
     # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L78
     && mkdir -p /run/systemd && echo 'docker' >/run/systemd/container
 
+# Use "en_US.UTF-8" as the default locale
+# https://wiki.debian.org/Locale
+RUN apt-get -yq update --no-allow-insecure-repositories; \
+    apt-get -y install --no-install-recommends locales=*; \
+    locale-gen; \
+    # https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
+    localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8; \
+    update-locale LANG=en_US.UTF-8; \
+    # Lessen the layer cache size
+    rm -rf /var/lib/apt/lists/*;
+
 # https://perldoc.perl.org/perllocale
 # https://stackoverflow.com/questions/2499794/how-to-fix-a-locale-setting-warning-from-perl
 ENV LC_ALL=en_US.UTF-8 \
     LANGUAGE=en_US \
-    #LANG=en_US.UTF-8 \
+    LANG=en_US.UTF-8 \
     # Make commands sort by the C locale
     LC_COLLATE=C \
     RESOLUTION_BIT_DEPTH=1600x900x16 \
     # https://nodejs.dev/en/learn/nodejs-the-difference-between-development-and-production/
-    NODE_ENV=production
+    NODE_ENV=production \
+    # Required for idn2 to run
+    LD_LIBRARY_PATH=/usr/local/lib
 
 # https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#run
 # https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory#21530768
@@ -101,11 +115,7 @@ ENV LC_ALL=en_US.UTF-8 \
 # Use "en_US.UTF-8" as the default locale
 # https://wiki.debian.org/Locale
 RUN apt-get -q update --no-allow-insecure-repositories; \
-    apt-get -y install --no-install-recommends locales=*; \
-    locale-gen; \
-    # https://github.com/docker-library/postgres/blob/69bc540ecfffecce72d49fa7e4a46680350037f9/9.6/Dockerfile#L21-L24
-    localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8; \
-    update-locale LANG=en_US.UTF-8; \
+    apt-get -yqf upgrade \
     apt-get -y install --no-install-recommends \
     aria2=1.36.0-1 \
     build-essential=12.9 \
@@ -139,25 +149,25 @@ RUN apt-get -q update --no-allow-insecure-repositories; \
     rm -f /var/cache/ldconfig/aux-cache;
 
 # Install idn2 (requires iconv, so it needs to be installed locally)
-RUN wget https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.17.tar.gz; \
+RUN wget -q https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.17.tar.gz; \
     tar --strip-components=1 -xzf libiconv*.gz; \
     ./configure; \
     make install; \
-    rm -rf *; \
-    wget https://ftp.gnu.org/gnu/libunistring/libunistring-1.2.tar.xz; \
+    rm -rf ./*; \
+    wget -q https://ftp.gnu.org/gnu/libunistring/libunistring-1.2.tar.xz; \
     tar --strip-components=1 -xzf libunistring*.gz; \
     ./configure; \
     make install; \
-    rm -rf *; \
-    wget https://ftp.gnu.org/gnu/libidn/libidn2-2.3.7.tar.gz; \
+    rm -rf ./*; \
+    wget -q https://ftp.gnu.org/gnu/libidn/libidn2-2.3.7.tar.gz; \
     tar --strip-components=1 -xzf libidn2*.gz; \
     ./configure; \
     make install; \
-    rm -rf *;
+    rm -rf ./*;
 
 # Upgrade Perl
 # https://github.com/Perl/docker-perl/blob/master/5.039.009-main%2Cthreaded-bullseye/Dockerfile
-RUN wget https://cpan.metacpan.org/authors/id/P/PE/PEVANS/perl-5.39.9.tar.gz; \
+RUN wget -q https://cpan.metacpan.org/authors/id/P/PE/PEVANS/perl-5.39.9.tar.gz; \
     echo 'c589d2e36cbb8db30fb73f661ef2c06ffe9c680f8ebe417169ec259b48ec2119 *perl-5.39.9.tar.gz' | sha256sum --strict --check -; \
     tar --strip-components=1 -xzf perl-*.tar.gz; \
     cat *.patch | patch -p1 || :; \
@@ -165,19 +175,19 @@ RUN wget https://cpan.metacpan.org/authors/id/P/PE/PEVANS/perl-5.39.9.tar.gz; \
     make -j "$(nproc)"; \
     TEST_JOBS="$(nproc)" make test_harness; \
     make install; \
-    rm -rf *; \
+    rm -rf ./*; \
     # Install cpanm & the project packages
-    wget https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz; \
+    wget -q https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz; \
     echo '963e63c6e1a8725ff2f624e9086396ae150db51dd0a337c3781d09a994af05a5 *App-cpanminus-1.7047.tar.gz' | sha256sum --strict --check -; \
     tar --strip-components=1 -xzf App-cpanminus-*.tar.gz; \
     perl bin/cpanm .; \
     cpanm IO::Socket::SSL; \
     # Update cpm
-    wget -P /usr/local/bin/ https://raw.githubusercontent.com/skaji/cpm/0.997014/cpm; \
+    wget -q -P /usr/local/bin/ https://raw.githubusercontent.com/skaji/cpm/0.997014/cpm; \
     # https://github.com/skaji/cpm/blob/main/Changes
     echo 'ee525f2493e36c6f688eddabaf53a51c4d3b2a4ebaa81576ac8b9f78ab57f4a1 */usr/local/bin/cpm' | sha256sum --strict --check -; \
     chmod +x /usr/local/bin/cpm; \
-    rm -rf *; \
+    rm -rf ./*; \
     # Install dependencies
     cpanm Regexp::Common; \
     cpanm Data::Validate::Domain; \
@@ -202,11 +212,6 @@ RUN chown 0:0 /usr/bin/as \
 # Fixes: "docker: Error response from daemon: unable to find user admin: no matching entries in passwd file."
 RUN adduser --disabled-password --gecos "" admin
 USER admin
-
-#RUN pip3 install --no-cache-dir --upgrade snscrape==0.6.2.20230320; \
-#    pip3 cache purge; \
-#    py3clean -v ./usr/lib/python3.9 ./usr/share/python3; \
-#    rm -rf /root/.cache;
 
 ENTRYPOINT [ "bash" ]
 

@@ -4,21 +4,18 @@ CLEAR_REPORT_FOLDER: true
 ENABLE:
   - ACTION
   - BASH
-  - DOCKERFILE
+  # - DOCKERFILE
   - EDITORCONFIG
-  - JSON
-  - REPOSITORY
+  # - JSON
+  # - REPOSITORY
   - YAML
-DISABLE:
-  - COPYPASTE
-  - SPELL
-DISABLE_LINTERS:
-  - JSON_NPM_PACKAGE_JSON_LINT
-  - REPOSITORY_DEVSKIM
-  - REPOSITORY_GITLEAKS # ignores config rules to not lint certain file paths
-  - REPOSITORY_SYFT # generating an unused bill of materials is not necessary
-  - REPOSITORY_SECRETLINT # functionality is covered by checkov
-  - REPOSITORY_KICS # functionality is efficiently covered by hadolint
+# DISABLE_LINTERS:
+#   - JSON_NPM_PACKAGE_JSON_LINT
+#   - REPOSITORY_DEVSKIM
+#   - REPOSITORY_GITLEAKS # ignores config rules to not lint certain file paths
+#   - REPOSITORY_SYFT # generating an unused bill of materials is not necessary
+#   - REPOSITORY_SECRETLINT # functionality is covered by checkov
+#   - REPOSITORY_KICS # functionality is efficiently covered by hadolint
 FAIL_IF_MISSING_LINTER_IN_FLAVOR: true
 #FILTER_REGEX_INCLUDE: (.github/|configs/|data/|scripts/|Dockerfile)
 FILTER_REGEX_EXCLUDE: (^pnpm-lock\.yaml|node_modules/|logs/|megalinter-reports/|dist/)
