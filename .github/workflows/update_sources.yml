@@ -3,8 +3,6 @@ name: Update Sources
 
 on:
   push:
-    branches:
-      - master
     paths:
       - "data/v2/manifest.json"
   workflow_dispatch:
