@@ -14,6 +14,9 @@
 
 **Merged pull requests:**
 
+- Add Jarelllama's Scam Blocklist to v2/manifest.json \#179 [\#183](https://github.com/T145/black-mirror/pull/183) ([jarelllama](https://github.com/jarelllama))
+- chore\(deps\): bump actions/download-artifact from 4.1.4 to 4.1.5 in /.github/workflows [\#182](https://github.com/T145/black-mirror/pull/182) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump actions/upload-artifact from 18bf333cd2249fbbbdb605fd9d9ed57efd7adf34 to b06cde36fc32a3ee94080e87258567f73f921537 in /.github/workflows [\#181](https://github.com/T145/black-mirror/pull/181) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/upload-artifact from ef09cdac3e2d3e60d8ccadda691f4f1cec5035cb to 18bf333cd2249fbbbdb605fd9d9ed57efd7adf34 in /.github/workflows [\#180](https://github.com/T145/black-mirror/pull/180) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/setup-qemu-action from 04a8d28c228b3f4b8a1aeac1242de40d0c1e5493 to b7249025a94417def5eea224a7408d279c7becfb in /.github/workflows [\#177](https://github.com/T145/black-mirror/pull/177) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump stefanzweifel/git-auto-commit-action from e040c596f0a65570b339c60818081175bcf82d11 to 4b8a201e31cadd9829df349894b28c54e6c19fe6 in /.github/workflows [\#174](https://github.com/T145/black-mirror/pull/174) ([dependabot[bot]](https://github.com/apps/dependabot))
