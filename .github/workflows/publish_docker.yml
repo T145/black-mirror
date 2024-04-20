@@ -46,7 +46,7 @@ jobs:
         env:
           DSLIM_HTTP_PROBE: false
         with:
-          target: ghcr.io/t145/black-mirror:latest
+          target: ${{ github.repository }}:latest
           tag: 'slim'
       - name: Push all tags
         run: docker image push "${{ github.repository }}" --all-tags
