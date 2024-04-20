@@ -31,12 +31,22 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ github.token }}
-      - name: Build and push
+      - name: Build the image
         uses: docker/build-push-action@2cdde995de11925a030ce8070c3d77a52ffcf1c0
         with:
           context: .
           builder: ${{ steps.buildx.outputs.name }}
-          push: true
+          push: false
           tags: ghcr.io/t145/black-mirror:latest
           cache-from: type=registry,ref=ghcr.io/t145/black-mirror:buildcache
           cache-to: type=registry,ref=ghcr.io/t145/black-mirror:buildcache,mode=max
+      # https://github.com/kitabisa/docker-slim-action
+      - name: Slim the image
+        uses: kitabisa/docker-slim-action@e641d62304259303c8557c27e10965f7348c7eb4
+        env:
+          DSLIM_HTTP_PROBE: false
+        with:
+          target: ghcr.io/t145/black-mirror:latest
+          tag: 'slim'
+      - name: Push all tags
+        run: docker image push "${{ github.repository }}" --all-tags
