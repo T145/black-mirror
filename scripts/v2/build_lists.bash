@@ -78,7 +78,7 @@ cleanup() {
 
 # params: method id, retriever id
 get_lists() {
-	jaq -r --arg method "$1" --arg retriever "$2" 'to_entries[] |
+	jaq --arg method "$1" --arg retriever "$2" 'to_entries[] |
 		select(.value.content.retriever == $retriever and .value.method == $method) |
 		{key, mirror: .value.mirrors[0]} |
 		"\(.key)#\(.mirror)"' data/v2/manifest.json
@@ -98,11 +98,11 @@ main() {
 		echo "[INFO] Processing method: ${method}"
 
 		set +e # temporarily disable strict fail, in case downloads fail
-		jaq -r '[to_entries[] | .value.content.retriever] | unique | flatten[]' data/v2/manifest.json |
+		jaq '[to_entries[] | .value.content.retriever] | unique | flatten[]' data/v2/manifest.json |
 			while read -r retriever; do
 				case "$retriever" in
 				'ARIA2')
-					jaq -r --arg method "$method" 'to_entries[] |
+					jaq --arg method "$method" 'to_entries[] |
 						select(.value.content.retriever == "ARIA2" and .value.method == $method) |
 						{key, mirrors: .value.mirrors} |
 						(.mirrors | join("\t")), " out=\(.key)"' data/v2/manifest.json |

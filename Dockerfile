@@ -58,7 +58,7 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
 # https://hub.docker.com/r/parrotsec/core
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.2.5" \
+      version="6.2.6" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -89,7 +89,8 @@ RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
     # https://github.com/phusion/baseimage-docker/issues/58#issuecomment-47995343
     && echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections \
     # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L78
-    && mkdir -p /run/systemd && echo 'docker' >/run/systemd/container
+    && mkdir -p /run/systemd && echo 'docker' >/run/systemd/container \
+    && echo 'alias jaq="jaq -r"' >> ~/.bashrc
 
 # Use "en_US.UTF-8" as the default locale
 # https://wiki.debian.org/Locale

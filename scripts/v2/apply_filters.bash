@@ -112,36 +112,36 @@ process_list() {
 			;;
 		'JSON')
 			case "$LIST_FILTER" in
-			'ABUSE_CH_FEODOTRACKER_IPV4') jaq -r '.[].ip_address' ;;
-			'ABUSE_CH_FEODOTRACKER_DOMAIN') jaq -r '.[] | select(.hostname != null) | .hostname' ;;
-			'ABUSE_CH_THREATFOX_IPV4') jaq-r 'to_entries[].value[].ioc_value | split(":")[0]' ;;
-			'ABUSE_CH_THREATFOX_DOMAIN') jaq -r 'to_entries[].value[].ioc_value' ;;
-			'AYASHIGE') jaq -r '.[].fqdn' ;;
-			'CYBER_CURE_IPV4') jaq -r '.data.ip[]' ;;
-			'CYBERSAIYAN_DOMAIN') jaq -r '.[] | select(.value.type == "URL") | .indicator' | get_domains_from_urls ;;
-			'CYBERSAIYAN_IPV4') jaq -r '.[] | select(.value.type == "URL") | .indicator' | get_ipv4s_from_urls ;;
-			'DISCONNECTME_ENTITIES') jaq -r '.entities[] | "\(.properties[])\n\(.resources[])"' ;;
-			#'DISCONNECTME_SERVICES') jaq -r '.categories[] | to_entries[].value[] | to_entries[].value[]' ;;
-			'HIPO_UNIVERSITIES') jaq -r '.[].domains | join("\n")' ;;
-			'ISCSANS') jaq -r '.[].ipv4' ;;
-			'MALSILO_DOMAIN') jaq -r '.data[].network_traffic | select(.dns != null) | .dns[]' ;;
-			'MALSILO_IPV4') jaq -r '.data[].network_traffic | select(.tcp != null) | .tcp[] | split(":")[0]' ;;
-			'MALTRAIL') jaq -r '.[].ip' ;;
-			'TINYCHECK_DOMAIN') jaq -r '.iocs[] | select(.type == "domain") | .value' ;;
-			'TINYCHECK_FREEDNS') jaq -r '.iocs[] | select(.type == "freedns") | .value' ;;
-			'TINYCHECK_IPV4') jaq -r '.iocs[] | select(.type == "ip4addr") | .value' ;;
-			'TINYCHECK_CIDR') jaq -r '.iocs[] | select(.type == "cidr") | .value' ;;
-			'CHONG_LUA_DAO_DOMAIN') jaq -r '.[].url' | sed 's/\*\.//g' | get_domains_from_urls ;;
-			'CHONG_LUA_DAO_IPV4') jaq -r '.[].url' | get_ipv4s_from_urls ;;
-			'INQUEST_DOMAIN') jaq -r '.data[] | select(.artifact_type == "domain") | .artifact' ;;
-			'INQUEST_IPV4') jaq -r '.data[] | select(.artifact_type == "ipaddress") | .artifact' ;;
-			#'CERTEGO') jaq -rs '.[].links[].url' | mawk -F/ '$5~/^domain$/{print $6}' ;;
-			'SECUREDROP') jaq -r '.[] | .onion_address as $onion | .organization_url | split("/")[2] as $org | $org, $onion' ;;
-			'VIVALDI') jaq -r '.[] | select(.filterStatus == "ON") | .reviewedSite' ;;
-			'MSEDGE') jaq -r '.sites[].url' ;;
-			'GITHUB_ACTIONS_DOMAINS') jaq -r '.domains.actions[]' ;;
-			'GITHUB_META_CIDR4') jaq -r '.hooks[], .web[], .api[], .git[], .github_enterprise_importer[], .packages[], .pages[], .importer[], .actions[], .dependabot[]' | get_ipv4_cidrs ;;
-			'GITHUB_META_CIDR6') jaq -r '.hooks[], .web[], .api[], .git[], .github_enterprise_importer[], .pages[], .actions[]' | get_ipv6_cidrs ;;
+			'ABUSE_CH_FEODOTRACKER_IPV4') jaq '.[].ip_address' ;;
+			'ABUSE_CH_FEODOTRACKER_DOMAIN') jaq '.[] | select(.hostname != null) | .hostname' ;;
+			'ABUSE_CH_THREATFOX_IPV4') jaq 'to_entries[].value[].ioc_value | split(":")[0]' ;;
+			'ABUSE_CH_THREATFOX_DOMAIN') jaq 'to_entries[].value[].ioc_value' ;;
+			'AYASHIGE') jaq '.[].fqdn' ;;
+			'CYBER_CURE_IPV4') jaq '.data.ip[]' ;;
+			'CYBERSAIYAN_DOMAIN') jaq '.[] | select(.value.type == "URL") | .indicator' | get_domains_from_urls ;;
+			'CYBERSAIYAN_IPV4') jaq '.[] | select(.value.type == "URL") | .indicator' | get_ipv4s_from_urls ;;
+			'DISCONNECTME_ENTITIES') jaq '.entities[] | "\(.properties[])\n\(.resources[])"' ;;
+			#'DISCONNECTME_SERVICES') jaq '.categories[] | to_entries[].value[] | to_entries[].value[]' ;;
+			'HIPO_UNIVERSITIES') jaq '.[].domains | join("\n")' ;;
+			'ISCSANS') jaq '.[].ipv4' ;;
+			'MALSILO_DOMAIN') jaq '.data[].network_traffic | select(.dns != null) | .dns[]' ;;
+			'MALSILO_IPV4') jaq '.data[].network_traffic | select(.tcp != null) | .tcp[] | split(":")[0]' ;;
+			'MALTRAIL') jaq '.[].ip' ;;
+			'TINYCHECK_DOMAIN') jaq '.iocs[] | select(.type == "domain") | .value' ;;
+			'TINYCHECK_FREEDNS') jaq '.iocs[] | select(.type == "freedns") | .value' ;;
+			'TINYCHECK_IPV4') jaq '.iocs[] | select(.type == "ip4addr") | .value' ;;
+			'TINYCHECK_CIDR') jaq '.iocs[] | select(.type == "cidr") | .value' ;;
+			'CHONG_LUA_DAO_DOMAIN') jaq '.[].url' | sed 's/\*\.//g' | get_domains_from_urls ;;
+			'CHONG_LUA_DAO_IPV4') jaq '.[].url' | get_ipv4s_from_urls ;;
+			'INQUEST_DOMAIN') jaq '.data[] | select(.artifact_type == "domain") | .artifact' ;;
+			'INQUEST_IPV4') jaq '.data[] | select(.artifact_type == "ipaddress") | .artifact' ;;
+			#'CERTEGO') jaqs '.[].links[].url' | mawk -F/ '$5~/^domain$/{print $6}' ;;
+			'SECUREDROP') jaq '.[] | .onion_address as $onion | .organization_url | split("/")[2] as $org | $org, $onion' ;;
+			'VIVALDI') jaq '.[] | select(.filterStatus == "ON") | .reviewedSite' ;;
+			'MSEDGE') jaq '.sites[].url' ;;
+			'GITHUB_ACTIONS_DOMAINS') jaq '.domains.actions[]' ;;
+			'GITHUB_META_CIDR4') jaq '.hooks[], .web[], .api[], .git[], .github_enterprise_importer[], .packages[], .pages[], .importer[], .actions[], .dependabot[]' | get_ipv4_cidrs ;;
+			'GITHUB_META_CIDR6') jaq '.hooks[], .web[], .api[], .git[], .github_enterprise_importer[], .pages[], .actions[]' | get_ipv6_cidrs ;;
 			esac
 			;;
 		'CSV')
@@ -216,7 +216,7 @@ process_list() {
 }
 
 main() {
-	jaq -r --arg key "$(basename "$1")" --arg format "$3" 'to_entries[] |
+	jaq --arg key "$(basename "$1")" --arg format "$3" 'to_entries[] |
 		select(.key == $key) | .value |
 		.content.filter as $content_filter |
 		.content.type as $content_type |
