@@ -98,7 +98,7 @@ main() {
 		echo "[INFO] Processing method: ${method}"
 
 		set +e # temporarily disable strict fail, in case downloads fail
-		jaq '[to_entries[] | .value.content.retriever] | unique | flatten[]' data/v2/manifest.json |
+		jaq '[to_entries[] | .value.content.retriever] | unique | .[]' data/v2/manifest.json |
 			while read -r retriever; do
 				case "$retriever" in
 				'ARIA2')
