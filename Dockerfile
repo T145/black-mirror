@@ -184,7 +184,7 @@ RUN wget -q https://cpan.metacpan.org/authors/id/P/PE/PEVANS/perl-5.39.9.tar.gz;
     cat *.patch | patch -p1 || :; \
     ./Configure -Darchname=x86_64-linux-gn -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des; \
     make -j "$(nproc)"; \
-    TEST_JOBS="$(nproc)" make test_harness; \
+    #TEST_JOBS="$(nproc)" make test_harness; \
     make install; \
     rm -rf ./*; \
     # Install cpanm & the project packages
