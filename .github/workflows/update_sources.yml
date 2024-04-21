@@ -33,8 +33,7 @@ jobs:
       - name: Document AdGuard sources
         run: jaq 'to_entries[] | select(.value.method == "BLOCK" and .value.variants.adguard?) | ("!#include " + .value.variants.adguard)' data/v2/manifest.json >dist/ADGUARD_SOURCES.txt
       - name: Whitelist list hosts
-        run: |
-          jaq '[ to_entries[] | .value.mirrors[] | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?((?<path>[^?#]*))?(\\?(?<query>([^#]*)))?(#(?<fragment>(.*)))?").domain ] | unique |
+        run: jaq '[ to_entries[] | .value.mirrors[] | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?((?<path>[^?#]*))?(\\?(?<query>([^#]*)))?(#(?<fragment>(.*)))?").domain ] | unique |
 sort | .[]' data/v2/manifest.json >dist/SOURCE_DOMAINS.txt
       - name: Make commit directory safe
         run: git config --global --add safe.directory /__w/black-mirror/black-mirror
