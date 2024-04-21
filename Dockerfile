@@ -18,7 +18,9 @@ FROM golang:1.21 AS go1.21
 # https://github.com/mikefarah/yq/
 RUN go install -v github.com/mikefarah/yq/v4@v4.43.1; \
     # https://github.com/ipinfo/cli
-    go install -v github.com/ipinfo/cli/ipinfo@ipinfo-3.3.1;
+    go install -v github.com/ipinfo/cli/ipinfo@ipinfo-3.3.1; \
+    # https://github.com/projectdiscovery/dnsx
+    go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@v1.2.1;
 
 FROM amd64/rust:bookworm AS rust
 
@@ -62,7 +64,6 @@ LABEL maintainer="T145" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
-WORKDIR "/root"
 # https://cisofy.com/lynis/controls/FILE-6310/
 VOLUME [ "/home", "/tmp", "/var" ]
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -90,7 +91,10 @@ RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
     && echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections \
     # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L78
     && mkdir -p /run/systemd && echo 'docker' >/run/systemd/container \
-    && echo 'alias jaq="jaq -r"' >> ~/.bashrc
+    && echo 'alias jaq="jaq -r"' >> ~/.bashrc \
+    && source ~/.bashrc
+
+WORKDIR "/root"
 
 # Use "en_US.UTF-8" as the default locale
 # https://wiki.debian.org/Locale
