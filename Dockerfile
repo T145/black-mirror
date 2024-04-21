@@ -60,7 +60,7 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
 # https://hub.docker.com/r/parrotsec/core
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.2.6" \
+      version="6.2.7" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -91,8 +91,8 @@ RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
     && echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections \
     # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L78
     && mkdir -p /run/systemd && echo 'docker' >/run/systemd/container \
-    && echo 'alias jaq="jaq -r"' >> ~/.bashrc \
-    && source ~/.bashrc
+    # https://stackoverflow.com/questions/55206227/why-bashrc-is-not-executed-when-run-docker-container
+    && echo 'alias jaq="jaq -r"' >> ~/.profile
 
 WORKDIR "/root"
 
