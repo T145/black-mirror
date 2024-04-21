@@ -27,20 +27,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
       - name: Sort manifest
-        run: |
-          jq -S '.' data/v2/manifest.json |
-          perl -ne '
-          push @lines, $_;
-          END {
-            open(OUT, ">$file")
-            or die "sponge: cannot open $file: $!\n";
-            print OUT @lines;
-            close(OUT);
-          }' -s -- -file=data/v2/manifest.json
+        run: yq -iP 'sort' data/v2/manifest.json -o json
       - name: Document manifest
-        run: jq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/manifest.json | csvlook >dist/SOURCES.md
+        run: jaq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/manifest.json | csvlook >dist/SOURCES.md
       - name: Document AdGuard sources
-        run: jq -jr 'to_entries[] | select(.value.method == "BLOCK" and .value.variants.adguard != null) | ("!#include ", .value.variants.adguard, "\n")' data/v2/manifest.json >dist/ADGUARD_SOURCES.txt
+        run: jaq -r 'to_entries[] | select(.value.method == "BLOCK" and .value.variants.adguard?) | ("!#include " + .value.variants.adguard)' data/v2/manifest.json >dist/ADGUARD_SOURCES.txt
       - name: Make commit directory safe
         run: git config --global --add safe.directory /__w/black-mirror/black-mirror
       - name: Commit changes

@@ -20,6 +20,12 @@ RUN go install -v github.com/mikefarah/yq/v4@v4.43.1; \
     # https://github.com/ipinfo/cli
     go install -v github.com/ipinfo/cli/ipinfo@ipinfo-3.3.1;
 
+FROM amd64/rust:bookworm AS rust
+
+# https://github.com/01mf02/jaq
+# https://github.com/jqlang/jq/issues/105#issuecomment-1113508938
+RUN cargo install --locked jaq
+
 # https://hub.docker.com/_/buildpack-deps/
 FROM buildpack-deps:stable as utils
 
@@ -52,7 +58,7 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
 # https://hub.docker.com/r/parrotsec/core
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.2.4" \
+      version="6.2.5" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -69,6 +75,7 @@ COPY configs/etc/ /etc/
 COPY --from=go1.16 /go/bin/ /usr/local/bin/
 COPY --from=go1.19 /go/bin/ /usr/local/bin/
 COPY --from=go1.21 /go/bin/ /usr/local/bin/
+COPY --from=rust /usr/local/cargo/bin/jaq /usr/local/bin/
 COPY --from=utils /usr/local/bin/ /usr/local/bin/
 
 # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L26
@@ -126,7 +133,6 @@ RUN apt-get -q update --no-allow-insecure-repositories; \
     git=1:2.39.2-1.1 \
     grepcidr=2.0-2 \
     html-xml-utils=7.7-1.1 \
-    jq=1.6-2.1 \
     libc-ares2=1.18.1-3 \
     libpsl5=0.21.2-1 \
     libssl3=3.0.11-1~deb12u2 \

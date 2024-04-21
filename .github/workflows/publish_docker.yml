@@ -36,17 +36,17 @@ jobs:
         with:
           context: .
           builder: ${{ steps.buildx.outputs.name }}
-          push: false
+          push: true
           tags: ghcr.io/t145/black-mirror:latest
           cache-from: type=registry,ref=ghcr.io/t145/black-mirror:buildcache
           cache-to: type=registry,ref=ghcr.io/t145/black-mirror:buildcache,mode=max
       # https://github.com/kitabisa/docker-slim-action
-      - name: Slim the image
-        uses: kitabisa/docker-slim-action@e641d62304259303c8557c27e10965f7348c7eb4
-        env:
-          DSLIM_HTTP_PROBE: false
-        with:
-          target: ${{ github.repository }}:latest
-          tag: 'slim'
-      - name: Push all tags
-        run: docker image push "${{ github.repository }}" --all-tags
+      # - name: Slim the image
+      #   uses: kitabisa/docker-slim-action@e641d62304259303c8557c27e10965f7348c7eb4
+      #   env:
+      #     DSLIM_HTTP_PROBE: false
+      #   with:
+      #     target: ${{ github.repository }}:latest
+      #     tag: 'slim'
+      # - name: Push all tags
+      #   run: docker image push "${{ github.repository }}" --all-tags
