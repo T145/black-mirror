@@ -29,12 +29,12 @@ jobs:
       - name: Sort manifest
         run: jaq -ir 'to_entries | sort_by(.value) | sort_by(.key) | from_entries' data/v2/manifest.json
       - name: Document manifest
-        run: jaq '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/manifest.json | csvlook >dist/SOURCES.md
+        run: jaq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/manifest.json | csvlook >dist/SOURCES.md
       - name: Document AdGuard sources
-        run: jaq 'to_entries[] | select(.value.method == "BLOCK" and .value.variants.adguard?) | ("!#include " + .value.variants.adguard)' data/v2/manifest.json >dist/ADGUARD_SOURCES.txt
+        run: jaq -r 'to_entries[] | select(.value.method == "BLOCK" and .value.variants.adguard?) | ("!#include " + .value.variants.adguard)' data/v2/manifest.json >dist/ADGUARD_SOURCES.txt
       - name: Whitelist list hosts
         run: |
-          jaq '[ to_entries[] | .value.mirrors[] | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?((?<path>[^?#]*))?(\\?(?<query>([^#]*)))?(#(?<fragment>(.*)))?").domain ] | unique | sort | .[]' data/v2/manifest.json >dist/SOURCE_DOMAINS.txt
+          jaq -r '[ to_entries[] | .value.mirrors[] | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?((?<path>[^?#]*))?(\\?(?<query>([^#]*)))?(#(?<fragment>(.*)))?").domain ] | unique | sort | .[]' data/v2/manifest.json >dist/SOURCE_DOMAINS.txt
           dnsx -l dist/SOURCE_DOMAINS.txt -nc -silent -cname -ns -resp | mawk '{print $3}' | grep -oP '(?<=[\[])[^\]]*' >>dist/SOURCE_DOMAINS.txt
           sort -o dist/SOURCE_DOMAINS.txt -u dist/SOURCE_DOMAINS.txt
       - name: Whitelist list ips
