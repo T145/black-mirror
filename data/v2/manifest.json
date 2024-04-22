@@ -10578,5 +10578,30 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
+  },
+  "haas": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "GZIP",
+      "retriever": "HAAS",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "HAAS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://haas.nic.cz/stats/",
+      "homepage": "https://haas.nic.cz/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://haas.nic.cz/stats/export/2024/04/2024-04-21.json.gz"
+    ],
+    "topic": "SECURITY"
   }
 }

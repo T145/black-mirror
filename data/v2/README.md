@@ -31,7 +31,6 @@
   - cjxlist
 - [YousList](https://github.com/yous/YousList)
 - [xiaobeita](https://github.com/rentianyu/Ad-set-hosts/tree/master/xiaobeita)
-- [VeleSila/yhosts](https://github.com/VeleSila/yhosts)
 - [ilpl](https://github.com/ilpl/ad-hosts)
 - [CleanTalk](https://cleantalk.org/help/iptables-connect)
 - [BotScout](https://botscout.com/last_caught_cache.htm)
@@ -41,7 +40,6 @@
 - [Cyjax Uploads](https://www.cyjax.com/latest-analysis/)
 - [YT Spam Lists](https://github.com/ThioJoe/YT-Spam-Lists/blob/main/SpamDomainsList.txt)
 - [phishing_kits](https://github.com/0xDanielLopez/phishing_kits)
-- [HaaS](https://haas.nic.cz/stats/)
 - [AbuseIPDB](https://docs.abuseipdb.com/#blacklist-endpoint)
 - [Wael](https://github.com/waelisa/Best-blocklist)
 
@@ -590,3 +588,4 @@
 - [Cyber Threat Alliance](https://public.tableau.com/app/profile/cyber.threat.alliance/viz/CTAOnlineViz/Dashboard)
 - [JoshWho](https://ddosblocklist.joshwho.net/blocklist.txt)
   - Presently times out
+- [VeleSila/yhosts](https://github.com/VeleSila/yhosts)

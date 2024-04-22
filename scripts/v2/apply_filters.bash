@@ -142,6 +142,7 @@ process_list() {
 			'GITHUB_ACTIONS_DOMAINS') jaq -r '.domains.actions[]' ;;
 			'GITHUB_META_CIDR4') jaq -r '.hooks[], .web[], .api[], .git[], .github_enterprise_importer[], .packages[], .pages[], .importer[], .actions[], .dependabot[]' | get_ipv4_cidrs ;;
 			'GITHUB_META_CIDR6') jaq -r '.hooks[], .web[], .api[], .git[], .github_enterprise_importer[], .pages[], .actions[]' | get_ipv6_cidrs ;;
+			'HAAS') jaq -r '.[] | .ip' ;;
 			esac
 			;;
 		'CSV')

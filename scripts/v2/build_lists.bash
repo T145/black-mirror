@@ -135,6 +135,9 @@ main() {
 							lynx -dump -listonly -nonumbers "$mirror" | sponge "${cache}/${key}"
 						done
 					;;
+				'HAAS')
+					wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' "https://haas.nic.cz/stats/export/$(date +'%Y/%m')/$(date --date='yesterday' +'%Y-%m-%d').json.gz"
+					;;
 				# 'SNSCRAPE')
 				# 	get_lists "$method" 'SNSCRAPE' |
 				# 		while IFS='#' read -r key mirror; do
