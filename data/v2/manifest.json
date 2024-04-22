@@ -2155,6 +2155,39 @@
       "pihole": "https://cinsscore.com/list/ci-badguys.txt"
     }
   },
+  "circl": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "CIRCL",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "CIRCL_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "CIRCL_IPV4",
+        "format": "IPV4"
+      },
+      {
+        "filter": "CIRCL_URL",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.circl.lu/doc/misp/",
+      "homepage": "https://www.circl.lu/doc/misp/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.circl.lu/doc/misp/feed-osint/manifest.json"
+    ],
+    "topic": "SECURITY"
+  },
   "cname_trackers": {
     "archive": false,
     "checksums": {},
@@ -4091,6 +4124,31 @@
     "method": "BLOCK",
     "mirrors": [
       "https://blocklist.greensnow.co/greensnow.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "haas": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "GZIP",
+      "retriever": "HAAS",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "HAAS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://haas.nic.cz/stats/",
+      "homepage": "https://haas.nic.cz/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://haas.nic.cz/stats/export/2024/04/2024-04-21.json.gz"
     ],
     "topic": "SECURITY"
   },
@@ -10576,64 +10634,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://zonefiles.io/f/compromised/ip/live/"
-    ],
-    "topic": "SECURITY"
-  },
-  "haas": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "GZIP",
-      "retriever": "HAAS",
-      "type": "JSON"
-    },
-    "formats": [
-      {
-        "filter": "HAAS",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://haas.nic.cz/stats/",
-      "homepage": "https://haas.nic.cz/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://haas.nic.cz/stats/export/2024/04/2024-04-21.json.gz"
-    ],
-    "topic": "SECURITY"
-  },
-  "circl": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "CIRCL",
-      "type": "JSON"
-    },
-    "formats": [
-      {
-        "filter": "CIRCL_DOMAIN",
-        "format": "DOMAIN"
-      },
-      {
-        "filter": "CIRCL_IPV4",
-        "format": "IPV4"
-      },
-      {
-        "filter": "CIRCL_URL",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://www.circl.lu/doc/misp/",
-      "homepage": "https://www.circl.lu/doc/misp/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://www.circl.lu/doc/misp/feed-osint/manifest.json"
     ],
     "topic": "SECURITY"
   }
