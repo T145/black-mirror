@@ -136,7 +136,14 @@ main() {
 						done
 					;;
 				'HAAS')
-					wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' "https://haas.nic.cz/stats/export/$(date +'%Y/%m')/$(date --date='yesterday' +'%Y-%m-%d').json.gz"
+					wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "https://haas.nic.cz/stats/export/$(date +'%Y/%m')/$(date --date='yesterday' +'%Y-%m-%d').json.gz"
+					;;
+				'CIRCL')
+					curl -sSL "$mirror" |
+						jaq -r --arg year "$(date +'%Y')" 'to_entries[] | select(.value.date | startswith($year)) | select(.value.Orgc.name == "CIRCL") | .key' |
+						while read -r id; do
+							curl -sSL "https://www.circl.lu/doc/misp/feed-osint/${id}.json" >>"${cache}/${key}"
+						done
 					;;
 				# 'SNSCRAPE')
 				# 	get_lists "$method" 'SNSCRAPE' |

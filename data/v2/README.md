@@ -55,7 +55,6 @@
 ### Data to Scrape
 
 - <https://tracker.h3x.eu/download/5000>
-- <https://www.circl.lu/doc/misp/feed-osint/>
 - <https://api.xforce.ibmcloud.com/doc/>
 - <https://blacklist.lashback.com/>
 
