@@ -8978,6 +8978,56 @@
     ],
     "topic": "SECURITY"
   },
+  "t145_list_domains": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/T145/black-mirror",
+      "homepage": "https://github.com/T145/black-mirror",
+      "license": "agpl-3.0"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/T145/black-mirror/master/dist/SOURCE_DOMAINS.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "t145_list_ips": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/T145/black-mirror",
+      "homepage": "https://github.com/T145/black-mirror",
+      "license": "agpl-3.0"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/T145/black-mirror/master/dist/SOURCE_IPS.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "t145_cidr_whitelist": {
     "archive": false,
     "checksums": {},
