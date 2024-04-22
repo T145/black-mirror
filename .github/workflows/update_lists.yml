@@ -27,7 +27,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
       - name: Sort manifest
-        run: yq -iP 'sort' data/v2/manifest.json -o json
+        run: jaq -ir 'to_entries | sort_by(.value) | sort_by(.key) | from_entries' data/v2/manifest.json
       - name: Document manifest
         run: jaq '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/manifest.json | csvlook >dist/SOURCES.md
       - name: Document AdGuard sources
