@@ -4,15 +4,16 @@
 |--------------------------|---------------------------------|--------------------|
 | Adding a list            | Issue, Pull Request, Discussion | enhancement        |
 | Modifying a list         | Issue, Pull Request             | enhancement        |
-| List redundancy          | Issue, Discussion               | redundant hosts    |
+| List redundancy          | Issue, Discussion               | redundant list     |
 | List deprecation         | Issue                           | bug                |
-| Whitelist specific hosts | Discussion                      | whitelist hosts    |
-| Blacklist specific hosts | Discussion                      | blacklist hosts    |
+| Whitelist specific hosts | Issue, Discussion               | allow              |
+| Blacklist specific hosts | Issue, Discussion               | block              |
 | Bug in the main scripts  | Issue                           | bug                |
+| Security vulnerability   | Security Tab                    |                    |
 
 # Adding Lists
 
-`Black Mirror` works by taking objects from `data/v2/manifest.json` defined like so:
+`Black Mirror` works by taking objects from [`data/v2/manifest.json`](https://github.com/T145/black-mirror/blob/master/data/v2/manifest.json) defined like so:
 
 * **_notes**: `optional` Any extra information about the list or its filters.
 * **archive**: Whether to save the list to the Internet Archive in case the original ever becomes unvailable or maliciously modified.
@@ -64,3 +65,9 @@ Example:
 ## Adding Adblock Lists
 
 Reference [this page](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#static-network-filtering) for uBlock on how domains are filtered. Be sure the defined rule is able to extract the domains from similar entries.
+
+# Blocking or allowing specific hosts
+
+If while using `Black Mirror` you notice certain hosts should be whitelisted to not break something,
+please follow the given rubric and create an issue or a discussion and document them.
+Those hosts can be put in a list under `data/v2/contrib` and submitted via pull request. If they can't be categorized by an existing list feel free to make one.
