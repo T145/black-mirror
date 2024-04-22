@@ -38,7 +38,7 @@ jobs:
           dnsx -l dist/SOURCE_DOMAINS.txt -nc -silent -cname -ns -resp | mawk '{print $3}' | grep -oP '(?<=[\[])[^\]]*' >>dist/SOURCE_DOMAINS.txt
           sort -o dist/SOURCE_DOMAINS.txt -u dist/SOURCE_DOMAINS.txt
       - name: Whitelist list ips
-        run: dnsx -l dist/SOURCE_DOMAINS.txt -nc -silent -a -resp-only -o dist/SOURCE_IPS.txt
+        run: dnsx -l dist/SOURCE_DOMAINS.txt -nc -silent -a -resp-only >dist/SOURCE_IPS.txt
       - name: Make commit directory safe
         run: git config --global --add safe.directory /__w/black-mirror/black-mirror
       - name: Commit changes
