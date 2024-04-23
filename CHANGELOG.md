@@ -13,8 +13,13 @@
 
 - \[bug\]: Herrbischoff lists are not downloading during CI [\#129](https://github.com/T145/black-mirror/issues/129)
 
+**Closed issues:**
+
+- Track down Windscribe's Social & Cryptominers lists [\#27](https://github.com/T145/black-mirror/issues/27)
+
 **Merged pull requests:**
 
+- chore\(deps\): bump actions/checkout from 4.1.2 to 4.1.3 in /.github/workflows [\#185](https://github.com/T145/black-mirror/pull/185) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Add Jarelllama's Scam Blocklist to v2/manifest.json \#179 [\#183](https://github.com/T145/black-mirror/pull/183) ([jarelllama](https://github.com/jarelllama))
 - chore\(deps\): bump actions/download-artifact from 4.1.4 to 4.1.5 in /.github/workflows [\#182](https://github.com/T145/black-mirror/pull/182) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/upload-artifact from 18bf333cd2249fbbbdb605fd9d9ed57efd7adf34 to b06cde36fc32a3ee94080e87258567f73f921537 in /.github/workflows [\#181](https://github.com/T145/black-mirror/pull/181) ([dependabot[bot]](https://github.com/apps/dependabot))
