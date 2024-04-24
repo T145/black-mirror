@@ -7,7 +7,7 @@ WORKDIR "/src"
 RUN git config --global advice.detachedHead false; \
     git clone --depth 1 -b v6.12.0 https://github.com/johnkerl/miller.git .; \
     go install -v github.com/johnkerl/miller/cmd/mlr; \
-    rm -rf ./*;
+    rm -rf ./*; \
     # https://github.com/mikefarah/yq/
     go install -v github.com/mikefarah/yq/v4@v4.43.1; \
     # https://github.com/ipinfo/cli
