@@ -38,7 +38,6 @@
 - [i-blocklist](https://github.com/jackrabbit335/UsefulLinuxShellScripts/blob/master/blocklist-update.sh#L17)
 - [disposable-email-domains](https://github.com/ivolo/disposable-email-domains/blob/master/index.json)
 - [Cyjax Uploads](https://www.cyjax.com/latest-analysis/)
-- [YT Spam Lists](https://github.com/ThioJoe/YT-Spam-Lists/blob/main/SpamDomainsList.txt)
 - [phishing_kits](https://github.com/0xDanielLopez/phishing_kits)
 - [AbuseIPDB](https://docs.abuseipdb.com/#blacklist-endpoint)
 - [Wael](https://github.com/waelisa/Best-blocklist)
@@ -175,6 +174,9 @@
 - [Filtri DNS](https://web.archive.org/web/20230415114729/https://filtri-dns.ga/filtri.txt)
   - [Old Link](https://filtri-dns.ga/filtri.txt)
   - A combination of EasyList Italy and X Files
+- [MalwareWorld](https://malwareworld.com/textlists/blacklists.txt)
+  - The public [blacklist](https://malwareworld.com/textlists/suspiciousDomains.txt) contains a lot of web scraper garbage like jQuery packages, JavaScript variables, etc.
+- [fabriziosalmi](https://github.com/fabriziosalmi/blacklists/blob/main/blacklists.fqdn.urls)
 
 # 🧟 Zombies
 
