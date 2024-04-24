@@ -19,6 +19,8 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump actions/download-artifact from 4.1.5 to 4.1.6 in /.github/workflows [\#187](https://github.com/T145/black-mirror/pull/187) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump actions/upload-artifact from b06cde36fc32a3ee94080e87258567f73f921537 to 79616d2ded92999fceefea2ca2e4bdf6101fa919 in /.github/workflows [\#186](https://github.com/T145/black-mirror/pull/186) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/checkout from 4.1.2 to 4.1.3 in /.github/workflows [\#185](https://github.com/T145/black-mirror/pull/185) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Add Jarelllama's Scam Blocklist to v2/manifest.json \#179 [\#183](https://github.com/T145/black-mirror/pull/183) ([jarelllama](https://github.com/jarelllama))
 - chore\(deps\): bump actions/download-artifact from 4.1.4 to 4.1.5 in /.github/workflows [\#182](https://github.com/T145/black-mirror/pull/182) ([dependabot[bot]](https://github.com/apps/dependabot))
