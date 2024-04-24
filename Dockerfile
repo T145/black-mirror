@@ -1,22 +1,15 @@
-FROM golang:1.16 AS go1.16
-
-# https://github.com/StevenBlack/ghosts#ghosts
-RUN go get github.com/StevenBlack/ghosts;
-
 # https://github.com/google/sanitizers/wiki/AddressSanitizerComparisonOfMemoryTools
-FROM golang:1.19 AS go1.19
+FROM golang:1.21 AS golang
 
 WORKDIR "/src"
 
 # https://github.com/johnkerl/miller
 RUN git config --global advice.detachedHead false; \
     git clone --depth 1 -b v6.12.0 https://github.com/johnkerl/miller.git .; \
-    go install -v github.com/johnkerl/miller/cmd/mlr;
-
-FROM golang:1.21 AS go1.21
-
-# https://github.com/mikefarah/yq/
-RUN go install -v github.com/mikefarah/yq/v4@v4.43.1; \
+    go install -v github.com/johnkerl/miller/cmd/mlr; \
+    rm -rf ./*;
+    # https://github.com/mikefarah/yq/
+    go install -v github.com/mikefarah/yq/v4@v4.43.1; \
     # https://github.com/ipinfo/cli
     go install -v github.com/ipinfo/cli/ipinfo@ipinfo-3.3.1; \
     # https://github.com/projectdiscovery/dnsx
@@ -60,7 +53,7 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
 # https://hub.docker.com/r/parrotsec/core
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.2.8" \
+      version="6.3.0" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -73,9 +66,7 @@ STOPSIGNAL SIGKILL
 # https://www.parrotsec.org/docs/apparmor.html
 # rkhunter: https://unix.stackexchange.com/questions/562560/invalid-web-cmd-configuration-option-relative-pathname-bin-false
 COPY configs/etc/ /etc/
-COPY --from=go1.16 /go/bin/ /usr/local/bin/
-COPY --from=go1.19 /go/bin/ /usr/local/bin/
-COPY --from=go1.21 /go/bin/ /usr/local/bin/
+COPY --from=golang /go/bin/ /usr/local/bin/
 COPY --from=rust /usr/local/cargo/bin/jaq /usr/local/bin/
 COPY --from=utils /usr/local/bin/ /usr/local/bin/
 
