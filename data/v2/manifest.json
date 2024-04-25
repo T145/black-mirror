@@ -10661,5 +10661,30 @@
       "https://raw.githubusercontent.com/ThioJoe/YT-Spam-Lists/main/SpamDomainsList.txt"
     ],
     "topic": "SECURITY"
+  },
+  "malwareworld_whitelist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MALWARE_WORLD",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.npmjs.com/package/malwareworld",
+      "homepage": "https://malwareworld.com/",
+      "license": "isc"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://malwareworld.com/textlists/domains.txt"
+    ],
+    "topic": "SECURITY"
   }
 }

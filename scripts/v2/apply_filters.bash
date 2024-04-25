@@ -109,6 +109,7 @@ process_list() {
 			'ASN_CIDR6') mawk '$1~/^route6:$/{print $2}' ;;
 			'SECOND_COLUMN') mawk '{print $2}' ;;
 			'NO_PEDOS') mawk -F: '/^[^[:space:]]/{print $2}' | ipinfo range2cidr ;;
+			'MALWARE_WORLD') jaq -r 'to_entries[] | select(.value.title == "Whitelist").key' ;;
 			esac
 			;;
 		'JSON')
