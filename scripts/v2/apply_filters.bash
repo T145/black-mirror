@@ -145,9 +145,9 @@ process_list() {
 			'GITHUB_META_CIDR4') jaq -r '.hooks[], .web[], .api[], .git[], .github_enterprise_importer[], .packages[], .pages[], .importer[], .actions[], .dependabot[]' | get_ipv4_cidrs ;;
 			'GITHUB_META_CIDR6') jaq -r '.hooks[], .web[], .api[], .git[], .github_enterprise_importer[], .pages[], .actions[]' | get_ipv6_cidrs ;;
 			'HAAS') jaq -r '.[] | .ip' ;;
-			'CIRCL_DOMAIN') jaq -r '.Event | .Attribute[]? | select(.type == "domain").value' ;;
-			'CIRCL_IPV4') jaq -r '.Event | .Attribute[]? | select(.type == "ip-dst").value' ;;
-			'CIRCL_URL') jaq -r '.Event | .Attribute[]? | select(.type == "url").value | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?((?<path>[^?#]*))?(\\?(?<query>([^#]*)))?(#(?<fragment>(.*)))?").domain' ;;
+			'CIRCL_DOMAIN') jaq -rs '.[].Event.Attribute[]? | select(.type == "domain" or .type == "hostname").value' ;;
+			'CIRCL_IPV4') jaq -rs '.[].Event.Attribute[]? | select(.type == "ip-dst").value' ;;
+			'CIRCL_URL') jaq -rs '.[].Event.Attribute[]? | select(.type == "url").value | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?((?<path>[^?#]*))?(\\?(?<query>([^#]*)))?(#(?<fragment>(.*)))?").domain' ;;
 			'MALWARE_WORLD') jaq -r 'to_entries[] | select(.value.title == "Whitelist").key' ;;
 			esac
 			;;

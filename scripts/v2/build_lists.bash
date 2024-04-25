@@ -141,10 +141,11 @@ main() {
 					wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "https://haas.nic.cz/stats/export/${DATE}/${ARCHIVE}.json.gz"
 					;;
 				'CIRCL')
-					curl -sSL "$mirror" |
+					jaq -r --arg retriever "$retriever" '.[] | select(.content.retriever == $retriever).mirrors[0]' |
+						xargs -n1 curl -sSL |
 						jaq -r --arg year "$(date +'%Y')" 'to_entries[] | select(.value.date | startswith($year)) | select(.value.Orgc.name == "CIRCL") | .key' |
 						while read -r id; do
-							curl -sSL "https://www.circl.lu/doc/misp/feed-osint/${id}.json" >>"${cache}/${key}"
+							curl -sSL "https://www.circl.lu/doc/misp/feed-osint/${id}.json" >>"${cache}/circl"
 						done
 					;;
 				# 'SNSCRAPE')
