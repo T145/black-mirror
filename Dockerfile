@@ -55,7 +55,7 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
 # https://hub.docker.com/r/parrotsec/core
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.3.1" \
+      version="6.3.3" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -109,7 +109,9 @@ ENV LC_ALL=en_US.UTF-8 \
     # https://nodejs.dev/en/learn/nodejs-the-difference-between-development-and-production/
     NODE_ENV=production \
     # Required for idn2 to run
-    LD_LIBRARY_PATH=/usr/local/lib
+    LD_LIBRARY_PATH=/usr/local/lib \
+    # https://stackoverflow.com/questions/6162484/why-does-modern-perl-avoid-utf-8-by-default/
+    PERL5OPTS=-Mutf8
 
 # https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#run
 # https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory#21530768
@@ -134,12 +136,16 @@ RUN apt-get -q update --no-allow-insecure-repositories; \
     libssl3=3.0.11-1~deb12u2 \
     localepurge=* \
     lynx=2.9.0dev.12-1 \
+    nodejs=18.13.0+dfsg1-1 \
+    npm=9.2.0~ds1-1 \
     p7zip-full=16.02+dfsg-8 \
     symlinks=* \
     unzip=6.0-28 \
     whois=5.5.17 \
     xz-utils=5.4.1-0.2 \
     zlib1g=1:1.2.13.dfsg-1; \
+    # https://github.com/AdguardTeam/HostlistCompiler
+    npm i -g @adguard/hostlist-compiler; \
     apt-get install -y --no-install-recommends --reinstall ca-certificates=*; \
     # https://askubuntu.com/questions/477974/how-to-remove-unnecessary-locales
     localepurge; \

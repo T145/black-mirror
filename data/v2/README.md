@@ -9,13 +9,8 @@
 - [turk-adlist](https://github.com/bkrucarci/turk-adlist)
 - [ad-hosts](https://github.com/ilpl/ad-hosts)
 - [dohservers](https://github.com/oneoffdallas/dohservers)
-- [DroneBL](https://dronebl.org/docs/howtouse) ?
 - [Free Email Provider Domains](https://gist.github.com/tbrianjones/5992856)
 - [wh0ami](https://codeberg.org/wh0ami/pihole-lists)
-- [Artists Against 419](https://db.aa419.org/fakebankslist.php)
-- [Okean Spam ChinaCIDR](https://www.okean.com/chinacidr.txt)
-- [Ugly Email Trackers](https://github.com/OneClickLab/ugly-email-trackers)
-  - [Leave Me Alone](https://github.com/leavemealone-app/email-trackers)
 - [mhhakim](https://github.com/mhhakim/pihole-blocklist)
   - custom-blacklist
   - custom-porn-blacklist
@@ -27,8 +22,6 @@
   - yui
 - [cjxlist](https://github.com/cjx82630/cjxlist)
   - cjx-annoyance
-  - cjx-ublock ?
-  - cjxlist
 - [YousList](https://github.com/yous/YousList)
 - [xiaobeita](https://github.com/rentianyu/Ad-set-hosts/tree/master/xiaobeita)
 - [ilpl](https://github.com/ilpl/ad-hosts)
@@ -36,8 +29,6 @@
 - [BotScout](https://botscout.com/last_caught_cache.htm)
 - [xOS](https://github.com/xOS/Config/blob/Her/RuleSet/Advertising.list)
 - [i-blocklist](https://github.com/jackrabbit335/UsefulLinuxShellScripts/blob/master/blocklist-update.sh#L17)
-- [disposable-email-domains](https://github.com/ivolo/disposable-email-domains/blob/master/index.json)
-- [Cyjax Uploads](https://www.cyjax.com/latest-analysis/)
 - [phishing_kits](https://github.com/0xDanielLopez/phishing_kits)
 - [AbuseIPDB](https://docs.abuseipdb.com/#blacklist-endpoint)
 - [Wael](https://github.com/waelisa/Best-blocklist)
@@ -54,8 +45,8 @@
 ### Data to Scrape
 
 - <https://tracker.h3x.eu/download/5000>
-- <https://api.xforce.ibmcloud.com/doc/>
-- <https://blacklist.lashback.com/>
+- <https://dronebl.org/docs/howtouse>
+- <https://db.aa419.org/fakebankslist.php>
 
 ## ⬜ Whitelists
 
@@ -601,3 +592,5 @@
 - [JoshWho](https://ddosblocklist.joshwho.net/blocklist.txt)
   - Presently times out
 - [VeleSila/yhosts](https://github.com/VeleSila/yhosts)
+- [Ugly Email Trackers](https://github.com/OneClickLab/ugly-email-trackers)
+  - [Leave Me Alone](https://github.com/leavemealone-app/email-trackers)

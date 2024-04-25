@@ -148,6 +148,12 @@ main() {
 							curl -sSL "https://www.circl.lu/doc/misp/feed-osint/${id}.json" >>"${cache}/circl"
 						done
 					;;
+				'HOSTLIST_COMPILER')
+					get_lists "$method" 'HOSTLIST_COMPILER' |
+						while IFS='#' read -r key mirror; do
+							hostlist-compiler -t adblock -i "$mirror" -o "${cache}/${key}" >>'logs/hostlist-compiler.log'
+						done
+					;;
 				# 'SNSCRAPE')
 				# 	get_lists "$method" 'SNSCRAPE' |
 				# 		while IFS='#' read -r key mirror; do
