@@ -25,7 +25,7 @@ jobs:
       options: --user root
     steps:
       - name: Checkout repo
-        uses: actions/checkout@1d96c772d19495a3b5c517cd2bc0cb401ea0529f
+        uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b
       - name: Update contribution lists
         run: |
           mawk '/^[^[:space:]|^#|]/' data/v2/contrib/DOMAIN_WHITELIST.txt | subfinder -silent -nc | dnsx -silent -nc >>dist/CONTRIB_DOMAINS.txt

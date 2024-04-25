@@ -25,7 +25,7 @@ jobs:
       options: --user root
     steps:
       - name: Checkout repo
-        uses: actions/checkout@1d96c772d19495a3b5c517cd2bc0cb401ea0529f
+        uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b
       - name: Sort manifest
         run: jaq -ir 'to_entries | sort_by(.value) | sort_by(.key) | from_entries' data/v2/manifest.json
       - name: Document manifest
