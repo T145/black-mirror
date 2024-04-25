@@ -13,7 +13,7 @@ RUN git config --global advice.detachedHead false; \
     # https://github.com/ipinfo/cli
     go install -v github.com/ipinfo/cli/ipinfo@ipinfo-3.3.1; \
     # https://github.com/projectdiscovery/dnsx
-    go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@v1.2.1;
+    go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@v1.2.1; \
     # https://github.com/projectdiscovery/subfinder
     go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@v2.6.6;
 
