@@ -6145,6 +6145,31 @@
     ],
     "topic": "SECURITY"
   },
+  "malwareworld_whitelist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "MALWARE_WORLD",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.npmjs.com/package/malwareworld",
+      "homepage": "https://malwareworld.com/",
+      "license": "isc"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://malwareworld.com/textlists/domains.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "marktron_fakenews": {
     "archive": false,
     "checksums": {},
@@ -6479,6 +6504,31 @@
     "method": "BLOCK",
     "mirrors": [
       "https://myip.ms/files/bots/live_webcrawlers.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "neo23x0": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "DOMAINS_FROM_HOST_MIX",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Neo23x0/signature-base/",
+      "homepage": "https://github.com/Neo23x0/signature-base/",
+      "license": "https://github.com/Neo23x0/signature-base/blob/master/LICENSE"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Neo23x0/signature-base/master/iocs/c2-iocs.txt"
     ],
     "topic": "SECURITY"
   },
@@ -8177,6 +8227,31 @@
     ],
     "topic": "SECURITY"
   },
+  "sblam": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://sblam.com/czarnalista.html",
+      "homepage": "https://sblam.com/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://sblam.com/blacklist.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "scafroglia93": {
     "archive": false,
     "checksums": {},
@@ -9339,6 +9414,31 @@
       "https://thedumbterminal.co.uk/files/services/squidblockedsites/blocked.txt"
     ],
     "topic": "PRIVACY"
+  },
+  "thiojoe": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/ThioJoe/YT-Spam-Lists/",
+      "homepage": "https://github.com/ThioJoe/YT-Spam-Lists/",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ThioJoe/YT-Spam-Lists/main/SpamDomainsList.txt"
+    ],
+    "topic": "SECURITY"
   },
   "threatview_c2_intel": {
     "archive": false,
@@ -10634,106 +10734,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://zonefiles.io/f/compromised/ip/live/"
-    ],
-    "topic": "SECURITY"
-  },
-  "thiojoe": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/ThioJoe/YT-Spam-Lists/",
-      "homepage": "https://github.com/ThioJoe/YT-Spam-Lists/",
-      "license": "mit"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/ThioJoe/YT-Spam-Lists/main/SpamDomainsList.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "malwareworld_whitelist": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "JSON"
-    },
-    "formats": [
-      {
-        "filter": "MALWARE_WORLD",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://www.npmjs.com/package/malwareworld",
-      "homepage": "https://malwareworld.com/",
-      "license": "isc"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://malwareworld.com/textlists/domains.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "sblam": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://sblam.com/czarnalista.html",
-      "homepage": "https://sblam.com/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://sblam.com/blacklist.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "neo23x0": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "DOMAINS_FROM_HOST_MIX",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/Neo23x0/signature-base/",
-      "homepage": "https://github.com/Neo23x0/signature-base/",
-      "license": "https://github.com/Neo23x0/signature-base/blob/master/LICENSE"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/Neo23x0/signature-base/master/iocs/c2-iocs.txt"
     ],
     "topic": "SECURITY"
   }
