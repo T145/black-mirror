@@ -2,14 +2,14 @@
 
 | **Problem**              | **Forum**                       | **Required Label** |
 |--------------------------|---------------------------------|--------------------|
-| Adding a list            | Issue, Pull Request, Discussion | enhancement        |
-| Modifying a list         | Issue, Pull Request             | enhancement        |
-| List redundancy          | Issue, Discussion               | redundant list     |
-| List deprecation         | Issue                           | bug                |
-| Whitelist specific hosts | Issue, Discussion               | allow              |
-| Blacklist specific hosts | Issue, Discussion               | block              |
+| Adding a list            | Issue, Pull Request, Discussion | maintenance        |
+| Modifying a list         | Issue, Pull Request             | maintenance        |
+| List redundancy          | Issue, Discussion               | maintenance        |
+| List deprecation         | Issue                           | maintenance        |
+| Whitelist specific hosts | Issue, Discussion               | maintenance        |
+| Blacklist specific hosts | Issue, Discussion               | maintenance        |
 | Bug in the main scripts  | Issue                           | bug                |
-| Security vulnerability   | Security Tab                    |                    |
+| Security vulnerability   | Security Tab                    | N/A                |
 
 # Adding Lists
 
@@ -64,7 +64,8 @@ Example:
 
 ## Adding Adblock Lists
 
-Reference [this page](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#static-network-filtering) for uBlock on how domains are filtered. Be sure the defined rule is able to extract the domains from similar entries.
+Reference [this page](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#static-network-filtering) about domain filtering syntax with uBlock.
+Most principles should carry over to AdGuard and other syntaxes, but don't be afraid to ask.
 
 # Blocking or allowing specific hosts
 
