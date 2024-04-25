@@ -136,7 +136,9 @@ main() {
 						done
 					;;
 				'HAAS')
-					wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "https://haas.nic.cz/stats/export/$(date +'%Y/%m')/$(date --date='yesterday' +'%Y-%m-%d').json.gz"
+					DATE="$(date +'%Y/%m')"
+					ARCHIVE="$(date --date='yesterday' +'%Y-%m-%d')"
+					wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "https://haas.nic.cz/stats/export/${DATE}/${ARCHIVE}.json.gz"
 					;;
 				'CIRCL')
 					curl -sSL "$mirror" |
