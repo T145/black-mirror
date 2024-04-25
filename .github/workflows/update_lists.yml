@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - "data/v2/manifest.json"
+      - "data/v2/contrib/*"
   workflow_dispatch:
 
 permissions: read-all
@@ -34,9 +35,10 @@ jobs:
         run: jaq -r 'to_entries[] | select(.value.method == "BLOCK" and .value.variants.adguard?) | ("!#include " + .value.variants.adguard)' data/v2/manifest.json >dist/ADGUARD_SOURCES.txt
       - name: Whitelist list hosts
         run: |
-          jaq -r '[ to_entries[] | .value.mirrors[] | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?((?<path>[^?#]*))?(\\?(?<query>([^#]*)))?(#(?<fragment>(.*)))?").domain ] | unique | sort | .[]' data/v2/manifest.json >dist/SOURCE_DOMAINS.txt
-          dnsx -l dist/SOURCE_DOMAINS.txt -nc -silent -cname -ns -resp | mawk '{print $3}' | grep -oP '(?<=[\[])[^\]]*' >>dist/SOURCE_DOMAINS.txt
-          sort -o dist/SOURCE_DOMAINS.txt -u dist/SOURCE_DOMAINS.txt
+          jaq -r '[ to_entries[] | .value.mirrors[] | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?((?<path>[^?#]*))?(\\?(?<query>([^#]*)))?(#(?<fragment>(.*)))?").domain ] | unique | sort | .[]' data/v2/manifest.json >dist/CONTRIB_DOMAINS.txt
+          dnsx -l dist/CONTRIB_DOMAINS.txt -nc -silent -cname -ns -resp | mawk '{print $3}' | grep -oP '(?<=[\[])[^\]]*' >>dist/CONTRIB_DOMAINS.txt
+          mawk '/^[^[:space:]|^#|]/' data/v2/contrib/DOMAIN_WHITELIST.txt | subfinder -silent -nc | dnsx -silent -nc >>dist/CONTRIB_DOMAINS.txt
+          sort -o dist/CONTRIB_DOMAINS.txt -u dist/CONTRIB_DOMAINS.txt
       # - name: Whitelist list ips
       #   run: dnsx -l dist/SOURCE_DOMAINS.txt -nc -silent -a -resp-only >dist/SOURCE_IPS.txt
       - name: Make commit directory safe

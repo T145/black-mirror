@@ -89,7 +89,6 @@
 - [shallalist](https://www.shallalist.de/)
   - Similar to `ut-capitole`.
   - [cbuijs](https://github.com/cbuijs/shallalist)
-- [malware-filter](https://gitlab.com/curben/malware-filter)
 - [AdlistTXTS](https://github.com/CleanMachine1/AdlistTXTS#readme)
 - [socialblocklists](https://github.com/d43m0nhLInt3r/socialblocklists#readme)
 - [Bon-Appetit](https://github.com/Bon-Appetit/porn-domains)
@@ -177,6 +176,18 @@
 - [MalwareWorld](https://malwareworld.com/textlists/blacklists.txt)
   - The public [blacklist](https://malwareworld.com/textlists/suspiciousDomains.txt) contains a lot of web scraper garbage like jQuery packages, JavaScript variables, etc.
 - [fabriziosalmi](https://github.com/fabriziosalmi/blacklists/blob/main/blacklists.fqdn.urls)
+- [curbengh's lists](https://gitlab.com/malware-filter)
+  - [botnet filter](https://gitlab.com/malware-filter/botnet-filter)
+    - Uses FeodoTracker
+  - [phising filter](https://gitlab.com/malware-filter/phishing-filter)
+    - Uses OpenPhish and Phishing.Database
+  - [pup filter](https://gitlab.com/malware-filter/pup-filter)
+    - Uses malware-discoverer
+    - [Updates are paused](https://gitlab.com/malware-filter/pup-filter/-/issues/2).
+  - [tracking filter](https://gitlab.com/malware-filter/tracking-filter)
+    - Uses DDG's Tracker Radar
+  - [bad vn filter](https://gitlab.com/malware-filter/vn-badsite-filter)
+    - Uses Chong Lua Dao
 
 # 🧟 Zombies
 
