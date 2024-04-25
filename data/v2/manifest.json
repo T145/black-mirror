@@ -10686,5 +10686,30 @@
       "https://malwareworld.com/textlists/domains.txt"
     ],
     "topic": "SECURITY"
+  },
+  "sblam": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://sblam.com/czarnalista.html",
+      "homepage": "https://sblam.com/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://sblam.com/blacklist.txt"
+    ],
+    "topic": "SECURITY"
   }
 }
