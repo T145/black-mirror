@@ -2188,6 +2188,31 @@
     ],
     "topic": "SECURITY"
   },
+  "cjxlist": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "HOSTLIST_COMPILER",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTLIST_COMPILER",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/cjx82630/cjxlist",
+      "homepage": "https://github.com/cjx82630/cjxlist",
+      "license": "lgpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt"
+    ],
+    "topic": "PRIVACY"
+  },
   "cname_trackers": {
     "archive": false,
     "checksums": {},
@@ -10711,30 +10736,5 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
-  },
-  "cjxlist": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "HOSTLIST_COMPILER",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HOSTLIST_COMPILER",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/cjx82630/cjxlist",
-      "homepage": "https://github.com/cjx82630/cjxlist",
-      "license": "lgpl-3.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt"
-    ],
-    "topic": "PRIVACY"
   }
 }
