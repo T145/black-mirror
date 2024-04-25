@@ -11,6 +11,8 @@
 
 **Fixed bugs:**
 
+- \[bug\]: Youtube is blocked [\#191](https://github.com/T145/black-mirror/issues/191)
+- \[bug\]: Minor Awk regex bug when processsing schakal [\#190](https://github.com/T145/black-mirror/issues/190)
 - \[bug\]: Herrbischoff lists are not downloading during CI [\#129](https://github.com/T145/black-mirror/issues/129)
 
 **Closed issues:**
@@ -19,6 +21,7 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump tj-actions/github-changelog-generator from c45cd9913c6df54e0500cd666ee82ade9385ece6 to f5cb87b1a419dc6380d9b72c81134e005cbdc1f6 in /.github/workflows [\#188](https://github.com/T145/black-mirror/pull/188) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/download-artifact from 4.1.5 to 4.1.6 in /.github/workflows [\#187](https://github.com/T145/black-mirror/pull/187) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/upload-artifact from b06cde36fc32a3ee94080e87258567f73f921537 to 79616d2ded92999fceefea2ca2e4bdf6101fa919 in /.github/workflows [\#186](https://github.com/T145/black-mirror/pull/186) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/checkout from 4.1.2 to 4.1.3 in /.github/workflows [\#185](https://github.com/T145/black-mirror/pull/185) ([dependabot[bot]](https://github.com/apps/dependabot))
