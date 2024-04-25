@@ -109,7 +109,7 @@ process_list() {
 			'ASN_CIDR6') mawk '$1~/^route6:$/{print $2}' ;;
 			'SECOND_COLUMN') mawk '{print $2}' ;;
 			'NO_PEDOS') mawk -F: '/^[^[:space:]]/{print $2}' | ipinfo range2cidr ;;
-			'MALWARE_WORLD') jaq -r 'to_entries[] | select(.value.title == "Whitelist").key' ;;
+			'DOMAINS_FROM_HOST_MIX') gawk '/^([[:alpha:]_-]{1,63}\.)/' ;;
 			esac
 			;;
 		'JSON')
@@ -148,6 +148,7 @@ process_list() {
 			'CIRCL_DOMAIN') jaq -r '.Event | .Attribute[]? | select(.type == "domain").value' ;;
 			'CIRCL_IPV4') jaq -r '.Event | .Attribute[]? | select(.type == "ip-dst").value' ;;
 			'CIRCL_URL') jaq -r '.Event | .Attribute[]? | select(.type == "url").value | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?((?<path>[^?#]*))?(\\?(?<query>([^#]*)))?(#(?<fragment>(.*)))?").domain' ;;
+			'MALWARE_WORLD') jaq -r 'to_entries[] | select(.value.title == "Whitelist").key' ;;
 			esac
 			;;
 		'CSV')

@@ -10668,7 +10668,7 @@
     "content": {
       "filter": "NONE",
       "retriever": "ARIA2",
-      "type": "TEXT"
+      "type": "JSON"
     },
     "formats": [
       {
@@ -10709,6 +10709,31 @@
     "method": "BLOCK",
     "mirrors": [
       "https://sblam.com/blacklist.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "neo23x0": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "DOMAINS_FROM_HOST_MIX",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/Neo23x0/signature-base/",
+      "homepage": "https://github.com/Neo23x0/signature-base/",
+      "license": "https://github.com/Neo23x0/signature-base/blob/master/LICENSE"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/Neo23x0/signature-base/master/iocs/c2-iocs.txt"
     ],
     "topic": "SECURITY"
   }
