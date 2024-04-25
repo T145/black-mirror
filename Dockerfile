@@ -14,6 +14,8 @@ RUN git config --global advice.detachedHead false; \
     go install -v github.com/ipinfo/cli/ipinfo@ipinfo-3.3.1; \
     # https://github.com/projectdiscovery/dnsx
     go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@v1.2.1;
+    # https://github.com/projectdiscovery/subfinder
+    go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@v2.6.6;
 
 FROM amd64/rust:bookworm AS rust
 
@@ -53,7 +55,7 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
 # https://hub.docker.com/r/parrotsec/core
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.3.0" \
+      version="6.3.1" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
