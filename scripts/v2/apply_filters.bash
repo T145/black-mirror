@@ -67,7 +67,7 @@ process_list() {
 		'TEXT')
 			case "$LIST_FILTER" in
 			'NONE') cat -s ;;
-			'HOSTS_FILE') mawk '$1~/^(0.0.0.0|127.0.0.1|0|::)$/&&$2!~/^(localhost|local|localhost.localdomain)$/{print $2}' ;;
+			'HOSTS_FILE') mawk '{sub(/\r$/,"");if($1~/^(0.0.0.0|127.0.0.1|0|::)$/&&$2!~/^(localhost|local|localhost.localdomain)$/){print $2}}' ;;
 			'MIXED_HOSTS_FILE') mawk '{if($1~/^(0.0.0.0)/){print $2}else{if($1~/^[^[:space:]|^#]/&&$1!~/\*$/){print $1}}}' ;;
 			'NPC_HOSTS') mawk '$1~/^0.0.0.0/{for (i=2; i<=NF; i++) print $i}' ;;
 			'RAW_HOSTS_WITH_COMMENTS') mawk '/^[^[:space:]|^#|^!|^;|^$|^:]/{print $1}' ;;
