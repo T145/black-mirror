@@ -114,8 +114,8 @@ main() {
 							wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
 						done
 					;;
-				'WGET_INSECURE')
-					get_lists "$method" 'WGET_INSECURE' |
+				'INSECURE_WGET')
+					get_lists "$method" 'INSECURE_WGET' |
 						while IFS='#' read -r key mirror; do
 							wget -P "$cache" --no-check-certificate --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
 						done
@@ -135,7 +135,7 @@ main() {
 							lynx -dump -listonly -nonumbers "$mirror" | sponge "${cache}/${key}"
 						done
 					;;
-				'HAAS')
+				'CURL_HAAS')
 					local DATE
 					local ARCHIVE
 					DATE="$(date +'%Y/%m')"
