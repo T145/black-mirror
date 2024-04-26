@@ -109,28 +109,28 @@ main() {
 						aria2c -i- -d "$cache" --conf-path='./configs/aria2.conf'
 					;;
 				'WGET')
-					get_lists "$method" 'WGET' |
+					get_lists "$method" "$retriever" |
 						while IFS='#' read -r key mirror; do
 							wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
 						done
 					;;
 				'INSECURE_WGET')
-					get_lists "$method" 'INSECURE_WGET' |
+					get_lists "$method" "$retriever" |
 						while IFS='#' read -r key mirror; do
 							wget -P "$cache" --no-check-certificate --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
 						done
 					;;
 				'ASN_QUERY')
-					get_lists "$method" 'ASN_QUERY' |
+					get_lists "$method" "$retriever" |
 						while IFS='#' read -r key mirror; do
-							curl -s "$mirror" | mawk '/^[^[:space:]|^#|^!|^;|^$|^:]/{print $1}' |
+							curl -sSL "$mirror" | mawk '/^[^[:space:]|^#|^!|^;|^$|^:]/{print $1}' |
 								while read -r asn; do
 									whois -h whois.radb.net -- "-i origin ${asn}" >>"${cache}/${key}"
 								done
 						done
 					;;
 				'LYNX')
-					get_lists "$method" 'LYNX' |
+					get_lists "$method" "$retriever" |
 						while IFS='#' read -r key mirror; do
 							lynx -dump -listonly -nonumbers "$mirror" | sponge "${cache}/${key}"
 						done
@@ -143,22 +143,21 @@ main() {
 					wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "https://haas.nic.cz/stats/export/${DATE}/${ARCHIVE}.json.gz"
 					;;
 				'CIRCL')
-					jaq -r --arg retriever "$retriever" '.[] | select(.content.retriever == $retriever).mirrors[0]' |
-						xargs -n1 curl -sSL |
-						jaq -r --arg year "$(date +'%Y')" 'to_entries[] | select(.value.date | startswith($year)) | select(.value.Orgc.name == "CIRCL") | .key' |
+					curl -sSL 'https://www.circl.lu/doc/misp/feed-osint/manifest.json' |
+						jaq -r --arg year "$(date +'%Y')" 'to_entries[] | select(.value.date | startswith($year)).key' |
 						while read -r id; do
-							curl -sSL "https://www.circl.lu/doc/misp/feed-osint/${id}.json" >>"${cache}/circl"
-						done
+							curl -sSL "https://www.circl.lu/doc/misp/feed-osint/${id}.json"
+						done >>"${cache}/circl"
 					;;
 				# TODO: Do all HLC lists at once by building a large config file.
 				'HLC_MODIFIERS')
-					get_lists "$method" 'HLC_MODIFIERS' |
+					get_lists "$method" "$retriever" |
 						while IFS='#' read -r key mirror; do
 							hostlist-compiler -t adblock -i "$mirror" -o "${cache}/${key}" >>'logs/hostlist-compiler.log'
 						done
 					;;
 				'HLC_NO_MODIFIERS')
-					get_lists "$method" 'HLC_NO_MODIFIERS' |
+					get_lists "$method" "$retriever" |
 						while IFS='#' read -r key mirror; do
 							echo "{ \"name\": \"Blocklist\", \"sources\": [ { \"source\": \"${mirror}\", \"type\": \"adblock\" } ], \"transformations\": [ \"RemoveComments\", \"TrimLines\", \"RemoveModifiers\", \"Deduplicate\", \"Compress\", \"Validate\", \"InsertFinalNewLine\" ] }" >>"$TMP"
 							hostlist-compiler -c "$TMP" -o "${cache}/${key}" >>'logs/hostlist-compiler.log'
