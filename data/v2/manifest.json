@@ -3741,7 +3741,7 @@
       "pihole": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt"
     }
   },
-  "futafilter_hosts": {
+  "futaguard_lowtech": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -3751,27 +3751,25 @@
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "HOSTS_FILE",
         "format": "DOMAIN"
       }
     ],
     "metadata": {
-      "description": "https://github.com/FutaGuard/FutaFilter#futafilter=",
-      "homepage": "https://github.com/FutaGuard/FutaFilter",
-      "license": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/LICENSE"
+      "description": "https://github.com/FutaGuard/LowTechFilter",
+      "homepage": "https://site.futa.gg/",
+      "license": "apache-2.0"
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/hosts.txt",
       "https://filter.futa.gg/hosts.txt"
     ],
     "topic": "SECURITY",
     "variants": {
-      "adguard": "https://filter.futa.gg/hosts.txt",
-      "easylist": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/filter.txt"
+      "adguard": "https://filter.futa.gg/hosts_abp.txt"
     }
   },
-  "futafilter_nofarm_hosts": {
+  "futaguard_nofarm": {
     "archive": false,
     "checksums": {},
     "content": {
@@ -3781,23 +3779,78 @@
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "HOSTS_FILE",
         "format": "DOMAIN"
       }
     ],
     "metadata": {
-      "description": "https://github.com/FutaGuard/FutaFilter#futafilter=",
-      "homepage": "https://github.com/FutaGuard/FutaFilter",
-      "license": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/LICENSE"
+      "description": "https://github.com/FutaGuard/LowTechFilter",
+      "homepage": "https://site.futa.gg/",
+      "license": "apache-2.0"
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/nofarm_hosts.txt",
       "https://filter.futa.gg/nofarm_hosts.txt"
     ],
     "topic": "SECURITY",
     "variants": {
-      "adguard": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/nofarm_hosts.txt"
+      "adguard": "https://filter.futa.gg/nofarm_abp.txt"
+    }
+  },
+  "futaguard_tw165": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/FutaGuard/LowTechFilter",
+      "homepage": "https://site.futa.gg/",
+      "license": "apache-2.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://filter.futa.gg/TW165_hosts.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://filter.futa.gg/TW165_abp.txt"
+    }
+  },
+  "futaguard_rpz": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/FutaGuard/LowTechFilter",
+      "homepage": "https://site.futa.gg/",
+      "license": "apache-2.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://filter.futa.gg/TWNIC-RPZ_hosts.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://filter.futa.gg/TWNIC-RPZ_abp.txt"
     }
   },
   "geoffrey_frogeye_multiparty": {
