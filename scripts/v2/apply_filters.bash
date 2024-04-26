@@ -110,7 +110,7 @@ process_list() {
 			'SECOND_COLUMN') mawk '{print $2}' ;;
 			'NO_PEDOS') mawk -F: '/^[^[:space:]]/{print $2}' | ipinfo range2cidr ;;
 			'DOMAINS_FROM_HOST_MIX') gawk '/^([[:alpha:]_-]{1,63}\.)/' ;;
-			'HOSTLIST_COMPILER') mawk -F"[|^]" '/^[||]/ && $3!~/\*/{print $3}' ;;
+			'HLC') mawk -F"[|^]" '/^[||]/ && $3!~/\*/{print $3}' ;;
 			esac
 			;;
 		'JSON')

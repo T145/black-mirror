@@ -136,6 +136,8 @@ main() {
 						done
 					;;
 				'HAAS')
+					local DATE
+					local ARCHIVE
 					DATE="$(date +'%Y/%m')"
 					ARCHIVE="$(date --date='yesterday' +'%Y-%m-%d')"
 					wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "https://haas.nic.cz/stats/export/${DATE}/${ARCHIVE}.json.gz"
@@ -148,10 +150,19 @@ main() {
 							curl -sSL "https://www.circl.lu/doc/misp/feed-osint/${id}.json" >>"${cache}/circl"
 						done
 					;;
-				'HOSTLIST_COMPILER')
-					get_lists "$method" 'HOSTLIST_COMPILER' |
+				# TODO: Do all HLC lists at once by building a large config file.
+				'HLC_MODIFIERS')
+					get_lists "$method" 'HLC_MODIFIERS' |
 						while IFS='#' read -r key mirror; do
 							hostlist-compiler -t adblock -i "$mirror" -o "${cache}/${key}" >>'logs/hostlist-compiler.log'
+						done
+					;;
+				'HLC_NO_MODIFIERS')
+					get_lists "$method" 'HLC_NO_MODIFIERS' |
+						while IFS='#' read -r key mirror; do
+							echo "{ \"name\": \"Blocklist\", \"sources\": [ { \"source\": \"${mirror}\", \"type\": \"adblock\" } ], \"transformations\": [ \"RemoveComments\", \"TrimLines\", \"RemoveModifiers\", \"Deduplicate\", \"Compress\", \"Validate\", \"InsertFinalNewLine\" ] }" >>"$TMP"
+							hostlist-compiler -c "$TMP" -o "${cache}/${key}" >>'logs/hostlist-compiler.log'
+							: >"$TMP"
 						done
 					;;
 				# 'SNSCRAPE')

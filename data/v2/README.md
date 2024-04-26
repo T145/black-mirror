@@ -20,8 +20,6 @@
   - cf
   - hosts
   - yui
-- [cjxlist](https://github.com/cjx82630/cjxlist)
-  - cjx-annoyance
 - [YousList](https://github.com/yous/YousList)
 - [xiaobeita](https://github.com/rentianyu/Ad-set-hosts/tree/master/xiaobeita)
 - [ilpl](https://github.com/ilpl/ad-hosts)
