@@ -21,6 +21,8 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump actions/checkout from 4.1.3 to 4.1.4 in /.github/workflows [\#193](https://github.com/T145/black-mirror/pull/193) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump actions/download-artifact from 4.1.6 to 4.1.7 in /.github/workflows [\#192](https://github.com/T145/black-mirror/pull/192) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump tj-actions/github-changelog-generator from c45cd9913c6df54e0500cd666ee82ade9385ece6 to f5cb87b1a419dc6380d9b72c81134e005cbdc1f6 in /.github/workflows [\#188](https://github.com/T145/black-mirror/pull/188) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/download-artifact from 4.1.5 to 4.1.6 in /.github/workflows [\#187](https://github.com/T145/black-mirror/pull/187) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/upload-artifact from b06cde36fc32a3ee94080e87258567f73f921537 to 79616d2ded92999fceefea2ca2e4bdf6101fa919 in /.github/workflows [\#186](https://github.com/T145/black-mirror/pull/186) ([dependabot[bot]](https://github.com/apps/dependabot))
