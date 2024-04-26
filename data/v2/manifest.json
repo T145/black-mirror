@@ -420,7 +420,7 @@
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "HOSTLIST_COMPILER",
         "format": "DOMAIN"
       }
     ],
@@ -440,12 +440,12 @@
     "checksums": {},
     "content": {
       "filter": "NONE",
-      "retriever": "ARIA2",
+      "retriever": "HOSTLIST_COMPILER",
       "type": "TEXT"
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "HOSTLIST_COMPILER",
         "format": "DOMAIN"
       }
     ],
@@ -459,31 +459,6 @@
       "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/src/abpvn_adult.txt"
     ],
     "topic": "SANITY"
-  },
-  "abvpn_general": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ADBLOCK",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/abpvn/abpvn#readme",
-      "homepage": "https://abpvn.com/",
-      "license": "gpl-3.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/src/abpvn_general.txt"
-    ],
-    "topic": "PRIVACY"
   },
   "adaway": {
     "archive": false,
@@ -1402,31 +1377,6 @@
     "variants": {
       "pihole": "https://getblackbird.net/blacklist/hosts.txt"
     }
-  },
-  "blockconvert_adblock": {
-    "archive": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "ADBLOCK",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/mkb2091/blockconvert",
-      "homepage": "https://github.com/mkb2091/blockconvert",
-      "license": "gpl-3.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/mkb2091/blockconvert/master/internal/adblock.txt"
-    ],
-    "topic": "PRIVACY"
   },
   "blockconvert_internal": {
     "archive": false,
@@ -3468,7 +3418,7 @@
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "NONE",
         "format": "DOMAIN"
       }
     ],
@@ -3568,12 +3518,12 @@
     "checksums": {},
     "content": {
       "filter": "NONE",
-      "retriever": "ARIA2",
+      "retriever": "HOSTLIST_COMPILER",
       "type": "TEXT"
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "HOSTLIST_COMPILER",
         "format": "DOMAIN"
       }
     ],
@@ -3597,12 +3547,12 @@
     "checksums": {},
     "content": {
       "filter": "NONE",
-      "retriever": "ARIA2",
+      "retriever": "HOSTLIST_COMPILER",
       "type": "TEXT"
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "HOSTLIST_COMPILER",
         "format": "DOMAIN"
       }
     ],
@@ -3627,12 +3577,12 @@
     "checksums": {},
     "content": {
       "filter": "NONE",
-      "retriever": "ARIA2",
+      "retriever": "HOSTLIST_COMPILER",
       "type": "TEXT"
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "HOSTLIST_COMPILER",
         "format": "DOMAIN"
       }
     ],
@@ -3658,12 +3608,12 @@
     "checksums": {},
     "content": {
       "filter": "NONE",
-      "retriever": "ARIA2",
+      "retriever": "HOSTLIST_COMPILER",
       "type": "TEXT"
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "HOSTLIST_COMPILER",
         "format": "DOMAIN"
       }
     ],
@@ -3751,18 +3701,17 @@
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "HOSTS_FILE",
         "format": "DOMAIN"
       }
     ],
     "metadata": {
-      "description": "https://github.com/FutaGuard/FutaFilter#futafilter=",
-      "homepage": "https://github.com/FutaGuard/FutaFilter",
-      "license": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/LICENSE"
+      "description": "https://github.com/FutaGuard/LowTechFilter",
+      "homepage": "https://github.com/FutaGuard/LowTechFilter",
+      "license": "apache-2.0"
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/hosts.txt",
       "https://filter.futa.gg/hosts.txt"
     ],
     "topic": "SECURITY",
@@ -3781,23 +3730,23 @@
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
     "metadata": {
-      "description": "https://github.com/FutaGuard/FutaFilter#futafilter=",
-      "homepage": "https://github.com/FutaGuard/FutaFilter",
-      "license": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/LICENSE"
+      "description": "https://github.com/FutaGuard/LowTechFilter",
+      "homepage": "https://github.com/FutaGuard/LowTechFilter",
+      "license": "apache-2.0"
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/nofarm_hosts.txt",
-      "https://filter.futa.gg/nofarm_hosts.txt"
+      "https://filter.futa.gg/nofarm.txt"
     ],
     "topic": "SECURITY",
     "variants": {
-      "adguard": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/nofarm_hosts.txt"
+      "adguard": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/nofarm_hosts.txt",
+      "pihole": "https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/nofarm_hosts.txt"
     }
   },
   "geoffrey_frogeye_multiparty": {
@@ -4742,7 +4691,7 @@
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "HOSTLIST_COMPILER",
         "format": "DOMAIN"
       }
     ],
@@ -5803,7 +5752,7 @@
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "HOSTLIST_COMPILER",
         "format": "DOMAIN"
       }
     ],
@@ -5828,7 +5777,7 @@
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "HOSTLIST_COMPILER",
         "format": "DOMAIN"
       }
     ],
@@ -6425,12 +6374,12 @@
     "checksums": {},
     "content": {
       "filter": "NONE",
-      "retriever": "ARIA2",
+      "retriever": "HOSTLIST_COMPILER",
       "type": "TEXT"
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "HOSTLIST_COMPILER",
         "format": "DOMAIN"
       }
     ],
@@ -7353,12 +7302,12 @@
     "checksums": {},
     "content": {
       "filter": "NONE",
-      "retriever": "ARIA2",
+      "retriever": "HOSTLIST_COMPILER",
       "type": "TEXT"
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "HOSTLIST_COMPILER",
         "format": "DOMAIN"
       }
     ],
@@ -8007,12 +7956,12 @@
     "checksums": {},
     "content": {
       "filter": "NONE",
-      "retriever": "ARIA2",
+      "retriever": "HOSTLIST_COMPILER",
       "type": "TEXT"
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "HOSTLIST_COMPILER",
         "format": "DOMAIN"
       }
     ],
@@ -8032,12 +7981,12 @@
     "checksums": {},
     "content": {
       "filter": "NONE",
-      "retriever": "ARIA2",
+      "retriever": "HOSTLIST_COMPILER",
       "type": "TEXT"
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "HOSTLIST_COMPILER",
         "format": "DOMAIN"
       }
     ],
@@ -9955,12 +9904,12 @@
     "checksums": {},
     "content": {
       "filter": "NONE",
-      "retriever": "ARIA2",
+      "retriever": "HOSTLIST_COMPILER",
       "type": "TEXT"
     },
     "formats": [
       {
-        "filter": "ADBLOCK",
+        "filter": "HOSTLIST_COMPILER",
         "format": "DOMAIN"
       }
     ],
