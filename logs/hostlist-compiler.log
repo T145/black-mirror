@@ -1,0 +1,29 @@
+[info] Starting @adguard/hostlist-compiler v1.0.24
+[info] Starting the compiler
+[info] Configuration: {
+    "name": "Blocklist",
+    "sources": [
+        {
+            "source": "https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt",
+            "type": "adblock"
+        }
+    ],
+    "transformations": [
+        "RemoveComments",
+        "Deduplicate",
+        "Compress",
+        "Validate",
+        "TrimLines",
+        "InsertFinalNewLine"
+    ]
+}
+[info] Start compiling https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt
+[info] Original length is 1829
+[info] Length after applying transformations is 1829
+[info] Lines trimmed.
+[info] Removed 23 comments
+[info] The list was compressed from 1809 to 1809
+[info] Deduplication removed 0 rules
+[info] Final length of the list is 116
+[info] Writing output to /tmp/tmp.6n59hpoiK5/BLOCK/cjxlist
+[info] Finished compiling
