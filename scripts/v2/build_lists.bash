@@ -76,14 +76,6 @@ cleanup() {
 	chmod +t /tmp
 }
 
-# params: method id, retriever id
-get_lists() {
-	jaq -r --arg method "$1" --arg retriever "$2" 'to_entries[] |
-		select(.value.content.retriever == $retriever and .value.method == $method) |
-		{key, mirror: .value.mirrors[0]} |
-		"\(.key)#\(.mirror)"' data/v2/manifest.json
-}
-
 main() {
 	init
 
@@ -108,68 +100,44 @@ main() {
 						(.mirrors | join("\t")), " out=\(.key)"' data/v2/manifest.json |
 						aria2c -i- -d "$cache" --conf-path='./configs/aria2.conf'
 					;;
-				'WGET')
-					get_lists "$method" "$retriever" |
+				*)
+					jaq -r --arg method "$method" --arg retriever "$retriever" 'to_entries[] |
+						select(.value.content.retriever == $retriever and .value.method == $method) |
+						{key, mirror: .value.mirrors[0]} |
+						"\(.key)#\(.mirror)"' data/v2/manifest.json |
 						while IFS='#' read -r key mirror; do
-							wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
+							case "$retriever" in
+							'WGET') wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror" ;;
+							'INSECURE_WGET') wget -P "$cache" --no-check-certificate --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror" ;;
+							'ASN_QUERY')
+								curl -sSL "$mirror" | mawk '/^[^[:space:]|^#|^!|^;|^$|^:]/{print $1}' |
+									while read -r asn; do whois -h whois.radb.net -- "-i origin ${asn}"; done |
+									sponge "${cache}/${key}"
+								;;
+							'LYNX') lynx -dump -listonly -nonumbers "$mirror" | sponge "${cache}/${key}" ;;
+							'CURL_HAAS')
+								local DATE
+								local ARCHIVE
+								DATE="$(date +'%Y/%m')"
+								ARCHIVE="$(date --date='yesterday' +'%Y-%m-%d')"
+								wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "https://haas.nic.cz/stats/export/${DATE}/${ARCHIVE}.json.gz"
+								;;
+							'CIRCL')
+								curl -sSL "$mirror" |
+									jaq -r --arg year "$(date +'%Y')" 'to_entries[] | select(.value.date | startswith($year)).key' |
+									while read -r id; do curl -sSL "https://www.circl.lu/doc/misp/feed-osint/${id}.json"; done |
+									sponge "${cache}/${key}"
+								;;
+							# TODO: Do all HLC lists at once by building a large config file.
+							'HLC_MODIFIERS') hostlist-compiler -t adblock -i "$mirror" -o "${cache}/${key}" >>'logs/hostlist-compiler.log' ;;
+							'HLC_NO_MODIFIERS')
+								echo "{ \"name\": \"Blocklist\", \"sources\": [ { \"source\": \"${mirror}\", \"type\": \"adblock\" } ], \"transformations\": [ \"RemoveComments\", \"TrimLines\", \"RemoveModifiers\", \"Deduplicate\", \"Compress\", \"Validate\", \"InsertFinalNewLine\" ] }" >>"$TMP"
+								hostlist-compiler -c "$TMP" -o "${cache}/${key}" >>'logs/hostlist-compiler.log'
+								: >"$TMP"
+								;;
+							esac
 						done
 					;;
-				'INSECURE_WGET')
-					get_lists "$method" "$retriever" |
-						while IFS='#' read -r key mirror; do
-							wget -P "$cache" --no-check-certificate --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror"
-						done
-					;;
-				'ASN_QUERY')
-					get_lists "$method" "$retriever" |
-						while IFS='#' read -r key mirror; do
-							curl -sSL "$mirror" | mawk '/^[^[:space:]|^#|^!|^;|^$|^:]/{print $1}' |
-								while read -r asn; do
-									whois -h whois.radb.net -- "-i origin ${asn}" >>"${cache}/${key}"
-								done
-						done
-					;;
-				'LYNX')
-					get_lists "$method" "$retriever" |
-						while IFS='#' read -r key mirror; do
-							lynx -dump -listonly -nonumbers "$mirror" | sponge "${cache}/${key}"
-						done
-					;;
-				'CURL_HAAS')
-					local DATE
-					local ARCHIVE
-					DATE="$(date +'%Y/%m')"
-					ARCHIVE="$(date --date='yesterday' +'%Y-%m-%d')"
-					wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "https://haas.nic.cz/stats/export/${DATE}/${ARCHIVE}.json.gz"
-					;;
-				'CIRCL')
-					curl -sSL 'https://www.circl.lu/doc/misp/feed-osint/manifest.json' |
-						jaq -r --arg year "$(date +'%Y')" 'to_entries[] | select(.value.date | startswith($year)).key' |
-						while read -r id; do
-							curl -sSL "https://www.circl.lu/doc/misp/feed-osint/${id}.json"
-						done >>"${cache}/circl"
-					;;
-				# TODO: Do all HLC lists at once by building a large config file.
-				'HLC_MODIFIERS')
-					get_lists "$method" "$retriever" |
-						while IFS='#' read -r key mirror; do
-							hostlist-compiler -t adblock -i "$mirror" -o "${cache}/${key}" >>'logs/hostlist-compiler.log'
-						done
-					;;
-				'HLC_NO_MODIFIERS')
-					get_lists "$method" "$retriever" |
-						while IFS='#' read -r key mirror; do
-							echo "{ \"name\": \"Blocklist\", \"sources\": [ { \"source\": \"${mirror}\", \"type\": \"adblock\" } ], \"transformations\": [ \"RemoveComments\", \"TrimLines\", \"RemoveModifiers\", \"Deduplicate\", \"Compress\", \"Validate\", \"InsertFinalNewLine\" ] }" >>"$TMP"
-							hostlist-compiler -c "$TMP" -o "${cache}/${key}" >>'logs/hostlist-compiler.log'
-							: >"$TMP"
-						done
-					;;
-				# 'SNSCRAPE')
-				# 	get_lists "$method" 'SNSCRAPE' |
-				# 		while IFS='#' read -r key mirror; do
-				# 			snscrape --jsonl twitter-user "$mirror" >"$key"
-				# 		done
-				# 	;;
 				# 'SAFE_GIT')
 				# 	# Some repos contain active malware, which we don't want to download.
 				# 	curl -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/0xDanielLopez/phishing_kits/git/trees/master?recursive=1
