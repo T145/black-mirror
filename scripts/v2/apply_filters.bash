@@ -34,7 +34,7 @@ hostsblock() {
 
 # params: column number
 mlr_cut_col() {
-	mlr --csv --skip-comments -N clean-whitespace then cut -f "$1"
+	mlr --mmap --csv --skip-comments -N clean-whitespace then cut -f "$1"
 }
 
 process_list() {
@@ -83,7 +83,7 @@ process_list() {
 			'CYBERCRIME_DOMAIN') mawk -F/ '{print $1}' ;;
 			'CYBERCRIME_IPV4') mawk -F/ '{split($1,a,":");print a[1]}' | get_ipv4s ;;
 			'DATAPLANE_IPV4') mawk -F'|' '$0~/^[^#]/{gsub(/ /,""); print $3}' ;;
-			'DSHIELD') mlr --tsv --skip-comments -N put '$cidr = $1 . "/" . $3' then cut -f cidr ;;
+			'DSHIELD') mlr --mmap --tsv --skip-comments -N put '$cidr = $1 . "/" . $3' then cut -f cidr ;;
 			'MYIP_DOMAIN') mawk -F, '$0~/^[^#]/{print $2}' ;;
 			'MYIP_IPV4') mawk '$0~/^[^#]/{print $1}' | get_ipv4s ;;
 			'MYIP_IPV6') mawk '$0~/^[^#]/{print $1}' | get_ipv6s ;;
@@ -156,26 +156,25 @@ process_list() {
 			case "$LIST_FILTER" in
 			'MLR_CUT_1') mlr_cut_col 1 ;;
 			'MLR_CUT_2') mlr_cut_col 2 ;;
-			'MLR_CUT_3') mlr_cut_col 3 ;;
 			'MLR_CUT_4') mlr_cut_col 4 ;;
-			'BENKOW_DOMAIN') mlr --csv --headerless-csv-output --ifs ';' cut -f url | get_domains_from_urls ;;
-			'BENKOW_IPV4') mlr --csv --headerless-csv-output --ifs ';' cut -f url | get_ipv4s_from_urls ;;
+			'BENKOW_DOMAIN') mlr --mmap --csv --headerless-csv-output --ifs ';' cut -f url | get_domains_from_urls ;;
+			'BENKOW_IPV4') mlr --mmap --csv --headerless-csv-output --ifs ';' put -S '$url =~ "https?://(((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))"; $IP = "\1"' then cut -f IP then uniq -a ;;
 			'BOTVIRJ_COVID') mawk 'NR>1' ;;
 			'CYBER_CURE_DOMAIN_URL') tr ',' '\n' | get_domains_from_urls ;;
-			'MALWARE_DISCOVERER_DOMAIN') mlr --csv --headerless-csv-output cut -f domain ;;
-			'MALWARE_DISCOVERER_IPV4') mlr --csv --headerless-csv-output cut -f ip ;;
+			'MALWARE_DISCOVERER_DOMAIN') mlr --mmap --csv --headerless-csv-output cut -f domain ;;
+			'MALWARE_DISCOVERER_IPV4') mlr --mmap --csv --headerless-csv-output cut -f ip ;;
 			'PHISHSTATS_DOMAIN') mlr_cut_col 3 | get_domains_from_urls ;;
 			'PHISHSTATS_IPV4') mlr_cut_col 4 | get_ipv4s ;;
 			'PHISHSTATS_IPV6') mlr_cut_col 4 | get_ipv6s ;;
-			'TURRIS') mlr --csv --headerless-csv-output --skip-comments cut -f Address ;;
-			'VIRIBACK_DOMAIN') mlr --csv --headerless-csv-output cut -f URL | get_domains_from_urls ;;
-			'VIRIBACK_IPV4') mlr --csv --headerless-csv-output cut -f IP ;;
-			'SHADOWSERVER_HOST') mlr --csv --headerless-csv-output cut -f http_host ;;
-			'SHADOWSERVER_TARGET') mlr --csv --headerless-csv-output cut -f redirect_target ;;
-			'WATCHLIST_INTERNET') mlr --csv --ifs ';' -N cut -f 1 ;;
-			'CRUZ_IT') mlr --csv --headerless-csv-output clean-whitespace then cut -f ip_address ;;
-			'PHISHTANK') mlr --csv --headerless-csv-output --lazy-quotes cut -f url | get_domains_from_urls ;;
-			'BLOCKLIST_UA') mlr --csv --ifs ';' --headerless-csv-output cut -f IP ;;
+			'TURRIS') mlr --mmap --csv --headerless-csv-output --skip-comments cut -f Address ;;
+			'VIRIBACK_DOMAIN') mlr --mmap --csv --headerless-csv-output cut -f URL | get_domains_from_urls ;;
+			'VIRIBACK_IPV4') mlr --mmap --csv --headerless-csv-output cut -f IP ;;
+			'SHADOWSERVER_HOST') mlr --mmap --csv --headerless-csv-output cut -f http_host ;;
+			'SHADOWSERVER_TARGET') mlr --mmap --csv --headerless-csv-output cut -f redirect_target ;;
+			'WATCHLIST_INTERNET') mlr --mmap --csv --ifs ';' -N cut -f 1 ;;
+			'CRUZ_IT') mlr --mmap --csv --headerless-csv-output clean-whitespace then cut -f ip_address ;;
+			'PHISHTANK') mlr --mmap --csv --headerless-csv-output --lazy-quotes cut -f url | get_domains_from_urls ;;
+			'BLOCKLIST_UA') mlr --mmap --csv --ifs ';' --headerless-csv-output cut -f IP ;;
 			'THREATVIEW_C2_HOSTS') mawk -F, '$0~/^[^#]/{print $3}' | get_domains ;;
 			'THREATVIEW_C2_IPV4') mawk -F, '$0~/^[^#]/{print $1}' | get_ipv4s ;;
 			esac
