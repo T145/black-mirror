@@ -64,20 +64,12 @@ apply_cidr_whitelist() {
 	fi
 }
 
-init() {
+main() {
 	trap 'rm -rf "$DOWNLOADS"' EXIT || exit 1
 	mkdir -p "$OUTDIR"
 	# clear all logs
 	find -P -O3 ./logs -depth -type f -print0 | xargs -0 truncate -s 0
 	chmod -t /tmp
-}
-
-cleanup() {
-	chmod +t /tmp
-}
-
-main() {
-	init
 
 	local cache
 	local list
@@ -100,6 +92,14 @@ main() {
 						(.mirrors | join("\t")), " out=\(.key)"' data/v2/manifest.json |
 						aria2c -i- -d "$cache" --conf-path='./configs/aria2.conf'
 					;;
+				# 'HLC_MODIFIERS')
+				# 	echo -n "{\"name\":\"Blocklist\",\"sources\":[" >>"$TMP"
+				# 	jaq -r --arg method 'map(select(.content.retriever == "HLC_MODIFIERS" and .method == $method).mirrors) | flatten | .[]' data/v2/manifest.json |
+				# 		mawk '{printf "{\"source\":\"%s\",\"type\":\"adblock\"},", $0}' >>"$TMP"
+				# 	echo -n "],\"transformations\":[\"RemoveComments\",\"TrimLines\",\"Deduplicate\",\"Compress\",\"Validate\",\"InsertFinalNewLine\"]}" >>"$TMP"
+				# 	hostlist-compiler -c "$TMP" -o "${cache}/${key}" >>'logs/hostlist-compiler.log'
+				# 	: >"$TMP"
+				# 	;;
 				*)
 					jaq -r --arg method "$method" --arg retriever "$retriever" 'to_entries[] |
 						select(.value.content.retriever == $retriever and .value.method == $method) |
@@ -115,7 +115,7 @@ main() {
 									sponge "${cache}/${key}"
 								;;
 							'LYNX') lynx -dump -listonly -nonumbers "$mirror" | sponge "${cache}/${key}" ;;
-							'CURL_HAAS')
+							'HAAS_WGET')
 								local DATE
 								local ARCHIVE
 								DATE="$(date +'%Y/%m')"
@@ -211,7 +211,7 @@ main() {
 	find "$OUTDIR" -type f -name "*.txt" -size 0 -exec rm {} \;
 	find "$OUTDIR" -type f -name "*.txt" -exec sha256sum {} \; | sort -k2 >>"${OUTDIR}/CHECKSUMS.txt"
 
-	cleanup
+	chmod +t /tmp
 }
 
 # https://github.com/koalaman/shellcheck/wiki/SC2218
