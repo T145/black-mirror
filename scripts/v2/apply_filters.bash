@@ -174,7 +174,7 @@ process_list() {
 			'SHADOWSERVER_TARGET') mlr --csv --headerless-csv-output cut -f redirect_target ;;
 			'WATCHLIST_INTERNET') mlr --csv --ifs ';' -N cut -f 1 ;;
 			'CRUZ_IT') mlr --csv --headerless-csv-output clean-whitespace then cut -f ip_address ;;
-			'PHISHTANK') mlr --csv --headerless-csv-output cut -f url | get_domains_from_urls ;;
+			'PHISHTANK') mlr --csv --headerless-csv-output --lazy-quotes cut -f url | get_domains_from_urls ;;
 			'BLOCKLIST_UA') mlr --csv --ifs ';' --headerless-csv-output cut -f IP ;;
 			'THREATVIEW_C2_HOSTS') mawk -F, '$0~/^[^#]/{print $3}' | get_domains ;;
 			'THREATVIEW_C2_IPV4') mawk -F, '$0~/^[^#]/{print $1}' | get_ipv4s ;;
