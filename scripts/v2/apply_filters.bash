@@ -63,11 +63,12 @@ process_list() {
 	'SHADOWWHISPERER') unzip -p "$FILE_PATH" BlockLists-master/RAW/* ;;
 	'ESOX_LUCIUS') unzip -p "$FILE_PATH" PiHoleblocklists-main/* -x PiHoleblocklists-main/LICENSE PiHoleblocklists-main/README.md ;;
 	esac |
+		dos2unix -q |
 		case "$CONTENT_TYPE" in
 		'TEXT')
 			case "$LIST_FILTER" in
 			'NONE') cat -s ;;
-			'HOSTS_FILE') mawk '{sub(/\r$/,"");if($1~/^(0.0.0.0|127.0.0.1|0|::)$/&&$2!~/^(localhost|local|localhost.localdomain)$/){print $2}}' ;;
+			'HOSTS_FILE') mawk '$1~/^(0.0.0.0|127.0.0.1|0|::)$/&&$2!~/^(localhost|local|localhost.localdomain)$/{print $2}' ;;
 			'MIXED_HOSTS_FILE') mawk '{if($1~/^(0.0.0.0)/){print $2}else{if($1~/^[^[:space:]|^#]/&&$1!~/\*$/){print $1}}}' ;;
 			'NPC_HOSTS') mawk '$1~/^0.0.0.0/{for (i=2; i<=NF; i++) print $i}' ;;
 			'RAW_HOSTS_WITH_COMMENTS') mawk '/^[^[:space:]|^#|^!|^;|^$|^:|^*]/{print $1}' ;;
@@ -186,41 +187,42 @@ process_list() {
 			'CRYPTOSCAMDB_WHITELIST') yq '.[].url' | get_domains_from_urls ;;
 			esac
 			;;
-		esac | mawk 'NF && !seen[$0]++' |
-		case "$LIST_FORMAT" in
-		'DOMAIN')
-			perl ./scripts/v2/process_domains.pl 2>/dev/null
-			;;
-		# https://metacpan.org/pod/Data::Validate::IP
-		'IPV4')
-			case "$LIST_METHOD" in
-			'BLOCK')
-				perl -MData::Validate::IP=is_public_ipv4 -nE 'chomp; if(defined($_) && is_public_ipv4($_)) {say $_;}'
+		esac |
+			mawk 'NF && !seen[$0]++' |
+			case "$LIST_FORMAT" in
+			'DOMAIN')
+				perl ./scripts/v2/process_domains.pl 2>/dev/null
 				;;
-			# Ensure bogons get whitelisted
-			'ALLOW')
-				perl -MData::Validate::IP=is_ipv4 -nE 'chomp; if(defined($_) && is_ipv4($_)) {say $_;}'
+			# https://metacpan.org/pod/Data::Validate::IP
+			'IPV4')
+				case "$LIST_METHOD" in
+				'BLOCK')
+					perl -MData::Validate::IP=is_public_ipv4 -nE 'chomp; if(defined($_) && is_public_ipv4($_)) {say $_;}'
+					;;
+				# Ensure bogons get whitelisted
+				'ALLOW')
+					perl -MData::Validate::IP=is_ipv4 -nE 'chomp; if(defined($_) && is_ipv4($_)) {say $_;}'
+					;;
+				esac
+				;;
+			'IPV6')
+				case "$LIST_METHOD" in
+				'BLOCK')
+					perl -MData::Validate::IP=is_public_ipv6 -nE 'chomp; if(defined($_) && is_public_ipv6($_)) {say $_;}'
+					;;
+				# Ensure bogons get whitelisted
+				'ALLOW')
+					perl -MData::Validate::IP=is_ipv6 -nE 'chomp; if(defined($_) && is_ipv6($_)) {say $_;}'
+					;;
+				esac
+				;;
+			'CIDR4')
+				perl ./scripts/v2/process_cidrs.pl 2>/dev/null
+				;;
+			'CIDR6')
+				perl ./scripts/v2/process_cidrs.pl 2>/dev/null
 				;;
 			esac
-			;;
-		'IPV6')
-			case "$LIST_METHOD" in
-			'BLOCK')
-				perl -MData::Validate::IP=is_public_ipv6 -nE 'chomp; if(defined($_) && is_public_ipv6($_)) {say $_;}'
-				;;
-			# Ensure bogons get whitelisted
-			'ALLOW')
-				perl -MData::Validate::IP=is_ipv6 -nE 'chomp; if(defined($_) && is_ipv6($_)) {say $_;}'
-				;;
-			esac
-			;;
-		'CIDR4')
-			perl ./scripts/v2/process_cidrs.pl 2>/dev/null
-			;;
-		'CIDR6')
-			perl ./scripts/v2/process_cidrs.pl 2>/dev/null
-			;;
-		esac
 }
 
 main() {

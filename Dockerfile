@@ -55,7 +55,7 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
 # https://hub.docker.com/r/parrotsec/core
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.3.3" \
+      version="6.3.4" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -127,6 +127,7 @@ RUN apt-get -q update --no-allow-insecure-repositories; \
     csvkit=1.0.7-1 \
     curl=7.88.1-10+deb12u5 \
     debsums=3.0.2.1 \
+    dos2unix=7.4.3-1 \
     gawk=1:5.2.1-2 \
     git=1:2.39.2-1.1 \
     grepcidr=2.0-2 \
