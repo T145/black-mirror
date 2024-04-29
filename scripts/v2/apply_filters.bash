@@ -122,6 +122,8 @@ process_list() {
 			'ABUSE_CH_THREATFOX_DOMAIN') jaq -r 'to_entries[].value[].ioc_value' ;;
 			'AYASHIGE') jaq -r '.[].fqdn' ;;
 			'CYBER_CURE_IPV4') jaq -r '.data.ip[]' ;;
+			'CYBER_CURE_DOMAIN_URL') jaq -r '[ .data.urls[] as $url | {"url": $url} ] | map(select(.[] | test("https?://(((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))") | not))[].url | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?((?<path>[^?#]*))?(\\?(?<query>([^#]*)))?(#(?<fragment>(.*)))?").domain' ;;
+			'CYBER_CURE_IP_URL') jaq -r '[ .data.urls[] as $url | {"url": $url} ] | map(select(.[] | test("https?://(((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))")))[].url | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<ip>[^/?#:]*)(:(?<port>[0-9]*))?))?((?<path>[^?#]*))?(\\?(?<query>([^#]*)))?(#(?<fragment>(.*)))?").ip' ;;
 			'CYBERSAIYAN_DOMAIN') jaq -r '.[] | select(.value.type == "URL") | .indicator' | get_domains_from_urls ;;
 			'CYBERSAIYAN_IPV4') jaq -r '.[] | select(.value.type == "URL") | .indicator' | get_ipv4s_from_urls ;;
 			'DISCONNECTME_ENTITIES') jaq -r '.entities[] | "\(.properties[])\n\(.resources[])"' ;;
@@ -153,29 +155,32 @@ process_list() {
 			'MALWARE_WORLD') jaq -r 'to_entries[] | select(.value.title == "Whitelist").key' ;;
 			esac
 			;;
+		# Match domains in URLs: https://regex101.com/r/iC9eN2/1
 		'CSV')
 			case "$LIST_FILTER" in
 			'MLR_CUT_1') mlr_cut_col 1 ;;
 			'MLR_CUT_2') mlr_cut_col 2 ;;
 			'MLR_CUT_4') mlr_cut_col 4 ;;
-			'BENKOW_DOMAIN') mlr --mmap --csv --headerless-csv-output --ifs ';' cut -f url | get_domains_from_urls ;;
-			'BENKOW_IPV4') mlr --mmap --csv --headerless-csv-output --ifs ';' put -S '$url =~ "https?://(((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))"; $IP = "\1"' then cut -f IP then uniq -a ;;
+			'BENKOW_DOMAIN') mlr --mmap --csv --headerless-csv-output --ifs ';' put -S '$url =~ "https?://((([a-zA-Z]{1})|([a-zA-Z]{1}[a-zA-Z]{1})|([a-zA-Z]{1}[0-9]{1})|([0-9]{1}[a-zA-Z]{1})|([a-zA-Z0-9][a-zA-Z0-9-_]{1,61}[a-zA-Z0-9]))\.([a-zA-Z]{2,6}|[a-zA-Z0-9-]{2,30}\.[a-zA-Z]{2,3}))"; $Domain = "\1"' then cut -f Domain then uniq -a ;;
+			'BENKOW_IPV4') mlr --mmap --csv --headerless-csv-output --ifs ';' put -S '$ip =~ "(((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))"; $IP = "\1"' then cut -f IP then uniq -a ;;
 			'BOTVIRJ_COVID') mawk 'NR>1' ;;
-			'CYBER_CURE_DOMAIN_URL') tr ',' '\n' | get_domains_from_urls ;;
 			'MALWARE_DISCOVERER_DOMAIN') mlr --mmap --csv --headerless-csv-output cut -f domain ;;
 			'MALWARE_DISCOVERER_IPV4') mlr --mmap --csv --headerless-csv-output cut -f ip ;;
 			'PHISHSTATS_DOMAIN') mlr_cut_col 3 | get_domains_from_urls ;;
 			'PHISHSTATS_IPV4') mlr_cut_col 4 | get_ipv4s ;;
 			'PHISHSTATS_IPV6') mlr_cut_col 4 | get_ipv6s ;;
 			'TURRIS') mlr --mmap --csv --headerless-csv-output --skip-comments cut -f Address ;;
-			'VIRIBACK_DOMAIN') mlr --mmap --csv --headerless-csv-output cut -f URL | get_domains_from_urls ;;
-			'VIRIBACK_IPV4') mlr --mmap --csv --headerless-csv-output cut -f IP ;;
+			'VIRIBACK_DOMAIN') mlr --mmap --csv --headerless-csv-output put -S '$URL =~ "https?://((([a-zA-Z]{1})|([a-zA-Z]{1}[a-zA-Z]{1})|([a-zA-Z]{1}[0-9]{1})|([0-9]{1}[a-zA-Z]{1})|([a-zA-Z0-9][a-zA-Z0-9-_]{1,61}[a-zA-Z0-9]))\.([a-zA-Z]{2,6}|[a-zA-Z0-9-]{2,30}\.[a-zA-Z]{2,3}))"; $Domain = "\1"' then cut -f Domain then uniq -a ;;
+			'VIRIBACK_IPV4') mlr --mmap --csv --headerless-csv-output cut -f IP then uniq -a ;;
 			'SHADOWSERVER_HOST') mlr --mmap --csv --headerless-csv-output cut -f http_host ;;
 			'SHADOWSERVER_TARGET') mlr --mmap --csv --headerless-csv-output cut -f redirect_target ;;
 			'WATCHLIST_INTERNET') mlr --mmap --csv --ifs ';' -N cut -f 1 ;;
 			'CRUZ_IT') mlr --mmap --csv --headerless-csv-output clean-whitespace then cut -f ip_address ;;
-			'PHISHTANK') mlr --mmap --csv --headerless-csv-output --lazy-quotes cut -f url | get_domains_from_urls ;;
-			'BLOCKLIST_UA') mlr --mmap --csv --ifs ';' --headerless-csv-output cut -f IP ;;
+			# PhishTank often includes large hashes in its URLs, which may lead to parsing issues.
+			# Therefore use regex that ignores paths and queries after the domain.
+			'PHISHTANK') mlr --mmap --csv --headerless-csv-output --lazy-quotes put -S '$url =~ "https?://([^/]+)"; $Domain = "\1"' then cut -f Domain then uniq -a ;;
+			'BLOCKLIST_UA') mlr --mmap --csv --headerless-csv-output --ifs ';' cut -f IP ;;
+			# The C2 feed has malformed CSVs.
 			'THREATVIEW_C2_HOSTS') mawk -F, '/^[^#]/{print $3}' ;;
 			# Ignore IPs that are not from the current month.
 			'THREATVIEW_C2_IPV4') awk -F, -v date="$(date +'%B %Y') [0-9]{2}:[0-9]{2} [AP]M [[:upper:]]+$" '/^[^#]/ && $2 ~ date{print $1}';;

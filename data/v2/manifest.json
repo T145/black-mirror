@@ -2628,6 +2628,10 @@
       {
         "filter": "CYBER_CURE_DOMAIN_URL",
         "format": "DOMAIN"
+      },
+      {
+        "filter": "CYBER_CURE_IP_URL",
+        "format": "IPV4"
       }
     ],
     "metadata": {
@@ -2637,7 +2641,7 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://api.cybercure.ai/feed/get_url?type=csv"
+      "https://api.cybercure.ai/feed/get_url?type=json"
     ],
     "topic": "SECURITY"
   },
