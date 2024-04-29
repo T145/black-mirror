@@ -15,9 +15,9 @@
 
 `Black Mirror` works by taking objects from [`data/v2/manifest.json`](https://github.com/T145/black-mirror/blob/master/data/v2/manifest.json) defined like so:
 
-* **_notes**: `optional` Any extra information about the list or its filters.
+* **_notes**: (`optional`) Any extra information about the list or its filters.
 * **archive**: Whether to save the list to the Internet Archive in case the original ever becomes unvailable or maliciously modified.
-* **checksums**: Checksums for the list in the form of a JSON object with the key being the checksum format and the value being the checksum's URL.
+* **checksums**: (Fields are `optional`) Checksums for the list in the form of a JSON object with the key being the checksum format and the value being the checksum's URL.
 * **content**:
   * **filter**: A preprocessing command to transform the list into plain text. Reference where the filters [are defined](https://github.com/T145/black-mirror/blob/master/scripts/v2/apply_filters.bash).
   * **retriever**: The utility to download the list. Reference where retrievers [are defined](https://github.com/T145/black-mirror/blob/master/scripts/v2/build_lists.bash#L60).
@@ -64,8 +64,8 @@ Example:
 
 ## Adding Adblock Lists
 
-Reference [this page](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#static-network-filtering) about domain filtering syntax with uBlock.
-Most principles should carry over to AdGuard and other syntaxes, but don't be afraid to ask.
+Reference [this page](https://github.com/AdguardTeam/tsurlfilter/blob/master/packages/agtree/README.md#references) about domain filtering syntax.
+Most principles should carry over to other syntaxes, but don't be afraid to ask.
 
 # Blocking or allowing specific hosts
 
