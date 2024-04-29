@@ -569,7 +569,7 @@
     - Last-Modified: Tue, 18 Apr 2017 02:13:20 GMT
   - [Other Lists](http://zitstif.no-ip.org/?cat=1037)
 - [perso](https://perso.pw/blocklist.txt)
-- [CyberSaiyanIT](https://infosharing.cybersaiyan.it)
+- [CyberSaiyanIT](https://www.cybersaiyan.it/)
 - [fzListKor](https://raw.githubusercontent.com/elsannadisney/fzListKor/main/warehouse/maindns.txt)
 - [AirVPN Adult Filter](https://airvpn.org/api/dns_lists/?code=air_porn)
 - [Richard's Blocklist](https://forum.virtualmin.com/t/all-of-my-blocklists-are-now-free-at-least-for-the-time-being/116454)

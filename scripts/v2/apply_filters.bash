@@ -122,10 +122,10 @@ process_list() {
 			'ABUSE_CH_THREATFOX_DOMAIN') jaq -r 'to_entries[].value[].ioc_value' ;;
 			'AYASHIGE') jaq -r '.[].fqdn' ;;
 			'CYBER_CURE_IPV4') jaq -r '.data.ip[]' ;;
-			'CYBER_CURE_DOMAIN_URL') jaq -r '[ .data.urls[] as $url | {"url": $url} ] | map(select(.[] | test("https?://(((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))") | not))[].url | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?((?<path>[^?#]*))?(\\?(?<query>([^#]*)))?(#(?<fragment>(.*)))?").domain' ;;
-			'CYBER_CURE_IP_URL') jaq -r '[ .data.urls[] as $url | {"url": $url} ] | map(select(.[] | test("https?://(((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))")))[].url | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<ip>[^/?#:]*)(:(?<port>[0-9]*))?))?((?<path>[^?#]*))?(\\?(?<query>([^#]*)))?(#(?<fragment>(.*)))?").ip' ;;
-			'CYBERSAIYAN_DOMAIN') jaq -r '.[] | select(.value.type == "URL") | .indicator' | get_domains_from_urls ;;
-			'CYBERSAIYAN_IPV4') jaq -r '.[] | select(.value.type == "URL") | .indicator' | get_ipv4s_from_urls ;;
+			'CYBER_CURE_DOMAIN_URL') jaq -r '.data.urls[] | select(test("https?://(((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))") | not) | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?").domain' ;;
+			'CYBER_CURE_IP_URL') jaq -r '.data.urls[] | select(test("https?://(((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))")) | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<ip>[^/?#:]*)(:(?<port>[0-9]*))?))?").ip' ;;
+			#'CYBERSAIYAN_DOMAIN') jaq -r '.[] | select(.value.type == "URL") | .indicator' | get_domains_from_urls ;;
+			#'CYBERSAIYAN_IPV4') jaq -r '.[] | select(.value.type == "URL") | .indicator' | get_ipv4s_from_urls ;;
 			'DISCONNECTME_ENTITIES') jaq -r '.entities[] | "\(.properties[])\n\(.resources[])"' ;;
 			#'DISCONNECTME_SERVICES') jaq -r '.categories[] | to_entries[].value[] | to_entries[].value[]' ;;
 			'HIPO_UNIVERSITIES') jaq -r '.[].domains | join("\n")' ;;
@@ -137,8 +137,7 @@ process_list() {
 			'TINYCHECK_FREEDNS') jaq -r '.iocs[] | select(.type == "freedns") | .value' ;;
 			'TINYCHECK_IPV4') jaq -r '.iocs[] | select(.type == "ip4addr") | .value' ;;
 			'TINYCHECK_CIDR') jaq -r '.iocs[] | select(.type == "cidr") | .value' ;;
-			'CHONG_LUA_DAO_DOMAIN') jaq -r '.[].url' | sed 's/\*\.//g' | get_domains_from_urls ;;
-			'CHONG_LUA_DAO_IPV4') jaq -r '.[].url' | get_ipv4s_from_urls ;;
+			'CHONG_LUA_DAO') jaq -r '.[].url | sub("\\*\\.";"") | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?").domain' ;;
 			'INQUEST_DOMAIN') jaq -r '.data[] | select(.artifact_type == "domain") | .artifact' ;;
 			'INQUEST_IPV4') jaq -r '.data[] | select(.artifact_type == "ipaddress") | .artifact' ;;
 			#'CERTEGO') jaq -rs '.[].links[].url' | mawk -F/ '$5~/^domain$/{print $6}' ;;
@@ -146,12 +145,12 @@ process_list() {
 			'VIVALDI') jaq -r '.[] | select(.filterStatus == "ON") | .reviewedSite' ;;
 			'MSEDGE') jaq -r '.sites[].url' ;;
 			'GITHUB_ACTIONS_DOMAINS') jaq -r '.domains.actions[]' ;;
-			'GITHUB_META_CIDR4') jaq -r '.hooks[], .web[], .api[], .git[], .github_enterprise_importer[], .packages[], .pages[], .importer[], .actions[], .dependabot[]' | get_ipv4_cidrs ;;
-			'GITHUB_META_CIDR6') jaq -r '.hooks[], .web[], .api[], .git[], .github_enterprise_importer[], .pages[], .actions[]' | get_ipv6_cidrs ;;
+			'GITHUB_META_CIDR4') jaq -r '.hooks[], .web[], .api[], .git[], .github_enterprise_importer[], .packages[], .pages[], .importer[], .actions[], .dependabot[] | select(test("[:]") | not)' ;;
+			'GITHUB_META_CIDR6') jaq -r '.hooks[], .web[], .api[], .git[], .github_enterprise_importer[], .pages[], .actions[] | select(test("[:]"))' ;;
 			'HAAS') jaq -r '.[] | .ip' ;;
 			'CIRCL_DOMAIN') jaq -rs '.[].Event.Attribute[]? | select(.type == "domain" or .type == "hostname").value' ;;
 			'CIRCL_IPV4') jaq -rs '.[].Event.Attribute[]? | select(.type == "ip-dst").value' ;;
-			'CIRCL_URL') jaq -rs '.[].Event.Attribute[]? | select(.type == "url").value | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?((?<path>[^?#]*))?(\\?(?<query>([^#]*)))?(#(?<fragment>(.*)))?").domain' ;;
+			'CIRCL_URL') jaq -rs '.[].Event.Attribute[]? | select(.type == "url").value | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?").domain' ;;
 			'MALWARE_WORLD') jaq -r 'to_entries[] | select(.value.title == "Whitelist").key' ;;
 			esac
 			;;
@@ -166,9 +165,11 @@ process_list() {
 			'BOTVIRJ_COVID') mawk 'NR>1' ;;
 			'MALWARE_DISCOVERER_DOMAIN') mlr --mmap --csv --headerless-csv-output cut -f domain ;;
 			'MALWARE_DISCOVERER_IPV4') mlr --mmap --csv --headerless-csv-output cut -f ip ;;
-			'PHISHSTATS_DOMAIN') mlr_cut_col 3 | get_domains_from_urls ;;
-			'PHISHSTATS_IPV4') mlr_cut_col 4 | get_ipv4s ;;
-			'PHISHSTATS_IPV6') mlr_cut_col 4 | get_ipv6s ;;
+			'PHISHSTATS_DOMAIN') mlr --mmap --csv --skip-comments -N put -S '$3 =~ "https?://((([a-zA-Z]{1})|([a-zA-Z]{1}[a-zA-Z]{1})|([a-zA-Z]{1}[0-9]{1})|([0-9]{1}[a-zA-Z]{1})|([a-zA-Z0-9][a-zA-Z0-9-_]{1,61}[a-zA-Z0-9]))\.([a-zA-Z]{2,6}|[a-zA-Z0-9-]{2,30}\.[a-zA-Z]{2,3}))"; $Domain = "\1"' then cut -f Domain then uniq -a phish_score.csv ;;
+			'PHISHSTATS_IPV4') mlr --mmap --csv --skip-comments -N put -S '$4 =~ "(((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))"; $IP = "\1"' then cut -f IP then uniq -a ;;
+			# https://stackoverflow.com/questions/53497/regular-expression-that-matches-valid-ipv6-addresses
+			# IpInfo uses the same regex, so there's less overhead by processing everything in Miller.
+			'PHISHSTATS_IPV6') mlr --mmap --csv --skip-comments -N put -S '$4 =~ "(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))"; $IP = "\1"' then cut -f IP then uniq -a ;;
 			'TURRIS') mlr --mmap --csv --headerless-csv-output --skip-comments cut -f Address ;;
 			'VIRIBACK_DOMAIN') mlr --mmap --csv --headerless-csv-output put -S '$URL =~ "https?://((([a-zA-Z]{1})|([a-zA-Z]{1}[a-zA-Z]{1})|([a-zA-Z]{1}[0-9]{1})|([0-9]{1}[a-zA-Z]{1})|([a-zA-Z0-9][a-zA-Z0-9-_]{1,61}[a-zA-Z0-9]))\.([a-zA-Z]{2,6}|[a-zA-Z0-9-]{2,30}\.[a-zA-Z]{2,3}))"; $Domain = "\1"' then cut -f Domain then uniq -a ;;
 			'VIRIBACK_IPV4') mlr --mmap --csv --headerless-csv-output cut -f IP then uniq -a ;;
