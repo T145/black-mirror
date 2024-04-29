@@ -42,6 +42,6 @@ jobs:
       - name: Make commit directory safe
         run: git config --global --add safe.directory /__w/black-mirror/black-mirror
       - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@4b8a201e31cadd9829df349894b28c54e6c19fe6
+        uses: stefanzweifel/git-auto-commit-action@7d0ca8f849305c56d36f992cfb1519b1af5b33f8
         with:
           commit_message: "ci(lists): ✨📚✨"
