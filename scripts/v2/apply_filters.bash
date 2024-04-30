@@ -60,8 +60,6 @@ process_list() {
 			'MIXED_HOSTS_FILE') mawk '{if($1~/^(0.0.0.0)/){print $2}else{if($1~/^[^[:space:]|^#]/&&$1!~/\*$/){print $1}}}' ;;
 			'NPC_HOSTS') mawk '$1~/^0.0.0.0/{for (i=2; i<=NF; i++) print $i}' ;;
 			'RAW_HOSTS_WITH_COMMENTS') mawk '/^[^[:space:]|^#|^!|^;|^$|^:|^*]/{print $1}' ;;
-			#'ABUSE_CH_URLHAUS_DOMAIN') get_domains_from_urls ;;
-			#'ABUSE_CH_URLHAUS_IPV4') get_ipv4s_from_urls ;;
 			'ALIENVAULT') mawk -F# '{print $1}' ;;
 			'ADBLOCK') hostsblock ;;
 			'GREP_IPV4') get_ipv4s ;;
