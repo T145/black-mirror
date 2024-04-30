@@ -378,21 +378,21 @@
     ],
     "topic": "SECURITY"
   },
-  "abuse_ch_urlhaus": {
+  "abuse_ch_urlhaus_online": {
     "archive": false,
     "checksums": {},
     "content": {
       "filter": "NONE",
       "retriever": "ARIA2",
-      "type": "TEXT"
+      "type": "CSV"
     },
     "formats": [
       {
-        "filter": "ABUSE_CH_URLHAUS_DOMAIN",
+        "filter": "ABUSE_CH_URLHAUS_ONLINE_DOMAIN",
         "format": "DOMAIN"
       },
       {
-        "filter": "ABUSE_CH_URLHAUS_IPV4",
+        "filter": "ABUSE_CH_URLHAUS_ONLINE_IPV4",
         "format": "IPV4"
       }
     ],
@@ -403,12 +403,38 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://urlhaus.abuse.ch/downloads/text/"
+      "https://urlhaus.abuse.ch/downloads/csv_recent/"
     ],
     "topic": "SECURITY",
     "variants": {
+      "adguard": "https://urlhaus.abuse.ch/downloads/hostfile/",
       "pihole": "https://urlhaus.abuse.ch/downloads/hostfile/"
     }
+  },
+  "abuse_ch_urlhaus_recent": {
+    "archive": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "CSV"
+    },
+    "formats": [
+      {
+        "filter": "ABUSE_CH_URLHAUS_ONLINE_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://urlhaus.abuse.ch/browse/",
+      "homepage": "https://abuse.ch/",
+      "license": "cc0-1.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://urlhaus.abuse.ch/downloads/csv_recent/"
+    ],
+    "topic": "SECURITY"
   },
   "abvpn_ads": {
     "archive": false,
