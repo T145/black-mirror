@@ -1291,6 +1291,31 @@
     ],
     "topic": "SECURITY"
   },
+  "badhosts": {
+    "active": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://www.hostsfile.org/hosts.html",
+      "homepage": "https://www.hostsfile.org/hosts.html",
+      "license": "gpl-2.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.hostsfile.org/Downloads/hosts.txts"
+    ],
+    "topic": "SECURITY"
+  },
   "benkow_cc": {
     "active": true,
     "checksums": {},
@@ -1995,6 +2020,31 @@
     ],
     "topic": "SECURITY"
   },
+  "cameleon": {
+    "active": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://sysctl.org/cameleon/",
+      "homepage": "https://sysctl.org/cameleon/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://sysctl.org/cameleon/hosts"
+    ],
+    "topic": "PRIVACY"
+  },
   "cert_agid_log4shell": {
     "active": true,
     "checksums": {},
@@ -2404,6 +2454,31 @@
     "variants": {
       "pihole": "https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/master/NoFormatting/BlacklistedDomains.txt"
     }
+  },
+  "cosmonotes": {
+    "active": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "MEDIAFIRE",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://cosmonote.blogspot.com/2013/09/Download.html",
+      "homepage": "https://cosmonote.blogspot.com/2013/09/Download.html",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://www.mediafire.com/download/hkck7v31jwzjifi/hosts_Ultimate.txt"
+    ],
+    "topic": "PRIVACY"
   },
   "cps_illuminate": {
     "active": true,
@@ -3119,6 +3194,31 @@
     "method": "BLOCK",
     "mirrors": [
       "https://dataplane.org/vncrfb.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "dehakkelaar": {
+    "active": false,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/deHakkelaar/Cryptojacking-campaign-list",
+      "homepage": "https://github.com/deHakkelaar/Cryptojacking-campaign-list",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://dehakkelaar.nl/lists/cryptojacking_campaign.list.txt"
     ],
     "topic": "SECURITY"
   },
@@ -10813,106 +10913,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://zonefiles.io/f/compromised/ip/live/"
-    ],
-    "topic": "SECURITY"
-  },
-  "cameleon": {
-    "active": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://sysctl.org/cameleon/",
-      "homepage": "https://sysctl.org/cameleon/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://sysctl.org/cameleon/hosts"
-    ],
-    "topic": "PRIVACY"
-  },
-  "badhosts": {
-    "active": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://www.hostsfile.org/hosts.html",
-      "homepage": "https://www.hostsfile.org/hosts.html",
-      "license": "gpl-2.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://www.hostsfile.org/Downloads/hosts.txts"
-    ],
-    "topic": "SECURITY"
-  },
-  "cosmonotes": {
-    "active": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "MEDIAFIRE",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://cosmonote.blogspot.com/2013/09/Download.html",
-      "homepage": "https://cosmonote.blogspot.com/2013/09/Download.html",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://www.mediafire.com/download/hkck7v31jwzjifi/hosts_Ultimate.txt"
-    ],
-    "topic": "PRIVACY"
-  },
-  "dehakkelaar": {
-    "active": false,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/deHakkelaar/Cryptojacking-campaign-list",
-      "homepage": "https://github.com/deHakkelaar/Cryptojacking-campaign-list",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://dehakkelaar.nl/lists/cryptojacking_campaign.list.txt"
     ],
     "topic": "SECURITY"
   }
