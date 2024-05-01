@@ -31,13 +31,12 @@ jobs:
       - name: Document manifest
         run: jaq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/manifest.json | csvlook >dist/SOURCES.md
       - name: Document AdGuard sources
-        run: jaq -r 'to_entries[] | select(.value.method == "BLOCK" and .value.variants.adguard?) | ("!#include " + .value.variants.adguard)' data/v2/manifest.json >dist/ADGUARD_SOURCES.txt
+        run: jaq -r '.[] | select(.method == "BLOCK" and .variants.adguard?) | ("!#include " + .variants.adguard)' data/v2/manifest.json >dist/ADGUARD_SOURCES.txt
       - name: Whitelist list hosts
         run: |
-          jaq -r '[ to_entries[] | .value.mirrors[] | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?((?<path>[^?#]*))?(\\?(?<query>([^#]*)))?(#(?<fragment>(.*)))?").domain ] | unique | sort | .[]' data/v2/manifest.json |
+          jaq -r '[ .[].mirrors[] | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)))?").domain ] | unique | sort | .[]' data/v2/manifest.json |
             dnsx -nc -silent -cname -ns -resp |
-            mawk '{print $3}' |
-            grep -oP '(?<=[\[])[^\]]*' >>dist/CONTRIB_DOMAINS.txt
+            mawk '{print $1; gsub(/[\[\]]/,"",$3); print $3}' >>dist/CONTRIB_DOMAINS.txt
           sort -o dist/CONTRIB_DOMAINS.txt -u dist/CONTRIB_DOMAINS.txt
       - name: Make commit directory safe
         run: git config --global --add safe.directory /__w/black-mirror/black-mirror
