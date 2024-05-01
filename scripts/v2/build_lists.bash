@@ -87,7 +87,7 @@ main() {
 				case "$retriever" in
 				'ARIA2')
 					jaq -r --arg method "$method" 'to_entries[] |
-						select(.value.content.retriever == "ARIA2" and .value.method == $method) |
+						select(.value.content.retriever == "ARIA2" and .value.method == $method and .value.active) |
 						{key, mirrors: .value.mirrors} |
 						(.mirrors | join("\t")), " out=\(.key)"' data/v2/manifest.json |
 						aria2c -i- -d "$cache" --conf-path='./configs/aria2.conf'
@@ -102,7 +102,7 @@ main() {
 				# 	;;
 				*)
 					jaq -r --arg method "$method" --arg retriever "$retriever" 'to_entries[] |
-						select(.value.content.retriever == $retriever and .value.method == $method) |
+						select(.value.content.retriever == $retriever and .value.method == $method and .value.active) |
 						{key, mirror: .value.mirrors[0]} |
 						"\(.key)#\(.mirror)"' data/v2/manifest.json |
 						while IFS='#' read -r key mirror; do

@@ -16,7 +16,7 @@
 `Black Mirror` works by taking objects from [`data/v2/manifest.json`](https://github.com/T145/black-mirror/blob/master/data/v2/manifest.json) defined like so:
 
 * **_notes**: (`optional`) Any extra information about the list or its filters.
-* **archive**: Whether to save the list to the Internet Archive in case the original ever becomes unvailable or maliciously modified.
+* **active**: If a list is enabled or not. Disabled lists will *not* be compiled into `Black Mirror`.
 * **checksums**: (Fields are `optional`) Checksums for the list in the form of a JSON object with the key being the checksum format and the value being the checksum's URL.
 * **content**:
   * **filter**: A preprocessing command to transform the list into plain text. Reference where the filters [are defined](https://github.com/T145/black-mirror/blob/master/scripts/v2/apply_filters.bash).
@@ -32,7 +32,7 @@ Example:
 
 ```json
 "botvrij_misp_ip_dst": {
-  "archive": false,
+  "active": true,
   "checksums": {
     "md5": "https://www.botvrij.eu/data/misp.md5.ADMIN.txt",
     "sha1": "https://www.botvrij.eu/data/misp.sha1.ADMIN.txt",
