@@ -34,11 +34,7 @@
 ### Add but archive
 
 - [Quarklist](https://github.com/francis-zhao/quarklist)
-- [Cameleon](https://sysctl.org/cameleon/)
-- [BadHosts](https://www.hostsfile.org/hosts.html)
 - [brijrajparmar27](https://raw.githubusercontent.com/brijrajparmar27/host-sources/master/Porn/hosts)
-- [malwaredomainlist_delisted](https://www.malwaredomainlist.com/hostslist/delisted.txt)
-  - [Homepage](https://www.malwaredomainlist.com/forums/index.php?topic=3270.0)
 
 ### Data to Scrape
 
@@ -580,7 +576,7 @@
 - [LinuxTracker](https://github.com/LinuxTracker/Blocklists)
 - [USCERT HIDDEN COBRA](https://www.cisa.gov/sites/default/files/publications/TA-17-164A_csv.csv)
   - Last-Modified: Thu, 05 Jan 2023 14:02:34 GMT
-  - Predominately contains IPs
+  - Contains IPs, file paths, and file hashes
 - [PushingInertia](https://github.com/pushinginertia/ip-blacklist)
 - [ImproWare](https://antispam.imp.ch/)
   - No public facing lists found
@@ -592,3 +588,4 @@
 - [VeleSila/yhosts](https://github.com/VeleSila/yhosts)
 - [Ugly Email Trackers](https://github.com/OneClickLab/ugly-email-trackers)
   - [Leave Me Alone](https://github.com/leavemealone-app/email-trackers)
+- [tekintian](https://github.com/tekintian/hosts_ads_block)
