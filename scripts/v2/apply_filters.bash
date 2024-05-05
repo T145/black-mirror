@@ -132,6 +132,8 @@ process_list() {
 			'CIRCL_IPV4') jaq -rs '.[].Event.Attribute[]? | select(.type == "ip-dst").value' ;;
 			'CIRCL_URL') jaq -rs '.[].Event.Attribute[]? | select(.type == "url").value | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?").domain' ;;
 			'MALWARE_WORLD') jaq -r 'to_entries[] | select(.value.title == "Whitelist").key' ;;
+			'TINYCHECK_WHITELIST_DOMAIN') jaq -r '.elements[] | select(.type == "domain").element' ;;
+			'TINYCHECK_WHITELIST_CIDR') jaq -r '.elements[] | select(.type == "cidr").element' ;;
 			esac
 			;;
 		# Match domains in URLs: https://regex101.com/r/iC9eN2/1
@@ -171,8 +173,9 @@ process_list() {
 			;;
 		'YAML')
 			case "$LIST_FILTER" in
-			'CRYPTOSCAMDB_BLACKLIST') yq '.[].name' ;;
-			'CRYPTOSCAMDB_WHITELIST') yq '.[].url' | get_domains_from_urls ;;
+			'CRYPTOSCAMDB_BLACKLIST') yq -M '.[].name' ;;
+			'CRYPTOSCAMDB_WHITELIST') yq -M '.[].url' | get_domains_from_urls ;;
+			'TIUXO') yq -I0 -M -o=props --properties-separator=" " '.[].hosts' | mawk '{print $2}' ;;
 			esac
 			;;
 		esac |

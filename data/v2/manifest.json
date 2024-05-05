@@ -881,7 +881,6 @@
     "topic": "SECURITY"
   },
   "alienvault": {
-    "_notes": "http://data.alienvault.com/feed/binary/Packages",
     "active": true,
     "checksums": {},
     "content": {
@@ -896,6 +895,7 @@
       }
     ],
     "metadata": {
+      "notes": "https://data.alienvault.com/feed/binary/Packages",
       "description": "https://otx.alienvault.com/endpoint-security/welcome",
       "homepage": "https://status.alienvault.cloud/",
       "license": "not-available"
@@ -1160,7 +1160,6 @@
     }
   },
   "anudeep_whitelist": {
-    "_notes": "The 'referral-sites' & 'optional-list' lists have been ignored.",
     "active": true,
     "checksums": {},
     "content": {
@@ -1175,6 +1174,7 @@
       }
     ],
     "metadata": {
+      "notes": "The 'referral-sites' & 'optional-list' lists are ignored.",
       "description": "https://github.com/anudeepND/whitelist#readme",
       "homepage": "https://github.com/anudeepND/whitelist",
       "license": "mit"
@@ -1827,7 +1827,6 @@
     }
   },
   "botvrij_ioc_ip_dst": {
-    "_notes": "Skipping the URL list",
     "active": true,
     "checksums": {
       "md5": "https://www.botvrij.eu/data/ioclist.ip-dst.raw.md5"
@@ -2121,7 +2120,6 @@
     "topic": "SECURITY"
   },
   "chong_lua_dao": {
-    "_notes": "Whitelist needs a greylist: https://api.chongluadao.vn/v1/whitelist",
     "active": true,
     "checksums": {},
     "content": {
@@ -2136,6 +2134,7 @@
       }
     ],
     "metadata": {
+      "notes": "Whitelist needs a greylist: https://api.chongluadao.vn/v2/whitelist",
       "description": "https://chongluadao.vn/",
       "homepage": "https://chongluadao.vn/",
       "license": "not-available"
@@ -3584,7 +3583,6 @@
     }
   },
   "easylist_indonesian": {
-    "_notes": "https://github.com/ABPindo/indonesianadblockrules/issues/336",
     "active": true,
     "checksums": {},
     "content": {
@@ -3599,6 +3597,7 @@
       }
     ],
     "metadata": {
+      "notes": "https://github.com/ABPindo/indonesianadblockrules/issues/336",
       "description": "https://github.com/ABPindo/indonesianadblockrules#abpindo=",
       "homepage": "https://github.com/ABPindo/indonesianadblockrules",
       "license": "https://github.com/ABPindo/indonesianadblockrules/blob/master/subscriptions/LICENSE"
@@ -3779,7 +3778,6 @@
     }
   },
   "fanboy_ultimate": {
-    "_notes": "The 'anti-facebook' list is covered by other Facebook hate.",
     "active": true,
     "checksums": {},
     "content": {
@@ -3794,6 +3792,7 @@
       }
     ],
     "metadata": {
+      "notes": "The 'anti-facebook' list is covered by other Facebook hate.",
       "description": "https://fanboy.co.nz/filters.html",
       "homepage": "https://github.com/ryanbr/fanboy-adblock",
       "license": "cc-by-3.0"
@@ -3980,7 +3979,6 @@
     }
   },
   "geoffrey_frogeye_multiparty": {
-    "_notes": "Has a 'multiparty-only-trackers' list, which is smaller. Contains 'firstparty-trackers.'",
     "active": true,
     "checksums": {},
     "content": {
@@ -3995,6 +3993,7 @@
       }
     ],
     "metadata": {
+      "notes": "Has a 'multiparty-only-trackers' list, which is smaller. Contains 'firstparty-trackers.'",
       "description": "https://hostfiles.frogeye.fr/",
       "homepage": "https://hostfiles.frogeye.fr/",
       "license": "not-available"
@@ -4886,7 +4885,6 @@
     "topic": "SECURITY"
   },
   "iblocklist_pedos": {
-    "_notes": "The 'cidr' and 'p2p' formats produce the same output.",
     "active": true,
     "checksums": {},
     "content": {
@@ -4901,6 +4899,7 @@
       }
     ],
     "metadata": {
+      "notes": "The 'cidr' and 'p2p' formats produce the same output.",
       "description": "https://www.iblocklist.com/lists?fileformat=p2p&archiveformat=gz",
       "homepage": "https://www.iblocklist.com/",
       "license": "all-rights-reserved"
@@ -6129,7 +6128,6 @@
     "topic": "PRIVACY"
   },
   "mailscanner_bad_phishing": {
-    "_notes": "Could use 'phishing.safe.sites.conf' as a whitelist.",
     "active": true,
     "checksums": {},
     "content": {
@@ -6144,6 +6142,7 @@
       }
     ],
     "metadata": {
+      "notes": "Could use 'phishing.safe.sites.conf' as a whitelist.",
       "description": "https://www.mailborder.com/products/hosted-email-spam-filter/",
       "homepage": "https://www.mailborder.com/",
       "license": "not-available"
@@ -7373,7 +7372,6 @@
     }
   },
   "notracking_dead": {
-    "_notes": "Ignoring the dead hostnames list since it's built against Cloudflare.",
     "active": true,
     "checksums": {},
     "content": {
@@ -7388,6 +7386,7 @@
       }
     ],
     "metadata": {
+      "notes": "Ignoring the dead hostnames list since it's built against Cloudflare.",
       "description": "https://github.com/notracking/hosts-blocklists-scripts",
       "homepage": "https://github.com/notracking/hosts-blocklists-scripts",
       "license": "cc-by-sa-4.0"
@@ -9753,7 +9752,6 @@
     "topic": "SECURITY"
   },
   "tinycheck_iocs": {
-    "_notes": "https://github.com/KasperskyLab/TinyCheck/blob/main/assets/whitelist.json",
     "active": true,
     "checksums": {},
     "content": {
@@ -9787,6 +9785,31 @@
     "method": "BLOCK",
     "mirrors": [
       "https://raw.githubusercontent.com/KasperskyLab/TinyCheck/main/assets/iocs.json"
+    ],
+    "topic": "SECURITY"
+  },
+  "tinycheck_whitelist": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "TINYCHECK_WHITELIST_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/KasperskyLab/TinyCheck#readme",
+      "homepage": "https://github.com/KasperskyLab/TinyCheck",
+      "license": "apache-2.0"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/KasperskyLab/TinyCheck/main/assets/whitelist.json"
     ],
     "topic": "SECURITY"
   },
@@ -9841,7 +9864,6 @@
     "topic": "SECURITY"
   },
   "tiuxo_social": {
-    "_notes": "https://github.com/tiuxo/hosts/blob/master/allowlist.yml",
     "active": true,
     "checksums": {},
     "content": {
@@ -9863,6 +9885,31 @@
     "method": "BLOCK",
     "mirrors": [
       "https://raw.githubusercontent.com/tiuxo/hosts/master/social"
+    ],
+    "topic": "SECURITY"
+  },
+  "tiuxo_whitelist": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "YAML"
+    },
+    "formats": [
+      {
+        "filter": "TIUXO",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/tiuxo/hosts",
+      "homepage": "https://github.com/tiuxo/hosts",
+      "license": "cc-by-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/tiuxo/hosts/master/allowlist.yml"
     ],
     "topic": "SECURITY"
   },

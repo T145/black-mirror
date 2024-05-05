@@ -15,7 +15,6 @@
 
 `Black Mirror` works by taking objects from [`data/v2/manifest.json`](https://github.com/T145/black-mirror/blob/master/data/v2/manifest.json) defined like so:
 
-* **_notes**: (`optional`) Any extra information about the list or its filters.
 * **active**: If a list is enabled or not. Disabled lists will *not* be compiled into `Black Mirror`.
 * **checksums**: (Fields are `optional`) Checksums for the list in the form of a JSON object with the key being the checksum format and the value being the checksum's URL.
 * **content**:
@@ -24,6 +23,7 @@
   * **type**: Determines which filter type is applied. Reference where filters [are defined](https://github.com/T145/black-mirror/blob/master/scripts/v2/apply_filters.bash).
 * **formats**: Applies a designated filter and sends the output to a list with the specified host type. Reference where filters [are defined](https://github.com/T145/black-mirror/blob/master/scripts/v2/apply_filters.bash).
 * **metadata**: An object with a `description`, `homepage`, and `license` string objects.
+  * **notes**: (`optional`) Any extra information about the list or its filters.
 * **method**: `BLOCK` or `ALLOW` to respectively blacklist or whitelist the hosts.
 * **mirrors**: An array of URLs where the list and its mirrors are located.
 * **topic**: A general topic to summarize the list's goal, such as `PRIVACY` or `SECURITY`.
