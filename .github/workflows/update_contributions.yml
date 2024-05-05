@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b
       - name: Update contribution lists
         run: |
-          mawk '/^[^[:space:]|^#|]/' data/v2/contrib/DOMAIN_WHITELIST.txt | subfinder -silent -nc | dnsx -silent -nc >>dist/CONTRIB_DOMAINS.txt
+          mawk '/^[^[:space:]|^#|]/' data/v2/contrib/DOMAIN_WHITELIST.txt >>dist/CONTRIB_DOMAINS.txt
           sort -o dist/CONTRIB_DOMAINS.txt -u dist/CONTRIB_DOMAINS.txt
       - name: Make commit directory safe
         run: git config --global --add safe.directory /__w/black-mirror/black-mirror

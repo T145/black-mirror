@@ -72,3 +72,8 @@ Most principles should carry over to other syntaxes, but don't be afraid to ask.
 If while using `Black Mirror` you notice certain hosts should be whitelisted to not break something,
 please follow the given rubric and create an issue or a discussion and document them.
 Those hosts can be put in a list under `data/v2/contrib` and submitted via pull request. If they can't be categorized by an existing list feel free to make one.
+
+To get every subdomain, run the following in the `Black Mirror` Docker image:
+```
+subfinder -silent -nc -d example.com | dnsx -silent -nc | sort >domains.txt
+```
