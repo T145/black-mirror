@@ -181,40 +181,7 @@ process_list() {
 		esac |
 			# Remove empty lines and duplicates
 			mawk 'NF && !seen[$0]++' |
-			case "$LIST_FORMAT" in
-			'DOMAIN')
-				perl ./scripts/v2/process_domains.pl 2>/dev/null
-				;;
-			# https://metacpan.org/pod/Data::Validate::IP
-			'IPV4')
-				case "$LIST_METHOD" in
-				'BLOCK')
-					perl -MData::Validate::IP=is_public_ipv4 -nE 'chomp; if(defined($_) && is_public_ipv4($_)) {say $_;}'
-					;;
-				# Ensure bogons get whitelisted
-				'ALLOW')
-					perl -MData::Validate::IP=is_ipv4 -nE 'chomp; if(defined($_) && is_ipv4($_)) {say $_;}'
-					;;
-				esac
-				;;
-			'IPV6')
-				case "$LIST_METHOD" in
-				'BLOCK')
-					perl -MData::Validate::IP=is_public_ipv6 -nE 'chomp; if(defined($_) && is_public_ipv6($_)) {say $_;}'
-					;;
-				# Ensure bogons get whitelisted
-				'ALLOW')
-					perl -MData::Validate::IP=is_ipv6 -nE 'chomp; if(defined($_) && is_ipv6($_)) {say $_;}'
-					;;
-				esac
-				;;
-			'CIDR4')
-				perl ./scripts/v2/process_cidrs.pl 2>/dev/null
-				;;
-			'CIDR6')
-				perl ./scripts/v2/process_cidrs.pl 2>/dev/null
-				;;
-			esac
+			./scripts/v2/process_hosts.pl --format "$LIST_FORMAT" --method "$LIST_METHOD" 2>/dev/null
 }
 
 main() {
