@@ -49,7 +49,7 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
     git config --global advice.detachedHead false; \
     git clone --depth 1 -b v2.8 https://github.com/madler/pigz.git ./test; \
     make -C test; \
-    mv ./test/pigz /usr/local/bin;
+    mv ./test/pigz /usr/local/bin; \
     rm -rf ./*; \
     rm -rf /var/lib/apt/lists/*;
 # Executable will be under /usr/bin/local
