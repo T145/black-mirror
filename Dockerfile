@@ -44,7 +44,12 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
     tar --strip-components=1 -xzf wget*.gz; \
     ./configure --with-ssl=openssl --with-cares --with-psl; \
     make install; \
-    # Lessen the layer cache size
+    rm -rf ./*; \
+    # Version available from apt is 2.6
+    git config --global advice.detachedHead false; \
+    git clone --depth 1 -b v2.8 https://github.com/madler/pigz.git ./test; \
+    make -C test; \
+    mv ./test/pigz /usr/local/bin;
     rm -rf ./*; \
     rm -rf /var/lib/apt/lists/*;
 # Executable will be under /usr/bin/local
@@ -55,7 +60,7 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
 # https://hub.docker.com/r/parrotsec/core
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.3.4" \
+      version="6.3.5" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
