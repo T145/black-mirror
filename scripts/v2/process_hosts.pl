@@ -25,7 +25,7 @@ use Net::IDN::Encode    qw< domain_to_ascii >;
 use Data::Validate::Domain  qw< is_domain >;
 use Data::Validate::IP  qw< is_ipv4 is_ipv6 is_public_ipv4 is_public_ipv6 >;
 
-END { close STDOUT }
+#END { close STDOUT }
 
 if (grep /\P{ASCII}/ => @ARGV) {
    @ARGV = map { decode("UTF-8", $_) } @ARGV;
