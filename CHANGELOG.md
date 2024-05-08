@@ -22,6 +22,9 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump softprops/action-gh-release from 2.0.4 to 2.0.5 in /.github/workflows [\#204](https://github.com/T145/black-mirror/pull/204) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/setup-qemu-action from b7249025a94417def5eea224a7408d279c7becfb to a318853e1ca0aed974d9a86aa6c4e88629b35508 in /.github/workflows [\#203](https://github.com/T145/black-mirror/pull/203) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump actions/checkout from 4.1.4 to 4.1.5 in /.github/workflows [\#202](https://github.com/T145/black-mirror/pull/202) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump stefanzweifel/git-auto-commit-action from 4b8a201e31cadd9829df349894b28c54e6c19fe6 to 7d0ca8f849305c56d36f992cfb1519b1af5b33f8 in /.github/workflows [\#196](https://github.com/T145/black-mirror/pull/196) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/checkout from 4.1.3 to 4.1.4 in /.github/workflows [\#193](https://github.com/T145/black-mirror/pull/193) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/download-artifact from 4.1.6 to 4.1.7 in /.github/workflows [\#192](https://github.com/T145/black-mirror/pull/192) ([dependabot[bot]](https://github.com/apps/dependabot))
