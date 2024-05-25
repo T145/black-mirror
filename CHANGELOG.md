@@ -22,6 +22,8 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump actions/checkout from 4.1.5 to 4.1.6 in /.github/workflows [\#206](https://github.com/T145/black-mirror/pull/206) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/setup-qemu-action from a318853e1ca0aed974d9a86aa6c4e88629b35508 to b12b38b5fe75585e04f6aa3fd11fea2f4385ab7f in /.github/workflows [\#205](https://github.com/T145/black-mirror/pull/205) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump softprops/action-gh-release from 2.0.4 to 2.0.5 in /.github/workflows [\#204](https://github.com/T145/black-mirror/pull/204) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/setup-qemu-action from b7249025a94417def5eea224a7408d279c7becfb to a318853e1ca0aed974d9a86aa6c4e88629b35508 in /.github/workflows [\#203](https://github.com/T145/black-mirror/pull/203) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/checkout from 4.1.4 to 4.1.5 in /.github/workflows [\#202](https://github.com/T145/black-mirror/pull/202) ([dependabot[bot]](https://github.com/apps/dependabot))
