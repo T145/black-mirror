@@ -2,18 +2,11 @@
 
 ## ⬛ Blacklists
 
-- [migueldemoura](https://github.com/migueldemoura/ublock-umatrix-rulesets)
-- [uAssets](https://github.com/uBlockOrigin/uAssets)
-- [blacklist-named](https://github.com/tomzuu/blacklist-named)
 - [ad-wars](https://github.com/jdlingyu/ad-wars)
 - [turk-adlist](https://github.com/bkrucarci/turk-adlist)
-- [ad-hosts](https://github.com/ilpl/ad-hosts)
 - [dohservers](https://github.com/oneoffdallas/dohservers)
 - [Free Email Provider Domains](https://gist.github.com/tbrianjones/5992856)
 - [wh0ami](https://codeberg.org/wh0ami/pihole-lists)
-- [mhhakim](https://github.com/mhhakim/pihole-blocklist)
-  - custom-blacklist
-  - custom-porn-blacklist
 - [TR-CERT](https://www.usom.gov.tr/url-list.txt)
   - Reference: [usom-blacklist](https://github.com/fuatboluk/usom-blacklist)
 - [bestpika](https://github.com/bestpika/abp)
@@ -25,7 +18,6 @@
 - [ilpl](https://github.com/ilpl/ad-hosts)
 - [CleanTalk](https://cleantalk.org/help/iptables-connect)
 - [BotScout](https://botscout.com/last_caught_cache.htm)
-- [xOS](https://github.com/xOS/Config/blob/Her/RuleSet/Advertising.list)
 - [i-blocklist](https://github.com/jackrabbit335/UsefulLinuxShellScripts/blob/master/blocklist-update.sh#L17)
 - [phishing_kits](https://github.com/0xDanielLopez/phishing_kits)
 - [AbuseIPDB](https://docs.abuseipdb.com/#blacklist-endpoint)
@@ -174,6 +166,7 @@
     - Uses DDG's Tracker Radar
   - [bad vn filter](https://gitlab.com/malware-filter/vn-badsite-filter)
     - Uses Chong Lua Dao
+- [mhhakim](https://github.com/mhhakim/pihole-blocklist)
 
 # 🧟 Zombies
 

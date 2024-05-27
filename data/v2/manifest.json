@@ -10962,5 +10962,385 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
+  },
+  "migueldemoura_ads": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/migueldemoura/ublock-umatrix-rulesets",
+      "homepage": "https://github.com/migueldemoura/ublock-umatrix-rulesets",
+      "license": "cc-by-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/migueldemoura/ublock-umatrix-rulesets/master/Hosts/ads-tracking"
+    ],
+    "topic": "PRIVACY"
+  },
+  "migueldemoura_malware": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/migueldemoura/ublock-umatrix-rulesets",
+      "homepage": "https://github.com/migueldemoura/ublock-umatrix-rulesets",
+      "license": "cc-by-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/migueldemoura/ublock-umatrix-rulesets/master/Hosts/malware"
+    ],
+    "topic": "SECURITY"
+  },
+  "uassets_badware": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "HLC_MODIFIERS",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HLC",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/uBlockOrigin/uAssets",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt"
+    }
+  },
+  "uassets_privacy": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "HLC_MODIFIERS",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HLC",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/uBlockOrigin/uAssets",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt"
+    ],
+    "topic": "PRIVACY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt"
+    }
+  },
+  "uassets_filters_base": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "HLC_MODIFIERS",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HLC",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/uBlockOrigin/uAssets",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt"
+    ],
+    "topic": "PRIVACY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt"
+    }
+  },
+  "uassets_filters_2020": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "HLC_MODIFIERS",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HLC",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/uBlockOrigin/uAssets",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2020.txt"
+    ],
+    "topic": "PRIVACY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2020.txt"
+    }
+  },
+  "uassets_filters_2021": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "HLC_MODIFIERS",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HLC",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/uBlockOrigin/uAssets",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2021.txt"
+    ],
+    "topic": "PRIVACY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2021.txt"
+    }
+  },
+  "uassets_filters_2022": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "HLC_MODIFIERS",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HLC",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/uBlockOrigin/uAssets",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2022.txt"
+    ],
+    "topic": "PRIVACY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2022.txt"
+    }
+  },
+  "uassets_filters_2023": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "HLC_MODIFIERS",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HLC",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/uBlockOrigin/uAssets",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2023.txt"
+    ],
+    "topic": "PRIVACY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2023.txt"
+    }
+  },
+  "uassets_filters_2024": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "HLC_MODIFIERS",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HLC",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/uBlockOrigin/uAssets",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2024.txt"
+    ],
+    "topic": "PRIVACY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2024.txt"
+    }
+  },
+  "tomzuu_phishing": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "DNSMASQ",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/tomzuu/blacklist-named",
+      "homepage": "https://github.com/tomzuu/blacklist-named",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/tomzuu/blacklist-named/master/phishing.sites.conf"
+    ],
+    "topic": "SECURITY"
+  },
+  "tomzuu_spam": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "DNSMASQ",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/tomzuu/blacklist-named",
+      "homepage": "https://github.com/tomzuu/blacklist-named",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/tomzuu/blacklist-named/master/spam.sites.conf"
+    ],
+    "topic": "SECURITY"
+  },
+  "ilpl": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/ilpl/ad-hosts",
+      "homepage": "https://github.com/ilpl/ad-hosts",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ilpl/ad-hosts/master/hosts",
+      "https://raw.ilpl.workers.dev/ilpl/ad-hosts/master/hosts",
+      "https://cdn.jsdelivr.net/gh/ilpl/ad-hosts@master/hosts"
+    ],
+    "topic": "PRIVACY",
+    "variants": {
+      "adguard": "https://raw.githubusercontent.com/ilpl/ad-hosts/master/filter.txt",
+      "pihole": "https://raw.githubusercontent.com/ilpl/ad-hosts/master/hosts"
+    }
+  },
+  "xos_advertising": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "CLASH_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/xOS/Config",
+      "homepage": "https://github.com/xOS/Config",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/xOS/Config/Her/RuleSet/Advertising.list"
+    ],
+    "topic": "PRIVACY"
   }
 }

@@ -87,7 +87,7 @@ process_list() {
 			'HERRBISCHOFF_CIDR6') mawk '/:/&&/\//&&$0!~/^#/' ;;
 			'POP3GROPERS_IPV4') mawk '/./&&$0!~/\/|:|^#/{gsub(/ /, "", $1); print $1}' ;;
 			'POP3GROPERS_IPV6') mawk '/:/&&$0!~/\/|^#/{gsub(/ /, "", $1); print $1}' ;;
-			'CLASH_DOMAIN') mawk -F, '$1~/^DOMAIN/&&$1!~/KEYWORD$/{print $2}' ;;
+			'CLASH_DOMAIN') mawk -F, '$1~/^DOMAIN/&&$1!~/KEYWORD|WILDCARD$/{print $2}' ;;
 			'CLASH_CIDR4') mawk -F, '$1~/^IP-CIDR/{print $2}' ;;
 			'ASN_CIDR4') mawk '$1~/^route:$/{print $2}' ;;
 			'ASN_CIDR6') mawk '$1~/^route6:$/{print $2}' ;;
@@ -95,6 +95,7 @@ process_list() {
 			'NO_PEDOS') mawk -F: '/^[^[:space:]]/{print $2}' | ipinfo range2cidr ;;
 			'DOMAINS_FROM_HOST_MIX') gawk '/^([[:alpha:]_-]{1,63}\.)/' ;;
 			'HLC') mawk -F"[|^]" '/^[||]/ && $3!~/\*/{print $3}' ;;
+			'DNSMASQ') mawk '/^zone/{gsub(/\"/, "", $2); print $2}' ;;
 			esac
 			;;
 		'JSON')
