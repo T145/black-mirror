@@ -15,7 +15,6 @@
   - yui
 - [YousList](https://github.com/yous/YousList)
 - [xiaobeita](https://github.com/rentianyu/Ad-set-hosts/tree/master/xiaobeita)
-- [ilpl](https://github.com/ilpl/ad-hosts)
 - [CleanTalk](https://cleantalk.org/help/iptables-connect)
 - [BotScout](https://botscout.com/last_caught_cache.htm)
 - [i-blocklist](https://github.com/jackrabbit335/UsefulLinuxShellScripts/blob/master/blocklist-update.sh#L17)
