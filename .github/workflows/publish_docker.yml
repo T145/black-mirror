@@ -19,7 +19,7 @@ jobs:
       packages: write
     steps:
       - name: Checkout repo
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
       - name: Set up QEMU
         uses: docker/setup-qemu-action@b12b38b5fe75585e04f6aa3fd11fea2f4385ab7f
       - name: Set up Docker Buildx
