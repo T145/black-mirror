@@ -22,6 +22,8 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump actions/checkout from 4.1.6 to 4.1.7 in /.github/workflows [\#210](https://github.com/T145/black-mirror/pull/210) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/build-push-action from 5.3.0 to 5.4.0 in /.github/workflows [\#209](https://github.com/T145/black-mirror/pull/209) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/login-action from 3.1.0 to 3.2.0 in /.github/workflows [\#207](https://github.com/T145/black-mirror/pull/207) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/checkout from 4.1.5 to 4.1.6 in /.github/workflows [\#206](https://github.com/T145/black-mirror/pull/206) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/setup-qemu-action from a318853e1ca0aed974d9a86aa6c4e88629b35508 to b12b38b5fe75585e04f6aa3fd11fea2f4385ab7f in /.github/workflows [\#205](https://github.com/T145/black-mirror/pull/205) ([dependabot[bot]](https://github.com/apps/dependabot))
