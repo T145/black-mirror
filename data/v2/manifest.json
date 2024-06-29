@@ -9420,31 +9420,6 @@
     ],
     "topic": "SECURITY"
   },
-  "t145_domain_whitelist": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NONE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/T145/black-mirror",
-      "homepage": "https://github.com/T145/black-mirror",
-      "license": "agpl-3.0"
-    },
-    "method": "ALLOW",
-    "mirrors": [
-      "https://raw.githubusercontent.com/T145/black-mirror/master/dist/CONTRIB_DOMAINS.txt"
-    ],
-    "topic": "SECURITY"
-  },
   "t145_domain_blacklist": {
     "active": true,
     "checksums": {},
@@ -9467,6 +9442,31 @@
     "method": "BLOCK",
     "mirrors": [
       "https://raw.githubusercontent.com/T145/black-mirror/master/data/v2/contrib/DOMAIN_BLACKLIST.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "t145_domain_whitelist": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/T145/black-mirror",
+      "homepage": "https://github.com/T145/black-mirror",
+      "license": "agpl-3.0"
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://raw.githubusercontent.com/T145/black-mirror/master/dist/CONTRIB_DOMAINS.txt"
     ],
     "topic": "SECURITY"
   },
