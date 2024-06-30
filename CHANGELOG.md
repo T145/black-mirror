@@ -22,6 +22,7 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump docker/build-push-action from 6.1.0 to 6.2.0 in /.github/workflows [\#215](https://github.com/T145/black-mirror/pull/215) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/build-push-action from 5.4.0 to 6.1.0 in /.github/workflows [\#214](https://github.com/T145/black-mirror/pull/214) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump softprops/action-gh-release from 2.0.5 to 2.0.6 in /.github/workflows [\#213](https://github.com/T145/black-mirror/pull/213) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/checkout from 4.1.6 to 4.1.7 in /.github/workflows [\#210](https://github.com/T145/black-mirror/pull/210) ([dependabot[bot]](https://github.com/apps/dependabot))
