@@ -188,15 +188,18 @@ main() {
 						apply_cidr_whitelist "${OUTDIR}/BLOCK_IPV6.txt" "$list"
 						;;
 					*)
-						apply_whitelist "$blacklist" "$list" ;;
+						apply_whitelist "$blacklist" "$list"
+						;;
 					esac
 				else
 					# Remove IPs from the IP blacklists that are covered by the CIDR blacklists
 					case "$format" in
 					"$FORMAT_CIDR4")
-						apply_cidr_whitelist "${OUTDIR}/BLOCK_IPV4.txt" "$list" ;;
+						apply_cidr_whitelist "${OUTDIR}/BLOCK_IPV4.txt" "$list"
+						;;
 					"$FORMAT_CIDR6")
-						apply_cidr_whitelist "${OUTDIR}/BLOCK_IPV6.txt" "$list" ;;
+						apply_cidr_whitelist "${OUTDIR}/BLOCK_IPV6.txt" "$list"
+						;;
 					*) ;;
 					esac
 				fi
