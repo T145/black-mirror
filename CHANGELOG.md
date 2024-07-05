@@ -22,6 +22,7 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump docker/setup-buildx-action from 3.3.0 to 3.4.0 in /.github/workflows [\#219](https://github.com/T145/black-mirror/pull/219) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/setup-qemu-action from b12b38b5fe75585e04f6aa3fd11fea2f4385ab7f to 5927c834f5b4fdf503fca6f4c7eccda82949e1ee in /.github/workflows [\#218](https://github.com/T145/black-mirror/pull/218) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/build-push-action from 6.2.0 to 6.3.0 in /.github/workflows [\#217](https://github.com/T145/black-mirror/pull/217) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/build-push-action from 6.1.0 to 6.2.0 in /.github/workflows [\#215](https://github.com/T145/black-mirror/pull/215) ([dependabot[bot]](https://github.com/apps/dependabot))
