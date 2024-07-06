@@ -73,6 +73,7 @@ STOPSIGNAL SIGKILL
 # https://www.parrotsec.org/docs/apparmor.html
 # rkhunter: https://unix.stackexchange.com/questions/562560/invalid-web-cmd-configuration-option-relative-pathname-bin-false
 COPY configs/etc/ /etc/
+COPY configs/root/ /~/
 COPY --from=golang /go/bin/ /usr/local/bin/
 COPY --from=rust /usr/local/cargo/bin/jaq /usr/local/bin/
 COPY --from=utils /usr/local/bin/ /usr/local/bin/
@@ -215,7 +216,7 @@ RUN wget -q https://cpan.metacpan.org/authors/id/P/PE/PEVANS/perl-5.39.9.tar.gz;
 RUN chown 0:0 /usr/bin/as \
     && chown 0:0 /usr/share/gcc; \
     #rkhunter --update || :; \
-    echo 'will cite' | parallel --citation || :; \
+    #echo 'will cite' | parallel --citation || :; \
     # https://github.com/debuerreotype/debuerreotype/pull/32
     rmdir /run/mount 2>/dev/null || :; \
     # clear all logs
