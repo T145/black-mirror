@@ -59,12 +59,13 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
 # https://hub.docker.com/r/parrotsec/core
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.4.1" \
+      version="6.4.2" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
 # https://cisofy.com/lynis/controls/FILE-6310/
 VOLUME [ "/home", "/tmp", "/var" ]
+ENTRYPOINT [ "bash" ]
 #SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 #STOPSIGNAL SIGKILL
 
@@ -230,7 +231,5 @@ RUN chown 0:0 /usr/bin/as; \
 # Fixes: "docker: Error response from daemon: unable to find user admin: no matching entries in passwd file."
 RUN adduser --disabled-password --gecos "" admin
 USER admin
-
-ENTRYPOINT bash -c "$@"
 
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "cpanm --version && cpm --version && command -v ipinfo && command -v ghosts && command -v parsort && command -v yq && command -v mlr" ]
