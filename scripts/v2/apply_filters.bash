@@ -9,11 +9,11 @@ get_ipv6s() {
 }
 
 get_domains_from_urls() {
-	perl -MData::Validate::Domain=is_domain -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_domain($3, { domain_private_tld => { onion => 1 } })}' 2>/dev/null
+	perl5.41.1 -MData::Validate::Domain=is_domain -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_domain($3, { domain_private_tld => { onion => 1 } })}' 2>/dev/null
 }
 
 get_ipv4s_from_urls() {
-	perl -MData::Validate::IP=is_ipv4 -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_ipv4($3)}' 2>/dev/null
+	perl5.41.1 -MData::Validate::IP=is_ipv4 -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_ipv4($3)}' 2>/dev/null
 }
 
 hostsblock() {
@@ -183,36 +183,36 @@ process_list() {
 		mawk 'NF && !seen[$0]++' |
 		case "$LIST_FORMAT" in
 		'DOMAIN')
-			perl ./scripts/v2/process_domains.pl 2>/dev/null
+			perl5.41.1 ./scripts/v2/process_domains.pl 2>/dev/null
 			;;
 		# https://metacpan.org/pod/Data::Validate::IP
 		'IPV4')
 			case "$LIST_METHOD" in
 			'BLOCK')
-				perl -MData::Validate::IP=is_public_ipv4 -nE 'chomp; if(defined($_) && is_public_ipv4($_)) {say $_;}'
+				perl5.41.1 -MData::Validate::IP=is_public_ipv4 -nE 'chomp; if(defined($_) && is_public_ipv4($_)) {say $_;}'
 				;;
 			# Ensure bogons get whitelisted
 			'ALLOW')
-				perl -MData::Validate::IP=is_ipv4 -nE 'chomp; if(defined($_) && is_ipv4($_)) {say $_;}'
+				perl5.41.1 -MData::Validate::IP=is_ipv4 -nE 'chomp; if(defined($_) && is_ipv4($_)) {say $_;}'
 				;;
 			esac
 			;;
 		'IPV6')
 			case "$LIST_METHOD" in
 			'BLOCK')
-				perl -MData::Validate::IP=is_public_ipv6 -nE 'chomp; if(defined($_) && is_public_ipv6($_)) {say $_;}'
+				perl5.41.1 -MData::Validate::IP=is_public_ipv6 -nE 'chomp; if(defined($_) && is_public_ipv6($_)) {say $_;}'
 				;;
 			# Ensure bogons get whitelisted
 			'ALLOW')
-				perl -MData::Validate::IP=is_ipv6 -nE 'chomp; if(defined($_) && is_ipv6($_)) {say $_;}'
+				perl5.41.1 -MData::Validate::IP=is_ipv6 -nE 'chomp; if(defined($_) && is_ipv6($_)) {say $_;}'
 				;;
 			esac
 			;;
 		'CIDR4')
-			perl ./scripts/v2/process_cidrs.pl 2>/dev/null
+			perl5.41.1 ./scripts/v2/process_cidrs.pl 2>/dev/null
 			;;
 		'CIDR6')
-			perl ./scripts/v2/process_cidrs.pl 2>/dev/null
+			perl5.41.1 ./scripts/v2/process_cidrs.pl 2>/dev/null
 			;;
 		esac
 }
