@@ -24,7 +24,7 @@ FROM amd64/rust:bookworm AS rust
 RUN cargo install --locked jaq
 
 # https://hub.docker.com/_/buildpack-deps/
-FROM buildpack-deps:stable as utils
+FROM buildpack-deps:stable AS utils
 
 WORKDIR "/root"
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
