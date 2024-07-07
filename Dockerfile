@@ -9,7 +9,7 @@ RUN git config --global advice.detachedHead false; \
     go install -v github.com/johnkerl/miller/cmd/mlr; \
     rm -rf ./*; \
     # https://github.com/mikefarah/yq/
-    go install -v github.com/mikefarah/yq/v4@v4.43.1; \
+    go install -v github.com/mikefarah/yq/v4@v4.44.2; \
     # https://github.com/ipinfo/cli
     go install -v github.com/ipinfo/cli/ipinfo@ipinfo-3.3.1; \
     # https://github.com/projectdiscovery/dnsx
@@ -32,8 +32,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
 # https://git.savannah.gnu.org/cgit/parallel.git/tree/README
 # https://www.gnu.org/software/parallel/checksums/
-RUN curl -sSL http://pi.dk/3/ | bash \
-    && find /usr/local/bin/ -type f ! -name 'par*' -delete
+RUN curl -sSL http://pi.dk/3/ | bash && find /usr/local/bin/ -type f ! -name 'par*' -delete;
 
 # Build Wget from source to enable c-ares support
 RUN apt-get -yq update --no-allow-insecure-repositories; \
@@ -60,14 +59,14 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
 # https://hub.docker.com/r/parrotsec/core
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.3.5" \
+      version="6.4.0" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
 # https://cisofy.com/lynis/controls/FILE-6310/
 VOLUME [ "/home", "/tmp", "/var" ]
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-STOPSIGNAL SIGKILL
+SHELL ["bash", "-c"]
+#STOPSIGNAL SIGKILL
 
 # https://github.com/ParrotSec/docker-images/blob/master/core/lts-amd64/Dockerfile#L6
 # https://www.parrotsec.org/docs/apparmor.html
@@ -79,17 +78,17 @@ COPY --from=rust /usr/local/cargo/bin/jaq /usr/local/bin/
 COPY --from=utils /usr/local/bin/ /usr/local/bin/
 
 # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L26
-RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
-    && echo 'exit 101' >>/usr/sbin/policy-rc.d \
-    && chmod +x /usr/sbin/policy-rc.d \
+RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d; \
+    echo 'exit 101' >>/usr/sbin/policy-rc.d; \
+    chmod +x /usr/sbin/policy-rc.d; \
     # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L33
-    && dpkg-divert --local --rename --add /sbin/initctl \
-    && cp -a /usr/sbin/policy-rc.d /sbin/initctl \
-    && sed -i 's/^exit.*/exit 0/' /sbin/initctl \
+    dpkg-divert --local --rename --add /sbin/initctl; \
+    cp -a /usr/sbin/policy-rc.d /sbin/initctl; \
+    sed -i 's/^exit.*/exit 0/' /sbin/initctl; \
     # https://github.com/phusion/baseimage-docker/issues/58#issuecomment-47995343
-    && echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections \
+    echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections; \
     # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L78
-    && mkdir -p /run/systemd && echo 'docker' >/run/systemd/container
+    mkdir -p /run/systemd echo 'docker' >/run/systemd/container;
 
 WORKDIR "/root"
 
@@ -140,10 +139,10 @@ RUN apt-get -q update --no-allow-insecure-repositories; \
     html-xml-utils=7.7-1.1 \
     libc-ares2=1.18.1-3 \
     libpsl5=0.21.2-1 \
-    libssl3=3.0.11-1~deb12u2 \
+    libssl3=3.0.13-1~deb12u1 \
     localepurge=* \
     lynx=2.9.0dev.12-1 \
-    nodejs=18.13.0+dfsg1-1 \
+    nodejs=18.19.0+dfsg-6~deb12u2 \
     npm=9.2.0~ds1-1 \
     p7zip-full=16.02+dfsg-8 \
     symlinks=* \
@@ -181,12 +180,12 @@ RUN apt-get -q update --no-allow-insecure-repositories; \
 #     rm -rf ./*;
 
 # Upgrade Perl
-# https://github.com/Perl/docker-perl/blob/master/5.039.009-main%2Cthreaded-bullseye/Dockerfile
-RUN wget -q https://cpan.metacpan.org/authors/id/P/PE/PEVANS/perl-5.39.9.tar.gz; \
-    echo 'c589d2e36cbb8db30fb73f661ef2c06ffe9c680f8ebe417169ec259b48ec2119 *perl-5.39.9.tar.gz' | sha256sum --strict --check -; \
+# https://github.com/Perl/docker-perl
+RUN wget -q https://cpan.metacpan.org/authors/id/B/BO/BOOK/perl-5.41.1.tar.gz; \
+    echo '7dee38af601b0ba3f3730cb812cdbc799c921da440cb0ce96dd7a4f508b1a6f8 *perl-5.41.1.tar.gz' | sha256sum --strict --check -; \
     tar --strip-components=1 -xzf perl-*.tar.gz; \
     cat *.patch | patch -p1 || :; \
-    ./Configure -Darchname=x86_64-linux-gn -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des; \
+    ./Configure -Darchname=x86_64-linux-gnu -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des; \
     make -j "$(nproc)"; \
     #TEST_JOBS="$(nproc)" make test_harness; \
     make install; \
@@ -196,11 +195,15 @@ RUN wget -q https://cpan.metacpan.org/authors/id/P/PE/PEVANS/perl-5.39.9.tar.gz;
     echo '963e63c6e1a8725ff2f624e9086396ae150db51dd0a337c3781d09a994af05a5 *App-cpanminus-1.7047.tar.gz' | sha256sum --strict --check -; \
     tar --strip-components=1 -xzf App-cpanminus-*.tar.gz; \
     perl bin/cpanm .; \
-    cpanm IO::Socket::SSL; \
-    # Update cpm
-    wget -q -P /usr/local/bin/ https://raw.githubusercontent.com/skaji/cpm/0.997014/cpm; \
-    # https://github.com/skaji/cpm/blob/main/Changes
-    echo 'ee525f2493e36c6f688eddabaf53a51c4d3b2a4ebaa81576ac8b9f78ab57f4a1 */usr/local/bin/cpm' | sha256sum --strict --check -; \
+    wget -q 'https://www.cpan.org/authors/id/C/CH/CHRISN/Net-SSLeay-1.94.tar.gz'; \
+    echo '9d7be8a56d1bedda05c425306cc504ba134307e0c09bda4a788c98744ebcd95d *Net-SSLeay-1.94.tar.gz' | sha256sum --strict --check -; \
+    cpanm --from $PWD Net-SSLeay-1.94.tar.gz; \
+    wget -q 'https://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.085.tar.gz'; \
+    echo '95b2f7c0628a7e246a159665fbf0620d0d7835e3a940f22d3fdd47c3aa799c2e *IO-Socket-SSL-2.085.tar.gz' | sha256sum --strict --check -; \
+    SSL_CERT_DIR=/etc/ssl/certs cpanm --from $PWD IO-Socket-SSL-2.085.tar.gz; \
+    wget -q -P /usr/local/bin/ https://raw.githubusercontent.com/skaji/cpm/0.997017/cpm; \
+    # sha256 checksum is from docker-perl team, cf https://github.com/docker-library/official-images/pull/12612#issuecomment-1158288299
+    echo 'e3931a7d994c96f9c74b97d1b5b75a554fc4f06eadef1eca26ecc0bdcd1f2d11 */usr/local/bin/cpm' | sha256sum --strict --check -; \
     chmod +x /usr/local/bin/cpm; \
     rm -rf ./*; \
     # Install dependencies
@@ -213,8 +216,8 @@ RUN wget -q https://cpan.metacpan.org/authors/id/P/PE/PEVANS/perl-5.39.9.tar.gz;
     cpanm Try::Tiny;
 
 # https://cisofy.com/lynis/controls/HRDN-7222/
-RUN chown 0:0 /usr/bin/as \
-    && chown 0:0 /usr/share/gcc; \
+RUN chown 0:0 /usr/bin/as; \
+    chown 0:0 /usr/share/gcc; \
     #rkhunter --update || :; \
     #echo 'will cite' | parallel --citation || :; \
     # https://github.com/debuerreotype/debuerreotype/pull/32
@@ -228,6 +231,6 @@ RUN chown 0:0 /usr/bin/as \
 RUN adduser --disabled-password --gecos "" admin
 USER admin
 
-ENTRYPOINT [ "bash" ]
+ENTRYPOINT bash -c "$@"
 
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "command -v ipinfo && command -v ghosts && command -v parsort && command -v yq && command -v mlr" ]
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "cpanm --version && cpm --version && command -v ipinfo && command -v ghosts && command -v parsort && command -v yq && command -v mlr" ]
