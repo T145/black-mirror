@@ -8,6 +8,7 @@ shopt -s extglob      # enable extended pattern matching (https://www.gnu.org/so
 set -euET -o pipefail # put bash into "strict mode" & have it give descriptive errors
 umask 055             # change all generated file permissions from 755 to 700
 
+ARCHIVE='dist/ARCHIVE.csv'
 OUTDIR='build'
 DOWNLOADS=$(mktemp -d)
 TMP=$(mktemp -p "$DOWNLOADS")
@@ -19,7 +20,7 @@ FORMAT_CIDR4='CIDR4'
 FORMAT_CIDR6='CIDR6'
 FORMAT_IPV4='IPV4'
 FORMAT_IPV6='IPV6'
-readonly OUTDIR DOWNLOADS TMP ERROR_LOG METHOD_ALLOW METHOD_BLOCK FORMAT_DOMAIN FORMAT_CIDR4 FORMAT_CIDR6 FORMAT_IPV4 FORMAT_IPV6
+readonly ARCHIVE OUTDIR DOWNLOADS TMP ERROR_LOG METHOD_ALLOW METHOD_BLOCK FORMAT_DOMAIN FORMAT_CIDR4 FORMAT_CIDR6 FORMAT_IPV4 FORMAT_IPV6
 
 METHODS=("$METHOD_BLOCK" "$METHOD_ALLOW")
 FORMATS=("$FORMAT_DOMAIN" "$FORMAT_IPV4" "$FORMAT_IPV6" "$FORMAT_CIDR4" "$FORMAT_CIDR6")
@@ -81,7 +82,22 @@ main() {
 
 		echo "[INFO] Processing method: ${method}"
 
-		set +e # temporarily disable strict fail, in case downloads fail
+		set +e # Temporarily disable strict fail, in case web requests fail
+		echo "[INFO] Archiving ${method} lists..."
+
+		: >"$ARCHIVE"
+
+		# This will archive inactive lists too
+		jaq -r --arg method "$method" 'to_entries[] |
+			select(.value.method == $method).value.mirrors[] as $mirror |
+			("\(.key)#\($mirror)")' data/v2/manifest.json |
+			while IFS='#' read -r key url; do
+				curl -sSLI "https://web.archive.org/save/${url}" |
+					awk -v key="$key" '$1~/^location:$/{print key,$2}' >>"$ARCHIVE"
+			done
+
+		echo "[INFO] Downloading ${method} lists..."
+
 		jaq -r '[.[] | select(.active) | .content.retriever] | unique | .[]' data/v2/manifest.json |
 			while read -r retriever; do
 				case "$retriever" in
