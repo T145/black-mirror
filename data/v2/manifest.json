@@ -7745,6 +7745,35 @@
       "pihole": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt"
     }
   },
+  "ph00lt0": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://ph00lt0.github.io/blocklist/",
+      "homepage": "https://github.com/ph00lt0/blocklists",
+      "license": "cc-by-sa-4.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/ph00lt0/blocklist/master/pihole-blocklist.txt"
+    ],
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/ph00lt0/blocklist/master/pihole-blocklist.txt",
+      "adguard": "https://raw.githubusercontent.com/ph00lt0/blocklist/master/blocklist.txt"
+    }
+  },
   "phishing_army": {
     "active": true,
     "checksums": {},
@@ -11367,34 +11396,5 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
-  },
-  "ph00lt0": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://ph00lt0.github.io/blocklist/",
-      "homepage": "https://github.com/ph00lt0/blocklists",
-      "license": "cc-by-sa-4.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/ph00lt0/blocklist/master/pihole-blocklist.txt"
-    ],
-    "topic": "SECURITY",
-    "variants": {
-      "pihole": "https://raw.githubusercontent.com/ph00lt0/blocklist/master/pihole-blocklist.txt",
-      "adguard": "https://raw.githubusercontent.com/ph00lt0/blocklist/master/blocklist.txt"
-    }
   }
 }
