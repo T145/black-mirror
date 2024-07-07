@@ -133,10 +133,10 @@ main() {
 							'LYNX') lynx -dump -listonly -nonumbers "$mirror" | sponge "${cache}/${key}" ;;
 							'HAAS_WGET')
 								local DATE
-								local ARCHIVE
+								local TARGET
 								DATE="$(date +'%Y/%m')"
-								ARCHIVE="$(date --date='yesterday' +'%Y-%m-%d')"
-								wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "https://haas.nic.cz/stats/export/${DATE}/${ARCHIVE}.json.gz"
+								TARGET="$(date --date='yesterday' +'%Y-%m-%d')"
+								wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "https://haas.nic.cz/stats/export/${DATE}/${TARGET}.json.gz"
 								;;
 							'CIRCL')
 								curl -sSL "$mirror" |
