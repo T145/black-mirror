@@ -39,7 +39,7 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
     # The latest libssl-dev is already included!
     apt-get -y install --no-install-recommends libc-ares-dev=* libpsl-dev=*; \
     apt-get -y clean; \
-    wget -q https://ftp.gnu.org/gnu/wget/wget-1.21.5.tar.gz; \
+    wget -q https://ftp.gnu.org/gnu/wget/wget-1.24.5.tar.gz; \
     tar --strip-components=1 -xzf wget*.gz; \
     ./configure --with-ssl=openssl --with-cares --with-psl; \
     make install; \
