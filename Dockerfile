@@ -39,7 +39,7 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
     # The latest libssl-dev is already included!
     apt-get -y install --no-install-recommends libc-ares-dev=* libpsl-dev=*; \
     apt-get -y clean; \
-    wget -q https://ftp.gnu.org/gnu/wget/wget-1.21.4.tar.gz; \
+    wget -q https://ftp.gnu.org/gnu/wget/wget-1.21.5.tar.gz; \
     tar --strip-components=1 -xzf wget*.gz; \
     ./configure --with-ssl=openssl --with-cares --with-psl; \
     make install; \
@@ -59,13 +59,13 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
 # https://hub.docker.com/r/parrotsec/core
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.4.0" \
+      version="6.4.1" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
 # https://cisofy.com/lynis/controls/FILE-6310/
 VOLUME [ "/home", "/tmp", "/var" ]
-SHELL ["bash", "-c"]
+#SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 #STOPSIGNAL SIGKILL
 
 # https://github.com/ParrotSec/docker-images/blob/master/core/lts-amd64/Dockerfile#L6
@@ -78,17 +78,17 @@ COPY --from=rust /usr/local/cargo/bin/jaq /usr/local/bin/
 COPY --from=utils /usr/local/bin/ /usr/local/bin/
 
 # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L26
-RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d; \
-    echo 'exit 101' >>/usr/sbin/policy-rc.d; \
-    chmod +x /usr/sbin/policy-rc.d; \
+RUN echo '#!/bin/sh' >/usr/sbin/policy-rc.d \
+    && echo 'exit 101' >>/usr/sbin/policy-rc.d \
+    && chmod +x /usr/sbin/policy-rc.d \
     # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L33
-    dpkg-divert --local --rename --add /sbin/initctl; \
-    cp -a /usr/sbin/policy-rc.d /sbin/initctl; \
-    sed -i 's/^exit.*/exit 0/' /sbin/initctl; \
+    && dpkg-divert --local --rename --add /sbin/initctl \
+    && cp -a /usr/sbin/policy-rc.d /sbin/initctl \
+    && sed -i 's/^exit.*/exit 0/' /sbin/initctl \
     # https://github.com/phusion/baseimage-docker/issues/58#issuecomment-47995343
-    echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections; \
+    && echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections \
     # https://github.com/JefferysDockers/ubu-lts/blob/master/Dockerfile#L78
-    mkdir -p /run/systemd echo 'docker' >/run/systemd/container;
+    && mkdir -p /run/systemd && echo 'docker' >/run/systemd/container
 
 WORKDIR "/root"
 
