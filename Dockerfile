@@ -130,7 +130,7 @@ RUN apt-get -q update --no-allow-insecure-repositories; \
     aria2=1.36.0-1 \
     build-essential=12.9 \
     csvkit=1.0.7-1 \
-    curl=7.88.1-10+deb12u5 \
+    curl=7.88.1-10+deb12u6 \
     debsums=3.0.2.1 \
     dos2unix=7.4.3-1 \
     gawk=1:5.2.1-2 \
