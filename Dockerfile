@@ -59,7 +59,7 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
 # https://hub.docker.com/r/parrotsec/core
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.4.2" \
+      version="6.4.4" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -211,10 +211,10 @@ RUN wget -q https://cpan.metacpan.org/authors/id/B/BO/BOOK/perl-5.41.1.tar.gz; \
     cpanm Regexp::Common; \
     cpanm Data::Validate::Domain; \
     cpanm Data::Validate::IP; \
-    cpanm Net::CIDR; \
     cpanm Net::IDN::Encode; \
-    cpanm Text::Trim; \
-    cpanm Try::Tiny;
+    cpanm Net::Works::Network; \
+    cpanm Domain::PublicSuffix; \
+    cpanm Text::Trim;
 
 # https://cisofy.com/lynis/controls/HRDN-7222/
 RUN chown 0:0 /usr/bin/as; \
