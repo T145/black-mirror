@@ -168,7 +168,7 @@ main() {
 
 			find -P -O3 "$cache" -maxdepth 1 -type f -print0 |
 				# https://www.gnu.org/software/parallel/parallel_tutorial.html#controlling-the-execution
-				parallel --use-cpus-instead-of-cores -0 --joblog "logs/${method}-${format}-jobs.log" --tmpdir "$results" --files -X ./scripts/v2/apply_filters.bash {} "$method" "$format"
+				parallel --use-cpus-instead-of-cores -0 -N1 --joblog "logs/${method}-${format}-jobs.log" --tmpdir "$results" --files -X ./scripts/v2/apply_filters.bash {} "$method" "$format"
 
 			list="${OUTDIR}/${method}_${format}.txt"
 
