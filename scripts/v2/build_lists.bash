@@ -13,7 +13,6 @@ OUTDIR='build'
 DOWNLOADS=$(mktemp -d)
 TMP=$(mktemp -p "$DOWNLOADS")
 ERROR_LOG='logs/error.log'
-JOB_LOG='logs/jobs.log'
 METHOD_ALLOW='ALLOW'
 METHOD_BLOCK='BLOCK'
 FORMAT_DOMAIN='DOMAIN'
@@ -21,7 +20,7 @@ FORMAT_CIDR4='CIDR4'
 FORMAT_CIDR6='CIDR6'
 FORMAT_IPV4='IPV4'
 FORMAT_IPV6='IPV6'
-readonly ARCHIVE OUTDIR DOWNLOADS TMP ERROR_LOG JOB_LOG METHOD_ALLOW METHOD_BLOCK FORMAT_DOMAIN FORMAT_CIDR4 FORMAT_CIDR6 FORMAT_IPV4 FORMAT_IPV6
+readonly ARCHIVE OUTDIR DOWNLOADS TMP ERROR_LOG METHOD_ALLOW METHOD_BLOCK FORMAT_DOMAIN FORMAT_CIDR4 FORMAT_CIDR6 FORMAT_IPV4 FORMAT_IPV6
 
 METHODS=("$METHOD_BLOCK" "$METHOD_ALLOW")
 FORMATS=("$FORMAT_DOMAIN" "$FORMAT_IPV4" "$FORMAT_IPV6" "$FORMAT_CIDR4" "$FORMAT_CIDR6")
@@ -155,10 +154,6 @@ main() {
 							esac
 						done
 					;;
-				# 'SAFE_GIT')
-				# 	# Some repos contain active malware, which we don't want to download.
-				# 	curl -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/0xDanielLopez/phishing_kits/git/trees/master?recursive=1
-				# 	;;
 				esac
 			done
 		set -e
@@ -173,7 +168,7 @@ main() {
 
 			find -P -O3 "$cache" -maxdepth 1 -type f -print0 |
 				# https://www.gnu.org/software/parallel/parallel_tutorial.html#controlling-the-execution
-				parallel --use-cpus-instead-of-cores -0 --joblog "$JOB_LOG" --tmpdir "$results" --files -X ./scripts/v2/apply_filters.bash {} "$method" "$format"
+				parallel --use-cpus-instead-of-cores -0 --joblog "logs/${method}-${format}-jobs.log" --tmpdir "$results" --files -X ./scripts/v2/apply_filters.bash {} "$method" "$format"
 
 			list="${OUTDIR}/${method}_${format}.txt"
 
