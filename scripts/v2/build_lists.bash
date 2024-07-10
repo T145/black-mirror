@@ -83,18 +83,18 @@ main() {
 		echo "[INFO] Processing method: ${method}"
 
 		set +e # Temporarily disable strict fail, in case web requests fail
-		echo "[INFO] Archiving ${method} lists..."
+		# echo "[INFO] Archiving ${method} lists..."
 
-		: >"$ARCHIVE"
+		# : >"$ARCHIVE"
 
-		# This will archive inactive lists too
-		jaq -r --arg method "$method" 'to_entries[] |
-			select(.value.method == $method).value.mirrors[] as $mirror |
-			("\(.key)#\($mirror)")' data/v2/manifest.json |
-			while IFS='#' read -r key url; do
-				curl -sSLI "https://web.archive.org/save/${url}" |
-					awk -v key="$key" '$1~/^location:$/{print key,$2}' >>"$ARCHIVE"
-			done
+		# # This will archive inactive lists too
+		# jaq -r --arg method "$method" 'to_entries[] |
+		# 	select(.value.method == $method).value.mirrors[] as $mirror |
+		# 	("\(.key)#\($mirror)")' data/v2/manifest.json |
+		# 	while IFS='#' read -r key url; do
+		# 		curl -sSLI "https://web.archive.org/save/${url}" |
+		# 			awk -v key="$key" '$1~/^location:$/{print key,$2}' >>"$ARCHIVE"
+		# 	done
 
 		echo "[INFO] Downloading ${method} lists..."
 
