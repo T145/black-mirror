@@ -100,7 +100,7 @@
   <tbody>
     <tr>
       <td>BLOCK_DOMAIN</td>
-      <td>Domain entries</td>
+      <td>Punycode domain entries</td>
       <td id="BLOCK-DOMAIN-line-count">8,627,993</td>
       <td id="BLOCK-DOMAIN-file-size">185M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_DOMAIN.txt">🔗</a></td>
@@ -140,7 +140,7 @@
     </tr>
     <tr>
       <td>ALLOW_DOMAIN</td>
-      <td>Domain entries</td>
+      <td>Punycode domain entries</td>
       <td id="ALLOW-DOMAIN-line-count">278,638</td>
       <td id="ALLOW-DOMAIN-file-size">5.1M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_DOMAIN.txt">🔗</a></td>
