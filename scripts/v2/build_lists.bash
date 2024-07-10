@@ -168,20 +168,20 @@ main() {
 
 			find -P -O3 "$cache" -maxdepth 1 -type f -print0 |
 				# https://www.gnu.org/software/parallel/parallel_tutorial.html#controlling-the-execution
-				parallel --use-cpus-instead-of-cores -0 -N1 --joblog "logs/${method}-${format}-jobs.log" --tmpdir "$results" --files -X ./scripts/v2/apply_filters.bash {} "$method" "$format"
+				parallel -0 -j+0 -N1 -X --joblog "logs/${method}-${format}-jobs.log" --results "$results" ./scripts/v2/apply_filters.bash {1} "$method" "$format"
 
 			list="${OUTDIR}/${method}_${format}.txt"
 
-			find -P -O3 "$results" -type f -name *.par -exec cat -s {} + >>"$list"
+			find -P -O3 "$results" -type f -name stdout -exec cat -s {} + >>"$list"
 			echo "[INFO] Processed: ${list}"
 
-			# find -P -O3 "$results" -type f -name stderr |
-			# 	while read -r file; do
-			# 		if [ -s "$file" ]; then
-			# 			echo "$file" | mawk -F'\+z' '{printf "[ERROR] %s:\n",$5}' >>"$ERROR_LOG"
-			# 			cat -s "$file" >>"$ERROR_LOG"
-			# 		fi
-			# 	done
+			find -P -O3 "$results" -type f -name stderr |
+				while read -r file; do
+					if [ -s "$file" ]; then
+						echo "$file" | mawk -F'\+z' '{printf "[ERROR] %s:\n",$5}' >>"$ERROR_LOG"
+						cat -s "$file" >>"$ERROR_LOG"
+					fi
+				done
 
 			if [ -f "$list" ] && [ -s "$list" ]; then
 				sorted "$list"
