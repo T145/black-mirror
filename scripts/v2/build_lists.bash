@@ -75,7 +75,6 @@ main() {
 	local cache
 	local list
 	local blacklist
-	local results
 
 	for method in "${METHODS[@]}"; do
 		cache="${DOWNLOADS}/${method}"
@@ -161,24 +160,10 @@ main() {
 		echo "[INFO] Downloaded ${method} lists!"
 
 		for format in "${FORMATS[@]}"; do
-			results="${cache}/${format}"
-			mkdir -p "$results"
-
-			echo "[INFO] Sent list results to: ${results}"
-
 			list="${OUTDIR}/${method}_${format}.txt"
-			find -P -O3 ex -maxdepth 1 -type f -exec ./scripts/v2/apply_filters.bash {} "$method" "$format" \; >>"$list"
 
-			# find -P -O3 "$results" -type f -name stdout -exec cat -s {} + >>"$list"
+			find -P -O3 "$cache" -maxdepth 1 -type f -exec ./scripts/v2/apply_filters.bash {} "$method" "$format" \; >>"$list"
 			echo "[INFO] Processed: ${list}"
-
-			# find -P -O3 "$results" -type f -name stderr |
-			# 	while read -r file; do
-			# 		if [ -s "$file" ]; then
-			# 			echo "$file" | mawk -F'\+z' '{printf "[ERROR] %s:\n",$5}' >>"$ERROR_LOG"
-			# 			cat -s "$file" >>"$ERROR_LOG"
-			# 		fi
-			# 	done
 
 			if [ -f "$list" ] && [ -s "$list" ]; then
 				sorted "$list"
