@@ -88,7 +88,11 @@ sub check_host {
                     my $root = $suffix->get_root_domain($host);
                     my $suf = $suffix->suffix();
 
-                    if ($suf !~ /^blogspot/) {
+                    if (defined($suf)) {
+                        if ($suf !~ /^blogspot/) {
+                            return $host;
+                        }
+                    } else {
                         return $host;
                     }
                 } else {
