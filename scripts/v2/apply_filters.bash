@@ -9,11 +9,11 @@ get_ipv6s() {
 }
 
 get_domains_from_urls() {
-	perl5.41.1 -MData::Validate::Domain=is_domain -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_domain($3, { domain_private_tld => { onion => 1 } })}' 2>/dev/null
+	perl5.41.1 -MData::Validate::Domain=is_domain -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_domain($3, { domain_private_tld => { onion => 1 } })}'
 }
 
 get_ipv4s_from_urls() {
-	perl5.41.1 -MData::Validate::IP=is_ipv4 -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_ipv4($3)}' 2>/dev/null
+	perl5.41.1 -MData::Validate::IP=is_ipv4 -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_ipv4($3)}'
 }
 
 hostsblock() {
@@ -183,7 +183,7 @@ process_list() {
 		mawk 'NF && !seen[$0]++' |
 		case "$LIST_FORMAT" in
 		'DOMAIN')
-			./scripts/v2/check_domains.pl 2>/dev/null
+			./scripts/v2/check_domains.pl
 			;;
 		# https://metacpan.org/pod/Data::Validate::IP
 		'IPV4')
@@ -209,10 +209,10 @@ process_list() {
 			esac
 			;;
 		'CIDR4')
-			./scripts/v2/check_cidrs.pl 2>/dev/null
+			./scripts/v2/check_cidrs.pl
 			;;
 		'CIDR6')
-			./scripts/v2/check_cidrs.pl 2>/dev/null
+			./scripts/v2/check_cidrs.pl
 			;;
 		esac
 }
