@@ -11421,5 +11421,34 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
+  },
+  "bestpika_yui": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "HLC_MODIFIERS",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HLC",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://bestpika.github.io/abp/",
+      "homepage": "https://github.com/bestpika/abp/",
+      "license": "all-rights-reserved",
+      "notes": "Has hosts to whitelist as well!"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/bestpika/abp/master/yui.txt"
+    ],
+    "topic": "PRIVACY",
+    "variants":{
+      "adguard": "https://raw.githubusercontent.com/bestpika/abp/master/yui.txt"
+    }
   }
 }
