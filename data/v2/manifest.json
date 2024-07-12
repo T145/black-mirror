@@ -11322,6 +11322,35 @@
     ],
     "topic": "PRIVACY"
   },
+  "youslist": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/yous/YousList",
+      "homepage": "https://github.com/yous/YousList",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/yous/YousList/master/hosts.txt"
+    ],
+    "topic": "PRIVACY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/yous/YousList/master/hosts.txt",
+      "adguard": "https://raw.githubusercontent.com/yous/YousList/master/youslist.txt"
+    }
+  },
   "yoyo_domains": {
     "active": true,
     "checksums": {},
@@ -11450,34 +11479,5 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
-  },
-  "youslist": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/yous/YousList",
-      "homepage": "https://github.com/yous/YousList",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/yous/YousList/master/hosts.txt"
-    ],
-    "topic": "PRIVACY",
-    "variants":{
-      "pihole": "https://raw.githubusercontent.com/yous/YousList/master/hosts.txt",
-      "adguard": "https://raw.githubusercontent.com/yous/YousList/master/youslist.txt"
-    }
   }
 }
