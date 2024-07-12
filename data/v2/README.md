@@ -9,7 +9,6 @@
 - [wh0ami](https://codeberg.org/wh0ami/pihole-lists)
 - [TR-CERT](https://www.usom.gov.tr/url-list.txt)
   - Reference: [usom-blacklist](https://github.com/fuatboluk/usom-blacklist)
-- [YousList](https://github.com/yous/YousList)
 - [xiaobeita](https://github.com/rentianyu/Ad-set-hosts/tree/master/xiaobeita)
 - [CleanTalk](https://cleantalk.org/help/iptables-connect)
 - [BotScout](https://botscout.com/last_caught_cache.htm)
