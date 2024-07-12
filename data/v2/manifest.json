@@ -2799,6 +2799,31 @@
     ],
     "topic": "SECURITY"
   },
+  "cyberhost": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://cyberhost.uk/malware-blocklist/",
+      "homepage": "https://cyberhost.uk/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://lists.cyberhost.uk/malware.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "cymru_ipv4_bogons": {
     "active": true,
     "checksums": {},
@@ -11394,31 +11419,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://zonefiles.io/f/compromised/ip/live/"
-    ],
-    "topic": "SECURITY"
-  },
-  "cyberhost": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://cyberhost.uk/malware-blocklist/",
-      "homepage": "https://cyberhost.uk/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://lists.cyberhost.uk/malware.txt"
     ],
     "topic": "SECURITY"
   }
