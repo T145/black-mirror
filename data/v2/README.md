@@ -14,7 +14,6 @@
 - [BotScout](https://botscout.com/last_caught_cache.htm)
 - [i-blocklist](https://github.com/jackrabbit335/UsefulLinuxShellScripts/blob/master/blocklist-update.sh#L17)
 - [phishing_kits](https://github.com/0xDanielLopez/phishing_kits)
-- [AbuseIPDB](https://docs.abuseipdb.com/#blacklist-endpoint)
 - [Wael](https://github.com/waelisa/Best-blocklist)
 - [PrivacyBadger](https://github.com/EFForg/privacybadger/tree/master/src/data)
 

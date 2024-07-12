@@ -11479,5 +11479,34 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
+  },
+  "abuse_ipdb": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "CURL_ABUSE_IPDB",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "GREP_IPV4",
+        "format": "IPV4"
+      },
+      {
+        "filter": "GREP_IPV6",
+        "format": "IPV6"
+      }
+    ],
+    "metadata": {
+      "description": "https://docs.abuseipdb.com/#blacklist-endpoint",
+      "homepage": "https://www.abuseipdb.com/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://api.abuseipdb.com/api/v2/blacklist"
+    ],
+    "topic": "SECURITY"
   }
 }

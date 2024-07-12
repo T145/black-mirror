@@ -151,6 +151,14 @@ main() {
 								hostlist-compiler -c "$TMP" -o "${cache}/${key}" >>'logs/hostlist-compiler.log'
 								: >"$TMP"
 								;;
+							'CURL_ABUSE_IPDB')
+								curl -G "$mirror" \
+									-d confidenceMinimum=92 \
+									-d plaintext \
+									-H "Key: ${ABUSE_IPDB_SECRET}" \
+									-H 'Accept: application/json' \
+									-o "${cache}/${key}"
+								;;
 							esac
 						done
 					;;
