@@ -4423,7 +4423,7 @@
     },
     "formats": [
       {
-        "filter": "HAAS",
+        "filter": "MALTRAIL",
         "format": "IPV4"
       }
     ],
@@ -11531,6 +11531,31 @@
     "method": "BLOCK",
     "mirrors": [
       "https://zonefiles.io/f/compromised/ip/live/"
+    ],
+    "topic": "SECURITY"
+  },
+  "phishfort": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "PHISHFORT",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://lookup.phishfort.com/",
+      "homepage": "https://github.com/phishfort/phishfort-lists/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/phishfort/phishfort-lists/master/blacklists/domains.json"
     ],
     "topic": "SECURITY"
   }

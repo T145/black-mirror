@@ -159,6 +159,7 @@
   - [bad vn filter](https://gitlab.com/malware-filter/vn-badsite-filter)
     - Uses Chong Lua Dao
 - [mhhakim](https://github.com/mhhakim/pihole-blocklist)
+- [DeadEnd](https://github.com/ammnt/DeadEnd/blob/main/configuration.json)
 
 # 🧟 Zombies
 
