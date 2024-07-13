@@ -8094,6 +8094,31 @@
     ],
     "topic": "SECURITY"
   },
+  "privacy_badger": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "JSON"
+    },
+    "formats": [
+      {
+        "filter": "PRIVACY_BADGER",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/EFForg/privacybadger/",
+      "homepage": "https://github.com/EFForg/privacybadger/",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json"
+    ],
+    "topic": "PRIVACY"
+  },
   "public_dns": {
     "active": true,
     "checksums": {},
@@ -11508,30 +11533,5 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
-  },
-  "privacy_badger": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "JSON"
-    },
-    "formats": [
-      {
-        "filter": "PRIVACY_BADGER",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/EFForg/privacybadger/",
-      "homepage": "https://github.com/EFForg/privacybadger/",
-      "license": "gpl-3.0"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json"
-    ],
-    "topic": "PRIVACY"
   }
 }
