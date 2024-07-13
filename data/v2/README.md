@@ -160,6 +160,7 @@
     - Uses Chong Lua Dao
 - [mhhakim](https://github.com/mhhakim/pihole-blocklist)
 - [DeadEnd](https://github.com/ammnt/DeadEnd/blob/main/configuration.json)
+- [Energized](https://github.com/EnergizedProtection/block/blob/master/assets/sources/sources.json)
 
 # 🧟 Zombies
 
@@ -386,7 +387,6 @@
 - [kriskintel](https://kriskintel.com/)
   - Bad TLS configuration
 - [Cybo1927](https://github.com/Cybo1927/Hosts)
-- [Energized Xtreme Extension](https://github.com/EnergizedProtection/block#extensions-2)
 - [joewein's domain lists](https://joewein.net/spam/bl-text.htm)
   - The domain lists have been deprecated.
 - [youtube_ad_blocklist](https://github.com/Ewpratten/youtube_ad_blocklist)
