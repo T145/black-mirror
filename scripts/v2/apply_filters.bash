@@ -134,6 +134,7 @@ process_list() {
 			'MALWARE_WORLD') jaq -r 'to_entries[] | select(.value.title == "Whitelist").key' ;;
 			'TINYCHECK_WHITELIST_DOMAIN') jaq -r '.elements[] | select(.type == "domain").element' ;;
 			'TINYCHECK_WHITELIST_CIDR') jaq -r '.elements[] | select(.type == "cidr").element' ;;
+			'PRIVACY_BADGER') jaq -r '.action_map | to_entries[] | select(.value.heuristicAction == "block").key' ;;
 			esac
 			;;
 		# Match domains in URLs: https://regex101.com/r/iC9eN2/1

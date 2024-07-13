@@ -15,7 +15,6 @@
 - [i-blocklist](https://github.com/jackrabbit335/UsefulLinuxShellScripts/blob/master/blocklist-update.sh#L17)
 - [phishing_kits](https://github.com/0xDanielLopez/phishing_kits)
 - [Wael](https://github.com/waelisa/Best-blocklist)
-- [PrivacyBadger](https://github.com/EFForg/privacybadger/tree/master/src/data)
 
 ### Add but archive
 
