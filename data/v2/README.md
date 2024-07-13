@@ -554,7 +554,7 @@
 - [perso](https://perso.pw/blocklist.txt)
 - [CyberSaiyanIT](https://www.cybersaiyan.it/)
 - [fzListKor](https://raw.githubusercontent.com/elsannadisney/fzListKor/main/warehouse/maindns.txt)
-- [AirVPN Adult Filter](https://airvpn.org/api/dns_lists/?code=air_porn)
+- [AirVPN Adult Filter](https://airvpn.org/api/dns_lists?code=air_porn)
 - [Richard's Blocklist](https://forum.virtualmin.com/t/all-of-my-blocklists-are-now-free-at-least-for-the-time-being/116454)
 - [twann](https://codeberg.org/twann/filters)
 - [dnsblocklistnet](https://github.com/dnsblocklistnet/blocklists)
@@ -576,3 +576,4 @@
 - [Ugly Email Trackers](https://github.com/OneClickLab/ugly-email-trackers)
   - [Leave Me Alone](https://github.com/leavemealone-app/email-trackers)
 - [tekintian](https://github.com/tekintian/hosts_ads_block)
+- [MalwareWorld](https://malwareworld.com/)
