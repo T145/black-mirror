@@ -6,6 +6,7 @@
 
 **Implemented enhancements:**
 
+- \[feature\]:  Use lists from Hydra Dragon Antivirus [\#216](https://github.com/T145/black-mirror/issues/216)
 - \[feature\]: Whitelist all list provider hosts [\#147](https://github.com/T145/black-mirror/issues/147)
 - \[feature\]: sources.adguard seems to be missing? [\#119](https://github.com/T145/black-mirror/issues/119)
 
