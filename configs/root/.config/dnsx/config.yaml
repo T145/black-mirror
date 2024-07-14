@@ -59,7 +59,7 @@
 #resp-only: false
 
 # filter result by dns status code (eg. -rcode noerror,servfail,refused)
-#rcode:
+rcode: nxdomain
 
 # display cdn name
 #cdn: false
@@ -68,7 +68,7 @@
 #asn: false
 
 # number of concurrent threads to use
-#threads: 100
+threads: 20000
 
 # number of dns request/second to make (disabled as default)
 #rate-limit: -1
@@ -92,7 +92,7 @@
 #health-check: false
 
 # display only results in the output
-#silent: false
+silent: true
 
 # display verbose output
 #verbose: false
@@ -101,16 +101,16 @@
 #debug: false
 
 # display stats of the running scan
-#stats: false
+stats: true
 
 # display version of dnsx
 #version: false
 
 # disable color in output
-#no-color: false
+no-color: true
 
 # number of dns attempts to make (must be at least 1)
-#retry: 2
+retry: 3
 
 # use system host file
 #hostsfile: false
