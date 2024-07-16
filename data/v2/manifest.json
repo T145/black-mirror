@@ -9303,6 +9303,31 @@
     ],
     "topic": "SECURITY"
   },
+  "stamparm": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://sekuripy.hr/",
+      "homepage": "https://sekuripy.hr/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://sekuripy.hr/blacklist.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "stevenblack": {
     "active": true,
     "checksums": {},
@@ -11556,31 +11581,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://zonefiles.io/f/compromised/ip/live/"
-    ],
-    "topic": "SECURITY"
-  },
-  "stamparm": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://sekuripy.hr/",
-      "homepage": "https://sekuripy.hr/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://sekuripy.hr/blacklist.txt"
     ],
     "topic": "SECURITY"
   }
