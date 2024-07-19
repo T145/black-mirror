@@ -169,7 +169,7 @@ process_list() {
 			# The C2 feed has malformed CSVs.
 			'THREATVIEW_C2_HOSTS') mawk -F, '/^[^#]/{print $3}' ;;
 			# Ignore IPs that are not from the current month.
-			'THREATVIEW_C2_IPV4') awk -F, -v date="$(date +'%B %Y') [0-9]{2}:[0-9]{2} [AP]M [[:upper:]]+$" '/^[^#]/ && $2 ~ date{print $1}';;
+			'THREATVIEW_C2_IPV4') awk -F, -v date="$(date +'%B %Y') [0-9]{2}:[0-9]{2} [AP]M [[:upper:]]+$" '/^[^#]/ && $2 ~ date{print $1}' ;;
 			esac
 			;;
 		'YAML')

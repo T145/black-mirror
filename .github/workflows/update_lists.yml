@@ -29,7 +29,9 @@ jobs:
       - name: Sort manifest
         run: jaq -ir 'to_entries | sort_by(.value) | sort_by(.key) | from_entries' data/v2/manifest.json
       - name: Document manifest
-        run: jaq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/manifest.json | csvlook >dist/SOURCES.md
+        run: |
+          # shellcheck disable=SC2016
+          jaq -r '["Source", "Method", "Description", "Homepage", "License"], (to_entries[] | .key as $key | .value.method as $method | .value.metadata | [$key, $method, .description, .homepage, .license]) | @csv' data/v2/manifest.json | csvlook >dist/SOURCES.md
       - name: Document AdGuard sources
         run: jaq -r '.[] | select(.method == "BLOCK" and .variants.adguard?) | ("!#include " + .variants.adguard)' data/v2/manifest.json >dist/ADGUARD_SOURCES.txt
       - name: Whitelist list hosts

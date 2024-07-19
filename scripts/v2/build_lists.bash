@@ -8,7 +8,7 @@ shopt -s extglob      # enable extended pattern matching (https://www.gnu.org/so
 set -euET -o pipefail # put bash into "strict mode" & have it give descriptive errors
 umask 055             # change all generated file permissions from 755 to 700
 
-ARCHIVE='dist/ARCHIVE.csv'
+#ARCHIVE='dist/ARCHIVE.csv'
 OUTDIR='build'
 DOWNLOADS=$(mktemp -d)
 TMP=$(mktemp -p "$DOWNLOADS")
@@ -20,7 +20,7 @@ FORMAT_CIDR4='CIDR4'
 FORMAT_CIDR6='CIDR6'
 FORMAT_IPV4='IPV4'
 FORMAT_IPV6='IPV6'
-readonly ARCHIVE OUTDIR DOWNLOADS TMP ERROR_LOG METHOD_ALLOW METHOD_BLOCK FORMAT_DOMAIN FORMAT_CIDR4 FORMAT_CIDR6 FORMAT_IPV4 FORMAT_IPV6
+readonly OUTDIR DOWNLOADS TMP ERROR_LOG METHOD_ALLOW METHOD_BLOCK FORMAT_DOMAIN FORMAT_CIDR4 FORMAT_CIDR6 FORMAT_IPV4 FORMAT_IPV6
 
 METHODS=("$METHOD_BLOCK" "$METHOD_ALLOW")
 FORMATS=("$FORMAT_DOMAIN" "$FORMAT_IPV4" "$FORMAT_IPV6" "$FORMAT_CIDR4" "$FORMAT_CIDR6")
@@ -176,7 +176,7 @@ main() {
 
 			find -P -O3 "$cache" -maxdepth 1 -type f -print0 |
 				# https://www.gnu.org/software/parallel/parallel_tutorial.html#controlling-the-execution
-				parallel -0 -j+0 -X -N1 --results "$results" ./scripts/v2/apply_filters.bash {1} "$method" "$format"
+				parallel -0 -j+0 -X -N1 --results "$results" ./scripts/v2/apply_filters.bash {} "$method" "$format"
 
 			list="${OUTDIR}/${method}_${format}.txt"
 
