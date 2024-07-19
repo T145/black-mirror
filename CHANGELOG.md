@@ -23,6 +23,7 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump softprops/action-gh-release from 2.0.6 to 2.0.7 in /.github/workflows [\#225](https://github.com/T145/black-mirror/pull/225) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/build-push-action from 6.4.0 to 6.4.1 in /.github/workflows [\#224](https://github.com/T145/black-mirror/pull/224) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/build-push-action from 6.3.0 to 6.4.0 in /.github/workflows [\#222](https://github.com/T145/black-mirror/pull/222) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/upload-artifact from 79616d2ded92999fceefea2ca2e4bdf6101fa919 to 0b2256b8c012f0828dc542b3febcab082c67f72b in /.github/workflows [\#221](https://github.com/T145/black-mirror/pull/221) ([dependabot[bot]](https://github.com/apps/dependabot))
