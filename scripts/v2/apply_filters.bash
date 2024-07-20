@@ -54,7 +54,7 @@ process_list() {
 	'7Z') 7za -y -so e "$FILE_PATH" ;;
 	'ZIP') zcat "$FILE_PATH" ;;
 	'GZIP') pigz -cd "$FILE_PATH" ;;
-	'SQUIDGUARD') tar -xOzf "$FILE_PATH" --wildcards-match-slash --wildcards '*/domains' ;;
+	'SQUIDGUARD') tar -xOzf "$FILE_PATH" --wildcards-match-slash --wildcards '*/domains' '*/urls' ;;
 	'SCAFROGLIA') unzip -p "$FILE_PATH" blocklists-master/*.txt ;;
 	'SHADOWWHISPERER') unzip -p "$FILE_PATH" BlockLists-master/RAW/* ;;
 	'ESOX_LUCIUS') unzip -p "$FILE_PATH" PiHoleblocklists-main/* -x PiHoleblocklists-main/LICENSE PiHoleblocklists-main/README.md ;;
@@ -195,9 +195,7 @@ process_list() {
 		# Remove empty lines and duplicates
 		mawk 'NF && !seen[$0]++' |
 		case "$LIST_FORMAT" in
-		'DOMAIN')
-			./scripts/v2/check_domains.pl
-			;;
+		'DOMAIN') ./scripts/v2/check_domains.pl ;;
 		# https://metacpan.org/pod/Data::Validate::IP
 		'IPV4')
 			case "$LIST_METHOD" in
@@ -221,12 +219,8 @@ process_list() {
 				;;
 			esac
 			;;
-		'CIDR4')
-			./scripts/v2/check_cidrs.pl
-			;;
-		'CIDR6')
-			./scripts/v2/check_cidrs.pl
-			;;
+		'CIDR4') ./scripts/v2/check_cidrs.pl ;;
+		'CIDR6') ./scripts/v2/check_cidrs.pl ;;
 		esac
 }
 
