@@ -10823,6 +10823,162 @@
     ],
     "topic": "SECURITY"
   },
+  "ut1_cryptojacking": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "SQUIDGUARD",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "CYBERCRIME_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://dsi.ut-capitole.fr/blacklists/download/",
+      "homepage": "https://dsi.ut-capitole.fr/blacklists/index_en.php",
+      "license": "cc-by-sa-4.0",
+      "notes": "Aria2 can handle the FTP links as well, but the protocol is very insecure."
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://dsi.ut-capitole.fr/blacklists/download/cryptojacking.tar.gz"
+    ],
+    "topic": "SECURITY"
+  },
+  "ut1_liste_bu": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "SQUIDGUARD",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "CYBERCRIME_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://dsi.ut-capitole.fr/blacklists/download/",
+      "homepage": "https://dsi.ut-capitole.fr/blacklists/index_en.php",
+      "license": "cc-by-sa-4.0",
+      "notes": "Aria2 can handle the FTP links as well, but the protocol is very insecure."
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://dsi.ut-capitole.fr/blacklists/download/liste_bu.tar.gz"
+    ],
+    "topic": "SANITY"
+  },
+  "ut1_malware": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "SQUIDGUARD",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "CYBERCRIME_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://dsi.ut-capitole.fr/blacklists/download/",
+      "homepage": "https://dsi.ut-capitole.fr/blacklists/index_en.php",
+      "license": "cc-by-sa-4.0",
+      "notes": "Aria2 can handle the FTP links as well, but the protocol is very insecure."
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://dsi.ut-capitole.fr/blacklists/download/malware.tar.gz"
+    ],
+    "topic": "SECURITY"
+  },
+  "ut1_phishing": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "SQUIDGUARD",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "CYBERCRIME_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://dsi.ut-capitole.fr/blacklists/download/",
+      "homepage": "https://dsi.ut-capitole.fr/blacklists/index_en.php",
+      "license": "cc-by-sa-4.0",
+      "notes": "Aria2 can handle the FTP links as well, but the protocol is very insecure."
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://dsi.ut-capitole.fr/blacklists/download/phishing.tar.gz"
+    ],
+    "topic": "SECURITY"
+  },
+  "ut1_sex_ed": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "SQUIDGUARD",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "CYBERCRIME_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://dsi.ut-capitole.fr/blacklists/download/",
+      "homepage": "https://dsi.ut-capitole.fr/blacklists/index_en.php",
+      "license": "cc-by-sa-4.0",
+      "notes": "Aria2 can handle the FTP links as well, but the protocol is very insecure."
+    },
+    "method": "ALLOW",
+    "mirrors": [
+      "https://dsi.ut-capitole.fr/blacklists/download/sexual_education.tar.gz"
+    ],
+    "topic": "SANITY"
+  },
+  "ut1_stalkerware": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "SQUIDGUARD",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "CYBERCRIME_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://dsi.ut-capitole.fr/blacklists/download/",
+      "homepage": "https://dsi.ut-capitole.fr/blacklists/index_en.php",
+      "license": "cc-by-sa-4.0",
+      "notes": "Aria2 can handle the FTP links as well, but the protocol is very insecure."
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://dsi.ut-capitole.fr/blacklists/download/stalkerware.tar.gz"
+    ],
+    "topic": "SECURITY"
+  },
   "viriback": {
     "active": true,
     "checksums": {},
@@ -11636,162 +11792,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://zonefiles.io/f/compromised/ip/live/"
-    ],
-    "topic": "SECURITY"
-  },
-  "ut1_sex_ed": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "SQUIDGUARD",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "CYBERCRIME_DOMAIN",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://dsi.ut-capitole.fr/blacklists/download/",
-      "homepage": "https://dsi.ut-capitole.fr/blacklists/index_en.php",
-      "license": "cc-by-sa-4.0",
-      "notes": "Aria2 can handle the FTP links as well, but the protocol is very insecure."
-    },
-    "method": "ALLOW",
-    "mirrors": [
-      "https://dsi.ut-capitole.fr/blacklists/download/sexual_education.tar.gz"
-    ],
-    "topic": "SANITY"
-  },
-  "ut1_liste_bu": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "SQUIDGUARD",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "CYBERCRIME_DOMAIN",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://dsi.ut-capitole.fr/blacklists/download/",
-      "homepage": "https://dsi.ut-capitole.fr/blacklists/index_en.php",
-      "license": "cc-by-sa-4.0",
-      "notes": "Aria2 can handle the FTP links as well, but the protocol is very insecure."
-    },
-    "method": "ALLOW",
-    "mirrors": [
-      "https://dsi.ut-capitole.fr/blacklists/download/liste_bu.tar.gz"
-    ],
-    "topic": "SANITY"
-  },
-  "ut1_stalkerware": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "SQUIDGUARD",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "CYBERCRIME_DOMAIN",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://dsi.ut-capitole.fr/blacklists/download/",
-      "homepage": "https://dsi.ut-capitole.fr/blacklists/index_en.php",
-      "license": "cc-by-sa-4.0",
-      "notes": "Aria2 can handle the FTP links as well, but the protocol is very insecure."
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://dsi.ut-capitole.fr/blacklists/download/stalkerware.tar.gz"
-    ],
-    "topic": "SECURITY"
-  },
-  "ut1_malware": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "SQUIDGUARD",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "CYBERCRIME_DOMAIN",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://dsi.ut-capitole.fr/blacklists/download/",
-      "homepage": "https://dsi.ut-capitole.fr/blacklists/index_en.php",
-      "license": "cc-by-sa-4.0",
-      "notes": "Aria2 can handle the FTP links as well, but the protocol is very insecure."
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://dsi.ut-capitole.fr/blacklists/download/malware.tar.gz"
-    ],
-    "topic": "SECURITY"
-  },
-  "ut1_phishing": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "SQUIDGUARD",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "CYBERCRIME_DOMAIN",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://dsi.ut-capitole.fr/blacklists/download/",
-      "homepage": "https://dsi.ut-capitole.fr/blacklists/index_en.php",
-      "license": "cc-by-sa-4.0",
-      "notes": "Aria2 can handle the FTP links as well, but the protocol is very insecure."
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://dsi.ut-capitole.fr/blacklists/download/phishing.tar.gz"
-    ],
-    "topic": "SECURITY"
-  },
-  "ut1_cryptojacking": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "SQUIDGUARD",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "CYBERCRIME_DOMAIN",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://dsi.ut-capitole.fr/blacklists/download/",
-      "homepage": "https://dsi.ut-capitole.fr/blacklists/index_en.php",
-      "license": "cc-by-sa-4.0",
-      "notes": "Aria2 can handle the FTP links as well, but the protocol is very insecure."
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://dsi.ut-capitole.fr/blacklists/download/cryptojacking.tar.gz"
     ],
     "topic": "SECURITY"
   }
