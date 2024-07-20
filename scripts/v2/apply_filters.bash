@@ -96,6 +96,7 @@ process_list() {
 			'DOMAINS_FROM_HOST_MIX') gawk '/^([[:alpha:]_-]{1,63}\.)/' ;;
 			'HLC') mawk -F"[|^]" '/^[||]/ && $3!~/\*/{print $3}' ;;
 			'DNSMASQ') mawk '/^zone/{gsub(/\"/, "", $2); print $2}' ;;
+			'NORTHEASTERN_EDU') mawk '$1~/^sshd:$/{print $2}' ;;
 			esac
 			;;
 		'JSON')

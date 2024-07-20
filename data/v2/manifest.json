@@ -11583,5 +11583,30 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
+  },
+  "northeastern_university": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NORTHEASTERN_EDU",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://english.neu.edu.cn/",
+      "homepage": "https://english.neu.edu.cn/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "http://antivirus.neu.edu.cn/ssh/lists/neu.txt"
+    ],
+    "topic": "SECURITY"
   }
 }
