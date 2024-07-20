@@ -7387,6 +7387,31 @@
       "pihole": "https://raw.githubusercontent.com/allendema/noplaylist/main/NoPlayList.txt"
     }
   },
+  "northeastern_university": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NORTHEASTERN_EDU",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://english.neu.edu.cn/",
+      "homepage": "https://english.neu.edu.cn/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "http://antivirus.neu.edu.cn/ssh/lists/neu.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "not_on_my_shift": {
     "active": true,
     "checksums": {},
@@ -10768,6 +10793,36 @@
     ],
     "topic": "SECURITY"
   },
+  "university_of_science_and_technology_of_china": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "GREP_IPV4",
+        "format": "IPV4"
+      },
+      {
+        "filter": "GREP_IPV6",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://blackip.ustc.edu.cn/list.php",
+      "homepage": "https://blackip.ustc.edu.cn/",
+      "license": "all-rights-reserved",
+      "notes": "Using the 'x' param from IpInfo generated no results on CIDRs, so double check that these aren't all reserved."
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://blackip.ustc.edu.cn/list.php?txt"
+    ],
+    "topic": "SECURITY"
+  },
   "viriback": {
     "active": true,
     "checksums": {},
@@ -11581,61 +11636,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://zonefiles.io/f/compromised/ip/live/"
-    ],
-    "topic": "SECURITY"
-  },
-  "northeastern_university": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "NORTHEASTERN_EDU",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://english.neu.edu.cn/",
-      "homepage": "https://english.neu.edu.cn/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "http://antivirus.neu.edu.cn/ssh/lists/neu.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "university_of_science_and_technology_of_china": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "GREP_IPV4",
-        "format": "IPV4"
-      },
-      {
-        "filter": "GREP_IPV6",
-        "format": "IPV4"
-      }
-    ],
-    "metadata": {
-      "description": "https://blackip.ustc.edu.cn/list.php",
-      "homepage": "https://blackip.ustc.edu.cn/",
-      "license": "all-rights-reserved",
-      "notes": "Using the 'x' param from IpInfo generated no results on CIDRs, so double check that these aren't all reserved."
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://blackip.ustc.edu.cn/list.php?txt"
     ],
     "topic": "SECURITY"
   }
