@@ -6,7 +6,6 @@
 
 **Implemented enhancements:**
 
-- \[feature\]:  Use lists from Hydra Dragon Antivirus [\#216](https://github.com/T145/black-mirror/issues/216)
 - \[feature\]: Whitelist all list provider hosts [\#147](https://github.com/T145/black-mirror/issues/147)
 - \[feature\]: sources.adguard seems to be missing? [\#119](https://github.com/T145/black-mirror/issues/119)
 
@@ -19,10 +18,12 @@
 
 **Closed issues:**
 
+- \[feature\]:  Use lists from Hydra Dragon Antivirus [\#216](https://github.com/T145/black-mirror/issues/216)
 - Track down Windscribe's Social & Cryptominers lists [\#27](https://github.com/T145/black-mirror/issues/27)
 
 **Merged pull requests:**
 
+- chore\(deps\): bump softprops/action-gh-release from 2.0.7 to 2.0.8 in /.github/workflows [\#226](https://github.com/T145/black-mirror/pull/226) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump softprops/action-gh-release from 2.0.6 to 2.0.7 in /.github/workflows [\#225](https://github.com/T145/black-mirror/pull/225) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/build-push-action from 6.4.0 to 6.4.1 in /.github/workflows [\#224](https://github.com/T145/black-mirror/pull/224) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/build-push-action from 6.3.0 to 6.4.0 in /.github/workflows [\#222](https://github.com/T145/black-mirror/pull/222) ([dependabot[bot]](https://github.com/apps/dependabot))
