@@ -11608,5 +11608,35 @@
       "http://antivirus.neu.edu.cn/ssh/lists/neu.txt"
     ],
     "topic": "SECURITY"
+  },
+  "university_of_science_and_technology_of_china": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "GREP_IPV4",
+        "format": "IPV4"
+      },
+      {
+        "filter": "GREP_IPV6",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://blackip.ustc.edu.cn/list.php",
+      "homepage": "https://blackip.ustc.edu.cn/",
+      "license": "all-rights-reserved",
+      "notes": "Using the 'x' param from IpInfo generated no results on CIDRs, so double check that these aren't all reserved."
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://blackip.ustc.edu.cn/list.php?txt"
+    ],
+    "topic": "SECURITY"
   }
 }

@@ -1,11 +1,20 @@
 #!/usr/bin/env bash
 
+# NOTE: "include-cidrs" ignores CIDR blocks!
 get_ipv4s() {
-	ipinfo grepip -4hox --nocolor
+	ipinfo grepip -4hox --include-cidrs --nocolor
 }
 
 get_ipv6s() {
-	ipinfo grepip -6hox --nocolor
+	ipinfo grepip -6hox --include-cidrs --nocolor
+}
+
+get_ipv4_cidrs() {
+	ipinfo grepip -4ho --cidrs-only --nocolor
+}
+
+get_ipv6_cidrs() {
+	ipinfo grepip -6ho --cidrs-only --nocolor
 }
 
 get_domains_from_urls() {
@@ -63,6 +72,8 @@ process_list() {
 			'ADBLOCK') hostsblock ;;
 			'GREP_IPV4') get_ipv4s ;;
 			'GREP_IPV6') get_ipv6s ;;
+			'GREP_CIDR4') get_ipv4_cidrs ;;
+			'GREP_CIDR6') get_ipv6_cidrs ;;
 			'BOTVIRJ_IPV4') mawk -F'|' '{print $1}' ;;
 			'CRYPTOLAEMUS_DOMAIN') hxextract code /dev/stdin | head -n -1 | tail -n +6 ;;
 			'CRYPTOLAEMUS_IPV4') hxextract code /dev/stdin | head -n -1 | tail -n +6 | get_ipv4s ;;
