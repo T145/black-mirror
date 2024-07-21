@@ -152,7 +152,6 @@
       <td id="ALLOW-IPV6-line-count">2,681</td>
       <td id="ALLOW-IPV6-file-size">101K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_IPV6.txt">🔗</a></td>
-      <td align="center"><a href="https://www.dropbox.com/s/xt5frs2ivac14ap/ALLOW_IPV6.txt?dl=0">🔗</a></td>
     </tr>
     <tr>
       <td>ALLOW_CIDR4</td>
@@ -160,7 +159,6 @@
       <td id="ALLOW-CIDR4-line-count">13,801</td>
       <td id="ALLOW-CIDR4-file-size">212K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_CIDR4.txt">🔗</a></td>
-      <td align="center"><a href="https://www.dropbox.com/s/1esd0w1o2xo6qox/ALLOW_CIDR4.txt?dl=0">🔗</a></td>
     </tr>
     <tr>
       <td>ALLOW_CIDR6</td>
@@ -168,7 +166,6 @@
       <td id="ALLOW-CIDR6-line-count">146,991</td>
       <td id="ALLOW-CIDR6-file-size">2.4M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_CIDR6.txt">🔗</a></td>
-      <td align="center"><a href="https://www.dropbox.com/s/jqstqs2tll0kp84/ALLOW_CIDR6.txt?dl=0">🔗</a></td>
     </tr>
   </tbody>
 </table>
