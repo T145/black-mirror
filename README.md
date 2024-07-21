@@ -93,18 +93,16 @@
       <th>File Content</th>
       <th>Unique Entries</th>
       <th>File Size</th>
-      <th>Mirror 1</th>
-      <th>Mirror 2</th>
+      <th>Mirror</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>BLOCK_DOMAIN</td>
-      <td>Punycode domain entries</td>
+      <td>Punycode domains</td>
       <td id="BLOCK-DOMAIN-line-count">8,548,854</td>
       <td id="BLOCK-DOMAIN-file-size">183M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_DOMAIN.txt">🔗</a></td>
-      <td align="center"><a href="https://www.dropbox.com/s/k0cpm86vw66e0jg/BLOCK_DOMAIN.txt?dl=0">🔗</a></td>
     </tr>
     <tr>
       <td>BLOCK_IPV4</td>
@@ -112,7 +110,6 @@
       <td id="BLOCK-IPV4-line-count">807,723</td>
       <td id="BLOCK-IPV4-file-size">11M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_IPV4.txt">🔗</a></td>
-      <td align="center"><a href="https://www.dropbox.com/s/zkg2eiypf3d42mj/BLOCK_IPV4.txt?dl=0">🔗</a></td>
     </tr>
     <tr>
       <td>BLOCK_IPV6</td>
@@ -120,7 +117,6 @@
       <td id="BLOCK-IPV6-line-count">1,380</td>
       <td id="BLOCK-IPV6-file-size">40K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_IPV6.txt">🔗</a></td>
-      <td align="center"><a href="https://www.dropbox.com/s/lun3qt7my8dcj5e/BLOCK_IPV6.txt?dl=0">🔗</a></td>
     </tr>
     <tr>
       <td>BLOCK_CIDR4</td>
@@ -128,7 +124,6 @@
       <td id="BLOCK-CIDR4-line-count">9,692</td>
       <td id="BLOCK-CIDR4-file-size">158K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_CIDR4.txt">🔗</a></td>
-      <td align="center"><a href="https://www.dropbox.com/s/r0s4balz5b951in/BLOCK_CIDR4.txt?dl=0">🔗</a></td>
     </tr>
     <tr>
       <td>BLOCK_CIDR6</td>
@@ -136,15 +131,13 @@
       <td id="BLOCK-CIDR6-line-count">205</td>
       <td id="BLOCK-CIDR6-file-size">3.4K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_CIDR6.txt">🔗</a></td>
-      <td align="center"><a href="https://www.dropbox.com/s/r0s4balz5b951in/BLOCK_CIDR6.txt?dl=0">🔗</a></td>
     </tr>
     <tr>
       <td>ALLOW_DOMAIN</td>
-      <td>Punycode domain entries</td>
+      <td>Punycode domains</td>
       <td id="ALLOW-DOMAIN-line-count">667,888</td>
       <td id="ALLOW-DOMAIN-file-size">14M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_DOMAIN.txt">🔗</a></td>
-      <td align="center"><a href="https://www.dropbox.com/s/xt5frs2ivac14ap/ALLOW_DOMAIN.txt?dl=0">🔗</a></td>
     </tr>
     <tr>
       <td>ALLOW_IPV4</td>
@@ -152,7 +145,6 @@
       <td id="ALLOW-IPV4-line-count">74,751</td>
       <td id="ALLOW-IPV4-file-size">1022K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_IPV4.txt">🔗</a></td>
-      <td align="center"><a href="https://www.dropbox.com/s/xt5frs2ivac14ap/ALLOW_IPV4.txt?dl=0">🔗</a></td>
     </tr>
     <tr>
       <td>ALLOW_IPV6</td>
