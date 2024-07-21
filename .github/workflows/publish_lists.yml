@@ -26,6 +26,10 @@ jobs:
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
         with:
           submodules: true
+      - name: Export secrets
+        uses: Firenza/secrets-to-env@v1.3.0
+        with:
+          secrets: ${{ toJSON(secrets) }}
       - name: Generate lists
         id: build
         run: |
