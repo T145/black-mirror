@@ -18,7 +18,7 @@
 
 **Closed issues:**
 
-- \[feature\]:  Use lists from Hydra Dragon Antivirus [\#216](https://github.com/T145/black-mirror/issues/216)
+- \[list\]:  Add lists from Hydra Dragon Antivirus [\#216](https://github.com/T145/black-mirror/issues/216)
 - Track down Windscribe's Social & Cryptominers lists [\#27](https://github.com/T145/black-mirror/issues/27)
 
 **Merged pull requests:**
