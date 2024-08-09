@@ -23,6 +23,9 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump docker/build-push-action from 6.5.0 to 6.6.1 in /.github/workflows [\#236](https://github.com/T145/black-mirror/pull/236) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump actions/upload-artifact from 4.3.4 to 4.3.6 in /.github/workflows [\#234](https://github.com/T145/black-mirror/pull/234) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/setup-buildx-action from 3.6.0 to 3.6.1 in /.github/workflows [\#232](https://github.com/T145/black-mirror/pull/232) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/setup-buildx-action from 3.5.0 to 3.6.0 in /.github/workflows [\#231](https://github.com/T145/black-mirror/pull/231) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/build-push-action from 6.4.1 to 6.5.0 in /.github/workflows [\#230](https://github.com/T145/black-mirror/pull/230) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/login-action from 3.2.0 to 3.3.0 in /.github/workflows [\#229](https://github.com/T145/black-mirror/pull/229) ([dependabot[bot]](https://github.com/apps/dependabot))
