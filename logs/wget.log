@@ -1,27 +1,10 @@
---2024-08-31 13:31:49--  https://haas.nic.cz/stats/export/2024/08/2024-08-30.json.gz
+--2024-09-01 13:32:05--  https://haas.nic.cz/stats/export/2024/09/2024-08-31.json.gz
 Resolving haas.nic.cz... 217.31.192.130, 2001:1488:ac15:ff90::130
 Connecting to haas.nic.cz|217.31.192.130|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 638263 (623K) [text/plain]
-Saving to: ‘haas’
+HTTP request sent, awaiting response... 404 Not Found
+2024-09-01 13:32:05 ERROR 404: Not Found.
 
-     0K .......... .......... .......... .......... ..........  8%  339K 2s
-    50K .......... .......... .......... .......... .......... 16%  339K 2s
-   100K .......... .......... .......... .......... .......... 24%  304M 1s
-   150K .......... .......... .......... .......... .......... 32% 1.18M 1s
-   200K .......... .......... .......... .......... .......... 40%  469K 1s
-   250K .......... .......... .......... .......... .......... 48%  296M 0s
-   300K .......... .......... .......... .......... .......... 56%  407M 0s
-   350K .......... .......... .......... .......... .......... 64% 1.20M 0s
-   400K .......... .......... .......... .......... .......... 72%  275M 0s
-   450K .......... .......... .......... .......... .......... 80%  469K 0s
-   500K .......... .......... .......... .......... .......... 88%  116M 0s
-   550K .......... .......... .......... .......... .......... 96%  429M 0s
-   600K .......... .......... ...                             100%  628M=0.6s
-
-2024-08-31 13:31:51 (1.03 MB/s) - ‘haas’ saved [638263/638263]
-
---2024-08-31 13:31:57--  https://www.cruzit.com/xxwbl2csv.php
+--2024-09-01 13:32:10--  https://www.cruzit.com/xxwbl2csv.php
 Resolving www.cruzit.com... 169.231.8.205
 Connecting to www.cruzit.com|169.231.8.205|:443... connected.
 WARNING: cannot verify www.cruzit.com's certificate, issued by ‘CN=AlphaSSL CA - SHA256 - G4,O=GlobalSign nv-sa,C=BE’:
@@ -30,82 +13,108 @@ HTTP request sent, awaiting response... 200 OK
 Length: 143592 (140K) [text/x-csv]
 Saving to: ‘cruz_it’
 
-     0K .......... .......... .......... .......... .......... 35%  687K 0s
-    50K .......... .......... .......... .......... .......... 71% 1.34M 0s
-   100K .......... .......... .......... ..........           100%  124M=0.1s
+     0K .......... .......... .......... .......... .......... 35%  391K 0s
+    50K .......... .......... .......... .......... .......... 71%  781K 0s
+   100K .......... .......... .......... ..........           100% 79.5M=0.2s
 
-2024-08-31 13:31:58 (1.25 MB/s) - ‘cruz_it’ saved [143592/143592]
+2024-09-01 13:32:11 (729 KB/s) - ‘cruz_it’ saved [143592/143592]
 
---2024-08-31 13:31:58--  http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz
-Resolving wget-mirrors.uceprotect.net... 66.240.236.50, 96.31.84.20, 199.187.241.194, ...
-Connecting to wget-mirrors.uceprotect.net|66.240.236.50|:80... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 50058 (49K) [application/octet-stream]
-Saving to: ‘uceprotect_backscatterer’
-
-     0K .......... .......... .......... .......... ........  100% 1.45M=0.03s
-
-2024-08-31 13:31:58 (1.45 MB/s) - ‘uceprotect_backscatterer’ saved [50058/50058]
-
---2024-08-31 13:31:58--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-1.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net... 96.31.84.20, 45.93.137.156, 193.138.29.13, ...
-Connecting to wget-mirrors.uceprotect.net|96.31.84.20|:80... connected.
-HTTP request sent, awaiting response... 404 Not Found
-2024-08-31 13:31:59 ERROR 404: Not Found.
-
---2024-08-31 13:31:59--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net... 38.145.218.88, 217.23.49.207, 72.13.86.154, ...
+--2024-09-01 13:32:11--  http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz
+Resolving wget-mirrors.uceprotect.net... 38.145.218.88, 217.23.49.207, 209.126.213.95, ...
 Connecting to wget-mirrors.uceprotect.net|38.145.218.88|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 214037 (209K) [application/octet-stream]
+Length: 49888 (49K) [application/octet-stream]
+Saving to: ‘uceprotect_backscatterer’
+
+     0K .......... .......... .......... .......... ........  100%  336K=0.1s
+
+2024-09-01 13:32:12 (336 KB/s) - ‘uceprotect_backscatterer’ saved [49888/49888]
+
+--2024-09-01 13:32:12--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-1.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net... 38.145.218.88, 217.23.49.207, 209.126.213.95, ...
+Connecting to wget-mirrors.uceprotect.net|38.145.218.88|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 238687 (233K) [application/octet-stream]
+Saving to: ‘uceprotect_level_1’
+
+     0K .......... .......... .......... .......... .......... 21%  494K 0s
+    50K .......... .......... .......... .......... .......... 42%  990K 0s
+   100K .......... .......... .......... .......... .......... 64% 11.2M 0s
+   150K .......... .......... .......... .......... .......... 85% 1.06M 0s
+   200K .......... .......... .......... ...                  100%  622K=0.3s
+
+2024-09-01 13:32:12 (912 KB/s) - ‘uceprotect_level_1’ saved [238687/238687]
+
+--2024-09-01 13:32:12--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net... 199.187.241.194, 72.13.86.154, 204.155.151.130, ...
+Connecting to wget-mirrors.uceprotect.net|199.187.241.194|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 243223 (238K) [text/plain]
 Saving to: ‘uceprotect_level_2’
 
-     0K .......... .......... .......... .......... .......... 23% 2.78M 0s
-    50K .......... .......... .......... .......... .......... 47% 5.50M 0s
-   100K .......... .......... .......... .......... .......... 71% 11.2M 0s
-   150K .......... .......... .......... .......... .......... 95% 11.2M 0s
-   200K .........                                             100%  988K=0.04s
+     0K .......... .......... .......... .......... .......... 21%  320K 1s
+    50K .......... .......... .......... .......... .......... 42%  957K 0s
+   100K .......... .......... .......... .......... .......... 63%  957K 0s
+   150K .......... .......... .......... .......... .......... 84%  959K 0s
+   200K .......... .......... .......... .......              100%  118M=0.3s
 
-2024-08-31 13:31:59 (4.61 MB/s) - ‘uceprotect_level_2’ saved [214037/214037]
+2024-09-01 13:32:13 (758 KB/s) - ‘uceprotect_level_2’ saved [243223/243223]
 
---2024-08-31 13:31:59--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net... 96.31.84.20, 45.93.137.156, 193.138.29.13, ...
-Connecting to wget-mirrors.uceprotect.net|96.31.84.20|:80... connected.
-HTTP request sent, awaiting response... 404 Not Found
-2024-08-31 13:31:59 ERROR 404: Not Found.
-
---2024-08-31 13:31:59--  https://zonefiles.io/f/compromised/domains/live/
-Resolving zonefiles.io... 104.21.11.101, 172.67.165.185, 2606:4700:3037::ac43:a5b9, ...
-Connecting to zonefiles.io|104.21.11.101|:443... connected.
+--2024-09-01 13:32:13--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net... 66.240.236.50, 204.155.151.130, 185.248.148.6, ...
+Connecting to wget-mirrors.uceprotect.net|66.240.236.50|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 312351 (305K) [application/octet-stream]
-Saving to: ‘zonefiles_compromised_domains’
+Length: 620839 (606K) [application/octet-stream]
+Saving to: ‘uceprotect_level_3’
 
-     0K .......... .......... .......... .......... .......... 16%  159K 2s
-    50K .......... .......... .......... .......... .......... 32%  310K 1s
-   100K .......... .......... .......... .......... .......... 49%  164M 0s
-   150K .......... .......... .......... .......... .......... 65% 17.9M 0s
-   200K .......... .......... .......... .......... .......... 81%  296K 0s
-   250K .......... .......... .......... .......... .......... 98%  102M 0s
-   300K .....                                                 100% 9.37T=0.6s
+     0K .......... .......... .......... .......... ..........  8%  484K 1s
+    50K .......... .......... .......... .......... .......... 16%  966K 1s
+   100K .......... .......... .......... .......... .......... 24%  144M 0s
+   150K .......... .......... .......... .......... .......... 32%  970K 0s
+   200K .......... .......... .......... .......... .......... 41%  132M 0s
+   250K .......... .......... .......... .......... .......... 49%  978K 0s
+   300K .......... .......... .......... .......... .......... 57%  180M 0s
+   350K .......... .......... .......... .......... .......... 65%  977K 0s
+   400K .......... .......... .......... .......... .......... 74%  130M 0s
+   450K .......... .......... .......... .......... .......... 82%  113M 0s
+   500K .......... .......... .......... .......... .......... 90%  122M 0s
+   550K .......... .......... .......... .......... .......... 98%  986K 0s
+   600K ......                                                100% 68.4K=0.5s
 
-2024-08-31 13:32:00 (470 KB/s) - ‘zonefiles_compromised_domains’ saved [312351/312351]
+2024-09-01 13:32:13 (1.30 MB/s) - ‘uceprotect_level_3’ saved [620839/620839]
 
---2024-08-31 13:32:00--  https://zonefiles.io/f/compromised/ip/live/
+--2024-09-01 13:32:13--  https://zonefiles.io/f/compromised/domains/live/
 Resolving zonefiles.io... 104.21.11.101, 172.67.165.185, 2606:4700:3033::6815:b65, ...
 Connecting to zonefiles.io|104.21.11.101|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 389930 (381K) [application/octet-stream]
+Length: 312371 (305K) [application/octet-stream]
+Saving to: ‘zonefiles_compromised_domains’
+
+     0K .......... .......... .......... .......... .......... 16%  234K 1s
+    50K .......... .......... .......... .......... .......... 32%  474K 1s
+   100K .......... .......... .......... .......... .......... 49% 24.0M 0s
+   150K .......... .......... .......... .......... .......... 65% 16.0M 0s
+   200K .......... .......... .......... .......... .......... 81%  482K 0s
+   250K .......... .......... .......... .......... .......... 98% 21.2M 0s
+   300K .....                                                 100% 72.5M=0.4s
+
+2024-09-01 13:32:14 (709 KB/s) - ‘zonefiles_compromised_domains’ saved [312371/312371]
+
+--2024-09-01 13:32:14--  https://zonefiles.io/f/compromised/ip/live/
+Resolving zonefiles.io... 104.21.11.101, 172.67.165.185, 2606:4700:3033::6815:b65, ...
+Connecting to zonefiles.io|104.21.11.101|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 386961 (378K) [application/octet-stream]
 Saving to: ‘zonefiles_compromised_ips’
 
-     0K .......... .......... .......... .......... .......... 13%  154K 2s
-    50K .......... .......... .......... .......... .......... 26%  307K 1s
-   100K .......... .......... .......... .......... .......... 39% 22.6M 1s
-   150K .......... .......... .......... .......... .......... 52% 7.86M 0s
-   200K .......... .......... .......... .......... .......... 65%  313K 0s
-   250K .......... .......... .......... .......... .......... 78%  363M 0s
-   300K .......... .......... .......... .......... .......... 91% 17.0M 0s
-   350K .......... .......... ..........                      100% 29.7M=0.7s
+     0K .......... .......... .......... .......... .......... 13%  220K 1s
+    50K .......... .......... .......... .......... .......... 26%  418K 1s
+   100K .......... .......... .......... .......... .......... 39%  142M 1s
+   150K .......... .......... .......... .......... .......... 52%  161M 0s
+   200K .......... .......... .......... .......... .......... 66%  444K 0s
+   250K .......... .......... .......... .......... .......... 79% 18.2M 0s
+   300K .......... .......... .......... .......... .......... 92% 8.83M 0s
+   350K .......... .......... .......                         100%  462M=0.5s
 
-2024-08-31 13:32:01 (576 KB/s) - ‘zonefiles_compromised_ips’ saved [389930/389930]
+2024-09-01 13:32:15 (807 KB/s) - ‘zonefiles_compromised_ips’ saved [386961/386961]
 
