@@ -97,7 +97,7 @@ jobs:
         run: rm -rf build/ && rm -f lists.tar
       - name: Delete lists artifact
         if: always()
-        uses: GeekyEggo/delete-artifact@7ef9ad14db68b2b805c8b43c32cd3f79d501804c
+        uses: GeekyEggo/delete-artifact@25f053dcb5725e0740d61080a3698f7820b6a050
         with:
           name: lists
   update_docs:
@@ -116,7 +116,7 @@ jobs:
         with:
           name: docs
       - name: Delete docs artifact
-        uses: GeekyEggo/delete-artifact@7ef9ad14db68b2b805c8b43c32cd3f79d501804c
+        uses: GeekyEggo/delete-artifact@25f053dcb5725e0740d61080a3698f7820b6a050
         with:
           name: docs
       - name: Make the working tree safe
