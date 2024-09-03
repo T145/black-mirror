@@ -23,6 +23,8 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump GeekyEggo/delete-artifact from 7ef9ad14db68b2b805c8b43c32cd3f79d501804c to 25f053dcb5725e0740d61080a3698f7820b6a050 in /.github/workflows [\#239](https://github.com/T145/black-mirror/pull/239) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump actions/upload-artifact from 4.3.6 to 4.4.0 in /.github/workflows [\#238](https://github.com/T145/black-mirror/pull/238) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/build-push-action from 6.6.1 to 6.7.0 in /.github/workflows [\#237](https://github.com/T145/black-mirror/pull/237) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/build-push-action from 6.5.0 to 6.6.1 in /.github/workflows [\#236](https://github.com/T145/black-mirror/pull/236) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/upload-artifact from 4.3.4 to 4.3.6 in /.github/workflows [\#234](https://github.com/T145/black-mirror/pull/234) ([dependabot[bot]](https://github.com/apps/dependabot))
