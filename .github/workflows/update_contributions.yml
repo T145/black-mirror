@@ -4,7 +4,7 @@ name: Update Contributions
 on:
   push:
     paths:
-      - "data/v2/contrib/*"
+      - "data/contrib/*"
   workflow_dispatch:
 
 permissions: read-all
@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
       - name: Update contribution lists
         run: |
-          mawk '/^[^[:space:]|^#|]/' data/v2/contrib/DOMAIN_WHITELIST.txt >>dist/CONTRIB_DOMAINS.txt
+          mawk '/^[^[:space:]|^#|]/' data/contrib/DOMAIN_WHITELIST.txt >>dist/CONTRIB_DOMAINS.txt
           sort -o dist/CONTRIB_DOMAINS.txt -u dist/CONTRIB_DOMAINS.txt
       - name: Make commit directory safe
         run: git config --global --add safe.directory /__w/black-mirror/black-mirror
