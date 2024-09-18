@@ -3,8 +3,7 @@ name: Update Contributions
 
 on:
   push:
-    paths:
-      - "data/contrib/*"
+    paths: ["data/contrib/*"]
   workflow_dispatch:
 
 permissions: read-all

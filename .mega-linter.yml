@@ -1,5 +1,5 @@
 ---
-# https://megalinter.io/configuration/
+# https://megalinter.io/latest/configuration/
 CLEAR_REPORT_FOLDER: true
 ENABLE:
   - ACTION
@@ -17,7 +17,7 @@ ENABLE:
 #   - REPOSITORY_SECRETLINT # functionality is covered by checkov
 #   - REPOSITORY_KICS # functionality is efficiently covered by hadolint
 FAIL_IF_MISSING_LINTER_IN_FLAVOR: true
-#FILTER_REGEX_INCLUDE: (.github/|configs/|data/|scripts/|Dockerfile)
+# FILTER_REGEX_INCLUDE: (.github/|configs/|data/|scripts/|Dockerfile)
 FILTER_REGEX_EXCLUDE: (^pnpm-lock\.yaml|node_modules/|logs/|megalinter-reports/|dist/)
 REPOSITORY_CHECKOV_UNSECURED_ENV_VARIABLES:
   - CKV_IGNORED_DIRECTORIES=logs

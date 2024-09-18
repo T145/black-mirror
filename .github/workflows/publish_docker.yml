@@ -4,10 +4,8 @@ name: Publish Docker Image
 
 on:
   push:
-    branches:
-      - master
-    paths:
-      - "Dockerfile"
+    branches: ["master"]
+    paths: ["Dockerfile"]
   workflow_dispatch:
 
 permissions: read-all
