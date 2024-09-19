@@ -23,6 +23,7 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump snyk/actions from 14818c4695ecc4045f33c9cee9e795a788711ca4 to cdb760004ba9ea4d525f2e043745dfe85bb9077e in /.github/workflows [\#241](https://github.com/T145/black-mirror/pull/241) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump GeekyEggo/delete-artifact from 25f053dcb5725e0740d61080a3698f7820b6a050 to e46cfb9575865f907c2beb2e4170b5f4c7d77c52 in /.github/workflows [\#240](https://github.com/T145/black-mirror/pull/240) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump GeekyEggo/delete-artifact from 7ef9ad14db68b2b805c8b43c32cd3f79d501804c to 25f053dcb5725e0740d61080a3698f7820b6a050 in /.github/workflows [\#239](https://github.com/T145/black-mirror/pull/239) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/upload-artifact from 4.3.6 to 4.4.0 in /.github/workflows [\#238](https://github.com/T145/black-mirror/pull/238) ([dependabot[bot]](https://github.com/apps/dependabot))
