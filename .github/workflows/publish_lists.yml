@@ -122,7 +122,7 @@ jobs:
       - name: Make the working tree safe
         run: git config --global --add safe.directory /__w/black-mirror/black-mirror
       - name: Update documents
-        uses: stefanzweifel/git-auto-commit-action@7d0ca8f849305c56d36f992cfb1519b1af5b33f8
+        uses: stefanzweifel/git-auto-commit-action@ac8823709a85c7ce090849ac3e5fe24d006f6e18
         with:
           # homage to the python linting utility "black"
           commit_message: "ci(build): ✨🍰✨"
