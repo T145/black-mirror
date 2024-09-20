@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-use 5.41.1;
+use 5.41.3;
 use feature 'say';
 
 use utf8;

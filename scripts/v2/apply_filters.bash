@@ -18,11 +18,11 @@ get_ipv6_cidrs() {
 }
 
 get_domains_from_urls() {
-	perl5.41.1 -MData::Validate::Domain=is_domain -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_domain($3, { domain_private_tld => { onion => 1 } })}'
+	perl5.41.3 -MData::Validate::Domain=is_domain -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_domain($3, { domain_private_tld => { onion => 1 } })}'
 }
 
 get_ipv4s_from_urls() {
-	perl5.41.1 -MData::Validate::IP=is_ipv4 -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_ipv4($3)}'
+	perl5.41.3 -MData::Validate::IP=is_ipv4 -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_ipv4($3)}'
 }
 
 hostsblock() {
@@ -200,22 +200,22 @@ process_list() {
 		'IPV4')
 			case "$LIST_METHOD" in
 			'BLOCK')
-				perl5.41.1 -MData::Validate::IP=is_public_ipv4 -nE 'chomp; if(defined($_) and is_public_ipv4($_)) {say $_;}'
+				perl5.41.3 -MData::Validate::IP=is_public_ipv4 -nE 'chomp; if(defined($_) and is_public_ipv4($_)) {say $_;}'
 				;;
 			# Ensure bogons get whitelisted
 			'ALLOW')
-				perl5.41.1 -MData::Validate::IP=is_ipv4 -nE 'chomp; if(defined($_) and is_ipv4($_)) {say $_;}'
+				perl5.41.3 -MData::Validate::IP=is_ipv4 -nE 'chomp; if(defined($_) and is_ipv4($_)) {say $_;}'
 				;;
 			esac
 			;;
 		'IPV6')
 			case "$LIST_METHOD" in
 			'BLOCK')
-				perl5.41.1 -MData::Validate::IP=is_public_ipv6 -nE 'chomp; if(defined($_) and is_public_ipv6($_)) {say $_;}'
+				perl5.41.3 -MData::Validate::IP=is_public_ipv6 -nE 'chomp; if(defined($_) and is_public_ipv6($_)) {say $_;}'
 				;;
 			# Ensure bogons get whitelisted
 			'ALLOW')
-				perl5.41.1 -MData::Validate::IP=is_ipv6 -nE 'chomp; if(defined($_) and is_ipv6($_)) {say $_;}'
+				perl5.41.3 -MData::Validate::IP=is_ipv6 -nE 'chomp; if(defined($_) and is_ipv6($_)) {say $_;}'
 				;;
 			esac
 			;;

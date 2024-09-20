@@ -9,7 +9,7 @@ RUN git config --global advice.detachedHead false; \
     go install -v github.com/johnkerl/miller/cmd/mlr; \
     rm -rf ./*; \
     # https://github.com/mikefarah/yq/
-    go install -v github.com/mikefarah/yq/v4@v4.44.2; \
+    go install -v github.com/mikefarah/yq/v4@v4.44.3; \
     # https://github.com/ipinfo/cli
     go install -v github.com/ipinfo/cli/ipinfo@ipinfo-3.3.1; \
     # https://github.com/projectdiscovery/dnsx
@@ -59,7 +59,7 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
 # https://hub.docker.com/r/parrotsec/core
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.4.5" \
+      version="6.5.0" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -132,16 +132,16 @@ RUN apt-get -q update --no-allow-insecure-repositories; \
     bc=1.07.1-3+b1 \
     build-essential=12.9 \
     csvkit=1.0.7-1 \
-    curl=7.88.1-10+deb12u6 \
+    curl=7.88.1-10+deb12u7 \
     debsums=3.0.2.1 \
     dos2unix=7.4.3-1 \
     gawk=1:5.2.1-2 \
-    git=1:2.39.2-1.1 \
+    git=1:2.39.5-0+deb12u1 \
     grepcidr=2.0-2 \
     html-xml-utils=7.7-1.1 \
     libc-ares2=1.18.1-3 \
     libpsl5=0.21.2-1 \
-    libssl3=3.0.13-1~deb12u1 \
+    libssl3=3.0.14-1~deb12u2 \
     localepurge=* \
     lynx=2.9.0dev.12-1 \
     nodejs=18.19.0+dfsg-6~deb12u2 \
@@ -183,8 +183,9 @@ RUN apt-get -q update --no-allow-insecure-repositories; \
 
 # Upgrade Perl
 # https://github.com/Perl/docker-perl
-RUN wget -q https://cpan.metacpan.org/authors/id/B/BO/BOOK/perl-5.41.1.tar.gz; \
-    echo '7dee38af601b0ba3f3730cb812cdbc799c921da440cb0ce96dd7a4f508b1a6f8 *perl-5.41.1.tar.gz' | sha256sum --strict --check -; \
+# Threaded Bookworm
+RUN wget -q https://cpan.metacpan.org/authors/id/B/BO/BOOK/perl-5.41.3.tar.gz; \
+    echo '7b9cd0f84a5350ea485ae6c57f3231d338f8a00c23f193db3964a60d38cf8850 *perl-5.41.3.tar.gz' | sha256sum --strict --check -; \
     tar --strip-components=1 -xzf perl-*.tar.gz; \
     cat *.patch | patch -p1 || :; \
     ./Configure -Darchname=x86_64-linux-gnu -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des; \
@@ -196,6 +197,8 @@ RUN wget -q https://cpan.metacpan.org/authors/id/B/BO/BOOK/perl-5.41.1.tar.gz; \
     wget -q https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz; \
     echo '963e63c6e1a8725ff2f624e9086396ae150db51dd0a337c3781d09a994af05a5 *App-cpanminus-1.7047.tar.gz' | sha256sum --strict --check -; \
     tar --strip-components=1 -xzf App-cpanminus-*.tar.gz; \
+    perl -pi -E 's{http://(www\.cpan\.org|backpan\.perl\.org|cpan\.metacpan\.org|fastapi\.metacpan\.org|cpanmetadb\.plackperl\.org)}{https://$1}g' bin/cpanm; \
+    perl -pi -E 's{try_lwp=>1}{try_lwp=>0}g' bin/cpanm; \
     perl bin/cpanm .; \
     wget -q 'https://www.cpan.org/authors/id/C/CH/CHRISN/Net-SSLeay-1.94.tar.gz'; \
     echo '9d7be8a56d1bedda05c425306cc504ba134307e0c09bda4a788c98744ebcd95d *Net-SSLeay-1.94.tar.gz' | sha256sum --strict --check -; \
@@ -233,4 +236,4 @@ RUN chown 0:0 /usr/bin/as; \
 RUN adduser --disabled-password --gecos "" admin
 USER admin
 
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "cpanm --version && cpm --version && command -v ipinfo && command -v ghosts && command -v parsort && command -v yq && command -v mlr" ]
+HEALTHCHECK NONE

@@ -263,31 +263,29 @@ Leverage the [`ADGUARD_SOURCES.txt`](https://github.com/T145/black-mirror/blob/m
 
 ## 🐋 Docker Usage
 
-To provide a temporary container to experiment with `Black Mirror` scripts and the CLI utilities it uses, run the following:
+### Temporary Container
 
 ```bash
-docker container run -it --rm -h black-mirror ghcr.io/t145/black-mirror
+docker container run -u 0 -it --rm -h black-mirror ghcr.io/t145/black-mirror
 ```
 
-For a persistant container, use something like what's given below:
+### Persistant Container
 
 ```bash
-docker container run -it --name black-mirror -h black-mirror ghcr.io/t145/black-mirror
+docker container run -u 0 -it --name black-mirror -h black-mirror ghcr.io/t145/black-mirror
 ```
 
 Then to access the container at a later date, run:
 
 ```bash
 docker start black-mirror
-docker exec -it black-mirror /bin/bash
+docker exec -u 0 -it black-mirror /bin/bash
 ```
 
-To use the root user just append `-u 0`.
-
-NOTE: Before using `rkhunter`, be sure to run:
+### Building the Image
 
 ```bash
-rkhunter --update
+docker build --no-cache --progress=plain -t black-mirror .
 ```
 
 ## 👨‍💻 Development
