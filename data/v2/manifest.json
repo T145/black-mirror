@@ -11794,5 +11794,132 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
+  },
+  "honeynet_asia_smbd": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MLR_CUT_1",
+        "format": "CIDR4"
+      }
+    ],
+    "metadata": {
+      "description": "https://feeds.honeynet.asia/",
+      "homepage": "https://feeds.honeynet.asia/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://feeds.honeynet.asia/smbd/latest-smbd-unique.csv"
+    ],
+    "topic": "SECURITY"
+  },
+  "honeynet_asia_mssqld": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "MLR_CUT_1",
+        "format": "CIDR4"
+      }
+    ],
+    "metadata": {
+      "description": "https://feeds.honeynet.asia/",
+      "homepage": "https://feeds.honeynet.asia/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://feeds.honeynet.asia/mssqld/latest-mssqld-unique.csv"
+    ],
+    "topic": "SECURITY"
+  },
+  "honeynet_asia_bruteforce_telnet": {
+    "active": true,
+    "checksums": {},
+    "notes": "Ignoring the 'ap' path and lists since this has the same content.",
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "BOTNET_ASIA",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://feeds.honeynet.asia/",
+      "homepage": "https://feeds.honeynet.asia/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://feeds.honeynet.asia/bruteforce/latest-telnetbruteforce.csv"
+    ],
+    "topic": "SECURITY"
+  },
+  "honeynet_asia_bruteforce_ssh": {
+    "active": true,
+    "checksums": {},
+    "notes": "Ignoring the 'ap' path and lists since this has the same content.",
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "BOTNET_ASIA",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://feeds.honeynet.asia/",
+      "homepage": "https://feeds.honeynet.asia/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://feeds.honeynet.asia/bruteforce/latest-sshbruteforce.csv"
+    ],
+    "topic": "SECURITY"
+  },
+  "honeynet_asia_url": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "BOTNET_ASIA",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://feeds.honeynet.asia/",
+      "homepage": "https://feeds.honeynet.asia/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://feeds.honeynet.asia/url/latest-url.csv"
+    ],
+    "topic": "SECURITY"
   }
 }

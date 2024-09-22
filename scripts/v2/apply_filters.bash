@@ -182,6 +182,8 @@ process_list() {
 			'THREATVIEW_C2_HOSTS') mawk -F, '/^[^#]/{print $3}' ;;
 			# Ignore IPs that are not from the current month.
 			'THREATVIEW_C2_IPV4') awk -F, -v date="$(date +'%B %Y') [0-9]{2}:[0-9]{2} [AP]M [[:upper:]]+$" '/^[^#]/ && $2 ~ date{print $1}' ;;
+			# Not using Miller since some CSVs are malformed.
+			'BOTNET_ASIA') mawk -F, -v year="$(date +'%Y')" '$1~year{print $2}' ;;
 			esac
 			;;
 		'YAML')
