@@ -154,6 +154,7 @@ process_list() {
 			case "$LIST_FILTER" in
 			'MLR_CUT_1') mlr_cut_col 1 ;;
 			'MLR_CUT_2') mlr_cut_col 2 ;;
+			'MLR_CUT_3') mlr_cut_col 3 ;;
 			'MLR_CUT_4') mlr_cut_col 4 ;;
 			'ABUSE_CH_URLHAUS_ONLINE_DOMAIN') mlr --mmap --csv --headerless-csv-output --skip-comments -N put -S '$3 =~ "https?://([a-z0-9]+([-.]{1}[a-z0-9]+)*\.[a-z]{2,6})"; $Domain = "\1"' then cut -f Domain ;;
 			'ABUSE_CH_URLHAUS_ONLINE_IPV4') mlr --mmap --csv --headerless-csv-output --skip-comments -N put -S '$3 =~ "(((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))"; $IP = "\1"' then cut -f IP ;;
