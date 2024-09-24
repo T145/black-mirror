@@ -4,7 +4,6 @@ use 5.41.3;
 use warnings;
 use strict;
 use open ':std', ':encoding(UTF-8)';
-use feature 'say';
 use Text::Trim 'trim';
 use Net::Works::Network;
 
