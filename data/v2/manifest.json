@@ -11946,5 +11946,205 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
+  },
+  "jeroengui_malware_domains": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "VXVAULT_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://file.jeroengui.be/malware/",
+      "homepage": "https://jeroengui.be/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://file.jeroengui.be/malware/last_month.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "jeroengui_malware_ips": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "VXVAULT_IPV4",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://file.jeroengui.be/malware/",
+      "homepage": "https://jeroengui.be/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://file.jeroengui.be/malware/last_24_hours.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "jeroengui_phishing_domains": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "VXVAULT_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://file.jeroengui.be/phishing/",
+      "homepage": "https://jeroengui.be/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://file.jeroengui.be/phishing/last_month.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "jeroengui_phishing_ips": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "VXVAULT_IPV4",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://file.jeroengui.be/phishing/",
+      "homepage": "https://jeroengui.be/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://file.jeroengui.be/phishing/last_24_hours.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "jeroengui_scam_domains": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "VXVAULT_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://file.jeroengui.be/scam/",
+      "homepage": "https://jeroengui.be/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://file.jeroengui.be/scam/last_month.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "jeroengui_scam_ips": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "VXVAULT_IPV4",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://file.jeroengui.be/scam/",
+      "homepage": "https://jeroengui.be/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://file.jeroengui.be/scam/last_24_hours.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "jeroengui_web_shell_domains": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "VXVAULT_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://file.jeroengui.be/web_shell/",
+      "homepage": "https://jeroengui.be/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://file.jeroengui.be/web_shell/last_month.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "jeroengui_web_shell_ips": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "VXVAULT_IPV4",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://file.jeroengui.be/web_shell/",
+      "homepage": "https://jeroengui.be/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://file.jeroengui.be/web_shell/last_24_hours.txt"
+    ],
+    "topic": "SECURITY"
   }
 }
