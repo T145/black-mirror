@@ -11,7 +11,7 @@ while (<>) {
     chomp;
 
     eval {
-        my $cidr = trim($_);
+        my $cidr = trim;
 
         if (length($cidr)) {
             my $network = Net::Works::Network->new_from_string(string => $cidr);
