@@ -203,22 +203,22 @@ process_list() {
 		'IPV4')
 			case "$LIST_METHOD" in
 			'BLOCK')
-				perl5.41.3 -MData::Validate::IP=is_public_ipv4 -nE 'chomp; say if defined and is_public_ipv4($_);'
+				perl5.41.3 -MData::Validate::IP=is_public_ipv4 -nE 'chomp; if(defined($_) and is_public_ipv4($_)) {say $_;}'
 				;;
 			# Ensure bogons get whitelisted
 			'ALLOW')
-				perl5.41.3 -MData::Validate::IP=is_ipv4 -nE 'chomp; say if defined and is_ipv4($_);'
+				perl5.41.3 -MData::Validate::IP=is_ipv4 -nE 'chomp; if(defined($_) and is_ipv4($_)) {say $_;}'
 				;;
 			esac
 			;;
 		'IPV6')
 			case "$LIST_METHOD" in
 			'BLOCK')
-				perl5.41.3 -MData::Validate::IP=is_public_ipv6 -nE 'chomp; say if defined and is_public_ipv6($_);'
+				perl5.41.3 -MData::Validate::IP=is_public_ipv6 -nE 'chomp; if(defined($_) and is_public_ipv6($_)) {say $_;}'
 				;;
 			# Ensure bogons get whitelisted
 			'ALLOW')
-				perl5.41.3 -MData::Validate::IP=is_ipv6 -nE 'chomp; say if defined and is_ipv6($_);'
+				perl5.41.3 -MData::Validate::IP=is_ipv6 -nE 'chomp; if(defined($_) and is_ipv6($_)) {say $_;}'
 				;;
 			esac
 			;;

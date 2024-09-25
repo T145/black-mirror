@@ -3,6 +3,7 @@
 use 5.41.3;
 use warnings;
 use strict;
+use feature 'say';
 use open ':std', ':encoding(UTF-8)';
 use Text::Trim 'trim';
 use Net::Works::Network;
@@ -11,7 +12,7 @@ while (<>) {
     chomp;
 
     eval {
-        my $cidr = trim;
+        my $cidr = trim($_);
 
         if (length($cidr)) {
             my $network = Net::Works::Network->new_from_string(string => $cidr);

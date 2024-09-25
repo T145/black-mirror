@@ -3,6 +3,7 @@
 use 5.41.3;
 use warnings;
 use strict;
+use feature 'say';
 use open ':std', ':encoding(UTF-8)';
 use Text::Trim 'trim';
 use Net::IDN::Encode 'domain_to_ascii';
