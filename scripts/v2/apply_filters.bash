@@ -55,9 +55,11 @@ process_list() {
 	'ZIP') zcat "$FILE_PATH" ;;
 	'GZIP') pigz -cd "$FILE_PATH" ;;
 	'SQUIDGUARD') tar -xOzf "$FILE_PATH" --wildcards-match-slash --wildcards '*/domains' '*/urls' ;;
-	'SCAFROGLIA') unzip -p "$FILE_PATH" blocklists-master/*.txt ;;
-	'SHADOWWHISPERER') unzip -p "$FILE_PATH" BlockLists-master/RAW/* ;;
-	'ESOX_LUCIUS') unzip -p "$FILE_PATH" PiHoleblocklists-main/* -x PiHoleblocklists-main/LICENSE PiHoleblocklists-main/README.md ;;
+	'PLAIN_SQUIDGUARD') tar -xOzf "$FILE_PATH" --wildcards-match-slash --wildcards '*/domains' ;;
+	'SCAFROGLIA') unzip -p "$FILE_PATH" 'blocklists-master/*.txt' ;;
+	'SHADOWWHISPERER') unzip -p "$FILE_PATH" 'BlockLists-master/RAW/*' ;;
+	'ESOX_LUCIUS') unzip -p "$FILE_PATH" 'PiHoleblocklists-main/*' -x PiHoleblocklists-main/LICENSE PiHoleblocklists-main/README.md ;;
+	'PENGELANA') unzip -p "$FILE_PATH" 'blocklist-master/src/blacklist/blocklists-*.txt' ;;
 	esac |
 		dos2unix -q |
 		case "$CONTENT_TYPE" in
