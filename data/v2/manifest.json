@@ -8067,6 +8067,31 @@
     ],
     "topic": "PRIVACY"
   },
+  "pengelana": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "PENGELANA",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "GREP_DOMAIN",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/pengelana/blocklist",
+      "homepage": "https://github.com/pengelana/blocklist/tree/master/src/blacklist",
+      "license": "mit"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://codeload.github.com/pengelana/blocklist/zip/refs/heads/master"
+    ],
+    "topic": "SECURITY"
+  },
   "perflyst_amazon_fire_tv": {
     "active": true,
     "checksums": {},
@@ -12144,31 +12169,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://zonefiles.io/f/compromised/ip/live/"
-    ],
-    "topic": "SECURITY"
-  },
-  "pengelana": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "PENGELANA",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "GREP_DOMAIN",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://github.com/pengelana/blocklist",
-      "homepage": "https://github.com/pengelana/blocklist/tree/master/src/blacklist",
-      "license": "mit"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://codeload.github.com/pengelana/blocklist/zip/refs/heads/master"
     ],
     "topic": "SECURITY"
   }
