@@ -12171,5 +12171,38 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
+  },
+  "akmai_guardicore": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "GUARDICORE_DOMAIN",
+        "format": "DOMAIN"
+      },
+      {
+        "filter": "GUARDICORE_IPV4",
+        "format": "IPV4"
+      },
+      {
+        "filter": "GUARDICORE_DNS_IPV4",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://threatintelligence.akamai.com/download-guardicore-cyber-threat-intelligence-data.html",
+      "homepage": "https://threatintelligence.akamai.com/index.html",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://threatintelligence.akamai.com/downloads/latest.json"
+    ],
+    "topic": "SECURITY"
   }
 }

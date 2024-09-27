@@ -156,6 +156,9 @@ process_list() {
 			'TINYCHECK_WHITELIST_CIDR') jaq -r '.elements[] | select(.type == "cidr").element' ;;
 			'PRIVACY_BADGER') jaq -r '.action_map | to_entries[] | select(.value.heuristicAction == "block").key' ;;
 			'PHISHFORT') jaq -r '.[]' ;;
+			'GUARDICORE_DOMAIN') jaq -r '.malicious_domains[].dns_record' ;;
+			'GUARDICORE_IPV4') jaq -r '.top_attackers[], .scanners[], .connect_back_ips[] | .ip' ;;
+			'GUARDICORE_DNS_IPV4') jaq -r '.malicious_domains[] | select(.ips != null).ips | split(",";"")[] | sub("\/32";"")' ;;
 			esac
 			;;
 		# Match domains in URLs: https://regex101.com/r/iC9eN2/1
