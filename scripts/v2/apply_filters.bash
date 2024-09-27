@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# https://unix.stackexchange.com/questions/459127/grep-to-extract-lines-that-contains-full-domain-names-from-a-file
+# IpInfo's 'grepdomain' includes IPv4 addresses
+get_domains() {
+	grep -P "^.[^.]+\.[a-zA-Z]{3}$|^.[^.]+\.[a-zA-Z]{2}\.[a-zA-Z]{2}$"
+}
+
 # NOTE: "include-cidrs" ignores CIDR blocks!
 get_ipv4s() {
 	ipinfo grepip -4hox --include-cidrs --nocolor
@@ -72,6 +78,7 @@ process_list() {
 			'RAW_HOSTS_WITH_COMMENTS') mawk '/^[^[:space:]|^#|^!|^;|^$|^:|^*]/{print $1}' ;;
 			'ALIENVAULT') mawk -F# '{print $1}' ;;
 			'ADBLOCK') hostsblock ;;
+			'GREP_DOMAIN') get_domains ;;
 			'GREP_IPV4') get_ipv4s ;;
 			'GREP_IPV6') get_ipv6s ;;
 			'GREP_CIDR4') get_ipv4_cidrs ;;
