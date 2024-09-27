@@ -1603,6 +1603,7 @@
       "retriever": "ARIA2",
       "type": "TEXT"
     },
+    "notes": "https://api.blocklist.de/getlast.php?time=3600",
     "formats": [
       {
         "filter": "GREP_IPV4",
@@ -12202,6 +12203,31 @@
     "method": "BLOCK",
     "mirrors": [
       "https://zonefiles.io/f/compromised/ip/live/"
+    ],
+    "topic": "SECURITY"
+  },
+  "interserver": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://sigs.interserver.net/usage.php",
+      "homepage": "https://sigs.interserver.net/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://sigs.interserver.net/iprbl.txt"
     ],
     "topic": "SECURITY"
   }
