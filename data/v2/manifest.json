@@ -12230,5 +12230,117 @@
       "https://sigs.interserver.net/iprbl.txt"
     ],
     "topic": "SECURITY"
+  },
+  "zitstif_shame": {
+    "active": true,
+    "checksums": {
+      "sha256": "http://zitstif.no-ip.org/zit_shame_list_hash.txt"
+    },
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "http://zitstif.no-ip.org/?cat=1037",
+      "homepage": "http://zitstif.no-ip.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "http://zitstif.com/zit_shame_list.txt",
+      "http://zitstif.no-ip.org/zit_shame_list.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "zitstif_firewall": {
+    "active": true,
+    "checksums": {
+      "sha256": "http://zitstif.no-ip.org/Firewallwafhash.txt"
+    },
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "http://zitstif.no-ip.org/?cat=1037",
+      "homepage": "http://zitstif.no-ip.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "http://zitstif.no-ip.org/Firewallwaf.txt",
+      "http://zitstif.com/Firewallwaf.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "zitstif_waf": {
+    "active": true,
+    "checksums": {
+      "sha256": "http://zitstif.no-ip.org/WAFipsHash.txt"
+    },
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "http://zitstif.no-ip.org/?cat=1037",
+      "homepage": "http://zitstif.no-ip.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "http://zitstif.com/WAFips.txt",
+      "http://zitstif.no-ip.org/WAFips.txt"
+    ],
+    "topic": "SECURITY"
+  },
+  "zitstif_scamalytics": {
+    "active": true,
+    "checksums": {
+      "sha256": "http://zitstif.no-ip.org/scamIpshash.txt"
+    },
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "http://zitstif.no-ip.org/?cat=1037",
+      "homepage": "http://zitstif.no-ip.org/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "http://zitstif.com/scamIps.txt",
+      "http://zitstif.no-ip.org/scamIps.txt"
+    ],
+    "topic": "SECURITY"
   }
 }
