@@ -9059,6 +9059,32 @@
     ],
     "topic": "SECURITY"
   },
+  "rublacklist_ads": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "notes": "Mentions being updated rarely, but is updated more frequently than adlist.txt",
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://adlock.dinis.ru/",
+      "homepage": "https://dinis.ru/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://adlock.dinis.ru/adlist1.txt"
+    ],
+    "topic": "SECURITY"
+  },
   "rutgers": {
     "active": true,
     "checksums": {},
@@ -12315,32 +12341,6 @@
     "method": "BLOCK",
     "mirrors": [
       "https://zonefiles.io/f/compromised/ip/live/"
-    ],
-    "topic": "SECURITY"
-  },
-  "rublacklist_ads": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "notes": "Mentions being updated rarely, but is updated more frequently than adlist.txt",
-    "formats": [
-      {
-        "filter": "RAW_HOSTS_WITH_COMMENTS",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://adlock.dinis.ru/",
-      "homepage": "https://dinis.ru/",
-      "license": "all-rights-reserved"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://adlock.dinis.ru/adlist1.txt"
     ],
     "topic": "SECURITY"
   }
