@@ -15,6 +15,8 @@
 - [i-blocklist](https://github.com/jackrabbit335/UsefulLinuxShellScripts/blob/master/blocklist-update.sh#L17)
 - [phishing_kits](https://github.com/0xDanielLopez/phishing_kits)
 - [Wael](https://github.com/waelisa/Best-blocklist)
+- [qme adblock](https://qme.mydns.jp/data/AdblockV2.txt)
+  - `Last-Modified: Mon, 18 Mar 2024 05:06:32 GMT`
 
 ### Add but archive
 
@@ -577,3 +579,13 @@
   - [Leave Me Alone](https://github.com/leavemealone-app/email-trackers)
 - [tekintian](https://github.com/tekintian/hosts_ads_block)
 - [MalwareWorld](https://malwareworld.com/)
+- [mahakala](https://adblock.mahakala.is/sitemap.xml)
+- [madll](http://madll.free.fr/madware/zip/filtres-adblock.txt)
+- [Forcet's](https://nicolasforcet.com/2019/11/02/meilleures-listes-de-filtrage-dns-pour-pihole-et-autres/) [list](https://forcet.fr/shared/pihole/Blocklist-Nicolasforcet.txt)
+- [kowith337](https://github.com/kowith337/PersonalFilterListCollection)
+- [karballo](http://karballo.net/adblock/)
+- [adbrothers](https://adbrothers.nl/blacklist.txt)
+- [ajnasz](https://ajnasz.hu/adblock/recent)
+  - `last-modified: Sat, 29 Apr 2023 16:52:54 GMT`
+- [arapurayil](https://github.com/arapurayil/aBL)
+- [arktiv](https://arktiv.site/blocklists/)

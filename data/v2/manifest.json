@@ -2680,7 +2680,7 @@
     "checksums": {},
     "content": {
       "filter": "NONE",
-      "retriever": "ARIA2",
+      "retriever": "INSECURE_WGET",
       "type": "CSV"
     },
     "formats": [
@@ -8634,7 +8634,7 @@
     ],
     "topic": "SECURITY"
   },
-  "quantum_abuse": {
+  "quantum_part_1": {
     "active": true,
     "checksums": {},
     "content": {
@@ -8655,11 +8655,11 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual%20lists/The_Quantum_Abuse-List.txt"
+      "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Hosts/The_Quantum_Ad-List_1.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "PRIVACY"
   },
-  "quantum_ads": {
+  "quantum_part_2": {
     "active": true,
     "checksums": {},
     "content": {
@@ -8680,59 +8680,9 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/For%20hosts%20file/The_Quantum_Ad-List.txt"
+      "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Hosts/The_Quantum_Ad-List_2.txt"
     ],
-    "topic": "SECURITY"
-  },
-  "quantum_privacy": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list",
-      "homepage": "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list",
-      "license": "unlicense"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual%20lists/The_Quantum_Privacy-list.txt"
-    ],
-    "topic": "SECURITY"
-  },
-  "quantum_simple_ads": {
-    "active": true,
-    "checksums": {},
-    "content": {
-      "filter": "NONE",
-      "retriever": "ARIA2",
-      "type": "TEXT"
-    },
-    "formats": [
-      {
-        "filter": "HOSTS_FILE",
-        "format": "DOMAIN"
-      }
-    ],
-    "metadata": {
-      "description": "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list",
-      "homepage": "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list",
-      "license": "unlicense"
-    },
-    "method": "BLOCK",
-    "mirrors": [
-      "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual%20lists/The_Quantum_Simply-ads-list.txt"
-    ],
-    "topic": "SECURITY"
+    "topic": "PRIVACY"
   },
   "quantumultx_advertising": {
     "active": true,
@@ -12365,6 +12315,32 @@
     "method": "BLOCK",
     "mirrors": [
       "https://zonefiles.io/f/compromised/ip/live/"
+    ],
+    "topic": "SECURITY"
+  },
+  "rublacklist_ads": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "notes": "Mentions being updated rarely, but is updated more frequently than adlist.txt",
+    "formats": [
+      {
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://adlock.dinis.ru/",
+      "homepage": "https://dinis.ru/",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://adlock.dinis.ru/adlist1.txt"
     ],
     "topic": "SECURITY"
   }
