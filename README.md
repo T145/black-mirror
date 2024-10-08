@@ -5,7 +5,7 @@
        longdesc="https://github.com/T145/black-mirror/master/README.md" />
   <h3>🌓 Reflection | 💿 Redundancy | ✅ Reliability</h3>
   <hr>
-  <p>Aiming to promote security, safety, and sanity across the internet!</p>
+  <p>Aiming to promote privacy, security, and safety across the internet!</p>
   <hr>
   <a href="https://github.com/humanetech-community/awesome-humane-tech#awesome-humane-tech--">
     <img src="https://raw.githubusercontent.com/humanetech-community/awesome-humane-tech/main/humane-tech-badge.svg?sanitize=true"
@@ -205,15 +205,139 @@ curl --proto '=https' --tlsv1.3 -H 'Accept: application/vnd.github.v3+json' -sSf
 curl --proto '=https' --tlsv1.3 -H 'Accept: application/vnd.github.v3+json' -sSf https://api.github.com/repos/T145/black-mirror/releases/latest | jq -r '.assets[] | select(.name | startswith("BLOCK_DOMAIN")) | select(.name | endswith(".txt")).browser_download_url'
 ```
 
-## 🖋️ [Manifesto](https://github.com/T145/black-mirror/blob/master/MANIFESTO.md)
+## 🖋️ Manifesto
 
-> Please report any hosts that are wrongly blocked or sources that do not wholly align in an issue.
+> Please report any hosts or lists that do not align in an issue.
 
-Defines the logic behind why a host is permitted or blocked.
-It has been written to reflect common ideologies across the blacklisting community and those specific to this project.
+`Black Mirror` stands on three pillars: **privacy**, **security**, and **safety**.
 
-Complete author bias reflection is not intended, which is why it speaks from the `Black Mirror` person.
-Free thought exchange is encouraged, so feel free to open discussions about any points!
+- **Privacy**:
+  - Whitelist services like trusted torrenting providers, VPNs, and Tor.
+  - Blacklist deanonymized telemetry, data brokers, ad redirects, and stalkerware.
+- **Security**:
+  - Whitelist services that promote security AND privacy.
+  - Blacklist illegal or sketchy sites and known malicious actors.
+  - Blacklist advertising to avoid the risks of malvertising.
+- **Safety**:
+  - Blacklist deliberate misinformation, irreputable news sources, propaganda, etc.
+  - Blacklist vices such as vaping and smoking that cause individual harm.
+  - Use [GitHub's non-allowance policies](https://docs.github.com/en/github/site-policy/github-community-guidelines#what-is-not-allowed) at-scale where possible.
+  - [Acknowledge technological harm, and do what can be done in this project to prevent it.](https://ledger.humanetech.com/)
+
+While `Black Mirror` censors content beyond privacy and security, it does not seek to do so irresponsibly.
+Many other popular blacklists say they block specific hosts for certain reasoning, and when combed through turn out to have many false positives, or blocks that fall outside that reasoning. `Black Mirror` aims to be different by being as transparent as possible. It's open to critique, and encourages community feedback and involvement.
+The real power behind the freedom of speech is the ability to hear many opinions to quickly deduce those that are correct or reasonable.
+
+“Before you become too entranced with gorgeous gadgets and mesmerizing video displays, let me remind you that information is not knowledge, knowledge is not wisdom, and wisdom is not foresight. Each grows out of the other, and we need them all.”\
+― *Arthur C. Clarke*
+
+## Table of contents
+
+- [Black Mirror](#black-mirror)
+  - [On Spyware/Stalkerware](#on-spywarestalkerware)
+  - [On Propaganda](#on-propaganda)
+  - [On Social Media](#on-social-media)
+
+## On Spyware/Stalkerware
+
+<p align="center">
+<a href="https://www.youtube.com/watch?v=I5WjTTi67BE"><img src="https://res.cloudinary.com/marcomontalbano/image/upload/v1633709643/video_to_markdown/images/youtube--I5WjTTi67BE-c05b58ac6eb4c4700831b2b3070cd403.jpg"
+       alt="GitHub Top Languages"
+       longdesc="https://raw.githubusercontent.com/anuraghazra/github-readme-stats/master/readme.md"
+       crossorigin="anonymous"
+       referrerpolicy="no-referrer"
+       width="500" /></a>
+<a href="https://www.ted.com/talks/eva_galperin_what_you_need_to_know_about_stalkerware/transcript?language=en&utm_campaign=black_mirror&utm_medium=referral&utm_source=github_com_T145/black-mirror"><img src="https://pi.tedcdn.com/r/s3.amazonaws.com/talkstar-photos/uploads/43595f89-1962-4904-8034-ee2d26971f7b/EvaGalperin_2019W-embed.jpg?op=%5E&c=1280%2C720&gravity=t&u%5Br%5D=2&u%5Bs%5D=0.5&u%5Ba%5D=0.8&u%5Bt%5D=0.03&quality=82&w=1280&h=720"
+       alt="GitHub Top Languages"
+       longdesc="https://raw.githubusercontent.com/anuraghazra/github-readme-stats/master/readme.md"
+       crossorigin="anonymous"
+       referrerpolicy="no-referrer"
+       width="500" /></a>
+</p>
+
+These services intrude on privacy, are usually malware, and compromise individual safety. Therefore any known parties are blocked.
+
+“There will come a time when it isn't 'They're spying on me through my phone' anymore. Eventually, it will be 'My phone is spying on me'.”\
+― *Philip K. Dick*
+
+## On Propaganda
+
+<p align="center">
+<a href="https://www.ted.com/talks/andrew_marantz_inside_the_bizarre_world_of_internet_trolls_and_propagandists/transcript?language=en&utm_campaign=black_mirror&utm_medium=referral&utm_source=github_com_T145/black-mirror"><img src="https://pi.tedcdn.com/r/s3.amazonaws.com/talkstar-photos/uploads/db5bcc6b-ea54-4c76-a43a-1d0a5b5e5adc/AndrewMarantz_2019-embed.jpg?op=%5E&c=1280%2C720&gravity=t&u%5Br%5D=2&u%5Bs%5D=0.5&u%5Ba%5D=0.8&u%5Bt%5D=0.03&quality=82&w=1280&h=720"
+       alt="GitHub Top Languages"
+       longdesc="https://raw.githubusercontent.com/anuraghazra/github-readme-stats/master/readme.md"
+       crossorigin="anonymous"
+       referrerpolicy="no-referrer"
+       width="500" /></a>
+</p>
+
+If it promotes any "knee-jerk contrarian" viewpoints, a website will only be blocked if they are a majority (>50%) of its content.
+As an example, because we have conclusive evidence on the fact that the Earth is round
+from the time of Eratosthenes, sites that feature contradictory viewpoints as an opinion majority get blocked.
+
+“True liberty consists only in the power of doing what we ought to will, and in not being constrained to do what we ought not to will.”\
+― *Jonathan Edwards*
+
+“Make decency cool again.”\
+― *Andrew Marantz*
+
+## On Social Media
+
+### The Zuckerburg Institute of Virology
+
+#### Facebook/Meta
+
+Due to consistent privacy and security concerns, this platform will be blocked.
+
+##### References
+
+- [The Facebook Files](https://www.wsj.com/articles/the-facebook-files-11631713039)
+
+#### Instagram
+
+Owned by Facebook, but does not have majority support on issues that would get the site blocked. Its trackers and such will be blocked.
+
+#### WhatsApp
+
+Owned and heavily monitored by Facebook. Communications may be secure between users, but are monitored by Facebook.
+It also has a track record of significant security concerns. All services will be blocked.
+
+##### References
+
+- [NIST Vulnerabilities](https://nvd.nist.gov/vuln/search/results?form_type=Advanced&results_type=overview&query=whatsapp&search_type=all&isCpeNameSearch=true&cvss_version=3)
+
+### Twitter
+
+Though the cause of most internet drama, this platform is also where many cybersecurity community members communicate and collaborate.
+While it has compromised privacy and serves personalized ads, the platform itself will remain unblocked to promote cybersecurity communities.
+Its trackers and such will be blocked.
+
+### Reddit
+
+While there are harmful subreddits, they are not in the majority. Many have actually been banned, so this will remain unblocked.
+Its trackers and such will be blocked.
+
+### Snapchat
+
+Largely supports privacy, even though there are some security concerns. It will remain unblocked.
+
+#### References
+
+- [Data Breach Timeline](https://firewalltimes.com/snapchat-data-breach-timeline)
+
+### Tumblr
+
+Blocked due to being largely marginalized with the potential of any subdomain to breach any pillar.
+
+### TikTok
+
+Blocked due to countless privacy concerns, regardless of its Chinese affiliations.
+
+#### References
+
+- [Times: TikTok Privacy Concerns](https://time.com/6265651/tiktok-security-us/)
+- [Forbes: American Surveilance (Referenced by the above article)](https://www.forbes.com/sites/emilybaker-white/2022/10/20/tiktok-bytedance-surveillance-american-user-data/?sh=218b4cc36c2d)
+- [Forbes: Spying on Forbes Journalists](https://www.forbes.com/sites/emilybaker-white/2022/12/22/tiktok-tracks-forbes-journalists-bytedance/?sh=645bc0227da5)
 
 ## 📋 Attributes
 
