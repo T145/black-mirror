@@ -23,6 +23,9 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump softprops/action-gh-release from 2.0.8 to 2.0.9 in /.github/workflows [\#252](https://github.com/T145/black-mirror/pull/252) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump actions/upload-artifact from 4.4.0 to 4.4.3 in /.github/workflows [\#251](https://github.com/T145/black-mirror/pull/251) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump stefanzweifel/git-auto-commit-action from ac8823709a85c7ce090849ac3e5fe24d006f6e18 to 050015d40644de3e8d2365687c1fbc235352bcff in /.github/workflows [\#248](https://github.com/T145/black-mirror/pull/248) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/setup-buildx-action from 3.6.1 to 3.7.1 in /.github/workflows [\#247](https://github.com/T145/black-mirror/pull/247) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/build-push-action from 6.7.0 to 6.9.0 in /.github/workflows [\#244](https://github.com/T145/black-mirror/pull/244) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump snyk/actions from 14818c4695ecc4045f33c9cee9e795a788711ca4 to cdb760004ba9ea4d525f2e043745dfe85bb9077e in /.github/workflows [\#241](https://github.com/T145/black-mirror/pull/241) ([dependabot[bot]](https://github.com/apps/dependabot))
