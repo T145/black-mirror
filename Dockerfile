@@ -5,17 +5,17 @@ WORKDIR "/src"
 
 # https://github.com/johnkerl/miller
 RUN git config --global advice.detachedHead false; \
-    git clone --depth 1 -b v6.12.0 https://github.com/johnkerl/miller.git .; \
+    git clone --depth 1 -b v6.13.0 https://github.com/johnkerl/miller.git .; \
     go install -v github.com/johnkerl/miller/cmd/mlr; \
     rm -rf ./*; \
     # https://github.com/mikefarah/yq/
-    go install -v github.com/mikefarah/yq/v4@v4.44.3; \
+    go install -v github.com/mikefarah/yq/v4@v4.44.5; \
     # https://github.com/ipinfo/cli
     go install -v github.com/ipinfo/cli/ipinfo@ipinfo-3.3.1; \
     # https://github.com/projectdiscovery/dnsx
     go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@v1.2.1; \
     # https://github.com/projectdiscovery/subfinder
-    go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@v2.6.6;
+    go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@v2.6.7;
 
 FROM amd64/rust:bookworm AS rust
 
@@ -34,14 +34,14 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # https://www.gnu.org/software/parallel/checksums/
 RUN curl -sSL http://pi.dk/3/ | bash && find /usr/local/bin/ -type f ! -name 'par*' -delete;
 
-# Build Wget from source to enable c-ares support
 RUN apt-get -yq update --no-allow-insecure-repositories; \
+    # Build WGet from source to enable c-ares support
     # The latest libssl-dev is already included!
     apt-get -y install --no-install-recommends libc-ares-dev=* libpsl-dev=*; \
     apt-get -y clean; \
-    wget -q https://ftp.gnu.org/gnu/wget/wget-1.24.5.tar.gz; \
+    wget -q https://ftp.gnu.org/gnu/wget/wget-1.25.0.tar.gz; \
     tar --strip-components=1 -xzf wget*.gz; \
-    ./configure --with-ssl=openssl --with-cares --with-psl; \
+    ./configure --with-ssl=openssl --with-cares --with-libpsl; \
     make install; \
     rm -rf ./*; \
     # Version available from apt is 2.6
@@ -59,7 +59,7 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
 # https://hub.docker.com/r/parrotsec/core
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.5.0" \
+      version="6.5.1" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
