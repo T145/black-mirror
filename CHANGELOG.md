@@ -23,6 +23,7 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump actions/upload-artifact from 4.4.3 to 4.5.0 in /.github/workflows [\#260](https://github.com/T145/black-mirror/pull/260) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/setup-buildx-action from 3.7.1 to 3.8.0 in /.github/workflows [\#259](https://github.com/T145/black-mirror/pull/259) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Update reference to Phishing.Database. [\#258](https://github.com/T145/black-mirror/pull/258) ([phishing-database-bot](https://github.com/phishing-database-bot))
 - chore\(deps\): bump softprops/action-gh-release from 2.1.0 to 2.2.0 in /.github/workflows [\#257](https://github.com/T145/black-mirror/pull/257) ([dependabot[bot]](https://github.com/apps/dependabot))
