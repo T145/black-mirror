@@ -8,7 +8,6 @@
 - [Free Email Provider Domains](https://gist.github.com/tbrianjones/5992856)
 - [TR-CERT](https://www.usom.gov.tr/url-list.txt)
   - Reference: [usom-blacklist](https://github.com/fuatboluk/usom-blacklist)
-- [xiaobeita](https://github.com/rentianyu/Ad-set-hosts/tree/master/xiaobeita)
 - [CleanTalk](https://cleantalk.org/help/iptables-connect)
 - [BotScout](https://botscout.com/last_caught_cache.htm)
 - [i-blocklist](https://github.com/jackrabbit335/UsefulLinuxShellScripts/blob/master/blocklist-update.sh#L17)

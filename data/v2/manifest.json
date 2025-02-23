@@ -12374,5 +12374,30 @@
       "https://qme.mydns.jp/data/AdblockV2.txt"
     ],
     "topic": "PRIVACY"
+  },
+  "xiaobeita": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "HOSTS_FILE",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/rentianyu/Ad-set-hosts",
+      "homepage": "https://github.com/rentianyu/Ad-set-hosts",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/rentianyu/Ad-set-hosts/refs/heads/master/xiaobeita/hosts"
+    ],
+    "topic": "PRIVACY"
   }
 }
