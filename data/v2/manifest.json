@@ -20,9 +20,12 @@
     },
     "method": "ALLOW",
     "mirrors": [
-      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/exclude_for_all.txt"
+      "https://raw.githubusercontent.com/badmojr/1Hosts/refs/heads/master/-data/lists/exclude_for_all.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "SECURITY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/refs/heads/master/-data/lists/exclude_for_all.txt"
+    }
   },
   "1hosts_official_inclusions": {
     "active": true,
@@ -45,11 +48,11 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_all.txt"
+      "https://raw.githubusercontent.com/badmojr/1Hosts/refs/heads/master/-data/lists/include_for_all.txt"
     ],
     "topic": "SECURITY",
     "variants": {
-      "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_all.txt"
+      "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/refs/heads/master/-data/lists/include_for_all.txt"
     }
   },
   "1hosts_official_pro_inclusions": {
@@ -73,11 +76,11 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_Pro_Xtra_only.txt"
+      "https://raw.githubusercontent.com/badmojr/1Hosts/refs/heads/master/-data/lists/include_for_Pro_Xtra_only.txt"
     ],
     "topic": "SECURITY",
     "variants": {
-      "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_Pro_Xtra_only.txt"
+      "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/refs/heads/master/-data/lists/include_for_Pro_Xtra_only.txt"
     }
   },
   "1hosts_staged_exclusions": {
@@ -101,9 +104,12 @@
     },
     "method": "ALLOW",
     "mirrors": [
-      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/click_me_to_edit/exclude_for_all.txt"
+      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/exclude_for_all.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "PRIVACY",
+    "variants": {
+      "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_all.txt"
+    }
   },
   "1hosts_staged_inclusions": {
     "active": true,
@@ -126,11 +132,11 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/click_me_to_edit/include_for_all.txt"
+      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_all.txt"
     ],
-    "topic": "SECURITY",
+    "topic": "PRIVACY",
     "variants": {
-      "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/click_me_to_edit/include_for_all.txt"
+      "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_all.txt"
     }
   },
   "1hosts_staged_pro_inclusions": {
@@ -154,15 +160,15 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/click_me_to_edit/include_for_Pro_Xtra_only.txt"
+      "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_Pro_Xtra_only.txt"
     ],
-    "topic": "SECURITY",
+    "topic": "PRIVACY",
     "variants": {
-      "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/click_me_to_edit/include_for_Pro_Xtra_only.txt"
+      "pihole": "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/include_for_Pro_Xtra_only.txt"
     }
   },
   "3coresec": {
-    "active": true,
+    "active": false,
     "checksums": {},
     "content": {
       "filter": "NONE",
@@ -176,8 +182,8 @@
       }
     ],
     "metadata": {
-      "description": "https://blacklist.3coresec.net/",
-      "homepage": "https://www.3coresec.com/",
+      "description": "https://blog.3coresec.com/search/label/Blacklist",
+      "homepage": "https://blacklist.3coresec.net/",
       "license": "agpl-3.0"
     },
     "method": "BLOCK",
@@ -910,7 +916,7 @@
     "topic": "SECURITY"
   },
   "akmai_guardicore": {
-    "active": true,
+    "active": false,
     "checksums": {},
     "content": {
       "filter": "NONE",
@@ -2187,7 +2193,7 @@
     "topic": "SECURITY"
   },
   "charles_b_haley": {
-    "active": true,
+    "active": false,
     "checksums": {},
     "content": {
       "filter": "NONE",
@@ -7661,7 +7667,7 @@
     "topic": "PRIVACY"
   },
   "nix_spam": {
-    "active": true,
+    "active": false,
     "checksums": {},
     "content": {
       "filter": "GZIP",
