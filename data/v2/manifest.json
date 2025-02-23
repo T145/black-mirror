@@ -12349,5 +12349,30 @@
       "https://zonefiles.io/f/compromised/ip/live/"
     ],
     "topic": "SECURITY"
+  },
+  "qme": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://qme.mydns.jp/adblock.html",
+      "homepage": "https://qme.mydns.jp/adblock.html",
+      "license": "all-rights-reserved"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://qme.mydns.jp/data/AdblockV2.txt"
+    ],
+    "topic": "PRIVACY"
   }
 }

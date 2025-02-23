@@ -6,7 +6,6 @@
 - [turk-adlist](https://github.com/bkrucarci/turk-adlist)
 - [dohservers](https://github.com/oneoffdallas/dohservers)
 - [Free Email Provider Domains](https://gist.github.com/tbrianjones/5992856)
-- [wh0ami](https://codeberg.org/wh0ami/pihole-lists)
 - [TR-CERT](https://www.usom.gov.tr/url-list.txt)
   - Reference: [usom-blacklist](https://github.com/fuatboluk/usom-blacklist)
 - [xiaobeita](https://github.com/rentianyu/Ad-set-hosts/tree/master/xiaobeita)
@@ -15,8 +14,6 @@
 - [i-blocklist](https://github.com/jackrabbit335/UsefulLinuxShellScripts/blob/master/blocklist-update.sh#L17)
 - [phishing_kits](https://github.com/0xDanielLopez/phishing_kits)
 - [Wael](https://github.com/waelisa/Best-blocklist)
-- [qme adblock](https://qme.mydns.jp/data/AdblockV2.txt)
-  - `Last-Modified: Mon, 18 Mar 2024 05:06:32 GMT`
 
 ### Add but archive
 
