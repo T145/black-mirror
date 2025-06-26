@@ -23,6 +23,7 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump brace-expansion from 1.1.11 to 1.1.12 in the npm\_and\_yarn group across 1 directory [\#261](https://github.com/T145/black-mirror/pull/261) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/upload-artifact from 4.4.3 to 4.5.0 in /.github/workflows [\#260](https://github.com/T145/black-mirror/pull/260) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/setup-buildx-action from 3.7.1 to 3.8.0 in /.github/workflows [\#259](https://github.com/T145/black-mirror/pull/259) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Update reference to Phishing.Database. [\#258](https://github.com/T145/black-mirror/pull/258) ([phishing-database-bot](https://github.com/phishing-database-bot))
