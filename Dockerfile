@@ -1,21 +1,21 @@
 # https://github.com/google/sanitizers/wiki/AddressSanitizerComparisonOfMemoryTools
-FROM golang:1.21 AS golang
+FROM golang:1.24.5 AS golang
 
 WORKDIR "/src"
 
 # https://github.com/johnkerl/miller
 RUN git config --global advice.detachedHead false; \
-    git clone --depth 1 -b v6.13.0 https://github.com/johnkerl/miller.git .; \
+    git clone --depth 1 -b v6.14.0 https://github.com/johnkerl/miller.git .; \
     go install -v github.com/johnkerl/miller/cmd/mlr; \
     rm -rf ./*; \
     # https://github.com/mikefarah/yq/
-    go install -v github.com/mikefarah/yq/v4@v4.44.5; \
+    go install -v github.com/mikefarah/yq/v4@v4.46.1; \
     # https://github.com/ipinfo/cli
     go install -v github.com/ipinfo/cli/ipinfo@ipinfo-3.3.1; \
     # https://github.com/projectdiscovery/dnsx
-    go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@v1.2.1; \
+    go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@v1.2.2; \
     # https://github.com/projectdiscovery/subfinder
-    go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@v2.6.7;
+    go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@v2.8.0;
 
 FROM amd64/rust:bookworm AS rust
 
@@ -46,7 +46,7 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
     rm -rf ./*; \
     # Version available from apt is 2.6
     git config --global advice.detachedHead false; \
-    git clone --depth 1 -b v2.8 https://github.com/madler/pigz.git ./test; \
+    git clone --depth 1 -b develop https://github.com/madler/pigz.git ./test; \
     make -C test; \
     mv ./test/pigz /usr/local/bin; \
     rm -rf ./*; \
@@ -59,7 +59,7 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
 # https://hub.docker.com/r/parrotsec/core
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.5.1" \
+      version="6.6.0" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
@@ -128,30 +128,31 @@ ENV LC_ALL=en_US.UTF-8 \
 RUN apt-get -q update --no-allow-insecure-repositories; \
     apt-get -yqf upgrade; \
     apt-get -y install --no-install-recommends \
-    aria2=1.36.0-1 \
-    bc=1.07.1-3+b1 \
-    build-essential=12.9 \
-    csvkit=1.0.7-1 \
-    curl=7.88.1-10+deb12u7 \
-    debsums=3.0.2.1 \
-    dos2unix=7.4.3-1 \
-    gawk=1:5.2.1-2 \
-    git=1:2.39.5-0+deb12u1 \
-    grepcidr=2.0-2 \
-    html-xml-utils=7.7-1.1 \
-    libc-ares2=1.18.1-3 \
-    libpsl5=0.21.2-1 \
-    libssl3=3.0.14-1~deb12u2 \
+    aria2=* \
+    bc=* \
+    build-essential=* \
+    csvkit=* \
+    curl=* \
+    debsums=* \
+    dos2unix=* \
+    dpkg-dev=* \
+    gawk=* \
+    git=* \
+    grepcidr=* \
+    html-xml-utils=* \
+    libc-ares2=* \
+    libpsl5=* \
+    libssl3=* \
     localepurge=* \
-    lynx=2.9.0dev.12-1 \
-    nodejs=18.19.0+dfsg-6~deb12u2 \
-    npm=9.2.0~ds1-1 \
-    p7zip-full=16.02+dfsg-8 \
+    lynx=* \
+    nodejs=* \
+    npm=* \
+    p7zip-full=* \
     symlinks=* \
-    unzip=6.0-28 \
-    whois=5.5.17 \
-    xz-utils=5.4.1-0.2 \
-    zlib1g=1:1.2.13.dfsg-1; \
+    unzip=* \
+    whois=* \
+    xz-utils=* \
+    zlib1g=*; \
     # https://github.com/AdguardTeam/HostlistCompiler
     npm i -g @adguard/hostlist-compiler; \
     apt-get install -y --no-install-recommends --reinstall ca-certificates=*; \
@@ -184,34 +185,32 @@ RUN apt-get -q update --no-allow-insecure-repositories; \
 # Upgrade Perl
 # https://github.com/Perl/docker-perl
 # Threaded Bookworm
-RUN wget -q https://cpan.metacpan.org/authors/id/B/BO/BOOK/perl-5.41.3.tar.gz; \
-    echo '7b9cd0f84a5350ea485ae6c57f3231d338f8a00c23f193db3964a60d38cf8850 *perl-5.41.3.tar.gz' | sha256sum --strict --check -; \
-    tar --strip-components=1 -xzf perl-*.tar.gz; \
-    cat *.patch | patch -p1 || :; \
-    ./Configure -Darchname=x86_64-linux-gnu -Duse64bitall -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des; \
-    make -j "$(nproc)"; \
-    #TEST_JOBS="$(nproc)" make test_harness; \
+WORKDIR /usr/src/perl
+RUN curl -fL https://cpan.metacpan.org/authors/id/B/BO/BOOK/perl-5.42.0.tar.gz -o perl-5.42.0.tar.gz; \
+    echo 'e093ef184d7f9a1b9797e2465296f55510adb6dab8842b0c3ed53329663096dc *perl-5.42.0.tar.gz' | sha256sum --strict --check -; \
+    tar --strip-components=1 -xaf perl-5.42.0.tar.gz -C /usr/src/perl; \
+    rm perl-5.42.0.tar.gz; \
+    cat *.patch | patch -p1 || : ; \
+    gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; \
+    archBits="$(dpkg-architecture --query DEB_BUILD_ARCH_BITS)"; \
+    archFlag="$([ "$archBits" = '64' ] && echo '-Duse64bitall' || echo '-Duse64bitint')"; \
+    ./Configure -Darchname="$gnuArch" "$archFlag" -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -des; \
+    make -j$(nproc); \
     make install; \
-    rm -rf ./*; \
-    # Install cpanm & the project packages
-    wget -q https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz; \
+    cd /usr/src; \
+    curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz; \
     echo '963e63c6e1a8725ff2f624e9086396ae150db51dd0a337c3781d09a994af05a5 *App-cpanminus-1.7047.tar.gz' | sha256sum --strict --check -; \
-    tar --strip-components=1 -xzf App-cpanminus-*.tar.gz; \
+    tar -xzf App-cpanminus-1.7047.tar.gz && cd App-cpanminus-1.7047; \
     perl -pi -E 's{http://(www\.cpan\.org|backpan\.perl\.org|cpan\.metacpan\.org|fastapi\.metacpan\.org|cpanmetadb\.plackperl\.org)}{https://$1}g' bin/cpanm; \
     perl -pi -E 's{try_lwp=>1}{try_lwp=>0}g' bin/cpanm; \
-    perl bin/cpanm .; \
-    wget -q 'https://www.cpan.org/authors/id/C/CH/CHRISN/Net-SSLeay-1.94.tar.gz'; \
-    echo '9d7be8a56d1bedda05c425306cc504ba134307e0c09bda4a788c98744ebcd95d *Net-SSLeay-1.94.tar.gz' | sha256sum --strict --check -; \
-    cpanm --from $PWD Net-SSLeay-1.94.tar.gz; \
-    wget -q 'https://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.085.tar.gz'; \
-    echo '95b2f7c0628a7e246a159665fbf0620d0d7835e3a940f22d3fdd47c3aa799c2e *IO-Socket-SSL-2.085.tar.gz' | sha256sum --strict --check -; \
-    SSL_CERT_DIR=/etc/ssl/certs cpanm --from $PWD IO-Socket-SSL-2.085.tar.gz; \
-    wget -q -P /usr/local/bin/ https://raw.githubusercontent.com/skaji/cpm/0.997017/cpm; \
+    perl bin/cpanm . && cd /root; \
+    curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997017/cpm -o /usr/local/bin/cpm; \
     # sha256 checksum is from docker-perl team, cf https://github.com/docker-library/official-images/pull/12612#issuecomment-1158288299
     echo 'e3931a7d994c96f9c74b97d1b5b75a554fc4f06eadef1eca26ecc0bdcd1f2d11 */usr/local/bin/cpm' | sha256sum --strict --check -; \
     chmod +x /usr/local/bin/cpm; \
-    rm -rf ./*; \
-    # Install dependencies
+    rm -fr /root/.cpanm /usr/src/perl /usr/src/App-cpanminus-1.7047* /tmp/*; \
+    cpanm --version && cpm --version; \
+    # Install project dependencies
     cpanm Regexp::Common; \
     cpanm Data::Validate::Domain; \
     cpanm Data::Validate::IP; \
@@ -219,6 +218,8 @@ RUN wget -q https://cpan.metacpan.org/authors/id/B/BO/BOOK/perl-5.41.3.tar.gz; \
     cpanm Net::Works::Network; \
     cpanm Domain::PublicSuffix; \
     cpanm Text::Trim;
+
+WORKDIR "/root"
 
 # https://cisofy.com/lynis/controls/HRDN-7222/
 RUN chown 0:0 /usr/bin/as; \
