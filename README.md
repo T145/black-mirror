@@ -40,13 +40,6 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
   </a>
-  <a href="https://hits.seeyoufarm.com/#history">
-    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FT145%2Fblack-mirror&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Traffic+%28Daily%2FTotal%29&edge_flat=false"
-        alt="traffic"
-        longdesc="https://hits.seeyoufarm.com"
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer" />
-  </a>
 </div>
 <div align="center">
   <img src="https://img.shields.io/github/actions/workflow/status/T145/black-mirror/publish_lists.yml?branch=master&label=Release&logo=github"
