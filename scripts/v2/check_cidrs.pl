@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-use 5.41.3;
+use 5.42.0;
 use warnings;
 use strict;
 use feature 'say';

@@ -29,7 +29,7 @@ readonly -a FORMATS
 
 # https://github.com/ildar-shaimordanov/perl-utils#sponge
 sponge() {
-	perl5.41.3 -ne '
+	perl5.42.0 -ne '
 	push @lines, $_;
 	END {
 		open(OUT, ">$file")
