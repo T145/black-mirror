@@ -6,7 +6,8 @@ WORKDIR "/src"
 # https://github.com/johnkerl/miller
 RUN git config --global advice.detachedHead false; \
     git clone --depth 1 -b v6.14.0 https://github.com/johnkerl/miller.git .; \
-    go install -v github.com/johnkerl/miller/cmd/mlr; \
+    # https://github.com/johnkerl/miller?tab=readme-ov-file#building-from-source
+    go install github.com/johnkerl/miller/v6/cmd/mlr; \
     rm -rf ./*; \
     # https://github.com/mikefarah/yq/
     go install -v github.com/mikefarah/yq/v4@v4.46.1; \
@@ -59,7 +60,7 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
 # https://hub.docker.com/r/parrotsec/core
 FROM docker.io/parrotsec/core:base-lts-amd64
 LABEL maintainer="T145" \
-      version="6.6.0" \
+      version="6.6.1" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
 
