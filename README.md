@@ -418,13 +418,12 @@ With Docker running in the background, execute `pnpm lint` to debug any changes.
 > Good causes that help secure your digital life.
 
 - *__[Stop using Cloudflare!](https://framagit.org/dCF/deCloudflare/-/tree/master)__*
-- Keep up with [Chinese activity](https://www.chinasentry.com/congressional)!
 - Use a [pcWRT](https://shop.pcwrt.com/) to easily secure your internet!
 - Test your browser's tracking resilience with [CoverYourTracks](https://coveryourtracks.eff.org/)!
-- Support [LetsBlockIt](https://letsblock.it/) to consolidate and simplify uBlock filters!
 - Explore [PrivacyGuides](https://privacyguides.org/) and [Prism Break](https://prism-break.org/en/all/) to discover services that respect your privacy!
-- Use [BypassPaywalls](https://github.com/iamadamdev/bypass-paywalls-chrome#readme) to access restricted and useful information, such as the [WSJ's Facebook Files](https://www.wsj.com/articles/the-facebook-files-11631713039).
-- Skip over URL shortener links by using [FastForward](https://github.com/FastForwardTeam/FastForward#readme), which is a better alternative to outright domain blocking.
+- Use [the Web Archive](https://archive.ph/) to access restricted and useful information, such as the [WSJ's Facebook Files](https://archive.ph/3XKLu).
+- Skip over URL shortener links by using [Unshorten.it](https://unshorten.it/), which is a better alternative to outright domain blocking.
+  - Review their [privacy policy](https://unshorten.it/privacy-policy).
 
 ## 🎶 Notes
 
