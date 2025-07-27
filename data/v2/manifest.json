@@ -8389,13 +8389,13 @@
       }
     ],
     "metadata": {
-      "description": "https://github.com/mitchellkrogza/phishing#readme",
-      "homepage": "https://github.com/mitchellkrogza/phishing",
+      "description": "https://github.com/Phishing-Database/phishing#readme",
+      "homepage": "https://github.com/Phishing-Database/phishing",
       "license": "mit"
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://raw.githubusercontent.com/mitchellkrogza/phishing/main/add-domain"
+      "https://raw.githubusercontent.com/Phishing-Database/phishing/refs/heads/master/additions/permanent/domains.list"
     ],
     "topic": "SECURITY"
   },
@@ -8414,8 +8414,8 @@
       }
     ],
     "metadata": {
-      "description": "https://github.com/mitchellkrogza/Phishing.Database#readme",
-      "homepage": "https://github.com/mitchellkrogza/Phishing.Database",
+      "description": "https://github.com/Phishing-Database/Phishing.Database#readme",
+      "homepage": "https://github.com/Phishing-Database/Phishing.Database",
       "license": "mit"
     },
     "method": "BLOCK",
@@ -8434,18 +8434,18 @@
     },
     "formats": [
       {
-        "filter": "NONE",
+        "filter": "RAW_HOSTS_WITH_COMMENTS",
         "format": "DOMAIN"
       }
     ],
     "metadata": {
-      "description": "https://github.com/mitchellkrogza/phishing#readme",
-      "homepage": "https://github.com/mitchellkrogza/phishing",
+      "description": "https://github.com/Phishing-Database/phishing#readme",
+      "homepage": "https://github.com/Phishing-Database/phishing",
       "license": "mit"
     },
     "method": "ALLOW",
     "mirrors": [
-      "https://raw.githubusercontent.com/mitchellkrogza/phishing/main/falsepositive.list"
+      "https://raw.githubusercontent.com/Phishing-Database/phishing/refs/heads/master/falsepositives/permanent/domains.list"
     ],
     "topic": "SECURITY"
   },
@@ -8459,18 +8459,18 @@
     },
     "formats": [
       {
-        "filter": "NONE",
+        "filter": "GREP_DOMAIN",
         "format": "DOMAIN"
       }
     ],
     "metadata": {
-      "description": "https://github.com/mitchellkrogza/Phishing.Database#readme",
-      "homepage": "https://github.com/mitchellkrogza/Phishing.Database",
+      "description": "https://github.com/Phishing-Database/Phishing.Database#readme",
+      "homepage": "https://github.com/Phishing-Database/Phishing.Database",
       "license": "mit"
     },
     "method": "ALLOW",
     "mirrors": [
-      "https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-INACTIVE.txt"
+      "https://raw.githubusercontent.com/Phishing-Database/Phishing.Database/refs/heads/master/phishing-links-INACTIVE.txt"
     ],
     "topic": "SECURITY"
   },
