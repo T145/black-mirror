@@ -421,7 +421,7 @@ With Docker running in the background, execute `pnpm lint` to debug any changes.
 - Use a [pcWRT](https://shop.pcwrt.com/) to easily secure your internet!
 - Test your browser's tracking resilience with [CoverYourTracks](https://coveryourtracks.eff.org/)!
 - Explore [PrivacyGuides](https://privacyguides.org/) and [Prism Break](https://prism-break.org/en/all/) to discover services that respect your privacy!
-- Use [the Web Archive](https://archive.ph/) to access restricted and useful information, such as the [WSJ's Facebook Files](https://archive.ph/3XKLu).
+- Use [the Web Archive](https://archive.ph/) or [Bypass Paywalls Clean](https://gitflic.ru/project/magnolia1234/bypass-paywalls-firefox-clean) to access restricted and useful information, such as the [WSJ's Facebook Files](https://archive.ph/3XKLu).
 - Skip over URL shortener links by using [Unshorten.it](https://unshorten.it/), which is a better alternative to outright domain blocking.
   - Review their [privacy policy](https://unshorten.it/privacy-policy).
 
