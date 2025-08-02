@@ -1,100 +1,127 @@
---2025-08-01 13:43:07--  https://haas.nic.cz/stats/export/2025/08/2025-07-31.json.gz
+--2025-08-02 13:41:44--  https://haas.nic.cz/stats/export/2025/08/2025-08-01.json.gz
 Resolving haas.nic.cz... 217.31.204.109, 2001:1488:800:400::2:109
 Connecting to haas.nic.cz|217.31.204.109|:443... connected.
-HTTP request sent, awaiting response... 404 Not Found
-2025-08-01 13:43:08 ERROR 404: Not Found.
-
---2025-08-01 13:43:13--  https://myip.ms/files/blacklist/general/full_blacklist_database.zip
-Resolving myip.ms... 146.59.166.237, 2001:41d0:303:d9d6:237a::1
-Connecting to myip.ms|146.59.166.237|:443... connected.
-ERROR: cannot verify myip.ms's certificate, issued by ‘CN=GlobalSign GCC R6 AlphaSSL CA 2023,O=GlobalSign nv-sa,C=BE’:
-  Unable to locally verify the issuer's authority.
-To connect to myip.ms insecurely, use `--no-check-certificate'.
---2025-08-01 13:43:14--  https://myip.ms/files/bots/live_webcrawlers.txt
-Resolving myip.ms... 146.59.166.237, 2001:41d0:303:d9d6:237a::1
-Connecting to myip.ms|146.59.166.237|:443... connected.
-ERROR: cannot verify myip.ms's certificate, issued by ‘CN=GlobalSign GCC R6 AlphaSSL CA 2023,O=GlobalSign nv-sa,C=BE’:
-  Unable to locally verify the issuer's authority.
-To connect to myip.ms insecurely, use `--no-check-certificate'.
---2025-08-01 13:43:14--  http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz
-Resolving wget-mirrors.uceprotect.net... 72.13.86.154, 38.145.218.88, 96.31.84.20, ...
-Connecting to wget-mirrors.uceprotect.net|72.13.86.154|:80... connected.
-HTTP request sent, awaiting response... 403 Forbidden
-2025-08-01 13:43:14 ERROR 403: Forbidden.
-
---2025-08-01 13:43:14--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-1.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net... 38.145.218.88, 193.138.29.13, 102.213.181.224, ...
-Connecting to wget-mirrors.uceprotect.net|38.145.218.88|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 240654 (235K) [application/octet-stream]
+Length: 861159 (841K) [text/plain]
+Saving to: ‘haas’
+
+     0K .......... .......... .......... .......... ..........  5%  518K 2s
+    50K .......... .......... .......... .......... .......... 11%  519K 1s
+   100K .......... .......... .......... .......... .......... 17%  148M 1s
+   150K .......... .......... .......... .......... .......... 23% 1.28M 1s
+   200K .......... .......... .......... .......... .......... 29%  859K 1s
+   250K .......... .......... .......... .......... .......... 35%  161M 1s
+   300K .......... .......... .......... .......... .......... 41%  357M 0s
+   350K .......... .......... .......... .......... .......... 47%  165M 0s
+   400K .......... .......... .......... .......... .......... 53% 1.29M 0s
+   450K .......... .......... .......... .......... .......... 59%  863K 0s
+   500K .......... .......... .......... .......... .......... 65%  286M 0s
+   550K .......... .......... .......... .......... .......... 71%  164M 0s
+   600K .......... .......... .......... .......... .......... 77%  248M 0s
+   650K .......... .......... .......... .......... .......... 83%  266M 0s
+   700K .......... .......... .......... .......... .......... 89%  167M 0s
+   750K .......... .......... .......... .......... .......... 95%  317M 0s
+   800K .......... .......... .......... ..........           100%  547M=0.4s
+
+2025-08-02 13:41:45 (2.12 MB/s) - ‘haas’ saved [861159/861159]
+
+--2025-08-02 13:41:51--  https://myip.ms/files/blacklist/general/full_blacklist_database.zip
+Resolving myip.ms... 146.59.166.237, 2001:41d0:303:d9d6:237a::1
+Connecting to myip.ms|146.59.166.237|:443... connected.
+ERROR: cannot verify myip.ms's certificate, issued by ‘CN=GlobalSign GCC R6 AlphaSSL CA 2023,O=GlobalSign nv-sa,C=BE’:
+  Unable to locally verify the issuer's authority.
+To connect to myip.ms insecurely, use `--no-check-certificate'.
+--2025-08-02 13:41:51--  https://myip.ms/files/bots/live_webcrawlers.txt
+Resolving myip.ms... 146.59.166.237, 2001:41d0:303:d9d6:237a::1
+Connecting to myip.ms|146.59.166.237|:443... connected.
+ERROR: cannot verify myip.ms's certificate, issued by ‘CN=GlobalSign GCC R6 AlphaSSL CA 2023,O=GlobalSign nv-sa,C=BE’:
+  Unable to locally verify the issuer's authority.
+To connect to myip.ms insecurely, use `--no-check-certificate'.
+--2025-08-02 13:41:51--  http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz
+Resolving wget-mirrors.uceprotect.net... 199.187.241.194, 217.23.49.207, 204.155.151.130, ...
+Connecting to wget-mirrors.uceprotect.net|199.187.241.194|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 58614 (57K) [text/plain]
+Saving to: ‘uceprotect_backscatterer’
+
+     0K .......... .......... .......... .......... .......... 87%  246K 0s
+    50K .......                                               100% 13.5T=0.2s
+
+2025-08-02 13:41:52 (282 KB/s) - ‘uceprotect_backscatterer’ saved [58614/58614]
+
+--2025-08-02 13:41:52--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-1.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net... 66.240.236.50, 96.31.84.20, 199.187.241.194, ...
+Connecting to wget-mirrors.uceprotect.net|66.240.236.50|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 223387 (218K) [application/octet-stream]
 Saving to: ‘uceprotect_level_1’
 
-     0K .......... .......... .......... .......... .......... 21%  553K 0s
-    50K .......... .......... .......... .......... .......... 42%  527K 0s
-   100K .......... .......... .......... .......... .......... 63% 93.1T 0s
-   150K .......... .......... .......... .......... .......... 85% 1.08M 0s
-   200K .......... .......... .......... .....                100%  392K=0.3s
+     0K .......... .......... .......... .......... .......... 22%  384K 0s
+    50K .......... .......... .......... .......... .......... 45%  764K 0s
+   100K .......... .......... .......... .......... .......... 68% 93.1T 0s
+   150K .......... .......... .......... .......... .......... 91%  775K 0s
+   200K .......... ........                                   100%  280K=0.3s
 
-2025-08-01 13:43:15 (734 KB/s) - ‘uceprotect_level_1’ saved [240654/240654]
+2025-08-02 13:41:52 (671 KB/s) - ‘uceprotect_level_1’ saved [223387/223387]
 
---2025-08-01 13:43:15--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net... 38.145.218.88, 193.138.29.13, 102.213.181.224, ...
-Connecting to wget-mirrors.uceprotect.net|38.145.218.88|:80... connected.
+--2025-08-02 13:41:52--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net... 217.23.49.207, 102.213.181.224, 199.187.241.194, ...
+Connecting to wget-mirrors.uceprotect.net|217.23.49.207|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 200192 (196K) [application/octet-stream]
+Length: 203682 (199K) [application/octet-stream]
 Saving to: ‘uceprotect_level_2’
 
-     0K .......... .......... .......... .......... .......... 25%  524K 0s
-    50K .......... .......... .......... .......... .......... 51% 1.01M 0s
-   100K .......... .......... .......... .......... .......... 76% 1.03M 0s
-   150K .......... .......... .......... .......... .....     100%  478K=0.3s
+     0K .......... .......... .......... .......... .......... 25%  260K 1s
+    50K .......... .......... .......... .......... .......... 50%  174K 0s
+   100K .......... .......... .......... .......... .......... 75%  105K 0s
+   150K .......... .......... .......... .......... ........  100% 85.3K=1.5s
 
-2025-08-01 13:43:15 (682 KB/s) - ‘uceprotect_level_2’ saved [200192/200192]
+2025-08-02 13:41:54 (130 KB/s) - ‘uceprotect_level_2’ saved [203682/203682]
 
---2025-08-01 13:43:15--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net... 72.13.86.154, 38.145.218.88, 96.31.84.20, ...
-Connecting to wget-mirrors.uceprotect.net|72.13.86.154|:80... connected.
+--2025-08-02 13:41:54--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net... 185.248.148.6, 38.145.218.88, 102.213.181.224, ...
+Connecting to wget-mirrors.uceprotect.net|185.248.148.6|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 152077 (149K) [text/plain]
+Length: 153567 (150K) [application/octet-stream]
 Saving to: ‘uceprotect_level_3’
 
-     0K .......... .......... .......... .......... .......... 33%  260K 0s
-    50K .......... .......... .......... .......... .......... 67%  349K 0s
-   100K .......... .......... .......... .......... ........  100%  340K=0.5s
+     0K .......... .......... .......... .......... .......... 33%  278K 0s
+    50K .......... .......... .......... .......... .......... 66%  278K 0s
+   100K .......... .......... .......... .......... ......... 100%  556K=0.4s
 
-2025-08-01 13:43:16 (311 KB/s) - ‘uceprotect_level_3’ saved [152077/152077]
+2025-08-02 13:41:55 (334 KB/s) - ‘uceprotect_level_3’ saved [153567/153567]
 
---2025-08-01 13:43:16--  https://zonefiles.io/f/compromised/domains/live/
-Resolving zonefiles.io... 104.21.80.1, 104.21.16.1, 104.21.96.1, ...
-Connecting to zonefiles.io|104.21.80.1|:443... connected.
+--2025-08-02 13:41:55--  https://zonefiles.io/f/compromised/domains/live/
+Resolving zonefiles.io... 104.21.32.1, 104.21.96.1, 104.21.64.1, ...
+Connecting to zonefiles.io|104.21.32.1|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 312390 (305K) [application/octet-stream]
 Saving to: ‘zonefiles_compromised_domains’
 
-     0K .......... .......... .......... .......... .......... 16%  221K 1s
-    50K .......... .......... .......... .......... .......... 32%  441K 1s
-   100K .......... .......... .......... .......... .......... 49% 10.0M 0s
-   150K .......... .......... .......... .......... .......... 65% 63.3M 0s
-   200K .......... .......... .......... .......... .......... 81%  456K 0s
-   250K .......... .......... .......... .......... .......... 98% 19.6M 0s
-   300K .....                                                 100% 14.0M=0.5s
+     0K .......... .......... .......... .......... .......... 16%  254K 1s
+    50K .......... .......... .......... .......... .......... 32%  506K 1s
+   100K .......... .......... .......... .......... .......... 49% 22.7M 0s
+   150K .......... .......... .......... .......... .......... 65% 19.4M 0s
+   200K .......... .......... .......... .......... .......... 81%  522K 0s
+   250K .......... .......... .......... .......... .......... 98% 20.9M 0s
+   300K .....                                                 100% 7.71M=0.4s
 
-2025-08-01 13:43:16 (667 KB/s) - ‘zonefiles_compromised_domains’ saved [312390/312390]
+2025-08-02 13:41:55 (764 KB/s) - ‘zonefiles_compromised_domains’ saved [312390/312390]
 
---2025-08-01 13:43:16--  https://zonefiles.io/f/compromised/ip/live/
-Resolving zonefiles.io... 104.21.80.1, 104.21.16.1, 104.21.96.1, ...
-Connecting to zonefiles.io|104.21.80.1|:443... connected.
+--2025-08-02 13:41:55--  https://zonefiles.io/f/compromised/ip/live/
+Resolving zonefiles.io... 104.21.64.1, 104.21.16.1, 104.21.48.1, ...
+Connecting to zonefiles.io|104.21.64.1|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 340600 (333K) [application/octet-stream]
+Length: 338723 (331K) [application/octet-stream]
 Saving to: ‘zonefiles_compromised_ips’
 
-     0K .......... .......... .......... .......... .......... 15%  203K 1s
-    50K .......... .......... .......... .......... .......... 30%  415K 1s
-   100K .......... .......... .......... .......... .......... 45% 21.9M 0s
-   150K .......... .......... .......... .......... .......... 60% 17.3M 0s
-   200K .......... .......... .......... .......... .......... 75%  417K 0s
-   250K .......... .......... .......... .......... .......... 90% 24.5M 0s
-   300K .......... .......... .......... ..                   100% 19.9M=0.5s
+     0K .......... .......... .......... .......... .......... 15%  253K 1s
+    50K .......... .......... .......... .......... .......... 30%  504K 1s
+   100K .......... .......... .......... .......... .......... 45% 17.9M 0s
+   150K .......... .......... .......... .......... .......... 60% 19.0M 0s
+   200K .......... .......... .......... .......... .......... 75%  520K 0s
+   250K .......... .......... .......... .......... .......... 90% 16.8M 0s
+   300K .......... .......... ..........                      100% 24.2M=0.4s
 
-2025-08-01 13:43:17 (672 KB/s) - ‘zonefiles_compromised_ips’ saved [340600/340600]
+2025-08-02 13:41:56 (822 KB/s) - ‘zonefiles_compromised_ips’ saved [338723/338723]
 
