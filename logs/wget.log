@@ -1,95 +1,118 @@
---2025-09-01 13:41:01--  https://haas.nic.cz/stats/export/2025/09/2025-08-31.json.gz
+--2025-09-02 13:41:43--  https://haas.nic.cz/stats/export/2025/09/2025-09-01.json.gz
 Resolving haas.nic.cz... 217.31.204.109, 2001:1488:800:400::2:109
 Connecting to haas.nic.cz|217.31.204.109|:443... connected.
-HTTP request sent, awaiting response... 404 Not Found
-2025-09-01 13:41:02 ERROR 404: Not Found.
-
---2025-09-01 13:41:08--  https://myip.ms/files/blacklist/general/full_blacklist_database.zip
-Resolving myip.ms... 146.59.166.237, 2001:41d0:303:d9d6:237a::1
-Connecting to myip.ms|146.59.166.237|:443... connected.
-ERROR: cannot verify myip.ms's certificate, issued by ‘CN=GlobalSign GCC R6 AlphaSSL CA 2023,O=GlobalSign nv-sa,C=BE’:
-  Unable to locally verify the issuer's authority.
-To connect to myip.ms insecurely, use `--no-check-certificate'.
---2025-09-01 13:41:09--  https://myip.ms/files/bots/live_webcrawlers.txt
-Resolving myip.ms... 146.59.166.237, 2001:41d0:303:d9d6:237a::1
-Connecting to myip.ms|146.59.166.237|:443... connected.
-ERROR: cannot verify myip.ms's certificate, issued by ‘CN=GlobalSign GCC R6 AlphaSSL CA 2023,O=GlobalSign nv-sa,C=BE’:
-  Unable to locally verify the issuer's authority.
-To connect to myip.ms insecurely, use `--no-check-certificate'.
---2025-09-01 13:41:09--  http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz
-Resolving wget-mirrors.uceprotect.net... 199.187.241.194, 217.23.49.207, 185.248.148.6, ...
-Connecting to wget-mirrors.uceprotect.net|199.187.241.194|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 41522 (41K) [text/plain]
+Length: 956577 (934K) [text/plain]
+Saving to: ‘haas’
+
+     0K .......... .......... .......... .......... ..........  5%  320K 3s
+    50K .......... .......... .......... .......... .......... 10%  321K 3s
+   100K .......... .......... .......... .......... .......... 16% 93.5M 2s
+   150K .......... .......... .......... .......... .......... 21% 1.35M 1s
+   200K .......... .......... .......... .......... .......... 26%  418K 1s
+   250K .......... .......... .......... .......... .......... 32%  105M 1s
+   300K .......... .......... .......... .......... .......... 37%  109M 1s
+   350K .......... .......... .......... .......... .......... 42% 71.1M 1s
+   400K .......... .......... .......... .......... .......... 48% 1.40M 1s
+   450K .......... .......... .......... .......... .......... 53%  417K 1s
+   500K .......... .......... .......... .......... .......... 58%  287M 0s
+   550K .......... .......... .......... .......... .......... 64%  446M 0s
+   600K .......... .......... .......... .......... .......... 69%  127M 0s
+   650K .......... .......... .......... .......... .......... 74%  102M 0s
+   700K .......... .......... .......... .......... .......... 80%  474M 0s
+   750K .......... .......... .......... .......... .......... 85%  354M 0s
+   800K .......... .......... .......... .......... .......... 90%  634M 0s
+   850K .......... .......... .......... .......... .......... 96% 1.41M 0s
+   900K .......... .......... .......... ....                 100%  352M=0.7s
+
+2025-09-02 13:41:44 (1.38 MB/s) - ‘haas’ saved [956577/956577]
+
+--2025-09-02 13:41:50--  https://myip.ms/files/blacklist/general/full_blacklist_database.zip
+Resolving myip.ms... 146.59.166.237, 2001:41d0:303:d9d6:237a::1
+Connecting to myip.ms|146.59.166.237|:443... connected.
+ERROR: cannot verify myip.ms's certificate, issued by ‘CN=GlobalSign GCC R6 AlphaSSL CA 2023,O=GlobalSign nv-sa,C=BE’:
+  Unable to locally verify the issuer's authority.
+To connect to myip.ms insecurely, use `--no-check-certificate'.
+--2025-09-02 13:41:51--  https://myip.ms/files/bots/live_webcrawlers.txt
+Resolving myip.ms... 146.59.166.237, 2001:41d0:303:d9d6:237a::1
+Connecting to myip.ms|146.59.166.237|:443... connected.
+ERROR: cannot verify myip.ms's certificate, issued by ‘CN=GlobalSign GCC R6 AlphaSSL CA 2023,O=GlobalSign nv-sa,C=BE’:
+  Unable to locally verify the issuer's authority.
+To connect to myip.ms insecurely, use `--no-check-certificate'.
+--2025-09-02 13:41:51--  http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz
+Resolving wget-mirrors.uceprotect.net... 209.126.213.95, 66.240.236.50, 96.31.84.20, ...
+Connecting to wget-mirrors.uceprotect.net|209.126.213.95|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 41630 (41K) [application/octet-stream]
 Saving to: ‘uceprotect_backscatterer’
 
-     0K .......... .......... .......... ..........           100% 1.05M=0.04s
+     0K .......... .......... .......... ..........           100% 1.65M=0.02s
 
-2025-09-01 13:41:09 (1.05 MB/s) - ‘uceprotect_backscatterer’ saved [41522/41522]
+2025-09-02 13:41:51 (1.65 MB/s) - ‘uceprotect_backscatterer’ saved [41630/41630]
 
---2025-09-01 13:41:09--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-1.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net... 199.187.241.194, 217.23.49.207, 185.248.148.6, ...
-Connecting to wget-mirrors.uceprotect.net|199.187.241.194|:80... connected.
+--2025-09-02 13:41:51--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-1.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net... 209.126.213.95, 66.240.236.50, 96.31.84.20, ...
+Connecting to wget-mirrors.uceprotect.net|209.126.213.95|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 223996 (219K) [text/plain]
+Length: 222219 (217K) [application/octet-stream]
 Saving to: ‘uceprotect_level_1’
 
-     0K .......... .......... .......... .......... .......... 22% 1.33M 0s
-    50K .......... .......... .......... .......... .......... 45% 3.98M 0s
-   100K .......... .......... .......... .......... .......... 68% 3.98M 0s
-   150K .......... .......... .......... .......... .......... 91%  146M 0s
-   200K .......... ........                                   100% 1.56M=0.07s
+     0K .......... .......... .......... .......... .......... 23% 1.96M 0s
+    50K .......... .......... .......... .......... .......... 46% 1.95M 0s
+   100K .......... .......... .......... .......... .......... 69% 3.83M 0s
+   150K .......... .......... .......... .......... .......... 92% 3.87M 0s
+   200K .......... .......                                    100%  117M=0.08s
 
-2025-09-01 13:41:09 (2.91 MB/s) - ‘uceprotect_level_1’ saved [223996/223996]
+2025-09-02 13:41:51 (2.81 MB/s) - ‘uceprotect_level_1’ saved [222219/222219]
 
---2025-09-01 13:41:09--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net... 199.187.241.194, 217.23.49.207, 185.248.148.6, ...
-Connecting to wget-mirrors.uceprotect.net|199.187.241.194|:80... connected.
+--2025-09-02 13:41:51--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net... 209.126.213.95, 66.240.236.50, 96.31.84.20, ...
+Connecting to wget-mirrors.uceprotect.net|209.126.213.95|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 210252 (205K) [text/plain]
+Length: 215599 (211K) [application/octet-stream]
 Saving to: ‘uceprotect_level_2’
 
-     0K .......... .......... .......... .......... .......... 24% 1.32M 0s
-    50K .......... .......... .......... .......... .......... 48% 3.95M 0s
-   100K .......... .......... .......... .......... .......... 73% 3.96M 0s
-   150K .......... .......... .......... .......... .......... 97% 3.79M 0s
-   200K .....                                                 100% 9.92T=0.07s
+     0K .......... .......... .......... .......... .......... 23% 1.93M 0s
+    50K .......... .......... .......... .......... .......... 47% 1.89M 0s
+   100K .......... .......... .......... .......... .......... 71% 1.89M 0s
+   150K .......... .......... .......... .......... .......... 94% 3.79M 0s
+   200K ..........                                            100% 94.7M=0.09s
 
-2025-09-01 13:41:09 (2.69 MB/s) - ‘uceprotect_level_2’ saved [210252/210252]
+2025-09-02 13:41:51 (2.29 MB/s) - ‘uceprotect_level_2’ saved [215599/215599]
 
---2025-09-01 13:41:09--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net... 185.248.148.6, 199.187.241.194, 96.31.84.20, ...
-Connecting to wget-mirrors.uceprotect.net|185.248.148.6|:80... connected.
+--2025-09-02 13:41:51--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net... 199.187.241.194, 102.213.181.224, 209.126.213.95, ...
+Connecting to wget-mirrors.uceprotect.net|199.187.241.194|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 168591 (165K) [application/octet-stream]
+Length: 160050 (156K) [text/plain]
 Saving to: ‘uceprotect_level_3’
 
-     0K .......... .......... .......... .......... .......... 30%  167K 1s
-    50K .......... .......... .......... .......... .......... 60%  167K 0s
-   100K .......... .......... .......... .......... .......... 91%  334K 0s
-   150K .......... ....                                       100% 27.3T=0.7s
+     0K .......... .......... .......... .......... .......... 31% 1.21M 0s
+    50K .......... .......... .......... .......... .......... 63% 3.66M 0s
+   100K .......... .......... .......... .......... .......... 95% 3.60M 0s
+   150K ......                                                100% 78.8M=0.07s
 
-2025-09-01 13:41:10 (220 KB/s) - ‘uceprotect_level_3’ saved [168591/168591]
+2025-09-02 13:41:52 (2.27 MB/s) - ‘uceprotect_level_3’ saved [160050/160050]
 
---2025-09-01 13:41:10--  https://zonefiles.io/f/compromised/domains/live/
-Resolving zonefiles.io... 104.21.16.1, 104.21.96.1, 104.21.32.1, ...
-Connecting to zonefiles.io|104.21.16.1|:443... connected.
+--2025-09-02 13:41:52--  https://zonefiles.io/f/compromised/domains/live/
+Resolving zonefiles.io... 104.21.96.1, 104.21.64.1, 104.21.16.1, ...
+Connecting to zonefiles.io|104.21.96.1|:443... connected.
 HTTP request sent, awaiting response... 301 Moved Permanently
 Location: https://securitytrails.com/ [following]
---2025-09-01 13:41:11--  https://securitytrails.com/
-Resolving securitytrails.com... 172.66.42.218, 172.66.41.38, 2606:4700:3108::ac42:2ada, ...
-Connecting to securitytrails.com|172.66.42.218|:443... connected.
-HTTP request sent, awaiting response... 403 Forbidden
-2025-09-01 13:41:11 ERROR 403: Forbidden.
-
---2025-09-01 13:41:11--  https://zonefiles.io/f/compromised/ip/live/
-Resolving zonefiles.io... 104.21.16.1, 104.21.96.1, 104.21.32.1, ...
-Connecting to zonefiles.io|104.21.16.1|:443... connected.
-HTTP request sent, awaiting response... 301 Moved Permanently
-Location: https://securitytrails.com/ [following]
---2025-09-01 13:41:11--  https://securitytrails.com/
-Resolving securitytrails.com... 172.66.41.38, 172.66.42.218, 2606:4700:3108::ac42:2926, ...
+--2025-09-02 13:41:52--  https://securitytrails.com/
+Resolving securitytrails.com... 172.66.41.38, 172.66.42.218, 2606:4700:3108::ac42:2ada, ...
 Connecting to securitytrails.com|172.66.41.38|:443... connected.
 HTTP request sent, awaiting response... 403 Forbidden
-2025-09-01 13:41:11 ERROR 403: Forbidden.
+2025-09-02 13:41:52 ERROR 403: Forbidden.
+
+--2025-09-02 13:41:52--  https://zonefiles.io/f/compromised/ip/live/
+Resolving zonefiles.io... 104.21.96.1, 104.21.64.1, 104.21.16.1, ...
+Connecting to zonefiles.io|104.21.96.1|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://securitytrails.com/ [following]
+--2025-09-02 13:41:53--  https://securitytrails.com/
+Resolving securitytrails.com... 172.66.41.38, 172.66.42.218, 2606:4700:3108::ac42:2ada, ...
+Connecting to securitytrails.com|172.66.41.38|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2025-09-02 13:41:54 ERROR 403: Forbidden.
 
