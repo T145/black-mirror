@@ -93,35 +93,35 @@
     <tr>
       <td>BLOCK_DOMAIN</td>
       <td>Punycode domains</td>
-      <td id="BLOCK-DOMAIN-line-count">8,553,652</td>
+      <td id="BLOCK-DOMAIN-line-count">8,555,531</td>
       <td id="BLOCK-DOMAIN-file-size">179M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_DOMAIN.txt">🔗</a></td>
     </tr>
     <tr>
       <td>BLOCK_IPV4</td>
       <td>IPv4 addresses</td>
-      <td id="BLOCK-IPV4-line-count">1,010,549</td>
+      <td id="BLOCK-IPV4-line-count">1,011,317</td>
       <td id="BLOCK-IPV4-file-size">14M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_IPV4.txt">🔗</a></td>
     </tr>
     <tr>
       <td>BLOCK_IPV6</td>
       <td>IPv6 addresses</td>
-      <td id="BLOCK-IPV6-line-count">1,127</td>
-      <td id="BLOCK-IPV6-file-size">35K</td>
+      <td id="BLOCK-IPV6-line-count">1,005</td>
+      <td id="BLOCK-IPV6-file-size">31K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_IPV6.txt">🔗</a></td>
     </tr>
     <tr>
       <td>BLOCK_CIDR4</td>
       <td>IPv4 CIDR blocks</td>
-      <td id="BLOCK-CIDR4-line-count">7,444</td>
-      <td id="BLOCK-CIDR4-file-size">121K</td>
+      <td id="BLOCK-CIDR4-line-count">7,434</td>
+      <td id="BLOCK-CIDR4-file-size">120K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_CIDR4.txt">🔗</a></td>
     </tr>
     <tr>
       <td>BLOCK_CIDR6</td>
       <td>IPv6 CIDR blocks</td>
-      <td id="BLOCK-CIDR6-line-count">188</td>
+      <td id="BLOCK-CIDR6-line-count">189</td>
       <td id="BLOCK-CIDR6-file-size">3.0K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/BLOCK_CIDR6.txt">🔗</a></td>
     </tr>
@@ -142,21 +142,21 @@
     <tr>
       <td>ALLOW_IPV6</td>
       <td>IPv6 addresses</td>
-      <td id="ALLOW-IPV6-line-count">2,942</td>
+      <td id="ALLOW-IPV6-line-count">2,947</td>
       <td id="ALLOW-IPV6-file-size">112K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_IPV6.txt">🔗</a></td>
     </tr>
     <tr>
       <td>ALLOW_CIDR4</td>
       <td>IPv4 CIDR blocks</td>
-      <td id="ALLOW-CIDR4-line-count">7,799</td>
+      <td id="ALLOW-CIDR4-line-count">7,797</td>
       <td id="ALLOW-CIDR4-file-size">120K</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_CIDR4.txt">🔗</a></td>
     </tr>
     <tr>
       <td>ALLOW_CIDR6</td>
       <td>IPv6 CIDR blocks</td>
-      <td id="ALLOW-CIDR6-line-count">155,625</td>
+      <td id="ALLOW-CIDR6-line-count">155,645</td>
       <td id="ALLOW-CIDR6-file-size">2.5M</td>
       <td align="center"><a href="https://github.com/T145/black-mirror/releases/download/latest/ALLOW_CIDR6.txt">🔗</a></td>
     </tr>
