@@ -2188,7 +2188,7 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://hole.cert.pl/domains/domains.txt"
+      "https://hole.cert.pl/domains/v2/domains.txt"
     ],
     "topic": "SECURITY"
   },
@@ -6502,7 +6502,7 @@
       "pihole": "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/tracking-aggressive-extended.txt"
     }
   },
-  "listkr_first_domains": {
+  "listkr_adblocking_first_domains": {
     "active": true,
     "checksums": {},
     "content": {
@@ -6523,11 +6523,11 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://raw.githubusercontent.com/List-KR/List-KR/master/filters-share/1st_domains.txt"
+      "https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/adblocking/filters-share/1st_domains.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "PRIVACY"
   },
-  "listkr_third_domains": {
+  "listkr_adblocking_third_domains": {
     "active": true,
     "checksums": {},
     "content": {
@@ -6548,9 +6548,110 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://raw.githubusercontent.com/List-KR/List-KR/master/filters-share/3rd_domains.txt"
+      "https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/adblocking/filters-share/3rd_domains.txt"
     ],
-    "topic": "SECURITY"
+    "topic": "PRIVACY"
+  },
+  "listkr_analytics_first_domains": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/List-KR/List-KR#list-kr",
+      "homepage": "https://github.com/List-KR/List-KR",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/analytics/filters-share/1st_domains.txt"
+    ],
+    "topic": "PRIVACY"
+  },
+
+  "listkr_analytics_third_domains": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/List-KR/List-KR#list-kr",
+      "homepage": "https://github.com/List-KR/List-KR",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/analytics/filters-share/3rd_domains.txt"
+    ],
+    "topic": "PRIVACY"
+  },
+  "listkr_annoyance_first_domains": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/List-KR/List-KR#list-kr",
+      "homepage": "https://github.com/List-KR/List-KR",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/annoyance/filters-share/1st_domains.txt"
+    ],
+    "topic": "PRIVACY"
+  },
+  "listkr_annoyance_third_domains": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "ADBLOCK",
+        "format": "DOMAIN"
+      }
+    ],
+    "metadata": {
+      "description": "https://github.com/List-KR/List-KR#list-kr",
+      "homepage": "https://github.com/List-KR/List-KR",
+      "license": "gpl-3.0"
+    },
+    "method": "BLOCK",
+    "mirrors": [
+      "https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/annoyance/filters-share/3rd_domains.txt"
+    ],
+    "topic": "PRIVACY"
   },
   "littlecordines_general": {
     "active": true,
@@ -8103,7 +8204,7 @@
     },
     "method": "BLOCK",
     "mirrors": [
-      "https://openphish.com/feed.txt"
+      "https://raw.githubusercontent.com/openphish/public_feed/refs/heads/main/feed.txt"
     ],
     "topic": "SECURITY"
   },
