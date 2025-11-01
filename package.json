@@ -3,7 +3,7 @@
   "scripts": {
     "lint": "pnpm mega-linter-runner -f cupcake",
     "prepare": "husky",
-    "validate:manifest": "npx ajv-cli validate -s data/v2/manifest.schema.json -d data/v2/manifest.json"
+    "validate:manifest": "pnpx ajv-cli validate -s data/v2/manifest.schema.json -d data/v2/manifest.json"
   },
   "devDependencies": {
     "husky": "^9.1.7",
@@ -15,13 +15,13 @@
   },
   "lint-staged": {
     "*.json": [
-      "npx prettier --write"
+      "pnpx prettier --write"
     ],
     "*.js": [
-      "npx prettier --write"
+      "pnpx prettier --write"
     ],
     "*.md": [
-      "npx prettier --write"
+      "pnpx prettier --write"
     ]
   }
 }

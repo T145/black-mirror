@@ -1,4 +1,3 @@
 pnpm run validate:manifest
-npx ajv-cli validate -s data/v2/manifest.schema.json -d data/v2/manifest.json
-npx prettier --write data/v2/manifest.json data/v2/manifest.schema.json
-npx lint-staged
+pnpx prettier --write data/v2/manifest.json data/v2/manifest.schema.json
+pnpx lint-staged
