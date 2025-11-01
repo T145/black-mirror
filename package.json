@@ -14,12 +14,14 @@
     "node": ">=20"
   },
   "lint-staged": {
-    "data/v2/manifest.json": [
-      "npx ajv-cli validate -s data/v2/manifest.schema.json -d data/v2/manifest.json",
-      "npx prettier --write data/v2/manifest.json"
+    "*.json": [
+      "npx prettier --write"
     ],
-    "data/v2/manifest.schema.json": [
-      "npx prettier --write data/v2/manifest.schema.json"
+    "*.js": [
+      "npx prettier --write"
+    ],
+    "*.md": [
+      "npx prettier --write"
     ]
   }
 }
