@@ -1,101 +1,76 @@
---2025-10-31 13:41:10--  https://haas.nic.cz/stats/export/2025/10/2025-10-30.json.gz
+--2025-11-01 13:35:11--  https://haas.nic.cz/stats/export/2025/11/2025-10-31.json.gz
 Resolving haas.nic.cz... 217.31.204.109, 2001:1488:800:400::2:109
 Connecting to haas.nic.cz|217.31.204.109|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 869328 (849K) [text/plain]
-Saving to: ‘haas’
+HTTP request sent, awaiting response... 404 Not Found
+2025-11-01 13:35:11 ERROR 404: Not Found.
 
-     0K .......... .......... .......... .......... ..........  5%  514K 2s
-    50K .......... .......... .......... .......... .......... 11%  514K 1s
-   100K .......... .......... .......... .......... .......... 17%  170M 1s
-   150K .......... .......... .......... .......... .......... 23% 1.54M 1s
-   200K .......... .......... .......... .......... .......... 29%  762K 1s
-   250K .......... .......... .......... .......... .......... 35%  198M 1s
-   300K .......... .......... .......... .......... .......... 41%  474M 0s
-   350K .......... .......... .......... .......... .......... 47%  260M 0s
-   400K .......... .......... .......... .......... .......... 53% 1.56M 0s
-   450K .......... .......... .......... .......... .......... 58%  762K 0s
-   500K .......... .......... .......... .......... .......... 64%  401M 0s
-   550K .......... .......... .......... .......... .......... 70%  400M 0s
-   600K .......... .......... .......... .......... .......... 76%  243M 0s
-   650K .......... .......... .......... .......... .......... 82%  334M 0s
-   700K .......... .......... .......... .......... .......... 88%  320M 0s
-   750K .......... .......... .......... .......... .......... 94%  323M 0s
-   800K .......... .......... .......... .......... ........  100%  606M=0.4s
-
-2025-10-31 13:41:11 (2.12 MB/s) - ‘haas’ saved [869328/869328]
-
---2025-10-31 13:41:17--  https://myip.ms/files/blacklist/general/full_blacklist_database.zip
+--2025-11-01 13:35:17--  https://myip.ms/files/blacklist/general/full_blacklist_database.zip
 Resolving myip.ms... 146.59.166.237, 2001:41d0:303:d9d6:237a::1
 Connecting to myip.ms|146.59.166.237|:443... connected.
 ERROR: cannot verify myip.ms's certificate, issued by ‘CN=GlobalSign GCC R6 AlphaSSL CA 2023,O=GlobalSign nv-sa,C=BE’:
   Unable to locally verify the issuer's authority.
 To connect to myip.ms insecurely, use `--no-check-certificate'.
---2025-10-31 13:41:18--  https://myip.ms/files/bots/live_webcrawlers.txt
+--2025-11-01 13:35:18--  https://myip.ms/files/bots/live_webcrawlers.txt
 Resolving myip.ms... 146.59.166.237, 2001:41d0:303:d9d6:237a::1
 Connecting to myip.ms|146.59.166.237|:443... connected.
 ERROR: cannot verify myip.ms's certificate, issued by ‘CN=GlobalSign GCC R6 AlphaSSL CA 2023,O=GlobalSign nv-sa,C=BE’:
   Unable to locally verify the issuer's authority.
 To connect to myip.ms insecurely, use `--no-check-certificate'.
---2025-10-31 13:41:18--  http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz
-Resolving wget-mirrors.uceprotect.net... 102.213.181.224, 199.187.241.194, 185.248.148.6, ...
-Connecting to wget-mirrors.uceprotect.net|102.213.181.224|:80... connected.
+--2025-11-01 13:35:18--  http://wget-mirrors.uceprotect.net/rbldnsd-all/ips.backscatterer.org.gz
+Resolving wget-mirrors.uceprotect.net... 72.13.86.154, 96.31.84.20, 209.126.213.95, ...
+Connecting to wget-mirrors.uceprotect.net|72.13.86.154|:80... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2025-11-01 13:35:18 ERROR 403: Forbidden.
+
+--2025-11-01 13:35:18--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-1.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net... 72.13.86.154, 209.126.213.95, 185.248.148.6, ...
+Connecting to wget-mirrors.uceprotect.net|72.13.86.154|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 42817 (42K) [application/octet-stream]
-Saving to: ‘uceprotect_backscatterer’
-
-     0K .......... .......... .......... .......... .         100%  111K=0.4s
-
-2025-10-31 13:41:19 (111 KB/s) - ‘uceprotect_backscatterer’ saved [42817/42817]
-
---2025-10-31 13:41:19--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-1.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net... 217.23.49.207, 96.31.84.20, 72.13.86.154, ...
-Connecting to wget-mirrors.uceprotect.net|217.23.49.207|:80... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 170363 (166K) [application/octet-stream]
+Length: 172018 (168K) [text/plain]
 Saving to: ‘uceprotect_level_1’
 
-     0K .......... .......... .......... .......... .......... 30%  248K 0s
-    50K .......... .......... .......... .......... .......... 60%  497K 0s
-   100K .......... .......... .......... .......... .......... 90% 26.6M 0s
-   150K .......... ......                                     100%  161K=0.4s
+     0K .......... .......... .......... .......... .......... 29%  191K 1s
+    50K .......... .......... .......... .......... .......... 59%  255K 0s
+   100K .......... .......... .......... .......... .......... 89%  255K 0s
+   150K .......... .......                                    100%  274K=0.7s
 
-2025-10-31 13:41:19 (410 KB/s) - ‘uceprotect_level_1’ saved [170363/170363]
+2025-11-01 13:35:19 (234 KB/s) - ‘uceprotect_level_1’ saved [172018/172018]
 
---2025-10-31 13:41:19--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net... 185.248.148.6, 66.240.236.50, 38.145.218.88, ...
-Connecting to wget-mirrors.uceprotect.net|185.248.148.6|:80... connected.
+--2025-11-01 13:35:19--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-2.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net... 204.155.151.130, 102.213.181.224, 199.187.241.194, ...
+Connecting to wget-mirrors.uceprotect.net|204.155.151.130|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 198864 (194K) [application/octet-stream]
+Length: 196173 (192K) [text/plain]
 Saving to: ‘uceprotect_level_2’
 
-     0K .......... .......... .......... .......... .......... 25%  187K 1s
-    50K .......... .......... .......... .......... .......... 51%  567K 0s
-   100K .......... .......... .......... .......... .......... 77%  283K 0s
-   150K .......... .......... .......... .......... ....      100%  501K=0.6s
+     0K .......... .......... .......... .......... .......... 26%  245K 1s
+    50K .......... .......... .......... .......... .......... 52%  489K 0s
+   100K .......... .......... .......... .......... .......... 78%  736K 0s
+   150K .......... .......... .......... .......... .         100% 1.19M=0.4s
 
-2025-10-31 13:41:20 (313 KB/s) - ‘uceprotect_level_2’ saved [198864/198864]
+2025-11-01 13:35:20 (469 KB/s) - ‘uceprotect_level_2’ saved [196173/196173]
 
---2025-10-31 13:41:20--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz
-Resolving wget-mirrors.uceprotect.net... 193.138.29.13, 96.31.84.20, 72.13.86.154, ...
+--2025-11-01 13:35:20--  http://wget-mirrors.uceprotect.net/rbldnsd-all/dnsbl-3.uceprotect.net.gz
+Resolving wget-mirrors.uceprotect.net... 193.138.29.13, 96.31.84.20, 199.187.241.194, ...
 Connecting to wget-mirrors.uceprotect.net|193.138.29.13|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 321008 (313K) [application/octet-stream]
+Length: 364789 (356K) [application/octet-stream]
 Saving to: ‘uceprotect_level_3’
 
-     0K .......... .......... .......... .......... .......... 15%  253K 1s
-    50K .......... .......... .......... .......... .......... 31%  252K 1s
-   100K .......... .......... .......... .......... .......... 47%  505K 1s
-   150K .......... .......... .......... .......... .......... 63%  505K 0s
-   200K .......... .......... .......... .......... .......... 79%  505K 0s
-   250K .......... .......... .......... .......... .......... 95%  505K 0s
-   300K .......... ...                                        100% 25.1T=0.8s
+     0K .......... .......... .......... .......... .......... 14%  259K 1s
+    50K .......... .......... .......... .......... .......... 28%  258K 1s
+   100K .......... .......... .......... .......... .......... 42%  518K 1s
+   150K .......... .......... .......... .......... .......... 56%  516K 0s
+   200K .......... .......... .......... .......... .......... 70%  517K 0s
+   250K .......... .......... .......... .......... .......... 84%  517K 0s
+   300K .......... .......... .......... .......... .......... 98%  153M 0s
+   350K ......                                                100% 48.7M=0.8s
 
-2025-10-31 13:41:21 (396 KB/s) - ‘uceprotect_level_3’ saved [321008/321008]
+2025-11-01 13:35:21 (460 KB/s) - ‘uceprotect_level_3’ saved [364789/364789]
 
---2025-10-31 13:41:21--  https://zonefiles.io/f/compromised/domains/live/
+--2025-11-01 13:35:21--  https://zonefiles.io/f/compromised/domains/live/
 Resolving zonefiles.io... failed: No IPv4/IPv6 addresses for host.
 wget: unable to resolve host address ‘zonefiles.io’
---2025-10-31 13:41:21--  https://zonefiles.io/f/compromised/ip/live/
+--2025-11-01 13:35:21--  https://zonefiles.io/f/compromised/ip/live/
 Resolving zonefiles.io... failed: No IPv4/IPv6 addresses for host.
 wget: unable to resolve host address ‘zonefiles.io’
