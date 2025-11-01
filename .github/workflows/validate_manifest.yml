@@ -1,0 +1,38 @@
+---
+name: Validate Manifest
+
+on:
+  #   push:
+  #     paths:
+  #       - "data/v2/manifest.json"
+  #       - "data/v2/manifest.schema.json"
+  pull_request:
+    paths:
+      - "data/v2/manifest.json"
+      - "data/v2/manifest.schema.json"
+  workflow_dispatch:
+
+permissions: read-all
+
+jobs:
+  validate_manifest:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+
+      - name: Setup Node.js
+        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install -g ajv-cli
+
+      - name: Validate manifest against schema
+        run: ajv-cli validate -s data/v2/manifest.schema.json -d data/v2/manifest.json
+
+      - name: Validate JSON syntax
+        run: |
+          python3 -m json.tool data/v2/manifest.json >/dev/null || (echo "Manifest JSON is invalid" && exit 1)
+          python3 -m json.tool data/v2/manifest.schema.json >/dev/null || (echo "Manifest schema JSON is invalid" && exit 1)

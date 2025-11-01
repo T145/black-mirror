@@ -1,3 +1,27 @@
+# Development Setup
+
+## Pre-commit Validation
+
+This project uses [husky](https://typicode.github.io/husky/) and [lint-staged](https://github.com/lint-staged/lint-staged) to validate manifest changes before commits.
+
+### Setup
+
+```bash
+pnpm install
+```
+
+### What gets validated
+
+- **Every pre-commit**: Full manifest validation against schema
+- **Staged manifest files**: Schema validation and JSON syntax check
+- **Staged schema files**: JSON syntax check
+
+### Manual validation
+
+```bash
+pnpm lint
+```
+
 # How to Report
 
 | **Problem**              | **Forum**                       | **Required Label** |

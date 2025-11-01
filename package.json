@@ -1,12 +1,25 @@
 {
   "private": true,
   "scripts": {
-    "lint": "pnpm mega-linter-runner -f cupcake"
+    "lint": "pnpm mega-linter-runner -f cupcake",
+    "prepare": "husky",
+    "validate:manifest": "npx ajv-cli validate -s data/v2/manifest.schema.json -d data/v2/manifest.json"
   },
   "devDependencies": {
-    "mega-linter-runner": "^8.7.0"
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
+    "mega-linter-runner": "^9.1.0"
   },
   "engines": {
     "node": ">=20"
+  },
+  "lint-staged": {
+    "data/v2/manifest.json": [
+      "npx ajv-cli validate -s data/v2/manifest.schema.json -d data/v2/manifest.json",
+      "python3 -m json.tool data/v2/manifest.json"
+    ],
+    "data/v2/manifest.schema.json": [
+      "python3 -m json.tool data/v2/manifest.schema.json"
+    ]
   }
 }
