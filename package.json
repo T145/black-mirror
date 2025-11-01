@@ -1,9 +1,10 @@
 {
+  "name": "black-mirror",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "lint": "pnpm mega-linter-runner -f cupcake",
-    "prepare": "husky",
-    "validate:manifest": "pnpx ajv-cli validate -s data/v2/manifest.schema.json -d data/v2/manifest.json"
+    "prepare": "husky"
   },
   "devDependencies": {
     "husky": "^9.1.7",

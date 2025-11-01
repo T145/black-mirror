@@ -2,7 +2,7 @@
 
 ## Pre-commit Validation
 
-This project uses [husky](https://typicode.github.io/husky/) and [lint-staged](https://github.com/lint-staged/lint-staged) to validate manifest changes before commits.
+This project uses [husky](https://typicode.github.io/husky/) to run [MegaLinter](https://megalinter.io) and validate manifests before commits.
 
 ### Setup
 
@@ -12,9 +12,7 @@ pnpm install
 
 ### What gets validated
 
-- **Every pre-commit**: Full manifest validation against schema
-- **Staged manifest files**: Schema validation and JSON syntax check
-- **Staged schema files**: JSON syntax check
+- **Every pre-commit**: Manifest validation against schema and MegaLinter checks (cupcake flavor)
 
 ### Manual validation
 
