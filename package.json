@@ -7,21 +7,9 @@
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.6",
     "mega-linter-runner": "^9.1.0"
   },
   "engines": {
     "node": ">=20"
-  },
-  "lint-staged": {
-    "*.json": [
-      "pnpx prettier --write"
-    ],
-    "*.js": [
-      "pnpx prettier --write"
-    ],
-    "*.md": [
-      "pnpx prettier --write"
-    ]
   }
 }
