@@ -4,11 +4,7 @@ FROM golang:1.24.5 AS golang
 WORKDIR "/src"
 
 # https://github.com/johnkerl/miller
-RUN git config --global advice.detachedHead false; \
-    git clone --depth 1 -b v6.14.0 https://github.com/johnkerl/miller.git .; \
-    # https://github.com/johnkerl/miller?tab=readme-ov-file#building-from-source
-    go install github.com/johnkerl/miller/v6/cmd/mlr; \
-    rm -rf ./*; \
+RUN go install github.com/johnkerl/miller/v6/cmd/mlr@v6.15.0; \
     # https://github.com/mikefarah/yq/
     go install -v github.com/mikefarah/yq/v4@v4.46.1; \
     # https://github.com/ipinfo/cli
@@ -191,21 +187,26 @@ RUN curl -fL https://cpan.metacpan.org/authors/id/B/BO/BOOK/perl-5.42.0.tar.gz -
     echo 'e093ef184d7f9a1b9797e2465296f55510adb6dab8842b0c3ed53329663096dc *perl-5.42.0.tar.gz' | sha256sum --strict --check -; \
     tar --strip-components=1 -xaf perl-5.42.0.tar.gz -C /usr/src/perl; \
     rm perl-5.42.0.tar.gz; \
-    cat *.patch | patch -p1 || : ; \
+    cat ./*.patch | patch -p1 || : ; \
     gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; \
     archBits="$(dpkg-architecture --query DEB_BUILD_ARCH_BITS)"; \
     archFlag="$([ "$archBits" = '64' ] && echo '-Duse64bitall' || echo '-Duse64bitint')"; \
     ./Configure -Darchname="$gnuArch" "$archFlag" -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -des; \
-    make -j$(nproc); \
-    make install; \
-    cd /usr/src; \
-    curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz; \
+    make -j"$(nproc)"; \
+    make install
+
+WORKDIR /usr/src
+RUN curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz; \
     echo '963e63c6e1a8725ff2f624e9086396ae150db51dd0a337c3781d09a994af05a5 *App-cpanminus-1.7047.tar.gz' | sha256sum --strict --check -; \
-    tar -xzf App-cpanminus-1.7047.tar.gz && cd App-cpanminus-1.7047; \
-    perl -pi -E 's{http://(www\.cpan\.org|backpan\.perl\.org|cpan\.metacpan\.org|fastapi\.metacpan\.org|cpanmetadb\.plackperl\.org)}{https://$1}g' bin/cpanm; \
+    tar -xzf App-cpanminus-1.7047.tar.gz
+
+WORKDIR /usr/src/App-cpanminus-1.7047
+RUN perl -pi -E 's{http://(www\.cpan\.org|backpan\.perl\.org|cpan\.metacpan\.org|fastapi\.metacpan\.org|cpanmetadb\.plackperl\.org)}{https://$1}g' bin/cpanm; \
     perl -pi -E 's{try_lwp=>1}{try_lwp=>0}g' bin/cpanm; \
-    perl bin/cpanm . && cd /root; \
-    curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997017/cpm -o /usr/local/bin/cpm; \
+    perl bin/cpanm .
+
+WORKDIR /root
+RUN curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997017/cpm -o /usr/local/bin/cpm; \
     # sha256 checksum is from docker-perl team, cf https://github.com/docker-library/official-images/pull/12612#issuecomment-1158288299
     echo 'e3931a7d994c96f9c74b97d1b5b75a554fc4f06eadef1eca26ecc0bdcd1f2d11 */usr/local/bin/cpm' | sha256sum --strict --check -; \
     chmod +x /usr/local/bin/cpm; \
@@ -218,7 +219,7 @@ RUN curl -fL https://cpan.metacpan.org/authors/id/B/BO/BOOK/perl-5.42.0.tar.gz -
     cpanm Net::IDN::Encode; \
     cpanm Net::Works::Network; \
     cpanm Domain::PublicSuffix; \
-    cpanm Text::Trim;
+    cpanm Text::Trim
 
 WORKDIR "/root"
 

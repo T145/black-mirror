@@ -16,10 +16,10 @@
   "lint-staged": {
     "data/v2/manifest.json": [
       "npx ajv-cli validate -s data/v2/manifest.schema.json -d data/v2/manifest.json",
-      "python3 -m json.tool data/v2/manifest.json"
+      "npx prettier --write data/v2/manifest.json"
     ],
     "data/v2/manifest.schema.json": [
-      "python3 -m json.tool data/v2/manifest.schema.json"
+      "npx prettier --write data/v2/manifest.schema.json"
     ]
   }
 }

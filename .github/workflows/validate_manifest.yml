@@ -34,5 +34,5 @@ jobs:
 
       - name: Validate JSON syntax
         run: |
-          python3 -m json.tool data/v2/manifest.json >/dev/null || (echo "Manifest JSON is invalid" && exit 1)
-          python3 -m json.tool data/v2/manifest.schema.json >/dev/null || (echo "Manifest schema JSON is invalid" && exit 1)
+          npx prettier --check data/v2/manifest.json || (echo "Manifest JSON is invalid" && exit 1)
+          npx prettier --check data/v2/manifest.schema.json || (echo "Manifest schema JSON is invalid" && exit 1)

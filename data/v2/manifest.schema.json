@@ -1,149 +1,123 @@
 {
-    [1m"$schema"[0m: [32m"http://json-schema.org/draft-07/schema#"[0m,
-    [1m"$id"[0m: [32m"https://raw.githubusercontent.com/T145/black-mirror/master/data/v2/manifest.schema.json"[0m,
-    [1m"title"[0m: [32m"Black Mirror Manifest Schema"[0m,
-    [1m"description"[0m: [32m"JSON Schema for Black Mirror manifest files defining blacklist/whitelist sources"[0m,
-    [1m"type"[0m: [32m"object"[0m,
-    [1m"patternProperties"[0m: {
-        [1m"^[a-zA-Z0-9_-]+$"[0m: {
-            [1m"type"[0m: [32m"object"[0m,
-            [1m"properties"[0m: {
-                [1m"active"[0m: {
-                    [1m"type"[0m: [32m"boolean"[0m,
-                    [1m"description"[0m: [32m"Whether this source is currently active and should be processed"[0m
-                },
-                [1m"checksums"[0m: {
-                    [1m"type"[0m: [32m"object"[0m,
-                    [1m"description"[0m: [32m"Checksums for verifying source integrity (currently unused)"[0m,
-                    [1m"additionalProperties"[0m: {
-                        [1m"type"[0m: [32m"string"[0m
-                    }
-                },
-                [1m"content"[0m: {
-                    [1m"type"[0m: [32m"object"[0m,
-                    [1m"properties"[0m: {
-                        [1m"filter"[0m: {
-                            [1m"type"[0m: [32m"string"[0m,
-                            [1m"description"[0m: [32m"Content filtering strategy to apply"[0m
-                        },
-                        [1m"retriever"[0m: {
-                            [1m"type"[0m: [32m"string"[0m,
-                            [1m"description"[0m: [32m"Download tool to use for retrieving the source"[0m
-                        },
-                        [1m"type"[0m: {
-                            [1m"type"[0m: [32m"string"[0m,
-                            [1m"enum"[0m: [
-                                [32m"TEXT"[0m,
-                                [32m"JSON"[0m,
-                                [32m"CSV"[0m,
-                                [32m"YAML"[0m
-                            ],
-                            [1m"description"[0m: [32m"Content type of the source"[0m
-                        }
-                    },
-                    [1m"required"[0m: [
-                        [32m"filter"[0m,
-                        [32m"retriever"[0m,
-                        [32m"type"[0m
-                    ],
-                    [1m"additionalProperties"[0m: [1;34mfalse[0m
-                },
-                [1m"formats"[0m: {
-                    [1m"type"[0m: [32m"array"[0m,
-                    [1m"items"[0m: {
-                        [1m"type"[0m: [32m"object"[0m,
-                        [1m"properties"[0m: {
-                            [1m"filter"[0m: {
-                                [1m"type"[0m: [32m"string"[0m,
-                                [1m"description"[0m: [32m"Format-specific filtering to apply"[0m
-                            },
-                            [1m"format"[0m: {
-                                [1m"type"[0m: [32m"string"[0m,
-                                [1m"enum"[0m: [
-                                    [32m"DOMAIN"[0m,
-                                    [32m"IPV4"[0m,
-                                    [32m"CIDR4"[0m,
-                                    [32m"IPV6"[0m,
-                                    [32m"CIDR6"[0m
-                                ],
-                                [1m"description"[0m: [32m"Output format for the processed data"[0m
-                            }
-                        },
-                        [1m"required"[0m: [
-                            [32m"filter"[0m,
-                            [32m"format"[0m
-                        ],
-                        [1m"additionalProperties"[0m: [1;34mfalse[0m
-                    },
-                    [1m"minItems"[0m: [33m1[0m,
-                    [1m"description"[0m: [32m"List of output formats and their processing rules"[0m
-                },
-                [1m"metadata"[0m: {
-                    [1m"type"[0m: [32m"object"[0m,
-                    [1m"properties"[0m: {
-                        [1m"description"[0m: {
-                            [1m"type"[0m: [32m"string"[0m,
-                            [1m"description"[0m: [32m"URL to the source's description or documentation"[0m
-                        },
-                        [1m"homepage"[0m: {
-                            [1m"type"[0m: [32m"string"[0m,
-                            [1m"description"[0m: [32m"URL to the source's homepage"[0m
-                        },
-                        [1m"license"[0m: {
-                            [1m"type"[0m: [32m"string"[0m,
-                            [1m"description"[0m: [32m"License identifier for the source (e.g., 'mpl-2.0', 'agpl-3.0')"[0m
-                        }
-                    },
-                    [1m"required"[0m: [
-                        [32m"description"[0m,
-                        [32m"homepage"[0m,
-                        [32m"license"[0m
-                    ],
-                    [1m"additionalProperties"[0m: [1;34mtrue[0m,
-                    [1m"description"[0m: [32m"Metadata about the source"[0m
-                },
-                [1m"method"[0m: {
-                    [1m"type"[0m: [32m"string"[0m,
-                    [1m"enum"[0m: [
-                        [32m"ALLOW"[0m,
-                        [32m"BLOCK"[0m
-                    ],
-                    [1m"description"[0m: [32m"Whether this source defines entries to allow or block"[0m
-                },
-                [1m"mirrors"[0m: {
-                    [1m"type"[0m: [32m"array"[0m,
-                    [1m"items"[0m: {
-                        [1m"type"[0m: [32m"string"[0m
-                    },
-                    [1m"minItems"[0m: [33m1[0m,
-                    [1m"description"[0m: [32m"List of URLs where the source can be downloaded"[0m
-                },
-                [1m"topic"[0m: {
-                    [1m"type"[0m: [32m"string"[0m,
-                    [1m"description"[0m: [32m"Category/topic this source addresses"[0m
-                },
-                [1m"variants"[0m: {
-                    [1m"type"[0m: [32m"object"[0m,
-                    [1m"patternProperties"[0m: {
-                        [1m"^[a-zA-Z0-9_-]+$"[0m: {
-                            [1m"type"[0m: [32m"string"[0m,
-                            [1m"description"[0m: [32m"Variant-specific URL for this source"[0m
-                        }
-                    },
-                    [1m"description"[0m: [32m"Platform-specific or variant URLs for this source"[0m
-                }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Black Mirror Manifest Schema",
+  "description": "JSON Schema for Black Mirror manifest files defining blacklist/whitelist sources",
+  "type": "object",
+  "patternProperties": {
+    "^[a-zA-Z0-9_-]+$": {
+      "type": "object",
+      "properties": {
+        "active": {
+          "type": "boolean",
+          "description": "Whether this source is currently active and should be processed"
+        },
+        "checksums": {
+          "type": "object",
+          "description": "Checksums for verifying source integrity (currently unused)",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "filter": {
+              "type": "string",
+              "description": "Content filtering strategy to apply"
             },
-            [1m"required"[0m: [
-                [32m"checksums"[0m,
-                [32m"content"[0m,
-                [32m"formats"[0m,
-                [32m"metadata"[0m,
-                [32m"method"[0m,
-                [32m"mirrors"[0m,
-                [32m"topic"[0m
-            ],
-            [1m"additionalProperties"[0m: [1;34mtrue[0m
+            "retriever": {
+              "type": "string",
+              "description": "Download tool to use for retrieving the source"
+            },
+            "type": {
+              "type": "string",
+              "enum": ["TEXT", "JSON", "CSV", "YAML"],
+              "description": "Content type of the source"
+            }
+          },
+          "required": ["filter", "retriever", "type"],
+          "additionalProperties": false
+        },
+        "formats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "filter": {
+                "type": "string",
+                "description": "Format-specific filtering to apply"
+              },
+              "format": {
+                "type": "string",
+                "enum": ["DOMAIN", "IPV4", "CIDR4", "IPV6", "CIDR6"],
+                "description": "Output format for the processed data"
+              }
+            },
+            "required": ["filter", "format"],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "description": "List of output formats and their processing rules"
+        },
+        "metadata": {
+          "type": "object",
+          "properties": {
+            "description": {
+              "type": "string",
+              "description": "URL to the source's description or documentation"
+            },
+            "homepage": {
+              "type": "string",
+              "description": "URL to the source's homepage"
+            },
+            "license": {
+              "type": "string",
+              "description": "License identifier for the source (e.g., 'mpl-2.0', 'agpl-3.0')"
+            }
+          },
+          "required": ["description", "homepage", "license"],
+          "additionalProperties": true,
+          "description": "Metadata about the source"
+        },
+        "method": {
+          "type": "string",
+          "enum": ["ALLOW", "BLOCK"],
+          "description": "Whether this source defines entries to allow or block"
+        },
+        "mirrors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "description": "List of URLs where the source can be downloaded"
+        },
+        "topic": {
+          "type": "string",
+          "description": "Category/topic this source addresses"
+        },
+        "variants": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-zA-Z0-9_-]+$": {
+              "type": "string",
+              "description": "Variant-specific URL for this source"
+            }
+          },
+          "description": "Platform-specific or variant URLs for this source"
         }
-    },
-    [1m"additionalProperties"[0m: [1;34mfalse[0m
+      },
+      "required": [
+        "checksums",
+        "content",
+        "formats",
+        "metadata",
+        "method",
+        "mirrors",
+        "topic"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
 }
