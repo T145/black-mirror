@@ -4,7 +4,7 @@ FROM golang:1.24.5 AS golang
 WORKDIR "/src"
 
 # https://github.com/johnkerl/miller
-RUN go install github.com/johnkerl/miller/v6/cmd/mlr@v6.15.0; \
+RUN go install -v github.com/johnkerl/miller/v6/cmd/mlr@v6.15.0; \
     # https://github.com/mikefarah/yq/
     go install -v github.com/mikefarah/yq/v4@v4.46.1; \
     # https://github.com/ipinfo/cli
@@ -26,10 +26,14 @@ FROM buildpack-deps:stable AS utils
 WORKDIR "/root"
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-# https://oletange.wordpress.com/2018/03/28/excuses-for-not-installing-gnu-parallel/
-# https://git.savannah.gnu.org/cgit/parallel.git/tree/README
-# https://www.gnu.org/software/parallel/checksums/
-RUN curl -sSL http://pi.dk/3/ | bash && find /usr/local/bin/ -type f ! -name 'par*' -delete;
+# Install GNU parallel from latest source (skip GPG verification for Docker builds)
+RUN set -e; \
+    wget -q http://ftpmirror.gnu.org/parallel/parallel-latest.tar.bz2; \
+    tar -xf parallel-latest.tar.bz2; \
+    dir=$(find . -maxdepth 1 -type d -name 'parallel-*' | head -1 | xargs basename); \
+    "$dir/configure" && make -C "$dir" && make -C "$dir" install; \
+    rm -rf parallel-*; \
+    find /usr/local/bin/ -type f ! -name 'par*' -delete;
 
 RUN apt-get -yq update --no-allow-insecure-repositories; \
     # Build WGet from source to enable c-ares support
