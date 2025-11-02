@@ -26,8 +26,6 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
-      - name: Sort manifest
-        run: jaq -ir 'to_entries | sort_by(.value) | sort_by(.key) | from_entries' data/v2/manifest.json
       - name: Document manifest
         run: |
           # shellcheck disable=SC2016

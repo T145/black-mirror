@@ -31,7 +31,7 @@ Acquire::CompressionTypes::Order:: "gz";
 // apt to ignore suggestions when deciding which dependencies prevent deletion.
 Acquire::Languages "none";
 
-// Give more chances to succeed since Parrot sometimes catches when mirror cycling.
+// Give more chances to succeed since some mirrors may be temporarily unavailable.
 Acquire::Retries "4";
 
 // https://unix.stackexchange.com/questions/416815/force-non-interactive-dpkg-configure-when-using-apt-get-install

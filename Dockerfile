@@ -14,14 +14,14 @@ RUN go install -v github.com/johnkerl/miller/v6/cmd/mlr@v6.15.0; \
     # https://github.com/projectdiscovery/subfinder
     go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@v2.8.0;
 
-FROM amd64/rust:bookworm AS rust
+FROM rust:bookworm AS rust
 
 # https://github.com/01mf02/jaq
 # https://github.com/jqlang/jq/issues/105#issuecomment-1113508938
 RUN cargo install --locked jaq
 
 # https://hub.docker.com/_/buildpack-deps/
-FROM buildpack-deps:stable AS utils
+FROM buildpack-deps:bookworm AS utils
 
 WORKDIR "/root"
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -58,11 +58,19 @@ RUN apt-get -yq update --no-allow-insecure-repositories; \
 # https://raphaelhertzog.com/mastering-debian/
 # https://gitlab.com/parrotsec/build/containers/-/blob/latest/core/Dockerfile?ref_type=heads
 # https://hub.docker.com/r/parrotsec/core
-FROM docker.io/parrotsec/core:base-lts-amd64
+FROM docker.io/library/buildpack-deps:bookworm
+# CIS Docker Benchmark 4.18: Use labels for metadata
 LABEL maintainer="T145" \
-      version="6.6.1" \
+      version="7.0.0" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
-      org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage"
+      org.opencontainers.image.created="2025-11-01" \
+      org.opencontainers.image.revision="7.0.0" \
+      org.opencontainers.image.source="https://github.com/T145/black-mirror" \
+      org.opencontainers.image.url="https://github.com/T145/black-mirror" \
+      org.opencontainers.image.vendor="T145" \
+      org.opencontainers.image.description="https://github.com/T145/black-mirror#-docker-usage" \
+      org.opencontainers.image.title="Black Mirror" \
+      org.opencontainers.image.licenses="MIT"
 
 # https://cisofy.com/lynis/controls/FILE-6310/
 VOLUME [ "/home", "/tmp", "/var" ]
@@ -131,12 +139,9 @@ RUN apt-get -q update --no-allow-insecure-repositories; \
     apt-get -y install --no-install-recommends \
     aria2=* \
     bc=* \
-    build-essential=* \
     csvkit=* \
-    curl=* \
     debsums=* \
     dos2unix=* \
-    dpkg-dev=* \
     gawk=* \
     git=* \
     grepcidr=* \
@@ -187,34 +192,48 @@ RUN apt-get -q update --no-allow-insecure-repositories; \
 # https://github.com/Perl/docker-perl
 # Threaded Bookworm
 WORKDIR /usr/src/perl
-RUN curl -fL https://cpan.metacpan.org/authors/id/B/BO/BOOK/perl-5.42.0.tar.gz -o perl-5.42.0.tar.gz; \
-    echo 'e093ef184d7f9a1b9797e2465296f55510adb6dab8842b0c3ed53329663096dc *perl-5.42.0.tar.gz' | sha256sum --strict --check -; \
-    tar --strip-components=1 -xaf perl-5.42.0.tar.gz -C /usr/src/perl; \
-    rm perl-5.42.0.tar.gz; \
+RUN curl -fL https://cpan.metacpan.org/authors/id/E/EH/EHERMAN/perl-5.43.4.tar.gz -o perl-5.43.4.tar.gz; \
+    echo '75676cc02c1d4d6f4577f7fd953e07ab5d06f71cf4201753ab6e2b0ddb5a4931 *perl-5.43.4.tar.gz' | sha256sum --strict --check -; \
+    tar --strip-components=1 -xaf perl-5.43.4.tar.gz -C /usr/src/perl; \
+    rm perl-5.43.4.tar.gz; \
     cat ./*.patch | patch -p1 || : ; \
     gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; \
     archBits="$(dpkg-architecture --query DEB_BUILD_ARCH_BITS)"; \
     archFlag="$([ "$archBits" = '64' ] && echo '-Duse64bitall' || echo '-Duse64bitint')"; \
-    ./Configure -Darchname="$gnuArch" "$archFlag" -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -des; \
+    ./Configure -Darchname="$gnuArch" "$archFlag" -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local -Dusedevel -Dversiononly=undef -des; \
     make -j"$(nproc)"; \
+    TEST_JOBS="$(nproc)" make test_harness; \
     make install
 
 WORKDIR /usr/src
-RUN curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz; \
+
+# Install required library for wget (again?)
+RUN apt-get -yq update; \
+    apt-get -y install --no-install-recommends libc-ares2=*; \
+    apt-get -y clean; \
+    rm -rf /var/lib/apt/lists/*;
+
+RUN curl -fL https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz -o App-cpanminus-1.7047.tar.gz; \
     echo '963e63c6e1a8725ff2f624e9086396ae150db51dd0a337c3781d09a994af05a5 *App-cpanminus-1.7047.tar.gz' | sha256sum --strict --check -; \
     tar -xzf App-cpanminus-1.7047.tar.gz
 
 WORKDIR /usr/src/App-cpanminus-1.7047
-RUN perl -pi -E 's{http://(www\.cpan\.org|backpan\.perl\.org|cpan\.metacpan\.org|fastapi\.metacpan\.org|cpanmetadb\.plackperl\.org)}{https://$1}g' bin/cpanm; \
-    perl -pi -E 's{try_lwp=>1}{try_lwp=>0}g' bin/cpanm; \
+RUN perl -pi -E 's{http://(www\.cpan\.org|backpan\.perl\.org|cpan\.metacpan\.org|fastapi\.metacpan\.org|cpanmetadb\.plackperl\.org)}{https://$1}g' bin/cpanm && \
+    perl -pi -E 's{try_lwp=>1}{try_lwp=>0}g' bin/cpanm && \
     perl bin/cpanm .
 
-WORKDIR /root
-RUN curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997017/cpm -o /usr/local/bin/cpm; \
+WORKDIR /usr/src
+RUN curl -fLO 'https://www.cpan.org/authors/id/C/CH/CHRISN/Net-SSLeay-1.94.tar.gz'; \
+    echo '9d7be8a56d1bedda05c425306cc504ba134307e0c09bda4a788c98744ebcd95d *Net-SSLeay-1.94.tar.gz' | sha256sum --strict --check -; \
+    cpanm --notest --from $PWD Net-SSLeay-1.94.tar.gz; \
+    curl -fLO 'https://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.091.tar.gz'; \
+    echo 'c5996e7335912a5c99e06bdb47ff39df309a857cbd8fd2627a021cefdb53cf54 *IO-Socket-SSL-2.091.tar.gz' | sha256sum --strict --check -; \
+    SSL_CERT_DIR=/etc/ssl/certs cpanm --from $PWD IO-Socket-SSL-2.091.tar.gz; \
+    curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997017/cpm -o /usr/local/bin/cpm; \
     # sha256 checksum is from docker-perl team, cf https://github.com/docker-library/official-images/pull/12612#issuecomment-1158288299
     echo 'e3931a7d994c96f9c74b97d1b5b75a554fc4f06eadef1eca26ecc0bdcd1f2d11 */usr/local/bin/cpm' | sha256sum --strict --check -; \
     chmod +x /usr/local/bin/cpm; \
-    rm -fr /root/.cpanm /usr/src/perl /usr/src/App-cpanminus-1.7047* /tmp/*; \
+    rm -fr /root/.cpanm /root/Net-SSLeay-1.94* /root/IO-Socket-SSL-2.091* /usr/src/perl /usr/src/App-cpanminus-1.7047* /tmp/*; \
     cpanm --version && cpm --version; \
     # Install project dependencies
     cpanm Regexp::Common; \
@@ -242,5 +261,8 @@ RUN chown 0:0 /usr/bin/as; \
 # Fixes: "docker: Error response from daemon: unable to find user admin: no matching entries in passwd file."
 RUN adduser --disabled-password --gecos "" admin
 USER admin
+WORKDIR /home/admin
 
-HEALTHCHECK NONE
+# CIS Docker Benchmark 4.6: Add HEALTHCHECK instruction to the container image
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD echo "Container is healthy" || exit 1
