@@ -21,6 +21,7 @@
 - \[docs\]: Outdated/Dead links. [\#263](https://github.com/T145/black-mirror/issues/263)
 - \[list\]:  Add lists from Hydra Dragon Antivirus [\#216](https://github.com/T145/black-mirror/issues/216)
 - Track down Windscribe's Social & Cryptominers lists [\#27](https://github.com/T145/black-mirror/issues/27)
+- \[feature\]: Create a JSON schema file for sources.json [\#24](https://github.com/T145/black-mirror/issues/24)
 
 **Merged pull requests:**
 
