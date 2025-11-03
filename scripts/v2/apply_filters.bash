@@ -23,12 +23,36 @@ get_ipv6_cidrs() {
 	ipinfo grepip -6ho --cidrs-only --nocolor
 }
 
+extract_code_blocks() {
+	htmlq --text code
+}
+
+extract_7z() {
+	local archive_path archive tmpdir
+
+	archive_path="$1"
+	[ -f "$archive_path" ] || return 1
+	archive=$(cd "$(dirname "$archive_path")" && pwd)/"$(basename "$archive_path")"
+	tmpdir=$(mktemp -d)
+
+	if ! (cd "$tmpdir" && ouch decompress "$archive") >/dev/null 2>&1; then
+		rm -rf "$tmpdir"
+		return 1
+	fi
+
+	find "$tmpdir" -type f -print0 |
+		sort -z |
+		xargs -0 -r cat
+
+	rm -rf "$tmpdir"
+}
+
 get_domains_from_urls() {
-	perl5.42.0 -MData::Validate::Domain=is_domain -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_domain($3, { domain_private_tld => { onion => 1 } })}'
+	perl -MData::Validate::Domain=is_domain -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_domain($3, { domain_private_tld => { onion => 1 } })}'
 }
 
 get_ipv4s_from_urls() {
-	perl5.42.0 -MData::Validate::IP=is_ipv4 -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_ipv4($3)}'
+	perl -MData::Validate::IP=is_ipv4 -MRegexp::Common=URI -nE 'while (/$RE{URI}{HTTP}{-scheme => "https?|udp"}{-keep}/g) {say $3 if is_ipv4($3)}'
 }
 
 hostsblock() {
@@ -57,7 +81,7 @@ process_list() {
 
 	case "$CONTENT_FILTER" in
 	'NONE') cat -s "$FILE_PATH" ;;
-	'7Z') 7za -y -so e "$FILE_PATH" ;;
+	'7Z') extract_7z "$FILE_PATH" ;;
 	'ZIP') zcat "$FILE_PATH" ;;
 	'GZIP') pigz -cd "$FILE_PATH" ;;
 	'SQUIDGUARD') tar -xOzf "$FILE_PATH" --wildcards-match-slash --wildcards '*/domains' '*/urls' ;;
@@ -84,8 +108,8 @@ process_list() {
 			'GREP_CIDR4') get_ipv4_cidrs ;;
 			'GREP_CIDR6') get_ipv6_cidrs ;;
 			'BOTVIRJ_IPV4') mawk -F'|' '{print $1}' ;;
-			'CRYPTOLAEMUS_DOMAIN') hxextract code /dev/stdin | head -n -1 | tail -n +6 ;;
-			'CRYPTOLAEMUS_IPV4') hxextract code /dev/stdin | head -n -1 | tail -n +6 | get_ipv4s ;;
+			'CRYPTOLAEMUS_DOMAIN') extract_code_blocks | head -n -1 | tail -n +6 ;;
+			'CRYPTOLAEMUS_IPV4') extract_code_blocks | head -n -1 | tail -n +6 | get_ipv4s ;;
 			'CYBERCRIME_DOMAIN') mawk -F/ '{print $1}' ;;
 			'CYBERCRIME_IPV4') mawk -F/ '{split($1,a,":");print a[1]}' | get_ipv4s ;;
 			'DATAPLANE_IPV4') mawk -F'|' '/^[^#]/{gsub(/ /,""); print $3}' ;;
@@ -215,22 +239,22 @@ process_list() {
 		'IPV4')
 			case "$LIST_METHOD" in
 			'BLOCK')
-				perl5.42.0 -MData::Validate::IP=is_public_ipv4 -nE 'chomp; if(defined($_) and is_public_ipv4($_)) {say $_;}'
+				perl -MData::Validate::IP=is_public_ipv4 -nE 'chomp; if(defined($_) and is_public_ipv4($_)) {say $_;}'
 				;;
 			# Ensure bogons get whitelisted
 			'ALLOW')
-				perl5.42.0 -MData::Validate::IP=is_ipv4 -nE 'chomp; if(defined($_) and is_ipv4($_)) {say $_;}'
+				perl -MData::Validate::IP=is_ipv4 -nE 'chomp; if(defined($_) and is_ipv4($_)) {say $_;}'
 				;;
 			esac
 			;;
 		'IPV6')
 			case "$LIST_METHOD" in
 			'BLOCK')
-				perl5.42.0 -MData::Validate::IP=is_public_ipv6 -nE 'chomp; if(defined($_) and is_public_ipv6($_)) {say $_;}'
+				perl -MData::Validate::IP=is_public_ipv6 -nE 'chomp; if(defined($_) and is_public_ipv6($_)) {say $_;}'
 				;;
 			# Ensure bogons get whitelisted
 			'ALLOW')
-				perl5.42.0 -MData::Validate::IP=is_ipv6 -nE 'chomp; if(defined($_) and is_ipv6($_)) {say $_;}'
+				perl -MData::Validate::IP=is_ipv6 -nE 'chomp; if(defined($_) and is_ipv6($_)) {say $_;}'
 				;;
 			esac
 			;;

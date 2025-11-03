@@ -29,7 +29,7 @@ readonly -a FORMATS
 
 # https://github.com/ildar-shaimordanov/perl-utils#sponge
 sponge() {
-	perl5.42.0 -ne '
+	perl -ne '
 	push @lines, $_;
 	END {
 		open(OUT, ">$file")
@@ -106,7 +106,7 @@ main() {
 						select(.value.content.retriever == "ARIA2" and .value.method == $method and .value.active) |
 						{key, mirrors: .value.mirrors} |
 						(.mirrors | join("\t")), " out=\(.key)"' data/v2/manifest.json |
-						aria2c -i- -d "$cache" --conf-path='./configs/aria2.conf'
+						aria2c -i- -d "$cache" --conf-path='./scripts/configs/aria2.conf'
 					;;
 				# 'HLC_MODIFIERS')
 				# 	echo -n "{\"name\":\"Blocklist\",\"sources\":[" >>"$TMP"
@@ -123,8 +123,8 @@ main() {
 						"\(.key)#\(.mirror)"' data/v2/manifest.json |
 						while IFS='#' read -r key mirror; do
 							case "$retriever" in
-							'WGET') wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror" ;;
-							'INSECURE_WGET') wget -P "$cache" --no-check-certificate --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror" ;;
+							'WGET') wget -P "$cache" --config='./scripts/configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror" ;;
+							'INSECURE_WGET') wget -P "$cache" --no-check-certificate --config='./scripts/configs/wget.conf' -a 'logs/wget.log' -O "$key" "$mirror" ;;
 							'ASN_QUERY')
 								curl -sSL "$mirror" | mawk '/^[^[:space:]|^#|^!|^;|^$|^:]/{print $1}' |
 									while read -r asn; do whois -h whois.radb.net -- "-i origin ${asn}"; done |
@@ -136,7 +136,7 @@ main() {
 								local TARGET
 								DATE="$(date +'%Y/%m')"
 								TARGET="$(date --date='yesterday' +'%Y-%m-%d')"
-								wget -P "$cache" --config='./configs/wget.conf' -a 'logs/wget.log' -O "$key" "https://haas.nic.cz/stats/export/${DATE}/${TARGET}.json.gz"
+								wget -P "$cache" --config='./scripts/configs/wget.conf' -a 'logs/wget.log' -O "$key" "https://haas.nic.cz/stats/export/${DATE}/${TARGET}.json.gz"
 								;;
 							'CIRCL')
 								curl -sSL "$mirror" |

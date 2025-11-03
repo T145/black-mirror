@@ -1,0 +1,10 @@
+diff --git a/lib/Net/IDN/Punycode.xs b/lib/Net/IDN/Punycode.xs
+--- a/lib/Net/IDN/Punycode.xs
++++ b/lib/Net/IDN/Punycode.xs
+@@ -8,1 +8,5 @@
+-#define XS_VERSION "2.500"
++#define XS_VERSION "2.500"
++
++#ifndef uvuni_to_utf8_flags
++#  define uvuni_to_utf8_flags uvchr_to_utf8_flags
++#endif
