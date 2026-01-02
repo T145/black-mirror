@@ -26,11 +26,16 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
       - name: Install dependencies
-        run: npm install -g ajv-cli
+        run: pnpm install --frozen-lockfile
 
       - name: Validate manifest against schema
-        run: ajv-cli validate -s data/v2/manifest.schema.json -d data/v2/manifest.json
+        run: npx ajv-cli validate -s data/v2/manifest.schema.json -d data/v2/manifest.json
 
       - name: Validate JSON syntax
         run: |
