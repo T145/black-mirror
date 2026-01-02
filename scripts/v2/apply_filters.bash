@@ -145,9 +145,9 @@ process_list() {
 			'SECUREDROP') jaq -r '.[] | .onion_address as $onion | .organization_url | split("/")[2] as $org | $org, $onion' ;;
 			'VIVALDI') jaq -r '.[] | select(.filterStatus == "ON") | .reviewedSite' ;;
 			'MSEDGE') jaq -r '.sites[].url' ;;
-			'GITHUB_ACTIONS_DOMAINS') jaq -r '.domains.actions[]' ;;
-			'GITHUB_META_CIDR4') jaq -r '.hooks[], .web[], .api[], .git[], .github_enterprise_importer[], .packages[], .pages[], .importer[], .actions[], .dependabot[] | select(test("[:]") | not)' ;;
-			'GITHUB_META_CIDR6') jaq -r '.hooks[], .web[], .api[], .git[], .github_enterprise_importer[], .pages[], .actions[] | select(test("[:]"))' ;;
+			'GITHUB_ACTIONS_DOMAINS') jaq -r '.domains.actions // [] | .[]' ;;
+			'GITHUB_META_CIDR4') jaq -r '[.hooks // [], .web // [], .api // [], .git // [], .github_enterprise_importer // [], .packages // [], .pages // [], .importer // [], .actions // [], .dependabot // []] | flatten | .[] | select(test("[:]") | not)' ;;
+			'GITHUB_META_CIDR6') jaq -r '[.hooks // [], .web // [], .api // [], .git // [], .github_enterprise_importer // [], .pages // [], .actions // []] | flatten | .[] | select(test("[:]"))' ;;
 			'CIRCL_DOMAIN') jaq -rs '.[].Event.Attribute[]? | select(.type == "domain" or .type == "hostname").value' ;;
 			'CIRCL_IPV4') jaq -rs '.[].Event.Attribute[]? | select(.type == "ip-dst").value' ;;
 			'CIRCL_URL') jaq -rs '.[].Event.Attribute[]? | select(.type == "url").value | capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?").domain' ;;
