@@ -8,6 +8,7 @@
 
 - \[feature\]: Whitelist all list provider hosts [\#147](https://github.com/T145/black-mirror/issues/147)
 - \[feature\]: sources.adguard seems to be missing? [\#119](https://github.com/T145/black-mirror/issues/119)
+- \[FEAT\] Switch container environment to open Chainguard images [\#265](https://github.com/T145/black-mirror/pull/265) ([T145](https://github.com/T145))
 
 **Fixed bugs:**
 
