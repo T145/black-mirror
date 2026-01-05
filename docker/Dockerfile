@@ -17,10 +17,11 @@ RUN go install -v github.com/johnkerl/miller/v6/cmd/mlr@v6.15.0; \
 
 FROM ${RUST_IMAGE} AS rust
 
+# hadolint ignore=DL3002
 USER root
 
 RUN set -e; \
-    apk add --no-cache build-base clang-19 libclang-cpp-19; \
+    apk add --no-cache build-base=1-r9 clang-19=19.1.7-r0 libclang-cpp-19=19.1.7-r0; \
     cargo install --locked --root /usr/local jaq; \
     cargo install --locked --root /usr/local ouch; \
     cargo install --locked --root /usr/local htmlq
@@ -29,25 +30,25 @@ RUN set -e; \
 FROM ${UTILS_IMAGE} AS utils
 
 WORKDIR /root
-SHELL ["/bin/sh", "-c"]
+SHELL ["/bin/sh", "-o", "pipefail", "-c"]
 
 RUN set -e; \
     apk update; \
-    apk add --no-cache bash build-base curl git ca-certificates findutils coreutils perl python3 gnutar xz \
-        automake autoconf libtool pkgconf openssl-dev c-ares-dev libpsl-dev zlib-dev \
-        libssh2-dev sqlite-dev libxml2-dev; \
+    apk add --no-cache bash=5.3-r3 build-base=1-r9 curl=8.12.1-r0 git=2.47.2-r0 ca-certificates=20251003-r0 findutils=4.10.0-r0 coreutils=9.6-r0 perl=5.40.1-r0 python3=3.13.11-r2 gnutar=1.35-r0 xz=5.6.4-r0 \
+        automake=1.17-r0 autoconf=2.72-r0 libtool=2.5.4-r0 pkgconf=2.3.0-r0 openssl-dev=3.6.0-r6 c-ares-dev=1.34.4-r0 libpsl-dev=0.21.5-r0 zlib-dev=1.3.1-r51 \
+        libssh2-dev=1.11.1-r0 sqlite-dev=3.48.0-r0 libxml2-dev=2.13.5-r0; \
     rm -rf /var/cache/apk/*
 
 # Install GNU parallel from its latest source (skip GPG verification for Docker builds)
+# hadolint ignore=DL3003,DL4006
 RUN set -e; \
     curl -fsSLO http://ftpmirror.gnu.org/parallel/parallel-latest.tar.bz2; \
     tar -xf parallel-latest.tar.bz2; \
     dir=$(find . -maxdepth 1 -type d -name 'parallel-*' | head -1 | xargs basename); \
-    cd "${dir}"; \
-    ./configure; \
-    make; \
-    make install; \
-    cd ..; \
+    ( cd "${dir}"; \
+      ./configure; \
+      make; \
+      make install ); \
     rm -rf parallel-*; \
     find /usr/local/bin/ -type f ! -name 'par*' -delete
 
@@ -70,34 +71,34 @@ RUN set -e; \
 
 # Install aria2 from its latest release (1.37.0)
 # https://github.com/aria2/aria2
+# hadolint ignore=DL3003
 RUN set -e; \
     curl -fsSLO https://github.com/aria2/aria2/releases/download/release-1.37.0/aria2-1.37.0.tar.xz; \
     tar -xf aria2-1.37.0.tar.xz; \
-    cd aria2-1.37.0; \
-    ./configure --prefix=/usr/local --with-libcares --with-openssl --with-libxml2 --with-libssh2 --with-sqlite3; \
-    make; \
-    make install; \
-    cd ..; \
+    ( cd aria2-1.37.0; \
+      ./configure --prefix=/usr/local --with-libcares --with-openssl --with-libxml2 --with-libssh2 --with-sqlite3; \
+      make; \
+      make install ); \
     rm -rf aria2-1.37.0 aria2-1.37.0.tar.xz
 
+# hadolint ignore=DL3003
 RUN set -e; \
     curl -fsSLO https://www.pc-tools.net/files/unix/grepcidr-2.0.tar.gz; \
     tar -xf grepcidr-2.0.tar.gz; \
-    cd grepcidr-2.0; \
-    make; \
-    make prefix=/usr/local install; \
-    cd ..; \
+    ( cd grepcidr-2.0; \
+      make; \
+      make prefix=/usr/local install ); \
     rm -rf grepcidr-2.0 grepcidr-2.0.tar.gz
 
+# hadolint ignore=DL3003,DL4006
 RUN set -e; \
     curl -fsSLO https://invisible-island.net/datafiles/release/mawk.tar.gz; \
     dir=$(tar -tzf mawk.tar.gz | head -1 | cut -d/ -f1); \
     tar -xf mawk.tar.gz; \
-    cd "$dir"; \
-    ./configure; \
-    make; \
-    make install; \
-    cd ..; \
+    ( cd "$dir"; \
+      ./configure; \
+      make; \
+      make install ); \
     rm -rf "$dir" mawk.tar.gz
 
 
@@ -126,9 +127,9 @@ ENTRYPOINT [ "bash" ]
 # Install the base CLI stack plus `patch`, which we use for local CPAN fixes; packages come from Wolfi.
 # https://packages.wolfi.dev/os
 RUN apk update; \
-    apk add --no-cache bash ca-certificates curl coreutils findutils gnutar xz unzip zip gzip \
-        shadow util-linux tzdata gettext openssl python3 py3-pip bc gawk git lynx nodejs npm whois \
-        c-ares libssh2 sqlite-libs libxml2 glibc-locale-en libidn2 libunistring patch; \
+    apk add --no-cache bash=5.3-r3 ca-certificates=20251003-r0 curl=8.12.1-r0 coreutils=9.6-r0 findutils=4.10.0-r0 gnutar=1.35-r0 xz=5.6.4-r0 unzip=6.0-r18 zip=3.0-r12 gzip=1.13-r0 \
+        shadow=4.17.3-r0 util-linux=2.40.4-r0 tzdata=2025a-r0 gettext=0.22.5-r0 openssl=3.6.0-r6 python3=3.13.11-r2 py3-pip=25.0.1-r0 bc=1.07.1-r5 gawk=5.3.1-r0 git=2.47.2-r0 lynx=2.9.2-r0 nodejs=23.8.0-r0 npm=10.9.2-r0 whois=5.5.23-r0 \
+        c-ares=1.34.4-r0 libssh2=1.11.1-r0 sqlite-libs=3.48.0-r0 libxml2=2.13.5-r0 glibc-locale-en=2.42-r4 libidn2=2.3.7-r0 libunistring=1.2-r0 patch=2.7.6-r7; \
     rm -rf /var/cache/apk/*
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -157,18 +158,18 @@ ENV LC_ALL=en_US.UTF-8 \
     PERL5OPTS=-Mutf8
 
 RUN python3 -m ensurepip --upgrade; \
-    pip3 install --no-cache-dir --upgrade pip setuptools wheel; \
-    pip3 install --no-cache-dir csvkit; \
+    pip3 install --no-cache-dir --upgrade pip==24.3.1 setuptools==75.6.0 wheel==0.45.1; \
+    pip3 install --no-cache-dir csvkit==2.0.2; \
     find /usr/local/lib -type d -name '__pycache__' -exec rm -rf {} +
 
-RUN npm install -g @adguard/hostlist-compiler; \
+RUN npm install -g @adguard/hostlist-compiler@1.0.9; \
     npm cache clean --force; \
     rm -rf /root/.npm
 
 # https://github.com/Perl/docker-perl
 WORKDIR /usr/src/perl
-RUN apk add --no-cache --virtual .perl-build build-base curl gnutar xz perl-utils openssl-dev zlib-dev libxcrypt-dev \
-        gdbm-dev libnsl-dev util-linux-dev; \
+RUN apk add --no-cache --virtual .perl-build build-base=1-r9 curl=8.12.1-r0 gnutar=1.35-r0 xz=5.6.4-r0 perl-utils=5.40.1-r0 openssl-dev=3.6.0-r6 zlib-dev=1.3.1-r51 libxcrypt-dev=4.5.2-r0 \
+        gdbm-dev=1.24-r0 libnsl-dev=2.0.1-r0 util-linux-dev=2.40.4-r0; \
     curl -fsSLO https://cpan.metacpan.org/authors/id/E/EH/EHERMAN/perl-5.43.4.tar.gz; \
     echo '75676cc02c1d4d6f4577f7fd953e07ab5d06f71cf4201753ab6e2b0ddb5a4931  perl-5.43.4.tar.gz' | sha256sum -c -; \
     tar --strip-components=1 -xaf perl-5.43.4.tar.gz; \
@@ -183,7 +184,7 @@ RUN apk add --no-cache --virtual .perl-build build-base curl gnutar xz perl-util
     apk del .perl-build
 
 WORKDIR /usr/src
-RUN apk add --no-cache --virtual .cpan-build build-base openssl-dev zlib-dev libxcrypt-dev libidn2-dev libunistring-dev
+RUN apk add --no-cache --virtual .cpan-build build-base=1-r9 openssl-dev=3.6.0-r6 zlib-dev=1.3.1-r51 libxcrypt-dev=4.5.2-r0 libidn2-dev=2.3.7-r0 libunistring-dev=1.2-r0
 RUN curl -fsSLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz; \
     echo '963e63c6e1a8725ff2f624e9086396ae150db51dd0a337c3781d09a994af05a5  App-cpanminus-1.7047.tar.gz' | sha256sum -c -; \
     tar -xzf App-cpanminus-1.7047.tar.gz; \
@@ -206,17 +207,17 @@ RUN curl -fLO 'https://www.cpan.org/authors/id/C/CH/CHRISN/Net-SSLeay-1.94.tar.g
     chmod +x /usr/local/bin/cpm; \
     curl -fsSLO https://www.cpan.org/authors/id/C/CF/CFAERBER/Net-IDN-Encode-2.500.tar.gz; \
     tar -xzf Net-IDN-Encode-2.500.tar.gz; \
-    cd Net-IDN-Encode-2.500; \
-    # Perl 5.43 removed the legacy `uvuni_to_utf8_flags` helper, so remap to `uvchr_to_utf8_flags`.
-    # https://perldoc.perl.org/perlapi#uvchr_to_utf8_flags
-    sed -i 's/\r$//' /tmp/docker-patches/net-idn-encode-uvchr.patch; \
-    patch -p1 < /tmp/docker-patches/net-idn-encode-uvchr.patch; \
-    cpanm --notest --installdeps .; \
-    perl Build.PL; \
-    ./Build; \
-    ./Build test; \
-    ./Build install; \
-    cd ..; \
+    # hadolint ignore=DL3003
+    ( cd Net-IDN-Encode-2.500 || exit; \
+      # Perl 5.43 removed the legacy `uvuni_to_utf8_flags` helper, so remap to `uvchr_to_utf8_flags`.
+      # https://perldoc.perl.org/perlapi#uvchr_to_utf8_flags
+      sed -i 's/\r$//' /tmp/docker-patches/net-idn-encode-uvchr.patch; \
+      patch -p1 < /tmp/docker-patches/net-idn-encode-uvchr.patch; \
+      cpanm --notest --installdeps .; \
+      perl Build.PL; \
+      ./Build; \
+      ./Build test; \
+      ./Build install ); \
     rm -rf Net-IDN-Encode-2.500 Net-IDN-Encode-2.500.tar.gz; \
     rm -fr /root/.cpanm /root/Net-SSLeay-1.94* /root/IO-Socket-SSL-2.091* /usr/src/perl /usr/src/App-cpanminus-1.7047* /tmp/*; \
     cpanm --version && cpm --version; \
@@ -230,7 +231,7 @@ WORKDIR /root
 RUN find -P -O3 /var/log -depth -type f -print0 | xargs -0 -r truncate -s 0; \
     find -P -O3 /etc/ /usr/ -type d -empty -delete
 
-RUN printf '#!/bin/sh\nset -eu\nquiet=false\nwhile [ "$#" -gt 0 ]; do\n  case "$1" in\n    -q) quiet=true; shift ;;\n    --) shift; break ;;\n    -*)\n      printf "dos2unix: unsupported option %s\\n" "$1" >&2\n      exit 1\n      ;;\n    *)\n      break\n  esac\ndone\nif [ "$#" -eq 0 ]; then\n  mawk '\''sub(/\r$/, ""); print'\''\nelse\n  for file in "$@"; do\n    tmp=$(mktemp)\n    mawk '\''sub(/\r$/, ""); print'\'' "$file" >"$tmp"\n    mv "$tmp" "$file"\n  done\nfi\n' > /usr/local/bin/dos2unix && \
+RUN printf '#!/bin/sh\nset -eu\nquiet=false\nwhile [ "$#" -gt 0 ]; do\n  case "$1" in\n    -q) quiet=true; shift ;;\n    --) shift; break ;;\n    -*)\n      printf "dos2unix: unsupported option %%s\\\\n" "$1" >&2\n      exit 1\n      ;;\n    *)\n      break\n  esac\ndone\nif [ "$#" -eq 0 ]; then\n  mawk '\''sub(/\r\n?/, ""); print'\''\nelse\n  for file in "$@"; do\n    tmp=$(mktemp)\n    mawk '\''sub(/\r\n?/, ""); print'\'' "$file" >"$tmp"\n    mv "$tmp" "$file"\n  done\nfi\n' > /usr/local/bin/dos2unix && \
     chmod +x /usr/local/bin/dos2unix
 
 RUN install -d -m 0700 /home/nonroot/.parallel && \

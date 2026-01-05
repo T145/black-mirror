@@ -17,12 +17,15 @@ ENABLE:
 #   - REPOSITORY_KICS # functionality is efficiently covered by hadolint
 FAIL_IF_MISSING_LINTER_IN_FLAVOR: true
 # FILTER_REGEX_INCLUDE: (.github/|configs/|data/|scripts/|Dockerfile)
-FILTER_REGEX_EXCLUDE: (^pnpm-lock\.yaml|node_modules/|logs/|megalinter-reports/|dist/)
+FILTER_REGEX_EXCLUDE: (^pnpm-lock\.yaml|\.hadolint\.yaml|node_modules/|logs/|megalinter-reports/|dist/)
 REPOSITORY_CHECKOV_UNSECURED_ENV_VARIABLES:
   - CKV_IGNORED_DIRECTORIES=logs
 REPOSITORY_CHECKOV_ARGUMENTS: --skip-check MEDIUM
 EXCLUDED_DIRECTORIES:
   - .git
+  - .husky
+  - .vscode
+  - build
   - node_modules
   - logs
   - megalinter-reports

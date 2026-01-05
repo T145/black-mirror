@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "lint": "pnpm mega-linter-runner -f cupcake",
+    "lint": "node scripts/lint.js",
     "prepare": "husky"
   },
   "devDependencies": {
     "ajv-cli": "^5.0.0",
     "husky": "^9.1.7",
-    "mega-linter-runner": "^9.1.0"
+    "mega-linter-runner": "^9.3.0"
   },
   "engines": {
     "node": ">=20"
