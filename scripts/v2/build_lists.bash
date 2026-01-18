@@ -79,6 +79,7 @@ main() {
 
 	for method in "${METHODS[@]}"; do
 		cache="${DOWNLOADS}/${method}"
+		mkdir -p "$cache"
 
 		echo "[INFO] Processing method: ${method}"
 

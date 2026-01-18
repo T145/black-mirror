@@ -8,7 +8,6 @@ on:
       - completed
   schedule:
     - cron: "39 4 * * 0"
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -22,20 +21,30 @@ jobs:
       actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
+      - uses: actions/checkout@v4
       #- name: Build a Docker image
       #  run: docker build -t black-mirror .
       - name: Run Snyk to check Docker image for vulnerabilities
         # Snyk can be used to break the build when it detects vulnerabilities.
         # In this case we want to upload the issues to GitHub Code Scanning
         continue-on-error: true
-        uses: snyk/actions/docker@cdb760004ba9ea4d525f2e043745dfe85bb9077e
+        uses: snyk/actions/docker@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           image: ghcr.io/t145/black-mirror:latest
-          args: --file=docker/Dockerfile
+          args: --file=docker/Dockerfile.chainguard
+      - name: "Filter SARIF for GitHub"
+        shell: bash
+        # Snyk produces multiple runs when --file is used.
+        # GitHub now requires unique categories for each run in a single upload.
+        # We'll keep only the first run (the image scan) to satisfy GitHub's policy.
+        run: |
+          if [ -f snyk.sarif ]; then
+            jq '.runs = [.runs[0]]' snyk.sarif > snyk.sarif.tmp && mv snyk.sarif.tmp snyk.sarif
+          fi
       - name: Upload result to GitHub Code Scanning
-        uses: github/codeql-action/upload-sarif@c43362b91a940600cde2ebae39ec7a35ad66bdc0
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: snyk.sarif
+          category: snyk-container
