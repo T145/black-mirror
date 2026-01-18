@@ -43,13 +43,13 @@ RUN set -e; \
 # hadolint ignore=DL3003,DL4006
 RUN set -e; \
     curl -fsSLO http://ftpmirror.gnu.org/parallel/parallel-latest.tar.bz2; \
-    tar -xf parallel-latest.tar.bz2; \
-    dir=$(find . -maxdepth 1 -type d -name 'parallel-*' | head -1 | xargs basename); \
-    ( cd "${dir}"; \
+    mkdir parallel-src; \
+    tar -xf parallel-latest.tar.bz2 -C parallel-src --strip-components=1; \
+    ( cd parallel-src; \
       ./configure; \
       make; \
       make install ); \
-    rm -rf parallel-*; \
+    rm -rf parallel-src parallel-latest.tar.bz2; \
     find /usr/local/bin/ -type f ! -name 'par*' -delete
 
 # Install wget with c-ares and libpsl support
@@ -93,13 +93,13 @@ RUN set -e; \
 # hadolint ignore=DL3003,DL4006
 RUN set -e; \
     curl -fsSLO https://invisible-island.net/datafiles/release/mawk.tar.gz; \
-    dir=$(tar -tzf mawk.tar.gz | head -1 | cut -d/ -f1); \
-    tar -xf mawk.tar.gz; \
-    ( cd "$dir"; \
+    mkdir mawk-src; \
+    tar -xf mawk.tar.gz -C mawk-src --strip-components=1; \
+    ( cd mawk-src; \
       ./configure; \
       make; \
       make install ); \
-    rm -rf "$dir" mawk.tar.gz
+    rm -rf mawk-src mawk.tar.gz
 
 
 # Use Chainguard's glibc-compatible runtime so legacy tooling that expects glibc keeps working.
