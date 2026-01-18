@@ -21,7 +21,7 @@ FROM ${RUST_IMAGE} AS rust
 USER root
 
 RUN set -e; \
-    apk add --no-cache build-base=1-r9 clang-19=19.1.7-r0 libclang-cpp-19=19.1.7-r0; \
+    apk add --no-cache build-base clang-19 libclang-cpp-19; \
     cargo install --locked --root /usr/local jaq; \
     cargo install --locked --root /usr/local ouch; \
     cargo install --locked --root /usr/local htmlq
@@ -34,9 +34,9 @@ SHELL ["/bin/sh", "-o", "pipefail", "-c"]
 
 RUN set -e; \
     apk update; \
-    apk add --no-cache bash=5.3-r3 build-base=1-r9 curl=8.12.1-r0 git=2.47.2-r0 ca-certificates=20251003-r0 findutils=4.10.0-r0 coreutils=9.6-r0 perl=5.40.1-r0 python3=3.13.11-r2 gnutar=1.35-r0 xz=5.6.4-r0 \
-        automake=1.17-r0 autoconf=2.72-r0 libtool=2.5.4-r0 pkgconf=2.3.0-r0 openssl-dev=3.6.0-r6 c-ares-dev=1.34.4-r0 libpsl-dev=0.21.5-r0 zlib-dev=1.3.1-r51 \
-        libssh2-dev=1.11.1-r0 sqlite-dev=3.48.0-r0 libxml2-dev=2.13.5-r0; \
+    apk add --no-cache bash build-base curl git ca-certificates findutils coreutils perl python3 gnutar xz \
+        automake autoconf libtool pkgconf openssl-dev c-ares-dev libpsl-dev zlib-dev \
+        libssh2-dev sqlite-dev libxml2-dev; \
     rm -rf /var/cache/apk/*
 
 # Install GNU parallel from its latest source (skip GPG verification for Docker builds)
@@ -126,10 +126,11 @@ ENTRYPOINT [ "bash" ]
 
 # Install the base CLI stack plus `patch`, which we use for local CPAN fixes; packages come from Wolfi.
 # https://packages.wolfi.dev/os
+# Wolfi is a rolling-release distribution when using the public version, so packages cannot be pinned.
 RUN apk update; \
-    apk add --no-cache bash=5.3-r3 ca-certificates=20251003-r0 curl=8.12.1-r0 coreutils=9.6-r0 findutils=4.10.0-r0 gnutar=1.35-r0 xz=5.6.4-r0 unzip=6.0-r18 zip=3.0-r12 gzip=1.13-r0 \
-        shadow=4.17.3-r0 util-linux=2.40.4-r0 tzdata=2025a-r0 gettext=0.22.5-r0 openssl=3.6.0-r6 python3=3.13.11-r2 py3-pip=25.0.1-r0 bc=1.07.1-r5 gawk=5.3.1-r0 git=2.47.2-r0 lynx=2.9.2-r0 nodejs=23.8.0-r0 npm=10.9.2-r0 whois=5.5.23-r0 \
-        c-ares=1.34.4-r0 libssh2=1.11.1-r0 sqlite-libs=3.48.0-r0 libxml2=2.13.5-r0 glibc-locale-en=2.42-r4 libidn2=2.3.7-r0 libunistring=1.2-r0 patch=2.7.6-r7; \
+    apk add --no-cache bash ca-certificates curl coreutils findutils gnutar xz unzip zip gzip \
+        shadow util-linux tzdata gettext openssl python3 py3-pip bc gawk git lynx nodejs npm whois \
+        c-ares libssh2 sqlite-libs libxml2 glibc-locale-en libidn2 libunistring patch; \
     # Enable the OpenSSL legacy provider, which is required for aria2's checksumming features.
     # https://github.com/aria2/aria2/issues/2143
     sed -i 's/^#legacy = legacy_sect/legacy = legacy_sect/' /etc/ssl/openssl.cnf || true; \
@@ -178,8 +179,8 @@ RUN npm install -g @adguard/hostlist-compiler@1.0.9; \
 
 # https://github.com/Perl/docker-perl
 WORKDIR /usr/src/perl
-RUN apk add --no-cache --virtual .perl-build build-base=1-r9 curl=8.12.1-r0 gnutar=1.35-r0 xz=5.6.4-r0 perl-utils=5.40.1-r0 openssl-dev=3.6.0-r6 zlib-dev=1.3.1-r51 libxcrypt-dev=4.5.2-r0 \
-        gdbm-dev=1.24-r0 libnsl-dev=2.0.1-r0 util-linux-dev=2.40.4-r0; \
+RUN apk add --no-cache --virtual .perl-build build-base curl gnutar xz perl-utils openssl-dev zlib-dev libxcrypt-dev \
+        gdbm-dev libnsl-dev util-linux-dev; \
     curl -fsSLO https://cpan.metacpan.org/authors/id/E/EH/EHERMAN/perl-5.43.4.tar.gz; \
     echo '75676cc02c1d4d6f4577f7fd953e07ab5d06f71cf4201753ab6e2b0ddb5a4931  perl-5.43.4.tar.gz' | sha256sum -c -; \
     tar --strip-components=1 -xaf perl-5.43.4.tar.gz; \
@@ -194,7 +195,7 @@ RUN apk add --no-cache --virtual .perl-build build-base=1-r9 curl=8.12.1-r0 gnut
     apk del .perl-build
 
 WORKDIR /usr/src
-RUN apk add --no-cache --virtual .cpan-build build-base=1-r9 openssl-dev=3.6.0-r6 zlib-dev=1.3.1-r51 libxcrypt-dev=4.5.2-r0 libidn2-dev=2.3.7-r0 libunistring-dev=1.2-r0
+RUN apk add --no-cache --virtual .cpan-build build-base openssl-dev zlib-dev libxcrypt-dev libidn2-dev libunistring-dev
 RUN curl -fsSLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz; \
     echo '963e63c6e1a8725ff2f624e9086396ae150db51dd0a337c3781d09a994af05a5  App-cpanminus-1.7047.tar.gz' | sha256sum -c -; \
     tar -xzf App-cpanminus-1.7047.tar.gz; \
