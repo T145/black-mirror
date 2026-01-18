@@ -130,6 +130,16 @@ RUN apk update; \
     apk add --no-cache bash=5.3-r3 ca-certificates=20251003-r0 curl=8.12.1-r0 coreutils=9.6-r0 findutils=4.10.0-r0 gnutar=1.35-r0 xz=5.6.4-r0 unzip=6.0-r18 zip=3.0-r12 gzip=1.13-r0 \
         shadow=4.17.3-r0 util-linux=2.40.4-r0 tzdata=2025a-r0 gettext=0.22.5-r0 openssl=3.6.0-r6 python3=3.13.11-r2 py3-pip=25.0.1-r0 bc=1.07.1-r5 gawk=5.3.1-r0 git=2.47.2-r0 lynx=2.9.2-r0 nodejs=23.8.0-r0 npm=10.9.2-r0 whois=5.5.23-r0 \
         c-ares=1.34.4-r0 libssh2=1.11.1-r0 sqlite-libs=3.48.0-r0 libxml2=2.13.5-r0 glibc-locale-en=2.42-r4 libidn2=2.3.7-r0 libunistring=1.2-r0 patch=2.7.6-r7; \
+    # Enable the OpenSSL legacy provider, which is required for aria2's checksumming features.
+    # https://github.com/aria2/aria2/issues/2143
+    sed -i 's/^#legacy = legacy_sect/legacy = legacy_sect/' /etc/ssl/openssl.cnf || true; \
+    sed -i 's/^#\[legacy_sect\]/\[legacy_sect\]/' /etc/ssl/openssl.cnf || true; \
+    if ! grep -q "^\[legacy_sect\]" /etc/ssl/openssl.cnf; then \
+        printf "\n[legacy_sect]\nactivate = 1\n" >> /etc/ssl/openssl.cnf; \
+    fi; \
+    if ! grep -q "^legacy = legacy_sect" /etc/ssl/openssl.cnf; then \
+        sed -i '/^\[provider_sect\]/a legacy = legacy_sect' /etc/ssl/openssl.cnf || true; \
+    fi; \
     rm -rf /var/cache/apk/*
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
