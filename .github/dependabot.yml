@@ -6,5 +6,18 @@ version: 2
 updates:
   - package-ecosystem: "github-actions"
     directory: ".github/workflows"
+    target-branch: "develop"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    target-branch: "develop"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "docker"
+    directory: "/docker"
+    target-branch: "develop"
     schedule:
       interval: "daily"
