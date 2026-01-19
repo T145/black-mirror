@@ -110,10 +110,10 @@ USER root
 WORKDIR /root
 
 LABEL maintainer="T145" \
-      version="7.0.0" \
+      version="7.1.1" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.created="2025-11-01" \
-      org.opencontainers.image.revision="7.0.0" \
+      org.opencontainers.image.revision="7.1.1" \
       org.opencontainers.image.source="https://github.com/T145/black-mirror" \
       org.opencontainers.image.url="https://github.com/T145/black-mirror" \
       org.opencontainers.image.vendor="T145" \
