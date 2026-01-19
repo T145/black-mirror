@@ -24,7 +24,7 @@ jobs:
       options: --user root
     steps:
       - name: Checkout repo
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
         with:
           submodules: true
       - name: Export secrets
@@ -73,7 +73,7 @@ jobs:
       contents: write
     steps:
       - name: Checkout repo
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
       # https://github.com/actions/download-artifact#limitations=
       - name: Fetch lists
         uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16
@@ -107,7 +107,7 @@ jobs:
     permissions: write-all
     steps:
       - name: Checkout repo
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
         with:
           fetch-depth: 0
       - name: Generate changelog
