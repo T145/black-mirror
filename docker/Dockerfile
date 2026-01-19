@@ -35,7 +35,7 @@ SHELL ["/bin/sh", "-o", "pipefail", "-c"]
 RUN set -e; \
     apk update; \
     apk add --no-cache bash build-base curl git ca-certificates findutils coreutils perl python3 gnutar xz \
-        automake autoconf libtool pkgconf openssl-dev c-ares-dev libpsl-dev zlib-dev \
+        automake autoconf libtool pkgconf openssl-dev gnutls-dev c-ares-dev libpsl-dev zlib-dev \
         libssh2-dev sqlite-dev libxml2-dev; \
     rm -rf /var/cache/apk/*
 
@@ -76,7 +76,7 @@ RUN set -e; \
     curl -fsSLO https://github.com/aria2/aria2/releases/download/release-1.37.0/aria2-1.37.0.tar.xz; \
     tar -xf aria2-1.37.0.tar.xz; \
     ( cd aria2-1.37.0; \
-      ./configure --prefix=/usr/local --with-libcares --with-openssl --with-libxml2 --with-libssh2 --with-sqlite3; \
+      ./configure --prefix=/usr/local --with-libcares --with-gnutls --without-openssl --with-libxml2 --with-libssh2 --with-sqlite3; \
       make; \
       make install ); \
     rm -rf aria2-1.37.0 aria2-1.37.0.tar.xz
@@ -129,17 +129,19 @@ ENTRYPOINT [ "bash" ]
 # Wolfi is a rolling-release distribution when using the public version, so packages cannot be pinned.
 RUN apk update; \
     apk add --no-cache bash ca-certificates curl coreutils findutils gnutar xz unzip zip gzip \
-        shadow util-linux tzdata gettext openssl python3 py3-pip bc gawk git lynx nodejs npm whois \
+        shadow util-linux tzdata gettext openssl gnutls python3 py3-pip bc gawk git lynx nodejs npm whois \
         c-ares libssh2 sqlite-libs libxml2 glibc-locale-en libidn2 libunistring patch; \
-    # Enable the OpenSSL legacy provider, which is required for aria2's checksumming features.
+    # Enable the OpenSSL legacy provider; some older tools may still require it for MD4/MD5.
     # https://github.com/aria2/aria2/issues/2143
-    sed -i 's/^#legacy = legacy_sect/legacy = legacy_sect/' /etc/ssl/openssl.cnf || true; \
-    sed -i 's/^#\[legacy_sect\]/\[legacy_sect\]/' /etc/ssl/openssl.cnf || true; \
-    if ! grep -q "^\[legacy_sect\]" /etc/ssl/openssl.cnf; then \
-        printf "\n[legacy_sect]\nactivate = 1\n" >> /etc/ssl/openssl.cnf; \
-    fi; \
-    if ! grep -q "^legacy = legacy_sect" /etc/ssl/openssl.cnf; then \
-        sed -i '/^\[provider_sect\]/a legacy = legacy_sect' /etc/ssl/openssl.cnf || true; \
+    if [ -f /etc/ssl/openssl.cnf ]; then \
+        sed -i 's/^[[:space:]]*#[[:space:]]*\(legacy = legacy_sect\)/\1/' /etc/ssl/openssl.cnf || true; \
+        sed -i 's/^[[:space:]]*#[[:space:]]*\(\[legacy_sect\]\)/\1/' /etc/ssl/openssl.cnf || true; \
+        if ! grep -q "^\[legacy_sect\]" /etc/ssl/openssl.cnf; then \
+            printf "\n[legacy_sect]\nactivate = 1\n" >> /etc/ssl/openssl.cnf; \
+        fi; \
+        if ! grep -q "^legacy = legacy_sect" /etc/ssl/openssl.cnf; then \
+            sed -i '/^\[provider_sect\]/a legacy = legacy_sect' /etc/ssl/openssl.cnf || true; \
+        fi; \
     fi; \
     rm -rf /var/cache/apk/*
 

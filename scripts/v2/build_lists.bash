@@ -146,7 +146,11 @@ main() {
 									sponge "${cache}/${key}"
 								;;
 							# TODO: Do all HLC lists at once by building a large config file.
-							'HLC_MODIFIERS') hostlist-compiler -t adblock -i "$mirror" -o "${cache}/${key}" >>'logs/hostlist-compiler.log' ;;
+							'HLC_MODIFIERS')
+								echo "{ \"name\": \"Blocklist\", \"sources\": [ { \"source\": \"${mirror}\", \"type\": \"adblock\" } ], \"transformations\": [ \"RemoveComments\", \"TrimLines\", \"Deduplicate\", \"Compress\", \"Validate\", \"InsertFinalNewLine\" ] }" >>"$TMP"
+								hostlist-compiler -c "$TMP" -o "${cache}/${key}" >>'logs/hostlist-compiler.log'
+								: >"$TMP"
+								;;
 							'HLC_NO_MODIFIERS')
 								echo "{ \"name\": \"Blocklist\", \"sources\": [ { \"source\": \"${mirror}\", \"type\": \"adblock\" } ], \"transformations\": [ \"RemoveComments\", \"TrimLines\", \"RemoveModifiers\", \"Deduplicate\", \"Compress\", \"Validate\", \"InsertFinalNewLine\" ] }" >>"$TMP"
 								hostlist-compiler -c "$TMP" -o "${cache}/${key}" >>'logs/hostlist-compiler.log'
