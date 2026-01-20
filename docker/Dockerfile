@@ -175,7 +175,7 @@ RUN python3 -m ensurepip --upgrade; \
     pip3 install --no-cache-dir csvkit==2.0.2; \
     find /usr/local/lib -type d -name '__pycache__' -exec rm -rf {} +
 
-RUN npm install -g @adguard/hostlist-compiler@1.0.9; \
+RUN npm install -g @adguard/hostlist-compiler@1.0.39; \
     npm cache clean --force; \
     rm -rf /root/.npm
 

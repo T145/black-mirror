@@ -147,12 +147,47 @@ main() {
 								;;
 							# TODO: Do all HLC lists at once by building a large config file.
 							'HLC_MODIFIERS')
-								echo "{ \"name\": \"Blocklist\", \"sources\": [ { \"source\": \"${mirror}\", \"type\": \"adblock\" } ], \"transformations\": [ \"RemoveComments\", \"TrimLines\", \"Deduplicate\", \"Compress\", \"Validate\", \"InsertFinalNewLine\" ] }" >>"$TMP"
+								jaq -n --arg mirror "$mirror" \
+									'{
+										name: "Blocklist",
+										sources: [
+											{
+												source: $mirror,
+												type: "adblock"
+											}
+										],
+										transformations: [
+											"RemoveComments",
+											"Deduplicate",
+											"Compress",
+											"Validate",
+											"TrimLines",
+											"InsertFinalNewLine"
+										]
+									}' >"$TMP"
 								hostlist-compiler -c "$TMP" -o "${cache}/${key}" >>'logs/hostlist-compiler.log'
 								: >"$TMP"
 								;;
 							'HLC_NO_MODIFIERS')
-								echo "{ \"name\": \"Blocklist\", \"sources\": [ { \"source\": \"${mirror}\", \"type\": \"adblock\" } ], \"transformations\": [ \"RemoveComments\", \"TrimLines\", \"RemoveModifiers\", \"Deduplicate\", \"Compress\", \"Validate\", \"InsertFinalNewLine\" ] }" >>"$TMP"
+								jaq -n --arg mirror "$mirror" \
+									'{
+										name: "Blocklist",
+										sources: [
+											{
+												source: $mirror,
+												type: "adblock"
+											}
+										],
+										transformations: [
+											"RemoveComments",
+											"RemoveModifiers",
+											"Deduplicate",
+											"Compress",
+											"Validate",
+											"TrimLines",
+											"InsertFinalNewLine"
+										]
+									}' >"$TMP"
 								hostlist-compiler -c "$TMP" -o "${cache}/${key}" >>'logs/hostlist-compiler.log'
 								: >"$TMP"
 								;;
