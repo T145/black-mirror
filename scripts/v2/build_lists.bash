@@ -76,6 +76,7 @@ main() {
 	local list
 	local blacklist
 	local results
+	local parallel_exit_code
 
 	for method in "${METHODS[@]}"; do
 		cache="${DOWNLOADS}/${method}"
@@ -214,9 +215,12 @@ main() {
 
 			echo "[INFO] Sending list results to: ${results}"
 
+			set +e
 			find -P -O3 "$cache" -maxdepth 1 -type f -print0 |
 				# https://www.gnu.org/software/parallel/parallel_tutorial.html#controlling-the-execution
 				parallel -0 -j+0 -X -N1 --results "$results" ./scripts/v2/apply_filters.bash {} "$method" "$format"
+			parallel_exit_code=$?
+			set -e
 
 			list="${OUTDIR}/${method}_${format}.txt"
 
@@ -231,6 +235,11 @@ main() {
 						cat -s "$file" >>"$ERROR_LOG"
 					fi
 				done
+
+			if [ "$parallel_exit_code" -ne 0 ]; then
+				echo "[ERROR] Parallel processing failed for ${method} ${format}" >&2
+				exit "$parallel_exit_code"
+			fi
 
 			if [ -f "$list" ] && [ -s "$list" ]; then
 				sorted "$list"
