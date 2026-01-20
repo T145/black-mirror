@@ -13,7 +13,7 @@ main() {
 		# https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
 		echo "status=success" >>"$GITHUB_OUTPUT"
 	else
-		cat <&2
+		[ -s logs/error.log ] && cat logs/error.log >&2
 		exit 1
 	fi
 }
