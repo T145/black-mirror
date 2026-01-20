@@ -8,6 +8,7 @@
 
 - \[feature\]: Whitelist all list provider hosts [\#147](https://github.com/T145/black-mirror/issues/147)
 - \[feature\]: sources.adguard seems to be missing? [\#119](https://github.com/T145/black-mirror/issues/119)
+- \[FEAT\] Update error handling to not hide messages [\#279](https://github.com/T145/black-mirror/pull/279) ([T145](https://github.com/T145))
 - \[FEAT\] Switch container environment to open Chainguard images [\#265](https://github.com/T145/black-mirror/pull/265) ([T145](https://github.com/T145))
 
 **Fixed bugs:**
@@ -26,6 +27,19 @@
 
 **Merged pull requests:**
 
+- fix\(scripts\): Add back Perl shebangs [\#280](https://github.com/T145/black-mirror/pull/280) ([T145](https://github.com/T145))
+- \[FIX\]: Resolve Adguard Hostlist Compiler errors [\#278](https://github.com/T145/black-mirror/pull/278) ([T145](https://github.com/T145))
+- chore\(deps\): bump actions/checkout from 4 to 6 in /.github/workflows [\#277](https://github.com/T145/black-mirror/pull/277) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump actions/download-artifact from 4.1.8 to 7.0.0 in /.github/workflows [\#276](https://github.com/T145/black-mirror/pull/276) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/build-push-action from 6.10.0 to 6.18.0 in /.github/workflows [\#275](https://github.com/T145/black-mirror/pull/275) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump actions/upload-artifact from 4.5.0 to 6.0.0 in /.github/workflows [\#274](https://github.com/T145/black-mirror/pull/274) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump pnpm/action-setup from 9fd676a19091d4595eefd76e4bd31c97133911f1 to 41ff72655975bd51cab0327fa583b6e92b6d3061 in /.github/workflows [\#273](https://github.com/T145/black-mirror/pull/273) ([dependabot[bot]](https://github.com/apps/dependabot))
+- \[FIX\]: Reconfigure OpenSSL on the Docker image [\#272](https://github.com/T145/black-mirror/pull/272) ([T145](https://github.com/T145))
+- \[FIX\] Resolve Docker image build errors [\#271](https://github.com/T145/black-mirror/pull/271) ([T145](https://github.com/T145))
+- \[FIX\] Resolve Docker build errors [\#270](https://github.com/T145/black-mirror/pull/270) ([T145](https://github.com/T145))
+- \[FIX\] Resolve reported Actions errors [\#269](https://github.com/T145/black-mirror/pull/269) ([T145](https://github.com/T145))
+- chore\(deps\): bump tar from 7.5.2 to 7.5.3 in the npm\_and\_yarn group across 1 directory [\#268](https://github.com/T145/black-mirror/pull/268) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump diff from 8.0.2 to 8.0.3 in the npm\_and\_yarn group across 1 directory [\#267](https://github.com/T145/black-mirror/pull/267) ([dependabot[bot]](https://github.com/apps/dependabot))
 - \[FIX\] Get MegaLinter running again [\#266](https://github.com/T145/black-mirror/pull/266) ([T145](https://github.com/T145))
 - chore\(deps\): bump brace-expansion from 1.1.11 to 1.1.12 in the npm\_and\_yarn group across 1 directory [\#261](https://github.com/T145/black-mirror/pull/261) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/upload-artifact from 4.4.3 to 4.5.0 in /.github/workflows [\#260](https://github.com/T145/black-mirror/pull/260) ([dependabot[bot]](https://github.com/apps/dependabot))
