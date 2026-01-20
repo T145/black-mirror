@@ -244,9 +244,6 @@ WORKDIR /root
 RUN find -P -O3 /var/log -depth -type f -print0 | xargs -0 -r truncate -s 0; \
     find -P -O3 /etc/ /usr/ -type d -empty -delete
 
-RUN printf '#!/bin/sh\nset -eu\nquiet=false\nwhile [ "$#" -gt 0 ]; do\n  case "$1" in\n    -q) quiet=true; shift ;;\n    --) shift; break ;;\n    -*)\n      printf "dos2unix: unsupported option %%s\\\\n" "$1" >&2\n      exit 1\n      ;;\n    *)\n      break\n  esac\ndone\nif [ "$#" -eq 0 ]; then\n  mawk '\''sub(/\r\n?/, ""); print'\''\nelse\n  for file in "$@"; do\n    tmp=$(mktemp)\n    mawk '\''sub(/\r\n?/, ""); print'\'' "$file" >"$tmp"\n    mv "$tmp" "$file"\n  done\nfi\n' > /usr/local/bin/dos2unix && \
-    chmod +x /usr/local/bin/dos2unix
-
 RUN install -d -m 0700 /home/nonroot/.parallel && \
     cp /root/.parallel/will-cite /home/nonroot/.parallel/will-cite && \
     cp -r /root/.config /home/nonroot/.config && \
