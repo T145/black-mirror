@@ -3,7 +3,7 @@
 # https://unix.stackexchange.com/questions/459127/grep-to-extract-lines-that-contains-full-domain-names-from-a-file
 # IpInfo's 'grepdomain' includes IPv4 addresses
 get_domains() {
-	grep -P "^.[^.]+\.[a-zA-Z]{3}$|^.[^.]+\.[a-zA-Z]{2}\.[a-zA-Z]{2}$"
+	grep -E "^.[^.]+\.[a-zA-Z]{3}$|^.[^.]+\.[a-zA-Z]{2}\.[a-zA-Z]{2}$"
 }
 
 # NOTE: "include-cidrs" ignores CIDR blocks!
@@ -91,7 +91,7 @@ process_list() {
 	'ESOX_LUCIUS') unzip -p "$FILE_PATH" 'PiHoleblocklists-main/*' -x PiHoleblocklists-main/LICENSE PiHoleblocklists-main/README.md ;;
 	'PENGELANA') unzip -p "$FILE_PATH" 'blocklist-master/src/blacklist/blocklists-*.txt' ;;
 	esac |
-		dos2unix -q |
+		tr -d '\r' |
 		case "$CONTENT_TYPE" in
 		'TEXT')
 			case "$LIST_FILTER" in
