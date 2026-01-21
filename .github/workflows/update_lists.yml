@@ -3,6 +3,7 @@ name: Update Lists
 
 on:
   push:
+    branches: ["develop"]
     paths:
       - "data/v2/manifest.json"
   workflow_dispatch:

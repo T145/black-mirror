@@ -66,6 +66,7 @@ jobs:
         if: always()
         run: rm -rf build/ && rm -f lists.tar
   upload_release:
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-22.04
     needs: build_lists
     continue-on-error: true
@@ -102,6 +103,7 @@ jobs:
         with:
           name: lists
   update_docs:
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-22.04
     needs: upload_release
     permissions: write-all

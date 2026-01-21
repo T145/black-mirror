@@ -34,6 +34,10 @@ SHOW_ELAPSED_TIME: true
 FILEIO_REPORTER: false
 PRINT_ALPACA: false
 FLAVOR_SUGGESTIONS: false
+# schema validation
+PRE_COMMANDS:
+  - command: npx ajv-cli validate -s data/v2/manifest.schema.json -d data/v2/manifest.json
+    cwd: "workspace"
 # remove lingering docker containers when done
 POST_COMMANDS:
   - command: docker system prune -f
