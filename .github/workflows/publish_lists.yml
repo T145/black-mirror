@@ -66,6 +66,7 @@ jobs:
         if: always()
         run: rm -rf build/ && rm -f lists.tar
   upload_release:
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-22.04
     needs: build_lists
     continue-on-error: true
@@ -87,7 +88,7 @@ jobs:
           cd ..
       # https://github.com/softprops/action-gh-release
       - name: Create release
-        uses: softprops/action-gh-release@7b4da11513bf3f43f9999e90eabced41ab8bb048
+        uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b
         with:
           files: build/*
           generate_release_notes: true
@@ -102,6 +103,7 @@ jobs:
         with:
           name: lists
   update_docs:
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-22.04
     needs: upload_release
     permissions: write-all
@@ -123,7 +125,7 @@ jobs:
       - name: Make the working tree safe
         run: git config --global --add safe.directory /__w/black-mirror/black-mirror
       - name: Update documents
-        uses: stefanzweifel/git-auto-commit-action@0b492c0d951b87f3cd12523a542dbd156c1dbc80
+        uses: stefanzweifel/git-auto-commit-action@fc84150d7c7500bbbaedb7ec522588fcc41f4d4d
         with:
           # homage to the python linting utility "black"
           commit_message: "ci(build): ✨🍰✨"

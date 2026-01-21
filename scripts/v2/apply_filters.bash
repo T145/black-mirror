@@ -212,8 +212,8 @@ process_list() {
 			'WATCHLIST_INTERNET') mlr --mmap --csv --ifs ';' -N cut -f 1 ;;
 			'CRUZ_IT') mlr --mmap --csv --headerless-csv-output clean-whitespace then cut -f ip_address ;;
 			# PhishTank often includes large hashes in its URLs, which may lead to parsing issues.
-			# Therefore use regex that ignores paths and queries after the domain.
-			'PHISHTANK') mlr --mmap --csv --headerless-csv-output --lazy-quotes put -S '$url =~ "https?://([^/]+)"; $Domain = "\1"' then cut -f Domain ;;
+			# Therefore use a robust regex that ignores paths and queries after the domain.
+			'PHISHTANK') mlr --mmap --csv --headerless-csv-output --lazy-quotes --skip-comments clean-whitespace then cut -f url | get_domains_from_urls ;;
 			'BLOCKLIST_UA') mlr --mmap --csv --headerless-csv-output --ifs ';' cut -f IP ;;
 			# The C2 feed has malformed CSVs.
 			'THREATVIEW_C2_HOSTS') mawk -F, '/^[^#]/{print $3}' ;;

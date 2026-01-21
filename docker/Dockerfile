@@ -110,10 +110,10 @@ USER root
 WORKDIR /root
 
 LABEL maintainer="T145" \
-      version="7.1.1" \
+      version="7.1.3" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.created="2025-11-01" \
-      org.opencontainers.image.revision="7.1.1" \
+      org.opencontainers.image.revision="7.1.3" \
       org.opencontainers.image.source="https://github.com/T145/black-mirror" \
       org.opencontainers.image.url="https://github.com/T145/black-mirror" \
       org.opencontainers.image.vendor="T145" \
@@ -194,6 +194,7 @@ RUN apk add --no-cache --virtual .perl-build build-base curl gnutar xz perl-util
     make -j"$(nproc)"; \
     TEST_JOBS="$(nproc)" make test_harness || true; \
     make install; \
+    ln -sf /usr/local/bin/perl /usr/bin/perl; \
     apk del .perl-build
 
 WORKDIR /usr/src
