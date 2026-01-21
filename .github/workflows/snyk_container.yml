@@ -44,7 +44,7 @@ jobs:
             jq '.runs = [.runs[0]]' snyk.sarif > snyk.sarif.tmp && mv snyk.sarif.tmp snyk.sarif
           fi
       - name: Upload result to GitHub Code Scanning
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: snyk.sarif
           category: snyk-container
