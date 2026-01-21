@@ -1,0 +1,12 @@
+2026-01-21 20:58:00.305701 [NOTICE] [Context.cc:310] Downloading 1 item(s)
+2026-01-21 20:58:00.313030 [NOTICE] [ServerStatMan.cc:230] ServerStat file logs/server-stats.txt loaded successfully.
+2026-01-21 20:58:00.388268 [NOTICE] [HttpResponse.cc:168] CUID#7 - Redirecting to https://cdn.phishtank.com/datadumps/verified_online.csv?Expires=1769028790&Signature=MKUQigJidNgZ397xQp0ax9jfTmYX3-8VdCJ400GIiUQ3Ic7iff5wKevZv42c7w-wxADHbAVemYavMvBWecUWXmVWnJrS3m2VSCP7ctO6KdsFO76OohBQGesdtQuL2Ont4K~Teqo4QTrNINoEAkcftRsjD6hSdwFuZT-raJKYvmY9GVlaQlVZmJG27wXITFoud9edU7p5I091YzVYKyWOgkcr3B788vY35Eju7OSjVZPfA1~kNT0PJ1k0EpI9JRo8q4p46DQZ~AYowqIBJb9TWmNOSQJgIDzbFRHWDfZwrLeARCjPi11RBk~CqnimBicUswmYoFUwVZBR5xVnTjf90g__&Key-Pair-Id=APKAILB45UG3RB4CSOJA
+2026-01-21 20:58:00.740747 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/phishtank_aria2.csv
+2026-01-21 20:58:00.744948 [NOTICE] [ServerStatMan.cc:110] ServerStat file logs/server-stats.txt saved successfully.
+2026-01-21 20:58:15.776673 [NOTICE] [Context.cc:310] Downloading 1 item(s)
+2026-01-21 20:58:15.782912 [NOTICE] [ServerStatMan.cc:230] ServerStat file logs/server-stats.txt loaded successfully.
+2026-01-21 20:58:15.984072 [ERROR] [AbstractCommand.cc:401] CUID#7 - Download aborted. URI=https://phishstats.info/phish_score.csv
+Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://phishstats.info/phish_score.csv
+  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
+2026-01-21 20:58:15.984263 [NOTICE] [RequestGroupMan.cc:424] Download GID#049ba6c9e563a68f not complete: /tmp/phishstats.csv
+2026-01-21 20:58:15.987903 [NOTICE] [ServerStatMan.cc:110] ServerStat file logs/server-stats.txt saved successfully.
