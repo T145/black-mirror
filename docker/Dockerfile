@@ -110,10 +110,10 @@ USER root
 WORKDIR /root
 
 LABEL maintainer="T145" \
-      version="7.1.3" \
+      version="7.1.4" \
       description="Runs the \"Black Mirror\" project! Check it out GitHub!" \
       org.opencontainers.image.created="2025-11-01" \
-      org.opencontainers.image.revision="7.1.3" \
+      org.opencontainers.image.revision="7.1.4" \
       org.opencontainers.image.source="https://github.com/T145/black-mirror" \
       org.opencontainers.image.url="https://github.com/T145/black-mirror" \
       org.opencontainers.image.vendor="T145" \
@@ -156,6 +156,9 @@ COPY --from=rust /usr/local/bin/jaq /usr/local/bin/
 COPY --from=rust /usr/local/bin/ouch /usr/local/bin/
 COPY --from=rust /usr/local/bin/htmlq /usr/local/bin/
 COPY --from=utils /usr/local/bin/ /usr/local/bin/
+
+# Fix parsort shebang to use env perl instead of a hardcoded path
+RUN sed -i '1s|#!/usr/bin/perl|#!/usr/bin/env perl|' /usr/local/bin/parsort
 
 # Configure locales and default environment
 RUN localedef -i en_US -c -f UTF-8 en_US.UTF-8 || true; \
