@@ -1,0 +1,10 @@
+# CodeQL configuration for Black Mirror
+# https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/customizing-your-advanced-setup-for-code-scanning
+
+name: "CodeQL Config"
+
+# Exclude pnpm-lock.yaml from scanning since PNPM dependencies are used
+# for local development only and not in production
+paths-ignore:
+  - pnpm-lock.yaml
+  - "**pnpm-lock.yaml"

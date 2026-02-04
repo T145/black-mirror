@@ -15,6 +15,9 @@ updates:
     target-branch: "develop"
     schedule:
       interval: "daily"
+    # Ignore all npm/pnpm dependencies - used for local development only, not production
+    ignore:
+      - dependency-name: "*"
 
   - package-ecosystem: "docker"
     directory: "/docker"
