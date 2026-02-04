@@ -49,8 +49,9 @@ sorted() {
 # params: blacklist, whitelist,
 apply_whitelist() {
 	# https://askubuntu.com/a/562352
-	# send each line into the temp file as it's processed instead of keeping it in memory
-	parallel --pipe -k -j+0 grep --line-buffered -Fxvf "$2" - <"$1" >>"$TMP"
+	# Send each line into the temp file as it's processed instead of keeping it in memory
+	# BusyBox grep doesn't support the `--line-buffered` flag, which is GNU-only, so here awk & fflush are used instead
+	parallel --pipe -k -j+0 awk 'NR==FNR {wl[$0]; next} !($0 in wl) {print; fflush("")}' "$2" - <"$1" >>"$TMP"
 	cp "$TMP" "$1"
 	: >"$TMP"
 	echo "[INFO] Applied whitelist to: ${1}"
