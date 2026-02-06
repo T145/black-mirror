@@ -40,25 +40,37 @@ sponge() {
 	' -s -- -file="$1"
 }
 
-# params: file to sort,
 sorted() {
+	# $1 = file to sort
+
 	parsort -bfiu -S 100% -T "$DOWNLOADS" "$1" | sponge "$1"
 	echo "[INFO] Organized: ${1}"
 }
 
-# params: blacklist, whitelist,
 apply_whitelist() {
-	# https://askubuntu.com/a/562352
-	# Send each line into the temp file as it's processed instead of keeping it in memory
-	# BusyBox grep doesn't support the `--line-buffered` flag, which is GNU-only, so here awk & fflush are used instead
-	parallel --pipe -k -j+0 awk 'NR==FNR {wl[$0]; next} !($0 in wl) {print; fflush("")}' "$2" - <"$1" >>"$TMP"
-	cp "$TMP" "$1"
-	: >"$TMP"
-	echo "[INFO] Applied whitelist to: ${1}"
+    # $1 = input file (to be filtered)
+    # $2 = whitelist file
+    # $TMP = temporary file used for the filtered output
+
+    # Use awk to read the whitelist, then filter the input stream line‑by‑line.
+	# `fflush()` forces the output to be written immediately, which mimics `grep --line-buffered`.
+    parallel --pipe -k -j+0 \
+        awk -v wlfile="$2" '
+            NR==FNR { wl[$0]; next }          # build whitelist array
+            !($0 in wl) { print; fflush() }   # print lines not in whitelist
+        ' "$2" - < "$1" >> "$TMP"
+
+    # Replace the original file with the filtered version
+    cp "$TMP" "$1"
+    : > "$TMP"
+
+    echo "[INFO] Applied whitelist to: ${1}"
 }
 
-# params: ip list, cidr whitelist,
 apply_cidr_whitelist() {
+	# $1 = ip list
+	# $2 = cidr whitelist
+
 	if test -f "$1"; then
 		sem -j+0 grepcidr -vf "$2" <"$1" | sponge "$1"
 		sem --wait
