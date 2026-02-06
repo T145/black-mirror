@@ -47,18 +47,18 @@ sorted() {
 	echo "[INFO] Organized: ${1}"
 }
 
+_wl_filter() {
+    # $1 = whitelist file; stdin = chunk from parallel
+    mawk 'NR==FNR { wl[$0]; next } !($0 in wl) { print }' "$1" -
+}
+export -f _wl_filter
+
 apply_whitelist() {
     # $1 = input file (to be filtered)
     # $2 = whitelist file
     # $TMP = temporary file used for the filtered output
 
-    # Use awk to read the whitelist, then filter the input stream line‑by‑line.
-	# `fflush()` forces the output to be written immediately, which mimics `grep --line-buffered`.
-    parallel --pipe -k -j+0 \
-        awk -v wlfile="$2" '
-            NR==FNR { wl[$0]; next }          # build whitelist array
-            !($0 in wl) { print; fflush() }   # print lines not in whitelist
-        ' "$2" - < "$1" >> "$TMP"
+    parallel --pipe -k -j+0 _wl_filter "$2" < "$1" >> "$TMP"
 
     # Replace the original file with the filtered version
     cp "$TMP" "$1"
