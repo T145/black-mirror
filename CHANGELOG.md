@@ -27,6 +27,20 @@
 
 **Merged pull requests:**
 
+- fix\(list\): Attempt whitelisting using a wrapper ftn [\#298](https://github.com/T145/black-mirror/pull/298) ([T145](https://github.com/T145))
+- fix\(v2\): Patch whitelist application again [\#297](https://github.com/T145/black-mirror/pull/297) ([T145](https://github.com/T145))
+- \[FIX\] Disable Dependabot NPM checks; fix whitelist application [\#296](https://github.com/T145/black-mirror/pull/296) ([T145](https://github.com/T145))
+- \[FIX\] Update actions & fix whitelisting [\#294](https://github.com/T145/black-mirror/pull/294) ([T145](https://github.com/T145))
+- \[FIX\] Resolve Parsort not finding Perl [\#293](https://github.com/T145/black-mirror/pull/293) ([T145](https://github.com/T145))
+- chore\(deps\): bump docker/login-action from 3.3.0 to 3.7.0 in /.github/workflows [\#292](https://github.com/T145/black-mirror/pull/292) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/setup-buildx-action from 3.8.0 to 3.12.0 in /.github/workflows [\#291](https://github.com/T145/black-mirror/pull/291) ([dependabot[bot]](https://github.com/apps/dependabot))
+- \[FIX\] More workflow tweaks [\#288](https://github.com/T145/black-mirror/pull/288) ([T145](https://github.com/T145))
+- chore\(deps\): bump github/codeql-action from 3 to 4 in /.github/workflows [\#286](https://github.com/T145/black-mirror/pull/286) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump softprops/action-gh-release from 2.2.0 to 2.5.0 in /.github/workflows [\#285](https://github.com/T145/black-mirror/pull/285) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump actions/setup-node from 6.1.0 to 6.2.0 in /.github/workflows [\#284](https://github.com/T145/black-mirror/pull/284) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/setup-qemu-action from 3.2.0 to 3.7.0 in /.github/workflows [\#283](https://github.com/T145/black-mirror/pull/283) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump stefanzweifel/git-auto-commit-action from 0b492c0d951b87f3cd12523a542dbd156c1dbc80 to fc84150d7c7500bbbaedb7ec522588fcc41f4d4d in /.github/workflows [\#282](https://github.com/T145/black-mirror/pull/282) ([dependabot[bot]](https://github.com/apps/dependabot))
+- fix\(v2\): Patch dos2unix conversion and domain greping [\#281](https://github.com/T145/black-mirror/pull/281) ([T145](https://github.com/T145))
 - fix\(scripts\): Add back Perl shebangs [\#280](https://github.com/T145/black-mirror/pull/280) ([T145](https://github.com/T145))
 - \[FIX\]: Resolve Adguard Hostlist Compiler errors [\#278](https://github.com/T145/black-mirror/pull/278) ([T145](https://github.com/T145))
 - chore\(deps\): bump actions/checkout from 4 to 6 in /.github/workflows [\#277](https://github.com/T145/black-mirror/pull/277) ([dependabot[bot]](https://github.com/apps/dependabot))
