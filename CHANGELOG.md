@@ -27,6 +27,8 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump the npm\_and\_yarn group across 1 directory with 5 updates [\#306](https://github.com/T145/black-mirror/pull/306) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump the npm\_and\_yarn group across 1 directory with 5 updates [\#301](https://github.com/T145/black-mirror/pull/301) ([dependabot[bot]](https://github.com/apps/dependabot))
 - fix\(list\): Attempt whitelisting using a wrapper ftn [\#298](https://github.com/T145/black-mirror/pull/298) ([T145](https://github.com/T145))
 - fix\(v2\): Patch whitelist application again [\#297](https://github.com/T145/black-mirror/pull/297) ([T145](https://github.com/T145))
 - \[FIX\] Disable Dependabot NPM checks; fix whitelist application [\#296](https://github.com/T145/black-mirror/pull/296) ([T145](https://github.com/T145))
