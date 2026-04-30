@@ -8,6 +8,7 @@
 
 - \[feature\]: Whitelist all list provider hosts [\#147](https://github.com/T145/black-mirror/issues/147)
 - \[feature\]: sources.adguard seems to be missing? [\#119](https://github.com/T145/black-mirror/issues/119)
+- \[FEAT\] Update error handling to not hide messages [\#279](https://github.com/T145/black-mirror/pull/279) ([T145](https://github.com/T145))
 - \[FEAT\] Switch container environment to open Chainguard images [\#265](https://github.com/T145/black-mirror/pull/265) ([T145](https://github.com/T145))
 
 **Fixed bugs:**
@@ -42,6 +43,7 @@
 - chore\(deps\): bump docker/setup-qemu-action from 3.2.0 to 3.7.0 in /.github/workflows [\#283](https://github.com/T145/black-mirror/pull/283) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump stefanzweifel/git-auto-commit-action from 0b492c0d951b87f3cd12523a542dbd156c1dbc80 to fc84150d7c7500bbbaedb7ec522588fcc41f4d4d in /.github/workflows [\#282](https://github.com/T145/black-mirror/pull/282) ([dependabot[bot]](https://github.com/apps/dependabot))
 - fix\(v2\): Patch dos2unix conversion and domain greping [\#281](https://github.com/T145/black-mirror/pull/281) ([T145](https://github.com/T145))
+- fix\(scripts\): Add back Perl shebangs [\#280](https://github.com/T145/black-mirror/pull/280) ([T145](https://github.com/T145))
 - \[FIX\]: Resolve Adguard Hostlist Compiler errors [\#278](https://github.com/T145/black-mirror/pull/278) ([T145](https://github.com/T145))
 - chore\(deps\): bump actions/checkout from 4 to 6 in /.github/workflows [\#277](https://github.com/T145/black-mirror/pull/277) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/download-artifact from 4.1.8 to 7.0.0 in /.github/workflows [\#276](https://github.com/T145/black-mirror/pull/276) ([dependabot[bot]](https://github.com/apps/dependabot))
@@ -54,6 +56,7 @@
 - \[FIX\] Resolve reported Actions errors [\#269](https://github.com/T145/black-mirror/pull/269) ([T145](https://github.com/T145))
 - chore\(deps\): bump tar from 7.5.2 to 7.5.3 in the npm\_and\_yarn group across 1 directory [\#268](https://github.com/T145/black-mirror/pull/268) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump diff from 8.0.2 to 8.0.3 in the npm\_and\_yarn group across 1 directory [\#267](https://github.com/T145/black-mirror/pull/267) ([dependabot[bot]](https://github.com/apps/dependabot))
+- \[FIX\] Get MegaLinter running again [\#266](https://github.com/T145/black-mirror/pull/266) ([T145](https://github.com/T145))
 - chore\(deps\): bump brace-expansion from 1.1.11 to 1.1.12 in the npm\_and\_yarn group across 1 directory [\#261](https://github.com/T145/black-mirror/pull/261) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump actions/upload-artifact from 4.4.3 to 4.5.0 in /.github/workflows [\#260](https://github.com/T145/black-mirror/pull/260) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump docker/setup-buildx-action from 3.7.1 to 3.8.0 in /.github/workflows [\#259](https://github.com/T145/black-mirror/pull/259) ([dependabot[bot]](https://github.com/apps/dependabot))
