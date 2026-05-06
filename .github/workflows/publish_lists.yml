@@ -28,7 +28,7 @@ jobs:
         with:
           submodules: true
       - name: Export secrets
-        uses: Firenza/secrets-to-env@v1.3.0
+        uses: Firenza/secrets-to-env@v1.4.0
         with:
           secrets: ${{ toJSON(secrets) }}
       - name: Generate lists
