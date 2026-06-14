@@ -13,6 +13,7 @@
 
 **Fixed bugs:**
 
+- \[bug\]: False Positive: blusyne.lt [\#318](https://github.com/T145/black-mirror/issues/318)
 - \[bug\]: Wget refuses to log data [\#195](https://github.com/T145/black-mirror/issues/195)
 - \[bug\]: Youtube is blocked [\#191](https://github.com/T145/black-mirror/issues/191)
 - \[bug\]: Minor Awk regex bug when processsing schakal [\#190](https://github.com/T145/black-mirror/issues/190)
