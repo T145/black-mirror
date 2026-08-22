@@ -13,6 +13,7 @@
 
 **Fixed bugs:**
 
+- \[bug\]: False positive: maniek86.xyz [\#319](https://github.com/T145/black-mirror/issues/319)
 - \[bug\]: False Positive: blusyne.lt [\#318](https://github.com/T145/black-mirror/issues/318)
 - \[bug\]: Wget refuses to log data [\#195](https://github.com/T145/black-mirror/issues/195)
 - \[bug\]: Youtube is blocked [\#191](https://github.com/T145/black-mirror/issues/191)
@@ -28,8 +29,24 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump stefanzweifel/git-auto-commit-action from f53a62c26ed5971dd2ed8768e4142f08c767ea37 to 32e98448120552541e630c7992836985b7c00748 in /.github/workflows [\#317](https://github.com/T145/black-mirror/pull/317) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump Firenza/secrets-to-env from 1.3.0 to 1.4.0 in /.github/workflows [\#316](https://github.com/T145/black-mirror/pull/316) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/build-push-action from 6.19.2 to 7.1.0 in /.github/workflows [\#315](https://github.com/T145/black-mirror/pull/315) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump actions/download-artifact from 8.0.0 to 8.0.1 in /.github/workflows [\#314](https://github.com/T145/black-mirror/pull/314) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/setup-buildx-action from 3.12.0 to 4.0.0 in /.github/workflows [\#313](https://github.com/T145/black-mirror/pull/313) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump uuid from 13.0.0 to 13.0.2 in the npm\_and\_yarn group across 1 directory [\#312](https://github.com/T145/black-mirror/pull/312) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump stefanzweifel/git-auto-commit-action from fc84150d7c7500bbbaedb7ec522588fcc41f4d4d to f53a62c26ed5971dd2ed8768e4142f08c767ea37 in /.github/workflows [\#311](https://github.com/T145/black-mirror/pull/311) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump GeekyEggo/delete-artifact from e46cfb9575865f907c2beb2e4170b5f4c7d77c52 to d79b2442431e4adbc383d29a28e630374eceb303 in /.github/workflows [\#310](https://github.com/T145/black-mirror/pull/310) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/login-action from 4.0.0 to 4.1.0 in /.github/workflows [\#309](https://github.com/T145/black-mirror/pull/309) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump actions/upload-artifact from 7.0.0 to 7.0.1 in /.github/workflows [\#308](https://github.com/T145/black-mirror/pull/308) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump softprops/action-gh-release from 2.5.0 to 3.0.0 in /.github/workflows [\#307](https://github.com/T145/black-mirror/pull/307) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump the npm\_and\_yarn group across 1 directory with 5 updates [\#306](https://github.com/T145/black-mirror/pull/306) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/setup-qemu-action from 3.7.0 to 4.0.0 in /.github/workflows [\#305](https://github.com/T145/black-mirror/pull/305) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/login-action from 3.7.0 to 4.0.0 in /.github/workflows [\#304](https://github.com/T145/black-mirror/pull/304) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump actions/download-artifact from 7.0.0 to 8.0.0 in /.github/workflows [\#303](https://github.com/T145/black-mirror/pull/303) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump actions/upload-artifact from 6.0.0 to 7.0.0 in /.github/workflows [\#302](https://github.com/T145/black-mirror/pull/302) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore\(deps\): bump the npm\_and\_yarn group across 1 directory with 5 updates [\#301](https://github.com/T145/black-mirror/pull/301) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): bump docker/build-push-action from 6.18.0 to 6.19.2 in /.github/workflows [\#300](https://github.com/T145/black-mirror/pull/300) ([dependabot[bot]](https://github.com/apps/dependabot))
 - fix\(list\): Attempt whitelisting using a wrapper ftn [\#298](https://github.com/T145/black-mirror/pull/298) ([T145](https://github.com/T145))
 - fix\(v2\): Patch whitelist application again [\#297](https://github.com/T145/black-mirror/pull/297) ([T145](https://github.com/T145))
 - \[FIX\] Disable Dependabot NPM checks; fix whitelist application [\#296](https://github.com/T145/black-mirror/pull/296) ([T145](https://github.com/T145))
