@@ -1,679 +1,662 @@
-2026-11-16 22:58:05.524423 [NOTICE] [Context.cc:310] Downloading 382 item(s)
-2026-11-16 22:58:05.528801 [NOTICE] [ServerStatMan.cc:230] ServerStat file logs/server-stats.txt loaded successfully.
-2026-11-16 22:58:05.674949 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/ACL4SSR_program_ads
-2026-11-16 22:58:05.692573 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/1hosts_official_inclusions
-2026-11-16 22:58:05.707922 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/additional_hosts_unwanted_iranian
-2026-11-16 22:58:05.708970 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/1hosts_staged_inclusions
-2026-11-16 22:58:05.709274 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/1hosts_staged_pro_inclusions
-2026-11-16 22:58:05.714675 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/additional_hosts_adservers_and_trackers
-2026-11-16 22:58:05.732321 [ERROR] [AbstractCommand.cc:349] CUID#17 - Download aborted. URI=https://urlhaus.abuse.ch/downloads/csv_online/
-Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://urlhaus.abuse.ch/downloads/csv_online/
-  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=410
-2026-11-16 22:58:05.732339 [NOTICE] [RequestGroupMan.cc:424] Download GID#fcaeeffda430aef9 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/abuse_ch_urlhaus_online
-2026-11-16 22:58:05.734026 [ERROR] [AbstractCommand.cc:349] CUID#18 - Download aborted. URI=https://urlhaus.abuse.ch/downloads/csv_recent/
-Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://urlhaus.abuse.ch/downloads/csv_recent/
-  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=410
-2026-11-16 22:58:05.734035 [NOTICE] [RequestGroupMan.cc:424] Download GID#b1c816d8bb50a299 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/abuse_ch_urlhaus_recent
-2026-11-16 22:58:05.747383 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/1hosts_official_pro_inclusions
-2026-11-16 22:58:05.756808 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/abuse_ch_sslbl
-2026-11-16 22:58:05.762619 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/additional_hosts_fake_domains
-2026-11-16 22:58:05.771577 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/additional_hosts_activation
-2026-11-16 22:58:05.788166 [ERROR] [AbstractCommand.cc:349] CUID#16 - Download aborted. URI=https://threatfox.abuse.ch/export/json/ip-port/full/
+2026-11-17 21:50:54.749966 [NOTICE] [Context.cc:310] Downloading 382 item(s)
+2026-11-17 21:50:54.759017 [NOTICE] [ServerStatMan.cc:230] ServerStat file logs/server-stats.txt loaded successfully.
+2026-11-17 21:50:54.837607 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/ACL4SSR_program_ads
+2026-11-17 21:50:54.847970 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/1hosts_official_pro_inclusions
+2026-11-17 21:50:54.867776 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/1hosts_staged_inclusions
+2026-11-17 21:50:54.868983 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/1hosts_staged_pro_inclusions
+2026-11-17 21:50:54.870335 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/additional_hosts_unwanted_iranian
+2026-11-17 21:50:54.871100 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/1hosts_official_inclusions
+2026-11-17 21:50:54.871932 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/abuse_ch_sslbl
+2026-11-17 21:50:54.888647 [ERROR] [AbstractCommand.cc:349] CUID#16 - Download aborted. URI=https://threatfox.abuse.ch/export/json/ip-port/full/
 Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://threatfox.abuse.ch/export/json/ip-port/full/
   -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=410
-2026-11-16 22:58:05.788174 [NOTICE] [RequestGroupMan.cc:424] Download GID#f612babe1f434c74 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/abuse_ch_threatfox_ips
-2026-11-16 22:58:05.791417 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/additional_hosts_search_blacklist
-2026-11-16 22:58:05.796339 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/abvpn_ads
-2026-11-16 22:58:05.796619 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/abvpn_adult
-2026-11-16 22:58:05.797796 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/additional_hosts_parking_iranian
-2026-11-16 22:58:05.799143 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/ACL4SSR_web_ads
-2026-11-16 22:58:05.802277 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/anti_porn
-2026-11-16 22:58:05.805470 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/abvpn_general
-2026-11-16 22:58:05.834451 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/alienvault
-2026-11-16 22:58:05.850986 [ERROR] [AbstractCommand.cc:349] CUID#15 - Download aborted. URI=https://threatfox.abuse.ch/export/json/domains/full/
+2026-11-17 21:50:54.888677 [NOTICE] [RequestGroupMan.cc:424] Download GID#b91156be66636ac9 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/abuse_ch_threatfox_ips
+2026-11-17 21:50:54.889341 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/ACL4SSR_web_ads
+2026-11-17 21:50:54.893562 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/abuse_ch_feodotracker
+2026-11-17 21:50:54.894135 [ERROR] [AbstractCommand.cc:349] CUID#17 - Download aborted. URI=https://urlhaus.abuse.ch/downloads/csv_online/
+Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://urlhaus.abuse.ch/downloads/csv_online/
+  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=410
+2026-11-17 21:50:54.894159 [NOTICE] [RequestGroupMan.cc:424] Download GID#94ce837e487827f5 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/abuse_ch_urlhaus_online
+2026-11-17 21:50:54.894197 [ERROR] [AbstractCommand.cc:349] CUID#18 - Download aborted. URI=https://urlhaus.abuse.ch/downloads/csv_recent/
+Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://urlhaus.abuse.ch/downloads/csv_recent/
+  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=410
+2026-11-17 21:50:54.894225 [NOTICE] [RequestGroupMan.cc:424] Download GID#8df2465b9357e79e not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/abuse_ch_urlhaus_recent
+2026-11-17 21:50:54.902921 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/additional_hosts_fake_domains
+2026-11-17 21:50:54.913029 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/abvpn_ads
+2026-11-17 21:50:54.916769 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/additional_hosts_adservers_and_trackers
+2026-11-17 21:50:54.917845 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/additional_hosts_search_blacklist
+2026-11-17 21:50:54.925432 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/additional_hosts_activation
+2026-11-17 21:50:54.933907 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/abvpn_general
+2026-11-17 21:50:54.939610 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/abvpn_adult
+2026-11-17 21:50:54.940962 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/additional_hosts_parking_iranian
+2026-11-17 21:50:54.976650 [ERROR] [AbstractCommand.cc:349] CUID#15 - Download aborted. URI=https://threatfox.abuse.ch/export/json/domains/full/
 Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://threatfox.abuse.ch/export/json/domains/full/
   -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=410
-2026-11-16 22:58:05.851002 [NOTICE] [RequestGroupMan.cc:424] Download GID#a1ed9de287361d3d not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/abuse_ch_threatfox_domains
-2026-11-16 22:58:05.863826 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/abuse_ch_feodotracker
-2026-11-16 22:58:05.867233 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/adaway
-2026-11-16 22:58:05.869164 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/antispam_it
-2026-11-16 22:58:05.881634 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/anti_axelspringer
-2026-11-16 22:58:05.918156 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/apple_telemetry
-2026-11-16 22:58:05.922558 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/bjornstar
-2026-11-16 22:58:05.955014 [ERROR] [AbstractCommand.cc:401] CUID#45 - Download aborted. URI=https://ayashige.herokuapp.com/api/v1/domains/
+2026-11-17 21:50:54.976693 [NOTICE] [RequestGroupMan.cc:424] Download GID#7088ac3f2faf1bf5 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/abuse_ch_threatfox_domains
+2026-11-17 21:50:54.982225 [ERROR] [AbstractCommand.cc:401] CUID#45 - Download aborted. URI=https://ayashige.herokuapp.com/api/v1/domains/
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://ayashige.herokuapp.com/api/v1/domains/
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:05.955109 [NOTICE] [RequestGroupMan.cc:424] Download GID#57d6e8afe27838bc not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/ayashige
-2026-11-16 22:58:05.957798 [NOTICE] [HttpResponse.cc:168] CUID#46 - Redirecting to https://binarydefense.com/banlist.txt
-2026-11-16 22:58:05.967800 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/blockconvert_internal
-2026-11-16 22:58:05.974541 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/blockconvert_adblock
-2026-11-16 22:58:05.993170 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/binarydefense
-2026-11-16 22:58:06.036563 [ERROR] [AbstractCommand.cc:401] CUID#55 - Download aborted. URI=https://blocklistproject.github.io/Lists/alt-version/everything-nl.txt
+2026-11-17 21:50:54.982385 [NOTICE] [RequestGroupMan.cc:424] Download GID#d774f825d7255743 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/ayashige
+2026-11-17 21:50:54.984611 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/anti_axelspringer
+2026-11-17 21:50:55.016127 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/apple_telemetry
+2026-11-17 21:50:55.017107 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/antispam_it
+2026-11-17 21:50:55.031602 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/anti_porn
+2026-11-17 21:50:55.063754 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/bjornstar
+2026-11-17 21:50:55.078024 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/antisocialengineer
+2026-11-17 21:50:55.087093 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/blockconvert_adblock
+2026-11-17 21:50:55.098841 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/blockconvert_internal
+2026-11-17 21:50:55.123843 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/adaway
+2026-11-17 21:50:55.131922 [NOTICE] [HttpResponse.cc:168] CUID#46 - Redirecting to https://binarydefense.com/banlist.txt
+2026-11-17 21:50:55.138475 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/blp_vaping
+2026-11-17 21:50:55.141343 [ERROR] [AbstractCommand.cc:401] CUID#55 - Download aborted. URI=https://blocklistproject.github.io/Lists/alt-version/everything-nl.txt
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://blocklistproject.github.io/Lists/alt-version/everything-nl.txt
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:06.036589 [NOTICE] [RequestGroupMan.cc:424] Download GID#de5d9a5acfd312b1 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/blp_everything
-2026-11-16 22:58:06.055398 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/blp_smart_tv
-2026-11-16 22:58:06.061466 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/blp_whatsapp
-2026-11-16 22:58:06.067171 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/blokada_exodusprivacy
-2026-11-16 22:58:06.067806 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/blp_vaping
-2026-11-16 22:58:06.115655 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/anti_ad
-2026-11-16 22:58:06.116581 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/blocklist_de
-2026-11-16 22:58:06.151333 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/blokada_tracker_radar
-2026-11-16 22:58:06.166235 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/botvrij_hostnames
-2026-11-16 22:58:06.170003 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/botvrij_ioc_domain
-2026-11-16 22:58:06.191689 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/air_anti_icann
-2026-11-16 22:58:06.197151 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/botvrij_ioc_ip_dst
-2026-11-16 22:58:06.226604 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/c2_intel_feeds
-2026-11-16 22:58:06.275477 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/antipopads
-2026-11-16 22:58:06.285708 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/chrisjudk
-2026-11-16 22:58:06.314022 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/antisocialengineer
-2026-11-16 22:58:06.368415 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/botvrij_ioc_ip_src
-2026-11-16 22:58:06.390747 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/cps_illuminate
-2026-11-16 22:58:06.401839 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/botvrij_ioc_url
-2026-11-16 22:58:06.448974 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/air_cryptojacking
-2026-11-16 22:58:06.454736 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/air_ads
-2026-11-16 22:58:06.467326 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/cps_predict
-2026-11-16 22:58:06.468342 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/cps_stalkerware
-2026-11-16 22:58:06.471247 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/blackbird
-2026-11-16 22:58:06.486449 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/botvrij_misp_ip_dst
-2026-11-16 22:58:06.494895 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/cinsscore
-2026-11-16 22:58:06.527706 [NOTICE] [HttpResponse.cc:168] CUID#72 - Redirecting to https://gitlab.com/users/sign_in
-2026-11-16 22:58:06.543994 [ERROR] [AbstractCommand.cc:349] CUID#72 - Download aborted. URI=https://gitlab.com/ZeroDot1/CoinBlockerLists/-/raw/master/list_optional.txt
+2026-11-17 21:50:55.141438 [NOTICE] [RequestGroupMan.cc:424] Download GID#a99788d05b1fc4b8 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/blp_everything
+2026-11-17 21:50:55.146510 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/binarydefense
+2026-11-17 21:50:55.159849 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/blp_smart_tv
+2026-11-17 21:50:55.162153 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/blp_whatsapp
+2026-11-17 21:50:55.182542 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/alienvault
+2026-11-17 21:50:55.212232 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/air_anti_icann
+2026-11-17 21:50:55.264626 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/blocklist_de
+2026-11-17 21:50:55.273393 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/antipopads
+2026-11-17 21:50:55.274884 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/botvrij_ioc_domain
+2026-11-17 21:50:55.287639 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/botvrij_covid
+2026-11-17 21:50:55.296457 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/botvrij_ioc_ip_dst
+2026-11-17 21:50:55.360143 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/c2_intel_feeds
+2026-11-17 21:50:55.384881 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/chrisjudk
+2026-11-17 21:50:55.392162 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/blokada_exodusprivacy
+2026-11-17 21:50:55.398306 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/air_cryptojacking
+2026-11-17 21:50:55.400642 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/air_ads
+2026-11-17 21:50:55.456255 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/cps_illuminate
+2026-11-17 21:50:55.466285 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/cname_trackers
+2026-11-17 21:50:55.474856 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/botvrij_ioc_url
+2026-11-17 21:50:55.491228 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/blackbird
+2026-11-17 21:50:55.495805 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/botvrij_hostnames
+2026-11-17 21:50:55.521822 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/cps_predict
+2026-11-17 21:50:55.524950 [NOTICE] [HttpResponse.cc:168] CUID#72 - Redirecting to https://gitlab.com/users/sign_in
+2026-11-17 21:50:55.534036 [ERROR] [AbstractCommand.cc:349] CUID#72 - Download aborted. URI=https://gitlab.com/ZeroDot1/CoinBlockerLists/-/raw/master/list_optional.txt
 Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://gitlab.com/users/sign_in
   -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=403
-2026-11-16 22:58:06.650232 [ERROR] [AbstractCommand.cc:349] CUID#80 - Download aborted. URI=https://api.cybercure.ai/feed/get_ips?type=json
-Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://api.cybercure.ai/feed/get_ips?type=json
-  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=520
-2026-11-16 22:58:06.650240 [NOTICE] [RequestGroupMan.cc:424] Download GID#803e92b22955154b not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/cyber_cure_ips
-2026-11-16 22:58:06.655285 [ERROR] [AbstractCommand.cc:349] CUID#81 - Download aborted. URI=https://api.cybercure.ai/feed/get_url?type=json
+2026-11-17 21:50:55.548042 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/blokada_tracker_radar
+2026-11-17 21:50:55.572429 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/cps_stalkerware
+2026-11-17 21:50:55.620107 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/cryptoscamdb_blacklist
+2026-11-17 21:50:55.625543 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/cinsscore
+2026-11-17 21:50:55.651352 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/cps_iocs
+2026-11-17 21:50:55.680410 [ERROR] [AbstractCommand.cc:349] CUID#82 - Download aborted. URI=https://api.cybercure.ai/feed/get_url?type=json
 Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://api.cybercure.ai/feed/get_url?type=json
   -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=520
-2026-11-16 22:58:06.655293 [NOTICE] [RequestGroupMan.cc:424] Download GID#faabafac38b2ea57 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/cyber_cure_urls
-2026-11-16 22:58:06.672694 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/cryptoscamdb_blacklist
-2026-11-16 22:58:06.692254 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/cryptolaemus
-2026-11-16 22:58:06.702589 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/cps_iocs
-2026-11-16 22:58:06.702908 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/d3ward
-2026-11-16 22:58:06.745824 [NOTICE] [HttpResponse.cc:168] CUID#85 - Redirecting to https://gitlab.com/users/sign_in
-2026-11-16 22:58:06.760682 [ERROR] [AbstractCommand.cc:349] CUID#85 - Download aborted. URI=https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt
+2026-11-17 21:50:55.680435 [NOTICE] [RequestGroupMan.cc:424] Download GID#2e0dceef51edac08 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/cyber_cure_urls
+2026-11-17 21:50:55.688154 [NOTICE] [HttpResponse.cc:168] CUID#81 - Redirecting to https://gitlab.com/users/sign_in
+2026-11-17 21:50:55.697850 [ERROR] [AbstractCommand.cc:349] CUID#81 - Download aborted. URI=https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt
 Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://gitlab.com/users/sign_in
   -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=403
-2026-11-16 22:58:06.776250 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/botvrij_covid
-2026-11-16 22:58:06.777472 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/air_gambling
-2026-11-16 22:58:06.789987 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/dandelion_antimalware
-2026-11-16 22:58:06.810730 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/damengzhu
-2026-11-16 22:58:06.836552 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/dandelionsprout_norwegian
-2026-11-16 22:58:06.881334 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/dan_pollock
-2026-11-16 22:58:06.886474 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/dataplane_sipinvitation
-2026-11-16 22:58:06.894193 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/dataplane_sipregistration
-2026-11-16 22:58:06.894223 [NOTICE] [HttpResponse.cc:168] CUID#92 - Redirecting to https://projects.gitlab.io/auth?domain=https://zerodot1.gitlab.io&root_namespace_id=1932776&state=QLIybGcWRgJRGyuo7HO5oQ==&code_challenge=mfaAU6XbepxTmq8UaYv6Tmr18OKNh8zlPgvHok1pplM
-2026-11-16 22:58:06.947769 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/dataplane_sshpwauth
-2026-11-16 22:58:06.960094 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/dataplane_vncrfb
-2026-11-16 22:58:06.961525 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/dataplane_sipquery
-2026-11-16 22:58:06.975004 [NOTICE] [HttpResponse.cc:168] CUID#92 - Redirecting to https://gitlab.com/oauth/authorize?client_id=5059a88907e1b093c23df47d996183b101a862a5e53e099b563120d1308db2c1&redirect_uri=https://projects.gitlab.io/auth&response_type=code&state=QLIybGcWRgJRGyuo7HO5oQ==&scope=api&root_namespace_id=1932776&code_challenge=mfaAU6XbepxTmq8UaYv6Tmr18OKNh8zlPgvHok1pplM&code_challenge_method=S256
-2026-11-16 22:58:06.981423 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/disconnectme_entities
-2026-11-16 22:58:07.020506 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/combindprivacyblocklists
-2026-11-16 22:58:07.061101 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/cyberhost
-2026-11-16 22:58:07.063760 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/discord_suspicious_links
-2026-11-16 22:58:07.070404 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/discord_phishing_links
-2026-11-16 22:58:07.092890 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/cybercrime_ccmgate
-2026-11-16 22:58:07.116854 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/dshield
-2026-11-16 22:58:07.129478 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/bruteforceblocker
-2026-11-16 22:58:07.148383 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/durablenapkin_avast
-2026-11-16 22:58:07.178531 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/durablenapkin_luminati
-2026-11-16 22:58:07.182884 [NOTICE] [HttpResponse.cc:168] CUID#92 - Redirecting to https://gitlab.com/users/sign_in
-2026-11-16 22:58:07.195242 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/durablenapkin_scams
-2026-11-16 22:58:07.209912 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/air_malware
-2026-11-16 22:58:07.211464 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/durablenapkin_streaming
-2026-11-16 22:58:07.211645 [ERROR] [AbstractCommand.cc:349] CUID#92 - Download aborted. URI=https://zerodot1.gitlab.io/CoinBlockerLists/list_optional.txt
+2026-11-17 21:50:55.707609 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/air_gambling
+2026-11-17 21:50:55.718996 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/d3ward
+2026-11-17 21:50:55.744753 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/anti_ad
+2026-11-17 21:50:55.758238 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/botvrij_ioc_ip_src
+2026-11-17 21:50:55.804863 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/dandelion_antimalware
+2026-11-17 21:50:55.806293 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/dandelionsprout_norwegian
+2026-11-17 21:50:55.811075 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/botvrij_misp_ip_dst
+2026-11-17 21:50:55.812074 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/damengzhu
+2026-11-17 21:50:55.812416 [NOTICE] [HttpResponse.cc:168] CUID#88 - Redirecting to https://projects.gitlab.io/auth?domain=https://zerodot1.gitlab.io&root_namespace_id=1932776&state=ugtwDNeDSj3S7m8jtKBLRA==&code_challenge=munl0asGJ2AoFM73t3XiPNzixh45pnbkyPRA-T7QxJ0
+2026-11-17 21:50:55.840688 [NOTICE] [HttpResponse.cc:168] CUID#88 - Redirecting to https://gitlab.com/oauth/authorize?client_id=5059a88907e1b093c23df47d996183b101a862a5e53e099b563120d1308db2c1&redirect_uri=https://projects.gitlab.io/auth&response_type=code&state=ugtwDNeDSj3S7m8jtKBLRA==&scope=api&root_namespace_id=1932776&code_challenge=munl0asGJ2AoFM73t3XiPNzixh45pnbkyPRA-T7QxJ0&code_challenge_method=S256
+2026-11-17 21:50:55.847655 [ERROR] [AbstractCommand.cc:349] CUID#80 - Download aborted. URI=https://api.cybercure.ai/feed/get_ips?type=json
+Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://api.cybercure.ai/feed/get_ips?type=json
+  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=520
+2026-11-17 21:50:55.847674 [NOTICE] [RequestGroupMan.cc:424] Download GID#e95b3c07900f7d55 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/cyber_cure_ips
+2026-11-17 21:50:55.888120 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/dan_pollock
+2026-11-17 21:50:55.898863 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/cryptolaemus
+2026-11-17 21:50:55.941985 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/dataplane_sipinvitation
+2026-11-17 21:50:55.943828 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/dataplane_sipregistration
+2026-11-17 21:50:55.958350 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/disconnectme_entities
+2026-11-17 21:50:55.976358 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/dataplane_sipquery
+2026-11-17 21:50:56.009081 [NOTICE] [HttpResponse.cc:168] CUID#88 - Redirecting to https://gitlab.com/users/sign_in
+2026-11-17 21:50:56.016314 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/bruteforceblocker
+2026-11-17 21:50:56.021743 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/dataplane_vncrfb
+2026-11-17 21:50:56.023185 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/discord_phishing_links
+2026-11-17 21:50:56.026847 [ERROR] [AbstractCommand.cc:349] CUID#88 - Download aborted. URI=https://zerodot1.gitlab.io/CoinBlockerLists/list_optional.txt
 Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://gitlab.com/users/sign_in
   -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=403
-2026-11-16 22:58:07.211684 [NOTICE] [RequestGroupMan.cc:424] Download GID#dc47e88292469535 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/coinblockerlists_optional
-2026-11-16 22:58:07.223934 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/fademind_unchecky
-2026-11-16 22:58:07.243190 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/easylist_finnish
-2026-11-16 22:58:07.251579 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/durablenapkin_tvstream
-2026-11-16 22:58:07.260226 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/easylist_indonesian
-2026-11-16 22:58:07.267827 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/dogino_discord
-2026-11-16 22:58:07.280621 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/energized_unblock
-2026-11-16 22:58:07.309365 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/cname_trackers
-2026-11-16 22:58:07.312138 [NOTICE] [HttpResponse.cc:168] CUID#86 - Redirecting to https://coi.gov.cz/userdata/files/dokumenty-ke-stazeni/open-data/rizikove.csv
-2026-11-16 22:58:07.319580 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/firehol_level4
-2026-11-16 22:58:07.321757 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/frellwits
-2026-11-16 22:58:07.337220 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/darklist
-2026-11-16 22:58:07.398415 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/cert_pl
-2026-11-16 22:58:07.407442 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/giox_facebook
-2026-11-16 22:58:07.411336 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/giox_filtri
-2026-11-16 22:58:07.453015 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/futaguard_lowtech
-2026-11-16 22:58:07.530638 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/cybercrime_all
-2026-11-16 22:58:07.548688 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/goodbye_ads_core
-2026-11-16 22:58:07.563779 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/goodbye_ads_samsung
-2026-11-16 22:58:07.587660 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/anudeep_facebook
-2026-11-16 22:58:07.588701 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/goodbye_ads_spotify
-2026-11-16 22:58:07.598544 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/goodbye_ads_xiaomi
-2026-11-16 22:58:07.606962 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/czech_risky_eshops
-2026-11-16 22:58:07.607410 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/fanboy_antifonts
-2026-11-16 22:58:07.611287 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/goodbye_ads_leeco
-2026-11-16 22:58:07.664519 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/futaguard_rpz
-2026-11-16 22:58:07.668314 [ERROR] [AbstractCommand.cc:401] CUID#150 - Download aborted. URI=https://raw.githubusercontent.com/hagezi/dns-blocklists/main/submit_pullrequest_here/deny_light-ultimate.txt
+2026-11-17 21:50:56.027219 [NOTICE] [RequestGroupMan.cc:424] Download GID#6c7fb7b6fa490486 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/coinblockerlists_optional
+2026-11-17 21:50:56.032369 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/combindprivacyblocklists
+2026-11-17 21:50:56.033793 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/cybercrime_ccmgate
+2026-11-17 21:50:56.045762 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/digitalside_ips
+2026-11-17 21:50:56.046181 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/durablenapkin_scams
+2026-11-17 21:50:56.070449 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/discord_suspicious_links
+2026-11-17 21:50:56.093017 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/durablenapkin_avast
+2026-11-17 21:50:56.101299 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/dataplane_sshpwauth
+2026-11-17 21:50:56.107459 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/durablenapkin_streaming
+2026-11-17 21:50:56.113499 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/durablenapkin_luminati
+2026-11-17 21:50:56.122629 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/air_malware
+2026-11-17 21:50:56.123972 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/easylist_finnish
+2026-11-17 21:50:56.124305 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/fademind_unchecky
+2026-11-17 21:50:56.145518 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/durablenapkin_tvstream
+2026-11-17 21:50:56.159795 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/easylist_indonesian
+2026-11-17 21:50:56.162629 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/dogino_discord
+2026-11-17 21:50:56.164231 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/dshield
+2026-11-17 21:50:56.183876 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/energized_unblock
+2026-11-17 21:50:56.202706 [NOTICE] [HttpResponse.cc:168] CUID#86 - Redirecting to https://coi.gov.cz/userdata/files/dokumenty-ke-stazeni/open-data/rizikove.csv
+2026-11-17 21:50:56.208156 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/frellwits
+2026-11-17 21:50:56.308481 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/futaguard_nofarm
+2026-11-17 21:50:56.373872 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/futaguard_rpz
+2026-11-17 21:50:56.420623 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/darklist
+2026-11-17 21:50:56.428252 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/cert_pl
+2026-11-17 21:50:56.428587 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/giox_facebook
+2026-11-17 21:50:56.429763 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/futaguard_lowtech
+2026-11-17 21:50:56.454060 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/cybercrime_all
+2026-11-17 21:50:56.462504 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/czech_risky_eshops
+2026-11-17 21:50:56.483354 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/fanboy_indian
+2026-11-17 21:50:56.489871 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/giox_filtri
+2026-11-17 21:50:56.497163 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/goodbye_ads_spotify
+2026-11-17 21:50:56.508536 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/goodbye_ads_samsung
+2026-11-17 21:50:56.510152 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/goodbye_ads_core
+2026-11-17 21:50:56.544081 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/esox_lucius
+2026-11-17 21:50:56.545778 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/fanboy_antifonts
+2026-11-17 21:50:56.546476 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/goodbye_ads_xiaomi
+2026-11-17 21:50:56.560556 [ERROR] [AbstractCommand.cc:401] CUID#150 - Download aborted. URI=https://raw.githubusercontent.com/hagezi/dns-blocklists/main/submit_pullrequest_here/deny_light-ultimate.txt
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/hagezi/dns-blocklists/main/submit_pullrequest_here/deny_light-ultimate.txt
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:07.668352 [NOTICE] [RequestGroupMan.cc:424] Download GID#262050d1195e34cc not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/hagezi_default
-2026-11-16 22:58:07.673388 [ERROR] [AbstractCommand.cc:401] CUID#152 - Download aborted. URI=https://raw.githubusercontent.com/hagezi/dns-blocklists/main/submit_pullrequest_here/deny_popupads.txt
-Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/hagezi/dns-blocklists/main/submit_pullrequest_here/deny_popupads.txt
-  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:07.673421 [NOTICE] [RequestGroupMan.cc:424] Download GID#dd7955a62c14f506 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/hagezi_popupads
-2026-11-16 22:58:07.674235 [ERROR] [AbstractCommand.cc:401] CUID#151 - Download aborted. URI=https://raw.githubusercontent.com/hagezi/dns-blocklists/main/submit_pullrequest_here/deny_proplus-ultimate.txt
+2026-11-17 21:50:56.560644 [NOTICE] [RequestGroupMan.cc:424] Download GID#214e016dcb10e282 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/hagezi_default
+2026-11-17 21:50:56.561499 [ERROR] [AbstractCommand.cc:401] CUID#151 - Download aborted. URI=https://raw.githubusercontent.com/hagezi/dns-blocklists/main/submit_pullrequest_here/deny_proplus-ultimate.txt
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/hagezi/dns-blocklists/main/submit_pullrequest_here/deny_proplus-ultimate.txt
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:07.674267 [NOTICE] [RequestGroupMan.cc:424] Download GID#b7b4353c52f9ce23 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/hagezi_extra
-2026-11-16 22:58:07.677635 [ERROR] [AbstractCommand.cc:401] CUID#153 - Download aborted. URI=https://raw.githubusercontent.com/hagezi/dns-blocklists/main/submit_pullrequest_here/deny_tif.txt
+2026-11-17 21:50:56.561778 [NOTICE] [RequestGroupMan.cc:424] Download GID#1618ab2fbaa0df0b not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/hagezi_extra
+2026-11-17 21:50:56.564681 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/goodbye_ads_leeco
+2026-11-17 21:50:56.575408 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/firehol_level4
+2026-11-17 21:50:56.585203 [ERROR] [AbstractCommand.cc:401] CUID#153 - Download aborted. URI=https://raw.githubusercontent.com/hagezi/dns-blocklists/main/submit_pullrequest_here/deny_tif.txt
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/hagezi/dns-blocklists/main/submit_pullrequest_here/deny_tif.txt
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:07.677669 [NOTICE] [RequestGroupMan.cc:424] Download GID#cdcd9aa42a6311f7 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/hagezi_threats
-2026-11-16 22:58:07.682109 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/futaguard_nofarm
-2026-11-16 22:58:07.695796 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/esox_lucius
-2026-11-16 22:58:07.700100 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/fanboy_indian
-2026-11-16 22:58:07.734212 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/anudeep_coinminer
-2026-11-16 22:58:07.832327 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/futaguard_tw165
-2026-11-16 22:58:08.031938 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/fanboy_cookiemonster
-2026-11-16 22:58:08.099781 [ERROR] [AbstractCommand.cc:349] CUID#161 - Download aborted. URI=https://git.herrbischoff.com/trackers/plain/spam.txt
-Exception: [AbstractCommand.cc:351] errorCode=1 URI=https://git.herrbischoff.com/trackers/plain/spam.txt
-  -> [SocketCore.cc:1019] errorCode=1 SSL/TLS handshake failure:  `not signed by known authorities or invalid' `expired'
-2026-11-16 22:58:08.099817 [NOTICE] [RequestGroupMan.cc:424] Download GID#dfe7855af977807b not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/herrbischoff_spam_domains
-2026-11-16 22:58:08.105670 [ERROR] [AbstractCommand.cc:349] CUID#158 - Download aborted. URI=https://git.herrbischoff.com/trackers/plain/domains.txt
-Exception: [AbstractCommand.cc:351] errorCode=1 URI=https://git.herrbischoff.com/trackers/plain/domains.txt
-  -> [SocketCore.cc:1019] errorCode=1 SSL/TLS handshake failure:  `not signed by known authorities or invalid' `expired'
-2026-11-16 22:58:08.105704 [NOTICE] [RequestGroupMan.cc:424] Download GID#1d92eb4238ae3916 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/herrbischoff_domains
-2026-11-16 22:58:08.109694 [ERROR] [AbstractCommand.cc:349] CUID#160 - Download aborted. URI=https://git.herrbischoff.com/trackers/plain/reject.txt
-Exception: [AbstractCommand.cc:351] errorCode=1 URI=https://git.herrbischoff.com/trackers/plain/reject.txt
-  -> [SocketCore.cc:1019] errorCode=1 SSL/TLS handshake failure:  `not signed by known authorities or invalid' `expired'
-2026-11-16 22:58:08.109738 [NOTICE] [RequestGroupMan.cc:424] Download GID#583fd3d9e63c0a19 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/herrbischoff_reject
-2026-11-16 22:58:08.113762 [ERROR] [AbstractCommand.cc:349] CUID#157 - Download aborted. URI=https://git.herrbischoff.com/trackers/plain/cookie.txt
+2026-11-17 21:50:56.585328 [NOTICE] [RequestGroupMan.cc:424] Download GID#e1a5b18413bd7b87 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/hagezi_threats
+2026-11-17 21:50:56.585736 [ERROR] [AbstractCommand.cc:401] CUID#152 - Download aborted. URI=https://raw.githubusercontent.com/hagezi/dns-blocklists/main/submit_pullrequest_here/deny_popupads.txt
+Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/hagezi/dns-blocklists/main/submit_pullrequest_here/deny_popupads.txt
+  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
+2026-11-17 21:50:56.585986 [NOTICE] [RequestGroupMan.cc:424] Download GID#21e2131a5e04a36f not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/hagezi_popupads
+2026-11-17 21:50:56.591094 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/cyberhost
+2026-11-17 21:50:56.616604 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/futaguard_tw165
+2026-11-17 21:50:56.664308 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/anudeep_facebook
+2026-11-17 21:50:56.808130 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/anudeep_coinminer
+2026-11-17 21:50:56.907124 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/fanboy_cookiemonster
+2026-11-17 21:50:56.933436 [ERROR] [AbstractCommand.cc:349] CUID#157 - Download aborted. URI=https://git.herrbischoff.com/trackers/plain/cookie.txt
 Exception: [AbstractCommand.cc:351] errorCode=1 URI=https://git.herrbischoff.com/trackers/plain/cookie.txt
   -> [SocketCore.cc:1019] errorCode=1 SSL/TLS handshake failure:  `not signed by known authorities or invalid' `expired'
-2026-11-16 22:58:08.113796 [NOTICE] [RequestGroupMan.cc:424] Download GID#1529cee44a903b56 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/herrbischoff_cookie
-2026-11-16 22:58:08.120349 [ERROR] [AbstractCommand.cc:349] CUID#162 - Download aborted. URI=https://git.herrbischoff.com/trackers/plain/spam.netset
+2026-11-17 21:50:56.933520 [NOTICE] [RequestGroupMan.cc:424] Download GID#dfd0a4f5b68693b4 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/herrbischoff_cookie
+2026-11-17 21:50:56.941166 [ERROR] [AbstractCommand.cc:349] CUID#162 - Download aborted. URI=https://git.herrbischoff.com/trackers/plain/spam.netset
 Exception: [AbstractCommand.cc:351] errorCode=1 URI=https://git.herrbischoff.com/trackers/plain/spam.netset
   -> [SocketCore.cc:1019] errorCode=1 SSL/TLS handshake failure:  `not signed by known authorities or invalid' `expired'
-2026-11-16 22:58:08.120385 [NOTICE] [RequestGroupMan.cc:424] Download GID#1568714de79cecd0 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/herrbischoff_spam_ips
-2026-11-16 22:58:08.124211 [ERROR] [AbstractCommand.cc:349] CUID#154 - Download aborted. URI=https://git.herrbischoff.com/trackers/plain/advertising.txt
-Exception: [AbstractCommand.cc:351] errorCode=1 URI=https://git.herrbischoff.com/trackers/plain/advertising.txt
-  -> [SocketCore.cc:1019] errorCode=1 SSL/TLS handshake failure:  `not signed by known authorities or invalid' `expired'
-2026-11-16 22:58:08.124247 [NOTICE] [RequestGroupMan.cc:424] Download GID#81a17a6faee832fb not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/herrbischoff_advertising
-2026-11-16 22:58:08.185253 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/geoffrey_frogeye_multiparty
-2026-11-16 22:58:08.194862 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/greensnow
-2026-11-16 22:58:08.198559 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/hostsvn
-2026-11-16 22:58:08.216029 [ERROR] [AbstractCommand.cc:349] CUID#163 - Download aborted. URI=https://git.herrbischoff.com/trackers/plain/telemetry.txt
+2026-11-17 21:50:56.941236 [NOTICE] [RequestGroupMan.cc:424] Download GID#b4c733d8477e987a not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/herrbischoff_spam_ips
+2026-11-17 21:50:56.943932 [ERROR] [AbstractCommand.cc:349] CUID#163 - Download aborted. URI=https://git.herrbischoff.com/trackers/plain/telemetry.txt
 Exception: [AbstractCommand.cc:351] errorCode=1 URI=https://git.herrbischoff.com/trackers/plain/telemetry.txt
   -> [SocketCore.cc:1019] errorCode=1 SSL/TLS handshake failure:  `not signed by known authorities or invalid' `expired'
-2026-11-16 22:58:08.216069 [NOTICE] [RequestGroupMan.cc:424] Download GID#b67021335fa1e753 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/herrbischoff_telemetry
-2026-11-16 22:58:08.254583 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/hexxium
-2026-11-16 22:58:08.272788 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/herrbischoff_badasn
-2026-11-16 22:58:08.289732 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/herrbischoff_ai
-2026-11-16 22:58:08.313192 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/hpthreatresearch_ta551
-2026-11-16 22:58:08.334075 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/iam_py_test_antimalware
-2026-11-16 22:58:08.364092 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/fanboy_ultimate
-2026-11-16 22:58:08.364433 [NOTICE] [HttpResponse.cc:168] CUID#174 - Redirecting to http://list.iblocklist.com/humantest?list=dufcxgnbjsdwmwctgfuj&fileformat=cidr&archiveformat=gz
-2026-11-16 22:58:08.364716 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/infinitytec_ads_and_trackers
-2026-11-16 22:58:08.392964 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/anudeep_adservers
-2026-11-16 22:58:08.463025 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/giox_siteblock
-2026-11-16 22:58:08.465237 [ERROR] [AbstractCommand.cc:349] CUID#164 - Download aborted. URI=https://git.herrbischoff.com/trackers/plain/trackers.txt
+2026-11-17 21:50:56.943998 [NOTICE] [RequestGroupMan.cc:424] Download GID#ec49efb9078d2a7d not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/herrbischoff_telemetry
+2026-11-17 21:50:56.947008 [ERROR] [AbstractCommand.cc:349] CUID#161 - Download aborted. URI=https://git.herrbischoff.com/trackers/plain/spam.txt
+Exception: [AbstractCommand.cc:351] errorCode=1 URI=https://git.herrbischoff.com/trackers/plain/spam.txt
+  -> [SocketCore.cc:1019] errorCode=1 SSL/TLS handshake failure:  `not signed by known authorities or invalid' `expired'
+2026-11-17 21:50:56.947071 [NOTICE] [RequestGroupMan.cc:424] Download GID#8b49a33af3ea9c82 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/herrbischoff_spam_domains
+2026-11-17 21:50:56.949155 [ERROR] [AbstractCommand.cc:349] CUID#158 - Download aborted. URI=https://git.herrbischoff.com/trackers/plain/domains.txt
+Exception: [AbstractCommand.cc:351] errorCode=1 URI=https://git.herrbischoff.com/trackers/plain/domains.txt
+  -> [SocketCore.cc:1019] errorCode=1 SSL/TLS handshake failure:  `not signed by known authorities or invalid' `expired'
+2026-11-17 21:50:56.949227 [NOTICE] [RequestGroupMan.cc:424] Download GID#5ff08638a3251e08 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/herrbischoff_domains
+2026-11-17 21:50:56.956737 [ERROR] [AbstractCommand.cc:349] CUID#154 - Download aborted. URI=https://git.herrbischoff.com/trackers/plain/advertising.txt
+Exception: [AbstractCommand.cc:351] errorCode=1 URI=https://git.herrbischoff.com/trackers/plain/advertising.txt
+  -> [SocketCore.cc:1019] errorCode=1 SSL/TLS handshake failure:  `not signed by known authorities or invalid' `expired'
+2026-11-17 21:50:56.956805 [NOTICE] [RequestGroupMan.cc:424] Download GID#6ecf271baa73cce3 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/herrbischoff_advertising
+2026-11-17 21:50:56.958043 [ERROR] [AbstractCommand.cc:349] CUID#160 - Download aborted. URI=https://git.herrbischoff.com/trackers/plain/reject.txt
+Exception: [AbstractCommand.cc:351] errorCode=1 URI=https://git.herrbischoff.com/trackers/plain/reject.txt
+  -> [SocketCore.cc:1019] errorCode=1 SSL/TLS handshake failure:  `not signed by known authorities or invalid' `expired'
+2026-11-17 21:50:56.958129 [NOTICE] [RequestGroupMan.cc:424] Download GID#f48dc13446f3f8db not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/herrbischoff_reject
+2026-11-17 21:50:56.967345 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/hpthreatresearch_ta551
+2026-11-17 21:50:56.969036 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/hostsvn
+2026-11-17 21:50:56.987119 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/hexxium
+2026-11-17 21:50:57.020244 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/iam_py_test_antimalware
+2026-11-17 21:50:57.033318 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/geoffrey_frogeye_multiparty
+2026-11-17 21:50:57.049003 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/herrbischoff_badasn
+2026-11-17 21:50:57.051546 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/herrbischoff_ai
+2026-11-17 21:50:57.079691 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/giox_siteblock
+2026-11-17 21:50:57.080725 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/infinitytec_ads_and_trackers
+2026-11-17 21:50:57.098457 [NOTICE] [HttpResponse.cc:168] CUID#174 - Redirecting to http://list.iblocklist.com/humantest?list=dufcxgnbjsdwmwctgfuj&fileformat=cidr&archiveformat=gz
+2026-11-17 21:50:57.100529 [ERROR] [AbstractCommand.cc:349] CUID#164 - Download aborted. URI=https://git.herrbischoff.com/trackers/plain/trackers.txt
 Exception: [AbstractCommand.cc:351] errorCode=1 URI=https://git.herrbischoff.com/trackers/plain/trackers.txt
   -> [SocketCore.cc:1019] errorCode=1 SSL/TLS handshake failure:  `not signed by known authorities or invalid' `expired'
-2026-11-16 22:58:08.465419 [NOTICE] [RequestGroupMan.cc:424] Download GID#3e1378f6a911f79b not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/herrbischoff_trackers
-2026-11-16 22:58:08.465766 [ERROR] [AbstractCommand.cc:349] CUID#174 - Download aborted. URI=http://list.iblocklist.com?list=dufcxgnbjsdwmwctgfuj&fileformat=cidr&archiveformat=gz
+2026-11-17 21:50:57.100598 [NOTICE] [RequestGroupMan.cc:424] Download GID#89d7dfaaaf44fc22 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/herrbischoff_trackers
+2026-11-17 21:50:57.115616 [ERROR] [AbstractCommand.cc:349] CUID#174 - Download aborted. URI=http://list.iblocklist.com?list=dufcxgnbjsdwmwctgfuj&fileformat=cidr&archiveformat=gz
 Exception: [AbstractCommand.cc:351] errorCode=24 URI=http://list.iblocklist.com/humantest?list=dufcxgnbjsdwmwctgfuj&fileformat=cidr&archiveformat=gz
   -> [HttpSkipResponseCommand.cc:215] errorCode=24 Authorization failed.
-2026-11-16 22:58:08.465841 [NOTICE] [RequestGroupMan.cc:424] Download GID#ee71f1b8b98d13c9 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/iblocklist_pedos
-2026-11-16 22:58:08.466127 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/infinitytec_multi_level_marketing
-2026-11-16 22:58:08.469857 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/infinitytec_scams_and_phishing
-2026-11-16 22:58:08.488975 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/infinitytec_medical_pseudoscience
-2026-11-16 22:58:08.500203 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/herrbischoff_ipbl
-2026-11-16 22:58:08.535318 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/ios_trackers
-2026-11-16 22:58:08.588747 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/ilpl
-2026-11-16 22:58:08.637517 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/interserver
-2026-11-16 22:58:08.722012 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/giox_upd
-2026-11-16 22:58:08.726485 [NOTICE] [HttpResponse.cc:168] CUID#189 - Redirecting to https://isc.sans.edu/properbots.html
-2026-11-16 22:58:08.741188 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/ipsum
-2026-11-16 22:58:08.741325 [NOTICE] [HttpResponse.cc:168] CUID#185 - Redirecting to https://isc.sans.edu/blockme.html
-2026-11-16 22:58:08.741331 [NOTICE] [HttpResponse.cc:168] CUID#190 - Redirecting to https://isc.sans.edu/blockme.html
-2026-11-16 22:58:08.744711 [NOTICE] [HttpResponse.cc:168] CUID#187 - Redirecting to https://isc.sans.edu/properbots.html
-2026-11-16 22:58:08.748343 [NOTICE] [HttpResponse.cc:168] CUID#188 - Redirecting to https://isc.sans.edu/properbots.html
-2026-11-16 22:58:08.755082 [NOTICE] [HttpResponse.cc:168] CUID#186 - Redirecting to https://isc.sans.edu/properbots.html
-2026-11-16 22:58:08.776321 [NOTICE] [HttpResponse.cc:168] CUID#191 - Redirecting to https://isc.sans.edu/blockme.html
-2026-11-16 22:58:08.844772 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_censys
-2026-11-16 22:58:08.861899 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_arbor
-2026-11-16 22:58:08.871790 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_blindferret
-2026-11-16 22:58:08.875024 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_alphastrike
-2026-11-16 22:58:08.875705 [NOTICE] [HttpResponse.cc:168] CUID#192 - Redirecting to https://isc.sans.edu/blockme.html
-2026-11-16 22:58:08.899688 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_cybergreen
-2026-11-16 22:58:08.918659 [NOTICE] [HttpResponse.cc:168] CUID#194 - Redirecting to https://isc.sans.edu/blockme.html
-2026-11-16 22:58:08.924048 [NOTICE] [HttpResponse.cc:168] CUID#193 - Redirecting to https://isc.sans.edu/blockme.html
-2026-11-16 22:58:08.934683 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_ciarmy
-2026-11-16 22:58:08.950899 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_adscore
-2026-11-16 22:58:08.956738 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/in0de
-2026-11-16 22:58:08.988334 [NOTICE] [HttpResponse.cc:168] CUID#195 - Redirecting to https://isc.sans.edu/blockme.html
-2026-11-16 22:58:09.005891 [NOTICE] [HttpResponse.cc:168] CUID#196 - Redirecting to https://isc.sans.edu/blockme.html
-2026-11-16 22:58:09.024961 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_ipip
-2026-11-16 22:58:09.029956 [NOTICE] [HttpResponse.cc:168] CUID#197 - Redirecting to https://isc.sans.edu/blockme.html
-2026-11-16 22:58:09.036560 [NOTICE] [HttpResponse.cc:168] CUID#198 - Redirecting to https://isc.sans.edu/blockme.html
-2026-11-16 22:58:09.041825 [NOTICE] [HttpResponse.cc:168] CUID#199 - Redirecting to https://isc.sans.edu/blockme.html
-2026-11-16 22:58:09.044188 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_internetcensus
-2026-11-16 22:58:09.055430 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_erratasec
-2026-11-16 22:58:09.076329 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_netsystems
-2026-11-16 22:58:09.078548 [NOTICE] [HttpResponse.cc:168] CUID#226 - Redirecting to https://isc.sans.edu/blockme.html
-2026-11-16 22:58:09.100119 [NOTICE] [HttpResponse.cc:168] CUID#227 - Redirecting to https://isc.sans.edu/blockme.html
-2026-11-16 22:58:09.131376 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_recyber
-2026-11-16 22:58:09.137219 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_onyphe
-2026-11-16 22:58:09.146284 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_rapid7sonar
-2026-11-16 22:58:09.153303 [NOTICE] [HttpResponse.cc:168] CUID#228 - Redirecting to https://isc.sans.edu/blockme.html
-2026-11-16 22:58:09.169045 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_scorecard
-2026-11-16 22:58:09.178483 [NOTICE] [HttpResponse.cc:168] CUID#242 - Redirecting to https://isc.sans.edu/blockme.html
-2026-11-16 22:58:09.187825 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_shodan
-2026-11-16 22:58:09.204755 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_stretchoid
-2026-11-16 22:58:09.247642 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_univmichigan
-2026-11-16 22:58:09.287590 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/jawz101
-2026-11-16 22:58:09.289271 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/isc_univsydney
-2026-11-16 22:58:09.340481 [ERROR] [AbstractCommand.cc:401] CUID#254 - Download aborted. URI=https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Amazon-FireStick/hosts
+2026-11-17 21:50:57.115638 [NOTICE] [RequestGroupMan.cc:424] Download GID#1d4d75c7fe9eb193 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/iblocklist_pedos
+2026-11-17 21:50:57.118091 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/infinitytec_multi_level_marketing
+2026-11-17 21:50:57.134098 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/ios_trackers
+2026-11-17 21:50:57.144396 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/ipsum
+2026-11-17 21:50:57.146309 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/infinitytec_scams_and_phishing
+2026-11-17 21:50:57.174591 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/interserver
+2026-11-17 21:50:57.180432 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/infinitytec_medical_pseudoscience
+2026-11-17 21:50:57.247613 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/herrbischoff_ipbl
+2026-11-17 21:50:57.316809 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/fanboy_ultimate
+2026-11-17 21:50:57.380944 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/giox_upd
+2026-11-17 21:50:57.400623 [NOTICE] [HttpResponse.cc:168] CUID#187 - Redirecting to https://isc.sans.edu/properbots.html
+2026-11-17 21:50:57.412453 [NOTICE] [HttpResponse.cc:168] CUID#189 - Redirecting to https://isc.sans.edu/blockme.html
+2026-11-17 21:50:57.412673 [NOTICE] [HttpResponse.cc:168] CUID#185 - Redirecting to https://isc.sans.edu/properbots.html
+2026-11-17 21:50:57.418104 [NOTICE] [HttpResponse.cc:168] CUID#186 - Redirecting to https://isc.sans.edu/blockme.html
+2026-11-17 21:50:57.421717 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/anudeep_adservers
+2026-11-17 21:50:57.452252 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_arbor
+2026-11-17 21:50:57.462821 [NOTICE] [HttpResponse.cc:168] CUID#190 - Redirecting to https://isc.sans.edu/blockme.html
+2026-11-17 21:50:57.466009 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_adscore
+2026-11-17 21:50:57.534594 [NOTICE] [HttpResponse.cc:168] CUID#191 - Redirecting to https://isc.sans.edu/blockme.html
+2026-11-17 21:50:57.552886 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/ilpl
+2026-11-17 21:50:57.601237 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_ciarmy
+2026-11-17 21:50:57.601442 [NOTICE] [HttpResponse.cc:168] CUID#192 - Redirecting to https://isc.sans.edu/blockme.html
+2026-11-17 21:50:57.641186 [NOTICE] [HttpResponse.cc:168] CUID#193 - Redirecting to https://isc.sans.edu/blockme.html
+2026-11-17 21:50:57.666534 [NOTICE] [HttpResponse.cc:168] CUID#195 - Redirecting to https://isc.sans.edu/blockme.html
+2026-11-17 21:50:57.669984 [NOTICE] [HttpResponse.cc:168] CUID#194 - Redirecting to https://isc.sans.edu/blockme.html
+2026-11-17 21:50:57.671770 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_censys
+2026-11-17 21:50:57.685250 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_alphastrike
+2026-11-17 21:50:57.691491 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_cybergreen
+2026-11-17 21:50:57.724368 [NOTICE] [HttpResponse.cc:168] CUID#188 - Redirecting to https://isc.sans.edu/blockme.html
+2026-11-17 21:50:57.778337 [NOTICE] [HttpResponse.cc:168] CUID#196 - Redirecting to https://isc.sans.edu/blockme.html
+2026-11-17 21:50:57.785343 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_internetcensus
+2026-11-17 21:50:57.792513 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/in0de
+2026-11-17 21:50:57.797343 [NOTICE] [HttpResponse.cc:168] CUID#197 - Redirecting to https://isc.sans.edu/blockme.html
+2026-11-17 21:50:57.810566 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_netsystems
+2026-11-17 21:50:57.823335 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_ipip
+2026-11-17 21:50:57.834029 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_blindferret
+2026-11-17 21:50:57.859962 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_erratasec
+2026-11-17 21:50:57.876869 [NOTICE] [HttpResponse.cc:168] CUID#198 - Redirecting to https://isc.sans.edu/blockme.html
+2026-11-17 21:50:57.889581 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_onyphe
+2026-11-17 21:50:57.890053 [NOTICE] [HttpResponse.cc:168] CUID#199 - Redirecting to https://isc.sans.edu/blockme.html
+2026-11-17 21:50:57.898653 [NOTICE] [HttpResponse.cc:168] CUID#200 - Redirecting to https://isc.sans.edu/blockme.html
+2026-11-17 21:50:57.925786 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/blocklist_ua
+2026-11-17 21:50:57.946784 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_rapid7sonar
+2026-11-17 21:50:57.978537 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_recyber
+2026-11-17 21:50:57.988393 [NOTICE] [HttpResponse.cc:168] CUID#240 - Redirecting to https://isc.sans.edu/blockme.html
+2026-11-17 21:50:58.002893 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/jawz101
+2026-11-17 21:50:58.006117 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_shodan
+2026-11-17 21:50:58.008205 [NOTICE] [HttpResponse.cc:168] CUID#242 - Redirecting to https://isc.sans.edu/blockme.html
+2026-11-17 21:50:58.008628 [NOTICE] [HttpResponse.cc:168] CUID#241 - Redirecting to https://isc.sans.edu/blockme.html
+2026-11-17 21:50:58.054331 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/jamesbrine
+2026-11-17 21:50:58.124654 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_univmichigan
+2026-11-17 21:50:58.147145 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_stretchoid
+2026-11-17 21:50:58.167098 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_scorecard
+2026-11-17 21:50:58.167569 [ERROR] [AbstractCommand.cc:401] CUID#254 - Download aborted. URI=https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Amazon-FireStick/hosts
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Amazon-FireStick/hosts
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:09.340527 [NOTICE] [RequestGroupMan.cc:424] Download GID#08d78449b231b1f3 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/kodopenguin_amazon_firestick
-2026-11-16 22:58:09.390092 [ERROR] [AbstractCommand.cc:401] CUID#255 - Download aborted. URI=https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Android-Mini-Template/hosts
+2026-11-17 21:50:58.167656 [NOTICE] [RequestGroupMan.cc:424] Download GID#c13a9cf340d33f1a not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/kodopenguin_amazon_firestick
+2026-11-17 21:50:58.174316 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/isc_univsydney
+2026-11-17 21:50:58.190029 [ERROR] [AbstractCommand.cc:401] CUID#255 - Download aborted. URI=https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Android-Mini-Template/hosts
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Android-Mini-Template/hosts
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:09.390137 [NOTICE] [RequestGroupMan.cc:424] Download GID#26acb57a1365de5a not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/kodopenguin_android
-2026-11-16 22:58:09.396472 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/honeynet_asia_mssqld
-2026-11-16 22:58:09.440641 [ERROR] [AbstractCommand.cc:401] CUID#256 - Download aborted. URI=https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Gaming-Full-Template/hosts
+2026-11-17 21:50:58.190125 [NOTICE] [RequestGroupMan.cc:424] Download GID#afe6e8a1186a59d4 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/kodopenguin_android
+2026-11-17 21:50:58.207011 [ERROR] [AbstractCommand.cc:401] CUID#256 - Download aborted. URI=https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Gaming-Full-Template/hosts
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Gaming-Full-Template/hosts
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:09.440676 [NOTICE] [RequestGroupMan.cc:424] Download GID#d8fcda444efb8cd1 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/kodopenguin_gaming
-2026-11-16 22:58:09.476834 [ERROR] [AbstractCommand.cc:401] CUID#257 - Download aborted. URI=https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Main-Template/hosts
+2026-11-17 21:50:58.207132 [NOTICE] [RequestGroupMan.cc:424] Download GID#0fcf190f66ef1056 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/kodopenguin_gaming
+2026-11-17 21:50:58.208523 [ERROR] [AbstractCommand.cc:401] CUID#257 - Download aborted. URI=https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Main-Template/hosts
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/KodoPengin/GameIndustry-hosts-Template/master/Main-Template/hosts
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:09.476882 [NOTICE] [RequestGroupMan.cc:424] Download GID#cb7e7d67a4cf1686 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/kodopenguin_main
-2026-11-16 22:58:09.513041 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/jamesbrine
-2026-11-16 22:58:09.519863 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/kadhosts
-2026-11-16 22:58:09.541994 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/honeynet_asia_smbd
-2026-11-16 22:58:09.604052 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/lightswitch_dating
-2026-11-16 22:58:09.686674 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/lightswitch_ads_and_tracking
-2026-11-16 22:58:09.688446 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/lightswitch_hate_and_junk
-2026-11-16 22:58:09.689172 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/jeroengui_malware_domains
-2026-11-16 22:58:09.689388 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/jeroengui_malware_ips
-2026-11-16 22:58:09.689594 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/jeroengui_phishing_domains
-2026-11-16 22:58:09.689831 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/jeroengui_phishing_ips
-2026-11-16 22:58:09.690056 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/jeroengui_scam_domains
-2026-11-16 22:58:09.690294 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/jeroengui_scam_ips
-2026-11-16 22:58:09.690519 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/jeroengui_web_shell_domains
-2026-11-16 22:58:09.690741 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/jeroengui_web_shell_ips
-2026-11-16 22:58:09.693955 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/lightswitch_amp_hosts
-2026-11-16 22:58:09.726471 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/lightswitch_tracking_aggressive
-2026-11-16 22:58:09.906434 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/blocklist_ua
-2026-11-16 22:58:09.906907 [ERROR] [AbstractCommand.cc:401] CUID#264 - Download aborted. URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/adblocking/filters-share/1st_domains.txt
-Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/adblocking/filters-share/1st_domains.txt
-  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:09.906965 [ERROR] [AbstractCommand.cc:401] CUID#265 - Download aborted. URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/adblocking/filters-share/3rd_domains.txt
+2026-11-17 21:50:58.208658 [NOTICE] [RequestGroupMan.cc:424] Download GID#cdb7bf87a8c1d7bf not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/kodopenguin_main
+2026-11-17 21:50:58.254439 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/honeynet_asia_mssqld
+2026-11-17 21:50:58.281643 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/lightswitch_dating
+2026-11-17 21:50:58.307571 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/jeroengui_malware_domains
+2026-11-17 21:50:58.318716 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/jeroengui_scam_domains
+2026-11-17 21:50:58.321847 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/lightswitch_amp_hosts
+2026-11-17 21:50:58.333543 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/jeroengui_web_shell_domains
+2026-11-17 21:50:58.336541 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/jeroengui_malware_ips
+2026-11-17 21:50:58.370301 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/lightswitch_ads_and_tracking
+2026-11-17 21:50:58.375991 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/jeroengui_web_shell_ips
+2026-11-17 21:50:58.382799 [ERROR] [AbstractCommand.cc:401] CUID#265 - Download aborted. URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/adblocking/filters-share/3rd_domains.txt
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/adblocking/filters-share/3rd_domains.txt
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:09.907001 [ERROR] [AbstractCommand.cc:401] CUID#266 - Download aborted. URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/analytics/filters-share/1st_domains.txt
+2026-11-17 21:50:58.383514 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/lightswitch_hate_and_junk
+2026-11-17 21:50:58.383532 [NOTICE] [RequestGroupMan.cc:424] Download GID#639b76d89f0fe1a0 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/listkr_adblocking_third_domains
+2026-11-17 21:50:58.396881 [ERROR] [AbstractCommand.cc:401] CUID#264 - Download aborted. URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/adblocking/filters-share/1st_domains.txt
+Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/adblocking/filters-share/1st_domains.txt
+  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
+2026-11-17 21:50:58.396968 [NOTICE] [RequestGroupMan.cc:424] Download GID#2654160748007b7b not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/listkr_adblocking_first_domains
+2026-11-17 21:50:58.419880 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/lightswitch_tracking_aggressive
+2026-11-17 21:50:58.420052 [ERROR] [AbstractCommand.cc:401] CUID#266 - Download aborted. URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/analytics/filters-share/1st_domains.txt
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/analytics/filters-share/1st_domains.txt
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:09.907029 [ERROR] [AbstractCommand.cc:401] CUID#267 - Download aborted. URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/analytics/filters-share/3rd_domains.txt
+2026-11-17 21:50:58.420197 [ERROR] [AbstractCommand.cc:401] CUID#267 - Download aborted. URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/analytics/filters-share/3rd_domains.txt
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/analytics/filters-share/3rd_domains.txt
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:09.907049 [ERROR] [AbstractCommand.cc:401] CUID#268 - Download aborted. URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/annoyance/filters-share/1st_domains.txt
-Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/annoyance/filters-share/1st_domains.txt
-  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:09.907074 [ERROR] [AbstractCommand.cc:401] CUID#269 - Download aborted. URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/annoyance/filters-share/3rd_domains.txt
+2026-11-17 21:50:58.420385 [NOTICE] [RequestGroupMan.cc:424] Download GID#b6267ed7f48cfcb5 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/listkr_analytics_first_domains
+2026-11-17 21:50:58.420399 [NOTICE] [RequestGroupMan.cc:424] Download GID#b480470cbba148f0 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/listkr_analytics_third_domains
+2026-11-17 21:50:58.421565 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/honeynet_asia_smbd
+2026-11-17 21:50:58.433850 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/lightswitch_facebook
+2026-11-17 21:50:58.451788 [ERROR] [AbstractCommand.cc:401] CUID#269 - Download aborted. URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/annoyance/filters-share/3rd_domains.txt
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/annoyance/filters-share/3rd_domains.txt
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:09.907154 [ERROR] [AbstractCommand.cc:401] CUID#272 - Download aborted. URI=https://raw.githubusercontent.com/logroid/adaway-hosts/master/hosts.txt
-Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/logroid/adaway-hosts/master/hosts.txt
-  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:09.907280 [NOTICE] [RequestGroupMan.cc:424] Download GID#9f9b126229aab16f not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/listkr_adblocking_first_domains
-2026-11-16 22:58:09.907285 [NOTICE] [RequestGroupMan.cc:424] Download GID#9e44e77781ec1e85 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/listkr_adblocking_third_domains
-2026-11-16 22:58:09.907287 [NOTICE] [RequestGroupMan.cc:424] Download GID#dee6353566609682 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/listkr_analytics_first_domains
-2026-11-16 22:58:09.907289 [NOTICE] [RequestGroupMan.cc:424] Download GID#30ed4118eecf954b not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/listkr_analytics_third_domains
-2026-11-16 22:58:09.907291 [NOTICE] [RequestGroupMan.cc:424] Download GID#9c5a0c19570e26b3 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/listkr_annoyance_first_domains
-2026-11-16 22:58:09.907292 [NOTICE] [RequestGroupMan.cc:424] Download GID#e71aafd50352a963 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/listkr_annoyance_third_domains
-2026-11-16 22:58:09.907295 [NOTICE] [RequestGroupMan.cc:424] Download GID#5d2697f00d1528cf not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/logroid
-2026-11-16 22:58:09.908422 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/lukes_list
-2026-11-16 22:58:09.908869 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/littlecordines_general
-2026-11-16 22:58:09.909807 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/littlecordines_porn
-2026-11-16 22:58:09.919323 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/lightswitch_facebook
-2026-11-16 22:58:09.920744 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/metamask
-2026-11-16 22:58:09.946759 [ERROR] [AbstractCommand.cc:401] CUID#279 - Download aborted. URI=https://raw.githubusercontent.com/stamparm/aux/master/maltrail-malware-domains.txt
+2026-11-17 21:50:58.451967 [NOTICE] [RequestGroupMan.cc:424] Download GID#d98bc7fa79af9a04 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/listkr_annoyance_third_domains
+2026-11-17 21:50:58.460419 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/majkiit_hostfile
+2026-11-17 21:50:58.477199 [ERROR] [AbstractCommand.cc:401] CUID#279 - Download aborted. URI=https://raw.githubusercontent.com/stamparm/aux/master/maltrail-malware-domains.txt
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/stamparm/aux/master/maltrail-malware-domains.txt
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:09.946794 [NOTICE] [RequestGroupMan.cc:424] Download GID#1eb5ad4b45bdc000 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/maltrail_domains
-2026-11-16 22:58:09.953745 [ERROR] [AbstractCommand.cc:349] CUID#274 - Download aborted. URI=http://phishing.mailscanner.info/phishing.bad.sites.conf
-Exception: [AbstractCommand.cc:351] errorCode=22 URI=http://phishing.mailscanner.info/phishing.bad.sites.conf
-  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=403
-2026-11-16 22:58:09.953760 [NOTICE] [RequestGroupMan.cc:424] Download GID#79459999ee496de1 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/mailscanner_bad_phishing
-2026-11-16 22:58:09.978866 [ERROR] [AbstractCommand.cc:401] CUID#280 - Download aborted. URI=https://raw.githubusercontent.com/stamparm/aux/master/fetch-some-list.txt
+2026-11-17 21:50:58.477330 [NOTICE] [RequestGroupMan.cc:424] Download GID#6eace4b132816015 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/maltrail_domains
+2026-11-17 21:50:58.482751 [ERROR] [AbstractCommand.cc:401] CUID#272 - Download aborted. URI=https://raw.githubusercontent.com/logroid/adaway-hosts/master/hosts.txt
+Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/logroid/adaway-hosts/master/hosts.txt
+  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
+2026-11-17 21:50:58.482860 [NOTICE] [RequestGroupMan.cc:424] Download GID#c5adaeba833632c3 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/logroid
+2026-11-17 21:50:58.492155 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/littlecordines_general
+2026-11-17 21:50:58.494391 [ERROR] [AbstractCommand.cc:401] CUID#268 - Download aborted. URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/annoyance/filters-share/1st_domains.txt
+Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/List-KR/List-KR/refs/heads/master/annoyance/filters-share/1st_domains.txt
+  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
+2026-11-17 21:50:58.494495 [NOTICE] [RequestGroupMan.cc:424] Download GID#f3d29fd2e8de5d52 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/listkr_annoyance_first_domains
+2026-11-17 21:50:58.496396 [ERROR] [AbstractCommand.cc:401] CUID#280 - Download aborted. URI=https://raw.githubusercontent.com/stamparm/aux/master/fetch-some-list.txt
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/stamparm/aux/master/fetch-some-list.txt
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:09.978917 [NOTICE] [RequestGroupMan.cc:424] Download GID#2444c64442f76b63 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/maltrail_ips
-2026-11-16 22:58:09.988426 [ERROR] [AbstractCommand.cc:401] CUID#289 - Download aborted. URI=https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/block.txt
+2026-11-17 21:50:58.496491 [NOTICE] [RequestGroupMan.cc:424] Download GID#cee13715c1a08fa7 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/maltrail_ips
+2026-11-17 21:50:58.509170 [ERROR] [AbstractCommand.cc:349] CUID#274 - Download aborted. URI=http://phishing.mailscanner.info/phishing.bad.sites.conf
+Exception: [AbstractCommand.cc:351] errorCode=22 URI=http://phishing.mailscanner.info/phishing.bad.sites.conf
+  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=403
+2026-11-17 21:50:58.509225 [NOTICE] [RequestGroupMan.cc:424] Download GID#bd32597dd783ec81 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/mailscanner_bad_phishing
+2026-11-17 21:50:58.520363 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/littlecordines_porn
+2026-11-17 21:50:58.527483 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/matomo
+2026-11-17 21:50:58.541223 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/lukes_list
+2026-11-17 21:50:58.547946 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/marktron_fakenews
+2026-11-17 21:50:58.569687 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/malsilo
+2026-11-17 21:50:58.572171 [ERROR] [AbstractCommand.cc:401] CUID#289 - Download aborted. URI=https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/block.txt
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/miriquidi/dns-block-lists/main/block.txt
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:09.988460 [NOTICE] [RequestGroupMan.cc:424] Download GID#efad093e413be648 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/miriquidi
-2026-11-16 22:58:10.001882 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/minecraft_hosts
-2026-11-16 22:58:10.008541 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/matomo
-2026-11-16 22:58:10.031643 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/malsilo
-2026-11-16 22:58:10.038505 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/migueldemoura_ads
-2026-11-16 22:58:10.061746 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/neo23x0
-2026-11-16 22:58:10.063702 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/marktron_fakenews
-2026-11-16 22:58:10.066161 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/malware_discoverer
-2026-11-16 22:58:10.070742 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/mobiletrackers_windows
-2026-11-16 22:58:10.081061 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/msedge
-2026-11-16 22:58:10.099979 [ERROR] [AbstractCommand.cc:401] CUID#296 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/no-safesearch/main/domains
-Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/no-safesearch/main/domains
-  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:10.100013 [NOTICE] [RequestGroupMan.cc:424] Download GID#a0513854fa686166 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/nextdns_no_safesearch
-2026-11-16 22:58:10.114593 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/mobiletrackers_list
-2026-11-16 22:58:10.115757 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/mochifilter_dns
-2026-11-16 22:58:10.122578 [ERROR] [AbstractCommand.cc:401] CUID#298 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/apple
-Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/apple
-  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:10.122610 [NOTICE] [RequestGroupMan.cc:424] Download GID#4a81f4ef859ebc22 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/nextdns_tracking_apple
-2026-11-16 22:58:10.134135 [ERROR] [AbstractCommand.cc:401] CUID#299 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/huawei
-Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/huawei
-  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:10.134166 [NOTICE] [RequestGroupMan.cc:424] Download GID#b6f73953ce3d452c not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/nextdns_tracking_huawei
-2026-11-16 22:58:10.136633 [ERROR] [AbstractCommand.cc:401] CUID#300 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/roku
-Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/roku
-  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:10.136668 [NOTICE] [RequestGroupMan.cc:424] Download GID#18e5ed0691349b8f not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/nextdns_tracking_roku
-2026-11-16 22:58:10.137963 [ERROR] [AbstractCommand.cc:401] CUID#295 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/cname-cloaking-blocklist/master/domains
+2026-11-17 21:50:58.572289 [NOTICE] [RequestGroupMan.cc:424] Download GID#d50771b792da74a2 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/miriquidi
+2026-11-17 21:50:58.591171 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/minecraft_hosts
+2026-11-17 21:50:58.593170 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/metamask
+2026-11-17 21:50:58.607261 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/malware_discoverer
+2026-11-17 21:50:58.613325 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/migueldemoura_ads
+2026-11-17 21:50:58.630588 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/mobiletrackers_list
+2026-11-17 21:50:58.637955 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/msedge
+2026-11-17 21:50:58.642797 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/neo23x0
+2026-11-17 21:50:58.643909 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/mobiletrackers_windows
+2026-11-17 21:50:58.647964 [ERROR] [AbstractCommand.cc:401] CUID#295 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/cname-cloaking-blocklist/master/domains
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/cname-cloaking-blocklist/master/domains
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:10.137995 [NOTICE] [RequestGroupMan.cc:424] Download GID#c2c759e06e1a768c not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/nextdns_cname_cloaking
-2026-11-16 22:58:10.139355 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/majkiit_hostfile
-2026-11-16 22:58:10.140588 [ERROR] [AbstractCommand.cc:401] CUID#297 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/alexa
+2026-11-17 21:50:58.648064 [NOTICE] [RequestGroupMan.cc:424] Download GID#e177bfbbc77c60c8 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/nextdns_cname_cloaking
+2026-11-17 21:50:58.661212 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/mochifilter_dns
+2026-11-17 21:50:58.677545 [ERROR] [AbstractCommand.cc:401] CUID#298 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/apple
+Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/apple
+  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
+2026-11-17 21:50:58.677633 [NOTICE] [RequestGroupMan.cc:424] Download GID#1e6f72e1bd803ced not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/nextdns_tracking_apple
+2026-11-17 21:50:58.682840 [ERROR] [AbstractCommand.cc:401] CUID#296 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/no-safesearch/main/domains
+Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/no-safesearch/main/domains
+  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
+2026-11-17 21:50:58.682915 [NOTICE] [RequestGroupMan.cc:424] Download GID#aaad785de44313df not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/nextdns_no_safesearch
+2026-11-17 21:50:58.692667 [ERROR] [AbstractCommand.cc:401] CUID#299 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/huawei
+Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/huawei
+  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
+2026-11-17 21:50:58.692750 [NOTICE] [RequestGroupMan.cc:424] Download GID#8d5a2a7ee91a251c not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/nextdns_tracking_huawei
+2026-11-17 21:50:58.695225 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/kadhosts
+2026-11-17 21:50:58.698466 [ERROR] [AbstractCommand.cc:401] CUID#297 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/alexa
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/alexa
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:10.140622 [NOTICE] [RequestGroupMan.cc:424] Download GID#6bd675789dffbcf5 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/nextdns_tracking_alexa
-2026-11-16 22:58:10.167059 [ERROR] [AbstractCommand.cc:401] CUID#302 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/sonos
-Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/sonos
+2026-11-17 21:50:58.698568 [ERROR] [AbstractCommand.cc:401] CUID#300 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/roku
+Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/roku
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:10.167101 [NOTICE] [RequestGroupMan.cc:424] Download GID#98dcb096be51a2f4 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/nextdns_tracking_sonos
-2026-11-16 22:58:10.173735 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/majkiit_hole_cert
-2026-11-16 22:58:10.173852 [ERROR] [AbstractCommand.cc:401] CUID#303 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/windows
-Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/windows
-  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:10.174763 [NOTICE] [RequestGroupMan.cc:424] Download GID#e6ca05ad440bf3d6 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/nextdns_tracking_windows
-2026-11-16 22:58:10.174937 [ERROR] [AbstractCommand.cc:401] CUID#301 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/samsung
+2026-11-17 21:50:58.698635 [NOTICE] [RequestGroupMan.cc:424] Download GID#6061dc082c499948 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/nextdns_tracking_alexa
+2026-11-17 21:50:58.698643 [NOTICE] [RequestGroupMan.cc:424] Download GID#91944b1c3be8bf70 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/nextdns_tracking_roku
+2026-11-17 21:50:58.702574 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/jeroengui_phishing_domains
+2026-11-17 21:50:58.708055 [ERROR] [AbstractCommand.cc:401] CUID#301 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/samsung
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/samsung
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:10.175048 [NOTICE] [RequestGroupMan.cc:424] Download GID#5184e01936b680e2 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/nextdns_tracking_samsung
-2026-11-16 22:58:10.178113 [ERROR] [AbstractCommand.cc:401] CUID#304 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi
+2026-11-17 21:50:58.708138 [NOTICE] [RequestGroupMan.cc:424] Download GID#8e97f1ec9a05bf4f not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/nextdns_tracking_samsung
+2026-11-17 21:50:58.721494 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/nocoin
+2026-11-17 21:50:58.731085 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/jeroengui_phishing_ips
+2026-11-17 21:50:58.742601 [ERROR] [AbstractCommand.cc:401] CUID#302 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/sonos
+Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/sonos
+  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
+2026-11-17 21:50:58.742676 [NOTICE] [RequestGroupMan.cc:424] Download GID#c7236cb2d0e5dba2 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/nextdns_tracking_sonos
+2026-11-17 21:50:58.751437 [ERROR] [AbstractCommand.cc:401] CUID#303 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/windows
+Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/windows
+  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
+2026-11-17 21:50:58.753639 [NOTICE] [RequestGroupMan.cc:424] Download GID#c060f271508af4fe not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/nextdns_tracking_windows
+2026-11-17 21:50:58.756886 [ERROR] [AbstractCommand.cc:401] CUID#304 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:10.178159 [NOTICE] [RequestGroupMan.cc:424] Download GID#2b3448e8de104da1 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/nextdns_tracking_xiaomi
-2026-11-16 22:58:10.192375 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/nocoin
-2026-11-16 22:58:10.202412 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/openphish
-2026-11-16 22:58:10.261879 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/not_on_my_shift
-2026-11-16 22:58:10.263509 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/no_qanon
-2026-11-16 22:58:10.293373 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/nolovia_government
-2026-11-16 22:58:10.303078 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/perflyst_amazon_fire_tv
-2026-11-16 22:58:10.318469 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/perflyst_android_tracking
-2026-11-16 22:58:10.366871 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/notrack_malware
-2026-11-16 22:58:10.382894 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/migueldemoura_malware
-2026-11-16 22:58:10.383427 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/perflyst_session_replay
-2026-11-16 22:58:10.383900 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/perflyst_smart_tv
-2026-11-16 22:58:10.407647 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/phishfort
-2026-11-16 22:58:10.474859 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/notrack_annoyance
-2026-11-16 22:58:10.534613 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/phishing_db_add_domain
-2026-11-16 22:58:10.562229 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/notrack_tracker_radar
-2026-11-16 22:58:10.617566 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/ph00lt0
-2026-11-16 22:58:10.621615 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/opendbl_cisco_talos
-2026-11-16 22:58:10.654294 [ERROR] [AbstractCommand.cc:349] CUID#308 - Download aborted. URI=https://codeberg.org/allendema/NoPlayList/raw/branch/main/NoPlayList.txt
+2026-11-17 21:50:58.757417 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/jeroengui_scam_ips
+2026-11-17 21:50:58.757434 [NOTICE] [RequestGroupMan.cc:424] Download GID#d989ee461666ebde not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/nextdns_tracking_xiaomi
+2026-11-17 21:50:58.760518 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/migueldemoura_malware
+2026-11-17 21:50:58.774576 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/majkiit_hole_cert
+2026-11-17 21:50:58.776418 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/nolovia_government
+2026-11-17 21:50:58.777534 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/no_qanon
+2026-11-17 21:50:58.778389 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/openphish
+2026-11-17 21:50:58.798005 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/notrack_malware
+2026-11-17 21:50:58.808219 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/perflyst_android_tracking
+2026-11-17 21:50:58.815500 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/perflyst_amazon_fire_tv
+2026-11-17 21:50:58.824810 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/perflyst_smart_tv
+2026-11-17 21:50:58.825390 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/not_on_my_shift
+2026-11-17 21:50:58.834388 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/phishfort
+2026-11-17 21:50:58.877082 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/perflyst_session_replay
+2026-11-17 21:50:58.917692 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/ph00lt0
+2026-11-17 21:50:58.972420 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/phishing_db_add_domain
+2026-11-17 21:50:59.018441 [ERROR] [AbstractCommand.cc:349] CUID#308 - Download aborted. URI=https://codeberg.org/allendema/NoPlayList/raw/branch/main/NoPlayList.txt
 Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://codeberg.org/allendema/NoPlayList/raw/branch/main/NoPlayList.txt
   -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=403
-2026-11-16 22:58:10.680801 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/orthrus_blocklist
-2026-11-16 22:58:10.681690 [NOTICE] [HttpResponse.cc:168] CUID#330 - Redirecting to https://cdn.phishtank.com/datadumps/verified_online.csv?Expires=1794869761&Signature=T5BKRD6Nk6-Tp8b5A2fIKPWojAVp6rx4mE3oE0deaBlJzdmfkeqmBuBsNy8xBlnxZql9xAcExFwSriTBM5lnVKV3SE48PhukI94El4ipY4RRy1W4gZ4OCRg4JtG8r~oaOOiCvDZwDAgPc0CpPUaYh4xZRwsRaFrqlzCPkwWrH8Iu8pL-UDULkKc7JJxXGI3dLV7xDVzlK9-Ld78JPiSbvRi~tdVEAKy1PWVOup1XAgBvc4QLyhfB1ekNbPhhSydV7fuJn7g3IXqbHRtjL4on64WjXMCkbz1btJINp-3Cal3Swxt81Grnfw6QPRNElcQYRjEpf5DqTbwZu~2H6OcWUw__&Key-Pair-Id=APKAILB45UG3RB4CSOJA
-2026-11-16 22:58:10.693403 [ERROR] [AbstractCommand.cc:401] CUID#329 - Download aborted. URI=https://phishstats.info/phish_score.csv
-Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://phishstats.info/phish_score.csv
-  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:10.693440 [NOTICE] [RequestGroupMan.cc:424] Download GID#c5a5848a94b12508 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/phishstats
-2026-11-16 22:58:10.696646 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/makopi
-2026-11-16 22:58:10.773363 [ERROR] [AbstractCommand.cc:401] CUID#288 - Download aborted. URI=https://mirai.security.gives/data/ip_list.txt
+2026-11-17 21:50:59.036391 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/notrack_tracker_radar
+2026-11-17 21:50:59.066854 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/notrack_annoyance
+2026-11-17 21:50:59.076017 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/noplaylist
+2026-11-17 21:50:59.168483 [NOTICE] [HttpResponse.cc:168] CUID#331 - Redirecting to https://cdn.phishtank.com/datadumps/verified_online.csv?Expires=1794952041&Signature=oQrkDgJneC2VD0G87Dh7mne7ixNF6CZ9fxbOZHk7YJwPbDUA3usNCx2R1TLVfG2zMWMqoUWuSKTtIP0zcoTkCvwIjbnQn8xhdU1lEpPck8WNgZbnOazjkCVj6jr5nltSa2taYbVKgeMY4Iv5MvY5MZXL-9OT8gGmY3mUYddyaio7uetG7NY5fuyhFjePG0RzGarqWKPMo9rWC9-rxxey77qykKdwITFk~VpQve3A5stD0-oEoA8KiaSp3B8xlPimBierUk3X3090wYbzn6yDmsi-Td8ASTRSBRyTeX0rq-4vbVm3b1hgvAKjuz82CcKNS5mWYR77SwGXM3WsCMDVUg__&Key-Pair-Id=APKAILB45UG3RB4CSOJA
+2026-11-17 21:50:59.192453 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/opendbl_cisco_talos
+2026-11-17 21:50:59.234652 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/notrack_trackers
+2026-11-17 21:50:59.250759 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/palemoon
+2026-11-17 21:50:59.344943 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/phishtank
+2026-11-17 21:50:59.352724 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/makopi
+2026-11-17 21:50:59.365631 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/privacy_badger
+2026-11-17 21:50:59.376099 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/phishunt
+2026-11-17 21:50:59.386655 [ERROR] [AbstractCommand.cc:401] CUID#288 - Download aborted. URI=https://mirai.security.gives/data/ip_list.txt
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://mirai.security.gives/data/ip_list.txt
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:10.773406 [NOTICE] [RequestGroupMan.cc:424] Download GID#5cd2a6eaac9e6b37 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/mirai_tracker
-2026-11-16 22:58:10.802546 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/noplaylist
-2026-11-16 22:58:10.811655 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/notrack_trackers
-2026-11-16 22:58:10.858505 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/palemoon
-2026-11-16 22:58:10.891002 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/phishtank
-2026-11-16 22:58:10.901775 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/phishunt
-2026-11-16 22:58:10.969224 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/privacy_badger
-2026-11-16 22:58:10.990751 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/npc_hosts
-2026-11-16 22:58:11.049162 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/phishing_army
-2026-11-16 22:58:11.108570 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/rooneymcnibnug_snafu
-2026-11-16 22:58:11.238476 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/quantum_part_2
-2026-11-16 22:58:11.291789 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/rolist
-2026-11-16 22:58:11.318548 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/rpilist_fake_science
-2026-11-16 22:58:11.371817 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/rpilist_ms_office
-2026-11-16 22:58:11.385404 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/rpilist_ms_telemetry
-2026-11-16 22:58:11.845539 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/quantum_part_1
-2026-11-16 22:58:11.853464 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/qme
-2026-11-16 22:58:11.857816 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/rolist2
-2026-11-16 22:58:11.881888 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/red_flag_domains
-2026-11-16 22:58:11.914045 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/pop3gropers
-2026-11-16 22:58:11.934783 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/rpilist_notserious
-2026-11-16 22:58:11.974011 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/rpilist_corona
-2026-11-16 22:58:11.976230 [ERROR] [AbstractCommand.cc:401] CUID#376 - Download aborted. URI=https://raw.githubusercontent.com/no-cmyk/Search-Engine-Spam-Blocklist/master/blocklist.txt
-Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/no-cmyk/Search-Engine-Spam-Blocklist/master/blocklist.txt
+2026-11-17 21:50:59.387029 [NOTICE] [RequestGroupMan.cc:424] Download GID#f09df76ac29fec15 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/mirai_tracker
+2026-11-17 21:50:59.407482 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/orthrus_blocklist
+2026-11-17 21:50:59.442908 [ERROR] [AbstractCommand.cc:401] CUID#329 - Download aborted. URI=https://phishstats.info/phish_score.csv
+Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://phishstats.info/phish_score.csv
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:11.976283 [NOTICE] [RequestGroupMan.cc:424] Download GID#d459da8e7cabd973 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/search_engine_spam
-2026-11-16 22:58:12.030700 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/rutgers
-2026-11-16 22:58:12.066396 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/shady_hosts
-2026-11-16 22:58:12.099286 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/scafroglia93
-2026-11-16 22:58:12.103894 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/sinfonietta_gambling
-2026-11-16 22:58:12.141643 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/sinfonietta_porn
-2026-11-16 22:58:12.176744 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/sinfonietta_snuff
-2026-11-16 22:58:12.222749 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/rpilist_phishing
-2026-11-16 22:58:12.226675 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/snota418
-2026-11-16 22:58:12.243865 [ERROR] [AbstractCommand.cc:401] CUID#340 - Download aborted. URI=https://rescure.me/covid.txt
+2026-11-17 21:50:59.443043 [NOTICE] [RequestGroupMan.cc:424] Download GID#e246ff9c2031c397 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/phishstats
+2026-11-17 21:50:59.640387 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/greensnow
+2026-11-17 21:50:59.647335 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/npc_hosts
+2026-11-17 21:50:59.677527 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/rooneymcnibnug_snafu
+2026-11-17 21:50:59.952051 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/quantum_part_2
+2026-11-17 21:50:59.964443 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/rolist
+2026-11-17 21:51:00.028587 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/rpilist_ms_office
+2026-11-17 21:51:00.062405 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/rpilist_fake_science
+2026-11-17 21:51:00.064384 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/qme
+2026-11-17 21:51:00.073674 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/phishing_army
+2026-11-17 21:51:00.105912 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/rpilist_ms_telemetry
+2026-11-17 21:51:00.125314 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/red_flag_domains
+2026-11-17 21:51:00.129245 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/pop3gropers
+2026-11-17 21:51:00.172720 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/rpilist_phishing
+2026-11-17 21:51:00.196866 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/rutgers
+2026-11-17 21:51:00.200908 [ERROR] [AbstractCommand.cc:401] CUID#340 - Download aborted. URI=https://rescure.me/covid.txt
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://rescure.me/covid.txt
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:12.243897 [NOTICE] [RequestGroupMan.cc:424] Download GID#800f6f243e16396a not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/rescure_covid
-2026-11-16 22:58:12.244237 [ERROR] [AbstractCommand.cc:401] CUID#341 - Download aborted. URI=https://rescure.me/rescure_domain_blacklist.txt
+2026-11-17 21:51:00.201638 [NOTICE] [RequestGroupMan.cc:424] Download GID#6ca9fe7cda991f48 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/rescure_covid
+2026-11-17 21:51:00.233200 [ERROR] [AbstractCommand.cc:401] CUID#341 - Download aborted. URI=https://rescure.me/rescure_domain_blacklist.txt
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://rescure.me/rescure_domain_blacklist.txt
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:12.244266 [NOTICE] [RequestGroupMan.cc:424] Download GID#3b20dcb49061817c not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/rescure_malicious_domains
-2026-11-16 22:58:12.244384 [ERROR] [AbstractCommand.cc:401] CUID#342 - Download aborted. URI=https://rescure.me/rescure_blacklist.txt
+2026-11-17 21:51:00.233682 [NOTICE] [RequestGroupMan.cc:424] Download GID#e094273589ad8173 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/rescure_malicious_domains
+2026-11-17 21:51:00.240238 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/rpilist_corona
+2026-11-17 21:51:00.246484 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/scafroglia93
+2026-11-17 21:51:00.274747 [ERROR] [AbstractCommand.cc:401] CUID#376 - Download aborted. URI=https://raw.githubusercontent.com/no-cmyk/Search-Engine-Spam-Blocklist/master/blocklist.txt
+Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/no-cmyk/Search-Engine-Spam-Blocklist/master/blocklist.txt
+  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
+2026-11-17 21:51:00.274931 [NOTICE] [RequestGroupMan.cc:424] Download GID#714315e20a54dbbb not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/search_engine_spam
+2026-11-17 21:51:00.279448 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/sinfonietta_gambling
+2026-11-17 21:51:00.307798 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/shady_hosts
+2026-11-17 21:51:00.342829 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/sinfonietta_snuff
+2026-11-17 21:51:00.366578 [NOTICE] [HttpResponse.cc:168] CUID#383 - Redirecting to https://www.snort.org/downloads/ip-block-list/terms
+2026-11-17 21:51:00.378786 [ERROR] [AbstractCommand.cc:401] CUID#342 - Download aborted. URI=https://rescure.me/rescure_blacklist.txt
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://rescure.me/rescure_blacklist.txt
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 22:58:12.244412 [NOTICE] [RequestGroupMan.cc:424] Download GID#2ce3286ed987bdeb not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/rescure_malicious_ips
-2026-11-16 22:58:12.270162 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/soteria_nou_ads
-2026-11-16 22:58:12.294174 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/spam404
-2026-11-16 22:58:12.302393 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/soteria_nou_analytics
-2026-11-16 22:58:12.303084 [NOTICE] [HttpResponse.cc:168] CUID#383 - Redirecting to https://www.snort.org/downloads/ip-block-list/terms
-2026-11-16 22:58:12.321569 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/soteria_nou_widgets
-2026-11-16 22:58:12.334904 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/stalkerware_indicators
-2026-11-16 22:58:12.338692 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/soteria_nou_fake
-2026-11-16 22:58:12.341277 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/soteria_nou_enrichments
-2026-11-16 22:58:12.352998 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/stevenblack
-2026-11-16 22:58:12.372879 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/spamhouse_drop_v6
-2026-11-16 22:58:12.375246 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/spamhouse_edrop
-2026-11-16 22:58:12.403123 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/spamhouse_drop
-2026-11-16 22:58:12.438447 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/snort_blocklist
-2026-11-16 22:58:12.452314 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/stonecrusher_fake_shops
-2026-11-16 22:58:12.475124 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/stonecrusher_pseudoscience
-2026-11-16 22:58:12.492923 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/stonecrusher_problematic_shops
-2026-11-16 22:58:12.497582 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/stonecrusher_streaming
-2026-11-16 22:58:12.512983 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/sblam
-2026-11-16 22:58:12.554114 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/stopforumspam_ips
-2026-11-16 22:58:12.566325 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/stopforumspam_domains
-2026-11-16 22:58:12.720338 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/honeynet_asia_url
-2026-11-16 22:58:12.721893 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/thailand_telecommunications_sector_honeypot
-2026-11-16 22:58:12.722168 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/thailand_telecommunications_sector_rats
-2026-11-16 22:58:12.723042 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/th3m3_malware
-2026-11-16 22:58:12.724415 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/t145_domain_blacklist
-2026-11-16 22:58:12.727774 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/stonecrusher_watchlist
-2026-11-16 22:58:12.810341 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/thailand_telecommunications_sector_recommended
-2026-11-16 22:58:12.818467 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/thiojoe
-2026-11-16 22:58:12.832568 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/thailand_telecommunications_sector_urls
-2026-11-16 22:58:12.856375 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/thedumbterminal
-2026-11-16 22:58:12.900487 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/tiuxo_ads
-2026-11-16 22:58:12.968737 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/tiuxo_porn
-2026-11-16 22:58:13.010070 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/tiuxo_social
-2026-11-16 22:58:13.128113 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/shadowwhisperer_all
-2026-11-16 22:58:13.128767 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/tiuxo_whitelist
-2026-11-16 22:58:13.129007 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/tomzuu_phishing
-2026-11-16 22:58:13.138834 [NOTICE] [HttpResponse.cc:168] CUID#395 - Redirecting to https://www.sekuripy.hr/blacklist.txt
-2026-11-16 22:58:13.146981 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/threatview_ioc_tweets
-2026-11-16 22:58:13.222453 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/trackerslist_blacklist
-2026-11-16 22:58:13.233014 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/shreshta
-2026-11-16 22:58:13.240456 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/tomzuu_spam
-2026-11-16 22:58:13.252238 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/threatview_c2_intel
-2026-11-16 22:58:13.271764 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/unflac
-2026-11-16 22:58:13.487265 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/honeynet_asia_bruteforce_ssh
-2026-11-16 22:58:13.489996 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/threatview_high_confidence_urls
-2026-11-16 22:58:13.491759 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/threatview_high_confidence_ips
-2026-11-16 22:58:13.775623 [NOTICE] [HttpResponse.cc:168] CUID#395 - Redirecting to https://ipnoise.sekuripy.hr/7d.txt
-2026-11-16 22:58:13.804662 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/viriback
-2026-11-16 22:58:13.913314 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/vivaldi
-2026-11-16 22:58:13.915474 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/taz
-2026-11-16 22:58:13.938833 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/ut1_stalkerware
-2026-11-16 22:58:14.045229 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/wally3k
-2026-11-16 22:58:14.129420 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/ut1_cryptojacking
-2026-11-16 22:58:14.289842 [ERROR] [AbstractCommand.cc:349] CUID#439 - Download aborted. URI=https://ente.dev/api/blocklist/google-amp
-Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://ente.dev/api/blocklist/google-amp
-  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=403
-2026-11-16 22:58:14.289863 [NOTICE] [RequestGroupMan.cc:424] Download GID#c0c992a825721e56 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/willie_google_amp
-2026-11-16 22:58:14.292879 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/rublacklist_ads
-2026-11-16 22:58:14.302461 [ERROR] [AbstractCommand.cc:349] CUID#437 - Download aborted. URI=https://ente.dev/api/blocklist/advertising
-Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://ente.dev/api/blocklist/advertising
-  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=403
-2026-11-16 22:58:14.302475 [NOTICE] [RequestGroupMan.cc:424] Download GID#5a117cf9749ae877 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/willie_ads
-2026-11-16 22:58:14.313407 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/turris
-2026-11-16 22:58:14.326053 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/windowsspyblocker_spy
-2026-11-16 22:58:14.352807 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/stamparm
-2026-11-16 22:58:14.368748 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/windowsspyblocker_extra
-2026-11-16 22:58:14.394775 [ERROR] [AbstractCommand.cc:349] CUID#441 - Download aborted. URI=https://ente.dev/api/blocklist/suspicious
-Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://ente.dev/api/blocklist/suspicious
-  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=403
-2026-11-16 22:58:14.394793 [NOTICE] [RequestGroupMan.cc:424] Download GID#9552cc49c36f036f not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/willie_suspicious
-2026-11-16 22:58:14.396318 [ERROR] [AbstractCommand.cc:349] CUID#443 - Download aborted. URI=https://ente.dev/api/blocklist/tracking
-Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://ente.dev/api/blocklist/tracking
-  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=403
-2026-11-16 22:58:14.396328 [NOTICE] [RequestGroupMan.cc:424] Download GID#38775eb75a7a15ca not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/willie_tracking
-2026-11-16 22:58:14.398670 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/windowsspyblocker_update
-2026-11-16 22:58:14.469997 [ERROR] [AbstractCommand.cc:349] CUID#442 - Download aborted. URI=https://ente.dev/api/blocklist/tiktok
-Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://ente.dev/api/blocklist/tiktok
-  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=403
-2026-11-16 22:58:14.470008 [NOTICE] [RequestGroupMan.cc:424] Download GID#ec2180c262ce1d2f not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/willie_tiktok
-2026-11-16 22:58:14.541348 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/threatview_high_confidence_domains
-2026-11-16 22:58:14.577634 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/windscribe_clickbait
-2026-11-16 22:58:14.605201 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/windscribe_gambling
-2026-11-16 22:58:14.606314 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/windscribe_porn
-2026-11-16 22:58:14.619409 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/voipbl
-2026-11-16 22:58:14.640171 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/windscribe_malware
-2026-11-16 22:58:14.641011 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/windscribe_ads
-2026-11-16 22:58:14.647972 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/windscribe_iot
-2026-11-16 22:58:14.651345 [ERROR] [AbstractCommand.cc:349] CUID#444 - Download aborted. URI=https://ente.dev/api/blocklist/tv
-Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://ente.dev/api/blocklist/tv
-  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=403
-2026-11-16 22:58:14.651357 [NOTICE] [RequestGroupMan.cc:424] Download GID#698fb2e5e8ab19cb not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/willie_tv
-2026-11-16 22:58:14.654094 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/youslist
-2026-11-16 22:58:14.676109 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/wutingfeng_global_anti_scam
-2026-11-16 22:58:14.707046 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/xos_advertising
-2026-11-16 22:58:14.709967 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/xiaobeita
-2026-11-16 22:58:14.718739 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/ut1_phishing
-2026-11-16 22:58:14.747626 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/ut1_malware
-2026-11-16 22:58:14.834600 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/vxvault
-2026-11-16 22:58:15.393993 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/yoyo_domains
-2026-11-16 22:58:15.631238 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/yoyo_ips
-2026-11-16 22:58:15.682073 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/winhelp
-2026-11-16 22:58:15.894610 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/wutingfeng_google_safe_browsing
-2026-11-16 22:58:16.821244 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/university_of_science_and_technology_of_china
-2026-11-16 22:58:24.501395 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/honeynet_asia_bruteforce_telnet
-2026-11-16 22:58:24.874298 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/pengelana
-2026-11-16 22:58:35.039778 [ERROR] [AbstractCommand.cc:377] CUID#181 - Download aborted. URI=https://labs.inquest.net/api/iocdb/list
+2026-11-17 21:51:00.380025 [NOTICE] [RequestGroupMan.cc:424] Download GID#e474556dcbb018e2 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/rescure_malicious_ips
+2026-11-17 21:51:00.396784 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/sinfonietta_porn
+2026-11-17 21:51:00.426234 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/soteria_nou_ads
+2026-11-17 21:51:00.431581 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/snort_blocklist
+2026-11-17 21:51:00.433013 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/snota418
+2026-11-17 21:51:00.444894 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/rpilist_notserious
+2026-11-17 21:51:00.453985 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/soteria_nou_analytics
+2026-11-17 21:51:00.464552 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/soteria_nou_enrichments
+2026-11-17 21:51:00.473087 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/spam404
+2026-11-17 21:51:00.482607 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/stalkerware_indicators
+2026-11-17 21:51:00.499485 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/soteria_nou_fake
+2026-11-17 21:51:00.506440 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/soteria_nou_widgets
+2026-11-17 21:51:00.506911 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/spamhouse_drop_v6
+2026-11-17 21:51:00.507680 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/spamhouse_edrop
+2026-11-17 21:51:00.510145 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/spamhouse_drop
+2026-11-17 21:51:00.535229 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/stevenblack
+2026-11-17 21:51:00.572422 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/stonecrusher_streaming
+2026-11-17 21:51:00.611092 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/stonecrusher_pseudoscience
+2026-11-17 21:51:00.643479 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/sblam
+2026-11-17 21:51:00.672722 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/stonecrusher_watchlist
+2026-11-17 21:51:00.674301 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/rolist2
+2026-11-17 21:51:00.694360 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/stonecrusher_problematic_shops
+2026-11-17 21:51:00.712670 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/stonecrusher_fake_shops
+2026-11-17 21:51:00.731840 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/t145_domain_blacklist
+2026-11-17 21:51:00.744567 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/stopforumspam_ips
+2026-11-17 21:51:00.775474 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/th3m3_malware
+2026-11-17 21:51:00.789677 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/thailand_telecommunications_sector_rats
+2026-11-17 21:51:00.793212 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/thailand_telecommunications_sector_honeypot
+2026-11-17 21:51:00.812001 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/stopforumspam_domains
+2026-11-17 21:51:00.833783 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/thailand_telecommunications_sector_urls
+2026-11-17 21:51:00.875475 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/thedumbterminal
+2026-11-17 21:51:00.882937 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/thiojoe
+2026-11-17 21:51:00.890543 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/thailand_telecommunications_sector_recommended
+2026-11-17 21:51:00.935362 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/tiuxo_ads
+2026-11-17 21:51:00.999323 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/tiuxo_porn
+2026-11-17 21:51:01.075086 [NOTICE] [HttpResponse.cc:168] CUID#395 - Redirecting to https://www.sekuripy.hr/blacklist.txt
+2026-11-17 21:51:01.079420 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/tiuxo_social
+2026-11-17 21:51:01.172660 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/honeynet_asia_url
+2026-11-17 21:51:01.174824 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/tiuxo_whitelist
+2026-11-17 21:51:01.176496 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/threatview_ioc_tweets
+2026-11-17 21:51:01.243510 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/tomzuu_phishing
+2026-11-17 21:51:01.262785 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/threatview_high_confidence_urls
+2026-11-17 21:51:01.269738 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/trackerslist_blacklist
+2026-11-17 21:51:01.272729 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/tomzuu_spam
+2026-11-17 21:51:01.303907 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/threatview_c2_intel
+2026-11-17 21:51:01.352037 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/shadowwhisperer_all
+2026-11-17 21:51:01.358935 [NOTICE] [HttpResponse.cc:168] CUID#395 - Redirecting to https://ipnoise.sekuripy.hr/7d.txt
+2026-11-17 21:51:01.377855 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/honeynet_asia_bruteforce_ssh
+2026-11-17 21:51:01.404663 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/rublacklist_ads
+2026-11-17 21:51:01.411345 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/unflac
+2026-11-17 21:51:01.460196 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/quantum_part_1
+2026-11-17 21:51:01.464369 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/threatview_high_confidence_ips
+2026-11-17 21:51:01.643766 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/shreshta
+2026-11-17 21:51:01.805225 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/viriback
+2026-11-17 21:51:01.841227 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/stamparm
+2026-11-17 21:51:01.847174 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/ut1_stalkerware
+2026-11-17 21:51:01.850969 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/wally3k
+2026-11-17 21:51:02.030531 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/ut1_cryptojacking
+2026-11-17 21:51:02.122826 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/taz
+2026-11-17 21:51:02.202856 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/vivaldi
+2026-11-17 21:51:02.216196 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/turris
+2026-11-17 21:51:02.226824 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/windowsspyblocker_spy
+2026-11-17 21:51:02.246435 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/windowsspyblocker_extra
+2026-11-17 21:51:02.273395 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/windowsspyblocker_update
+2026-11-17 21:51:02.489086 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/windscribe_clickbait
+2026-11-17 21:51:02.506002 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/ut1_malware
+2026-11-17 21:51:02.513701 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/ut1_phishing
+2026-11-17 21:51:02.544778 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/windscribe_ads
+2026-11-17 21:51:02.554777 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/windscribe_gambling
+2026-11-17 21:51:02.586526 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/windscribe_iot
+2026-11-17 21:51:02.597814 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/wutingfeng_global_anti_scam
+2026-11-17 21:51:02.604330 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/windscribe_malware
+2026-11-17 21:51:02.617552 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/windscribe_porn
+2026-11-17 21:51:02.714393 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/xiaobeita
+2026-11-17 21:51:02.771188 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/youslist
+2026-11-17 21:51:02.787361 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/xos_advertising
+2026-11-17 21:51:02.789861 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/voipbl
+2026-11-17 21:51:03.270522 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/winhelp
+2026-11-17 21:51:03.296819 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/threatview_high_confidence_domains
+2026-11-17 21:51:03.372369 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/yoyo_domains
+2026-11-17 21:51:03.574619 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/yoyo_ips
+2026-11-17 21:51:03.912667 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/wutingfeng_google_safe_browsing
+2026-11-17 21:51:04.657589 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/university_of_science_and_technology_of_china
+2026-11-17 21:51:05.691656 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/vxvault
+2026-11-17 21:51:09.905189 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/pengelana
+2026-11-17 21:51:12.066282 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/honeynet_asia_bruteforce_telnet
+2026-11-17 21:51:22.312529 [ERROR] [AbstractCommand.cc:377] CUID#181 - Download aborted. URI=https://labs.inquest.net/api/iocdb/list
 Exception: [HttpConnection.cc:156] errorCode=1 Got EOF from the server.
-2026-11-16 22:58:35.039837 [NOTICE] [RequestGroupMan.cc:424] Download GID#f68d5760f604aaa2 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/inquest
-2026-11-16 22:58:36.338265 [ERROR] [AbstractCommand.cc:377] CUID#338 - Download aborted. URI=https://labs.inquest.net/api/iocdb/list
+2026-11-17 21:51:22.312653 [NOTICE] [RequestGroupMan.cc:424] Download GID#0f79e24e7eae77b7 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/inquest
+2026-11-17 21:51:24.468194 [ERROR] [AbstractCommand.cc:377] CUID#338 - Download aborted. URI=https://labs.inquest.net/api/iocdb/list
 Exception: [HttpConnection.cc:156] errorCode=1 Got EOF from the server.
-2026-11-16 22:58:36.338314 [NOTICE] [RequestGroupMan.cc:424] Download GID#800be523204c0db5 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/quantumultx_advertising
-2026-11-16 22:59:14.733628 [ERROR] [AbstractCommand.cc:377] CUID#328 - Download aborted. URI=https://phish.co.za/latest/ALL-phishing-domains.tar.gz
+2026-11-17 21:51:24.468393 [NOTICE] [RequestGroupMan.cc:424] Download GID#7249f3ea6a6e60d7 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/quantumultx_advertising
+2026-11-17 21:51:34.712502 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/willie_tv
+2026-11-17 21:51:34.852171 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/willie_tiktok
+2026-11-17 21:51:34.874089 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/willie_tracking
+2026-11-17 21:51:35.941606 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/willie_google_amp
+2026-11-17 21:51:36.093315 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/willie_suspicious
+2026-11-17 21:51:39.036380 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/willie_ads
+2026-11-17 21:52:02.788197 [ERROR] [AbstractCommand.cc:377] CUID#328 - Download aborted. URI=https://phish.co.za/latest/ALL-phishing-domains.tar.gz
 Exception: [HttpSkipResponseCommand.cc:228] errorCode=29 The response status is not successful. status=503
-2026-11-16 22:59:14.733662 [NOTICE] [RequestGroupMan.cc:424] Download GID#3a86b8fb544b4af0 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/phishing_db_all_domains
-2026-11-16 23:00:39.293115 [ERROR] [AbstractCommand.cc:377] CUID#99 - Download aborted. URI=https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt
+2026-11-17 21:52:02.788236 [NOTICE] [RequestGroupMan.cc:424] Download GID#b8d839c141d1460f not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/phishing_db_all_domains
+2026-11-17 21:53:28.121182 [ERROR] [AbstractCommand.cc:377] CUID#99 - Download aborted. URI=https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt
 Exception: [AbstractCommand.cc:340] errorCode=2 Timeout.
-2026-11-16 23:00:39.293161 [ERROR] [AbstractCommand.cc:377] CUID#100 - Download aborted. URI=https://osint.digitalside.it/Threat-Intel/lists/latestips.txt
+2026-11-17 21:53:28.145141 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/digitalside_domains
+2026-11-17 21:53:35.152598 [ERROR] [AbstractCommand.cc:377] CUID#462 - Download aborted. URI=http://zitstif.no-ip.org/Firewallwaf.txt
 Exception: [AbstractCommand.cc:340] errorCode=2 Timeout.
-2026-11-16 23:00:39.355636 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/digitalside_domains
-2026-11-16 23:00:39.532672 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/BLOCK/digitalside_ips
-2026-11-16 23:00:46.539918 [ERROR] [AbstractCommand.cc:377] CUID#462 - Download aborted. URI=http://zitstif.no-ip.org/Firewallwaf.txt
+2026-11-17 21:53:35.152679 [ERROR] [AbstractCommand.cc:377] CUID#463 - Download aborted. URI=http://zitstif.com/scamIps.txt
 Exception: [AbstractCommand.cc:340] errorCode=2 Timeout.
-2026-11-16 23:00:46.540018 [ERROR] [AbstractCommand.cc:377] CUID#463 - Download aborted. URI=http://zitstif.com/scamIps.txt
+2026-11-17 21:53:35.152708 [ERROR] [AbstractCommand.cc:377] CUID#464 - Download aborted. URI=http://zitstif.com/zit_shame_list.txt
 Exception: [AbstractCommand.cc:340] errorCode=2 Timeout.
-2026-11-16 23:00:46.540039 [ERROR] [AbstractCommand.cc:377] CUID#464 - Download aborted. URI=http://zitstif.com/zit_shame_list.txt
+2026-11-17 21:53:35.152731 [ERROR] [AbstractCommand.cc:377] CUID#465 - Download aborted. URI=http://zitstif.no-ip.org/WAFips.txt
 Exception: [AbstractCommand.cc:340] errorCode=2 Timeout.
-2026-11-16 23:00:47.581285 [ERROR] [AbstractCommand.cc:377] CUID#465 - Download aborted. URI=http://zitstif.no-ip.org/WAFips.txt
+2026-11-17 21:56:05.341476 [ERROR] [AbstractCommand.cc:377] CUID#467 - Download aborted. URI=http://zitstif.com/Firewallwaf.txt
 Exception: [AbstractCommand.cc:340] errorCode=2 Timeout.
-2026-11-16 23:03:16.917238 [ERROR] [AbstractCommand.cc:377] CUID#468 - Download aborted. URI=http://zitstif.com/Firewallwaf.txt
+2026-11-17 21:56:05.341565 [ERROR] [AbstractCommand.cc:377] CUID#468 - Download aborted. URI=http://zitstif.no-ip.org/scamIps.txt
 Exception: [AbstractCommand.cc:340] errorCode=2 Timeout.
-2026-11-16 23:03:16.917301 [ERROR] [AbstractCommand.cc:377] CUID#469 - Download aborted. URI=http://zitstif.no-ip.org/scamIps.txt
+2026-11-17 21:56:05.341595 [ERROR] [AbstractCommand.cc:377] CUID#469 - Download aborted. URI=http://zitstif.no-ip.org/zit_shame_list.txt
 Exception: [AbstractCommand.cc:340] errorCode=2 Timeout.
-2026-11-16 23:03:16.917314 [ERROR] [AbstractCommand.cc:377] CUID#470 - Download aborted. URI=http://zitstif.no-ip.org/zit_shame_list.txt
+2026-11-17 21:56:05.341621 [ERROR] [AbstractCommand.cc:377] CUID#470 - Download aborted. URI=http://zitstif.com/WAFips.txt
 Exception: [AbstractCommand.cc:340] errorCode=2 Timeout.
-2026-11-16 23:03:16.917324 [NOTICE] [RequestGroupMan.cc:424] Download GID#a6fc5e0ab178ab55 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/zitstif_firewall
-2026-11-16 23:03:16.917333 [NOTICE] [RequestGroupMan.cc:424] Download GID#bc690d4672751578 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/zitstif_scamalytics
-2026-11-16 23:03:16.917336 [NOTICE] [RequestGroupMan.cc:424] Download GID#9248db1c8b2d7c9e not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/zitstif_shame
-2026-11-16 23:03:17.918377 [ERROR] [AbstractCommand.cc:377] CUID#471 - Download aborted. URI=http://zitstif.com/WAFips.txt
-Exception: [AbstractCommand.cc:340] errorCode=2 Timeout.
-2026-11-16 23:03:17.918399 [NOTICE] [RequestGroupMan.cc:424] Download GID#b246145d12e4a5c3 not complete: /tmp/tmp.IdYUsh3gGy/BLOCK/zitstif_waf
-2026-11-16 23:03:17.919001 [NOTICE] [ServerStatMan.cc:110] ServerStat file logs/server-stats.txt saved successfully.
-2026-11-16 23:08:46.926457 [NOTICE] [Context.cc:310] Downloading 39 item(s)
-2026-11-16 23:08:46.931182 [NOTICE] [ServerStatMan.cc:230] ServerStat file logs/server-stats.txt loaded successfully.
-2026-11-16 23:08:47.051947 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/1hosts_staged_exclusions
-2026-11-16 23:08:47.052392 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/additional_hosts_duckduckgo
-2026-11-16 23:08:47.060714 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/additional_hosts_github
-2026-11-16 23:08:47.061952 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/ACL4SSR_whitelist
-2026-11-16 23:08:47.063016 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/anudeep_whitelist
-2026-11-16 23:08:47.099965 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/1hosts_official_exclusions
-2026-11-16 23:08:47.163345 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/c2_intel_vpns
-2026-11-16 23:08:47.165804 [ERROR] [AbstractCommand.cc:401] CUID#23 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/linux
+2026-11-17 21:56:05.341643 [NOTICE] [RequestGroupMan.cc:424] Download GID#81e0600fd4c1e7d3 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/zitstif_firewall
+2026-11-17 21:56:05.341654 [NOTICE] [RequestGroupMan.cc:424] Download GID#3ff3ce51c45bfcfa not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/zitstif_scamalytics
+2026-11-17 21:56:05.341662 [NOTICE] [RequestGroupMan.cc:424] Download GID#65ccaab7c4510837 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/zitstif_shame
+2026-11-17 21:56:05.341670 [NOTICE] [RequestGroupMan.cc:424] Download GID#4318ab6418ab77f0 not complete: /tmp/tmp.Q3n61IP5Eg/BLOCK/zitstif_waf
+2026-11-17 21:56:05.342696 [NOTICE] [ServerStatMan.cc:110] ServerStat file logs/server-stats.txt saved successfully.
+2026-11-17 22:02:41.909531 [NOTICE] [Context.cc:310] Downloading 39 item(s)
+2026-11-17 22:02:41.918900 [NOTICE] [ServerStatMan.cc:230] ServerStat file logs/server-stats.txt loaded successfully.
+2026-11-17 22:02:41.997247 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/ACL4SSR_whitelist
+2026-11-17 22:02:42.001866 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/additional_hosts_duckduckgo
+2026-11-17 22:02:42.004121 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/1hosts_official_exclusions
+2026-11-17 22:02:42.007510 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/additional_hosts_github
+2026-11-17 22:02:42.007851 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/anudeep_whitelist
+2026-11-17 22:02:42.024886 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/1hosts_staged_exclusions
+2026-11-17 22:02:42.032878 [ERROR] [AbstractCommand.cc:349] CUID#19 - Download aborted. URI=https://api.github.com/meta
+Exception: [AbstractCommand.cc:351] errorCode=22 URI=https://api.github.com/meta
+  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=403
+2026-11-17 22:02:42.033391 [NOTICE] [RequestGroupMan.cc:424] Download GID#9e50eccad48efd37 not complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/github_meta
+2026-11-17 22:02:42.035172 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/c2_intel_vpns
+2026-11-17 22:02:42.037919 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/hipo_universities
+2026-11-17 22:02:42.045979 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/shadowwhisperer_whitelist
+2026-11-17 22:02:42.063859 [ERROR] [AbstractCommand.cc:401] CUID#23 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/linux
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/linux
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 23:08:47.165862 [NOTICE] [RequestGroupMan.cc:424] Download GID#b0cbde0ccde3ed3b not complete: /tmp/tmp.IdYUsh3gGy/ALLOW/nextdns_linux_bypass
-2026-11-16 23:08:47.181860 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/cymru_ipv4_bogons
-2026-11-16 23:08:47.200007 [ERROR] [AbstractCommand.cc:401] CUID#24 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/tor
-Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/tor
-  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 23:08:47.200040 [NOTICE] [RequestGroupMan.cc:424] Download GID#076c02b136b9397a not complete: /tmp/tmp.IdYUsh3gGy/ALLOW/nextdns_tor_bypass
-2026-11-16 23:08:47.211624 [ERROR] [AbstractCommand.cc:401] CUID#25 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/vpn
+2026-11-17 22:02:42.063962 [NOTICE] [RequestGroupMan.cc:424] Download GID#02084bb6addba6b0 not complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/nextdns_linux_bypass
+2026-11-17 22:02:42.065053 [ERROR] [AbstractCommand.cc:401] CUID#25 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/vpn
 Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/vpn
   -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
-2026-11-16 23:08:47.211660 [NOTICE] [RequestGroupMan.cc:424] Download GID#2603a044cb684bbe not complete: /tmp/tmp.IdYUsh3gGy/ALLOW/nextdns_vpn_bypass
-2026-11-16 23:08:47.222319 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/cryptoscamdb_whitelist
-2026-11-16 23:08:47.239110 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/phishing_db_falsepositives
-2026-11-16 23:08:47.258687 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/hipo_universities
-2026-11-16 23:08:47.275122 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/cymru_ipv6_bogons
-2026-11-16 23:08:47.275814 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/quindecim_allowlist
-2026-11-16 23:08:47.276749 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/shadowwhisperer_cryptocurrency
-2026-11-16 23:08:47.280846 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/trackerslist_best_domains
-2026-11-16 23:08:47.307119 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/notracking_whitelist
-2026-11-16 23:08:47.307871 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/shadowwhisperer_whitelist
-2026-11-16 23:08:47.311550 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/sefinek_whitelist
-2026-11-16 23:08:47.316553 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/xiu2_best_trackers
-2026-11-16 23:08:47.333796 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/trackerslist_best_ips
-2026-11-16 23:08:47.337276 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/t145_domain_whitelist
-2026-11-16 23:08:47.346666 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/github_meta
-2026-11-16 23:08:47.356552 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/t145_cidr_whitelist
-2026-11-16 23:08:47.383957 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/xiu2_blacklist
-2026-11-16 23:08:47.613241 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/notracking_dead
-2026-11-16 23:08:47.646090 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/newtrackon
-2026-11-16 23:08:47.727701 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/ut1_sex_ed
-2026-11-16 23:08:47.784407 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/torbulkexitlist
-2026-11-16 23:08:47.836157 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/cidr_report
-2026-11-16 23:08:47.836486 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/ut1_liste_bu
-2026-11-16 23:08:47.868086 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/dan_me_uk
-2026-11-16 23:08:47.880108 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/securedrop
-2026-11-16 23:08:47.941260 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/metalhead
-2026-11-16 23:08:47.992300 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/zapret_nxdomain
-2026-11-16 23:08:48.291015 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/phishing_db_inactive_domains
-2026-11-16 23:08:48.379316 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.IdYUsh3gGy/ALLOW/public_dns
-2026-11-16 23:08:48.379859 [NOTICE] [ServerStatMan.cc:110] ServerStat file logs/server-stats.txt saved successfully.
+2026-11-17 22:02:42.065104 [NOTICE] [RequestGroupMan.cc:424] Download GID#e27ece834e459ef0 not complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/nextdns_vpn_bypass
+2026-11-17 22:02:42.069721 [ERROR] [AbstractCommand.cc:401] CUID#24 - Download aborted. URI=https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/tor
+Exception: [AbstractCommand.cc:403] errorCode=4 URI=https://raw.githubusercontent.com/nextdns/dns-bypass-methods/main/tor
+  -> [RequestGroup.cc:1266] errorCode=4 Reached max-file-not-found count=1
+2026-11-17 22:02:42.069789 [NOTICE] [RequestGroupMan.cc:424] Download GID#f2e79610676f60c1 not complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/nextdns_tor_bypass
+2026-11-17 22:02:42.072674 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/phishing_db_falsepositives
+2026-11-17 22:02:42.085298 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/shadowwhisperer_cryptocurrency
+2026-11-17 22:02:42.095049 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/trackerslist_best_domains
+2026-11-17 22:02:42.097071 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/notracking_whitelist
+2026-11-17 22:02:42.102545 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/cryptoscamdb_whitelist
+2026-11-17 22:02:42.103511 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/t145_cidr_whitelist
+2026-11-17 22:02:42.104084 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/xiu2_best_trackers
+2026-11-17 22:02:42.112739 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/sefinek_whitelist
+2026-11-17 22:02:42.121321 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/trackerslist_best_ips
+2026-11-17 22:02:42.133070 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/quindecim_allowlist
+2026-11-17 22:02:42.134278 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/t145_domain_whitelist
+2026-11-17 22:02:42.172780 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/xiu2_blacklist
+2026-11-17 22:02:42.222846 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/cymru_ipv4_bogons
+2026-11-17 22:02:42.292613 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/notracking_dead
+2026-11-17 22:02:42.388759 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/cymru_ipv6_bogons
+2026-11-17 22:02:42.421975 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/newtrackon
+2026-11-17 22:02:42.475586 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/ut1_sex_ed
+2026-11-17 22:02:42.562172 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/ut1_liste_bu
+2026-11-17 22:02:42.657573 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/dan_me_uk
+2026-11-17 22:02:42.682638 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/zapret_nxdomain
+2026-11-17 22:02:42.797336 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/cidr_report
+2026-11-17 22:02:42.808833 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/metalhead
+2026-11-17 22:02:42.983047 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/public_dns
+2026-11-17 22:02:42.998415 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/securedrop
+2026-11-17 22:02:43.130663 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/phishing_db_inactive_domains
+2026-11-17 22:02:43.829344 [NOTICE] [RequestGroup.cc:1214] Download complete: /tmp/tmp.Q3n61IP5Eg/ALLOW/torbulkexitlist
+2026-11-17 22:02:43.829984 [NOTICE] [ServerStatMan.cc:110] ServerStat file logs/server-stats.txt saved successfully.
