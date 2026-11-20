@@ -7927,6 +7927,30 @@
     "mirrors": ["http://npc.0am.jp/hosts.php?dl=1"],
     "topic": "SECURITY"
   },
+  "offseq_mirage": {
+    "active": true,
+    "checksums": {},
+    "content": {
+      "filter": "NONE",
+      "retriever": "ARIA2",
+      "type": "TEXT"
+    },
+    "formats": [
+      {
+        "filter": "NONE",
+        "format": "IPV4"
+      }
+    ],
+    "metadata": {
+      "description": "https://feeds.offseq.com/",
+      "homepage": "https://feeds.offseq.com/",
+      "license": "cc-by-4.0",
+      "notes": "IPv4 addresses that attacked the OffSeq Mirage honeypot fleet in the last 7 days, rebuilt daily; research scanners are excluded."
+    },
+    "method": "BLOCK",
+    "mirrors": ["https://feeds.offseq.com/mirage-feed/latest/ipv4-7d.txt"],
+    "topic": "SECURITY"
+  },
   "opendbl_cisco_talos": {
     "active": true,
     "checksums": {},
